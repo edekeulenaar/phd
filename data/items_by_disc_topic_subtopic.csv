@@ -14,7 +14,7 @@ Quantity,Discipline,Topic,Sub-topic
 52,political_science_ir,Censorship,(none)
 51,sociology_anthropology,Censorship,(none)
 49,communication_media_studies,Content moderation,Moderating extremism
-46,communication_media_studies,Debate management,(none)
+45,communication_media_studies,Debate management,(none)
 40,communication_media_studies,Content moderation,Moderation as industrial labour
 25,education_pedagogy,Censorship,(none)
 23,public_policy_governance,Content moderation,Moderation as a component of platform governance
@@ -45,11 +45,11 @@ Quantity,Discipline,Topic,Sub-topic
 6,political_science_ir,Content moderation,Moderation as the cultivation of a democratic public sphere
 6,public_policy_governance,Content moderation,Moderation as the cultivation of a democratic public sphere
 6,sociology_anthropology,Debate management,(none)
-5,political_philosophy,Political moderation,(none)
 5,public_policy_governance,Debate management,(none)
 4,arts_literary_cultural_studies,Content moderation,Moderation and censorship
 4,computer_science_ai,Content moderation,Moderation and censorship
 4,law_legal_studies,Content moderation,Moderation and censorship
+4,political_philosophy,Political moderation,(none)
 4,political_science_ir,Debate management,(none)
 4,political_science_ir,Political moderation,(none)
 3,censorship_studies,Content moderation,Moderation as a component of platform regulation

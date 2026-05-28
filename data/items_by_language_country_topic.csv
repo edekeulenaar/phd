@@ -50,8 +50,8 @@ en,English,Spain,Censorship,23
 fr,French,(unspecified),Censorship,23
 en,English,Italy,Content moderation,22
 en,English,South Africa,Censorship,21
-en,English,United States,Debate management,21
 pt,Portuguese,Portugal,Content moderation,21
+en,English,United States,Debate management,20
 pt,Portuguese,United Kingdom,Content moderation,20
 en,English,Turkey,Content moderation,19
 fr,French,Italy,Censorship,19
@@ -139,7 +139,6 @@ en,English,Portugal,Content moderation,7
 en,English,Singapore,Content moderation,7
 en,English,Sudan,Censorship,7
 en,English,Uganda,Censorship,7
-en,English,United States,Political moderation,7
 en,English,Yemen,Censorship,7
 es,Spanish,Argentina,Censorship,7
 fr,French,Belgium,Content moderation,7
@@ -162,6 +161,7 @@ en,English,Saudi Arabia,Content moderation,6
 en,English,Syria,Content moderation,6
 en,English,Taiwan,Content moderation,6
 en,English,USSR,Censorship,6
+en,English,United States,Political moderation,6
 es,Spanish,Spain,Debate management,6
 fr,French,Portugal,Censorship,6
 fr,French,United Kingdom,Content moderation,6
@@ -310,7 +310,6 @@ en,English,Americas,Content moderation,2
 en,English,Ancient Rome,Censorship,2
 en,English,Argentina,Content moderation,2
 en,English,Asia,Content moderation,2
-en,English,Australia,Debate management,2
 en,English,Bangladesh,Content moderation,2
 en,English,Brazil,AI alignment,2
 en,English,Brazil,Debate management,2
@@ -449,6 +448,7 @@ en,English,Algeria,Debate management,1
 en,English,Ancient Greece,Censorship,1
 en,English,Antigua and Barbuda,Censorship,1
 en,English,Argentina,Debate management,1
+en,English,Australia,Debate management,1
 en,English,Austria,Debate management,1
 en,English,Austria,Political moderation,1
 en,English,Austrian Empire,Censorship,1
@@ -459,7 +459,6 @@ en,English,Bolivia,Content moderation,1
 en,English,Bolivia,Debate management,1
 en,English,Bosnia,Content moderation,1
 en,English,Bosnia,Debate management,1
-en,English,Brazil,Political moderation,1
 en,English,Britain,Censorship,1
 en,English,Bulgaria,Content moderation,1
 en,English,Burundi,Debate management,1

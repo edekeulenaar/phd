@@ -1,14 +1,14 @@
 Type,Category,n_items
 GROUP,Content moderation,1401
 GROUP,Censorship,957
-GROUP,Debate management,80
+GROUP,Debate management,79
 GROUP,AI alignment,42
-GROUP,Political moderation,23
+GROUP,Political moderation,22
 GROUP,Moderation,3
 HOW,Filtering,571
 HOW,Review,496
 HOW,Removal,396
-HOW,Enframing,365
+HOW,Enframing,363
 HOW,Modification,263
 HOW,Self-censorship,246
 HOW,Marginalisation,232
@@ -28,7 +28,7 @@ HOW,Labeling,57
 HOW,Prompting,51
 HOW,Confiscation,48
 HOW,Coherence,45
-HOW,Moderating powers,38
+HOW,Moderating powers,37
 HOW,Blocking,34
 HOW,Redirection,27
 HOW,Obfuscation,23
@@ -39,14 +39,14 @@ HOW,Intelligibility,9
 HOW,Coercive,8
 HOW,Other,8
 HOW,Inclusion,6
-HOW,Agenda setting,6
 HOW,Algorithmic systems,6
+HOW,Agenda setting,6
 HOW,Fairness,2
 HOW,Legislatures,2
 HOW,Friction,1
 WHAT,Regulative,1406
 WHAT,Platform governance,1009
-WHAT,Communicative / discourse-ethics / debate management,552
+WHAT,Communicative / discourse-ethics / debate management,550
 WHAT,Constitutive,175
 WHAT,Infrastructural,138
 WHAT,Other,28
@@ -59,11 +59,11 @@ WHO,Government agencies,546
 WHO,Content moderators / BPO workforces,395
 WHO,Algorithmic systems,336
 WHO,Censorship boards or agencies,324
-WHO,Courts and prosecutors,195
+WHO,Courts and prosecutors,194
 WHO,Religious authories and groups,170
 WHO,Users,166
 WHO,Regulators,153
-WHO,"Schools, curricula, librarians, academia",126
+WHO,"Schools, curricula, librarians, academia",125
 WHO,Media owners,96
 WHO,Civil society,93
 WHO,Cloud / infrastructure providers,61
@@ -90,20 +90,20 @@ WHO,Mediators,6
 WHO,Broadcasting regulators,6
 WHO,Payment processors / financial infrastructure,4
 WHO,Advertisers,4
-WHO,RLHF annotators,3
 WHO,Religious organisations,3
-WHO,Public-private partnerships,2
+WHO,RLHF annotators,3
 WHO,Self-censorship (analytical),2
+WHO,Public-private partnerships,2
 WHO,Police / law enforcement agencies,1
+WHO,Religious authorities,1
 WHO,Police / Intelligence services,1
-WHO,Internet service providers,1
 WHO,Algorithmic moderation systems,1
 WHO,Moderating powers,1
-WHO,Religious authorities,1
+WHO,Internet service providers,1
 WHY,Political control,548
-WHY,Social cohesion,546
+WHY,Social cohesion,545
 WHY,Harm principles and hate speech regulation,511
-WHY,Democratic enhancement,501
+WHY,Democratic enhancement,499
 WHY,Obscenity and decency,280
 WHY,Misinformation or disinformation as harm,235
 WHY,Compliance,231

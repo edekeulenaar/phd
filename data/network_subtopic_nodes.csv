@@ -37,14 +37,14 @@ HOW,Redirection,11
 HOW,Coersive,10
 HOW,Intermediate,8
 HOW,Modification,6
-HOW,Agenda setting,4
-HOW,Intelligibility,4
 HOW,Algorithmic systems,4
+HOW,Intelligibility,4
+HOW,Inclusion,4
+HOW,Agenda setting,4
 HOW,Other,4
 HOW,Removal from circulation,4
-HOW,Inclusion,4
-HOW,Obfuscation,1
 HOW,Confiscation,1
+HOW,Obfuscation,1
 HOW,Moderating powers,1
 HOW,Friction,1
 HOW,Fairness,1
@@ -84,8 +84,8 @@ WHO,Advertisers,4
 WHO,AI labs as moderators,4
 WHO,Political groups,4
 WHO,Mediators,4
-WHO,Broadcasting regulators,3
 WHO,Online mobs / pile-ons,3
+WHO,Broadcasting regulators,3
 WHO,Public-private partnerships,2
 WHO,Censorship boards or agencies,2
 WHO,Private firms,2
