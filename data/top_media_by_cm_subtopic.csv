@@ -33,8 +33,8 @@ Moderating extremism,Platforms,3
 Moderating extremism,Payment platform,2
 Moderating extremism,AI,2
 Moderating extremism,App store,1
-Moderation as brand safety and the commercial viability of the platform,Alt-tech,1
 Moderation as brand safety and the commercial viability of the platform,Video sharing platform,1
+Moderation as brand safety and the commercial viability of the platform,Alt-tech,1
 Moderation as brand safety and the commercial viability of the platform,Social media platform,1
 Moderation as industrial labour,Social media platform,44
 Moderation as industrial labour,Video sharing platform,19
@@ -71,11 +71,11 @@ Other,Messaging platform,4
 Other,AI,3
 Other,Video sharing platform,3
 Other,Wikis,2
-Other,Text,1
-Other,Image,1
 Other,Video,1
-Other,Search engine,1
+Other,Image,1
+Other,Text,1
 Other,ISP,1
+Other,Search engine,1
 Platform governance,Social media platform,328
 Platform governance,Video sharing platform,158
 Platform governance,Messaging platform,51
@@ -85,7 +85,7 @@ Platform governance,Wikis,22
 Platform governance,Decentralized social media,18
 Platform governance,Platforms,17
 Platform governance,Alt-tech,17
-Platform governance,Imageboard,11
+Platform governance,ISP,11
 Platform regulation,Social media platform,393
 Platform regulation,Video sharing platform,177
 Platform regulation,Search engine,136

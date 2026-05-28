@@ -59,7 +59,7 @@ async function renderManuscript() {
     //     column) automatically invalidates any cached HTML that still has the
     //     old structure baked in. Bump SCHEMA_VERSION whenever the manuscript
     //     DOM shape changes.
-    const SCHEMA_VERSION = "v3-no-marginalia";
+    const SCHEMA_VERSION = "v4-linked-refs";
     const sourceFingerprint = SCHEMA_VERSION + ":" + String(md.length) + ":" +
                               md.slice(0, 200).replace(/\s+/g, "");
     try {
@@ -106,9 +106,10 @@ async function renderManuscript() {
       if (br.ok) BIB = await br.json();
     } catch (e) { console.warn("bibliography.json not loaded:", e); }
 
-    // 4d) Render inline Harvard cites only — no marginalia column. Hovering
-    //     an inline cite reveals the full Harvard reference(s) in the shared
-    //     data-card with clickable DOI / URL.
+    // 4d) Render inline cites + link them to the manuscript's own References
+    //     list (added by the user after the chapter body). The References list
+    //     is the SOURCE OF TRUTH; bibliography.json is a richer fallback for
+    //     entries the user hasn't typed into the manuscript yet.
 
     // Derive (Author, Year) from a Better-BibTeX key when the bibliography
     // doesn't have it: BBT default `[auth:lower][shorttitle][year(suffix)]`
@@ -128,6 +129,67 @@ async function renderManuscript() {
       return { author, year };
     }
 
+    // ── Build an index of in-manuscript References: each <p> after the
+    //    "# References" heading is one entry. We extract a (lastname, year)
+    //    signature so BBT cite keys can be matched against it. We also store
+    //    the rendered HTML and a stable anchor id so clicks can jump.
+    const refIndex = new Map();             // "lastnamelower|year" → { id, html, link }
+    const REF_HEAD = [...host.querySelectorAll("h1, h2")]
+                       .find(h => /^references$/i.test(h.textContent.trim()));
+    if (REF_HEAD) {
+      let n = 0;
+      let el = REF_HEAD.nextElementSibling;
+      while (el && !/^H[12]$/.test(el.tagName)) {
+        if (el.tagName === "P" && el.textContent.trim().length > 4) {
+          const refId = `ref-${++n}`;
+          el.id = refId;
+          el.classList.add("ref-entry");
+          const txt = el.textContent.trim();
+          // First lastname: text up to the first comma or " (".
+          //   "Klonick, K. (2017). …"      → "Klonick"
+          //   "Regulation (EU) 2022/2065…" → "Regulation"
+          //   "Oxford English Dictionary. (2025a). …" → multiword → "Oxford"
+          //   "Cetina, K. K. & Werner Reichmann. (2015)…" → "Cetina"
+          const lastMatch = txt.match(/^([A-Z][^,\.\(]{0,40}?)(?=[,\.\(])/);
+          const lastFull  = (lastMatch?.[1] || "").trim();
+          const lastFirst = lastFull.split(/\s+/)[0] || lastFull;
+          const lastLower = lastFirst.toLowerCase().replace(/[^a-z]/g, "");
+          // Year: first "(YYYY"  — APA convention.
+          const yMatch = txt.match(/\((\d{4})/);
+          const year   = yMatch ? yMatch[1] : "";
+          // First DOI/URL inside the entry, if any.
+          const a = el.querySelector("a[href]");
+          const link = a ? a.getAttribute("href") : "";
+          if (lastLower && year) {
+            refIndex.set(`${lastLower}|${year}`, {
+              id: refId, html: el.innerHTML, link, fullText: lastFull,
+            });
+          }
+        }
+        el = el.nextElementSibling;
+      }
+      console.info(`References indexed: ${refIndex.size} entries`);
+    }
+
+    function lookupRef(key) {
+      const d = deriveFromKey(key);
+      const lk = d.author.toLowerCase().replace(/[^a-z]/g, "");
+      // Try the full author prefix first ("europeanunion"), then progressive
+      // shorter prefixes — handy when the BBT key has a multiword author
+      // that the References entry compressed to a single word.
+      for (let len = lk.length; len >= 3; len--) {
+        const probe = lk.slice(0, len);
+        const hit = refIndex.get(`${probe}|${d.year}`);
+        if (hit) return hit;
+      }
+      // Last resort: scan all refIndex keys whose author *starts with* lk[0..3].
+      const stub = lk.slice(0, 4);
+      for (const [k, v] of refIndex) {
+        if (k.endsWith(`|${d.year}`) && k.startsWith(stub)) return v;
+      }
+      return null;
+    }
+
     function inlineFor(key) {
       const e = BIB[key];
       if (e?.author && e?.year) return `${e.author}, ${e.year}`;
@@ -135,64 +197,89 @@ async function renderManuscript() {
       return `${d.author}, ${d.year}`;
     }
     function harvardFor(key) {
+      // Prefer the manuscript's own APA entry; fall back to .bib Harvard.
+      const r = lookupRef(key);
+      if (r?.html) return r.html;
       const e = BIB[key];
       if (e?.harvard) return mdItalicToHtml(e.harvard);
       const d = deriveFromKey(key);
       return `${d.author} (${d.year}) <em>Reference pending</em>.`;
     }
-    function linkFor(key) { return BIB[key]?.link || ""; }
+    function linkFor(key) {
+      return lookupRef(key)?.link || BIB[key]?.link || "";
+    }
+    function anchorFor(key) {
+      return lookupRef(key)?.id || "";
+    }
     function mdItalicToHtml(s) {
       return s
         .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
         .replace(/\*([^*]+)\*/g, "<em>$1</em>");
     }
 
-    let _filledCites = 0;
+    let _filledCites = 0, _linkedCites = 0;
     host.querySelectorAll(".cite-grp").forEach(g => {
       const keys = (g.dataset.keys || "").split(",").filter(Boolean);
       if (!keys.length) { g.remove(); return; }
-      g.textContent = "(" + keys.map(inlineFor).join("; ") + ")";
-      _filledCites += keys.length;
+      // Build inner HTML: each key becomes its own anchor (when a matching
+      // reference exists) so the user can click ANY name in a multi-cite
+      // group and jump straight to that reference.
+      const parts = keys.map(k => {
+        const txt = escapeHtml(inlineFor(k));
+        const ref = anchorFor(k);
+        _filledCites++;
+        if (ref) { _linkedCites++;
+          return `<a class="cite-link" href="#${ref}" data-key="${escapeHtml(k)}">${txt}</a>`;
+        }
+        return `<span class="cite-link" data-key="${escapeHtml(k)}">${txt}</span>`;
+      });
+      g.innerHTML = "(" + parts.join("; ") + ")";
     });
-    console.info(`Citations: filled ${_filledCites} inline`);
+    console.info(`Citations: filled ${_filledCites} inline, linked ${_linkedCites} to References`);
 
-    // 4e) Hover or focus an inline cite → show the full Harvard reference(s)
-    //     in the data-card. Inside the card, each reference's "Open ↗" link
-    //     uses the entry's DOI (preferred) or URL. The dataCard's delayed-hide
-    //     mechanism lets the user move into the card and click.
+    // 4e) Hover or focus an inline cite → show the full reference in the
+    //     data-card. The card prefers the manuscript's own APA-formatted
+    //     reference; falls back to the bibliography.json Harvard text.
     function citeCardHtml(keys) {
       return keys.map(k => {
-        const harvard = harvardFor(k);
-        const link    = linkFor(k);
-        const tail    = link
+        const ref = anchorFor(k);
+        const body = harvardFor(k);
+        const link = linkFor(k);
+        const tail = link
           ? ` <a class="ext" href="${escapeHtml(link)}" target="_blank" rel="noopener">Open ↗</a>`
           : "";
-        return `<div class="dc-cite" data-key="${escapeHtml(k)}">${harvard}${tail}</div>`;
+        const jump = ref
+          ? ` <a class="ext" href="#${ref}">Jump to ref ↓</a>` : "";
+        return `<div class="dc-cite" data-key="${escapeHtml(k)}">${body}${tail}${jump}</div>`;
       }).join("");
     }
+    function keysFromTarget(el) {
+      const a = el.closest(".cite-link"); if (a) {
+        const k = a.dataset.key; return k ? [k] : [];
+      }
+      const g = el.closest(".cite-grp"); if (!g) return [];
+      return (g.dataset.keys || "").split(",").filter(Boolean);
+    }
     host.addEventListener("mouseover", e => {
-      const g = e.target.closest(".cite-grp"); if (!g) return;
-      const keys = (g.dataset.keys || "").split(",").filter(Boolean);
+      const keys = keysFromTarget(e.target);
       if (!keys.length) return;
       dataCard.show(citeCardHtml(keys), e);
     });
     host.addEventListener("mousemove", e => {
-      if (e.target.closest(".cite-grp")) dataCard.move(e);
+      if (e.target.closest(".cite-grp,.cite-link")) dataCard.move(e);
     });
     host.addEventListener("mouseout", e => {
-      if (e.target.closest(".cite-grp")) dataCard.hide();
+      if (e.target.closest(".cite-grp,.cite-link")) dataCard.hide();
     });
-    // Focus-style accessibility: keyboard users can Tab into a cite.
     host.addEventListener("focusin", e => {
-      const g = e.target.closest(".cite-grp"); if (!g) return;
-      const keys = (g.dataset.keys || "").split(",").filter(Boolean);
+      const keys = keysFromTarget(e.target);
       if (!keys.length) return;
-      const r = g.getBoundingClientRect();
+      const r = e.target.getBoundingClientRect();
       dataCard.show(citeCardHtml(keys),
         { clientX: r.left + r.width / 2, clientY: r.bottom + 6 });
     });
     host.addEventListener("focusout", e => {
-      if (e.target.closest(".cite-grp")) dataCard.hide();
+      if (e.target.closest(".cite-grp,.cite-link")) dataCard.hide();
     });
 
     // 5) Add stable ids to headings + collect for TOC.
@@ -411,13 +498,13 @@ async function renderSankeyDTS() {
     const dN  = node(d,   0);
     const tN  = node(top, 1);
     link(dN, tN, q);
-    // Every row flows through ALL three columns, à la RawGraphs alluvial.
-    // Non-CM topics (no sub-topic in the data) terminate in a "(none)"
-    // mega-rectangle on the right.
-    const subName = (top === SUBTOPIC_PARENT && sub && sub !== SUB_BLANK)
-      ? sub : SUB_BLANK;
-    const sN = node(subName, 2);
-    link(tN, sN, q);
+    // Only add a third-stage flow to a real Sub-topic. Non-CM topics
+    // (Censorship, AI alignment, Debate management, Other) terminate at the
+    // Topic column — no "(none)" mega-rectangle on the right.
+    if (top === SUBTOPIC_PARENT && sub && sub !== SUB_BLANK) {
+      const sN = node(sub, 2);
+      link(tN, sN, q);
+    }
   });
 
   // With .nodeId(d => d.id), d3-sankey expects source/target as id STRINGS
@@ -441,9 +528,9 @@ async function renderSankeyDTS() {
   // room to render without clipping.
   const LEFT_GUTTER  = 220;
   const RIGHT_GUTTER = 280;
-  const NODE_PAD = 12;
+  const NODE_PAD = 14;
   const colCount = d3.max(d3.rollups(nodes, v => v.length, n => n.stage), d => d[1]) || 1;
-  const H = Math.max(520, 60 + colCount * NODE_PAD * 2.2);
+  const H = Math.max(640, 60 + colCount * NODE_PAD * 2.6);
 
   const svg = host.append("svg")
     .attr("class", "sankey")
@@ -535,10 +622,14 @@ async function renderSankeyDTS() {
     .attr("x", labelX)
     .attr("y", d => (d.y0 + d.y1) / 2);
 
-  // Single-line uppercase name — counts surface on hover (no clutter).
+  // Single-line uppercase name, truncated to keep within the gutters.
+  // Full text is surfaced via <title> on the node + the hover data-card.
+  const LBL_MAX = 30;
+  const trunc = s => s.length > LBL_MAX ? s.slice(0, LBL_MAX - 1).trimEnd() + "…" : s;
   labels.append("tspan").attr("class", "lbl-name")
     .attr("x", labelX).attr("dy", "0.32em")
-    .text(d => (d.name || "").toUpperCase());
+    .text(d => trunc((d.name || "").toUpperCase()));
+  nodeSel.append("title").text(d => d.name);
 
   // Italic stage headers at the top of each column.
   const stageNames = { 0: "Discipline", 1: "Topic", 2: "Sub-topic" };
@@ -874,10 +965,13 @@ async function renderSankeyTwo({ csv, leftField, rightField, hostSel, figId, val
     .attr("text-anchor", anchorOf)
     .attr("x", labelX)
     .attr("y", d => (d.y0 + d.y1) / 2);
-  // Single-line uppercase name — counts surface on hover.
+  // Single-line uppercase name, truncated to fit the gutter (full text in <title>).
+  const LBL_MAX = 30;
+  const trunc = s => s.length > LBL_MAX ? s.slice(0, LBL_MAX - 1).trimEnd() + "…" : s;
   labels.append("tspan").attr("class", "lbl-name")
     .attr("x", labelX).attr("dy", "0.32em")
-    .text(d => (d.name || "").toUpperCase());
+    .text(d => trunc((d.name || "").toUpperCase()));
+  nodeSel.append("title").text(d => d.name);
 
   // Italic stage headers at the top of each column.
   const stageNames = { 0: leftField, 1: rightField };

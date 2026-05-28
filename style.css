@@ -167,20 +167,44 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .prose .loading { color: var(--muted); font-style: italic; }
 
-/* Inline Harvard cite, e.g. "(Allan, 2016; Smith, 2020)". Sits in the
-   running prose; the full bibliographic refs live in `.margin-cites`. */
+/* Inline cite group, e.g. "(Allan, 2016; Smith, 2020)". Each name inside
+   is a `<a class="cite-link">` that jumps to the matching References entry.
+   Hover surfaces the full reference in the floating #data-card. */
 .cite-grp {
-  color: var(--accent);
   font-variant-numeric: oldstyle-nums;
   font-size: 0.92em;
   white-space: normal;
+  color: var(--ink-soft);
+}
+.cite-link {
+  color: var(--accent);
   cursor: help;
   border-bottom: 1px dotted rgba(192, 67, 31, 0.30);
+  text-decoration: none;
 }
-.cite-grp:hover { color: var(--ink); border-bottom-color: var(--ink); }
+a.cite-link { cursor: pointer; }
+.cite-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
-/* `.cite` only appears inside `.margin-cites` (one block per reference). */
-.cite { color: var(--muted); }
+/* References section: hanging indent (APA convention) + a soft flash when
+   the reader jumps to a specific entry via an in-text citation link. */
+.prose .ref-entry {
+  padding-left: 1.4em;
+  text-indent: -1.4em;
+  margin: 0 0 0.6em;
+  font-size: 0.95em;
+  line-height: 1.5;
+  scroll-margin-top: 1.5rem;
+}
+.prose .ref-entry:target {
+  background: rgba(192, 67, 31, 0.10);
+  box-shadow: -4px 0 0 var(--accent), 0 0 0 4px rgba(192, 67, 31, 0.10);
+  border-radius: 2px;
+  animation: ref-flash 1.6s ease-out 1;
+}
+@keyframes ref-flash {
+  0%   { background: rgba(192, 67, 31, 0.32); }
+  100% { background: rgba(192, 67, 31, 0.10); }
+}
 
 /* The right-margin Harvard reference list was removed — full references
    now appear in the shared hover-card (#data-card) instead. The `.dc-cite`
