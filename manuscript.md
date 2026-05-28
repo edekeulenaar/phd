@@ -684,7 +684,7 @@ A fourth concerns the LLM-assisted classification itself. Even with verbatim-quo
 
 # Content moderation: an overview
 
-
+Content moderation has become the primary way in which speech governance is spoken of today compared to censorship 
 
 # Censorship 
 
@@ -843,6 +843,8 @@ A Trujillo, T. F., S. Cresci. (2025). The DSA Transparency Database: Auditing se
 
 Allan, K. (2016). A Benchmark for Politeness. In A. Capone & J. L. Mey (Eds.), _Interdisciplinary Studies in Pragmatics, Culture and Society_ (Vol. 4, pp. 397–420). Springer International Publishing. [https://doi.org/10.1007/978-3-319-12616-6_15](https://doi.org/10.1007/978-3-319-12616-6_15)
 
+Amadieu, J.-B., & Talon-Hugon, C. (2020). Les formes contemporaines de censure. _Études_, _Mai_(5), 91–102. [https://doi.org/10.3917/etu.4271.0091](https://doi.org/10.3917/etu.4271.0091)
+
 Arsht, A., & Etcovitch, D. (2018, March 2). _The Human Cost of Online Content Moderation_. Harvard Journal of Law & Technology. [https://jolt.law.harvard.edu/digest/the-human-cost-of-online-content-moderation](https://jolt.law.harvard.edu/digest/the-human-cost-of-online-content-moderation)
 
 Badouard, R. (2020). La régulation des contenus sur Internet à l’heure des « fake news » et des discours de haine. _Communications_, _n° 106_(1), 161–173. [https://doi.org/10.3917/commu.106.0161](https://doi.org/10.3917/commu.106.0161)
@@ -851,7 +853,11 @@ Balkin, J. M. (2018, May 28). _Free Speech is a Triangle_ (SSRN Scholarly Paper 
 
 Bamman, D., O’Connor, B., & Smith, N. (2012). Censorship and deletion practices in Chinese social media. _First Monday_. [https://doi.org/10.5210/fm.v17i3.3943](https://doi.org/10.5210/fm.v17i3.3943)
 
+Binns, R., Veale, M., Kleek, M. V., & Shadbolt, N. (2017). _Like trainer, like bot? Inheritance of bias in algorithmic content moderation_ (pp. 405–415). [https://doi.org/10.1007/978-3-319-67256-4_32](https://doi.org/10.1007/978-3-319-67256-4_32)
+
 Bourdieu, P. (2001). _Langage et pouvoir symbolique_. Seuil. [https://books.google.com?id=_7akmgEACAAJ](https://books.google.com?id=_7akmgEACAAJ)
+
+Burt, R. (1994). _The Administration of Aesthetics: Censorship, Political Criticism, and the Public Sphere_. U of Minnesota Press. [https://books.google.com?id=SWTQJB3ywUwC](https://books.google.com?id=SWTQJB3ywUwC)
 
 Butler, J. (1997). _Excitable speech: A politics of the performative_. Routledge.
 
@@ -863,11 +869,19 @@ Cetina, K. K. & Werner Reichmann. (2015). Epistemic Cultures. In J. D. Wright (E
 
 Chandrasekharan, E., Samory, M., Srinivasan, A., & Gilbert, E. (2017). The Bag of Communities: Identifying Abusive Behavior Online with Preexisting Internet Data. _Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems_, 3175–3187. [https://doi.org/10.1145/3025453.3026018](https://doi.org/10.1145/3025453.3026018)
 
+Clegg, C. S. (1997). _Press Censorship in Elizabethan England_. Cambridge University Press. [https://doi.org/10.1017/cbo9780511585241](https://doi.org/10.1017/cbo9780511585241)
+
+Coetzee, J. M. (2005). _Giving Offense: Essays on Censorship_. University of Chicago Press.
+
 Coleman, S., Hall, N., & Howell, M. (2002). _Hearing voices: The experience of online public consultation and discussion in UK governance_. Hansard Society.
 
 Craiutu, A. (2001). The Virtues of Political Moderation. _Political Theory_, _29_(3), 449–468. [https://doi.org/10.1177/0090591701029003008](https://doi.org/10.1177/0090591701029003008)
 
+Darnton, R. (1994). _Censorship in Comparative Perspective: France, 1789 East Germany, 1989_. Svenska Bokförläggareföreningen Ordfront.
+
 Davidson, J., Liebald, B., Liu, J., Nandy, P., Van Vleet, T., Gargi, U., Gupta, S., He, Y., Lambert, M., Livingston, B., & others. (2010). The YouTube video recommendation system. _Proceedings of the Fourth ACM Conference on Recommender Systems_, 293–296. [http://dl.acm.org/citation.cfm?id=1864770](http://dl.acm.org/citation.cfm?id=1864770)
+
+De Gregorio, G. (2020). Democratising online content moderation: A constitutional framework. _Computer Law & Security Review_, _36_, 105374. [https://doi.org/10.1016/j.clsr.2019.105374](https://doi.org/10.1016/j.clsr.2019.105374)
 
 de Keulenaar, E. (2025, May 16). _Moderation in crisis: YouTube and Twitter debates on the boundaries of acceptable speech_ [Conference presentation]. All Things in Moderation, Online. [https://drive.google.com/file/d/1y0lUhhVJ7bgP7kMfvOPWsX7Sc0NjxGDe/view?pli=1](https://drive.google.com/file/d/1y0lUhhVJ7bgP7kMfvOPWsX7Sc0NjxGDe/view?pli=1)
 
@@ -888,6 +902,8 @@ Edwards, A. R. (2002a). The moderator as an emerging democratic intermediary: Th
 Edwards, A. R. (2002b). Them moderator as an emerging democratic intermediary: The role of the moderator in Internet discussions about public issues. _Information Polity_, _7_, 3–20.
 
 Ehninger, D., & Brockriede, W. (1766). _Decision by Debate_. Dodd, Mead. [https://books.google.com?id=NLRUE7BYZq8C](https://books.google.com?id=NLRUE7BYZq8C)
+
+Fiske, M. (2022). _Book Selection and Censorship: A Study of School and Public Libraries in California_. Univ of California Press. [https://books.google.com?id=XrZ2EAAAQBAJ](https://books.google.com?id=XrZ2EAAAQBAJ)
 
 Ganesh, B. (2020). Content Moderation and Censorship: Can we Handle a Double Standard. In E. Leidig (Ed.), _Mainstreaming the Global Radical Right_ (pp. 280–284). ibidem-Verlag.
 
@@ -915,6 +931,8 @@ Grimmelmann, J. (2015). The Virtues of Moderation. _Yale Journal of Law and Tech
 
 Grüning, D., & Kamin, J. (n.d.). _Prosocial Design in Trust and Safety_.
 
+Gyetván, D. (2025). Censorship and Freedom of Expression in the Age of Social Media. _ELTE Law Journal_, _2_, 27–40. [https://doi.org/10.54148/eltelj.2024.2.27](https://doi.org/10.54148/eltelj.2024.2.27)
+
 Habermas, J. (1984). _The theory of communicative action: Reason and the rationalization of society: Vol. One_ (T. McCarthy, Trans.). Beacon Press.
 
 Habermas, J. (2023). A New Structural Transformation of the Public Sphere and Deliberative Politics. In _9781509558957_. Polity Press.
@@ -923,9 +941,9 @@ Hasan, H. (2025). The Concept of Religious Moderation: Debates and Implications.
 
 Holquist, M. (1994). Introduction: Corrupt Originals: The Paradox of Censorship. _PMLA_, _109_(1), 14–25. [https://doi.org/10.1632/S0030812900058363](https://doi.org/10.1632/S0030812900058363)
 
-Jansen, S. C. (1988). _Censorship: The Knot that Binds Power and Knowledge_. Oxford University Press. [https://books.google.com?id=GtfgAAAAMAAJ](https://books.google.com?id=GtfgAAAAMAAJ)
+Hunt, L. (Ed.). (1993). _The Invention of Pornography: Obscenity and the Origins of Modernity, 1500-1800_. Zone Books.
 
-Jansen Sue Curry. (1988). _Censorship: The Knot That Binds Power and Knowledge_ (Vol. 19). SAGE Publishing. [https://doi.org/10.2307/2072621](https://doi.org/10.2307/2072621)
+Jansen, S. C. (1988). _Censorship: The Knot that Binds Power and Knowledge_. Oxford University Press. [https://books.google.com?id=GtfgAAAAMAAJ](https://books.google.com?id=GtfgAAAAMAAJ)
 
 Kaplan, J. (2025, January 7). _More Speech and Fewer Mistakes_. Meta Newsroom. [https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/](https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/)
 
@@ -937,15 +955,25 @@ Kiesler Sara. (2012). _Building Successful Online Communities_. The MIT Press. [
 
 Klonick, K. (2017). The New Governors: The People, Rules, and Processes Governing Online Speech. _Harvard Law Review_, _131_, 1598–1669. [https://heinonline.org/HOL/Page?handle=hein.journals/hlr131&id=1626&div=&collection=](https://heinonline.org/HOL/Page?handle=hein.journals/hlr131&id=1626&div=&collection=)
 
+Lai, V., Carton, S., Bhatnagar, R., Liao, Q. V., Zhang, Y., & Tan, C. (2022). Human-ai collaboration via conditional delegation: A case study of content moderation. _CHI Conference on Human Factors in Computing Systems_, 1–18. [https://doi.org/10.1145/3491102.3501999](https://doi.org/10.1145/3491102.3501999)
+
 Lampe, C., & Resnick, P. (2004). Slash(dot) and burn: Distributed moderation in a large online conversation space. _Proceedings of the SIGCHI Conference on Human Factors in Computing Systems_, 543–550. [https://doi.org/10.1145/985692.985761](https://doi.org/10.1145/985692.985761)
 
 Langvardt, K. (2017–2018). Regulating Online Content Moderation. _Georgetown Law Journal_, _106_, 1353. [https://heinonline.org/HOL/Page?handle=hein.journals/glj106&id=1367&div=&collection=](https://heinonline.org/HOL/Page?handle=hein.journals/glj106&id=1367&div=&collection=)
+
+Leff, L. J., & Simmons, J. L. (1991). The dame in the kimono: Hollywood, censorship, and the production code. _The Journal of American History_, _77_(4), 1397. [https://doi.org/10.2307/2078360](https://doi.org/10.2307/2078360)
 
 Liu, D. (2024). Content Moderation, Platformised Speech Governance, and Legitimacy: TikTok in South and Southeast Asia. _Companion Proceedings of the 16th ACM Web Science Conference_, 27–31. [https://doi.org/10.1145/3630744.3658613](https://doi.org/10.1145/3630744.3658613)
 
 Liu, Y., Yildirim, P., & Zhang, Z. J. (2021). Social Media, Content Moderation, and Technology. _arXiv.Org_. [https://doi.org/10.1287/mksc.2022.1361](https://doi.org/10.1287/mksc.2022.1361)
 
+M Horta Ribeiro, J. C., R. West. (2023). Automated content moderation increases adherence to community guidelines. _Proceedings of the ACM Web Conference 2023_, 2666–2676. [https://doi.org/10.1145/3543507.3583275](https://doi.org/10.1145/3543507.3583275)
+
 Ma, R., You, Y., Gui, X., & Kou, Y. (2023). How Do Users Experience Moderation?: A Systematic Literature Review. _Proc. ACM Hum.-Comput. Interact._, _7_, 278:1-278:30. [https://doi.org/10.1145/3610069](https://doi.org/10.1145/3610069)
+
+MacKinnon, R. (2007). Flatter world and thicker walls? Blogs, censorship and civic discourse in China. _Public Choice_, _134_(1–2), 31–46. [https://doi.org/10.1007/s11127-007-9199-0](https://doi.org/10.1007/s11127-007-9199-0)
+
+Mazzarella William. (2013). _Censorium: Cinema and the Open Edge of Mass Publicity_. [https://doi.org/10.1515/9780822397328](https://doi.org/10.1515/9780822397328)
 
 Moretti, F. (2013). _Distant reading_. Verso.
 
@@ -960,6 +988,8 @@ Oxford English Dictionary. (2025b). _Moderation, n. Meanings, etymology and more
 Ozan, O., & Sadıkzade, A. R. (2024). Exploring Content Moderation Research: Insights from a Bibliometric Analysis. _European Conference on Social Media_, _11_(1), 186–197. [https://doi.org/10.34190/ecsm.11.1.2114](https://doi.org/10.34190/ecsm.11.1.2114)
 
 Papacharissi, Z. (2004). Democracy online: Civility, politeness, and the democratic potential of online political discussion groups. _New Media & Society_, _6_(2), 259–283. [https://doi.org/10.1177/1461444804041444](https://doi.org/10.1177/1461444804041444)
+
+Patterson, A. (1990). _Censorship, Genre and Interpretation: The Conditions of Writing and Reading in Early Modern England_. University of Wisconsin Press.
 
 PlatGovNet. (2026). _Resources — PlatGov_. PlatGovNet. [https://platgov.net/resources](https://platgov.net/resources)
 
@@ -979,13 +1009,19 @@ Ruckenstein, M., & Turunen, L. L. M. (2020). Re-humanizing the platform: Content
 
 Salmon, G. (2011). _E-moderating: The Key to Teaching and Learning Online_. Routledge. [https://books.google.com?id=ZdUHfAEACAAJ](https://books.google.com?id=ZdUHfAEACAAJ)
 
+Sander, B. (2019–2020). Freedom of Expression in the Age of Online Platforms: The Promise and Pitfalls of a Human Rights-Based Approach to Content Moderation. _Fordham International Law Journal_, _43_, 939. [https://heinonline.org/HOL/Page?handle=hein.journals/frdint43&id=955&div=&collection=](https://heinonline.org/HOL/Page?handle=hein.journals/frdint43&id=955&div=&collection=)
+
 Schirch, L. (2025). _Blueprint on prosocial tech design governance_. Council on Technology and Social Cohesion.
 
 Seering, J., Kaufman, G., & Chancellor, S. (2022). Metaphors in moderation. _New Media & Society_, _24_(3), 621–640. [https://doi.org/10.1177/1461444820964968](https://doi.org/10.1177/1461444820964968)
 
 Shen, Q., Yoder, M., Jo, Y., & Rose, C. (2018). Perceptions of Censorship and Moderation Bias in Political Debate Forums. _Proceedings of the International AAAI Conference on Web and Social Media_, _12_(1). [https://doi.org/10.1609/icwsm.v12i1.15002](https://doi.org/10.1609/icwsm.v12i1.15002)
 
+Sleeper, M., Balebako, R., Das, S., McConahy, A. L., Wiese, J., & Cranor, L. F. (2013). The post that wasn’t: Exploring self-censorship on facebook. _Proceedings of the 2013 Conference on Computer Supported Cooperative Work_, 793–802. [https://doi.org/10.1145/2441776.2441865](https://doi.org/10.1145/2441776.2441865)
+
 Stray, J., Baker, I., Beknazar-Yuzbashev, G., Budak, C., Kamin, J., Rutherford, K., Stalinski, M., Acosta, T., Bail, C., Bernstein, M., Brandt, M., Bruckman, A., Chhabra, A., De, S., Duskin, K., Fish, S., Goldberg, B., Guess, A., Hadfield-Menell, D., … Zheng, S. (2026, March 20). _The Prosocial Ranking Challenge: Reducing Polarization on Social Media without Sacrificing Engagement_. [https://doi.org/10.48550/arXiv.2603.19626](https://doi.org/10.48550/arXiv.2603.19626)
+
+Sue Curry, J. (1988). _Censorship: The Knot That Binds Power and Knowledge_ (Vol. 19). SAGE Publishing. [https://doi.org/10.2307/2072621](https://doi.org/10.2307/2072621)
 
 Templeton, C. (2011, August 1). _Topic Modeling in the Humanities: An Overview_. Maryland Institute for Technology in the Humanities. [http://mith.umd.edu/topic-modeling-in-the-humanities-an-overview/](http://mith.umd.edu/topic-modeling-in-the-humanities-an-overview/)
 

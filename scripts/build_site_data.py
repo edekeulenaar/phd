@@ -382,6 +382,25 @@ def main() -> None:
                for (L, C, T), n in sorted(lct.items(),
                                            key=lambda x: (-x[1], x[0]))])
 
+    # ── 4e. items_by_language_country_cm_subtopic.csv (Fig 1 toggle) ───────
+    # Same shape but restricted to items whose Topic is Content moderation,
+    # with the final stage being the CM Sub-topic (blank → "(unspecified)").
+    lcs = Counter()
+    for t in items:
+        if topic_of(t) != SUBTOPIC_PARENT:
+            continue
+        S = subtopic_of(t) or "(unspecified)"
+        L = item_lang.get(t, "und") or "und"
+        if not item_countries[t]:
+            lcs[(L, "(unspecified)", S)] += 1
+        for c in item_countries[t]:
+            lcs[(L, c, S)] += 1
+    write_csv(OUT / "items_by_language_country_cm_subtopic.csv",
+              ["Language", "LanguageName", "Country", "Sub-topic", "Items"],
+              [[L, LANG_NAMES.get(L, L.upper()), C, S, n]
+               for (L, C, S), n in sorted(lcs.items(),
+                                           key=lambda x: (-x[1], x[0]))])
+
     # ── 5–8. Top-10 countries / media by Topic and by CM Sub-topic ──────────
     def _top_by(group_of, label_col: str, items_field: dict, n: int):
         per: dict[str, Counter] = defaultdict(Counter)

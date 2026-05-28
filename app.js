@@ -2132,14 +2132,6 @@ window.addEventListener("DOMContentLoaded", async () => {
       yearInputs: ["ys-y0", "ys-y1"],
     }));
 
-  await safe("sankey countries", "#sankey-countries")(() =>
-    bindSankeyTabs({
-      figSel: "#fig-countries", hostSel: "#sankey-countries", figId: "fig-countries",
-      topicCsv: "data/top_countries_by_topic.csv",
-      cmCsv:    "data/top_countries_by_cm_subtopic.csv",
-      dlSel: "#dl-countries",
-      leftField: { topic: "Topic", cm: "Sub-topic", right: "Country" },
-    }));
   await safe("sankey media", "#sankey-media")(() =>
     bindSankeyTabs({
       figSel: "#fig-media", hostSel: "#sankey-media", figId: "fig-media",
@@ -2189,17 +2181,40 @@ window.addEventListener("DOMContentLoaded", async () => {
                     minInputId: "net-subtopics-min",
                     figId: "fig-network-subtopics" }));
 
-  // Figure 1 — Language → Country → Topic alluvial. The middle (Country)
-  // column has ≈ 220 entries; capping at the top 20 + "Other" keeps the
-  // figure inside one viewport while exposing all the Topic flows.
-  await safe("lang × country × topic", "#sankey-lang-country")(() =>
-    renderSankeyTwo({
+  // Figure 1 — Language → Country → (Topic | CM Sub-topic) alluvial.
+  // The "by Topic" tab uses every item in the corpus; the "by CM Sub-topic"
+  // tab restricts to items whose Topic is Content moderation. The middle
+  // (Country) column is capped at the 20 most-mentioned countries.
+  function renderLangCountryFig(mode) {
+    const cfg = mode === "cm" ? {
+      csv: "data/items_by_language_country_cm_subtopic.csv",
+      stages: ["LanguageName", "Country", "Sub-topic"],
+    } : {
       csv: "data/items_by_language_country_topic.csv",
       stages: ["LanguageName", "Country", "Topic"],
+    };
+    const dl = document.getElementById("dl-lang-country");
+    if (dl) dl.href = cfg.csv;
+    return renderSankeyTwo({
+      csv: cfg.csv,
+      stages: cfg.stages,
       valueField: "Items",
       hostSel: "#sankey-lang-country",
       figId: "fig-lang-country",
-      topRight: 20,        // applied to the middle (Country) column
+      topRight: 20,
+    });
+  }
+  await safe("lang × country × topic", "#sankey-lang-country")(() =>
+    renderLangCountryFig("topic"));
+  document.querySelectorAll("#fig-lang-country .fig-controls .tab")
+    .forEach(btn => btn.addEventListener("click", () => {
+      const mode = btn.dataset.mode;
+      document.querySelectorAll("#fig-lang-country .fig-controls .tab")
+        .forEach(b => {
+          b.classList.toggle("active", b === btn);
+          b.setAttribute("aria-selected", b === btn ? "true" : "false");
+        });
+      renderLangCountryFig(mode).catch(console.error);
     }));
 
   restructureFigureNotes(); // notes go OUTSIDE the figure card (#1)
