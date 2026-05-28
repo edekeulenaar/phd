@@ -122,19 +122,30 @@ async function renderManuscript() {
     });
     // 4a-bis) Syntax-highlight every <pre><code class="language-X"> block
     //         using highlight.js (loaded from CDN). Falls back gracefully
-    //         when the library is missing.
+    //         when the library is missing. Then wrap every <pre> in a
+    //         <details class="foldable"> — long blocks collapse by default,
+    //         short ones stay open.
+    const LANG_PRETTY = {python:"Python", json:"JSON", bash:"Bash"};
     host.querySelectorAll("pre > code").forEach(block => {
       const cls = [...block.classList].find(c => c.startsWith("language-"));
       const lang = cls ? cls.slice("language-".length) : "";
       if (window.hljs && lang) {
-        try { hljs.registerLanguage; window.hljs.highlightElement(block); }
-        catch { /* ignore */ }
+        try { window.hljs.highlightElement(block); } catch { /* ignore */ }
       }
-      // Add a small floating language tag (matches Obsidian's pill).
-      if (lang) {
-        block.parentElement.dataset.lang =
-          ({python:"Python", json:"JSON", bash:"Bash"})[lang] || lang;
-      }
+      const pre = block.parentElement;
+      const lines = block.textContent.replace(/\n+$/, "").split("\n").length;
+      const wrap = document.createElement("details");
+      wrap.className = "foldable code-fold";
+      if (lines <= 18) wrap.open = true;        // small blocks: open by default
+      // Preserve any block id (anchor) on the wrapper so jumps still work.
+      if (pre.id) { wrap.id = pre.id; pre.removeAttribute("id"); }
+      const sum = document.createElement("summary");
+      const langLabel = LANG_PRETTY[lang] || (lang ? lang.toUpperCase() : "Code");
+      sum.innerHTML = `<span class="lbl">${langLabel}</span>` +
+                      `<span class="meta">· ${lines} lines</span>`;
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(sum);
+      wrap.appendChild(pre);
     });
 
     // Also resolve table block-anchors: an Obsidian convention is `^slug` on
@@ -149,6 +160,67 @@ async function renderManuscript() {
         p.remove();
       }
     });
+
+    // 4a-tris) Wrap large tables in a <details class="foldable">. We treat
+    //          any table with > 12 body rows as "large". If the next sibling
+    //          is a caption paragraph starting with "Table N.", we pull it
+    //          inside the wrapper and surface its text in the <summary>.
+    const LARGE_TABLE_ROWS = 12;
+    host.querySelectorAll("table").forEach(tbl => {
+      const rows = tbl.querySelectorAll("tbody tr").length;
+      if (rows <= LARGE_TABLE_ROWS) return;
+      // Pull in a sibling "Table N. …" caption paragraph, if any.
+      let cap = tbl.nextElementSibling;
+      if (cap && cap.tagName === "P" &&
+          /^(table|figure|listing|prompt)\s+\d/i.test(cap.textContent.trim())) {
+        // ok — use it
+      } else { cap = null; }
+
+      const wrap = document.createElement("details");
+      wrap.className = "foldable table-fold";
+      wrap.open = false;          // long tables: collapsed by default
+      // Preserve anchor id on the wrapper so [[#^slug]] still jumps here.
+      if (tbl.id) { wrap.id = tbl.id; tbl.removeAttribute("id"); }
+      else if (cap && cap.id) { wrap.id = cap.id; cap.removeAttribute("id"); }
+
+      const sum = document.createElement("summary");
+      const lbl = cap ? cap.textContent.trim().split(".")[0]   // "Table 5"
+                      : "Table";
+      const after = cap ? cap.textContent.trim().slice(lbl.length + 1).trim()
+                        : `${rows} rows`;
+      sum.innerHTML = `<span class="lbl">${lbl}</span>` +
+                      `<span class="meta">· ${after} · ${rows} rows</span>`;
+
+      const inner = document.createElement("div");
+      inner.className = "table-wrap";
+      tbl.parentNode.insertBefore(wrap, tbl);
+      wrap.appendChild(sum);
+      inner.appendChild(tbl);
+      wrap.appendChild(inner);
+      if (cap) {
+        cap.classList.add("table-cap");
+        wrap.appendChild(cap);
+      }
+    });
+
+    // 4a-quater) Anchor-aware auto-open: when the URL has a #fragment that
+    //            sits inside a closed <details.foldable>, open the wrapper
+    //            so the target block is visible. Fires on load AND on
+    //            hashchange (in-page link clicks).
+    function openTargetAncestors() {
+      const id = location.hash.slice(1); if (!id) return;
+      const target = document.getElementById(id); if (!target) return;
+      let el = target;
+      while (el && el !== host) {
+        if (el.tagName === "DETAILS" && !el.open) el.open = true;
+        el = el.parentElement;
+      }
+      // After opening, re-scroll so the target sits in view.
+      requestAnimationFrame(() =>
+        target.scrollIntoView({ block: "start", behavior: "smooth" }));
+    }
+    window.addEventListener("hashchange", openTargetAncestors);
+    setTimeout(openTargetAncestors, 0);
 
     // 4b) The manuscript is now READ-ONLY (rendered from manuscript.md on
     //     every load). Clear any stale localStorage cache from when the

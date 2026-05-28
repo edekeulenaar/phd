@@ -231,26 +231,43 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   white-space: pre;
   display: block;
 }
-/* Highlight.js theme tuned to the editorial palette (warm paper, terracotta
-   accents). Covers Python / JSON / Bash — the three corpus-relevant langs. */
+/* Highlight.js — Atom One Light (the theme Obsidian uses by default). */
+.prose pre code                    { color: #383a42; }
 .prose pre code .hljs-comment,
-.prose pre code .hljs-quote        { color: #8a877f; font-style: italic; }
+.prose pre code .hljs-quote        { color: #a0a1a7; font-style: italic; }
+.prose pre code .hljs-doctag,
 .prose pre code .hljs-keyword,
+.prose pre code .hljs-formula,
 .prose pre code .hljs-selector-tag,
-.prose pre code .hljs-literal,
+.prose pre code .hljs-subst        { color: #a626a4; }                  /* purple */
 .prose pre code .hljs-section,
-.prose pre code .hljs-link         { color: #2966a4; font-weight: 600; }
-.prose pre code .hljs-string,
-.prose pre code .hljs-attr         { color: #4a7b40; }
+.prose pre code .hljs-name         { color: #e45649; }                  /* red */
+.prose pre code .hljs-literal,
 .prose pre code .hljs-number,
-.prose pre code .hljs-symbol,
-.prose pre code .hljs-bullet       { color: #b06419; }
-.prose pre code .hljs-title,
-.prose pre code .hljs-name,
-.prose pre code .hljs-built_in     { color: var(--accent); font-weight: 600; }
+.prose pre code .hljs-meta,
+.prose pre code .hljs-link         { color: #986801; }                  /* orange */
+.prose pre code .hljs-string,
+.prose pre code .hljs-regexp,
+.prose pre code .hljs-addition,
+.prose pre code .hljs-attribute    { color: #50a14f; }                  /* green */
+.prose pre code .hljs-built_in,
+.prose pre code .hljs-class .hljs-title,
+.prose pre code .hljs-title.class_,
+.prose pre code .hljs-type         { color: #c18401; }                  /* yellow-brown */
+.prose pre code .hljs-attr,
 .prose pre code .hljs-variable,
-.prose pre code .hljs-attribute    { color: var(--ink); }
-.prose pre code .hljs-meta         { color: #8a6a3d; }
+.prose pre code .hljs-template-variable,
+.prose pre code .hljs-selector-attr,
+.prose pre code .hljs-selector-class,
+.prose pre code .hljs-selector-pseudo { color: #986801; }
+.prose pre code .hljs-title,
+.prose pre code .hljs-title.function_,
+.prose pre code .hljs-symbol,
+.prose pre code .hljs-bullet,
+.prose pre code .hljs-emphasis     { color: #4078f2; }                  /* blue */
+.prose pre code .hljs-strong       { font-weight: 700; }
+.prose pre code .hljs-emphasis     { font-style: italic; }
+.prose pre code .hljs-deletion     { color: #e45649; background: #ffeef0; }
 
 /* Language pill in the top-right corner, matching Obsidian. */
 .prose pre[data-lang]::before {
@@ -263,6 +280,89 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   text-transform: uppercase;
   color: var(--muted);
 }
+
+/* Collapsible wrappers around long code blocks and tables. The <summary>
+   shows a chevron, language/caption, and line/row count; clicking toggles. */
+.prose details.foldable {
+  margin: 1.4em 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--paper-alt);
+  overflow: hidden;
+}
+.prose details.foldable > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.55em 0.95em;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--paper-alt);
+  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+}
+.prose details.foldable[open] > summary {
+  border-bottom-color: var(--rule);
+}
+.prose details.foldable > summary::-webkit-details-marker { display: none; }
+.prose details.foldable > summary::marker { content: ""; }
+.prose details.foldable > summary::before {
+  content: "▸";
+  font-size: 11px;
+  color: var(--muted);
+  transition: transform 0.15s;
+  transform-origin: 50% 55%;
+  display: inline-block;
+}
+.prose details.foldable[open] > summary::before { transform: rotate(90deg); }
+.prose details.foldable > summary .lbl {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  color: var(--ink);
+}
+.prose details.foldable > summary .meta {
+  color: var(--muted);
+  font-size: 11.5px;
+}
+.prose details.foldable > summary:hover { background: rgba(0,0,0,0.025); }
+
+/* When a fenced-code block sits inside the wrapper, the inner <pre>'s
+   own border/background would double up — strip them. */
+.prose details.foldable > pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: var(--paper-alt);
+}
+.prose details.foldable > pre[data-lang]::before { display: none; }
+
+/* Wrapped tables: keep horizontal scroll if rows are wider than the column. */
+.prose details.foldable > .table-wrap {
+  overflow-x: auto;
+  background: var(--paper);
+}
+.prose details.foldable > .table-wrap > table {
+  margin: 0;
+}
+
+/* Caption paragraph nested inside the table wrapper (when present). */
+.prose details.foldable > .table-cap {
+  margin: 0;
+  padding: 0.55em 1em 0.7em;
+  font-size: 0.9em;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+}
+
+/* Browsers DO open ancestor <details> on URL-fragment navigation in
+   modern engines, but make sure the soft-flash still shows. */
+.prose details.foldable[open] > * { animation: none; }
 
 /* Soft flash when an in-text link jumps to its target block (^slug anchor). */
 .prose .anchored:target {
