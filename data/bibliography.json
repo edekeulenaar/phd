@@ -6,6 +6,13 @@
     "harvard": "Allan, K. (2016) ‘A Benchmark for Politeness’, in A. Capone and J. L. Mey (eds.) *Interdisciplinary Studies in Pragmatics, Culture and Society*. Cham: Springer International Publishing, pp. 397–420. doi:10.1007/978-3-319-12616-6_15",
     "link": "https://doi.org/10.1007/978-3-319-12616-6_15"
   },
+  "amadieuFormesContemporainesCensure2020": {
+    "author": "Amadieu and Talon-Hugon",
+    "year": "2020",
+    "inline": "(Amadieu and Talon-Hugon, 2020)",
+    "harvard": "Amadieu, J. B. and Talon-Hugon, C. (2020) ‘Les formes contemporaines de censure’, *\\'Etudes*, Mai(5), pp. 91–102. doi:10.3917/etu.4271.0091",
+    "link": "https://doi.org/10.3917/etu.4271.0091"
+  },
   "badouardRegulationContenusInternet2020": {
     "author": "Badouard",
     "year": "2020",
@@ -27,6 +34,13 @@
     "harvard": "Bamman, D., O'Connor, B. and Smith, N. (2012) ‘Censorship and Deletion Practices in Chinese Social Media’, *First Monday*. doi:10.5210/fm.v17i3.3943",
     "link": "https://doi.org/10.5210/fm.v17i3.3943"
   },
+  "binnsTrainerBotInheritance2017": {
+    "author": "Binns et al.",
+    "year": "2017",
+    "inline": "(Binns et al., 2017)",
+    "harvard": "Binns, R., Veale, M., Van Kleek, M. and Shadbolt, N. (2017) ‘Like Trainer, Like Bot? Inheritance of Bias in Algorithmic Content Moderation’, in *Social Informatics*. Cham: Springer International Publishing, pp. 405–415. doi:10.1007/978-3-319-67256-4_32",
+    "link": "https://doi.org/10.1007/978-3-319-67256-4_32"
+  },
   "bourdieuLangagePouvoirSymbolique2001": {
     "author": "Bourdieu",
     "year": "2001",
@@ -34,11 +48,25 @@
     "harvard": "Bourdieu, P. (2001) *Langage et pouvoir symbolique*. Seuil.",
     "link": ""
   },
+  "burtAdministrationAestheticsCensorship1994": {
+    "author": "Burt",
+    "year": "1994",
+    "inline": "(Burt, 1994)",
+    "harvard": "Burt, R. (1994) *The Administration of Aesthetics: Censorship, Political Criticism, and the Public Sphere*. U of Minnesota Press.",
+    "link": ""
+  },
   "carmiHiddenListenersRegulatingb": {
     "author": "Carmi",
     "year": "n.d.",
     "inline": "(Carmi, n.d.)",
     "harvard": "Carmi, E. (n.d.) ‘The Hidden Listeners: Regulating the Line from Telephone Operators to Content Moderators’.",
+    "link": ""
+  },
+  "darntonCensorshipComparativePerspective1994": {
+    "author": "Darnton",
+    "year": "1994",
+    "inline": "(Darnton, 1994)",
+    "harvard": "Darnton, R. (1994) *Censorship in Comparative Perspective: France, 1789 East Germany, 1989*. Svenska Bokförläggareföreningen Ordfront.",
     "link": ""
   },
   "davidsonYouTubeVideoRecommendation2010": {
@@ -61,6 +89,13 @@
     "inline": "(Degand and Simonson, 2011)",
     "harvard": "Degand, A. and Simonson, M. (2011) ‘La modération des fils de discussion dans la presse en ligne’.",
     "link": ""
+  },
+  "degregorioDemocratisingOnlineContent2020": {
+    "author": "De Gregorio",
+    "year": "2020",
+    "inline": "(De Gregorio, 2020)",
+    "harvard": "De Gregorio, G. (2020) ‘Democratising Online Content Moderation: A Constitutional Framework’, *Computer Law & Security Review*, 36, pp. 105374. doi:10.1016/j.clsr.2019.105374",
+    "link": "https://doi.org/10.1016/j.clsr.2019.105374"
   },
   "delaatCoercionEmpowermentModeration2012": {
     "author": "de Laat",
@@ -89,6 +124,13 @@
     "inline": "(Edwards, 2002)",
     "harvard": "Edwards, A. R. (2002) ‘The Moderator as an Emerging Democratic Intermediary: The Role of the Moderator in Internet Discussions about Public Issues’, *Information Polity*, 7(1), pp. 3–20. doi:10.3233/ip-2002-0002",
     "link": "https://doi.org/10.3233/ip-2002-0002"
+  },
+  "esquerreAffresDisparitionCensure2020": {
+    "author": "Esquerre",
+    "year": "2020",
+    "inline": "(Esquerre, 2020)",
+    "harvard": "Esquerre, A. (2020) ‘Les affres de la disparition de la censure’, *Communications*, n° 106(1), pp. 147–159. doi:10.3917/commu.106.0147",
+    "link": "https://doi.org/10.3917/commu.106.0147"
   },
   "ganeshContentModerationCensorship2020": {
     "author": "Ganesh",
@@ -131,6 +173,13 @@
     "inline": "(Gorwa, 2019)",
     "harvard": "Gorwa, R. (2019) ‘What Is Platform Governance?’, *Information, Communication & Society*, 22(6), pp. 854–871. doi:10.1080/1369118x.2019.1573914",
     "link": "https://doi.org/10.1080/1369118x.2019.1573914"
+  },
+  "gyetvanCensorshipFreedomExpression2025": {
+    "author": "Gyetván",
+    "year": "2025",
+    "inline": "(Gyetván, 2025)",
+    "harvard": "Gyetván, D. (2025) ‘Censorship and Freedom of Expression in the Age of Social Media’, *ELTE Law Journal*, pp. 27–40. doi:10.54148/eltelj.2024.2.27",
+    "link": "https://doi.org/10.54148/eltelj.2024.2.27"
   },
   "habermasNewStructuralTransformation2023": {
     "author": "Habermas",
@@ -181,6 +230,13 @@
     "harvard": "Liu, D. (2024) ‘Content Moderation, Platformised Speech Governance, and Legitimacy: TikTok in South and Southeast Asia’, in *Companion Proceedings of the 16th ACM Web Science Conference*. Stuttgart Germany: ACM, pp. 27–31. doi:10.1145/3630744.3658613",
     "link": "https://doi.org/10.1145/3630744.3658613"
   },
+  "mooreCensorship2016": {
+    "author": "Moore",
+    "year": "2016",
+    "inline": "(Moore, 2016)",
+    "harvard": "Moore, N. (2016) ‘Censorship’ *Oxford Research Encyclopedia of Literature*. doi:10.1093/acrefore/9780190201098.013.71",
+    "link": "https://doi.org/10.1093/acrefore/9780190201098.013.71"
+  },
   "morettiDistantReading2013": {
     "author": "Moretti",
     "year": "2013",
@@ -223,12 +279,26 @@
     "harvard": "Ruckenstein, M. and Turunen, L. L. M. (2020) ‘Re-Humanizing the Platform: Content Moderators and the Logic of Care’, *New Media & Society*, 22(6), pp. 1026–1042. doi:10.1177/1461444819875990",
     "link": "https://doi.org/10.1177/1461444819875990"
   },
+  "sanderFreedomExpressionAge2019": {
+    "author": "Sander",
+    "year": "2019-2020",
+    "inline": "(Sander, 2019-2020)",
+    "harvard": "Sander, B. (2019-2020) ‘Freedom of Expression in the Age of Online Platforms: The Promise and Pitfalls of a Human Rights-Based Approach to Content Moderation’, *Fordham International Law Journal*, 43, pp. 939.",
+    "link": ""
+  },
   "seeringMetaphorsModeration2022": {
     "author": "Seering et al.",
     "year": "2022",
     "inline": "(Seering et al., 2022)",
     "harvard": "Seering, J., Kaufman, G. and Chancellor, S. (2022) ‘Metaphors in Moderation’, *New Media & Society*, 24(3), pp. 621–640. doi:10.1177/1461444820964968",
     "link": "https://doi.org/10.1177/1461444820964968"
+  },
+  "sleeperPostThatWasnt2013a": {
+    "author": "Sleeper et al.",
+    "year": "2013",
+    "inline": "(Sleeper et al., 2013)",
+    "harvard": "Sleeper, M., Balebako, R., Das, S., McConahy, A. L., Wiese, J. and Cranor, L. F. (2013) ‘The Post That Wasn't: Exploring Self-Censorship on Facebook’, in *Proceedings of the 2013 Conference on Computer Supported Cooperative Work*. San Antonio Texas USA: ACM, pp. 793–802. doi:10.1145/2441776.2441865",
+    "link": "https://doi.org/10.1145/2441776.2441865"
   },
   "templetonTopicModelingHumanities2011": {
     "author": "Templeton",
