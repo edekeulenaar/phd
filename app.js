@@ -1284,6 +1284,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   const selT = controls.typeSel    ? document.getElementById(controls.typeSel)    : null;
   const selS = controls.sortSel    ? document.getElementById(controls.sortSel)    : null;
   const selL = controls.langSel    ? document.getElementById(controls.langSel)    : null;
+  const selQ = controls.searchSel  ? document.getElementById(controls.searchSel)  : null;
   const tabs = controls.tabsRoot   ? document.querySelector(controls.tabsRoot)    : null;
 
   if (sel1 && !sel1.options.length) {
@@ -1312,16 +1313,40 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     ? setupYearRange(controls.yearInputs[0], controls.yearInputs[1], all, () => render())
     : () => [null, null];
 
+  // Keyword search: case-insensitive substring match across the most
+  // identifying free-text columns. Token-AND, so "Klonick 2017" matches
+  // a row whose Title+Author+… contains BOTH tokens (any order).
+  function matchesQuery(r, tokens) {
+    if (!tokens.length) return true;
+    const hay = (
+      (r.Title || "") + " " + (r.Author || "") + " " +
+      (r["Mentioned item"] || "") + " " + (r.Category || "") + " " +
+      (r["Abstract Note"] || "") + " " + (r.Key || "")
+    ).toLowerCase();
+    return tokens.every(t => hay.includes(t));
+  }
+  if (selQ && !selQ.dataset.bound) {
+    selQ.dataset.bound = "1";
+    let _qT;
+    selQ.addEventListener("input", () => {
+      clearTimeout(_qT);
+      _qT = setTimeout(() => render(), 160);     // debounce keystrokes
+    });
+  }
+
   function subset() {
     const p  = sel1 ? sel1.value : null;
     const ty = selT ? selT.value : "ALL";
     const lg = selL ? selL.value : "ALL";
+    const q  = (selQ ? selQ.value : "").trim().toLowerCase();
+    const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
     const [lo, hi] = getYears();
     return all.filter(r =>
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
       (lg === "ALL" || (r.Language || "und") === lg) &&
-      inRange(r, lo, hi));
+      inRange(r, lo, hi) &&
+      matchesQuery(r, tokens));
   }
 
   let mode = "gantt";   // Matrix view first (#2 default).
@@ -2244,6 +2269,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         typeSel:    "bee-type-select",
         sortSel:    "bee-sort-select",
         langSel:    "bee-lang-select",
+        searchSel:  "bee-search",
         tabsRoot:   "#fig-beeswarm-topics .seg",
         yearInputs: ["bt-y0", "bt-y1"],
       },
@@ -2257,6 +2283,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         typeSel:    "bee-cm-type-select",
         sortSel:    "bee-cm-sort-select",
         langSel:    "bee-cm-lang-select",
+        searchSel:  "bee-cm-search",
         tabsRoot:   "#fig-beeswarm-cm .seg",
         yearInputs: ["bc-y0", "bc-y1"],
       },
