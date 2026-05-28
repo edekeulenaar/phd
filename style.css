@@ -364,6 +364,36 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
    modern engines, but make sure the soft-flash still shows. */
 .prose details.foldable[open] > * { animation: none; }
 
+/* Inline figure screenshots in the manuscript: image fills the prose width,
+   sits on a soft paper-alt frame, and clicks through to the live version. */
+.prose p > img,
+.prose figure img,
+.prose .fig-live-link > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.4em auto 0.2em;
+  border-radius: 3px;
+  background: var(--paper-alt);
+  padding: 0.4em;
+  box-shadow: 0 1px 3px rgba(28, 26, 24, 0.06);
+}
+.prose a.fig-live-link        { border: none; display: block; }
+.prose a.fig-live-link:hover img {
+  box-shadow: 0 2px 8px rgba(28, 26, 24, 0.14);
+}
+.prose .fig-live-pill {
+  display: inline-block;
+  margin: 0.1em 0 0.8em;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px dotted rgba(192, 67, 31, 0.4);
+}
+.prose .fig-live-pill:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
 /* Soft flash when an in-text link jumps to its target block (^slug anchor). */
 .prose .anchored:target {
   background: rgba(192, 67, 31, 0.10);

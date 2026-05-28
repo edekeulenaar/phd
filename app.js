@@ -70,6 +70,14 @@ async function renderManuscript() {
       md = out.join("\n");
     }
 
+    // 3a-iii) Obsidian image embeds: ![[file.png]] / ![[file.png|caption]]
+    //         → standard markdown ![caption](file.png) so marked.js renders
+    //         them on the site too. Plain ![alt](file.png) is left alone.
+    md = md.replace(
+      /!\[\[\s*([^\]\|]+?)\s*(?:\|([^\]]+))?\s*\]\]/g,
+      (_, src, cap) => `![${(cap || "").trim()}](${src.trim()})`
+    );
+
     // 3b) Pre-process Obsidian-style wikilinks. We tolerate any of:
     //        [[#^slug]]                    → <a href="#slug">slug</a>
     //        [[#^slug|Display]]            → <a href="#slug">Display</a>
@@ -202,6 +210,36 @@ async function renderManuscript() {
         cap.classList.add("table-cap");
         wrap.appendChild(cap);
       }
+    });
+
+    // 4a-fig) Auto-link in-prose figure screenshots to their live counterpart.
+    //         An <img> whose filename matches `fig-<slug>.(png|jpg|...)` AND
+    //         whose <slug> matches a <figure id="fig-<slug>"> elsewhere on
+    //         the page is wrapped in an anchor to that figure, and a small
+    //         "View interactive ↗" link is appended below the caption.
+    host.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      const fname = src.split("/").pop() || "";
+      const m = fname.match(/^(fig[-_][\w.-]+?)(?:\.(?:png|jpe?g|gif|svg|webp))?$/i);
+      if (!m) return;
+      const slug = m[1].replace(/_/g, "-").toLowerCase();
+      const target = document.getElementById(slug);
+      if (!target) return;
+      // Wrap the img in a clickable anchor without affecting the caption.
+      const a = document.createElement("a");
+      a.className = "fig-live-link";
+      a.href = "#" + slug;
+      a.title = "View interactive figure";
+      img.parentNode.insertBefore(a, img);
+      a.appendChild(img);
+      // Append a small "View interactive ↗" link as a sibling of the figure
+      // container (paragraph or figure element).
+      const container = a.closest("figure, p, div") || a.parentElement;
+      const ext = document.createElement("a");
+      ext.className = "fig-live-pill";
+      ext.href = "#" + slug;
+      ext.textContent = "View interactive ↗";
+      container.appendChild(ext);
     });
 
     // 4a-quater) Anchor-aware auto-open: when the URL has a #fragment that
