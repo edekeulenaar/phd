@@ -401,6 +401,40 @@ def main() -> None:
                for (L, C, S), n in sorted(lcs.items(),
                                            key=lambda x: (-x[1], x[0]))])
 
+    # ── 4f. media_per_item_year_topic.csv / _cm_subtopic.csv (Fig 5 bump) ──
+    # One row per (item, Media category) pair, so renderBump can group by
+    # Media category and end up with one line per medium — each item that
+    # mentions multiple media categories contributes once to each line.
+    rows_t, rows_s = [], []
+    for t in items:
+        if not item_media_cat[t]:
+            continue
+        year = year_of(t) or ""
+        if not year:
+            continue
+        item_disc_name = disc_of(t)
+        topic = topic_of(t) or "(unknown)"
+        title  = item_title.get(t, "")
+        author = item_author.get(t, "")
+        key    = item_key.get(t, "")
+        abst   = item_abstract.get(t, "")
+        cits   = item_cit.get(t, 0)
+        for media in item_media_cat[t]:
+            base = [cits, year, item_disc_name, media, title, author, key, abst]
+            rows_t.append(base + [topic])
+            if topic == SUBTOPIC_PARENT:
+                sub = subtopic_of(t)
+                if sub:
+                    rows_s.append(base + [sub])
+    rows_t.sort(key=lambda r: (r[3], str(r[1]), -r[0]))
+    rows_s.sort(key=lambda r: (r[3], str(r[1]), -r[0]))
+    write_csv(OUT / "media_per_item_year_topic.csv",
+              ["Citations", "Publication Year", "Discipline", "Media category",
+               "Title", "Author", "Key", "Abstract Note", "Topic"], rows_t)
+    write_csv(OUT / "media_per_item_year_cm_subtopic.csv",
+              ["Citations", "Publication Year", "Discipline", "Media category",
+               "Title", "Author", "Key", "Abstract Note", "Sub-topic"], rows_s)
+
     # ── 5–8. Top-10 countries / media by Topic and by CM Sub-topic ──────────
     def _top_by(group_of, label_col: str, items_field: dict, n: int):
         per: dict[str, Counter] = defaultdict(Counter)

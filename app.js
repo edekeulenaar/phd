@@ -999,12 +999,20 @@ async function renderBubble({ csv, yField, hostSel, figId, yearInputs }) {
     svg.append("g").attr("class", "axis")
       .attr("transform", `translate(0,${H - 30})`)
       .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
-    svg.append("g").attr("class", "y-labels")
+    const labelSel = svg.append("g").attr("class", "y-labels")
       .selectAll("text").data(groups).join("text")
-        .attr("x", 12).attr("y", g => yScale(g)).attr("dy", "0.32em").text(g => g);
+        .attr("x", 12).attr("y", g => yScale(g) - 10).text(g => g);
+    labelSel.append("title").text(g => g);
+    // Start each row guide AFTER the label's right edge, so the dashed line
+    // never crosses through label text.
+    const labelEnd = new Map();
+    labelSel.each(function(g) {
+      const bb = this.getBBox();
+      labelEnd.set(g, bb.x + bb.width + 10);
+    });
     svg.append("g").attr("class", "rowguides")
       .selectAll("line").data(groups).join("line")
-        .attr("x1", 220).attr("x2", W - 24)
+        .attr("x1", g => labelEnd.get(g) || 220).attr("x2", W - 24)
         .attr("y1", g => yScale(g)).attr("y2", g => yScale(g));
     const dots = svg.append("g").selectAll("circle").data(data).join("circle")
         .attr("cx", d => x(+d["Publication Year"]))
@@ -1966,7 +1974,11 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs }) {
   const all  = await loadCSV(csv);
   const data = all.filter(r => Number.isFinite(+r["Publication Year"]));
   const host = d3.select(hostSel);
-  const getYears = setupYearRange(yearInputs[0], yearInputs[1], data, draw);
+  // Year-range inputs are optional — figures without a dedicated year input
+  // pair (e.g. Fig 5 Bump) get an open range so every year stays in.
+  const getYears = yearInputs
+    ? setupYearRange(yearInputs[0], yearInputs[1], data, draw)
+    : () => [null, null];
 
   // Topic palette is fixed (5–10 stable names); Sub-topic is open, so we
   // build the scale fresh from the data and cache it across redraws.
@@ -2136,13 +2148,47 @@ window.addEventListener("DOMContentLoaded", async () => {
       yearInputs: ["ys-y0", "ys-y1"],
     }));
 
-  await safe("sankey media", "#sankey-media")(() =>
-    bindSankeyTabs({
-      figSel: "#fig-media", hostSel: "#sankey-media", figId: "fig-media",
-      topicCsv: "data/top_media_by_topic.csv",
-      cmCsv:    "data/top_media_by_cm_subtopic.csv",
-      dlSel: "#dl-media",
-      leftField: { topic: "Topic", cm: "Sub-topic", right: "Media category" },
+  // Figure 5 — media. Two orthogonal controls: scope (Topic vs CM Sub-topic)
+  // and view (Sankey vs Bump). Sankey reads the top-10 aggregate CSVs;
+  // Bump reads per-item-per-medium rows so each ribbon translates into a
+  // line whose Y is the per-year count of items mentioning that medium.
+  function renderMediaFig() {
+    const fig = document.querySelector("#fig-media");
+    const scope = fig.querySelector('[data-scope].active')?.dataset.scope || "topic";
+    const view  = fig.querySelector('[data-view].active')?.dataset.view   || "sankey";
+    const dl    = document.getElementById("dl-media");
+    if (view === "sankey") {
+      const csv = scope === "cm"
+        ? "data/top_media_by_cm_subtopic.csv"
+        : "data/top_media_by_topic.csv";
+      const lf  = scope === "cm" ? "Sub-topic" : "Topic";
+      if (dl) dl.href = csv;
+      return renderSankeyTwo({
+        csv, leftField: lf, rightField: "Media category",
+        hostSel: "#sankey-media", figId: "fig-media",
+      });
+    }
+    // Bump view
+    const csv = scope === "cm"
+      ? "data/media_per_item_year_cm_subtopic.csv"
+      : "data/media_per_item_year_topic.csv";
+    if (dl) dl.href = csv;
+    return renderBump({
+      csv, yField: "Media category",
+      hostSel: "#sankey-media", figId: "fig-media",
+      yearInputs: null,
+    });
+  }
+  await safe("media figure", "#sankey-media")(() => renderMediaFig());
+  document.querySelectorAll("#fig-media [data-scope], #fig-media [data-view]")
+    .forEach(btn => btn.addEventListener("click", () => {
+      // Toggle the active state within each tablist independently.
+      const group = btn.dataset.scope !== undefined ? "scope" : "view";
+      document.querySelectorAll(`#fig-media [data-${group}]`).forEach(b => {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      renderMediaFig().catch(console.error);
     }));
 
   await safe("beeswarm topics", "#beeswarm-topics")(() =>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorship and moderation — the oscillations of a contested practice</title>
-<link rel="stylesheet" href="style.css?v=p6-45">
+<link rel="stylesheet" href="style.css?v=p6-46">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -187,28 +187,33 @@
     </figure>
 
 
-    <!-- Figure 6: top media Sankey -->
+    <!-- Figure 5: media — Sankey (Topic|Sub-topic × Medium) + Bump (Medium × Year) -->
     <figure class="fig" id="fig-media">
       <figcaption class="fig-cap">
         <span class="fig-num">Figure 5.</span>
-        Top-10 <em>media categories</em> per Topic / per Content-moderation
-        Sub-topic.
+        Media categories per Topic / per Content-moderation Sub-topic — Sankey
+        view, or per-year Bump view (mentions of each medium over time).
       </figcaption>
-      <div class="fig-controls" role="tablist" aria-label="Group media categories by">
-        <button class="tab active" data-mode="topic" aria-selected="true">
-          by Topic
-        </button>
-        <button class="tab" data-mode="cm" aria-selected="false">
-          by CM Sub-topic
-        </button>
+      <div class="fig-controls">
+        <div role="tablist" class="seg" aria-label="Universe">
+          <button class="tab active" data-scope="topic" aria-selected="true">by Topic</button>
+          <button class="tab"        data-scope="cm"    aria-selected="false">by CM Sub-topic</button>
+        </div>
+        <span class="spacer"></span>
+        <div role="tablist" class="seg" aria-label="View">
+          <button class="tab active" data-view="sankey" aria-selected="true">Sankey</button>
+          <button class="tab"        data-view="bump"   aria-selected="false">Bump</button>
+        </div>
       </div>
       <div class="fig-body"><div id="sankey-media"></div></div>
       <div class="fig-foot">
         <a class="dl" id="dl-media"
            href="data/top_media_by_topic.csv" download>⬇ Download CSV</a>
         <span class="alt">
-          Sankey of Topic (or CM Sub-topic) → Media category. Ribbons sized by
-          the number of unique items associated with that media category.
+          Sankey view: ribbons size = items associated with that medium.
+          Bump view: one line per medium, Y = items per publication year
+          that mention it. The "by CM Sub-topic" mode restricts both views
+          to items whose Topic is Content moderation.
           Source: the <code>Media category</code> column in
           <code>Chapter 1 - Final results - Results.csv</code>.
         </span>
@@ -394,7 +399,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
-<script src="app.js?v=p6-45" defer></script>
+<script src="app.js?v=p6-46" defer></script>
 
 </body>
 </html>
