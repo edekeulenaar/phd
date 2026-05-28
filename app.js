@@ -161,14 +161,14 @@ async function renderManuscript() {
       }
     });
 
-    // 4a-tris) Wrap large tables in a <details class="foldable">. We treat
-    //          any table with > 12 body rows as "large". If the next sibling
-    //          is a caption paragraph starting with "Table N.", we pull it
-    //          inside the wrapper and surface its text in the <summary>.
-    const LARGE_TABLE_ROWS = 12;
+    // 4a-tris) Wrap EVERY table in a <details class="foldable">. Tables with
+    //          ≤ FOLD_OPEN_MAX body rows open by default; larger ones start
+    //          collapsed. The matching "Table N. …" caption paragraph, if
+    //          present below the table, is pulled inside the wrapper and its
+    //          first segment is surfaced in the <summary>.
+    const FOLD_OPEN_MAX = 12;
     host.querySelectorAll("table").forEach(tbl => {
       const rows = tbl.querySelectorAll("tbody tr").length;
-      if (rows <= LARGE_TABLE_ROWS) return;
       // Pull in a sibling "Table N. …" caption paragraph, if any.
       let cap = tbl.nextElementSibling;
       if (cap && cap.tagName === "P" &&
@@ -178,7 +178,8 @@ async function renderManuscript() {
 
       const wrap = document.createElement("details");
       wrap.className = "foldable table-fold";
-      wrap.open = false;          // long tables: collapsed by default
+      // Small tables open by default; long ones start collapsed.
+      wrap.open = rows <= FOLD_OPEN_MAX;
       // Preserve anchor id on the wrapper so [[#^slug]] still jumps here.
       if (tbl.id) { wrap.id = tbl.id; tbl.removeAttribute("id"); }
       else if (cap && cap.id) { wrap.id = cap.id; cap.removeAttribute("id"); }
