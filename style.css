@@ -202,6 +202,68 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .prose .wiki { font-style: italic; }   /* fallback span when no anchor exists */
 
+/* Inline code (single backticks): paper-alt chip, monospace, no line break. */
+.prose code {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--paper-alt);
+  padding: 0.08em 0.32em;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+  white-space: nowrap;
+}
+/* Fenced code blocks (triple backticks): paper-alt panel with language pill. */
+.prose pre {
+  position: relative;
+  margin: 1.4em 0;
+  background: var(--paper-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.05em 1.1em 0.95em;
+  overflow-x: auto;
+  font-size: 0.86em;
+  line-height: 1.5;
+}
+.prose pre > code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  white-space: pre;
+  display: block;
+}
+/* Highlight.js theme tuned to the editorial palette (warm paper, terracotta
+   accents). Covers Python / JSON / Bash — the three corpus-relevant langs. */
+.prose pre code .hljs-comment,
+.prose pre code .hljs-quote        { color: #8a877f; font-style: italic; }
+.prose pre code .hljs-keyword,
+.prose pre code .hljs-selector-tag,
+.prose pre code .hljs-literal,
+.prose pre code .hljs-section,
+.prose pre code .hljs-link         { color: #2966a4; font-weight: 600; }
+.prose pre code .hljs-string,
+.prose pre code .hljs-attr         { color: #4a7b40; }
+.prose pre code .hljs-number,
+.prose pre code .hljs-symbol,
+.prose pre code .hljs-bullet       { color: #b06419; }
+.prose pre code .hljs-title,
+.prose pre code .hljs-name,
+.prose pre code .hljs-built_in     { color: var(--accent); font-weight: 600; }
+.prose pre code .hljs-variable,
+.prose pre code .hljs-attribute    { color: var(--ink); }
+.prose pre code .hljs-meta         { color: #8a6a3d; }
+
+/* Language pill in the top-right corner, matching Obsidian. */
+.prose pre[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0.4em; right: 0.7em;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* Soft flash when an in-text link jumps to its target block (^slug anchor). */
 .prose .anchored:target {
   background: rgba(192, 67, 31, 0.10);

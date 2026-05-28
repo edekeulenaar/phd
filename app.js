@@ -48,6 +48,28 @@ async function renderManuscript() {
       return `<span class="cite-grp" data-keys="${keys.join(",")}" tabindex="0"></span>`;
     });
 
+    // 3a-ii) Markdown layout rescue: Obsidian is lenient about tables that
+    //         have no blank line before a following caption or paragraph.
+    //         Marked.js is stricter — without a blank line it slurps the
+    //         next line into the table. Insert a blank line BEFORE any line
+    //         that starts with bold, prose, a heading, or a fenced-code
+    //         marker, whenever the previous non-blank line was a table row.
+    {
+      const lines = md.split(/\r?\n/);
+      const out = [];
+      const tableRow = s => /^\s*\|/.test(s);
+      for (let i = 0; i < lines.length; i++) {
+        const cur  = lines[i];
+        const prev = out[out.length - 1] ?? "";
+        const isCap = /^(\*\*|Table |Figure |Prompt |Listing |#|>|`{3,})/.test(cur.trim());
+        if (cur.trim() && !tableRow(cur) && tableRow(prev) && isCap) {
+          out.push("");        // separator the parser needs
+        }
+        out.push(cur);
+      }
+      md = out.join("\n");
+    }
+
     // 3b) Pre-process Obsidian-style wikilinks. We tolerate any of:
     //        [[#^slug]]                    → <a href="#slug">slug</a>
     //        [[#^slug|Display]]            → <a href="#slug">Display</a>
@@ -98,6 +120,23 @@ async function renderManuscript() {
         el.innerHTML = el.innerHTML.replace(/\s*\^[\w.\-]+\s*$/, "");
       }
     });
+    // 4a-bis) Syntax-highlight every <pre><code class="language-X"> block
+    //         using highlight.js (loaded from CDN). Falls back gracefully
+    //         when the library is missing.
+    host.querySelectorAll("pre > code").forEach(block => {
+      const cls = [...block.classList].find(c => c.startsWith("language-"));
+      const lang = cls ? cls.slice("language-".length) : "";
+      if (window.hljs && lang) {
+        try { hljs.registerLanguage; window.hljs.highlightElement(block); }
+        catch { /* ignore */ }
+      }
+      // Add a small floating language tag (matches Obsidian's pill).
+      if (lang) {
+        block.parentElement.dataset.lang =
+          ({python:"Python", json:"JSON", bash:"Bash"})[lang] || lang;
+      }
+    });
+
     // Also resolve table block-anchors: an Obsidian convention is `^slug` on
     // a line directly AFTER the table. The marker shows up as a sibling <p>.
     host.querySelectorAll("p").forEach(p => {
