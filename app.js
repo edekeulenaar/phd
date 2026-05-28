@@ -548,6 +548,12 @@ async function renderSankeyDTS() {
     .nodeId(d => d.id)
     .nodeWidth(10)
     .nodePadding(NODE_PAD)
+    // Pin each node to its declared stage (0 = Discipline, 1 = Topic,
+    // 2 = Sub-topic). Without this, d3-sankey's default `sankeyJustify`
+    // pushes terminal nodes (Censorship/AI alignment as Topics, with no
+    // outgoing edge) all the way to the rightmost column, where they'd
+    // mix in with the actual sub-topic nodes.
+    .nodeAlign(d => d.stage)
     .extent([[LEFT_GUTTER, TOP_PAD], [W - RIGHT_GUTTER, H - 18]]);
 
   const graph = sankey({
@@ -914,6 +920,7 @@ async function renderSankeyTwo({ csv, leftField, rightField, hostSel, figId, val
     .attr("width", "100%").attr("height", "auto");
 
   const sk = d3.sankey().nodeId(d => d.id).nodeWidth(10).nodePadding(NODE_PAD)
+    .nodeAlign(d => d.stage)
     .extent([[LEFT_GUTTER, TOP_PAD], [W - RIGHT_GUTTER, H - 18]]);
   const g = sk({ nodes: nodes.map(n => ({ ...n })), links: links.map(l => ({ ...l })) });
 
@@ -1051,12 +1058,29 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   const sel1 = controls.primarySel ? document.getElementById(controls.primarySel) : null;
   const selT = controls.typeSel    ? document.getElementById(controls.typeSel)    : null;
   const selS = controls.sortSel    ? document.getElementById(controls.sortSel)    : null;
+  const selL = controls.langSel    ? document.getElementById(controls.langSel)    : null;
   const tabs = controls.tabsRoot   ? document.querySelector(controls.tabsRoot)    : null;
 
   if (sel1 && !sel1.options.length) {
     const pv = [...new Set(all.map(r => r[controls.primaryField]))].filter(Boolean).sort();
     pv.forEach(v => sel1.add(new Option(v, v)));
     sel1.value = pv[0];
+  }
+  // Populate the language dropdown from the data — "All languages" plus
+  // every code that appears in the dataset (ordered by frequency desc).
+  if (selL && !selL.options.length) {
+    const LNAME = { en:"English", fr:"French", es:"Spanish", pt:"Portuguese",
+                    it:"Italian", de:"German", ca:"Catalan", nl:"Dutch",
+                    und:"undetermined" };
+    const counts = d3.rollup(all, v => v.length, r => (r.Language || "und"));
+    const codes = [...counts.entries()].sort((a,b) => b[1]-a[1]);
+    selL.add(new Option("All languages", "ALL"));
+    codes.forEach(([c,n]) => {
+      const label = (LNAME[c] || c.toUpperCase()) + ` (${d3.format(",")(n)})`;
+      selL.add(new Option(label, c));
+    });
+    selL.value = "ALL";
+    selL.addEventListener("change", () => render());
   }
 
   const getYears = controls.yearInputs
@@ -1066,10 +1090,12 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   function subset() {
     const p  = sel1 ? sel1.value : null;
     const ty = selT ? selT.value : "ALL";
+    const lg = selL ? selL.value : "ALL";
     const [lo, hi] = getYears();
     return all.filter(r =>
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
+      (lg === "ALL" || (r.Language || "und") === lg) &&
       inRange(r, lo, hi));
   }
 
@@ -1914,6 +1940,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         primarySel: "bee-topic-select", primaryField: "Topic",
         typeSel:    "bee-type-select",
         sortSel:    "bee-sort-select",
+        langSel:    "bee-lang-select",
         tabsRoot:   "#fig-beeswarm-topics .seg",
         yearInputs: ["bt-y0", "bt-y1"],
       },
@@ -1926,6 +1953,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         primarySel: "bee-cm-select", primaryField: "Sub-topic",
         typeSel:    "bee-cm-type-select",
         sortSel:    "bee-cm-sort-select",
+        langSel:    "bee-cm-lang-select",
         tabsRoot:   "#fig-beeswarm-cm .seg",
         yearInputs: ["bc-y0", "bc-y1"],
       },

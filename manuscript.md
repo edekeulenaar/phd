@@ -21,55 +21,445 @@ In summary, moderation bears traits from both censorial practices — to frame t
 
 # Method
 
-So far, histories of content moderation have centred around at least three categories: practices, systematic field literature reviews, and industry history. By studying "practices", scholars have often responded to the impression of that moderation remains a polyvalent field whose main constant is its material manifestation, less than an authoritative definition. The practice may indeed materialise in telephone line surveillance [@carmiHiddenListenersRegulatingb], platform policies and algorithmic techniques [@decookSafeHarmGovernance2022b; @katzenbachPlatformGovernanceArchive2023; @dekeulenaarModerationCrisisYouTube2025], moderation as a profession [@seeringMetaphorsModeration2022], or the history of an industry [@robertsCommercialContentModeration2016]. 
+So far, histories of content moderation have centred around at least three categories: practices, systematic field literature reviews, and industry histories. By studying "practices", scholars have often responded to the impression of that moderation remains a polyvalent field whose main constant is its material manifestation, less than an authoritative definition. The practice may indeed materialise in telephone line surveillance [@carmiHiddenListenersRegulatingb], platform policies and algorithmic techniques [@decookSafeHarmGovernance2022b; @katzenbachPlatformGovernanceArchive2023; @dekeulenaarModerationCrisisYouTube2025], moderation as a profession [@seeringMetaphorsModeration2022], or the history of an industry [@robertsCommercialContentModeration2016]. 
 
-Another is the study of content moderation as theorised by scholarly literature, specifically through systematic literature reviews around a research question needing to consolidate a state of consensus in the field (e.g., studies on how users perceive moderation [@maHowUsersExperience2023]), or through bibliometrics as form of "science mapping" [@oozanExploringContentModeration2024] — a reflection of the state of a field and the topics that emerge from interactions between citation patterns and disciplinary convergences. Histories of moderation from an industry perspective also exist, typically in legal studies [@wuPrivacyFreeSpeech2022] that recollect the ways in which moderation has been adjudicated in landmark cases. The latter of these, at the time of writing, proved an important turning point in the way one *can* think of moderation with legal consequences: a duty to attenuate "addictive" dark patterns in platform design [cit]. 
+Another is the study of content moderation as theorised by scholarly literature, specifically through systematic literature reviews around a research question needing to consolidate a state of consensus in the field (e.g., studies on how users perceive moderation [@maHowUsersExperience2023]), or through bibliometrics as form of "science mapping" [@oozanExploringContentModeration2024] — a reflection on the authors and topics that emerge from interactions between citation patterns and disciplinary convergences. Histories of moderation from an industry perspective also exist, typically in legal studies [@wuPrivacyFreeSpeech2022] that recollect the ways in which moderation has been adjudicated in landmark cases. These prove to be important turning points in how one can think of moderation with legal consequences.
 
-The methods of histories of moderation as a practice tend to adapt to the material manifestations of their object of study. In the latter case, interviews and ethnographies [@gillespieCustodiansInternetPlatforms2018a; @robertsScreenContentModeration2019; @seeringMetaphorsModeration2022] as capturing moderation articulated from and by the ground: moderators making sense of their profession or commitment to an online community, particularly in a context where a practice, now industrialised, continues to be overlooked as a janitorial and underpaid task by workers of precarious economies, all while being crucial to the sustenance of public life around the world. There are other histories that focus on documented captured of moderation as a historical profession unbound by the Internet. Carmi [@carmiHiddenListenersRegulatingb] uses Bell Telephone Company articles on converging moderation technologies: how Bell workers modulated information transmissions, what their roles were, and what onboarding manuals could re-enact about the actual practice at that time. 
+The methods of histories of moderation as a practice tend to adapt to the material manifestations of their object of study. In the latter case, interviews and ethnographies [@gillespieCustodiansInternetPlatforms2018a; @robertsScreenContentModeration2019; @seeringMetaphorsModeration2022] as capturing moderation articulated from and by the ground: moderators making sense of their profession or commitment to an online community, particularly in a context where a practice, now industrialised, continues to be overlooked as a janitorial and underpaid task by workers of precarious economies, all while being crucial to the sustenance of public life around the world. There are other histories that focus on documented captured of moderation as a historical profession unbound by the Internet. Carmi [@carmiHiddenListenersRegulatingb] uses Bell Telephone Company articles on converging moderation technologies: how Bell workers modulated information transmissions, what their roles were, and what onboarding manuals could re-enact about the actual practice at that time [@carmiHiddenListenersRegulatingb, 444-445]. 
 
-This is somewhat comparable to platform policies, which indicate, to some degree, who partakes in the task of moderation, how moderation is done, why, and where [@carmiHiddenListenersRegulatingb, 444-445]. Indeed, beside algorithmic auditing [cit] and digital methods studies [cit], platform policies have been an oft-used source of documentation of moderation practices. For one, it is the manifestation of a platform corporate culture, and by extension of the inadvertent "governance" mechanisms [@gorwaWhatPlatformGovernance2019b] that make platforms new governing forces of public life [@klonickNewGovernorsPeople2017]. The method, here, remains grounded in the industry itself: it uses platform policies are blueprints to occasionally reconstruct moderation as "platform effects" (see [Chapter 2. Methods for empirical content moderation research](Chapter%202.%20Methods%20for%20empirical%20content%20moderation%20research.md)). Conceptions of moderation are thus bound to how platforms define it in their own terms, and at most to how they are operationalised differently, in tension or in contradiction with policy clauses within auditable demotion, flagging, removal and reporting systems. 
+This is somewhat comparable to the study of platform policies, which indicate, to some degree, who partakes in the task of moderation, how moderation is done, why, and where. Beside algorithmic auditing [cit] and digital methods studies [cit], platform policies have been an oft-used source of documentation of moderation practices. For one, it is the manifestation of a platform corporate culture, and by extension of the inadvertent "governance" mechanisms [@gorwaWhatPlatformGovernance2019b] that make platforms new governing forces of public life [@klonickNewGovernorsPeople2017]. The method remains grounded in the industry itself: it uses platform policies are blueprints to occasionally reconstruct moderation as "platform effects" (see [Chapter 2. Methods for empirical content moderation research](Chapter%202.%20Methods%20for%20empirical%20content%20moderation%20research.md)). Conceptions of moderation are thus bound to how platforms define it in their own terms, and at most to how they are operationalised differently, in tension or in contradiction with policy clauses within auditable demotion, flagging, removal and reporting systems. 
 
-Other histories can be weaved by systematic literature reviews for specific research questions — a state of epistemic affairs over, for example, of how users experience moderation [@maHowUsersExperience2023], or how moderators see their roles as "community managers" [@seeringMetaphorsModeration2022]. Beside aggregating knowledge on a given topic, the reason behind systematic literature reviews also consists in outlining a history of scholarly conceptions on a given phenomenon as part of a forming "epistemic culture" [@EpistemicCultures2015]. Different framings, topics and inferences emanate from a field in progression, and literature reviews tend to give a summarised picture of the state of the field. This is what  bibliometric analyses [@oozanExploringContentModeration2024] also do: exposés of who is most cited around which topics, and what those topics reveal about which elements of content moderation become worthy of analysis over time. 
+Other histories can be weaved by systematic literature reviews for specific research questions — a state of epistemic affairs over, for example, of how users experience moderation [@maHowUsersExperience2023], or how moderators see their roles as "community managers" [@seeringMetaphorsModeration2022]. Beside aggregating knowledge on a given topic, the reason behind systematic literature reviews also consists in outlining a history of scholarly conceptions on a given phenomenon as part of a forming "epistemic culture" [@EpistemicCultures2015]. Different framings, topics and inferences emanate from a field in progression, and literature reviews tend to give a summarised picture of the state of the field. This is what bibliometric analyses [@oozanExploringContentModeration2024] also do: exposés of who is most cited around which topics, and what those topics reveal about which elements of content moderation become worthy of analysis over time. 
 
-For the purposes of this project — a study of the notion of content moderation as compared with that of censorship and other information management techniques — it may be necessary to step beyond the field of content or platform governance alone, as well as the disciplines that typically take interest in them. One objective is to explore how content moderation has been conceptualise in the literature *specifically* about this practice, typically from media and communication studies, computer science, STS and legal fields. From this analysis emanate the definitions, actors, techniques and justifications attributed to moderation, as well as sub-topics that help contextualise them: content moderation as platform governance; as part of platform regulation; as a form of compliance; as the enforcement of community norms by volunteer moderators; as a form of brand safety; as a form of industrial labor; as the need for moderating extremism; and as a form of censorship. These components can then be compared to the study of other (normative) information management techniques: censorship; the management of public debate; media moderation; AI alignment; and, conceptually at least, political moderation. The procedure behind this comparison is detailed in what follows. 
+For the purposes of this project — a study of the notion of content moderation as compared with that of censorship and other information management techniques — it may be necessary to step beyond the field of content or platform governance alone, as well as the disciplines that typically take interest in them. One objective is to explore how content moderation has been conceptualised in the literature *specifically* about this practice, typically from media and communication studies, computer science, STS and legal fields. From this analysis emanate the definitions, actors, techniques and justifications attributed to moderation, as well as sub-topics that help contextualise them: content moderation as platform governance; as part of platform regulation; as a form of compliance; as the enforcement of community norms by volunteer moderators; as a form of brand safety; as a form of industrial labor; as the need for moderating extremism; and as a form of censorship. Such components can then be compared to the study of other (normative) information management techniques: censorship; the management of public debate; media moderation; AI alignment; and, conceptually at least, political moderation. The procedure behind this comparison is explained in what follows. 
 
 ## Query design
 
-A corpus of scholarly publications was assembled using twenty-four queries ranging across conceptual neighbours of moderation, as well as languages. Queries spanned four conceptual clusters — censorship; content moderation; the pairing of moderation-and-censorship; and debate, media, and platform governance — across English, French, Portuguese, Spanish, and Italian. Two anchor concepts — moderation and censorship — retrieved up to 500 results each, and surrounding queries up to 100. Multilingual coverage is consequential: French scholarship contributes a rich theoretical tradition rarely translated [@badouardRegulationContenusInternet2020; @degandModerationFilsDiscussion2011], while Spanish and Portuguese open onto Latin American and Iberian case studies routinely excluded from anglophone histories. These bring conceptions of moderation positioned beyond American constitutionalist debates about free speech, and, interestingly, towards questions of transitional justice, political reform and historical reparation — all functions that touch upon the moderation of historical memory far more than "harm" (see [Chapter 4. Crisis IV - Normative dislocation](Chapter%204.%20Crisis%20IV%20-%20Normative%20dislocation.md)). 
+To gather a corpus of literature that can capture *both* content moderation studies and adjacent literature on censorship and moderation, query design needed to reflect the conceptual diversity of the term. Queries spanned four conceptual clusters — censorship; content moderation; the pairing of moderation-and-censorship; and debate, media, and platform governance — across five languages spoken by the author: English, French, Portuguese, Spanish, and Italian. 
 
-Three considerations motivated this breadth. The first is that moderation is a polysemic term whose (currently) platform-bound usage participates in a much older web of meanings that contribute to contemporary definitions, from Aristotelian *sōphrosunē*, to parliamentary chairmanship, forum administration, to, indeed, censorial practices. Second, both moderation and censorship are heavily contested concepts [@delaatCoercionEmpowermentModeration2012] that are prone to deep disagreements even in scholarship, other than in rapid shifts in usage under conditions of mediatised debate. Unearthing these conceptual background of moderation is a useful exercise to provide alternative frameworks for conceptualisations, especially when there are important normative or methodological impasses. Third, expanding the query set is one of the few defences against importing the framings the chapter aims to interrogate; querying *only* "content moderation" returns a literature already largely organised around platforms and online content more generally.
+Three considerations motivated this breadth. The first is that moderation is a polysemic term whose (current) platform-bound usage participates in a much older web of meanings that contribute to contemporary definitions, from Aristotelian *sōphrosunē*, to parliamentary chairmanship, forum administration, to, indeed, censorial practices. Second, both moderation and censorship are heavily contested concepts [@delaatCoercionEmpowermentModeration2012] that are prone to deep disagreements even in scholarship, other than in rapid shifts in usage under conditions of public debate. Unearthing the conceptual backgrounds of moderation is a useful exercise to provide alternative frameworks for conceptualisation, especially when normative or methodological impasses prevent conceptual syntheses. Third, expanding the query set is one of the few defences against importing the framings the chapter aims to interrogate; querying *only* "content moderation" returns a literature already largely organised around platforms and online content more generally.
+
+Some queries weighted more than others: moderation and censorship are central pieces of the study and were used to retrieve up to 500 results each, while surrounding queries yielded 100 results each (**[[#^table-queries|Table 1]]**). 
+
+| Query                     | Type of concept | Language   | Results |
+| ------------------------- | --------------- | ---------- | ------- |
+| censorship                | key             | English    | 500     |
+| moderation                | key             | English    | 500     |
+| censor                    | key             | English    | 100     |
+| community guidelines      | key             | English    | 100     |
+| conflict moderation       | neighbour       | English    | 100     |
+| conflict moderator        | neighbour       | English    | 100     |
+| content moderation        | key             | English    | 100     |
+| content moderator         | key             | English    | 100     |
+| debate moderation         | neighbour       | English    | 100     |
+| debate moderator          | neighbour       | English    | 100     |
+| media moderation          | neighbour       | English    | 100     |
+| media moderator           | neighbour       | English    | 100     |
+| moderation censorship     | key             | English    | 100     |
+| moderator                 | key             | English    | 100     |
+| moderator censor          | key             | English    | 100     |
+| television moderation     | neighbour       | English    | 100     |
+| television moderator      | neighbour       | English    | 100     |
+| trust and safety          | key             | English    | 100     |
+| censeur                   | key             | French     | 100     |
+| censure                   | key             | French     | 100     |
+| modérateur                | key             | French     | 100     |
+| modérateur censeur        | key             | French     | 100     |
+| modérateur de conflits    | neighbour       | French     | 100     |
+| modérateur de contenus    | key             | French     | 100     |
+| modérateur de débat       | neighbour       | French     | 100     |
+| modérateur des médias     | neighbour       | French     | 100     |
+| modération                | key             | French     | 100     |
+| modération censure        | key             | French     | 100     |
+| modération de conflits    | neighbour       | French     | 100     |
+| modération de contenu     | key             | French     | 100     |
+| modération des débats     | neighbour       | French     | 100     |
+| modération des médias     | neighbour       | French     | 100     |
+| television modérateur     | neighbour       | French     | 100     |
+| censura                   | key             | Spanish    | 100     |
+| moderación                | key             | Spanish    | 100     |
+| moderación de debates     | neighbour       | Spanish    | 100     |
+| moderación de medios      | neighbour       | Spanish    | 100     |
+| moderador                 | key             | Spanish    | 100     |
+| moderador censor          | key             | Spanish    | 100     |
+| moderador de conflictos   | neighbour       | Spanish    | 100     |
+| moderador de debate       | neighbour       | Spanish    | 100     |
+| Moderador de debate       | neighbour       | Spanish    | 100     |
+| Moderador de medios       | neighbour       | Spanish    | 100     |
+| moderación de conflictos  | neighbour       | Spanish    | 86      |
+| il censore                | key             | Italian    | 100     |
+| moderadore                | key             | Italian    | 100     |
+| moderatore dei media      | neighbour       | Italian    | 100     |
+| moderatore del dibattito  | neighbour       | Italian    | 100     |
+| moderatore di conflitti   | neighbour       | Italian    | 100     |
+| moderatore di contenuti   | neighbour       | Italian    | 100     |
+| moderazione               | key             | Italian    | 100     |
+| moderazione censura       | key             | Italian    | 100     |
+| moderazione dei contenuti | key             | Italian    | 100     |
+| moderazione dei media     | neighbour       | Italian    | 100     |
+| moderazione del dibattito | neighbour       | Italian    | 100     |
+| moderazione di conflitti  | neighbour       | Italian    | 100     |
+| moderação                 | key             | Portuguese | 100     |
+| moderação censura         | key             | Portuguese | 100     |
+| moderação de conteúdo     | key             | Portuguese | 100     |
+| moderação de debates      | neighbour       | Portuguese | 100     |
+| moderação de mídia        | neighbour       | Portuguese | 100     |
+| moderador de conflitos    | neighbour       | Portuguese | 100     |
+| moderador de contéudos    | neighbour       | Portuguese | 100     |
+| moderação de conflitos    | neighbour       | Portuguese | 57      |
+**Table 1**. List of queries used in Google Scholar SerpAPI  ^table-queries
+
+Multilingual coverage is instrumental for a number of reasons. Conceptually, Anglophone scholarship on content moderation often echoes US-centric legal debates about free speech rights and the needs for hate speech protections. Other languages bring their own contextual baggage: Portuguese and Spanish-speaking literature, for example, that of a particular experience of censorship during military regimes in Spain, Portugal and Latin America, as well as reflections on moderation as an instrument of transitional justice, political reform and historical reparation — all of which conceptualise moderation as the management of historical memory more than individual "harm" (see [Chapter 4. Crisis IV - Normative dislocation](Chapter%204.%20Crisis%20IV%20-%20Normative%20dislocation.md)). French and Italian scholarship contribute a rich theoretical tradition both in content moderation, political moderation and censorship rarely translated [@badouardRegulationContenusInternet2020; @degandModerationFilsDiscussion2011]. Though seminal contributions by Bourdieu and more recently Badouard may be read in English, other publications with strong conceptual anchors in French analytical traditions are often buried in old journals rarely visible in content moderation citation networks. And, though this literature is not often visible in the results, French and Portuguese also help capture contributions from geographical regions outside of the Western hemisphere. 
 
 ## Data collection
 
-Google Scholar API (via SerpAPI) was used to collect the top 500 or 100 results for each query in each language. Results were merged with an existing Zotero library of content moderation articles from various platform governance syllabi from PlatGovNet [cit], producing 7,772 entries enriched with publication year, citation counts, venue, and discipline. After relevance triage — each entry flagged YES, MAYBE, or NO using a mix of manual and computational coding — 3,563 entries were retained, of which 2,405 had a retrievable PDF.
+The queries above were used to obtain results from Google Scholar (via SerpAPI). Results were merged with an existing Zotero library of content moderation articles from all governance syllabi of PlatGovNet [@platgovnetResourcesPlatGov], producing a total of 7 772 books, book sections, journal publications, preprints, PhD theses and reports. 
 
-Full texts were obtained through a retrieval pipeline that tried sources in sequence: direct URLs, DOI resolution, open-access repositories (HAL, archivesic, theses.hal.science, arXiv), the Royal Danish Library's authenticated catalogue (accessed through institutional VPN with cookies injected from a live browser session into a headless Selenium instance), Anna's Archive, and Sci-Hub as last resorts. A separate strict-relevance validator confirmed that retrieved PDFs matched their bibliographic entries by checking for the title as a contiguous phrase and the author surname in the first pages, catching cases where the algorithm had returned a paper that *cited* the target work rather than the work itself.
+Based publication titles, authors, abstract and URLs, a filtering process was applied to triage the relevance of each entry by prompting Gemini 3 Flash [@googleGemini3Flash2025] with a selection criteria and examples (**[[#^prompt-1|Prompt 1]]**). Results were validated manually, and only a total of 3,563 entries classified as "YES" or "MAYBE" were retained. 
 
-Metadata was then enriched across three sources: OpenAlex for DOI, journal metadata, citation counts, and open-access status; Crossref for publisher, ISSN, and author disambiguation; and Semantic Scholar as a fallback for citation counts and abstracts. The Zotero Web API supplied user-curated fields that DOI-based APIs do not reliably provide — canonical item keys, item type (especially accurate for books, theses, and grey literature), normalised author lists, language, place, and library catalogue. A final pass added discipline labels (primary and secondary) through a Gemini classification step using title, abstract, and venue.
+```python
+SYSTEM_PROMPT = """\
+You are a research assistant screening academic literature for a PhD project \
+on the history and theory of censorship and moderation.
+
+Decide whether the item below is relevant to that project.
+
+RELEVANT topics include (non-exhaustive):
+- Censorship in any historical period or country
+- Speech moderation in philosophy, political theory, sociology and other social science disciplines
+- Moderation in conflict resolution
+- Content moderation, platform governance, trust & safety
+- Speech regulation, hate speech, harmful content policies
+- Information control, propaganda, disinformation policy
+- Press freedom, media law, broadcasting regulation
+- Deplatforming, shadowbanning, algorithmic demotion
+- Index of forbidden books, publication bans, prior restraint
+- Computer science / AI / NLP applied to moderation or censorship
+- Internet governance, online safety legislation
+- The moderation of public debates (in any media)
+- The moderation of public conflicts
+- Moderating powers and roles in political and media systems
+- Moderation in political philosophy, or philosophy in general
+- The moderating role of different societal actors, such as media, schools, or other institutions
+- Moderation in media, political, and religious contexts
+
+NOT RELEVANT (answer NO):
+- Medicine, clinical psychology, psychiatry, neuroscience
+- Physics, chemistry, biology, ecology, earth sciences
+- Engineering, materials science (unless about moderation tech)
+- Mathematics (unless applied to moderation/censorship)
+- Veterinary, agriculture, food science
+- Items where censorship/moderation is mentioned only incidentally \
+  (e.g. a history book that happens to mention a censor once)
+
+Answer with EXACTLY one of: YES  /  NO  /  MAYBE
+"""
+
+ITEM_TEMPLATE = """\
+Title:    {title}
+Author:   {author}
+URL:      {url}
+Abstract: {abstract}
+"""
+```
+
+**Prompt 1.** System prompt used by the relevance classifier. ^prompt-1
+
+Full texts were obtained through a retrieval pipeline that scoured seven sources: direct URLs when containing PDFs; open-access repositories (HAL, archivesic, arXiv); the Royal Danish Library's catalogue; Anna's Archive (via their API), Sci-Hub (via API) and Google Search (via Serp API). Searched included author names and paper titles. In the absence of APIs, open access repositories were queried through an institutional VPN with cookies injected from a live browser session into a headless Selenium instance. For Google Searches, a separate relevance validator was used to confirm that retrieved PDFs matched their bibliographic entries by checking for the title as a contiguous phrase and the author surname in the first pages. From this process emerged 3 444 PDFs, including a handful converted from epub (**[[#^table-publications|Table 2]]). 
+
+| Stage                                                                         | Items |
+| ----------------------------------------------------------------------------- | ----: |
+| Google Scholar search results                                                 | 7,143 |
+| Zotero library                                                                | 5,512 |
+| Tagged YES or MAYBE during relevance screening (**[[#^prompt-1\|Prompt 1]]**) | 4,278 |
+| PDFs successfully downloaded                                                  | 3,444 |
+| Retained in final results after manual screening                              | 2,463 |
+**Table 2**. Number of publications found and downloaded from Google Scholar and PlatGovNet syllabi before and after validation. ^table-publications
+
+## Metadata and discipline enrichment
+
+Not all publications had complete metadata; some missed publication dates, others than incorrect author names, and others had no publication venue. Metadata was enriched across three sources: OpenAlex for DOI, journal metadata, citation counts, and open-access status; Crossref for publisher, ISSN, and author disambiguation; and Semantic Scholar as a fallback for citation counts and abstracts. The Zotero Web API supplied user-curated fields that DOI-based APIs may not always provide: canonical item keys, item type, normalised author lists, language, place, and library catalogue. 
+
+Discipline labels were added to each publication through a Gemini 3 Flash classification step using title, abstract, and venue (**[[#^prompt-1|Prompt 2]]**). Disciplines were assigned per article — primary and secondary — through a Gemini classification step over title, abstract, and venue, and then validated manually. Labels distinguish communication and media studies (a  dominant articulator of *content* moderation as a concept) from history, book history, art and literary studies, political science, law, sociology, philosophy, and computer science and AI. 
+
+Two labelling decisions deserve flagging. First, *censorship studies* proper — inaugurated by Robert C. Post's edited volume in the 1990s [@postCensorshipSilencingPractices1998] — was retained as a separable sub-field rather than folded into political science or literary studies. Second, *computer science and AI* was treated as a form of primary literature alongside its secondary status: technical papers on filtering, hashing, classification or recommendation are not only *about* moderation, they often *produce* the moderation infrastructure the rest of the literature theorises [@gorwaAlgorithmicContentModeration2020]. 
+
+```python
+NEW_COLS = [
+    "Discipline",
+    "Discipline Secondary",
+    "Discipline Confidence",
+    "Discipline Model",
+]
+
+DISCIPLINES = [
+    "communication_media_studies",
+    "law_legal_studies",
+    "computer_science_ai",
+    "political_science_ir",
+    "sociology_anthropology",
+    "philosophy_ethics",
+    "history_book_history",
+    "religious_studies_theology",
+    "education_pedagogy",
+    "psychology_behavioral_science",
+    "economics_business_management",
+    "statistics_methods",
+    "arts_literary_cultural_studies",
+    "science_technology_studies",
+    "public_policy_governance",
+    "other_unclear",
+    "censorship_studies",
+    "political_philosophy",
+    "conflict_peace_studies",
+    "rhetoric",
+    "linguistics"
+]
+
+SYSTEM_PROMPT = f"""\
+You classify scholarly bibliography items by the main academic discipline of
+the work, using only the provided metadata. This project studies moderation,
+censorship, and adjacent concepts across disciplines, so classify the scholarly
+discipline, not whether the item is relevant.
+
+Use exactly one primary discipline from this controlled vocabulary:
+{", ".join(DISCIPLINES)}
+
+Guidance:
+- Choose the discipline that best describes the article/book/chapter itself.
+- Publication venue and abstract are stronger signals than isolated keywords.
+- For platform/content moderation law, choose law_legal_studies when the frame
+  is legal doctrine or regulation; communication_media_studies when the frame is
+  media/platform governance; computer_science_ai when the frame is technical.
+- Use statistics_methods for moderation/censoring as a statistical method.
+- Use censorship_studies for studies on censorship itself.
+- Use political_philosophy for studies on moderation in political systems or political thought. 
+- Use philosophy_ethics for studies on e.g. stoicism and other philosophical traditions interested in mental, physical or other moderation. 
+- Use religious_studies_theology for studies on religious moderation.
+- Use other_unclear only when metadata is too sparse or genuinely ambiguous.
+- If a secondary discipline is useful, include it; otherwise use an empty string.
+
+Return exactly one line and nothing else:
+discipline<TAB>secondary_discipline<TAB>confidence
+
+The first value must be one controlled vocabulary value. The second value must
+be one controlled vocabulary value or empty. Confidence is a number from 0 to 1.
+"""
+```
+
+**Prompt 2.** System prompt used by the discipline classifier. ^prompt-2
 
 ## Building a taxonomy
 
-A first computational pass extracted theoretical content from each retrieved PDF. Gemini 3 Flash processed the Google Scholar corpus, returning four fields per document — *What* (the author's definition or characterisation of the practice), *How* (techniques), *Who* (agents), and *Why* (rationale) — alongside loosely inferred contextual fields (where, when, topic). GPT-4o annotated the Zotero library and a supplementary Google Scholar set with a parallel scheme. The models were prompted to extract strictly from the text and to flag inferential fields separately. The conceptual scope was kept deliberately broad, instructing the models to register restrictive (deletion, deplatforming, state censorship), facilitative (debate chairing, contextualising, redirecting), and editorial (ranking, recommendation, curation) senses of the practice. This pass yielded approximately 2,382 substantively annotated records.
+Next, publications were classified into three taxonomies: one, on the level of the *topic*; second, on a sub-topic; and third, on key components that constitute a publication's conception of moderation or censorship (the what, how, why and who mentioned above), as well as contextual fields: what media ("medium") and countr(ies) are described in the publication ("where"). The latter two are especially relevant for studying the material context in which a concept like moderation or censorship is defined and are, in some cases, defining features (**==section x==**). 
 
-### Sampling and inductive coding
+### Sampling
 
-From this pool, a stratified sample of 500 items was drawn for close manual reading. Stratification proceeded along four dimensions through iterative proportional fitting: query and language, to mirror the conceptual and linguistic structure of the search; discipline, with communication and media studies set at roughly half the sample to reflect the chapter's home field while leaving room for law, sociology, literary history, and political theory; citation impact, with works above 200 citations force-included so canonical contributions could not be missed by chance; and publication year, binned into pre-2000, 2000–2009, 2010–2019, and 2020+ to retain historical depth.
+Taxonomies were built based on canonical literature cited in PlatGovNet syllabi (i.e., definitions, actors and other points defined by those authors) and inductively, i.e., based on what emerges from publications. In the latter case, a stratified sample of 500 items was drawn for close manual reading. Sampling was done along four dimensions: query and language, to mirror the conceptual and linguistic structure of the search; discipline, with communication and media studies set at roughly half the sample; citation impact, with works above 200 citations were included so canonical contributions could not be missed; and publication year, binned into pre-2000, 2000–2009, 2010–2019, and 2020+ to retain historical depth. As citations were often incorrect or missing, they weighted less in the sampling calculation. Each sampled item was given a close reading. For each relevant passage, I recorded a type of claim (what moderation or censorship are; how they are done; who do it, and why) and a verbatim phrase anchoring it (**[Annex 1](https://docs.google.com/spreadsheets/d/1_UE4CWyFGLrsjfkC0e-Kp51l8Ue2nzR4DTa5Do7tZHY/edit?usp=sharing)**). 
 
-Each sampled item warranted a close reading. For each relevant passage, I recorded the type of claim (what / how / who / why) and a verbatim phrase anchoring it. Phrases were clustered into higher-order category labels through repeated comparison: *shadowbanning* and *downranking* into the HOW–censorship category *marginalisation* [@myerswestCensoredSuspendedShadowbanned2018]; legal-liability shielding into the WHY–content-moderation category *legal liability* [@klonickNewGovernorsPeople2017]; moderation workers into the WHO category *moderation labour* [@robertsBehindScreen2019]. Each category was given an operational definition with an explicit "CODE HERE when…" trigger and disambiguation clauses distinguishing it from neighbours (*Removal* vs. *Marginalisation* vs. *Blocking* vs. *Deplatforming*; *Brand safety* vs. *Compliance*), anchored to canonical sources where the category was already named in the literature [@klonickNewGovernorsPeople2017; @douekGoverningOnlineSpeech2021; @bourdieuLangagePouvoirSymbolique2001; @jansenCensorshipKnotThat1988]. The final vocabulary contains 97 category labels (HOW=31, WHAT=5, WHO=43, WHY=18); the WHO axis distinguishes state / private / civil society / communal / technical actors.
+### Topical and sub-topical categories
 
-### Disciplines
+On the topical level (**[[#^topic-taxonomy|Topic and sub-topic taxonomy]]**), six categories were identified as relevant to the study: beside content moderation and censorship, this included the moderation of media in general (pre-Internet); political moderation; and moderation as the art of managing plural debate, which also echoes as a sub-topic within content moderation. The interest here is also to analyse the evolution of studies on content moderation, such as sub-topics for this field were also necessary. Drawing from chronologically sorted samples and canonical sources from syllabi, nine sub-topics were identified: the idea of moderation as a form of censorship, be it from the state, from platforms, or as a lived experience [@olhaimsonDisproportionateRemovalsDiffering; @bammanCensorshipDeletionPractices2012; @trottierSocialMediaPolitics2014a; @diasolivaFightingHateSpeech2021a]; as part of platform governance [@gorwaWhatPlatformGovernance2019b; @gillespieCustodiansInternet2018; @tgillespieGovernancePlatforms; @klonickNewGovernorsPeople2017; @caplanContemporaryIssuesConcerns]; of platform regulation [@gorwaPoliticsPlatformRegulation2024; @grstoneContentRegulationFirst1983; @langvardtRegulatingOnlineContent2017]; as industrial labour [@robertsScreenContentModeration2019; @ruckensteinRehumanizingPlatformContent2020; @rafaelgrohmannTrabalhoPorPlataformas; @arshtHumanCostOnline2018]; compliance [@karaganisjoeNoticeTakedownEveryday2017; @atrujilloDSATransparencyDatabase2025]; brand safety [@liuSocialMediaContent2021]; as a way of enforcing community norms and identity, particularly in creator cultures [@lampeSlashdotBurnDistributed2004; @wohnVolunteerModeratorsTwitch2019a; @chandrasekharanBagCommunitiesIdentifying2017a]; and as the art of managing public debate, towards a more or less ambitious goal at democratic or "prosocial" design and "healthy communities". Some of this early literature is nested in few but impactful studies of the role of moderators in online learning [@salmonEmoderatingKeyTeaching2011], which have spilled over in more or less contemporary explorations of moderation and moderators as key "intermediaries" for online public debate in online fora and with governmental actors [@edwardsMODERATOREMERGINGDEMOCRATIC; @wrightDemocracyDeliberationDesign2007b; @kieslersaraBuildingSuccessfulOnline2012]. 
 
-Disciplines were assigned per article — primary and secondary — through a Gemini classification step over title, abstract, and venue, and then cleaned by hand against the master bibliography. The labels distinguish communication and media studies (the chapter's home field, and the dominant articulator of *content* moderation as a concept) from history, book history, art and literary studies, political science, law, sociology, philosophy, and computer science and AI. Two labelling decisions deserve flagging. First, *censorship studies* proper — inaugurated by Robert C. Post's edited volume in the 1990s [@robertc.postCensorshipSilencing1998] — was retained as a separable sub-field rather than folded into political science or literary studies, since its self-identification has institutional consequences for which definitions of censorship circulate where. Second, *computer science and AI* was treated as a form of primary literature alongside its secondary status: technical papers on filtering, hashing, classification or recommendation are not only *about* moderation, they often *produce* the moderation infrastructure the rest of the literature theorises [@gorwaAlgorithmicContentModeration2020]. Reading them only as commentary would miss this performative dimension.
+These categories are by now means complete. They are combinations of field-specific denominations ("platform governance", "platform regulation", "trust and safety industry") and arbitrary categories useful for finding conceptual overlaps in conceptions of moderation, particularly "moderation as censorship" and "moderation as the cultivation of a democratic public sphere". The association of content moderation with censorship, where it occurs, is treated as a relation between two topics rather than a collapse of one into the other: an item is coded as "censorship" if the author primarily theorises censorship (whether or not they mention platforms), and as "content moderation" if the author primarily theorises platform-bound practice (whether or not they invoke censorship as critique). Items that link the two — from opinion pieces such as Kalev Leetaru's *"Content moderation is a euphemism for censorship"* to Drüeke et al.'s study of platform-censorship narratives in German-speaking COVID-19 conspiracy communities [@druekeTHEYWILLDESTROY2025] — are coded by which side of the linkage they primarily develop. The boundary cuts both ways: there are also moments at which *debate management* is itself linked to censorship [@shenPerceptionsCensorshipModeration2018], and these are coded as debate moderation when the practice under analysis is the chairing of exchange. *Platform governance*, finally, is delimited as literature treating moderation as one element within a broader institutional, legal or infrastructural arrangement, rather than as the practice itself.
 
-### Topic assignment
+| Topic                | Sub-topic                                                   | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Content moderation   | Moderation as censorship                                    | Frames content moderation as a form of censorship — the suppression, silencing or removal of speech that platforms or their political allies find objectionable. The item explicitly argues that moderation IS (or operates as) censorship, rather than merely critiquing specific moderation decisions in passing.                                                                                                                                                                                                                                                                |
+| Content moderation   | Moderation as a means to reducing  extremism                | Frames content moderation as the task of containing or removing extremist content — terrorism, violent extremism, radicalisation pathways, and religious or political extremism — and treats extremist material as a distinct category demanding its own policies, operational responses and threat models.                                                                                                                                                                                                                                                                        |
+| Content moderation   | Moderation as part of platform governance                   | Frames content moderation as the mechanism through which platforms exercise rule-making authority over their own ecosystems. Focuses on the design and management of internal rules, decision rights, enforcement procedures, appeals, and the policies that align moderation with the platform's architecture, business model and lifecycle. Concerns rule-making BY the platform, not regulation OF it.                                                                                                                                                                          |
+| Content moderation   | Moderation as part of platform regulation                   | Frames content moderation as the object of external governance by states, courts and other public actors. Focuses on statutes and regulatory regimes (e.g. EU DSA, NetzDG, Section 230, Online Safety Acts), intermediary-liability doctrine, court rulings, regulator interventions, and the broader public-policy steering of platform moderation. Concerns regulation OF platforms, not their internal rule-making.                                                                                                                                                             |
+| Content moderation   | Moderation as industrial labour                             | Frames content moderation as a global industrial labour process — the large-scale review of user-generated content by paid workers, typically outsourced to BPOs or crowd-work platforms — and foregrounds the working conditions, supply chains, psychological toll, and political economy of that workforce.                                                                                                                                                                                                                                                                     |
+| Content moderation   | Moderation as compliance                                    | Frames content moderation as the operational mechanism through which platforms meet their legal and regulatory obligations — processing takedown notices, executing court orders, satisfying transparency mandates and statutory duties of care, and demonstrating conformity to regulators.                                                                                                                                                                                                                                                                                       |
+| Content moderation   | Moderation as brand safety                                  | Frames content moderation as the production of advertiser-friendly, brand-safe environments that retain users and protect the platform's economic model. Conceives CM as a business function answerable primarily to advertisers, investors and growth metrics rather than to law, community or rights.                                                                                                                                                                                                                                                                            |
+| Content moderation   | Moderation as community norms and identity                  | Frames content moderation as the upholding of a particular community's norms, rules and collective identity — typically performed by volunteer or user-moderators (subreddit mods, Wikipedia editors, Discord admins, forum operators) — rather than by platform-wide policy. Emphasises bottom-up, participatory rule-enforcement.                                                                                                                                                                                                                                                |
+| Content moderation   | Moderation as the cultivation of a democratic public sphere | Frames content moderation as the cultivation of the conditions for democratic deliberation, civic discourse and political participation. Conceives CM as a public-sphere-sustaining activity with explicitly democratic-theoretical stakes (legitimacy, pluralism, inclusion, epistemic quality). Content moderation is the facilitation, structuring and promotion of online public debate — keeping discussions on topic, securing balanced participation, raising deliberative quality — typically in civic fora, comment sections, or dedicated online deliberation platforms. |
+| Censorship           | —                                                           | Studies the suppression, prohibition or removal of speech, writing, images or other expression deemed obscene, politically unacceptable, blasphemous, or threatening to security — by state, religious, corporate or other authorities. The item's subject is censorship as such (historical, legal, political), not online content moderation.                                                                                                                                                                                                                                    |
+| Debate management    | —                                                           | Studies moderation as the practice of managing debate — chairing, facilitating, structuring discussion — in democratic deliberation, mediation, conflict resolution, classroom and civic settings. Concerns face-to-face or institutional debate practice, distinct from online content moderation.                                                                                                                                                                                                                                                                                |
+| Media moderation     | —                                                           | Studies moderation as practiced in legacy or non-platform media — broadcasting standards, editorial gatekeeping, press regulation, film classification, advertising standards — rather than on online platforms, fora or social media.                                                                                                                                                                                                                                                                                                                                             |
+| Moderation           | —                                                           | Frames moderation as a concept, virtue or tradition within philosophy and intellectual history — temperance, the via media, the moderate disposition — rather than as a contemporary platform, media or political practice.                                                                                                                                                                                                                                                                                                                                                        |
+| Political moderation | —                                                           | Studies moderation as a tradition in political theory and practice — the moderation of powers (separation of powers, checks and balances, constitutionalism) and the moderation of extreme political beliefs (the politics of the centre, deradicalisation). Concerns political institutions and ideologies, not online content.                                                                                                                                                                                                                                                   |
+| Other                | —                                                           | Specify in three words.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+**Table 3.** Topic taxonmy ^topic-taxonomy
 
-Each item was assigned a single primary *topic* drawn from four labels: censorship, content moderation, debate moderation, and platform governance. The decision to force a single label — rather than allowing multiple — was a deliberate analytical choice: the chapter's central question is how these four framings circulate, overlap, and displace one another across disciplines and over time, which is only legible if each item commits to one. Tie-breaking definitions were specified in the classification prompt and refined iteratively. The association of content moderation with censorship, where it occurs, is treated as a relation between two topics rather than a collapse of one into the other: an item is coded as "censorship" if the author primarily theorises censorship (whether or not they mention platforms), and as "content moderation" if the author primarily theorises platform-bound practice (whether or not they invoke censorship as critique). Items that link the two — from opinion pieces such as Kalev Leetaru's *"Content moderation is a euphemism for censorship"* to Drüeke et al.'s study of platform-censorship narratives in German-speaking COVID-19 conspiracy communities [@druekeTHEYWILLDESTROY2025] — are coded by which side of the linkage they primarily develop. The boundary cuts both ways: there are also moments at which *debate management* is itself linked to censorship [@shenPerceptionsCensorshipModeration2018], and these are coded as debate moderation when the practice under analysis is the chairing of exchange. *Platform governance*, finally, is delimited as literature treating moderation as one element within a broader institutional, legal or infrastructural arrangement, rather than as the practice itself.
+### Categorising the what, who, how and why of moderation
+
+
+
+
+
+Each category was given an operational definition with an explicit "CODE HERE when…" trigger and disambiguation clauses distinguishing it from neighbours (*Removal* vs. *Marginalisation* vs. *Blocking* vs. *Deplatforming*; *Brand safety* vs. *Compliance*), anchored to canonical sources where the category was already named in the literature [@klonickNewGovernorsPeople2017; @douekGoverningOnlineSpeech2021; @bourdieuLangagePouvoirSymbolique2001; @jansenCensorshipKnotThat1988]. The final vocabulary contains 97 category labels (HOW=31, WHAT=5, WHO=43, WHY=18); the WHO axis distinguishes state / private / civil society / communal / technical actors.
 
 ## Classifying the corpus
 
-The hand-built taxonomy was then applied to all 2,405 PDFs using Gemini 3 Flash. Four design choices kept the procedure tethered to the close reading. First, the vocabulary is loaded at runtime from the live taxonomy file, so manual refinements propagate to the next run. Second, up to six verbatim example phrases per category are injected into the prompt, calibrating the model against the same instances used to develop each label. Third, the model is asked to identify *predominant* framings only — at most two findings per type per article — since the interest is in evolving conceptions, not exhaustive technique inventories. Fourth, every finding must be anchored by a verbatim quoted phrase (≤12 words) and a list of taxonomy terms that actually appear in the passage; the model is forbidden from inventing terms or coding inferentially. Article-level metadata is joined from the bibliography rather than generated.
+The hand-built taxonomy was then applied to all 2,405 PDFs using Gemini 3 Flash (**[[#^prompt-4|Prompt 4]]**). Four design choices kept the procedure tethered to the close reading. First, the vocabulary is loaded at runtime from the live taxonomy file, so manual refinements propagate to the next run. Second, up to six verbatim example phrases per category are injected into the prompt, calibrating the model against the same instances used to develop each label. Third, the model is asked to identify *predominant* framings only — at most two findings per type per article — since the interest is in evolving conceptions, not exhaustive technique inventories. Fourth, every finding must be anchored by a verbatim quoted phrase (≤12 words) and a list of taxonomy terms that actually appear in the passage; the model is forbidden from inventing terms or coding inferentially. Article-level metadata is joined from the bibliography rather than generated.
 
 For items without a retrievable PDF, classification falls back to title plus abstract or Scholar snippet, with the source recorded per row so analyses can be filtered to PDF-grounded findings where higher confidence is required. Each finding also carries two item-level geographic fields: *country* (the jurisdictions or regions the item empirically discusses, blank if purely theoretical) and *medium* (the specific platforms or technologies discussed — Facebook, YouTube, television, radio, print press, AI/LLM — blank if medium-agnostic). The country field was further enriched by joining a parallel *Where* extraction from another project and decomposing each raw value into separate lists of countries and media platforms; of 12,877 finding rows, 79% carry normalised geography, 18% a raw-string fallback, and 3% no geographic information.
+
+```python
+
+PROMPT_TEMPLATE = """\
+You are an expert research assistant coding academic literature on moderation
+and censorship in their many senses (political moderation, debate/discussion
+management, media moderation, and platform content moderation). You will read
+ONE academic item (either the full PDF or its title + abstract/snippet) and
+classify it in TWO STAGES.
+
+You must be VERY SPECIFIC and VERY ACCURATE. Code only what the item ACTUALLY
+STATES — its stated beliefs, arguments, definitions, or dominant framings.
+Do NOT infer or extrapolate beyond the text. When in doubt, leave it out.
+
+################################################################
+STAGE 1 — TOPIC (and SUB-TOPIC)
+################################################################
+Decide which Topic best captures HOW THIS ITEM FRAMES its subject, by matching
+the item against each Topic's Definition below. Choose EXACTLY ONE Topic.
+
+TOPICS (match on Definition):
+{topics}
+
+Stage-1 rules:
+  • Pick the SINGLE Topic whose Definition best fits the item's dominant
+    framing (its title, abstract, thesis, and conclusion).
+  • If — and only if — you choose Topic = "{subtopic_parent}", you MUST also
+    choose EXACTLY ONE Sub-topic from its listed sub-topics (matched on their
+    Definitions). For every other Topic, leave "subtopic": "".
+  • If NO Topic's Definition genuinely fits, set
+    "topic": "Other: <three words>"  (literally the word "Other:" followed by a
+    three-word description of the actual framing, e.g. "Other: legal doctrine
+    analysis"). Use this sparingly — only when no listed Topic applies.
+  • Likewise, if Topic = "{subtopic_parent}" but no listed Sub-topic fits, set
+    "subtopic": "Other: <three words>".
+
+################################################################
+STAGE 2 — CONTENT FINDINGS (WHAT / HOW / WHO / WHY)
+################################################################
+Extract the item's STATED, PREDOMINANT framings — not every passing mention.
+For each TYPE, identify the categories that the item explicitly develops.
+
+TYPES:
+- WHAT : how the item DEFINES or FRAMES the practice itself.
+- HOW  : the techniques, mechanisms, or operations the item describes.
+- WHO  : the agents the item identifies as performing the practice.
+- WHY  : the motivations or justifications the item identifies or argues for.
+
+Use ONLY the category labels listed below. Each category has:
+  - a Definition: the precise meaning to use when matching.
+  - Example keywords: terms that, if they (or close synonyms) appear in the
+    item, are strong evidence the category applies.
+
+A finding is valid ONLY IF the item explicitly states or argues something that
+falls within the category's Definition. Coincidental keyword overlap without
+conceptual alignment is NOT enough. If a finding genuinely fits NO listed
+category for its Type, set "category": "Other: <three words>" (the word
+"Other:" followed by a three-word description), and put the author's own term
+in "mentioned_item". Use "Other:" sparingly.
+
+Per-Type cap: AT MOST 2 findings of any single Type. Most items will have
+0–1 findings per Type. Emit nothing for a Type the item does not engage.
+
+================================================================
+CATEGORIES (use ONLY these labels — definitions and example keywords below)
+================================================================
+
+{categories}
+
+################################################################
+ITEM-LEVEL WHERE FIELDS (country, medium)
+################################################################
+  • "country" : the country, region, or jurisdiction the item empirically
+    discusses (e.g. "Brazil", "China", "European Union", "United States").
+    Several → separate with "; ". Purely theoretical/normative → "". Use
+    English names.
+  • "medium" : the media/technology the item discusses — specific platforms
+    ("Facebook", "YouTube", "TikTok", "X / Twitter", "Reddit", "WeChat",
+    "Wikipedia"), broader categories ("social media platforms"), legacy media
+    ("television", "radio", "print press", "newspapers", "cinema", "book
+    publishing"), or technologies ("AI / LLM", "search engines",
+    "ISPs / infrastructure"). Several → "; ". Name the SPECIFIC platform when
+    the item names one; fall back to the broader category only when it does
+    not. Medium-agnostic → "".
+Both reflect what the item ACTUALLY STATES — do not infer.
+
+================================================================
+"mentioned_item" FIELD (per finding)
+================================================================
+A short verbatim phrase from the item (≤ 12 words, no ellipses) that grounds
+the finding — the fragment where the framing appears. Translate NOTHING: if the
+item is in French/Spanish/Portuguese/etc., quote in the original language.
+
+================================================================
+"page" FIELD (per finding)
+================================================================
+The page on which the verbatim "mentioned_item" passage appears.
+  • Page as printed in the document (a string, e.g. "7"); if only the PDF's
+    sequential page is available, use that.
+  • Passage spanning two pages → the page where it starts.
+  • Reading TITLE + ABSTRACT/SNIPPET only, or page undeterminable → "".
+  • NEVER guess a page. An honest "" is better than a fabricated number.
+
+================================================================
+OUTPUT FORMAT
+================================================================
+Return ONLY a JSON object wrapped in ```json``` fences. No prose.
+
+```json
+{{
+  "topic": "{subtopic_parent}",
+  "subtopic": "Commercial content moderation",
+  "country": "United States; Philippines",
+  "medium": "Facebook; YouTube",
+  "findings": [
+    {{
+      "type": "HOW",
+      "category": "Marginalisation",
+      "mentioned_item": "shadowbanning is an opaque form of moderation",
+      "page": "7"
+    }},
+    {{
+      "type": "WHO",
+      "category": "Content moderators / BPO workforces",
+      "mentioned_item": "outsourced workers screen flagged content",
+      "page": "12"
+    }},
+    {{
+      "type": "WHY",
+      "category": "Other: shielding platform liability",
+      "mentioned_item": "platforms shield themselves from liability",
+      "page": "3"
+    }}
+  ]
+}}
+
+================================================================
+RULES (read carefully)
+================================================================
+1. "topic" MUST be one of the listed Topic names verbatim, OR "Other: <three
+   words>". It is an item-level field.
+2. "subtopic" MUST be one of the "{subtopic_parent}" sub-topic names verbatim,
+   OR "Other: <three words>", and ONLY when topic = "{subtopic_parent}".
+   For every other topic, "subtopic" MUST be "".
+3. "country" and "medium" are item-level, semicolon-separated strings ("" when
+   the item has no empirical case / is medium-agnostic).
+4. Each finding's "type" is one of WHAT, HOW, WHO, WHY (uppercase). Category
+   labels MUST come verbatim from the list above, OR be "Other: <three words>".
+5. "page" is per-finding (string), or "" when reading title+abstract only or
+   when it cannot be determined. NEVER fabricate a page.
+6. mentioned_item must be a VERBATIM quote from the item (≤ 12 words).
+7. Do not invent practices, actors, motivations, topics, countries, or media
+   not in the item.
+8. Be SELECTIVE, not exhaustive. Code only the item's STATED, dominant framings.
+9. If the same framing is expressed via multiple specific terms, pick the ONE
+   category the item most centrally develops and emit a single finding for it.
+10. Match on DEFINITION first, keywords second — at BOTH stages. Coincidental
+    keyword overlap without conceptual alignment is NOT enough. Example: an item
+    using "filtering" about water filtration, or "moderation" meaning
+    temperance/restraint, does NOT support a moderation finding. When the
+    surrounding argument does not actually concern the concept, emit NOTHING.
+"""
+```
+
+**Prompt 4**. Prompting Gemini 3 Flash to categorise the what, who, why and how of moderation and adjacent practices in each publication. ^prompt-4
 
 After classification, the findings dataset was subjected to a smart deduplication step keyed on duplicate verbatim quotes. The 164 duplicate groups identified were not treated uniformly: exact duplicates and same-paper multi-PDF cases were merged into a single row; same-paper multi-finding cases (one paper genuinely making distinct what / how / who / why claims) were kept separate but had their paper-level fields harmonised; preprint–published pairs within ±1 year were merged into the later version; coincidentally shared quotes across different authors were kept as distinct rows; and cross-attribution cases — where two reviewers cite the same passage from the same source — were merged only when the publication years sat within three years of each other, to avoid collapsing separate book reviews written a decade apart. The procedure brought 12,709 rows down to roughly 12,622, with every decision logged to an audit file.
 
@@ -81,7 +471,7 @@ At the *category* level, disciplines and topics were cleaned by hand against the
 
 At the *finding* level, the requirement that every coded finding carries a verbatim quote ≤12 words means that any decision can be traced back to the page on which it was made. During analysis, an interactive interface was built to inspect findings in their context (with the source passage, page reference and category label visible), to relabel them where the LLM had misread, and to mark items as irrelevant; edits are saved locally and exportable as CSV. This is not validation in the inter-coder-reliability sense — there is no second coder — but it does mean the final dataset is one I have personally vetted at the level of the passage rather than the document.
 
-## Distant reading
+## What is distant reading after LLMs?
 
 This chapter reconstructs how moderation and censorship have been theorised across a body of scholarly literature too large for a single reader. The approach belongs to what Moretti called *distant reading*: a deliberate displacement from close, sequential reading toward procedures that can hold many texts in view at once [@morettiDistantReading2013; @underwoodDistantReadingRecent2016]. Distant reading is a family of computational techniques that each operationalise different reading inferences, each with its own trade-off between scale and interpretive grain. Within natural language processing, topic modelling [@templetonTopicModelingHumanities2011], lexical co-occurrence analysis, and earlier NLP pipelines have all been used to extract "meaningful elements" from large corpora, but each works by reducing texts to bags of features whose relation to authorial argument is mediated by statistical assumptions the analyst must take on trust [@underwoodWhyLiteraryPeriods2019].
 

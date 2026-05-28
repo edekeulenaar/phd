@@ -1,65 +1,82 @@
 Sub-topic,Country,Quantity
-Automated content moderation,United States,5
-Automated content moderation,European Union,3
-Automated content moderation,Germany,2
-Automated content moderation,Slovakia,1
-Automated content moderation,United Kingdom,1
-Automated content moderation,Russia,1
-Automated content moderation,China,1
-Automated content moderation,Myanmar,1
-Automated content moderation,Africa,1
-Automated content moderation,India,1
-Censorship,United States,64
-Censorship,European Union,35
-Censorship,China,26
-Censorship,Brazil,20
-Censorship,France,20
-Censorship,Germany,17
-Censorship,Italy,15
-Censorship,United Kingdom,14
-Censorship,Israel,12
-Censorship,Palestine,11
-Compliance,European Union,3
-Compliance,United States,1
-Compliance,Italy,1
-Moderating extremism,United States,15
-Moderating extremism,United Kingdom,8
-Moderating extremism,Germany,8
-Moderating extremism,Canada,7
-Moderating extremism,France,6
-Moderating extremism,European Union,4
-Moderating extremism,India,3
-Moderating extremism,Sweden,3
-Moderating extremism,Hungary,2
-Moderating extremism,Saudi Arabia,2
+Automated or algorithmic content moderation,United States,5
+Automated or algorithmic content moderation,Germany,3
+Automated or algorithmic content moderation,European Union,2
+Automated or algorithmic content moderation,Slovakia,1
+Automated or algorithmic content moderation,China,1
+Automated or algorithmic content moderation,Myanmar,1
+Automated or algorithmic content moderation,Africa,1
+Automated or algorithmic content moderation,Philippines,1
+Automated or algorithmic content moderation,India,1
+Automated or algorithmic content moderation,Australia,1
+Moderating extremism,United States,32
+Moderating extremism,Germany,16
+Moderating extremism,United Kingdom,14
+Moderating extremism,European Union,11
+Moderating extremism,Italy,10
+Moderating extremism,Canada,9
+Moderating extremism,France,8
+Moderating extremism,Sweden,5
+Moderating extremism,New Zealand,4
+Moderating extremism,Myanmar,4
+Moderation and censorship,United States,57
+Moderation and censorship,European Union,33
+Moderation and censorship,China,23
+Moderation and censorship,Brazil,20
+Moderation and censorship,France,17
+Moderation and censorship,Italy,13
+Moderation and censorship,United Kingdom,12
+Moderation and censorship,Germany,12
+Moderation and censorship,Israel,10
+Moderation and censorship,Palestine,10
+Moderation as a component of platform governance,United States,186
+Moderation as a component of platform governance,Brazil,81
+Moderation as a component of platform governance,European Union,68
+Moderation as a component of platform governance,Germany,37
+Moderation as a component of platform governance,United Kingdom,34
+Moderation as a component of platform governance,India,29
+Moderation as a component of platform governance,Australia,25
+Moderation as a component of platform governance,France,23
+Moderation as a component of platform governance,China,21
+Moderation as a component of platform governance,Russia,15
+Moderation as a component of platform regulation,European Union,212
+Moderation as a component of platform regulation,United States,162
+Moderation as a component of platform regulation,Brazil,139
+Moderation as a component of platform regulation,Germany,79
+Moderation as a component of platform regulation,France,49
+Moderation as a component of platform regulation,Italy,48
+Moderation as a component of platform regulation,United Kingdom,38
+Moderation as a component of platform regulation,India,22
+Moderation as a component of platform regulation,China,20
+Moderation as a component of platform regulation,Australia,18
+Moderation as brand safety and the commercial viability of the platform,United States,1
 Moderation as brand safety and the commercial viability of the platform,China,1
 Moderation as brand safety and the commercial viability of the platform,Europe,1
-Moderation as brand safety and the commercial viability of the platform,United States,1
-Moderation as industrial labour,United States,25
-Moderation as industrial labour,Philippines,15
-Moderation as industrial labour,India,9
-Moderation as industrial labour,Canada,5
+Moderation as industrial labour,United States,22
+Moderation as industrial labour,Philippines,12
+Moderation as industrial labour,India,8
 Moderation as industrial labour,Brazil,5
-Moderation as industrial labour,Germany,5
 Moderation as industrial labour,United Kingdom,4
-Moderation as industrial labour,Mexico,3
+Moderation as industrial labour,Germany,4
 Moderation as industrial labour,France,3
 Moderation as industrial labour,Italy,3
-Moderation as the cultivation of a democratic public sphere,Brazil,53
-Moderation as the cultivation of a democratic public sphere,United States,52
-Moderation as the cultivation of a democratic public sphere,France,32
-Moderation as the cultivation of a democratic public sphere,Spain,24
-Moderation as the cultivation of a democratic public sphere,Italy,20
-Moderation as the cultivation of a democratic public sphere,European Union,20
-Moderation as the cultivation of a democratic public sphere,United Kingdom,19
-Moderation as the cultivation of a democratic public sphere,Germany,16
+Moderation as industrial labour,Canada,3
+Moderation as industrial labour,Portugal,2
+Moderation as the cultivation of a democratic public sphere,Brazil,52
+Moderation as the cultivation of a democratic public sphere,United States,49
+Moderation as the cultivation of a democratic public sphere,France,31
+Moderation as the cultivation of a democratic public sphere,Spain,23
+Moderation as the cultivation of a democratic public sphere,Italy,17
+Moderation as the cultivation of a democratic public sphere,European Union,17
+Moderation as the cultivation of a democratic public sphere,United Kingdom,17
+Moderation as the cultivation of a democratic public sphere,Germany,13
 Moderation as the cultivation of a democratic public sphere,Portugal,13
-Moderation as the cultivation of a democratic public sphere,Canada,8
+Moderation as the cultivation of a democratic public sphere,China,8
 Moderation as the enforcement of community norms and identity,United States,46
-Moderation as the enforcement of community norms and identity,United Kingdom,11
-Moderation as the enforcement of community norms and identity,France,11
-Moderation as the enforcement of community norms and identity,Germany,10
-Moderation as the enforcement of community norms and identity,Brazil,8
+Moderation as the enforcement of community norms and identity,United Kingdom,12
+Moderation as the enforcement of community norms and identity,France,10
+Moderation as the enforcement of community norms and identity,Brazil,9
+Moderation as the enforcement of community norms and identity,Germany,9
 Moderation as the enforcement of community norms and identity,Canada,8
 Moderation as the enforcement of community norms and identity,Australia,8
 Moderation as the enforcement of community norms and identity,India,7
@@ -68,30 +85,10 @@ Moderation as the enforcement of community norms and identity,Netherlands,5
 Other,United States,5
 Other,European Union,2
 Other,Argentina,2
+Other,Germany,2
 Other,Ireland,1
-Other,Brazil,1
 Other,United Kingdom,1
-Other,Italy,1
-Other,England,1
-Other,Germany,1
-Other,Australia,1
-Platform governance,United States,201
-Platform governance,Brazil,86
-Platform governance,European Union,71
-Platform governance,Germany,43
-Platform governance,United Kingdom,37
-Platform governance,India,30
-Platform governance,Australia,26
-Platform governance,France,24
-Platform governance,China,23
-Platform governance,Russia,20
-Platform regulation,European Union,217
-Platform regulation,United States,168
-Platform regulation,Brazil,144
-Platform regulation,Germany,84
-Platform regulation,France,52
-Platform regulation,Italy,51
-Platform regulation,United Kingdom,42
-Platform regulation,India,23
-Platform regulation,Australia,21
-Platform regulation,China,20
+Other,Brazil,1
+Other,UAE,1
+Other,Egypt,1
+Other,China,1

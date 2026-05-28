@@ -1,42 +1,42 @@
 Topic,Media category,Quantity
-AI alignment,AI,39
-AI alignment,Social media platform,23
+AI alignment,AI,38
+AI alignment,Social media platform,22
 AI alignment,Search engine,5
 AI alignment,E-commerce,4
 AI alignment,Wikis,3
 AI alignment,Video sharing platform,2
-AI alignment,Imageboard,2
 AI alignment,Platforms,2
 AI alignment,Messaging platform,2
 AI alignment,Gaming platform,1
-Censorship,Print media,608
-Censorship,Film,196
-Censorship,Social media platform,155
-Censorship,Television,135
-Censorship,Radio,105
-Censorship,Performing arts,104
-Censorship,ISP,75
-Censorship,Internet (general),55
-Censorship,Search engine,54
-Censorship,Video sharing platform,52
-Content moderation,Social media platform,1196
-Content moderation,Video sharing platform,481
-Content moderation,Search engine,261
-Content moderation,Messaging platform,206
-Content moderation,AI,112
-Content moderation,Platforms,98
-Content moderation,Online fora,87
-Content moderation,Wikis,75
+AI alignment,Print media,1
+Censorship,Print media,598
+Censorship,Film,191
+Censorship,Social media platform,149
+Censorship,Television,132
+Censorship,Performing arts,102
+Censorship,Radio,102
+Censorship,ISP,71
+Censorship,Internet (general),54
+Censorship,Search engine,51
+Censorship,Video sharing platform,49
+Content moderation,Social media platform,1163
+Content moderation,Video sharing platform,462
+Content moderation,Search engine,250
+Content moderation,Messaging platform,197
+Content moderation,AI,109
+Content moderation,Platforms,95
+Content moderation,Online fora,84
+Content moderation,Wikis,72
 Content moderation,Print media,67
-Content moderation,ISP,61
+Content moderation,ISP,58
 Debate management,Social media platform,3
-Other,Social media platform,9
-Other,Video sharing platform,4
-Other,Print media,3
+Other,Social media platform,8
+Other,Video sharing platform,3
 Other,Messaging platform,2
-Other,Search engine,2
 Other,App store,2
 Other,Platforms,2
+Other,Print media,2
 Other,Review platform,1
 Other,Portal,1
 Other,Internet (general),1
+Other,News media,1

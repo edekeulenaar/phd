@@ -20,6 +20,13 @@
     "harvard": "Balkin, J. M. (2018) *Free Speech Is a Triangle*. Social Science Research Network.",
     "link": ""
   },
+  "bammanCensorshipDeletionPractices2012": {
+    "author": "Bamman et al.",
+    "year": "2012",
+    "inline": "(Bamman et al., 2012)",
+    "harvard": "Bamman, D., O'Connor, B. and Smith, N. (2012) ‘Censorship and Deletion Practices in Chinese Social Media’, *First Monday*. doi:10.5210/fm.v17i3.3943",
+    "link": "https://doi.org/10.5210/fm.v17i3.3943"
+  },
   "bourdieuLangagePouvoirSymbolique2001": {
     "author": "Bourdieu",
     "year": "2001",
@@ -62,6 +69,13 @@
     "harvard": "de Laat, P. B. (2012) ‘Coercion or Empowerment? Moderation of Content in Wikipedia as `Essentially Contested' Bureaucratic Rules’, *Ethics and Information Technology*, 14(2), pp. 123–135. doi:10.1007/s10676-012-9289-7",
     "link": "https://doi.org/10.1007/s10676-012-9289-7"
   },
+  "diasolivaFightingHateSpeech2021a": {
+    "author": "Dias Oliva et al.",
+    "year": "2021",
+    "inline": "(Dias Oliva et al., 2021)",
+    "harvard": "Dias Oliva, T., Antonialli, D. M. and Gomes, A. (2021) ‘Fighting Hate Speech, Silencing Drag Queens? Artificial Intelligence in Content Moderation and Risks to LGBTQ Voices Online’, *Sexuality & Culture*, 25(2), pp. 700–732. doi:10.1007/s12119-020-09790-w",
+    "link": "https://doi.org/10.1007/s12119-020-09790-w"
+  },
   "douekGoverningOnlineSpeech2021": {
     "author": "Douek",
     "year": "2021",
@@ -89,6 +103,13 @@
     "inline": "(Gibson, 2019)",
     "harvard": "Gibson, A. (2019) ‘Free Speech and Safe Spaces: How Moderation Policies Shape Online Discussion Spaces’, *Social Media + Society*, 5(1), pp. 2056305119832588. doi:10.1177/2056305119832588",
     "link": "https://doi.org/10.1177/2056305119832588"
+  },
+  "gillespieCustodiansInternet2018": {
+    "author": "Gillespie",
+    "year": "2018",
+    "inline": "(Gillespie, 2018)",
+    "harvard": "Gillespie, T. (2018) *Custodians of the Internet*. Cambridge, Massachussets: MIT Press.",
+    "link": ""
   },
   "gorwaAlgorithmicContentModeration2020": {
     "author": "Gorwa et al.",
@@ -139,6 +160,13 @@
     "harvard": "Klonick, K. (2017-2018) ‘The New Governors: The People, Rules, and Processes Governing Online Speech’, *Harvard Law Review*, 131, pp. 1598.",
     "link": ""
   },
+  "langvardtRegulatingOnlineContent2017": {
+    "author": "Langvardt",
+    "year": "2017-2018",
+    "inline": "(Langvardt, 2017-2018)",
+    "harvard": "Langvardt, K. (2017-2018) ‘Regulating Online Content Moderation’, *Georgetown Law Journal*, 106, pp. 1353.",
+    "link": ""
+  },
   "liuContentModerationPlatformised2024": {
     "author": "Liu",
     "year": "2024",
@@ -167,13 +195,6 @@
     "harvard": "Post, R. (1998) *Censorship and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Publications.",
     "link": ""
   },
-  "robertc.postCensorshipSilencing1998": {
-    "author": "Post",
-    "year": "1998",
-    "inline": "(Post, 1998)",
-    "harvard": "Post, R. C. (1998) ‘Censorship and Silencing’, in R. C. Post (ed.) *Censorship and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Research Institute for the History of Art and the Humanities, pp. 1–12.",
-    "link": ""
-  },
   "robertsCommercialContentModeration2016": {
     "author": "Roberts",
     "year": "2016",
@@ -187,6 +208,13 @@
     "inline": "(Roberts, 2019)",
     "harvard": "Roberts, S. T. (2019) *Behind the Screen: Content Moderation in the Shadows of Social Media*. New Haven and London: Yale University Press.",
     "link": ""
+  },
+  "ruckensteinRehumanizingPlatformContent2020": {
+    "author": "Ruckenstein and Turunen",
+    "year": "2020",
+    "inline": "(Ruckenstein and Turunen, 2020)",
+    "harvard": "Ruckenstein, M. and Turunen, L. L. M. (2020) ‘Re-Humanizing the Platform: Content Moderators and the Logic of Care’, *New Media & Society*, 22(6), pp. 1026–1042. doi:10.1177/1461444819875990",
+    "link": "https://doi.org/10.1177/1461444819875990"
   },
   "seeringMetaphorsModeration2022": {
     "author": "Seering et al.",
@@ -208,6 +236,20 @@
     "inline": "(Underwood, 2016)",
     "harvard": "Underwood, T. (2016) ‘Distant Reading and Recent Intellectual History’, *Debates in the Digital Humanities 2016*, pp. 530–533.",
     "link": ""
+  },
+  "wohnVolunteerModeratorsTwitch2019a": {
+    "author": "Wohn",
+    "year": "2019",
+    "inline": "(Wohn, 2019)",
+    "harvard": "Wohn, D. Y. (2019) ‘Volunteer Moderators in Twitch Micro Communities: How They Get Involved, the Roles They Play, and the Emotional Labor They Experience’, in *Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems*. Glasgow Scotland Uk: ACM, pp. 1–13. doi:10.1145/3290605.3300390",
+    "link": "https://doi.org/10.1145/3290605.3300390"
+  },
+  "wrightDemocracyDeliberationDesign2007b": {
+    "author": "Wright and Street",
+    "year": "2007",
+    "inline": "(Wright and Street, 2007)",
+    "harvard": "Wright, S. and Street, J. (2007) ‘Democracy, Deliberation and Design: The Case of Online Discussion Forums’, *New Media & Society*, 9(5), pp. 849–869. doi:10.1177/1461444807081230",
+    "link": "https://doi.org/10.1177/1461444807081230"
   },
   "wuPrivacyFreeSpeech2022": {
     "author": "Wu",

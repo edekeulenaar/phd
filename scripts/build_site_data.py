@@ -238,6 +238,7 @@ def main() -> None:
     item_author   = {}
     item_key      = {}                       # Zotero Key (or '')
     item_abstract = {}                       # Abstract Note (first non-empty)
+    item_lang     = {}                       # Language (first non-empty)
     item_countries:   dict[str, set] = defaultdict(set)
     item_media_cat:   dict[str, set] = defaultdict(set)  # 'Media category' (v2_final)
     for r in F:
@@ -249,6 +250,9 @@ def main() -> None:
         item_key.setdefault(t, (r.get("Key") or "").strip())
         if t not in item_abstract and (r.get("Abstract Note") or "").strip():
             item_abstract[t] = (r.get("Abstract Note") or "").strip()
+        lg = (r.get("Language") or "").strip().lower()
+        if lg and t not in item_lang:
+            item_lang[t] = lg
         if (r.get("Topic") or "").strip():
             item_topic[t][(r.get("Topic") or "").strip()] += 1
         if (r.get("Sub-topic") or "").strip():
@@ -300,11 +304,12 @@ def main() -> None:
             item_author.get(t, ""),
             item_key.get(t, ""),
             item_abstract.get(t, ""),
+            item_lang.get(t, ""),
         ])
     rows3.sort(key=lambda r: (str(r[3]), str(r[1]), -r[0]))
     write_csv(OUT / "items_year_disc_topic.csv",
               ["Citations", "Publication Year", "Discipline", "Topic",
-               "Title", "Author", "Key", "Abstract Note"], rows3)
+               "Title", "Author", "Key", "Abstract Note", "Language"], rows3)
 
     # ── 4. items_year_disc_subtopic (CM only) ───────────────────────────────
     rows4 = []
@@ -323,11 +328,27 @@ def main() -> None:
             item_author.get(t, ""),
             item_key.get(t, ""),
             item_abstract.get(t, ""),
+            item_lang.get(t, ""),
         ])
     rows4.sort(key=lambda r: (str(r[3]), str(r[1]), -r[0]))
     write_csv(OUT / "items_year_disc_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Sub-topic",
-               "Title", "Author", "Key", "Abstract Note"], rows4)
+               "Title", "Author", "Key", "Abstract Note", "Language"], rows4)
+
+    # ── 4b. language_summary.csv (one row per language code) ────────────────
+    LANG_NAMES = {
+        "en":"English","fr":"French","es":"Spanish","pt":"Portuguese",
+        "it":"Italian","de":"German","ca":"Catalan","nl":"Dutch",
+        "id":"Indonesian","pl":"Polish","hr":"Croatian","ro":"Romanian",
+        "af":"Afrikaans","ru":"Russian","tr":"Turkish","cy":"Welsh",
+        "hu":"Hungarian","vi":"Vietnamese","so":"Somali","und":"undetermined",
+    }
+    lang_counter = Counter(item_lang.get(t,"und") or "und" for t in items)
+    write_csv(OUT / "language_summary.csv",
+              ["code", "name", "items"],
+              [[code, LANG_NAMES.get(code, code.upper()), n]
+               for code, n in sorted(lang_counter.items(),
+                                     key=lambda x: (-x[1], x[0]))])
 
     # ── 5–8. Top-10 countries / media by Topic and by CM Sub-topic ──────────
     def _top_by(group_of, label_col: str, items_field: dict, n: int):
@@ -394,6 +415,7 @@ def main() -> None:
             item_key.get(t, ""),
             item_abstract.get(t, ""),
             pdf,
+            item_lang.get(t, ""),
         ]
         bee_t.append(row)
         if top == SUBTOPIC_PARENT:
@@ -408,6 +430,7 @@ def main() -> None:
                     item_key.get(t, ""),
                     item_abstract.get(t, ""),
                     pdf,
+                    item_lang.get(t, ""),
                 ])
 
     bee_t.sort(key=lambda r: (r[3], r[4], r[5], str(r[1]), -r[0]))
@@ -415,12 +438,12 @@ def main() -> None:
     write_csv(OUT / "beeswarm_by_topic.csv",
               ["Citations", "Publication Year", "Discipline", "Topic", "Type",
                "Category", "Mentioned item", "Page", "Title", "Author", "Key",
-               "Abstract Note", "PDF Path"],
+               "Abstract Note", "PDF Path", "Language"],
               bee_t)
     write_csv(OUT / "beeswarm_by_cm_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Sub-topic", "Type",
                "Category", "Mentioned item", "Page", "Title", "Author", "Key",
-               "Abstract Note", "PDF Path"],
+               "Abstract Note", "PDF Path", "Language"],
               bee_s)
 
     # ── 11–14. Network CSVs (Topic-level and CM Sub-topic-level) ────────────
