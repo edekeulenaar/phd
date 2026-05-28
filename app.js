@@ -885,16 +885,25 @@ async function renderBubble({ csv, yField, hostSel, figId, yearInputs }) {
    ─────────────────────────────────────────────────────────────────────── */
 
 async function renderSankeyTwo({ csv, leftField, rightField, hostSel, figId,
-                                 valueField="Quantity", topRight=0 }) {
+                                 valueField="Quantity", topRight=0, stages=null }) {
   let rows = await loadCSV(csv);
-  // OPTIONAL: cap the right-column to its `topRight` largest targets and
-  // roll the long tail into one "Other (N)" bucket. Keeps figures with very
-  // long tails (e.g. 200 countries) legible without losing the total mass.
+  // `stages` is an optional array of column names defining a multi-stage
+  // alluvial (e.g. ["LanguageName", "Country", "Topic"] for 3 stages).
+  // When omitted we fall back to the classic 2-stage [leftField, rightField].
+  const STAGES = stages && stages.length >= 2 ? stages.slice()
+                                              : [leftField, rightField];
+  const lastField = STAGES[STAGES.length - 1];
+  const topCapField = stages ? STAGES[1] : rightField;
+
+  // OPTIONAL: cap the most-explosive column (right column in the 2-stage
+  // case, or the *middle* column in the 3-stage Language → Country → Topic
+  // figure — that's where the long tail lives) to its `topRight` largest
+  // members and roll the rest into one "Other (N)" bucket.
   if (topRight && Number.isFinite(+topRight)) {
     const totals = new Map();
     rows.forEach(r => {
       const v = +r[valueField] || 0;
-      const t = r[rightField] || "(unknown)";
+      const t = r[topCapField] || "(unknown)";
       totals.set(t, (totals.get(t) || 0) + v);
     });
     const keep = new Set([...totals.entries()]
@@ -902,10 +911,10 @@ async function renderSankeyTwo({ csv, leftField, rightField, hostSel, figId,
     const tailCount = totals.size - keep.size;
     const otherLabel = tailCount > 0 ? `Other (${tailCount})` : null;
     rows = rows.map(r => {
-      const t = r[rightField] || "(unknown)";
+      const t = r[topCapField] || "(unknown)";
       if (keep.has(t)) return r;
-      return { ...r, [rightField]: otherLabel };
-    }).filter(r => r[rightField] != null);
+      return { ...r, [topCapField]: otherLabel };
+    }).filter(r => r[topCapField] != null);
   }
 
   const N = new Map(), L = new Map();
@@ -916,10 +925,14 @@ async function renderSankeyTwo({ csv, leftField, rightField, hostSel, figId,
   };
   rows.forEach(r => {
     const v = +r[valueField] || 0; if (!v) return;
-    const a = node(r[leftField]  || "(unknown)", 0);
-    const b = node(r[rightField] || "(unknown)", 1);
-    const k = `${a}|${b}`;
-    L.set(k, { source: a, target: b, value: (L.get(k)?.value || 0) + v });
+    // For each row build a path STAGE0 → STAGE1 → … → STAGE_n and add v
+    // to every adjacent edge along it. In the 2-stage case this collapses
+    // back to the original Source → Target shape.
+    const path = STAGES.map((field, i) => node(r[field] || "(unknown)", i));
+    for (let i = 0; i < path.length - 1; i++) {
+      const a = path[i], b = path[i + 1], k = `${a}|${b}`;
+      L.set(k, { source: a, target: b, value: (L.get(k)?.value || 0) + v });
+    }
   });
   const nodes = [...N.values()];
   const links = [...L.values()].map(l => ({ source: l.source, target: l.target, value: l.value }));
@@ -1007,7 +1020,7 @@ async function renderSankeyTwo({ csv, leftField, rightField, hostSel, figId,
   nodeSel.append("title").text(d => d.name);
 
   // Italic stage headers at the top of each column.
-  const stageNames = { 0: leftField, 1: rightField };
+  const stageNames = Object.fromEntries(STAGES.map((f, i) => [i, f]));
   const stageMid = new Map();
   g.nodes.forEach(n => { if (!stageMid.has(n.depth)) stageMid.set(n.depth, (n.x0 + n.x1) / 2); });
   svg.append("g").attr("class", "stage-headers")
@@ -1998,18 +2011,17 @@ window.addEventListener("DOMContentLoaded", async () => {
                     minInputId: "net-subtopics-min",
                     figId: "fig-network-subtopics" }));
 
-  // Figure 1 — Language → Country alluvial. The long tail of countries
-  // (≈ 180 entries past the top 25) is rolled into an "Other" bucket so the
-  // figure fits in one viewport.
-  await safe("lang × country", "#sankey-lang-country")(() =>
+  // Figure 1 — Language → Country → Topic alluvial. The middle (Country)
+  // column has ≈ 220 entries; capping at the top 20 + "Other" keeps the
+  // figure inside one viewport while exposing all the Topic flows.
+  await safe("lang × country × topic", "#sankey-lang-country")(() =>
     renderSankeyTwo({
-      csv: "data/items_by_language_country.csv",
-      leftField: "LanguageName",
-      rightField: "Country",
+      csv: "data/items_by_language_country_topic.csv",
+      stages: ["LanguageName", "Country", "Topic"],
       valueField: "Items",
       hostSel: "#sankey-lang-country",
       figId: "fig-lang-country",
-      topRight: 25,
+      topRight: 20,        // applied to the middle (Country) column
     }));
 
   restructureFigureNotes(); // notes go OUTSIDE the figure card (#1)

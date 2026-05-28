@@ -1,0 +1,840 @@
+Language,LanguageName,Country,Topic,Items
+en,English,United States,Content moderation,394
+pt,Portuguese,Brazil,Content moderation,246
+en,English,United States,Censorship,170
+en,English,European Union,Content moderation,153
+en,English,(unspecified),Content moderation,119
+en,English,China,Censorship,109
+fr,French,France,Censorship,108
+en,English,Germany,Content moderation,105
+en,English,United Kingdom,Content moderation,96
+it,Italian,European Union,Content moderation,91
+it,Italian,Italy,Content moderation,84
+fr,French,France,Content moderation,75
+en,English,United Kingdom,Censorship,69
+pt,Portuguese,United States,Content moderation,66
+en,English,China,Content moderation,60
+es,Spanish,Spain,Censorship,58
+it,Italian,United States,Content moderation,57
+pt,Portuguese,European Union,Content moderation,56
+en,English,Germany,Censorship,54
+en,English,India,Content moderation,54
+it,Italian,Italy,Censorship,54
+en,English,Russia,Censorship,52
+en,English,Australia,Content moderation,51
+en,English,(unspecified),Censorship,50
+en,English,France,Censorship,49
+en,English,Brazil,Content moderation,46
+en,English,France,Content moderation,45
+en,English,Iran,Censorship,42
+it,Italian,(unspecified),Content moderation,41
+en,English,Canada,Content moderation,40
+en,English,Italy,Censorship,36
+pt,Portuguese,Germany,Content moderation,35
+es,Spanish,Spain,Content moderation,32
+fr,French,(unspecified),Content moderation,32
+fr,French,United States,Content moderation,30
+pt,Portuguese,Brazil,Censorship,30
+en,English,Russia,Content moderation,29
+fr,French,European Union,Content moderation,29
+en,English,India,Censorship,27
+en,English,Turkey,Censorship,27
+en,English,Egypt,Censorship,26
+en,English,Myanmar,Content moderation,26
+en,English,Pakistan,Censorship,26
+en,English,Canada,Censorship,25
+en,English,Philippines,Content moderation,25
+en,English,Australia,Censorship,23
+en,English,Saudi Arabia,Censorship,23
+en,English,Spain,Censorship,23
+fr,French,(unspecified),Censorship,23
+en,English,Italy,Content moderation,22
+en,English,South Africa,Censorship,21
+en,English,United States,Debate management,21
+pt,Portuguese,Portugal,Content moderation,21
+pt,Portuguese,United Kingdom,Content moderation,20
+en,English,Turkey,Content moderation,19
+fr,French,Italy,Censorship,19
+it,Italian,Germany,Content moderation,19
+en,English,Netherlands,Content moderation,18
+en,English,Soviet Union,Censorship,18
+pt,Portuguese,Portugal,Censorship,18
+en,English,(unspecified),AI alignment,17
+en,English,Ireland,Content moderation,17
+en,English,South Korea,Censorship,16
+en,English,Syria,Censorship,16
+es,Spanish,European Union,Content moderation,16
+fr,French,United States,Censorship,16
+en,English,European Union,Censorship,15
+en,English,Spain,Content moderation,15
+es,Spanish,United States,Content moderation,15
+fr,French,Canada,Censorship,15
+fr,French,Canada,Content moderation,15
+pt,Portuguese,(unspecified),Content moderation,15
+en,English,England,Censorship,14
+en,English,Indonesia,Censorship,14
+en,English,Israel,Content moderation,14
+fr,French,Spain,Censorship,14
+it,Italian,France,Censorship,14
+en,English,Brazil,Censorship,13
+en,English,Indonesia,Content moderation,13
+en,English,New Zealand,Content moderation,13
+en,English,Sweden,Content moderation,13
+en,English,United Arab Emirates,Censorship,13
+en,English,United States,AI alignment,13
+es,Spanish,Mexico,Content moderation,13
+fr,French,France,Debate management,13
+en,English,Japan,Censorship,12
+en,English,Pakistan,Content moderation,12
+en,English,Thailand,Censorship,12
+en,English,Vietnam,Censorship,12
+es,Spanish,Brazil,Content moderation,12
+en,English,Malaysia,Censorship,11
+en,English,Mexico,Content moderation,11
+en,English,Poland,Censorship,11
+en,English,Singapore,Censorship,11
+en,English,Tunisia,Censorship,11
+es,Spanish,United States,Censorship,11
+fr,French,Germany,Censorship,11
+fr,French,Germany,Content moderation,11
+it,Italian,France,Content moderation,11
+en,English,Bahrain,Censorship,10
+en,English,Belarus,Censorship,10
+en,English,China,AI alignment,10
+en,English,Kazakhstan,Censorship,10
+en,English,Libya,Censorship,10
+en,English,Nigeria,Content moderation,10
+en,English,Palestine,Content moderation,10
+es,Spanish,Argentina,Content moderation,10
+es,Spanish,Colombia,Content moderation,10
+und,undetermined,France,Censorship,10
+en,English,Austria,Content moderation,9
+en,English,Cuba,Censorship,9
+en,English,Mexico,Censorship,9
+en,English,South Korea,Content moderation,9
+en,English,Thailand,Content moderation,9
+en,English,Ukraine,Censorship,9
+en,English,Ukraine,Content moderation,9
+es,Spanish,Mexico,Censorship,9
+it,Italian,(unspecified),Censorship,9
+en,English,Egypt,Content moderation,8
+en,English,Ethiopia,Censorship,8
+en,English,Hungary,Censorship,8
+en,English,Iran,Content moderation,8
+en,English,Israel,Censorship,8
+en,English,Kenya,Content moderation,8
+en,English,Myanmar,Censorship,8
+en,English,Nigeria,Censorship,8
+en,English,Uzbekistan,Censorship,8
+en,English,Zimbabwe,Censorship,8
+es,Spanish,(unspecified),Content moderation,8
+fr,French,Russia,Censorship,8
+fr,French,United Kingdom,Censorship,8
+en,English,Azerbaijan,Censorship,7
+en,English,Czechoslovakia,Censorship,7
+en,English,Europe,Content moderation,7
+en,English,Lebanon,Censorship,7
+en,English,Portugal,Censorship,7
+en,English,Portugal,Content moderation,7
+en,English,Singapore,Content moderation,7
+en,English,Sudan,Censorship,7
+en,English,Uganda,Censorship,7
+en,English,United States,Political moderation,7
+en,English,Yemen,Censorship,7
+es,Spanish,Argentina,Censorship,7
+fr,French,Belgium,Content moderation,7
+fr,French,China,Censorship,7
+it,Italian,China,Content moderation,7
+it,Italian,United Kingdom,Content moderation,7
+it,Italian,United States,Censorship,7
+pt,Portuguese,China,Content moderation,7
+pt,Portuguese,France,Content moderation,7
+pt,Portuguese,India,Content moderation,7
+en,English,Bangladesh,Censorship,6
+en,English,Denmark,Content moderation,6
+en,English,Estonia,Censorship,6
+en,English,Hungary,Content moderation,6
+en,English,Jordan,Censorship,6
+en,English,Kenya,Censorship,6
+en,English,North Korea,Censorship,6
+en,English,Norway,Content moderation,6
+en,English,Saudi Arabia,Content moderation,6
+en,English,Syria,Content moderation,6
+en,English,Taiwan,Content moderation,6
+en,English,USSR,Censorship,6
+es,Spanish,Spain,Debate management,6
+fr,French,Portugal,Censorship,6
+fr,French,United Kingdom,Content moderation,6
+it,Italian,Russia,Content moderation,6
+pt,Portuguese,Australia,Content moderation,6
+und,undetermined,United States,Censorship,6
+en,English,Argentina,Censorship,5
+en,English,Canada,Debate management,5
+en,English,Ethiopia,Content moderation,5
+en,English,European Union,AI alignment,5
+en,English,Hong Kong,Censorship,5
+en,English,Iraq,Censorship,5
+en,English,Kyrgyzstan,Censorship,5
+en,English,Malawi,Censorship,5
+en,English,Morocco,Censorship,5
+en,English,Philippines,Censorship,5
+en,English,South Africa,Content moderation,5
+en,English,Tunisia,Content moderation,5
+en,English,United Kingdom,Political moderation,5
+es,Spanish,France,Censorship,5
+es,Spanish,Peru,Content moderation,5
+fr,French,Canada,Debate management,5
+fr,French,Philippines,Content moderation,5
+fr,French,Switzerland,Debate management,5
+it,Italian,Brazil,Content moderation,5
+it,Italian,Italy,Debate management,5
+pt,Portuguese,Spain,Content moderation,5
+en,English,Africa,Content moderation,4
+en,English,Algeria,Censorship,4
+en,English,Armenia,Censorship,4
+en,English,Burma,Censorship,4
+en,English,Cambodia,Censorship,4
+en,English,Chile,Censorship,4
+en,English,Colombia,Censorship,4
+en,English,Denmark,Censorship,4
+en,English,East Germany,Censorship,4
+en,English,Estonia,Content moderation,4
+en,English,Finland,Content moderation,4
+en,English,Georgia,Censorship,4
+en,English,Germany,Debate management,4
+en,English,Great Britain,Censorship,4
+en,English,Ireland,Censorship,4
+en,English,Japan,Content moderation,4
+en,English,Kuwait,Censorship,4
+en,English,Libya,Content moderation,4
+en,English,Malaysia,Content moderation,4
+en,English,Netherlands,Censorship,4
+en,English,Oman,Censorship,4
+en,English,Poland,Content moderation,4
+en,English,Qatar,Censorship,4
+en,English,Romania,Censorship,4
+en,English,Rwanda,Censorship,4
+en,English,Sri Lanka,Censorship,4
+en,English,Switzerland,Content moderation,4
+en,English,Uganda,Content moderation,4
+en,English,Uruguay,Censorship,4
+en,English,Venezuela,Censorship,4
+en,English,Vietnam,Content moderation,4
+es,Spanish,Chile,Content moderation,4
+es,Spanish,France,Content moderation,4
+es,Spanish,Germany,Censorship,4
+es,Spanish,India,Content moderation,4
+es,Spanish,Portugal,Censorship,4
+es,Spanish,Venezuela,Content moderation,4
+fr,French,Belgium,Censorship,4
+fr,French,China,Content moderation,4
+fr,French,Egypt,Censorship,4
+fr,French,England,Censorship,4
+fr,French,Switzerland,Censorship,4
+fr,French,Switzerland,Content moderation,4
+fr,French,USSR,Censorship,4
+fr,French,Vatican City,Censorship,4
+it,Italian,India,Content moderation,4
+it,Italian,United Kingdom,Censorship,4
+pt,Portuguese,Canada,Content moderation,4
+pt,Portuguese,France,Censorship,4
+pt,Portuguese,Germany,Censorship,4
+pt,Portuguese,Russia,Content moderation,4
+pt,Portuguese,Spain,Censorship,4
+pt,Portuguese,United States,Censorship,4
+und,undetermined,(unspecified),Censorship,4
+und,undetermined,Spain,Censorship,4
+und,undetermined,United Kingdom,Censorship,4
+und,undetermined,United States,Content moderation,4
+en,English,Afghanistan,Censorship,3
+en,English,Angola,Censorship,3
+en,English,Austria,Censorship,3
+en,English,Belgium,Censorship,3
+en,English,Belgium,Content moderation,3
+en,English,Colombia,Content moderation,3
+en,English,Czech Republic,Content moderation,3
+en,English,Finland,Censorship,3
+en,English,Germany,AI alignment,3
+en,English,Ghana,Censorship,3
+en,English,Jordan,Content moderation,3
+en,English,Lebanon,Content moderation,3
+en,English,Mexico,Debate management,3
+en,English,Norway,Censorship,3
+en,English,Romania,Content moderation,3
+en,English,Russia,AI alignment,3
+en,English,Slovakia,Content moderation,3
+en,English,Sri Lanka,Content moderation,3
+en,English,Sudan,Content moderation,3
+en,English,Turkmenistan,Censorship,3
+en,English,United States,Other,3
+en,English,Zaire,Censorship,3
+en,English,Zambia,Censorship,3
+es,Spanish,(unspecified),Censorship,3
+es,Spanish,Canada,Censorship,3
+es,Spanish,Colombia,Censorship,3
+es,Spanish,Germany,Content moderation,3
+es,Spanish,Italy,Censorship,3
+es,Spanish,Italy,Content moderation,3
+es,Spanish,Latin America,Content moderation,3
+es,Spanish,Mexico,Debate management,3
+es,Spanish,Soviet Union,Censorship,3
+es,Spanish,United Kingdom,Censorship,3
+es,Spanish,United States,Political moderation,3
+fr,French,European Union,Censorship,3
+fr,French,European Union,Debate management,3
+fr,French,France,Political moderation,3
+fr,French,India,Censorship,3
+fr,French,India,Content moderation,3
+fr,French,Poland,Censorship,3
+fr,French,Romania,Censorship,3
+it,Italian,Ancient Rome,Censorship,3
+it,Italian,Argentina,Censorship,3
+it,Italian,Australia,Content moderation,3
+it,Italian,Germany,Censorship,3
+it,Italian,Japan,Content moderation,3
+it,Italian,Spain,Censorship,3
+it,Italian,Spain,Content moderation,3
+it,Italian,Vatican City,Censorship,3
+pt,Portuguese,(unspecified),Censorship,3
+pt,Portuguese,Indonesia,Content moderation,3
+pt,Portuguese,Italy,Censorship,3
+pt,Portuguese,Italy,Content moderation,3
+pt,Portuguese,Myanmar,Content moderation,3
+pt,Portuguese,Philippines,Content moderation,3
+und,undetermined,China,Censorship,3
+und,undetermined,Germany,Censorship,3
+de,German,France,Censorship,2
+en,English,(unspecified),Debate management,2
+en,English,Algeria,Content moderation,2
+en,English,Americas,Content moderation,2
+en,English,Ancient Rome,Censorship,2
+en,English,Argentina,Content moderation,2
+en,English,Asia,Content moderation,2
+en,English,Australia,Debate management,2
+en,English,Bangladesh,Content moderation,2
+en,English,Brazil,AI alignment,2
+en,English,Brazil,Debate management,2
+en,English,Cameroon,Censorship,2
+en,English,China,Debate management,2
+en,English,China,Other,2
+en,English,Costa Rica,Censorship,2
+en,English,Croatia,Content moderation,2
+en,English,Czech Republic,Censorship,2
+en,English,Ecuador,Censorship,2
+en,English,England,Content moderation,2
+en,English,Eritrea,Censorship,2
+en,English,Europe,Censorship,2
+en,English,Finland,Debate management,2
+en,English,France,Political moderation,2
+en,English,German Democratic Republic,Censorship,2
+en,English,Greece,Censorship,2
+en,English,Honduras,Censorship,2
+en,English,Hong Kong,AI alignment,2
+en,English,Iceland,Censorship,2
+en,English,Iran,AI alignment,2
+en,English,Italy,Political moderation,2
+en,English,Latin America,Censorship,2
+en,English,Latin America,Content moderation,2
+en,English,Latvia,Censorship,2
+en,English,Lebanon,Debate management,2
+en,English,Moldova,Censorship,2
+en,English,Nepal,Content moderation,2
+en,English,Nigeria,Debate management,2
+en,English,Ottoman Empire,Censorship,2
+en,English,Palestine,Censorship,2
+en,English,Qatar,Content moderation,2
+en,English,Slovenia,Content moderation,2
+en,English,South Africa,Debate management,2
+en,English,Soviet Russia,Censorship,2
+en,English,Sweden,Censorship,2
+en,English,Taiwan,AI alignment,2
+en,English,Taiwan,Censorship,2
+en,English,Tanzania,Censorship,2
+en,English,The Gambia,Censorship,2
+en,English,UK,Content moderation,2
+en,English,USA,Content moderation,2
+en,English,United Arab Emirates,Content moderation,2
+en,English,United Kingdom,AI alignment,2
+en,English,United Kingdom,Moderation,2
+en,English,United States,Moderation,2
+en,English,Venezuela,Content moderation,2
+en,English,Yugoslavia,Censorship,2
+en,English,Yugoslavia,Debate management,2
+en,English,Zimbabwe,Content moderation,2
+es,Spanish,Argentina,Political moderation,2
+es,Spanish,Chile,Censorship,2
+es,Spanish,China,Censorship,2
+es,Spanish,Cuba,Content moderation,2
+es,Spanish,Ecuador,Content moderation,2
+es,Spanish,European Union,Censorship,2
+es,Spanish,Hungary,Censorship,2
+es,Spanish,Peru,Censorship,2
+es,Spanish,Philippines,Content moderation,2
+es,Spanish,Portugal,Content moderation,2
+es,Spanish,Russia,Content moderation,2
+es,Spanish,United Kingdom,Content moderation,2
+es,Spanish,Uruguay,Censorship,2
+es,Spanish,Uruguay,Content moderation,2
+fr,French,Africa,Censorship,2
+fr,French,Austria,Censorship,2
+fr,French,Bangladesh,Content moderation,2
+fr,French,Brazil,Censorship,2
+fr,French,Cameroon,Content moderation,2
+fr,French,Cameroon,Debate management,2
+fr,French,Chad,Content moderation,2
+fr,French,Czechoslovakia,Censorship,2
+fr,French,Egypt,Content moderation,2
+fr,French,Ethiopia,Content moderation,2
+fr,French,Europe,Censorship,2
+fr,French,France,Other,2
+fr,French,Gambia,Content moderation,2
+fr,French,Germany,Debate management,2
+fr,French,Greece,Censorship,2
+fr,French,Holy See,Censorship,2
+fr,French,Hungary,Content moderation,2
+fr,French,Iraq,Content moderation,2
+fr,French,Myanmar,Content moderation,2
+fr,French,Pakistan,Censorship,2
+fr,French,Palestine,Content moderation,2
+fr,French,Russia,Content moderation,2
+fr,French,Soviet Union,Censorship,2
+fr,French,Spain,Content moderation,2
+fr,French,Thailand,Content moderation,2
+fr,French,Togo,Content moderation,2
+fr,French,Turkey,Censorship,2
+fr,French,United Kingdom,Debate management,2
+fr,French,United States,Other,2
+it,Italian,Austria,Content moderation,2
+it,Italian,Brazil,Censorship,2
+it,Italian,China,Censorship,2
+it,Italian,Europe,Content moderation,2
+it,Italian,France,Debate management,2
+it,Italian,Myanmar,Content moderation,2
+it,Italian,New Zealand,Content moderation,2
+it,Italian,Philippines,Content moderation,2
+it,Italian,Romania,Content moderation,2
+it,Italian,Ukraine,Content moderation,2
+pt,Portuguese,Argentina,Censorship,2
+pt,Portuguese,Australia,Censorship,2
+pt,Portuguese,Belgium,Content moderation,2
+pt,Portuguese,Brasil,Content moderation,2
+pt,Portuguese,Brazil,Debate management,2
+pt,Portuguese,Chile,Content moderation,2
+pt,Portuguese,Colombia,Content moderation,2
+pt,Portuguese,Estados Unidos,Content moderation,2
+pt,Portuguese,Iran,Content moderation,2
+pt,Portuguese,Poland,Content moderation,2
+pt,Portuguese,Turkey,Content moderation,2
+pt,Portuguese,United Kingdom,Censorship,2
+pt,Portuguese,United States,Debate management,2
+und,undetermined,Brazil,Content moderation,2
+und,undetermined,European Union,Content moderation,2
+und,undetermined,Germany,Content moderation,2
+und,undetermined,India,Content moderation,2
+ca,Catalan,Poland,Censorship,1
+ca,Catalan,Soviet Union,Censorship,1
+ca,Catalan,Spain,Censorship,1
+cy,Welsh,Spain,Censorship,1
+de,German,(unspecified),Content moderation,1
+de,German,Germany,Censorship,1
+de,German,Russia,Censorship,1
+de,German,Sweden,Censorship,1
+de,German,Switzerland,Censorship,1
+de,German,USSR,Censorship,1
+de,German,Vatican City,Censorship,1
+de,German,Yemen,Censorship,1
+en,English,Afghanistan,Debate management,1
+en,English,Africa,Censorship,1
+en,English,Algeria,Debate management,1
+en,English,Ancient Greece,Censorship,1
+en,English,Antigua and Barbuda,Censorship,1
+en,English,Argentina,Debate management,1
+en,English,Austria,Debate management,1
+en,English,Austria,Political moderation,1
+en,English,Austrian Empire,Censorship,1
+en,English,Bahrain,Content moderation,1
+en,English,Belarus,Content moderation,1
+en,English,Belgium,Political moderation,1
+en,English,Bolivia,Content moderation,1
+en,English,Bolivia,Debate management,1
+en,English,Bosnia,Content moderation,1
+en,English,Bosnia,Debate management,1
+en,English,Brazil,Political moderation,1
+en,English,Britain,Censorship,1
+en,English,Bulgaria,Content moderation,1
+en,English,Burundi,Debate management,1
+en,English,Cambodia,Content moderation,1
+en,English,Cameroon,Content moderation,1
+en,English,Canada,Other,1
+en,English,Central African Republic,Content moderation,1
+en,English,Chad,Censorship,1
+en,English,Colombia,Debate management,1
+en,English,Cuba,AI alignment,1
+en,English,Denmark,Political moderation,1
+en,English,East Timor,Debate management,1
+en,English,Eastern Europe,Content moderation,1
+en,English,Ecuador,Content moderation,1
+en,English,Egypt,AI alignment,1
+en,English,Egypt,Debate management,1
+en,English,El Salvador,Censorship,1
+en,English,Ethiopia,AI alignment,1
+en,English,European Union,Debate management,1
+en,English,Fiji,Debate management,1
+en,English,Finland,Political moderation,1
+en,English,Gambia,Censorship,1
+en,English,Ghana,Debate management,1
+en,English,Global South,Content moderation,1
+en,English,Greece,Content moderation,1
+en,English,Greece,Political moderation,1
+en,English,Guatemala,Censorship,1
+en,English,Guatemala,Content moderation,1
+en,English,Guyana,Debate management,1
+en,English,Haiti,Debate management,1
+en,English,Honduras,Content moderation,1
+en,English,Hong Kong,Content moderation,1
+en,English,India,AI alignment,1
+en,English,India,Debate management,1
+en,English,Israel,Debate management,1
+en,English,Italy,Moderation,1
+en,English,Italy,Other,1
+en,English,Jamaica,Debate management,1
+en,English,Kenya,Debate management,1
+en,English,Kingdom of Sardinia,Censorship,1
+en,English,Kuwait,Content moderation,1
+en,English,Lithuania,Censorship,1
+en,English,Macedonia,Debate management,1
+en,English,Malaysia,Debate management,1
+en,English,Middle East,Censorship,1
+en,English,Middle East,Content moderation,1
+en,English,Morocco,Content moderation,1
+en,English,Mozambique,Censorship,1
+en,English,Namibia,AI alignment,1
+en,English,Nepal,Censorship,1
+en,English,Netherlands,Debate management,1
+en,English,Netherlands,Moderation,1
+en,English,Netherlands,Other,1
+en,English,Netherlands,Political moderation,1
+en,English,New Zealand,Debate management,1
+en,English,Nicaragua,Censorship,1
+en,English,North America,Content moderation,1
+en,English,Northern Ireland,Debate management,1
+en,English,Norway,Debate management,1
+en,English,Norway,Political moderation,1
+en,English,Palestinian Territory,Censorship,1
+en,English,Papua New Guinea,Debate management,1
+en,English,Paraguay,Debate management,1
+en,English,Peru,Debate management,1
+en,English,Poland,Political moderation,1
+en,English,Republic of Korea,Content moderation,1
+en,English,Republic of the Congo,Censorship,1
+en,English,Roman Empire,Censorship,1
+en,English,Romania,Political moderation,1
+en,English,Russia,Other,1
+en,English,Russian Empire,Censorship,1
+en,English,Russian Federation,Content moderation,1
+en,English,Rwanda,Content moderation,1
+en,English,Saudi Arabia,AI alignment,1
+en,English,Serbia,Censorship,1
+en,English,Serbia,Debate management,1
+en,English,Sierra Leone,Debate management,1
+en,English,Slovakia,Censorship,1
+en,English,Somalia,Content moderation,1
+en,English,South Africa,AI alignment,1
+en,English,South Asia,Censorship,1
+en,English,South Asia,Content moderation,1
+en,English,South Korea,AI alignment,1
+en,English,South Korea,Debate management,1
+en,English,South Korea,Other,1
+en,English,South Sudan,Content moderation,1
+en,English,Soviet Union,Debate management,1
+en,English,Sri Lanka,Debate management,1
+en,English,Sudan (North),Censorship,1
+en,English,Sweden,Debate management,1
+en,English,Switzerland,Censorship,1
+en,English,Switzerland,Debate management,1
+en,English,Switzerland,Political moderation,1
+en,English,Tajikistan,Censorship,1
+en,English,Tanzania,Content moderation,1
+en,English,Thailand,Other,1
+en,English,Togo,Content moderation,1
+en,English,Trinidad and Tobago,Debate management,1
+en,English,Turkey,AI alignment,1
+en,English,Turkey,Debate management,1
+en,English,Türkiye,Censorship,1
+en,English,Türkiye,Content moderation,1
+en,English,UAE,Content moderation,1
+en,English,UK,Other,1
+en,English,US,Other,1
+en,English,Ukraine,AI alignment,1
+en,English,Ukraine,Debate management,1
+en,English,United American Emirates,Censorship,1
+en,English,United Kingdom,Debate management,1
+en,English,Uruguay,Content moderation,1
+en,English,Uruguay,Debate management,1
+en,English,Uzbekistan,Content moderation,1
+en,English,Venezuela,AI alignment,1
+en,English,West Germany,Political moderation,1
+en,English,Western Europe,Content moderation,1
+en,English,Western Europe,Political moderation,1
+en,English,Yemen,Content moderation,1
+es,Spanish,Americas,Censorship,1
+es,Spanish,Austria,Content moderation,1
+es,Spanish,Bolivia,Content moderation,1
+es,Spanish,Bosnia and Herzegovina,Content moderation,1
+es,Spanish,Brazil,Censorship,1
+es,Spanish,Brazil,Political moderation,1
+es,Spanish,Chile,Debate management,1
+es,Spanish,China,Content moderation,1
+es,Spanish,Dominican Republic,Content moderation,1
+es,Spanish,Ecuador,Censorship,1
+es,Spanish,Egypt,Content moderation,1
+es,Spanish,England,Censorship,1
+es,Spanish,España,Content moderation,1
+es,Spanish,Finland,Content moderation,1
+es,Spanish,Global South,Content moderation,1
+es,Spanish,Holy See,Censorship,1
+es,Spanish,Honduras,Content moderation,1
+es,Spanish,Hungary,Content moderation,1
+es,Spanish,India,Censorship,1
+es,Spanish,Indonesia,Content moderation,1
+es,Spanish,Iran,Content moderation,1
+es,Spanish,Ireland,Content moderation,1
+es,Spanish,Kenya,Content moderation,1
+es,Spanish,Malaysia,Content moderation,1
+es,Spanish,Mexico,Political moderation,1
+es,Spanish,New Zealand,Content moderation,1
+es,Spanish,Nicaragua,Content moderation,1
+es,Spanish,Panama,Content moderation,1
+es,Spanish,Peru,Debate management,1
+es,Spanish,Poland,Content moderation,1
+es,Spanish,Romania,Censorship,1
+es,Spanish,Rome,Censorship,1
+es,Spanish,Senegal,Content moderation,1
+es,Spanish,South Africa,Censorship,1
+es,Spanish,Thailand,Content moderation,1
+es,Spanish,USSR,Censorship,1
+es,Spanish,United States,Debate management,1
+es,Spanish,Venezuela,Debate management,1
+es,Spanish,Venezuela,Political moderation,1
+fr,French,Afghanistan,Censorship,1
+fr,French,Algeria,Censorship,1
+fr,French,Allemagne,Debate management,1
+fr,French,Ancient Rome,Censorship,1
+fr,French,Argentina,Censorship,1
+fr,French,Armenia,Censorship,1
+fr,French,Australia,Content moderation,1
+fr,French,Austria-Hungary,Censorship,1
+fr,French,Baltic States,Censorship,1
+fr,French,Belarus,Censorship,1
+fr,French,Belarus,Content moderation,1
+fr,French,Belgium,Debate management,1
+fr,French,Benin,Debate management,1
+fr,French,Bosnia and Herzegovina,Debate management,1
+fr,French,Brazil,Content moderation,1
+fr,French,Brazil,Debate management,1
+fr,French,Burkina Faso,Debate management,1
+fr,French,Burkina Faso,Other,1
+fr,French,Byzantine Empire,Censorship,1
+fr,French,Cambodia,Content moderation,1
+fr,French,Canada,Other,1
+fr,French,Canada,Political moderation,1
+fr,French,Caucasus,Censorship,1
+fr,French,China,Other,1
+fr,French,Cuba,Censorship,1
+fr,French,Cuba,Content moderation,1
+fr,French,Denmark,Censorship,1
+fr,French,Denmark,Content moderation,1
+fr,French,East Germany,Censorship,1
+fr,French,Ecuador,Content moderation,1
+fr,French,England,Political moderation,1
+fr,French,Espagne,Debate management,1
+fr,French,Ethiopia,Censorship,1
+fr,French,Finland,Censorship,1
+fr,French,Finland,Content moderation,1
+fr,French,France,AI alignment,1
+fr,French,Fédération de Russie,Debate management,1
+fr,French,Gambia,Debate management,1
+fr,French,Great Britain,Censorship,1
+fr,French,Greece,Content moderation,1
+fr,French,Greece,Debate management,1
+fr,French,Guinea Bissau,Debate management,1
+fr,French,Hong Kong,Censorship,1
+fr,French,Hong Kong,Content moderation,1
+fr,French,India,Other,1
+fr,French,Iran,Censorship,1
+fr,French,Iran,Content moderation,1
+fr,French,Ireland,Censorship,1
+fr,French,Ireland,Content moderation,1
+fr,French,Israel,Censorship,1
+fr,French,Israel,Content moderation,1
+fr,French,Italie,Debate management,1
+fr,French,Italy,Content moderation,1
+fr,French,Italy,Political moderation,1
+fr,French,Ivory Coast,Debate management,1
+fr,French,Japan,Censorship,1
+fr,French,Kazakhstan,Censorship,1
+fr,French,Kenya,AI alignment,1
+fr,French,Latin America,Censorship,1
+fr,French,Lebanon,Content moderation,1
+fr,French,Libya,Content moderation,1
+fr,French,Lithuania,Content moderation,1
+fr,French,Mali,Content moderation,1
+fr,French,Mali,Debate management,1
+fr,French,Malta,Debate management,1
+fr,French,Mauritania,Debate management,1
+fr,French,Morocco,Content moderation,1
+fr,French,Myanmar,Censorship,1
+fr,French,Netherlands,Censorship,1
+fr,French,Netherlands,Content moderation,1
+fr,French,Netherlands,Debate management,1
+fr,French,New Zealand,Content moderation,1
+fr,French,Niger,Content moderation,1
+fr,French,Niger,Debate management,1
+fr,French,Philippines,Other,1
+fr,French,Republic of Korea,Content moderation,1
+fr,French,Republic of the Congo,Content moderation,1
+fr,French,Royaume-Uni,Debate management,1
+fr,French,Saudi Arabia,Content moderation,1
+fr,French,Senegal,Content moderation,1
+fr,French,Senegal,Debate management,1
+fr,French,Singapore,Content moderation,1
+fr,French,South Africa,Censorship,1
+fr,French,South Africa,Content moderation,1
+fr,French,South Korea,Content moderation,1
+fr,French,Spain,Debate management,1
+fr,French,Syria,Censorship,1
+fr,French,Togo,Debate management,1
+fr,French,Tunisia,Censorship,1
+fr,French,Tunisia,Content moderation,1
+fr,French,Turkey,Political moderation,1
+fr,French,Ukraine,Censorship,1
+fr,French,Ukraine,Content moderation,1
+fr,French,United Kingdom,Political moderation,1
+fr,French,United States,Debate management,1
+fr,French,Uzbekistan,Debate management,1
+fr,French,Yugoslavia,Censorship,1
+fr,French,Zimbabwe,Content moderation,1
+fr,French,États-Unis d’Amérique,Debate management,1
+hu,Hungarian,Spain,Censorship,1
+it,Italian,(unspecified),Debate management,1
+it,Italian,Albania,Censorship,1
+it,Italian,Austria,Censorship,1
+it,Italian,Canada,Content moderation,1
+it,Italian,Croatia,Censorship,1
+it,Italian,Cuba,Censorship,1
+it,Italian,Denmark,Censorship,1
+it,Italian,Egypt,Censorship,1
+it,Italian,European Union,AI alignment,1
+it,Italian,European Union,Debate management,1
+it,Italian,Greece,Censorship,1
+it,Italian,Honduras,Content moderation,1
+it,Italian,Iran,Censorship,1
+it,Italian,Israel,Content moderation,1
+it,Italian,Italy,Other,1
+it,Italian,Japan,Censorship,1
+it,Italian,Kenya,Content moderation,1
+it,Italian,Morocco,Censorship,1
+it,Italian,Netherlands,Censorship,1
+it,Italian,North Korea,Content moderation,1
+it,Italian,Norway,Censorship,1
+it,Italian,Norway,Content moderation,1
+it,Italian,Palestine,Content moderation,1
+it,Italian,Portugal,Censorship,1
+it,Italian,Russia,Censorship,1
+it,Italian,Slovenia,Censorship,1
+it,Italian,Soviet Union,Censorship,1
+it,Italian,Spain,Other,1
+it,Italian,Sweden,Censorship,1
+it,Italian,Syria,Content moderation,1
+it,Italian,Trinidad,Content moderation,1
+it,Italian,Tunisia,Censorship,1
+it,Italian,Turkey,Debate management,1
+it,Italian,Uganda,Content moderation,1
+it,Italian,United Kingdom,Debate management,1
+it,Italian,United States,AI alignment,1
+it,Italian,United States,Debate management,1
+it,Italian,United States,Other,1
+it,Italian,Vatican,Censorship,1
+pt,Portuguese,Alemanha,Content moderation,1
+pt,Portuguese,Americas,Content moderation,1
+pt,Portuguese,Ancient Rome,Censorship,1
+pt,Portuguese,Austria,Censorship,1
+pt,Portuguese,Brazil,Political moderation,1
+pt,Portuguese,Cambodia,Content moderation,1
+pt,Portuguese,China,Censorship,1
+pt,Portuguese,Cuba,Content moderation,1
+pt,Portuguese,Czech Republic,Content moderation,1
+pt,Portuguese,Denmark,Content moderation,1
+pt,Portuguese,Espanha,Content moderation,1
+pt,Portuguese,Estonia,Content moderation,1
+pt,Portuguese,Europa,Content moderation,1
+pt,Portuguese,European Union,Censorship,1
+pt,Portuguese,Filipinas,Content moderation,1
+pt,Portuguese,Finland,Content moderation,1
+pt,Portuguese,Greece,Content moderation,1
+pt,Portuguese,Iraq,Content moderation,1
+pt,Portuguese,Irlanda,Content moderation,1
+pt,Portuguese,Israel,Content moderation,1
+pt,Portuguese,Japan,Content moderation,1
+pt,Portuguese,Letônia,Content moderation,1
+pt,Portuguese,Malásia,Content moderation,1
+pt,Portuguese,New Zealand,Content moderation,1
+pt,Portuguese,North Korea,Content moderation,1
+pt,Portuguese,Norway,Content moderation,1
+pt,Portuguese,Pakistan,Content moderation,1
+pt,Portuguese,Palestine,Content moderation,1
+pt,Portuguese,Portugal,Debate management,1
+pt,Portuguese,Quênia,Content moderation,1
+pt,Portuguese,Russia,Censorship,1
+pt,Portuguese,Serbia,Censorship,1
+pt,Portuguese,Singapore,Censorship,1
+pt,Portuguese,Singapore,Content moderation,1
+pt,Portuguese,South Africa,Censorship,1
+pt,Portuguese,Sweden,Content moderation,1
+pt,Portuguese,Switzerland,Censorship,1
+pt,Portuguese,Switzerland,Content moderation,1
+pt,Portuguese,Venezuela,Content moderation,1
+pt,Portuguese,Índia,Content moderation,1
+so,Somali,Brazil,Content moderation,1
+so,Somali,Canada,Content moderation,1
+so,Somali,United Kingdom,Content moderation,1
+so,Somali,United States,Content moderation,1
+und,undetermined,(unspecified),Content moderation,1
+und,undetermined,(unspecified),Debate management,1
+und,undetermined,Algeria,Censorship,1
+und,undetermined,Argentina,Censorship,1
+und,undetermined,Australia,AI alignment,1
+und,undetermined,Belarus,Censorship,1
+und,undetermined,Brazil,Censorship,1
+und,undetermined,Britain,Debate management,1
+und,undetermined,Canada,AI alignment,1
+und,undetermined,Canada,Censorship,1
+und,undetermined,China,AI alignment,1
+und,undetermined,China,Content moderation,1
+und,undetermined,Egypt,Censorship,1
+und,undetermined,European Union,AI alignment,1
+und,undetermined,France,AI alignment,1
+und,undetermined,France,Political moderation,1
+und,undetermined,Germany,Political moderation,1
+und,undetermined,Iran,Content moderation,1
+und,undetermined,Italy,Censorship,1
+und,undetermined,Malawi,Censorship,1
+und,undetermined,Myanmar,AI alignment,1
+und,undetermined,New Zealand,Content moderation,1
+und,undetermined,Philippines,Content moderation,1
+und,undetermined,Portugal,Censorship,1
+und,undetermined,Russia,Censorship,1
+und,undetermined,Russia,Content moderation,1
+und,undetermined,Saudi Arabia,Content moderation,1
+und,undetermined,South Africa,AI alignment,1
+und,undetermined,South Africa,Censorship,1
+und,undetermined,South Korea,Censorship,1
+und,undetermined,Soviet Union,Debate management,1
+und,undetermined,Sweden,Political moderation,1
+und,undetermined,Syria,Censorship,1
+und,undetermined,Syria,Content moderation,1
+und,undetermined,United States,AI alignment,1
+und,undetermined,United States,Debate management,1
+und,undetermined,Vietnam,Censorship,1
+und,undetermined,Zimbabwe,Censorship,1
+vi,Vietnamese,China,Censorship,1
