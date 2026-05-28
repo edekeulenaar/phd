@@ -1788,6 +1788,10 @@ const figKey = (() => {
       currentFig = figId; active = null; render();
     },
     activeLabel() { return active; },
+    /** Public read-only accessor used by the figure exporter to bake the
+     *  current legend into the downloaded SVG / PNG. Returns `{ title, legend }`
+     *  for the given figure id, or undefined when nothing is registered. */
+    get(figId) { return reg.get(figId); },
   };
 })();
 
@@ -2340,7 +2344,69 @@ function setupFigureDownloads() {
   });
 }
 
-/* For SVG exports only: append each node's flow value to its label, so the
+/* For exports only: append a vertical legend strip to the right of the
+   chart, listing the same colour-encoding the sidebar `#fig-key` shows
+   while interacting. Expands the SVG's viewBox and width so the chart
+   itself is unaffected. Returns the new (width, height) so the PNG
+   rasteriser can size its canvas accordingly. */
+function addLegendForExport(cloneSvg, figId, baseW, baseH) {
+  const k = (typeof figKey !== "undefined" && figKey.get) ? figKey.get(figId) : null;
+  if (!k || !Array.isArray(k.legend) || !k.legend.length) {
+    return { width: baseW, height: baseH };
+  }
+  const FONT = "-apple-system,BlinkMacSystemFont,'Helvetica Neue',Inter," +
+               "'Segoe UI',Arial,sans-serif";
+  const SW   = 12;       // colour swatch size
+  const LH   = 18;       // line height
+  const PAD  = 22;       // padding between chart and legend
+  // Estimate width of the longest label so the legend column doesn't get clipped.
+  const longest = k.legend.reduce((m, it) =>
+    Math.max(m, String(it.label || "").length), (k.title || "Key").length);
+  const legW   = Math.min(320, Math.max(160, SW + 8 + longest * 7));
+  const legH   = LH * (k.legend.length + 1) + 12;
+  const newW   = baseW + PAD + legW;
+  const newH   = Math.max(baseH, legH + 30);
+
+  cloneSvg.setAttribute("viewBox", `0 0 ${newW} ${newH}`);
+  cloneSvg.setAttribute("width",  newW);
+  cloneSvg.setAttribute("height", newH);
+
+  const ns = "http://www.w3.org/2000/svg";
+  const g = document.createElementNS(ns, "g");
+  g.setAttribute("class", "export-legend");
+  g.setAttribute("transform", `translate(${baseW + PAD}, 20)`);
+
+  const title = document.createElementNS(ns, "text");
+  title.setAttribute("x", 0); title.setAttribute("y", 0);
+  title.setAttribute("dy", "0.9em");
+  title.setAttribute("style",
+    `font-family:${FONT};font-weight:700;font-size:11px;` +
+    `text-transform:uppercase;letter-spacing:0.06em;fill:#2a2724;`);
+  title.textContent = k.title || "Key";
+  g.appendChild(title);
+
+  k.legend.forEach((it, i) => {
+    const y = 18 + LH * (i + 1);
+    const rect = document.createElementNS(ns, "rect");
+    rect.setAttribute("x", 0); rect.setAttribute("y", y - SW + 2);
+    rect.setAttribute("width", SW); rect.setAttribute("height", SW);
+    rect.setAttribute("fill", it.color);
+    rect.setAttribute("stroke", "rgba(28,26,24,0.18)");
+    rect.setAttribute("stroke-width", "0.6");
+    g.appendChild(rect);
+
+    const lab = document.createElementNS(ns, "text");
+    lab.setAttribute("x", SW + 7); lab.setAttribute("y", y);
+    lab.setAttribute("style",
+      `font-family:${FONT};font-size:11px;fill:#2a2724;`);
+    lab.textContent = it.label;
+    g.appendChild(lab);
+  });
+  cloneSvg.appendChild(g);
+  return { width: newW, height: newH };
+}
+
+/* For exports only: append each node's flow value to its label, so the
    exported figure reads "UNITED STATES — 567" instead of the bare label.
    The live on-page SVG is left untouched — these annotations live in the
    clone consumed by the exporter. */
@@ -2418,17 +2484,20 @@ function triggerDownload(blob, filename) {
 }
 
 function exportSVGtoSVG(srcSvg, slug) {
-  const { svg } = cloneWithInlineStyles(srcSvg);
-  // Edge value labels appear ONLY in exports, not on the live page.
+  const { svg, width, height } = cloneWithInlineStyles(srcSvg);
+  // Edge value labels + sidebar key appear ONLY in exports, never on
+  // the live page. Both run on the clone so the on-page chart is intact.
   annotateEdgesForExport(srcSvg, svg);
+  addLegendForExport(svg, slug, width, height);
   const xml = svgString(svg);
   triggerDownload(new Blob([xml], { type: "image/svg+xml;charset=utf-8" }),
                   `${slug}.svg`);
 }
 
 async function exportSVGtoPNG(srcSvg, slug) {
-  const { svg, width, height } = cloneWithInlineStyles(srcSvg);
+  let { svg, width, height } = cloneWithInlineStyles(srcSvg);
   annotateEdgesForExport(srcSvg, svg);
+  ({ width, height } = addLegendForExport(svg, slug, width, height));
   const xml = svgString(svg);
   // Load the inline SVG into an Image via a Blob URL — works around the
   // cross-origin tainting that data: URLs sometimes incur.
