@@ -1,0 +1,733 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Censorship & moderation — Chapter 1 interactive page
+   Aesthetic adapted from edekeulenaar.github.io/ai-alignment-actors
+   Background: off-white. Two-column layout: fixed sidebar + scrolling main.
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* Aesthetic ported from edekeulenaar.github.io/ai-alignment-actors —
+   warm-paper editorial palette, Iowan Old Style serif, italic side nav
+   with terracotta active state, uppercase tracked side-block headers. */
+:root {
+  --ink:        #1c1a18;
+  --ink-soft:   #3c3934;
+  --paper:      #faf7f2;            /* off-white (kept from earlier palette) */
+  --paper-alt:  #f3efe8;            /* soft off-white for panels / sidebar */
+  --muted:      #6c655c;
+  --border:     #ddd6c9;            /* lighter, cooler than reference */
+  --rule:       #c4bcad;
+  --accent:     #c0431f;            /* terracotta from the reference */
+  --accent-soft:#f5dccf;
+  --link:       #1c1a18;            /* links are inked, underlined */
+
+  /* aliases retained for existing rules */
+  --bg:         var(--paper);
+  --bg-soft:    var(--paper-alt);
+
+  --side-w:     250px;
+  --content-w:  46rem;
+  --prose-w:    65rem;            /* prose + 17rem margin-cites column */
+  --serif:      "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
+  --sans:       "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
+  --mono:       ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --fs:         14.5px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--serif);
+  color: var(--ink);
+  background: var(--paper);
+  font-size: var(--fs);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(28, 26, 24, 0.18);
+}
+a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+code, pre { font-family: var(--mono); font-size: 0.93em; }
+
+/* ─── Sidebar (paper-alt panel, italic TOC) ──────────────────────────── */
+
+#sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: var(--side-w);
+  padding: 1.5rem 1.2rem;
+  background: var(--paper-alt);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.sb-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  margin: 0 0 0.35em 0;
+}
+.sb-sub {
+  font-family: var(--serif);
+  font-style: normal;          /* no italic on sidebar headings */
+  color: var(--muted);
+  font-size: 11.5px;
+  margin: 0 0 1.4rem 0;
+  letter-spacing: 0;
+}
+.toc {
+  list-style: none;
+  padding: 0; margin: 0 0 1.6rem 0;
+  display: flex; flex-direction: column;
+}
+.toc li { margin: 0; padding: 0; }
+.toc a {
+  display: block;
+  text-decoration: none;
+  padding: 0.25em 0;
+  padding-left: 0.6rem; margin-left: -0.6rem;
+  font-style: normal;          /* no italic on sidebar headings */
+  color: var(--muted);
+  border: none;
+  border-left: 2px solid transparent;
+  transition: color 0.12s, border-color 0.12s;
+}
+.toc a:hover  { color: var(--ink); }
+.toc a.is-active {
+  color: var(--ink);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+/* Reference's side-nav hierarchy: H1 top-level, H2/H3 indented + smaller. */
+.toc .lvl-1 a { font-size: 13px; }
+.toc .lvl-2 a { font-size: 12px; padding-left: 1.4rem; margin-left: -0.6rem; }
+.toc .lvl-3 a { font-size: 11.5px; padding-left: 2.2rem; margin-left: -0.6rem; }
+
+/* Lives at the END of the sidebar's scroll flow — only visible when the
+   reader has scrolled past every TOC entry + the figure-key. Never sticky,
+   so it never sits on top of anything. */
+.sb-foot {
+  margin-top: 2.4rem;
+  padding: 0.9rem 0 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--muted);
+  background: transparent;
+}
+.sb-foot a { color: var(--muted); border-bottom: none; }
+.sb-foot a:hover { color: var(--accent); }
+
+/* ─── Main ────────────────────────────────────────────────────────────── */
+
+#content {
+  margin-left: var(--side-w);
+  /* Reference uses 1.5rem top, 3rem sides — matches sidebar's top padding. */
+  padding: 1.5rem 3rem 6rem;
+  max-width: calc(100vw - var(--side-w));
+}
+
+.prose { max-width: var(--content-w); }
+/* Editorial typography: serif headings, weight 600, gently scaled. */
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.prose h1 { font-size: 1.85rem; margin: 3rem 0 1.2rem; }
+.prose h2 { font-size: 1.30rem; margin: 2.4rem 0 0.9rem; }
+.prose h3 { font-size: 1.05rem; margin: 1.8rem 0 0.7rem; color: var(--ink); }
+.prose h1:first-child { margin-top: 0; font-size: 1.85rem; }
+.prose p { margin: 0 0 1.1em; }
+.prose a { border-bottom: 1px solid rgba(28,26,24,0.18); }
+.prose a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.prose p { margin: 0 0 0.95em; }
+.prose ul, .prose ol { padding-left: 1.2rem; }
+.prose blockquote {
+  margin: 2.2em 0;
+  padding: 0.3em 0 0.3em 1em;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.55;
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.2em 0;
+}
+.prose .loading { color: var(--muted); font-style: italic; }
+
+/* Inline Harvard cite, e.g. "(Allan, 2016; Smith, 2020)". Sits in the
+   running prose; the full bibliographic refs live in `.margin-cites`. */
+.cite-grp {
+  color: var(--accent);
+  font-variant-numeric: oldstyle-nums;
+  font-size: 0.92em;
+  white-space: normal;
+  cursor: help;
+  border-bottom: 1px dotted rgba(192, 67, 31, 0.30);
+}
+.cite-grp:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* `.cite` only appears inside `.margin-cites` (one block per reference). */
+.cite { color: var(--muted); }
+
+/* The right-margin Harvard reference list was removed — full references
+   now appear in the shared hover-card (#data-card) instead. The `.dc-cite`
+   styling for that card lives in the "Data hover-card" section below. */
+
+/* Harvard reference inside the hover #data-card. */
+#data-card .dc-cite {
+  font-family: var(--serif);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ink);
+  padding: 0.45em 0 0.45em;
+  border-top: 1px solid var(--rule);
+}
+#data-card .dc-cite:first-child { border-top: none; padding-top: 0; }
+#data-card .dc-cite em { font-style: italic; }
+#data-card .dc-cite .ext {
+  display: inline-block;
+  margin-left: 0.35em;
+  color: var(--accent);
+  font-size: 11px;
+  border-bottom: 1px dotted rgba(192, 67, 31, 0.4);
+  white-space: nowrap;
+}
+#data-card .dc-cite .ext:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+#cite-card {
+  position: absolute;
+  z-index: 50;
+  max-width: 22rem;
+  padding: 0.65rem 0.8rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-shadow: 0 6px 20px rgba(28, 26, 24, 0.10);
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink);
+  pointer-events: none;
+}
+#cite-card .ck { color: var(--accent); font-family: var(--mono); font-size: 11.5px; }
+#cite-card .hint { color: var(--muted); display: block; margin-top: 0.35rem; font-size: 11.5px; font-style: italic; }
+
+/* ─── Analysis section ────────────────────────────────────────────────── */
+
+.analysis {
+  max-width: calc(100vw - var(--side-w) - 6rem);
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+.analysis-head h1 {
+  font-family: var(--serif); font-size: 1.85rem; font-weight: 600;
+  letter-spacing: -0.005em; line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+.analysis-head .lede {
+  font-style: italic; color: var(--muted);
+  max-width: var(--content-w); margin: 0 0 2rem;
+  font-size: 15px; line-height: 1.55;
+}
+/* Section heads mirror the reference's .side-block h4: uppercase, tracked,
+   muted, with a rule line underneath. */
+.analysis h2 {
+  font-family: var(--serif);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted);
+  margin: 3rem 0 1rem; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Figure row: the figure CARD on the left + a notes pane on the right —
+   the notes live OUTSIDE the figure box (per #1). */
+.fig-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 16rem;
+  column-gap: 1.6rem;
+  align-items: stretch;
+  margin: 0 0 2.4rem;
+}
+.fig {
+  margin: 0;
+  padding: 1rem 1.1rem 0.9rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.fig.pending { background: var(--paper-alt); border-style: dashed; }
+
+.fig-notes-pane {
+  align-self: stretch;
+  display: flex;
+}
+.fig-notes-pane .fig-notes {
+  flex: 1;
+  margin: 0;
+  background: transparent;
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .fig-row { grid-template-columns: 1fr; row-gap: 0.7rem; }
+  .fig-notes-pane .fig-notes { min-height: 4rem; }
+}
+
+.fig-cap {
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+}
+.fig-num { color: var(--accent); font-weight: 700; margin-right: 0.35rem; }
+.fig-cap .phase {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.05em 0.5em;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 2px;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.fig-body { min-height: 4rem; margin: 0.4rem 0 0.6rem; overflow-x: auto;
+            background: var(--paper); border-radius: 3px; padding: 0.4rem; }
+.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  height: 9rem;
+  color: var(--muted);
+  font-family: var(--serif); font-style: italic;
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  background: var(--paper);
+}
+
+.fig-foot {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1rem;
+  align-items: baseline;
+  padding-top: 0.6rem;
+  border-top: 1px dotted var(--rule);
+  font-family: var(--serif);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.dl {
+  color: var(--ink); font-weight: 600;
+  border-bottom: 1px solid rgba(28,26,24,0.18);
+}
+.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.alt { flex: 1 1 18rem; min-width: 0; font-style: italic; }
+
+.page-foot {
+  margin-top: 2rem; padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif); font-style: italic;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ─── Summary table ──────────────────────────────────────────────────── */
+
+#summary-table table {
+  border-collapse: collapse;
+  font-family: var(--serif);
+  font-size: 14px;
+}
+#summary-table td {
+  padding: 0.35rem 1.4rem 0.35rem 0;
+  border-bottom: 1px dotted var(--border);
+}
+#summary-table td:first-child { color: var(--ink); }
+#summary-table td:last-child  { font-variant-numeric: tabular-nums;
+                                font-weight: 700; text-align: right;
+                                color: var(--accent); }
+
+/* ─── Sankey ─────────────────────────────────────────────────────────── */
+
+/* All Sankeys are rendered as RawGraphs-style ALLUVIAL diagrams:
+   white nodes with thin dark outline, uppercase sans-serif labels
+   (two lines: NAME + count), italic stage headers, pastel ribbons
+   with a visible gap between rect and ribbon. */
+.sankey {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter,
+               "Segoe UI", Arial, sans-serif;
+  font-size: 13px; color: var(--ink);
+}
+.sankey .node rect {
+  fill: #ffffff;
+  stroke: #2a2724;
+  stroke-width: 0.8px;
+  cursor: pointer;
+}
+.sankey .node rect:hover { fill: #f5efe2; }
+.sankey .node text { fill: var(--ink); pointer-events: none; }
+
+.sankey .node-label { font-size: 11px; }
+.sankey .lbl-name {
+  font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  fill: var(--ink);
+}
+.sankey .lbl-count {
+  font-size: 9.5px; font-weight: 400; fill: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sankey .stage-headers text {
+  font-size: 10.5px; font-style: italic; font-weight: 400;
+  fill: var(--muted);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.sankey .link {
+  fill: none;
+  stroke-opacity: 0.70;          /* pastel ribbons read at this opacity */
+  mix-blend-mode: normal;
+  transition: stroke-opacity 0.15s;
+  cursor: pointer;
+}
+.sankey .link:hover { stroke-opacity: 0.90; }
+.sankey .link.dim, .sankey .node.dim rect, .sankey .node.dim text {
+  stroke-opacity: 0.05; opacity: 0.18;
+}
+.sankey .link.hi  { stroke-opacity: 0.65; }
+.sankey .node.hi rect { stroke: var(--accent); stroke-width: 1.4px; }
+
+/* ─── Figure-key panel: lives at the bottom of the sidebar, swaps on scroll */
+
+#fig-key {
+  margin-top: 1.2rem;
+  /* Reserve room at the bottom so the sticky "Source on GitHub" footer
+     never overlaps the last legend chip. */
+  margin-bottom: 3rem;
+  padding: 0.7rem 0.8rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: var(--serif);
+  font-size: 12.5px;
+  color: var(--ink);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+#fig-key .fk-h {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted);
+  margin: 0 0 0.55rem 0; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+#fig-key[hidden] { display: none; }
+#fig-key .fk-h {
+  font-weight: 700;
+  color: var(--muted);
+  font-size: var(--fs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+#fig-key .fk-item {
+  display: flex; align-items: center; gap: 0.55em;
+  padding: 0.15em 0.25em;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+}
+#fig-key .fk-item:hover  { background: rgba(0,0,0,0.04); }
+#fig-key .fk-item.active { background: var(--ink); color: var(--paper); }
+#fig-key .fk-sw {
+  width: 12px; height: 12px;
+  border: 1px solid var(--border); border-radius: 2px;
+  flex: 0 0 12px;
+}
+#fig-key .fk-item.active .fk-sw { outline: 1px solid var(--paper); }
+#fig-key .fk-clear {
+  margin-top: 0.5rem;
+  font-size: 11.5px; font-style: italic;
+  color: var(--muted);
+  cursor: pointer;
+}
+#fig-key .fk-clear:hover { color: var(--ink); }
+
+/* ─── Year-range filter + bump-toggle (.fig-controls extensions) ──────── */
+
+.fig-controls .year-range {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: var(--fs);
+}
+.fig-controls .year-range input[type="number"] { width: 5.2rem; }
+
+/* ─── Per-figure notes textarea + download bar ───────────────────────── */
+
+.fig-notes {
+  display: block;
+  width: 100%;
+  margin-top: 0.7rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--paper);
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink);
+  resize: vertical;
+  min-height: 2.4rem;
+}
+.fig-notes::placeholder { color: var(--muted); font-style: italic; }
+.fig-notes:focus { outline: none; border-color: var(--ink); border-style: solid; }
+
+.notes-bar {
+  display: flex; align-items: center; gap: 0.7rem;
+  margin: 0.4rem 0 1.8rem;
+  font-family: var(--serif); font-style: italic;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.notes-bar button {
+  font-family: var(--serif); font-style: normal; font-weight: 600;
+  font-size: 13px;
+  padding: 0.4em 0.85em;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--border); border-radius: 3px;
+  cursor: pointer;
+}
+.notes-bar button:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* ─── Figure controls (selectors + tabs) ──────────────────────────────── */
+
+.fig-controls {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem;
+  align-items: center;
+  margin: 0.4rem 0 0.8rem;
+  font-family: var(--serif);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.fig-controls label { display: inline-flex; align-items: center; gap: 0.4rem; }
+.fig-controls select,
+.fig-controls input[type="number"] {
+  font-family: var(--serif); font: inherit; font-size: 12.5px;
+  padding: 0.3em 0.55em;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+.fig-controls input[type="number"] { width: 5rem; }
+.fig-controls .spacer { flex: 1; }
+.fig-controls .seg { display: inline-flex; gap: 0; }
+.fig-controls .tab,
+.tab {
+  font-family: var(--serif);
+  font-size: 12px;
+  padding: 0.3em 0.7em;
+  background: var(--paper);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.fig-controls .seg .tab { border-radius: 0; }
+.fig-controls .seg .tab:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.fig-controls .seg .tab:last-child  { border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left: none; }
+.tab:hover { color: var(--ink); }
+.tab.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  font-weight: 600;
+}
+
+/* ─── Chart axes / labels (D3) ────────────────────────────────────────── */
+
+/* Charts fill the figure column at full width; their height is computed by
+   the SVG viewBox aspect ratio (very tall in Fig 7 Matrix view — that's fine,
+   scrolling is normal). DO NOT add `max-height`: it makes preserveAspectRatio
+   shrink the width to fit, squeezing the chart into a thin strip. */
+.chart {
+  font-family: var(--sans);
+  font-size: 13px;          /* bumped from 11px (Figs 3, 4, 7–10 readability) */
+  color: var(--ink);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Uniform editorial label style across ALL chart text — matches alluvial
+   labels: sans-serif, uppercase, bold, slight tracking. */
+.chart text {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter,
+               "Segoe UI", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.chart .axis text       { font-size: 9.5px;  font-weight: 600; }
+.chart .y-labels text   { font-size: 9px;    font-weight: 700; }
+.chart .axis path, .chart .axis line { stroke: var(--rule); }
+.chart .axis text { fill: var(--ink-soft); }
+.chart .y-labels text { fill: var(--ink); }
+.chart .legend text { font-size: 10.5px; font-weight: 600; }
+.chart .rowguides line { stroke: var(--rule); stroke-dasharray: 2 3; }
+.chart .legend text { fill: var(--ink-soft); font-size: 12px; }
+.chart circle { stroke: rgba(30, 29, 28, 0.18); stroke-width: 0.4px;
+                transition: opacity 0.15s; }
+.chart circle.dim { opacity: 0.10; }
+.chart circle.hi  { stroke: var(--ink); stroke-width: 1px; }
+/* "Selected" via click: matches a pinned data-card on a beeswarm dot. */
+.chart circle.selected {
+  stroke: var(--accent); stroke-width: 2.4px;
+  filter: drop-shadow(0 0 6px rgba(177, 103, 68, 0.55));
+}
+/* Static-PNG-style network: clear labels, click → highlight neighbours. */
+.chart.network .node-label    {
+  fill: var(--ink); font-weight: 700;
+  font-size: 9.5px; letter-spacing: 0.03em;
+}
+.chart.network circle         { transition: opacity 0.15s, r 0.15s; }
+.chart.network circle.hi      { stroke: var(--ink); stroke-width: 1.5px; }
+.chart.network circle.dim     { opacity: 0.08; }
+.chart.network line.dim       { stroke-opacity: 0.03; }
+.chart.network line.hi        { stroke: var(--accent); stroke-opacity: 0.85; }
+.chart.network text.node-label     { transition: opacity 0.15s; }
+.chart.network text.node-label.dim { opacity: 0.18; }
+/* Bump chart (#10): thin, clean lines à la rawgraphs/bumpchart; no scatter dots. */
+.chart.bump .series         { transition: opacity 0.15s; }
+.chart.bump .series.dim     { opacity: 0.12; }
+.chart.bump .series.hi      { opacity: 1; }
+.chart.bump .series path    { stroke-width: 1.6px; fill: none; opacity: 0.95; }
+.chart.bump .series circle  { r: 1.6; opacity: 0; }   /* hover targets only */
+.chart.bump .series:hover circle { opacity: 1; }
+.chart.bump .series .label  {
+  font-size: 10.5px; font-weight: 700;
+  fill: var(--ink); letter-spacing: 0.04em;
+}
+
+/* ─── Data hover-card (chart elements) ────────────────────────────────── */
+
+#data-card {
+  position: absolute;
+  z-index: 60;
+  max-width: 28rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-shadow: 0 8px 24px rgba(28, 26, 24, 0.10);
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink);
+  /* Interactive: user can move into the card to click links (DOI / URL).
+     The dataCard helper delays hide() by 280 ms after the source mouseleaves. */
+  pointer-events: auto;
+}
+/* Pinned (click-to-pin from a beeswarm dot, #4): selectable, larger,
+   shows the FULL Abstract Note (no line-clamp), with a close button. */
+#data-card.pinned {
+  pointer-events: auto;
+  max-width: 32rem;
+  padding: 0.95rem 1.1rem 1.05rem;
+  box-shadow: 0 14px 38px rgba(30, 29, 28, 0.22);
+}
+#data-card .dc-close {
+  position: absolute;
+  top: 0.35rem; right: 0.45rem;
+  width: 1.4rem; height: 1.4rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+#data-card .dc-close:hover { color: var(--ink); }
+#data-card .dc-abs.full { -webkit-line-clamp: unset; max-height: 60vh;
+                           overflow-y: auto; }
+#data-card .dc-q {
+  /* The MENTIONED ITEM is the focus of every beeswarm hover (per #14). */
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--fs);
+  color: var(--ink);
+  border-left: 2px solid var(--accent);
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#data-card .dc-t {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.32;
+}
+#data-card .dc-t a { color: var(--accent); border-bottom: 1px solid rgba(192, 67, 31, 0.45); }
+#data-card .dc-t a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+#data-card .dc-t a.ext::after { content: ""; }
+#data-card .dc-meta { color: var(--muted); font-size: var(--fs);
+                      margin: 0.35rem 0 1.0rem; }   /* more space below title (#3) */
+#data-card .dc-rows { margin-top: 0.8rem; }
+#data-card .dc-pdf  {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  word-break: break-all;
+  user-select: all;          /* one click and ⌘+C to copy the path */
+}
+#data-card .dc-row    { display: grid; grid-template-columns: 7rem 1fr; gap: 0.4rem; padding: 0.06rem 0; font-size: var(--fs); }
+#data-card .dc-row span { color: var(--muted); }
+/* Abstract Note (#1): italic block, line-clamped so long abstracts don't blow
+   out the card. Truncated visually; the full text stays in the hover element. */
+#data-card .dc-abs {
+  max-width: 24rem;
+  margin-top: 0.45rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: var(--fs);
+  font-style: italic;
+  line-height: 1.38;
+  color: var(--ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────── */
+
+@media (max-width: 880px) {
+  :root { --side-w: 0px; }
+  #sidebar {
+    position: static;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem 1.2rem;
+  }
+  #content { margin-left: 0; padding: 1.4rem 1.2rem 3rem; }
+}

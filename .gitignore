@@ -1,0 +1,12 @@
+.DS_Store
+*.tgz
+node_modules/
+.cache/
+__pycache__/
+*.pyc
+
+# Local-only manuscript edits stored in localStorage; not relevant to repo.
+
+# Sensitive: never commit credentials.
+.env
+.env.*

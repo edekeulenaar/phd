@@ -1,0 +1,116 @@
+Type,Category,n_items
+GROUP,Content moderation,1423
+GROUP,Censorship,984
+GROUP,AI alignment,43
+GROUP,Debate management,4
+HOW,Filtering,577
+HOW,Review,510
+HOW,Removal,408
+HOW,Enframing,287
+HOW,Modification,266
+HOW,Self-censorship,249
+HOW,Marginalisation,244
+HOW,Deplatforming,170
+HOW,Monitoring,118
+HOW,Access restriction,113
+HOW,Metamoderation,112
+HOW,Economic,92
+HOW,Coersive,86
+HOW,Correcting,85
+HOW,Rating,74
+HOW,Interiorisation,69
+HOW,Profiling,62
+HOW,Removal from circulation,60
+HOW,Labeling,59
+HOW,Confiscation,49
+HOW,Prompting,40
+HOW,Balancing,40
+HOW,Coherence,37
+HOW,Blocking,35
+HOW,Redirection,27
+HOW,Obfuscation,26
+HOW,Disclosure,20
+HOW,Bridging,15
+HOW,Moderating powers,14
+HOW,Intermediate,9
+HOW,Coercive,8
+HOW,Other,8
+HOW,Agenda setting,7
+HOW,Algorithmic systems,7
+HOW,Inclusion,6
+HOW,Intelligibility,2
+HOW,Fairness,2
+HOW,Legislatures,2
+HOW,Friction,1
+WHAT,Regulative,1442
+WHAT,Platform governance,1042
+WHAT,Communicative / discourse-ethics / debate management,439
+WHAT,Constitutive,179
+WHAT,Infrastructural,143
+WHAT,Other,28
+WHAT,AI training,3
+WHAT,Censorship,1
+WHAT,Intelligibility,1
+WHAT,Censorship boards or agencies,1
+WHO,Platforms,965
+WHO,Government agencies,538
+WHO,Content moderators / BPO workforces,379
+WHO,Algorithmic systems,347
+WHO,Censorship boards or agencies,330
+WHO,Courts and prosecutors,193
+WHO,Religious authories and groups,173
+WHO,Users,171
+WHO,Regulators,155
+WHO,"Schools, curricula, librarians, academia",109
+WHO,Civil society,92
+WHO,Media owners,67
+WHO,Cloud / infrastructure providers,63
+WHO,Journalists,61
+WHO,Police / intelligence services,57
+WHO,Platform oversight bodies,57
+WHO,Editors,52
+WHO,Self-censorship,41
+WHO,Military censors (wartime),37
+WHO,"Legislatures (memory laws, foreign-agent statutes)",29
+WHO,Fact-checkers and verification units,27
+WHO,Pre-platform moderators,24
+WHO,AI labs as moderators,20
+WHO,Other,19
+WHO,Debate moderators,18
+WHO,Private firms,15
+WHO,Translators,14
+WHO,"Public-private partnerships (""free-speech triangle"")",13
+WHO,Political groups,10
+WHO,Legislatures,8
+WHO,App stores,7
+WHO,Online mobs / pile-ons,7
+WHO,Mediators,6
+WHO,Broadcasting regulators,6
+WHO,Payment processors / financial infrastructure,4
+WHO,Advertisers,4
+WHO,RLHF annotators,3
+WHO,Public-private partnerships,2
+WHO,Police / law enforcement agencies,1
+WHO,Police / Intelligence services,1
+WHO,Internet service providers,1
+WHY,Political control,558
+WHY,Harm principles and hate speech regulation,523
+WHY,Social cohesion,492
+WHY,Democratic enhancement,426
+WHY,Obscenity and decency,293
+WHY,Compliance,242
+WHY,Misinformation or disinformation as harm,240
+WHY,Brand safety,237
+WHY,Protection of children,156
+WHY,Coherence,151
+WHY,Religious authories and groups,142
+WHY,Ideological consolidation,138
+WHY,Economic pressure,100
+WHY,State security,99
+WHY,Other,36
+WHY,Alignment with human values,23
+WHY,Wartime necessity,23
+WHY,Clear and present danger,10
+WHY,Genocide prevention / dangerous speech,8
+WHY,State secrets,7
+WHY,Conflict transformation,5
