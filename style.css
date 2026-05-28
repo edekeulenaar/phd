@@ -815,6 +815,11 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   color: var(--muted);
 }
 .fig-controls label { display: inline-flex; align-items: center; gap: 0.4rem; }
+/* Controls that only make sense in Bump view (e.g. the topic / sub-topic
+   filter for Fig 5) are hidden by default; the JS adds `view-bump` to the
+   parent `.fig` to reveal them when Bump is the active view. */
+.fig-controls .bump-only { display: none; }
+.fig.view-bump .fig-controls .bump-only { display: inline-flex; }
 .fig-controls select,
 .fig-controls input[type="number"] {
   font-family: var(--serif); font: inherit; font-size: 12.5px;

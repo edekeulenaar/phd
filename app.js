@@ -1970,9 +1970,16 @@ function inRange(r, lo, hi) {
    14. Bump renderer (Figs 3 & 4 — unique items per Topic/Sub-topic per year)
    ─────────────────────────────────────────────────────────────────────── */
 
-async function renderBump({ csv, yField, hostSel, figId, yearInputs }) {
-  const all  = await loadCSV(csv);
-  const data = all.filter(r => Number.isFinite(+r["Publication Year"]));
+async function renderBump({ csv, yField, hostSel, figId, yearInputs,
+                            filterField, filterValue }) {
+  const all   = await loadCSV(csv);
+  const data0 = all.filter(r => Number.isFinite(+r["Publication Year"]));
+  // Optional row-level filter (e.g. "Topic = Content moderation"), used by
+  // Figure 5 Bump to slice media-mentions by the user-selected Topic /
+  // Sub-topic from a dropdown.
+  const data  = (filterField && filterValue && filterValue !== "ALL")
+    ? data0.filter(r => (r[filterField] || "") === filterValue)
+    : data0;
   const host = d3.select(hostSel);
   // Year-range inputs are optional — figures without a dedicated year input
   // pair (e.g. Fig 5 Bump) get an open range so every year stays in.
@@ -1980,15 +1987,16 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs }) {
     ? setupYearRange(yearInputs[0], yearInputs[1], data, draw)
     : () => [null, null];
 
-  // Topic palette is fixed (5–10 stable names); Sub-topic is open, so we
-  // build the scale fresh from the data and cache it across redraws.
-  let _subScale = null;
+  // Use the canonical Topic palette only when the lines ARE topics; for
+  // every other yField (Sub-topic, Media category, Country, …) build a
+  // categorical scale from the current group set so every line gets a
+  // distinct colour.
+  let _scale = null;
   function colorFor(name, groups) {
-    if (yField !== "Sub-topic") return TOPIC_COLOR_FN(name);
-    if (!_subScale) _subScale = makeSubtopicScale(groups);
-    return _subScale(name);
+    if (yField === "Topic") return TOPIC_COLOR_FN(name);
+    if (!_scale) _scale = makeSubtopicScale(groups);
+    return _scale(name);
   }
-  // Convenience wrapper that matches the previous signature.
   const colorFn = name => colorFor(name, currentGroups);
   let currentGroups = [];
 
@@ -2002,7 +2010,9 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs }) {
     }
     const groups = [...new Set(rows.map(r => r[yField] || "(unknown)"))].sort();
     currentGroups = groups;
-    if (yField === "Sub-topic") _subScale = makeSubtopicScale(groups);
+    // Rebuild the categorical colour scale on every redraw so a new filter
+    // doesn't end up with stale group→colour bindings.
+    if (yField !== "Topic") _scale = makeSubtopicScale(groups);
     const years  = d3.range(d3.min(rows, r => +r["Publication Year"]),
                              d3.max(rows, r => +r["Publication Year"]) + 1);
     const counts = new Map(groups.map(g => [g, new Map(years.map(y => [y, 0]))]));
@@ -2148,15 +2158,39 @@ window.addEventListener("DOMContentLoaded", async () => {
       yearInputs: ["ys-y0", "ys-y1"],
     }));
 
-  // Figure 5 — media. Two orthogonal controls: scope (Topic vs CM Sub-topic)
-  // and view (Sankey vs Bump). Sankey reads the top-10 aggregate CSVs;
-  // Bump reads per-item-per-medium rows so each ribbon translates into a
-  // line whose Y is the per-year count of items mentioning that medium.
-  function renderMediaFig() {
+  // Figure 5 — media. Two orthogonal controls plus a Bump-only dropdown:
+  //   scope:  Topic  ⟷  CM Sub-topic   (universe of items)
+  //   view:   Sankey ⟷  Bump           (chart type)
+  //   filter: <select id="bump-media-select">  (which Topic / Sub-topic
+  //            slice the Bump lines should be restricted to)
+  let _bumpTopicCache = { scope: null, options: null };
+  async function populateBumpSelect(scope) {
+    const sel = document.getElementById("bump-media-select");
+    if (!sel) return;
+    if (_bumpTopicCache.scope === scope && _bumpTopicCache.options) {
+      // restore previous options without re-fetch
+      sel.innerHTML = _bumpTopicCache.options;
+      return;
+    }
+    const csv = scope === "cm"
+      ? "data/media_per_item_year_cm_subtopic.csv"
+      : "data/media_per_item_year_topic.csv";
+    const field = scope === "cm" ? "Sub-topic" : "Topic";
+    const rows = await loadCSV(csv);
+    const vals = [...new Set(rows.map(r => (r[field] || "").trim())
+                                  .filter(Boolean))].sort();
+    const html = `<option value="ALL">All ${field.toLowerCase()}s</option>` +
+                 vals.map(v => `<option value="${v.replace(/"/g, "&quot;")}">${v}</option>`).join("");
+    sel.innerHTML = html;
+    _bumpTopicCache = { scope, options: html };
+  }
+  async function renderMediaFig() {
     const fig = document.querySelector("#fig-media");
     const scope = fig.querySelector('[data-scope].active')?.dataset.scope || "topic";
     const view  = fig.querySelector('[data-view].active')?.dataset.view   || "sankey";
     const dl    = document.getElementById("dl-media");
+    fig.classList.toggle("view-bump", view === "bump");
+
     if (view === "sankey") {
       const csv = scope === "cm"
         ? "data/top_media_by_cm_subtopic.csv"
@@ -2168,7 +2202,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         hostSel: "#sankey-media", figId: "fig-media",
       });
     }
-    // Bump view
+    // Bump view — populate dropdown then render with the selected slice.
+    await populateBumpSelect(scope);
+    const filterField = scope === "cm" ? "Sub-topic" : "Topic";
+    const filterValue = document.getElementById("bump-media-select")?.value || "ALL";
     const csv = scope === "cm"
       ? "data/media_per_item_year_cm_subtopic.csv"
       : "data/media_per_item_year_topic.csv";
@@ -2177,19 +2214,23 @@ window.addEventListener("DOMContentLoaded", async () => {
       csv, yField: "Media category",
       hostSel: "#sankey-media", figId: "fig-media",
       yearInputs: null,
+      filterField, filterValue,
     });
   }
   await safe("media figure", "#sankey-media")(() => renderMediaFig());
   document.querySelectorAll("#fig-media [data-scope], #fig-media [data-view]")
     .forEach(btn => btn.addEventListener("click", () => {
-      // Toggle the active state within each tablist independently.
       const group = btn.dataset.scope !== undefined ? "scope" : "view";
+      // Switching scope invalidates the dropdown options (different field).
+      if (group === "scope") _bumpTopicCache = { scope: null, options: null };
       document.querySelectorAll(`#fig-media [data-${group}]`).forEach(b => {
         b.classList.toggle("active", b === btn);
         b.setAttribute("aria-selected", b === btn ? "true" : "false");
       });
       renderMediaFig().catch(console.error);
     }));
+  document.getElementById("bump-media-select")
+    ?.addEventListener("change", () => renderMediaFig().catch(console.error));
 
   await safe("beeswarm topics", "#beeswarm-topics")(() =>
     renderBeeswarm({
