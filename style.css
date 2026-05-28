@@ -135,7 +135,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   max-width: calc(100vw - var(--side-w));
 }
 
-.prose { max-width: var(--content-w); }
+.prose { max-width: var(--content-w); margin-left: auto; margin-right: auto; }
 /* Editorial typography: serif headings, weight 600, gently scaled. */
 .prose h1, .prose h2, .prose h3 {
   font-family: var(--serif);
@@ -381,14 +381,16 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 
 /* When the live figure is moved INTO the manuscript flow it BREAKS OUT
-   of the prose column to the RIGHT, up to the right edge of the content
-   area. The figure's left edge stays anchored to the prose column (so it
-   can never overlap the sidebar), and it grows rightward until it runs
-   into the inner edge of the viewport. */
+   of the prose column SYMMETRICALLY around the centred prose, so the
+   figure stays aligned with the centre of the page and never spills
+   under the sidebar. The 6 rem subtracted from viewport width leaves
+   3 rem of breathing room on each side of the centred figure. */
 .prose figure.fig.fig-live-mounted {
   position: relative;
   width: min(calc(100vw - var(--side-w) - 6rem), 1200px);
   max-width: none;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 2.2em 0 2.4em;
   padding: 1rem 1.2rem 0.9rem;
   background: var(--paper-alt);
@@ -399,7 +401,9 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 .prose figure.fig.fig-live-mounted > .fig-body  { width: 100%; }
 .prose figure.fig.fig-live-mounted > .fig-foot  { margin-top: 0.7em; }
 @media (max-width: 900px) {
-  .prose figure.fig.fig-live-mounted { width: 100%; }
+  .prose figure.fig.fig-live-mounted {
+    width: 100%; left: 0; transform: none;
+  }
 }
 
 /* Soft flash when an in-text link jumps to its target block (^slug anchor). */
@@ -504,7 +508,7 @@ a.cite-link { cursor: pointer; }
 
 .analysis {
   max-width: calc(100vw - var(--side-w) - 6rem);
-  margin-top: 4rem;
+  margin: 4rem auto 0;             /* centred within #content */
   padding-top: 2rem;
   border-top: 1px solid var(--rule);
 }
