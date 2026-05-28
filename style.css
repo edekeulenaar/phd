@@ -35,6 +35,7 @@
 * { box-sizing: border-box; }
 
 html, body { margin: 0; padding: 0; }
+html { background: var(--paper); }
 body {
   font-family: var(--serif);
   color: var(--ink);
@@ -166,6 +167,53 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   margin: 2.2em 0;
 }
 .prose .loading { color: var(--muted); font-style: italic; }
+
+/* Prose tables (markdown GFM). Match the paper palette and keep them tight. */
+.prose table {
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font-size: 0.92em;
+  line-height: 1.45;
+  width: 100%;
+  max-width: 100%;
+}
+.prose thead th {
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 1.5px solid var(--ink);
+  padding: 0.45em 0.7em;
+}
+.prose tbody td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.35em 0.7em;
+  vertical-align: top;
+}
+.prose tbody tr:last-child td { border-bottom: none; }
+
+/* Obsidian-style wikilinks: rendered as terracotta anchors in the prose. */
+.prose a.wiki {
+  color: var(--accent);
+  border-bottom: 1px dotted rgba(192, 67, 31, 0.40);
+  text-decoration: none;
+}
+.prose a.wiki:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+.prose .wiki { font-style: italic; }   /* fallback span when no anchor exists */
+
+/* Soft flash when an in-text link jumps to its target block (^slug anchor). */
+.prose .anchored:target {
+  background: rgba(192, 67, 31, 0.10);
+  box-shadow: -4px 0 0 var(--accent);
+  border-radius: 2px;
+  scroll-margin-top: 1.5rem;
+  animation: anchor-flash 1.6s ease-out 1;
+}
+@keyframes anchor-flash {
+  0%   { background: rgba(192, 67, 31, 0.32); }
+  100% { background: rgba(192, 67, 31, 0.10); }
+}
 
 /* Inline cite group, e.g. "(Allan, 2016; Smith, 2020)". Each name inside
    is a `<a class="cite-link">` that jumps to the matching References entry.

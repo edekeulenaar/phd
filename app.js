@@ -48,52 +48,84 @@ async function renderManuscript() {
       return `<span class="cite-grp" data-keys="${keys.join(",")}" tabindex="0"></span>`;
     });
 
+    // 3b) Pre-process Obsidian-style wikilinks. We tolerate any of:
+    //        [[#^slug]]                    → <a href="#slug">slug</a>
+    //        [[#^slug|Display]]            → <a href="#slug">Display</a>
+    //        [[Note Title#^slug|Display]]  → <a href="#slug">Display</a>
+    //        [[Note Title|Display]]        → <span class="wiki">Display</span>
+    //        [[Note Title]]                → <span class="wiki">Note Title</span>
+    //     We're lenient about stray whitespace and accidental parens so typos
+    //     like `[[(# ^ slug)|Display]]` still resolve.
+    md = md.replace(
+      /\[\[\s*\(?\s*([^\]\|]*?)\s*\)?\s*(?:\|([^\]]+))?\s*\]\]/g,
+      (whole, target, display) => {
+        target  = (target || "").trim();
+        display = (display || "").trim();
+        // Find the block-id (after # or #^), if any
+        const m = target.match(/#\s*\^?\s*([\w.\-]+)/);
+        if (m) {
+          const slug = m[1];
+          const label = display || slug;
+          return `<a class="wiki" href="#${slug}">${label}</a>`;
+        }
+        // No anchor → render the display text as plain bolded-italic prose
+        return `<span class="wiki">${display || target}</span>`;
+      }
+    );
+
     // 4) Parse markdown. We deliberately do NOT call marked.setOptions() —
     //    `headerIds` and `mangle` were removed in marked v8+, and the static
     //    setOptions accessor is deprecated in v12 and absent in some builds.
     host.innerHTML = marked.parse(md);
 
-    // 4b) Per-browser edit cache: ONLY restore if the underlying source markdown
-    //     AND the manuscript-rendering schema both match. The schema part means
-    //     a code change that alters the DOM shape (e.g. dropping the marginalia
-    //     column) automatically invalidates any cached HTML that still has the
-    //     old structure baked in. Bump SCHEMA_VERSION whenever the manuscript
-    //     DOM shape changes.
-    const SCHEMA_VERSION = "v4-linked-refs";
-    const sourceFingerprint = SCHEMA_VERSION + ":" + String(md.length) + ":" +
-                              md.slice(0, 200).replace(/\s+/g, "");
-    try {
-      const savedFP   = window.localStorage?.getItem("edit:manuscript:fp");
-      const savedHTML = window.localStorage?.getItem("edit:manuscript");
-      if (savedHTML && savedFP === sourceFingerprint) {
-        host.innerHTML = savedHTML;
+    // 4a) Obsidian block-anchors. Markdown ending with " ^slug" at the end of
+    //     a paragraph/heading/list-item assigns id="slug" to that block, so
+    //     in-text [[#^slug]] links can jump to it.
+    host.querySelectorAll("p, li, h1, h2, h3, h4, h5, h6, blockquote, table")
+        .forEach(el => {
+      const last = el.lastChild;
+      const txt  = last && last.nodeType === 3 ? last.nodeValue
+                                                : el.textContent;
+      const m = txt && txt.match(/(?:\s|^)\^([A-Za-z][\w.\-]*)\s*$/);
+      if (!m) return;
+      el.id = m[1];
+      el.classList.add("anchored");
+      // strip the " ^slug" trailing marker from the rendered DOM
+      if (last && last.nodeType === 3) {
+        last.nodeValue = last.nodeValue.replace(/\s*\^[\w.\-]+\s*$/, "");
+        if (!last.nodeValue.trim()) last.remove();
       } else {
-        // Source or schema changed → throw away the stale edit cache.
-        window.localStorage?.removeItem("edit:manuscript");
-        window.localStorage?.removeItem("edit:manuscript:fp");
+        el.innerHTML = el.innerHTML.replace(/\s*\^[\w.\-]+\s*$/, "");
       }
+    });
+    // Also resolve table block-anchors: an Obsidian convention is `^slug` on
+    // a line directly AFTER the table. The marker shows up as a sibling <p>.
+    host.querySelectorAll("p").forEach(p => {
+      const m = p.textContent.trim().match(/^\^([A-Za-z][\w.\-]*)$/);
+      if (!m) return;
+      const prev = p.previousElementSibling;
+      if (prev && (prev.tagName === "TABLE" || prev.matches("p, li, blockquote, h1, h2, h3, h4"))) {
+        prev.id = m[1];
+        prev.classList.add("anchored");
+        p.remove();
+      }
+    });
+
+    // 4b) The manuscript is now READ-ONLY (rendered from manuscript.md on
+    //     every load). Clear any stale localStorage cache from when the
+    //     article used to be contenteditable, and strip any orphan DOM
+    //     structures that may have survived from an older rendering.
+    try {
+      window.localStorage?.removeItem("edit:manuscript");
+      window.localStorage?.removeItem("edit:manuscript:fp");
     } catch {}
-    // Defensive cleanup: strip any orphan marginalia structures that may
-    // have survived from an older rendering. (Safe no-op when DOM is clean.)
     host.querySelectorAll(".margin-cites, .cite-row").forEach(n => {
       if (n.classList.contains("cite-row")) {
-        // Unwrap: lift the paragraph out, drop the row wrapper.
         while (n.firstChild) n.parentNode.insertBefore(n.firstChild, n);
         n.remove();
       } else {
-        n.remove();   // .margin-cites aside — drop entirely
+        n.remove();
       }
-    });
-    // Save edits as the user types (debounced) — pinned to the current source.
-    let _saveT;
-    host.addEventListener("input", () => {
-      clearTimeout(_saveT);
-      _saveT = setTimeout(() => {
-        try {
-          window.localStorage?.setItem("edit:manuscript",     host.innerHTML);
-          window.localStorage?.setItem("edit:manuscript:fp",  sourceFingerprint);
-        } catch {}
-      }, 400);
     });
 
     // 4c) Load the bibliography (built by `site/scripts/build_bibliography.py`
@@ -2026,7 +2058,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   restructureFigureNotes(); // notes go OUTSIDE the figure card (#1)
   setupNotes();             // per-figure notes + download button
-  setupCaptionEdits();      // make every figcaption contenteditable + persistent
+  // setupCaptionEdits() disabled — manuscript editing happens in the source
+  //                      manuscript.md file, not in the page.
   observeActiveFigure();    // swap the sidebar fig-key as you scroll
 });
 
