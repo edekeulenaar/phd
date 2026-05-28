@@ -2318,28 +2318,37 @@ const PNG_SCALE = 4;                                     // ≈ 384 nominal ppi
 const PAPER_BG  = "#faf7f2";                             // --paper
 
 function setupFigureDownloads() {
+  // Always look up the SVG at CLICK time, not at attach time — every chart
+  // tears down and re-renders its <svg> when filters change (year range,
+  // type, language, view tab), so a cached reference goes stale.
+  const liveSvg = fig =>
+    fig.querySelector("svg.chart, svg.sankey, svg.alluvial, svg");
+
   document.querySelectorAll(".fig").forEach(fig => {
-    // Re-attach on every chart re-render (some figs swap views).
     const tryAttach = () => {
-      const svg = fig.querySelector("svg.chart, svg.sankey, svg.alluvial, svg");
-      if (!svg) return;
       const foot = fig.querySelector(".fig-foot");
       if (!foot) return;
+      if (!liveSvg(fig)) return;                          // nothing rendered yet
       if (foot.querySelector(".dl-png")) return;          // already attached
       const slug = fig.id || "figure";
       const png = document.createElement("button");
       png.type = "button"; png.className = "dl dl-png";
       png.textContent = "⬇ PNG (300 ppi)";
-      png.addEventListener("click", () => exportSVGtoPNG(svg, slug));
+      png.addEventListener("click", () => {
+        const svg = liveSvg(fig);
+        if (svg) exportSVGtoPNG(svg, slug);
+      });
       const sv  = document.createElement("button");
       sv.type  = "button"; sv.className = "dl dl-svg";
       sv.textContent = "⬇ SVG";
-      sv.addEventListener("click", () => exportSVGtoSVG(svg, slug));
+      sv.addEventListener("click", () => {
+        const svg = liveSvg(fig);
+        if (svg) exportSVGtoSVG(svg, slug);
+      });
       foot.insertBefore(sv,  foot.firstChild);
       foot.insertBefore(png, foot.firstChild);
     };
     tryAttach();
-    // Some figures rebuild their SVG on user input — observe and re-attach.
     new MutationObserver(tryAttach).observe(fig, { childList: true, subtree: true });
   });
 }
