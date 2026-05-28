@@ -350,6 +350,23 @@ def main() -> None:
                for code, n in sorted(lang_counter.items(),
                                      key=lambda x: (-x[1], x[0]))])
 
+    # ── 4c. items_by_language_country.csv (Fig 11 alluvial source) ──────────
+    # Long-form tidy: one row per (Language × Country) pair. An item that
+    # mentions N countries contributes 1 to each of N rows; items without
+    # any Country value land under "(unspecified)".
+    lc = Counter()
+    for t in items:
+        L = item_lang.get(t, "und") or "und"
+        if not item_countries[t]:
+            lc[(L, "(unspecified)")] += 1
+        for c in item_countries[t]:
+            lc[(L, c)] += 1
+    write_csv(OUT / "items_by_language_country.csv",
+              ["Language", "LanguageName", "Country", "Items"],
+              [[L, LANG_NAMES.get(L, L.upper()), C, n]
+               for (L, C), n in sorted(lc.items(),
+                                       key=lambda x: (-x[1], x[0][0], x[0][1]))])
+
     # ── 5–8. Top-10 countries / media by Topic and by CM Sub-topic ──────────
     def _top_by(group_of, label_col: str, items_field: dict, n: int):
         per: dict[str, Counter] = defaultdict(Counter)

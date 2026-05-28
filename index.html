@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorship and moderation — the oscillations of a contested practice</title>
-<link rel="stylesheet" href="style.css?v=p6-22">
+<link rel="stylesheet" href="style.css?v=p6-23">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -391,6 +391,26 @@
         placeholder="Notes on Figure 10…"></textarea>
     </figure>
 
+    <!-- Figure 11: Language → Country alluvial -->
+    <figure class="fig" id="fig-lang-country">
+      <figcaption class="fig-cap">
+        <span class="fig-num">Figure 11.</span>
+        Where each language looks — alluvial flow from the publication's
+        detected Language to every Country it discusses.
+      </figcaption>
+      <div class="fig-body"><div id="sankey-lang-country"></div></div>
+      <div class="fig-foot">
+        <a class="dl" href="data/items_by_language_country.csv" download>⬇ Download CSV</a>
+        <span class="alt">
+          One ribbon per (Language × Country) pair. An item that mentions
+          several countries contributes once to each country flow.
+          Items whose Country column is blank land in "(unspecified)".
+        </span>
+      </div>
+      <textarea class="fig-notes" data-fig="fig-lang-country"
+        placeholder="Notes on Figure 11…"></textarea>
+    </figure>
+
     <footer class="page-foot">
       <p>Data rebuilt with <code>site/scripts/build_site_data.py</code>.</p>
     </footer>
@@ -409,7 +429,7 @@
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/turndown@7.2.0/dist/turndown.js"></script>
-<script src="app.js?v=p6-22" defer></script>
+<script src="app.js?v=p6-23" defer></script>
 
 </body>
 </html>

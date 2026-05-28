@@ -1972,6 +1972,18 @@ window.addEventListener("DOMContentLoaded", async () => {
                     minInputId: "net-subtopics-min",
                     figId: "fig-network-subtopics" }));
 
+  // Figure 11 — Language → Country alluvial. Uses the shared
+  // `renderSankeyTwo` renderer with the new long-form CSV.
+  await safe("lang × country", "#sankey-lang-country")(() =>
+    renderSankeyTwo({
+      csv: "data/items_by_language_country.csv",
+      leftField: "LanguageName",
+      rightField: "Country",
+      valueField: "Items",
+      hostSel: "#sankey-lang-country",
+      figId: "fig-lang-country",
+    }));
+
   restructureFigureNotes(); // notes go OUTSIDE the figure card (#1)
   setupNotes();             // per-figure notes + download button
   setupCaptionEdits();      // make every figcaption contenteditable + persistent
