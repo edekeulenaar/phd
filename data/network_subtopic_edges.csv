@@ -10,8 +10,8 @@ HOW,Filtering,WHAT,Platform governance,287
 HOW,Removal,WHAT,Platform governance,259
 GROUP,Moderation as a component of platform governance,WHO,Platforms,259
 WHO,Algorithmic systems,WHAT,Platform governance,258
+WHO,Platforms,WHY,Democratic enhancement,257
 WHO,Platforms,HOW,Removal,256
-WHO,Platforms,WHY,Democratic enhancement,256
 HOW,Review,WHAT,Platform governance,253
 WHAT,Platform governance,WHY,Democratic enhancement,253
 WHO,Platforms,HOW,Filtering,250
@@ -27,56 +27,56 @@ WHAT,Platform governance,WHY,Social cohesion,180
 WHO,Platforms,HOW,Marginalisation,180
 WHAT,Platform governance,WHY,Misinformation or disinformation as harm,179
 WHO,Platforms,HOW,Review,176
+WHAT,Communicative / discourse-ethics / debate management,WHY,Democratic enhancement,175
+WHAT,Communicative / discourse-ethics / debate management,WHY,Social cohesion,173
 HOW,Filtering,WHAT,Regulative,170
 WHAT,Platform governance,WHY,Brand safety,169
 WHO,Platforms,WHY,Compliance,169
-WHAT,Communicative / discourse-ethics / debate management,WHY,Social cohesion,166
-WHAT,Communicative / discourse-ethics / debate management,WHY,Democratic enhancement,166
 GROUP,Moderation as a component of platform regulation,WHY,Harm principles and hate speech regulation,154
 GROUP,Moderation as a component of platform regulation,WHY,Democratic enhancement,153
 HOW,Filtering,WHY,Harm principles and hate speech regulation,153
-WHO,Platforms,WHY,Brand safety,152
+WHO,Platforms,WHY,Brand safety,153
+WHO,Content moderators / BPO workforces,WHAT,Communicative / discourse-ethics / debate management,146
 GROUP,Moderation as a component of platform regulation,HOW,Removal,144
+HOW,Enframing,WHAT,Communicative / discourse-ethics / debate management,142
 WHAT,Regulative,WHY,Democratic enhancement,141
-WHO,Content moderators / BPO workforces,WHAT,Communicative / discourse-ethics / debate management,139
 WHO,Algorithmic systems,HOW,Filtering,138
 HOW,Removal,WHY,Harm principles and hate speech regulation,137
 HOW,Review,WHY,Harm principles and hate speech regulation,136
-HOW,Enframing,WHAT,Communicative / discourse-ethics / debate management,133
-WHO,Content moderators / BPO workforces,HOW,Filtering,130
+WHO,Content moderators / BPO workforces,HOW,Filtering,132
 WHO,Content moderators / BPO workforces,HOW,Review,126
 GROUP,Moderation as a component of platform regulation,HOW,Filtering,125
-HOW,Filtering,WHY,Democratic enhancement,122
+HOW,Filtering,WHY,Democratic enhancement,124
 HOW,Enframing,WHAT,Platform governance,122
 GROUP,Moderation as a component of platform governance,WHY,Harm principles and hate speech regulation,122
 WHO,Platforms,WHY,Social cohesion,121
+WHO,Content moderators / BPO workforces,WHY,Social cohesion,120
 WHO,Algorithmic systems,WHY,Harm principles and hate speech regulation,120
-WHO,Content moderators / BPO workforces,WHY,Social cohesion,117
-WHO,Platforms,HOW,Enframing,115
+WHO,Platforms,HOW,Enframing,116
 WHO,Regulators,WHAT,Platform governance,114
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Democratic enhancement,114
 GROUP,Moderation and censorship,WHO,Platforms,113
 GROUP,Moderation and censorship,WHAT,Regulative,113
 HOW,Deplatforming,WHAT,Platform governance,112
-HOW,Filtering,WHAT,Communicative / discourse-ethics / debate management,109
-WHAT,Communicative / discourse-ethics / debate management,WHY,Coherence,109
-WHO,Platforms,WHAT,Communicative / discourse-ethics / debate management,108
+WHAT,Communicative / discourse-ethics / debate management,WHY,Coherence,112
+HOW,Filtering,WHAT,Communicative / discourse-ethics / debate management,111
+WHO,Platforms,WHAT,Communicative / discourse-ethics / debate management,109
 WHO,Platforms,HOW,Deplatforming,107
 WHAT,Regulative,WHY,Compliance,106
 GROUP,Moderation as a component of platform regulation,WHY,Compliance,105
 WHO,Algorithmic systems,HOW,Review,104
 GROUP,Moderation as a component of platform regulation,WHO,Regulators,102
+HOW,Enframing,WHY,Democratic enhancement,102
 WHAT,Regulative,WHY,Misinformation or disinformation as harm,100
 WHO,Content moderators / BPO workforces,WHY,Harm principles and hate speech regulation,100
-HOW,Enframing,WHY,Democratic enhancement,97
+HOW,Enframing,WHY,Social cohesion,99
 GROUP,Moderation as a component of platform regulation,WHY,Misinformation or disinformation as harm,96
 WHO,Users,WHAT,Platform governance,95
-HOW,Enframing,WHY,Social cohesion,94
 GROUP,Moderation as a component of platform governance,WHO,Algorithmic systems,94
 HOW,Review,WHAT,Regulative,91
+HOW,Filtering,WHY,Social cohesion,91
 GROUP,Moderation and censorship,WHAT,Platform governance,91
 HOW,Removal,WHY,Democratic enhancement,90
-HOW,Filtering,WHY,Social cohesion,90
 WHO,Algorithmic systems,WHAT,Regulative,89
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Social cohesion,89
 GROUP,Moderation as a component of platform regulation,HOW,Review,88
@@ -86,16 +86,17 @@ HOW,Review,WHY,Democratic enhancement,86
 GROUP,Moderation as a component of platform governance,HOW,Filtering,86
 GROUP,Moderation as a component of platform governance,HOW,Review,86
 GROUP,Moderation as a component of platform regulation,WHO,Courts and prosecutors,85
+HOW,Filtering,WHY,Compliance,85
 WHO,Courts and prosecutors,WHAT,Regulative,84
 WHO,Content moderators / BPO workforces,WHY,Brand safety,84
 HOW,Metamoderation,WHAT,Platform governance,84
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Enframing,84
-HOW,Filtering,WHY,Compliance,84
 GROUP,Moderation as a component of platform governance,WHAT,Regulative,84
 GROUP,Moderation as a component of platform governance,WHO,Content moderators / BPO workforces,83
 WHO,Users,WHY,Social cohesion,83
 HOW,Review,WHY,Social cohesion,82
 HOW,Marginalisation,WHAT,Regulative,81
+WHO,Content moderators / BPO workforces,HOW,Enframing,79
 WHO,Regulators,WHAT,Regulative,77
 WHO,Users,WHAT,Communicative / discourse-ethics / debate management,77
 WHO,Courts and prosecutors,WHAT,Platform governance,77
@@ -106,12 +107,12 @@ WHO,Government agencies,WHAT,Regulative,76
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Content moderators / BPO workforces,76
 WHAT,Regulative,WHY,Brand safety,75
 WHO,Content moderators / BPO workforces,WHAT,Regulative,75
-WHO,Content moderators / BPO workforces,HOW,Enframing,74
 HOW,Review,WHAT,Communicative / discourse-ethics / debate management,74
 WHO,Algorithmic systems,HOW,Removal,73
+WHO,Content moderators / BPO workforces,WHY,Coherence,73
 GROUP,Moderation as the enforcement of community norms and identity,WHY,Social cohesion,72
+WHO,Content moderators / BPO workforces,WHY,Democratic enhancement,72
 WHO,Content moderators / BPO workforces,HOW,Removal,72
-WHO,Content moderators / BPO workforces,WHY,Coherence,71
 WHO,Algorithmic systems,WHAT,Communicative / discourse-ethics / debate management,71
 HOW,Removal,WHY,Misinformation or disinformation as harm,70
 GROUP,Moderation as a component of platform governance,WHY,Democratic enhancement,70
@@ -120,7 +121,6 @@ HOW,Marginalisation,WHY,Harm principles and hate speech regulation,69
 GROUP,Moderation as a component of platform governance,WHY,Social cohesion,68
 HOW,Removal,WHY,Compliance,68
 HOW,Deplatforming,WHY,Harm principles and hate speech regulation,67
-WHO,Content moderators / BPO workforces,WHY,Democratic enhancement,67
 WHO,Government agencies,WHAT,Platform governance,67
 HOW,Enframing,WHAT,Regulative,67
 WHAT,Regulative,WHY,Social cohesion,67
@@ -134,10 +134,10 @@ WHO,Courts and prosecutors,WHY,Harm principles and hate speech regulation,63
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Coherence,63
 HOW,Review,WHY,Compliance,62
 GROUP,Moderation as the enforcement of community norms and identity,WHO,Content moderators / BPO workforces,60
+HOW,Enframing,WHY,Coherence,60
 WHO,Platforms,HOW,Metamoderation,60
 HOW,Enframing,WHY,Harm principles and hate speech regulation,58
 GROUP,Moderation as the enforcement of community norms and identity,WHAT,Platform governance,57
-HOW,Enframing,WHY,Coherence,57
 HOW,Marginalisation,WHY,Brand safety,57
 WHO,Platforms,HOW,Correcting,57
 HOW,Correcting,WHY,Misinformation or disinformation as harm,57
@@ -196,6 +196,7 @@ WHO,Users,HOW,Enframing,42
 HOW,Marginalisation,WHY,Misinformation or disinformation as harm,42
 HOW,Filtering,WHY,Misinformation or disinformation as harm,42
 WHO,Users,WHY,Coherence,42
+HOW,Prompting,WHAT,Communicative / discourse-ethics / debate management,41
 HOW,Monitoring,WHAT,Platform governance,41
 GROUP,Moderation as a component of platform regulation,WHAT,Communicative / discourse-ethics / debate management,41
 WHO,Regulators,WHY,Harm principles and hate speech regulation,40
@@ -206,12 +207,13 @@ WHAT,Platform governance,WHY,Political control,40
 WHO,Users,HOW,Filtering,39
 GROUP,Moderation and censorship,HOW,Marginalisation,39
 WHO,Regulators,HOW,Review,38
+WHO,"Schools, curricula, librarians, academia",WHAT,Communicative / discourse-ethics / debate management,38
 WHO,Government agencies,HOW,Removal,38
+HOW,Coherence,WHAT,Communicative / discourse-ethics / debate management,38
 WHO,Algorithmic systems,WHY,Coherence,38
 WHO,Platforms,WHY,State security,38
 HOW,Correcting,WHY,Democratic enhancement,38
 WHO,Content moderators / BPO workforces,HOW,Marginalisation,38
-HOW,Prompting,WHAT,Communicative / discourse-ethics / debate management,37
 WHO,Government agencies,WHY,Political control,37
 GROUP,Moderation as a component of platform governance,HOW,Metamoderation,36
 HOW,Deplatforming,WHY,Social cohesion,36
@@ -220,16 +222,14 @@ WHO,Regulators,WHY,Misinformation or disinformation as harm,36
 GROUP,Moderation as a component of platform regulation,WHO,Government agencies,36
 WHO,Government agencies,HOW,Filtering,36
 GROUP,Moderation as a component of platform regulation,WHY,Social cohesion,36
-HOW,Coherence,WHAT,Communicative / discourse-ethics / debate management,36
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Review,36
+WHO,Content moderators / BPO workforces,WHY,Compliance,36
 WHAT,Regulative,WHY,Protection of children,35
+WHAT,Communicative / discourse-ethics / debate management,WHY,Brand safety,35
 GROUP,Moderation as the enforcement of community norms and identity,WHO,Algorithmic systems,35
 WHO,Users,HOW,Review,35
-WHO,Content moderators / BPO workforces,WHY,Compliance,35
 GROUP,Moderation as a component of platform regulation,WHY,Protection of children,34
-WHO,"Schools, curricula, librarians, academia",WHAT,Communicative / discourse-ethics / debate management,34
 HOW,Review,WHY,Coherence,34
-WHAT,Communicative / discourse-ethics / debate management,WHY,Brand safety,34
 GROUP,Moderation and censorship,WHY,Political control,34
 HOW,Review,WHY,Misinformation or disinformation as harm,33
 WHO,Journalists,WHAT,Communicative / discourse-ethics / debate management,33
@@ -249,6 +249,7 @@ WHO,Government agencies,WHY,Harm principles and hate speech regulation,30
 HOW,Deplatforming,WHY,Misinformation or disinformation as harm,30
 HOW,Marginalisation,WHY,Social cohesion,30
 GROUP,Moderation and censorship,WHO,Government agencies,30
+HOW,Prompting,WHY,Social cohesion,29
 GROUP,Moderation as a component of platform regulation,HOW,Deplatforming,29
 HOW,Metamoderation,WHAT,Regulative,29
 HOW,Labeling,WHY,Misinformation or disinformation as harm,29
@@ -260,6 +261,7 @@ HOW,Filtering,WHY,Economic pressure,27
 HOW,Filtering,WHY,Protection of children,27
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,"Schools, curricula, librarians, academia",27
 WHO,Platforms,WHY,Obscenity and decency,27
+HOW,Coherence,WHY,Social cohesion,27
 GROUP,Moderating extremism,WHY,Social cohesion,27
 GROUP,Moderation and censorship,WHO,Content moderators / BPO workforces,27
 HOW,Correcting,WHAT,Communicative / discourse-ethics / debate management,27
@@ -267,9 +269,9 @@ WHO,Platform oversight bodies,WHY,Harm principles and hate speech regulation,27
 WHAT,Regulative,WHY,Economic pressure,27
 WHO,Users,HOW,Metamoderation,26
 WHO,Platforms,HOW,Economic,26
-HOW,Prompting,WHY,Social cohesion,26
+WHO,"Schools, curricula, librarians, academia",WHY,Social cohesion,26
+HOW,Prompting,WHY,Coherence,26
 WHAT,Platform governance,WHY,Obscenity and decency,26
-HOW,Coherence,WHY,Social cohesion,26
 HOW,Removal,WHY,State security,26
 HOW,Correcting,WHAT,Regulative,26
 GROUP,Moderation as the cultivation of a democratic public sphere,WHAT,Regulative,26
@@ -278,12 +280,12 @@ WHO,Platform oversight bodies,HOW,Review,26
 HOW,Monitoring,WHAT,Regulative,26
 WHO,Journalists,HOW,Filtering,25
 HOW,Rating,WHAT,Communicative / discourse-ethics / debate management,25
+WHO,"Schools, curricula, librarians, academia",WHY,Coherence,25
+HOW,Enframing,WHY,Brand safety,25
 HOW,Coherence,WHY,Coherence,25
 GROUP,Moderation as industrial labour,WHO,Platforms,25
 WHO,Users,HOW,Removal,25
-WHO,"Schools, curricula, librarians, academia",WHY,Coherence,24
-HOW,Prompting,WHY,Coherence,24
-HOW,Enframing,WHY,Brand safety,24
+WHO,"Schools, curricula, librarians, academia",HOW,Enframing,24
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Coherence,24
 WHO,Courts and prosecutors,WHY,Misinformation or disinformation as harm,24
 WHO,Courts and prosecutors,HOW,Enframing,24
@@ -311,7 +313,6 @@ GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Misinforma
 WHO,Users,WHY,Brand safety,22
 GROUP,Moderation as a component of platform governance,WHY,Protection of children,22
 GROUP,Moderation as a component of platform regulation,WHAT,Infrastructural,22
-WHO,"Schools, curricula, librarians, academia",WHY,Social cohesion,22
 HOW,Metamoderation,WHY,Compliance,22
 WHO,Algorithmic systems,HOW,Enframing,22
 HOW,Enframing,WHY,Misinformation or disinformation as harm,22
@@ -323,13 +324,15 @@ HOW,Removal,WHY,Political control,22
 WHO,Algorithmic systems,WHY,Economic pressure,22
 WHO,Content moderators / BPO workforces,HOW,Deplatforming,21
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Harm principles and hate speech regulation,21
+WHO,"Schools, curricula, librarians, academia",HOW,Prompting,21
 WHO,Courts and prosecutors,HOW,Filtering,21
 WHO,Platforms,HOW,Balancing,21
 HOW,Marginalisation,WHAT,Communicative / discourse-ethics / debate management,21
 HOW,Filtering,WHY,Political control,21
 GROUP,Moderation as a component of platform regulation,HOW,Monitoring,21
-WHO,"Schools, curricula, librarians, academia",HOW,Enframing,20
+WHO,"Schools, curricula, librarians, academia",HOW,Coherence,20
 WHAT,Regulative,WHY,Obscenity and decency,20
+HOW,Balancing,WHAT,Communicative / discourse-ethics / debate management,20
 GROUP,Moderation as a component of platform governance,HOW,Labeling,20
 GROUP,Moderation and censorship,WHY,Democratic enhancement,20
 GROUP,Moderating extremism,WHAT,Communicative / discourse-ethics / debate management,20
@@ -338,8 +341,6 @@ HOW,Monitoring,WHY,Harm principles and hate speech regulation,20
 WHO,Platforms,HOW,Access restriction,20
 GROUP,Moderation as a component of platform regulation,WHO,Platform oversight bodies,20
 GROUP,Moderation as a component of platform governance,WHAT,Infrastructural,19
-WHO,"Schools, curricula, librarians, academia",HOW,Prompting,19
-WHO,"Schools, curricula, librarians, academia",HOW,Coherence,19
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Brand safety,19
 GROUP,Moderation and censorship,WHAT,Communicative / discourse-ethics / debate management,19
 HOW,Blocking,WHAT,Platform governance,19
@@ -352,7 +353,6 @@ GROUP,Moderation as the enforcement of community norms and identity,HOW,Removal,
 WHO,Users,HOW,Deplatforming,18
 HOW,Filtering,WHAT,Infrastructural,18
 HOW,Labeling,WHY,Democratic enhancement,18
-HOW,Balancing,WHAT,Communicative / discourse-ethics / debate management,18
 HOW,Balancing,WHY,Harm principles and hate speech regulation,18
 WHO,Government agencies,WHY,Social cohesion,18
 WHO,Users,WHY,Misinformation or disinformation as harm,18
@@ -390,6 +390,7 @@ GROUP,Moderation as a component of platform regulation,WHY,Political control,16
 GROUP,Moderating extremism,HOW,Filtering,16
 GROUP,Moderation and censorship,HOW,Self-censorship,16
 GROUP,Moderation and censorship,HOW,Review,16
+HOW,Balancing,WHY,Democratic enhancement,16
 GROUP,Moderation as a component of platform governance,WHY,Obscenity and decency,15
 WHO,Platforms,WHAT,Constitutive,15
 WHO,Courts and prosecutors,WHAT,Communicative / discourse-ethics / debate management,15
@@ -398,9 +399,11 @@ WHAT,Infrastructural,WHY,Brand safety,15
 HOW,Correcting,WHY,Social cohesion,15
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Debate moderators,15
 WHO,Debate moderators,WHAT,Communicative / discourse-ethics / debate management,15
+WHAT,Communicative / discourse-ethics / debate management,WHY,Compliance,15
 GROUP,Moderation as a component of platform regulation,HOW,Access restriction,15
 HOW,Access restriction,WHAT,Regulative,15
 GROUP,Moderation as a component of platform regulation,WHO,"Legislatures (memory laws, foreign-agent statutes)",15
+WHO,Content moderators / BPO workforces,HOW,Prompting,15
 GROUP,Moderation as industrial labour,WHY,Brand safety,15
 WHO,Algorithmic systems,HOW,Metamoderation,15
 GROUP,Moderating extremism,WHY,State security,15
@@ -414,6 +417,7 @@ GROUP,Moderating extremism,HOW,Deplatforming,14
 WHO,Platforms,HOW,Profiling,14
 WHO,Journalists,WHY,Social cohesion,14
 HOW,Rating,WHY,Democratic enhancement,14
+WHO,Media owners,WHAT,Communicative / discourse-ethics / debate management,14
 HOW,Review,WHY,Economic pressure,14
 WHO,Regulators,HOW,Metamoderation,14
 GROUP,Moderation as a component of platform governance,WHY,Coherence,14
@@ -427,13 +431,11 @@ WHO,Users,HOW,Correcting,14
 GROUP,Moderating extremism,WHO,Users,14
 WHO,"Legislatures (memory laws, foreign-agent statutes)",WHAT,Regulative,14
 GROUP,Moderation as industrial labour,WHY,Harm principles and hate speech regulation,14
-WHAT,Communicative / discourse-ethics / debate management,WHY,Compliance,14
 HOW,Access restriction,WHAT,Infrastructural,14
 GROUP,Other,WHAT,Platform governance,14
 HOW,Removal,WHY,Economic pressure,14
 GROUP,Automated or algorithmic content moderation,HOW,Filtering,14
 HOW,Monitoring,WHY,Compliance,14
-HOW,Balancing,WHY,Democratic enhancement,14
 HOW,Access restriction,WHAT,Platform governance,14
 WHO,Algorithmic systems,HOW,Labeling,14
 HOW,Marginalisation,WHY,Economic pressure,14
@@ -443,7 +445,6 @@ WHO,Platform oversight bodies,WHY,Brand safety,14
 HOW,Metamoderation,WHY,Brand safety,13
 HOW,Deplatforming,WHY,Compliance,13
 WHO,Cloud / infrastructure providers,WHAT,Infrastructural,13
-WHO,Media owners,WHAT,Communicative / discourse-ethics / debate management,13
 WHO,Cloud / infrastructure providers,WHAT,Platform governance,13
 GROUP,Moderation as a component of platform regulation,HOW,Labeling,13
 HOW,Marginalisation,WHY,Protection of children,13
@@ -464,6 +465,7 @@ WHO,Platform oversight bodies,WHY,Compliance,13
 HOW,Deplatforming,WHAT,Infrastructural,12
 WHAT,Infrastructural,WHY,Harm principles and hate speech regulation,12
 HOW,Economic,WHAT,Regulative,12
+WHO,Content moderators / BPO workforces,HOW,Coherence,12
 HOW,Metamoderation,WHY,Misinformation or disinformation as harm,12
 WHO,Regulators,WHY,Brand safety,12
 WHO,Courts and prosecutors,HOW,Balancing,12
@@ -478,7 +480,6 @@ WHO,Algorithmic systems,HOW,Correcting,12
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Deplatforming,12
 GROUP,Moderating extremism,HOW,Review,12
 WHO,Content moderators / BPO workforces,WHY,Political control,12
-WHO,Content moderators / BPO workforces,HOW,Prompting,12
 HOW,Self-censorship,WHAT,Platform governance,12
 GROUP,Moderation as a component of platform governance,HOW,Monitoring,12
 WHO,Pre-platform moderators,WHY,Coherence,12
@@ -487,9 +488,9 @@ WHO,Courts and prosecutors,HOW,Marginalisation,12
 WHO,Government agencies,HOW,Access restriction,12
 GROUP,Moderation and censorship,WHY,Economic pressure,12
 WHAT,Constitutive,WHY,Harm principles and hate speech regulation,12
+GROUP,Debate management,WHAT,Communicative / discourse-ethics / debate management,12
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Rating,11
 WHO,Government agencies,WHY,Protection of children,11
-WHO,Content moderators / BPO workforces,HOW,Coherence,11
 WHO,Algorithmic systems,WHY,Obscenity and decency,11
 HOW,Marginalisation,WHY,Obscenity and decency,11
 WHO,"Public-private partnerships (""free-speech triangle"")",WHAT,Platform governance,11
@@ -536,6 +537,7 @@ WHO,Platforms,WHY,Coherence,10
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Balancing,10
 WHO,Algorithmic systems,HOW,Profiling,10
 WHO,Content moderators / BPO workforces,WHY,Economic pressure,10
+WHO,Civil society,WHY,Democratic enhancement,10
 HOW,Bridging,WHAT,Platform governance,10
 GROUP,Moderating extremism,HOW,Marginalisation,10
 WHO,Regulators,HOW,Correcting,10
@@ -563,12 +565,13 @@ WHO,Courts and prosecutors,HOW,Monitoring,9
 WHO,Government agencies,WHAT,Infrastructural,9
 WHAT,Infrastructural,WHY,Political control,9
 HOW,Profiling,WHY,Harm principles and hate speech regulation,9
-WHO,Civil society,WHY,Democratic enhancement,9
+HOW,Balancing,WHY,Social cohesion,9
 GROUP,Other,WHO,Algorithmic systems,9
 WHO,Self-censorship,HOW,Self-censorship,9
 HOW,Bridging,WHY,Social cohesion,9
 HOW,Monitoring,WHY,Misinformation or disinformation as harm,9
 GROUP,Moderation as industrial labour,WHO,Algorithmic systems,9
+GROUP,Debate management,WHY,Democratic enhancement,9
 HOW,Economic,WHY,Harm principles and hate speech regulation,8
 GROUP,Moderation as a component of platform governance,WHO,Cloud / infrastructure providers,8
 GROUP,Moderation as the enforcement of community norms and identity,WHY,Democratic enhancement,8
@@ -594,6 +597,7 @@ HOW,Enframing,WHY,Economic pressure,8
 HOW,Self-censorship,WHY,Harm principles and hate speech regulation,8
 WHO,Platforms,HOW,Interiorisation,8
 GROUP,Moderation as a component of platform regulation,HOW,Rating,8
+WHO,Civil society,WHAT,Communicative / discourse-ethics / debate management,8
 HOW,Disclosure,WHAT,Regulative,8
 WHO,Government agencies,HOW,Monitoring,8
 GROUP,Automated or algorithmic content moderation,WHY,Social cohesion,8
@@ -603,7 +607,7 @@ GROUP,Moderation and censorship,WHY,Protection of children,8
 HOW,Profiling,WHAT,Regulative,8
 HOW,Marginalisation,WHAT,Constitutive,8
 WHO,Pre-platform moderators,WHY,Democratic enhancement,8
-HOW,Balancing,WHY,Social cohesion,8
+HOW,Self-censorship,WHY,Social cohesion,8
 GROUP,Moderation as industrial labour,HOW,Removal,8
 WHO,Regulators,WHY,State security,8
 WHO,Fact-checkers and verification units,WHAT,Communicative / discourse-ethics / debate management,8
@@ -615,6 +619,7 @@ GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Metamodera
 WHO,Government agencies,HOW,Correcting,8
 GROUP,Moderation as a component of platform regulation,WHO,Fact-checkers and verification units,8
 WHO,"Legislatures (memory laws, foreign-agent statutes)",WHY,Misinformation or disinformation as harm,8
+GROUP,Debate management,HOW,Enframing,8
 GROUP,Moderating extremism,HOW,Economic,7
 GROUP,Moderation as a component of platform governance,HOW,Profiling,7
 GROUP,Moderation as a component of platform regulation,HOW,Economic,7
@@ -630,6 +635,7 @@ GROUP,Moderation and censorship,HOW,Correcting,7
 GROUP,Moderation as the enforcement of community norms and identity,WHY,Brand safety,7
 WHO,Cloud / infrastructure providers,WHAT,Regulative,7
 HOW,Deplatforming,WHY,Political control,7
+WHO,Media owners,HOW,Filtering,7
 WHO,Fact-checkers and verification units,HOW,Marginalisation,7
 HOW,Interiorisation,WHAT,Platform governance,7
 GROUP,Automated or algorithmic content moderation,WHAT,Communicative / discourse-ethics / debate management,7
@@ -637,7 +643,7 @@ GROUP,Moderation and censorship,HOW,Monitoring,7
 HOW,Monitoring,WHAT,Infrastructural,7
 GROUP,Moderation and censorship,WHO,Users,7
 HOW,Interiorisation,WHY,Social cohesion,7
-WHO,Civil society,WHAT,Communicative / discourse-ethics / debate management,7
+WHO,Civil society,HOW,Filtering,7
 WHO,Civil society,WHY,Social cohesion,7
 HOW,Disclosure,WHY,Harm principles and hate speech regulation,7
 WHAT,Communicative / discourse-ethics / debate management,WHY,Political control,7
@@ -649,7 +655,6 @@ HOW,Monitoring,WHY,Coherence,7
 GROUP,Moderating extremism,WHY,Democratic enhancement,7
 GROUP,Moderation and censorship,WHO,Regulators,7
 HOW,Coersive,WHAT,Regulative,7
-HOW,Self-censorship,WHY,Social cohesion,7
 WHO,Fact-checkers and verification units,HOW,Review,7
 GROUP,Moderation as the enforcement of community norms and identity,WHO,Pre-platform moderators,7
 GROUP,Moderation as a component of platform regulation,WHO,Civil society,7
@@ -658,6 +663,7 @@ WHAT,Platform governance,WHY,Genocide prevention / dangerous speech,7
 WHO,Police / intelligence services,WHAT,Platform governance,7
 WHO,Users,WHAT,Constitutive,7
 HOW,Economic,WHY,Protection of children,7
+GROUP,Debate management,WHO,Content moderators / BPO workforces,7
 GROUP,Moderating extremism,WHY,Compliance,6
 WHO,Cloud / infrastructure providers,WHY,Economic pressure,6
 WHAT,Infrastructural,WHY,Economic pressure,6
@@ -680,13 +686,14 @@ GROUP,Moderation as a component of platform governance,HOW,Self-censorship,6
 HOW,Self-censorship,WHY,Brand safety,6
 WHO,Debate moderators,WHY,Democratic enhancement,6
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Compliance,6
+HOW,Self-censorship,WHAT,Communicative / discourse-ethics / debate management,6
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Intermediate,6
 HOW,Intermediate,WHY,Democratic enhancement,6
 HOW,Access restriction,WHY,Harm principles and hate speech regulation,6
+HOW,Prompting,WHY,Democratic enhancement,6
 WHO,Editors,WHY,Coherence,6
 WHO,Users,WHY,Protection of children,6
 GROUP,Moderation and censorship,WHY,State security,6
-WHO,Media owners,HOW,Filtering,6
 HOW,Marginalisation,WHY,State security,6
 WHO,Fact-checkers and verification units,HOW,Removal,6
 WHO,Platform oversight bodies,WHAT,Communicative / discourse-ethics / debate management,6
@@ -698,7 +705,6 @@ HOW,Redirection,WHAT,Regulative,6
 HOW,Blocking,WHY,Democratic enhancement,6
 HOW,Economic,WHAT,Communicative / discourse-ethics / debate management,6
 WHO,Government agencies,HOW,Metamoderation,6
-WHO,Civil society,HOW,Filtering,6
 WHO,Regulators,HOW,Monitoring,6
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Monitoring,6
 WHO,Content moderators / BPO workforces,HOW,Labeling,6
@@ -714,6 +720,7 @@ WHAT,Regulative,WHY,Genocide prevention / dangerous speech,6
 GROUP,Moderation and censorship,WHO,Self-censorship,6
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Deplatforming,6
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Bridging,6
+GROUP,Debate management,WHY,Social cohesion,6
 WHO,Editors,HOW,Enframing,5
 HOW,Review,WHAT,Constitutive,5
 GROUP,Moderation as a component of platform regulation,WHO,Legislatures,5
@@ -727,18 +734,17 @@ HOW,Self-censorship,WHY,Compliance,5
 GROUP,Moderation and censorship,WHY,Other,5
 WHO,"Schools, curricula, librarians, academia",WHAT,Regulative,5
 WHAT,Regulative,WHY,Other,5
-HOW,Self-censorship,WHAT,Communicative / discourse-ethics / debate management,5
 WHO,Content moderators / BPO workforces,HOW,Intermediate,5
 HOW,Intermediate,WHAT,Communicative / discourse-ethics / debate management,5
 WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Review,5
-HOW,Prompting,WHY,Democratic enhancement,5
+HOW,Coherence,WHY,Democratic enhancement,5
 WHO,Government agencies,HOW,Deplatforming,5
 WHO,Fact-checkers and verification units,WHAT,Regulative,5
 HOW,Removal,WHAT,Infrastructural,5
 GROUP,Moderation as a component of platform regulation,WHO,Users,5
 HOW,Redirection,WHAT,Platform governance,5
-HOW,Redirection,WHY,Social cohesion,5
 HOW,Redirection,WHY,State security,5
+HOW,Redirection,WHY,Social cohesion,5
 WHO,Journalists,HOW,Rating,5
 WHO,Users,HOW,Prompting,5
 WHO,Pre-platform moderators,HOW,Coherence,5
@@ -754,10 +760,12 @@ GROUP,Moderating extremism,WHO,Civil society,5
 GROUP,Moderation as a component of platform regulation,WHAT,Constitutive,5
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Prompting,5
 WHO,Government agencies,HOW,Coersive,5
-HOW,Access restriction,WHY,Democratic enhancement,5
 HOW,Access restriction,WHY,Brand safety,5
+HOW,Access restriction,WHY,Democratic enhancement,5
 HOW,Deplatforming,WHY,Coherence,5
 WHAT,Platform governance,WHY,Alignment with human values,5
+WHO,Media owners,WHY,Democratic enhancement,5
+WHO,Media owners,WHY,Social cohesion,5
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Profiling,5
 GROUP,Moderating extremism,HOW,Correcting,5
 WHO,Fact-checkers and verification units,WHY,Harm principles and hate speech regulation,5
@@ -774,6 +782,7 @@ GROUP,Moderation as a component of platform regulation,WHO,Police / intelligence
 HOW,Modification,WHY,Harm principles and hate speech regulation,5
 HOW,Filtering,WHAT,Constitutive,5
 WHO,Platform oversight bodies,HOW,Enframing,5
+WHO,"Schools, curricula, librarians, academia",WHY,Democratic enhancement,5
 HOW,Blocking,WHAT,Communicative / discourse-ethics / debate management,5
 WHO,Platform oversight bodies,WHY,Social cohesion,5
 GROUP,Moderating extremism,WHY,Misinformation or disinformation as harm,5
@@ -804,7 +813,6 @@ WHO,"Legislatures (memory laws, foreign-agent statutes)",WHY,Brand safety,4
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Marginalisation,4
 WHO,Courts and prosecutors,HOW,Access restriction,4
 WHO,Cloud / infrastructure providers,WHY,Compliance,4
-HOW,Coherence,WHY,Democratic enhancement,4
 GROUP,Other,WHO,Content moderators / BPO workforces,4
 HOW,Deplatforming,WHY,Protection of children,4
 WHAT,Communicative / discourse-ethics / debate management,WHY,Protection of children,4
@@ -821,11 +829,14 @@ GROUP,Moderating extremism,HOW,Redirection,4
 HOW,Redirection,WHAT,Communicative / discourse-ethics / debate management,4
 HOW,Enframing,WHY,State security,4
 WHO,Pre-platform moderators,HOW,Prompting,4
-WHO,Regulators,WHY,Economic pressure,4
+HOW,Self-censorship,WHY,Democratic enhancement,4
 WHO,Users,WHY,Economic pressure,4
+WHO,Regulators,WHY,Economic pressure,4
+HOW,Intelligibility,WHY,Democratic enhancement,4
 GROUP,Moderation and censorship,HOW,Economic,4
 GROUP,Moderation as a component of platform governance,HOW,Interiorisation,4
 WHO,Users,HOW,Interiorisation,4
+HOW,Balancing,WHY,Compliance,4
 WHO,Editors,WHY,Social cohesion,4
 WHAT,Constitutive,WHY,Social cohesion,4
 WHO,Content moderators / BPO workforces,HOW,Disclosure,4
@@ -843,8 +854,6 @@ HOW,Removal,WHAT,Constitutive,4
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Labeling,4
 HOW,Labeling,WHY,Coherence,4
 WHO,Platforms,WHY,Alignment with human values,4
-WHO,Media owners,WHY,Democratic enhancement,4
-WHO,Media owners,WHY,Social cohesion,4
 GROUP,Moderation as a component of platform regulation,WHY,Coherence,4
 GROUP,Moderating extremism,HOW,Balancing,4
 WHO,Users,HOW,Balancing,4
@@ -868,6 +877,7 @@ WHO,Police / intelligence services,HOW,Filtering,4
 WHO,Mediators,WHAT,Communicative / discourse-ethics / debate management,4
 WHO,"Schools, curricula, librarians, academia",HOW,Review,4
 HOW,Review,WHY,Political control,4
+WHO,Civil society,WHY,Compliance,4
 WHO,Pre-platform moderators,WHAT,Regulative,4
 WHO,Pre-platform moderators,HOW,Rating,4
 WHO,Government agencies,WHY,Genocide prevention / dangerous speech,4
@@ -877,7 +887,6 @@ WHO,Algorithmic systems,WHY,Alignment with human values,4
 WHO,Platforms,HOW,Modification,4
 WHO,Platform oversight bodies,WHY,Misinformation or disinformation as harm,4
 WHO,Regulators,WHAT,Infrastructural,4
-WHO,"Schools, curricula, librarians, academia",WHY,Democratic enhancement,4
 HOW,Deplatforming,WHY,State security,4
 HOW,Economic,WHY,Political control,4
 WHO,Platforms,HOW,Removal from circulation,4
@@ -905,8 +914,8 @@ HOW,Filtering,WHY,Ideological consolidation,3
 WHAT,Regulative,WHY,Ideological consolidation,3
 WHO,Fact-checkers and verification units,HOW,Deplatforming,3
 HOW,Labeling,WHAT,Infrastructural,3
-WHO,Cloud / infrastructure providers,WHY,Harm principles and hate speech regulation,3
 WHO,Cloud / infrastructure providers,WHY,Brand safety,3
+WHO,Cloud / infrastructure providers,WHY,Harm principles and hate speech regulation,3
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Correcting,3
 GROUP,Moderation as the enforcement of community norms and identity,WHY,Misinformation or disinformation as harm,3
 GROUP,Moderation as industrial labour,WHY,Protection of children,3
@@ -916,8 +925,8 @@ WHAT,Other,WHY,Harm principles and hate speech regulation,3
 WHO,Debate moderators,HOW,Filtering,3
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Self-censorship,3
 WHO,Advertisers,WHAT,Platform governance,3
-WHO,Advertisers,WHY,Harm principles and hate speech regulation,3
 WHO,Advertisers,WHY,Brand safety,3
+WHO,Advertisers,WHY,Harm principles and hate speech regulation,3
 WHO,Cloud / infrastructure providers,HOW,Access restriction,3
 WHO,Courts and prosecutors,WHAT,Infrastructural,3
 GROUP,Other,WHAT,Regulative,3
@@ -926,8 +935,8 @@ HOW,Correcting,WHY,Coherence,3
 GROUP,Other,WHY,Social cohesion,3
 HOW,Monitoring,WHY,Protection of children,3
 GROUP,Moderating extremism,WHY,Protection of children,3
-WHO,Media owners,WHY,Harm principles and hate speech regulation,3
 WHO,Media owners,WHY,Brand safety,3
+WHO,Media owners,WHY,Harm principles and hate speech regulation,3
 GROUP,Moderation and censorship,WHO,Fact-checkers and verification units,3
 WHO,Courts and prosecutors,HOW,Blocking,3
 HOW,Blocking,WHY,Economic pressure,3
@@ -942,9 +951,9 @@ HOW,Agenda setting,WHAT,Communicative / discourse-ethics / debate management,3
 HOW,Agenda setting,WHY,Democratic enhancement,3
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Other,3
 WHAT,Communicative / discourse-ethics / debate management,WHY,Other,3
-HOW,Self-censorship,WHY,Democratic enhancement,3
+WHO,Content moderators / BPO workforces,HOW,Intelligibility,3
+HOW,Intelligibility,WHAT,Communicative / discourse-ethics / debate management,3
 GROUP,Moderation as industrial labour,WHY,Misinformation or disinformation as harm,3
-HOW,Balancing,WHY,Compliance,3
 WHO,Platforms,HOW,Algorithmic systems,3
 HOW,Coersive,WHAT,Platform governance,3
 HOW,Rating,WHY,Compliance,3
@@ -975,10 +984,12 @@ HOW,Redirection,WHY,Harm principles and hate speech regulation,3
 GROUP,Moderating extremism,WHO,Courts and prosecutors,3
 WHO,Users,WHY,Other,3
 WHO,Debate moderators,HOW,Balancing,3
+WHO,Civil society,HOW,Balancing,3
 HOW,Marginalisation,WHY,Coherence,3
 HOW,Review,WHY,Other,3
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Fact-checkers and verification units,3
 HOW,Modification,WHAT,Communicative / discourse-ethics / debate management,3
+WHO,Content moderators / BPO workforces,HOW,Balancing,3
 HOW,Rating,WHY,Economic pressure,3
 GROUP,Moderation and censorship,HOW,Interiorisation,3
 HOW,Interiorisation,WHAT,Regulative,3
@@ -992,7 +1003,6 @@ WHO,Mediators,WHY,Democratic enhancement,3
 WHO,Content moderators / BPO workforces,HOW,Interiorisation,3
 HOW,Interiorisation,WHY,Harm principles and hate speech regulation,3
 WHO,Civil society,WHY,Protection of children,3
-WHO,Civil society,WHY,Compliance,3
 GROUP,Moderation as a component of platform regulation,WHY,Genocide prevention / dangerous speech,3
 WHO,Pre-platform moderators,HOW,Metamoderation,3
 WHO,Pre-platform moderators,HOW,Filtering,3
@@ -1034,12 +1044,14 @@ WHO,App stores,HOW,Marginalisation,3
 WHO,App stores,WHY,Harm principles and hate speech regulation,3
 GROUP,Moderation as industrial labour,WHAT,Other,3
 WHO,Content moderators / BPO workforces,WHAT,Other,3
-HOW,Review,WHAT,Other,3
 HOW,Filtering,WHAT,Other,3
+HOW,Review,WHAT,Other,3
 WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Correcting,3
 GROUP,Automated or algorithmic content moderation,WHY,Brand safety,3
 WHO,Platforms,WHAT,Other,3
 GROUP,Moderation as the cultivation of a democratic public sphere,WHAT,Infrastructural,3
+GROUP,Debate management,HOW,Prompting,3
+GROUP,Debate management,WHO,"Schools, curricula, librarians, academia",3
 GROUP,Moderating extremism,WHO,Payment processors / financial infrastructure,2
 GROUP,Moderating extremism,WHAT,Infrastructural,2
 WHO,Payment processors / financial infrastructure,WHY,Harm principles and hate speech regulation,2
@@ -1101,13 +1113,13 @@ GROUP,Moderation as a component of platform regulation,WHY,Clear and present dan
 WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Filtering,2
 HOW,Coherence,WHY,Other,2
 GROUP,Moderation as a component of platform regulation,HOW,Self-censorship,2
-HOW,Intermediate,WHAT,Regulative,2
 HOW,Intelligibility,WHAT,Regulative,2
-HOW,Intelligibility,WHY,Democratic enhancement,2
+HOW,Intermediate,WHAT,Regulative,2
+HOW,Intelligibility,WHY,Social cohesion,2
 WHO,Advertisers,HOW,Correcting,2
 WHO,Users,HOW,Economic,2
-HOW,Self-censorship,WHY,Other,2
 HOW,Marginalisation,WHY,Other,2
+HOW,Self-censorship,WHY,Other,2
 GROUP,Moderation as industrial labour,WHAT,Regulative,2
 GROUP,Moderation as industrial labour,WHY,Democratic enhancement,2
 HOW,Interiorisation,WHY,Democratic enhancement,2
@@ -1139,8 +1151,8 @@ WHAT,Communicative / discourse-ethics / debate management,WHY,Alignment with hum
 HOW,Disclosure,WHY,Protection of children,2
 GROUP,Moderation as a component of platform governance,WHY,Conflict transformation,2
 WHO,Media owners,HOW,Rating,2
-WHO,Online mobs / pile-ons,HOW,Coersive,2
 WHO,Online mobs / pile-ons,HOW,Self-censorship,2
+WHO,Online mobs / pile-ons,HOW,Coersive,2
 WHO,Online mobs / pile-ons,WHAT,Regulative,2
 GROUP,Moderating extremism,HOW,Profiling,2
 GROUP,Moderation as a component of platform governance,WHO,Media owners,2
@@ -1150,16 +1162,14 @@ WHO,Content moderators / BPO workforces,HOW,Economic,2
 GROUP,Moderation as industrial labour,HOW,Enframing,2
 GROUP,Moderation as a component of platform regulation,WHO,Public-private partnerships,2
 WHO,Public-private partnerships,WHAT,Platform governance,2
-WHO,"Schools, curricula, librarians, academia",WHY,Economic pressure,2
 WHO,"Schools, curricula, librarians, academia",WHY,Compliance,2
+WHO,"Schools, curricula, librarians, academia",WHY,Economic pressure,2
 GROUP,Moderation as a component of platform governance,HOW,Redirection,2
 WHO,Cloud / infrastructure providers,HOW,Metamoderation,2
 HOW,Balancing,WHY,Coherence,2
-WHO,Civil society,HOW,Balancing,2
 GROUP,Moderation as a component of platform governance,WHO,Self-censorship,2
 WHO,Editors,WHAT,Platform governance,2
 WHO,Journalists,WHY,Misinformation or disinformation as harm,2
-WHO,Content moderators / BPO workforces,HOW,Balancing,2
 HOW,Balancing,WHY,Brand safety,2
 WHO,Debate moderators,WHAT,Regulative,2
 WHO,Political groups,WHY,Social cohesion,2
@@ -1182,8 +1192,8 @@ WHO,Regulators,HOW,Rating,2
 WHO,Platform oversight bodies,WHY,Genocide prevention / dangerous speech,2
 GROUP,Moderation and censorship,WHO,Pre-platform moderators,2
 WHO,Pre-platform moderators,WHAT,Platform governance,2
-WHO,Police / intelligence services,HOW,Review,2
 WHO,Police / intelligence services,HOW,Enframing,2
+WHO,Police / intelligence services,HOW,Review,2
 WHO,Police / intelligence services,WHY,Social cohesion,2
 HOW,Deplatforming,WHY,Obscenity and decency,2
 HOW,Labeling,WHY,Genocide prevention / dangerous speech,2
@@ -1198,14 +1208,14 @@ HOW,Interiorisation,WHY,Compliance,2
 HOW,Interiorisation,WHY,Alignment with human values,2
 HOW,Filtering,WHY,Alignment with human values,2
 GROUP,Moderation as a component of platform regulation,HOW,Modification,2
-WHO,"Schools, curricula, librarians, academia",WHY,Protection of children,2
 WHO,"Schools, curricula, librarians, academia",WHY,Brand safety,2
+WHO,"Schools, curricula, librarians, academia",WHY,Protection of children,2
 WHO,Media owners,HOW,Deplatforming,2
 GROUP,Moderation as industrial labour,WHY,Other,2
 WHO,Content moderators / BPO workforces,WHY,Other,2
 GROUP,Other,WHY,Democratic enhancement,2
-WHO,Content moderators / BPO workforces,WHY,State security,2
 WHO,Users,WHY,State security,2
+WHO,Content moderators / BPO workforces,WHY,State security,2
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Interiorisation,2
 HOW,Interiorisation,WHY,Coherence,2
 WHO,Regulators,HOW,Balancing,2
@@ -1279,8 +1289,8 @@ WHO,Pre-platform moderators,WHY,Harm principles and hate speech regulation,2
 GROUP,Moderation as a component of platform governance,HOW,Intermediate,2
 WHO,Regulators,HOW,Blocking,2
 HOW,Algorithmic systems,WHY,State security,2
-WHO,Mediators,HOW,Bridging,2
 WHO,Mediators,HOW,Marginalisation,2
+WHO,Mediators,HOW,Bridging,2
 WHO,Mediators,WHAT,Platform governance,2
 HOW,Bridging,WHY,Conflict transformation,2
 WHAT,Communicative / discourse-ethics / debate management,WHY,Conflict transformation,2
@@ -1303,8 +1313,8 @@ GROUP,Moderation as a component of platform regulation,HOW,Inclusion,2
 WHO,Platforms,HOW,Inclusion,2
 GROUP,Moderation and censorship,WHY,Clear and present danger,2
 WHO,Regulators,WHY,Clear and present danger,2
-WHO,App stores,WHY,Democratic enhancement,2
 WHO,App stores,WHY,Brand safety,2
+WHO,App stores,WHY,Democratic enhancement,2
 WHAT,Communicative / discourse-ethics / debate management,WHY,Economic pressure,2
 GROUP,Moderation as the enforcement of community norms and identity,WHO,Journalists,2
 HOW,Self-censorship,WHY,Obscenity and decency,2
@@ -1312,6 +1322,11 @@ WHAT,Other,WHY,Social cohesion,2
 HOW,Profiling,WHY,Democratic enhancement,2
 HOW,Profiling,WHY,State security,2
 GROUP,Moderation as industrial labour,WHAT,Communicative / discourse-ethics / debate management,2
+GROUP,Debate management,WHY,Coherence,2
+GROUP,Debate management,HOW,Balancing,2
+GROUP,Debate management,HOW,Filtering,2
+GROUP,Debate management,HOW,Intelligibility,2
+GROUP,Debate management,HOW,Coherence,2
 WHO,Cloud / infrastructure providers,HOW,Profiling,1
 WHO,Cloud / infrastructure providers,HOW,Review,1
 WHO,Legislatures,WHY,Social cohesion,1
@@ -1337,8 +1352,8 @@ WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Self-censorship,1
 GROUP,Moderation and censorship,HOW,Rating,1
 WHO,"Schools, curricula, librarians, academia",HOW,Rating,1
 WHO,"Schools, curricula, librarians, academia",WHAT,Other,1
-HOW,Rating,WHAT,Other,1
 HOW,Labeling,WHAT,Other,1
+HOW,Rating,WHAT,Other,1
 HOW,Rating,WHY,Other,1
 WHO,Editors,HOW,Self-censorship,1
 WHO,Editors,WHY,Compliance,1
@@ -1357,8 +1372,8 @@ GROUP,Other,WHO,Cloud / infrastructure providers,1
 GROUP,Other,WHAT,Infrastructural,1
 GROUP,Other,WHY,Economic pressure,1
 GROUP,Other,HOW,Interiorisation,1
-HOW,Interiorisation,WHY,Misinformation or disinformation as harm,1
 HOW,Interiorisation,WHY,Protection of children,1
+HOW,Interiorisation,WHY,Misinformation or disinformation as harm,1
 GROUP,Moderating extremism,WHO,Other,1
 GROUP,Moderating extremism,WHO,"Schools, curricula, librarians, academia",1
 WHO,Other,HOW,Redirection,1
@@ -1371,11 +1386,8 @@ WHO,Pre-platform moderators,WHY,Other,1
 HOW,Prompting,WHY,Other,1
 WHO,Courts and prosecutors,HOW,Self-censorship,1
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Intelligibility,1
-WHO,Content moderators / BPO workforces,HOW,Intelligibility,1
-WHO,Algorithmic systems,HOW,Intermediate,1
 WHO,Algorithmic systems,HOW,Intelligibility,1
-HOW,Intelligibility,WHAT,Communicative / discourse-ethics / debate management,1
-HOW,Intelligibility,WHY,Social cohesion,1
+WHO,Algorithmic systems,HOW,Intermediate,1
 GROUP,Moderation and censorship,WHO,Advertisers,1
 WHO,Advertisers,HOW,Economic,1
 WHO,Advertisers,WHAT,Communicative / discourse-ethics / debate management,1
@@ -1394,8 +1406,8 @@ GROUP,Moderation as a component of platform governance,HOW,Coersive,1
 HOW,Coersive,WHAT,Infrastructural,1
 GROUP,Automated or algorithmic content moderation,HOW,Rating,1
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Political groups,1
-WHO,Political groups,WHY,Democratic enhancement,1
 WHO,Political groups,WHY,Brand safety,1
+WHO,Political groups,WHY,Democratic enhancement,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Access restriction,1
 WHO,"Public-private partnerships (""free-speech triangle"")",WHAT,Infrastructural,1
 HOW,Profiling,WHY,Obscenity and decency,1
@@ -1417,18 +1429,18 @@ HOW,Blocking,WHY,Conflict transformation,1
 GROUP,Moderation as a component of platform governance,WHO,Advertisers,1
 WHO,Advertisers,WHY,Misinformation or disinformation as harm,1
 GROUP,Moderation as a component of platform regulation,WHO,Police / law enforcement agencies,1
-WHO,Police / law enforcement agencies,HOW,Review,1
 WHO,Police / law enforcement agencies,HOW,Monitoring,1
+WHO,Police / law enforcement agencies,HOW,Review,1
 WHO,Police / law enforcement agencies,WHAT,Regulative,1
 WHO,Police / law enforcement agencies,WHAT,Platform governance,1
 WHO,Police / law enforcement agencies,WHY,Harm principles and hate speech regulation,1
 WHO,Police / law enforcement agencies,WHY,State security,1
 GROUP,Moderation as the enforcement of community norms and identity,WHO,Online mobs / pile-ons,1
-GROUP,Moderation as the enforcement of community norms and identity,HOW,Coersive,1
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Self-censorship,1
+GROUP,Moderation as the enforcement of community norms and identity,HOW,Coersive,1
 GROUP,Moderation as the enforcement of community norms and identity,WHY,Political control,1
-WHO,Online mobs / pile-ons,WHY,Social cohesion,1
 WHO,Online mobs / pile-ons,WHY,Political control,1
+WHO,Online mobs / pile-ons,WHY,Social cohesion,1
 WHO,Media owners,WHY,Misinformation or disinformation as harm,1
 WHO,AI labs as moderators,HOW,Labeling,1
 WHO,AI labs as moderators,HOW,Removal,1
@@ -1443,13 +1455,13 @@ WHO,"Schools, curricula, librarians, academia",HOW,Removal,1
 GROUP,Moderation as a component of platform governance,WHO,Legislatures,1
 WHO,Legislatures,HOW,Economic,1
 WHO,Legislatures,WHAT,Infrastructural,1
-WHO,Legislatures,WHY,Compliance,1
 WHO,Legislatures,WHY,Brand safety,1
+WHO,Legislatures,WHY,Compliance,1
 GROUP,Moderating extremism,WHO,Journalists,1
 WHO,Journalists,HOW,Economic,1
 WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Economic,1
-WHO,App stores,HOW,Economic,1
 WHO,App stores,HOW,Metamoderation,1
+WHO,App stores,HOW,Economic,1
 HOW,Deplatforming,WHY,Other,1
 WHO,Debate moderators,HOW,Rating,1
 WHO,Self-censorship,WHY,Misinformation or disinformation as harm,1
@@ -1464,21 +1476,21 @@ HOW,Modification,WHY,Misinformation or disinformation as harm,1
 HOW,Modification,WHY,Coherence,1
 WHO,Regulators,HOW,Access restriction,1
 GROUP,Moderation and censorship,WHO,Political groups,1
-WHO,Political groups,HOW,Monitoring,1
 WHO,Political groups,HOW,Access restriction,1
+WHO,Political groups,HOW,Monitoring,1
 WHO,Political groups,WHAT,Infrastructural,1
 WHO,Political groups,WHY,Political control,1
-HOW,Interiorisation,WHY,Economic pressure,1
 HOW,Interiorisation,WHY,Brand safety,1
+HOW,Interiorisation,WHY,Economic pressure,1
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Obfuscation,1
-WHO,Content moderators / BPO workforces,HOW,Obfuscation,1
 WHO,Users,HOW,Obfuscation,1
+WHO,Content moderators / BPO workforces,HOW,Obfuscation,1
 HOW,Obfuscation,WHAT,Communicative / discourse-ethics / debate management,1
 HOW,Obfuscation,WHAT,Platform governance,1
 HOW,Obfuscation,WHY,Social cohesion,1
 HOW,Obfuscation,WHY,Coherence,1
-WHO,Censorship boards or agencies,HOW,Filtering,1
 WHO,Censorship boards or agencies,HOW,Marginalisation,1
+WHO,Censorship boards or agencies,HOW,Filtering,1
 WHO,Censorship boards or agencies,WHAT,Platform governance,1
 WHO,Censorship boards or agencies,WHY,Compliance,1
 WHO,Censorship boards or agencies,WHY,Harm principles and hate speech regulation,1
@@ -1501,17 +1513,17 @@ WHO,Police / intelligence services,HOW,Marginalisation,1
 GROUP,Moderating extremism,HOW,Prompting,1
 WHO,Civil society,HOW,Prompting,1
 HOW,Prompting,WHY,Harm principles and hate speech regulation,1
-WHO,Mediators,HOW,Filtering,1
 WHO,Mediators,HOW,Enframing,1
+WHO,Mediators,HOW,Filtering,1
 WHO,Mediators,WHY,Political control,1
 WHO,Civil society,HOW,Rating,1
-HOW,Metamoderation,WHY,Genocide prevention / dangerous speech,1
 HOW,Review,WHY,Genocide prevention / dangerous speech,1
+HOW,Metamoderation,WHY,Genocide prevention / dangerous speech,1
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Police / intelligence services,1
 WHO,Police / intelligence services,WHAT,Communicative / discourse-ethics / debate management,1
 WHO,Police / intelligence services,WHY,Coherence,1
-HOW,Access restriction,WHY,State security,1
 HOW,Access restriction,WHY,Genocide prevention / dangerous speech,1
+HOW,Access restriction,WHY,State security,1
 WHAT,Infrastructural,WHY,Genocide prevention / dangerous speech,1
 WHO,Users,HOW,Access restriction,1
 HOW,Access restriction,WHY,Obscenity and decency,1
@@ -1529,8 +1541,8 @@ HOW,Modification,WHY,Brand safety,1
 HOW,Labeling,WHY,Protection of children,1
 HOW,Correcting,WHY,State security,1
 GROUP,Moderation as industrial labour,HOW,Modification,1
-WHO,Content moderators / BPO workforces,HOW,Modification,1
 WHO,Algorithmic systems,HOW,Modification,1
+WHO,Content moderators / BPO workforces,HOW,Modification,1
 HOW,Modification,WHY,Compliance,1
 GROUP,Moderation as a component of platform regulation,HOW,Confiscation,1
 WHO,Courts and prosecutors,HOW,Confiscation,1
@@ -1539,12 +1551,12 @@ HOW,Confiscation,WHY,Brand safety,1
 WHO,"Schools, curricula, librarians, academia",HOW,Monitoring,1
 WHO,Algorithmic systems,HOW,Access restriction,1
 GROUP,Moderation as industrial labour,WHAT,Censorship,1
-WHO,Content moderators / BPO workforces,WHAT,Censorship,1
 WHO,Algorithmic systems,WHAT,Censorship,1
-HOW,Review,WHAT,Censorship,1
+WHO,Content moderators / BPO workforces,WHAT,Censorship,1
 HOW,Filtering,WHAT,Censorship,1
-WHAT,Censorship,WHY,Harm principles and hate speech regulation,1
+HOW,Review,WHAT,Censorship,1
 WHAT,Censorship,WHY,Brand safety,1
+WHAT,Censorship,WHY,Harm principles and hate speech regulation,1
 HOW,Metamoderation,WHY,State security,1
 WHO,Courts and prosecutors,WHY,State security,1
 HOW,Balancing,WHY,State security,1
@@ -1554,16 +1566,16 @@ WHO,Media owners,WHY,Economic pressure,1
 GROUP,Moderation as a component of platform governance,HOW,Removal from circulation,1
 WHO,Government agencies,HOW,Removal from circulation,1
 HOW,Removal from circulation,WHAT,Infrastructural,1
-HOW,Removal from circulation,WHY,Social cohesion,1
 HOW,Removal from circulation,WHY,Political control,1
+HOW,Removal from circulation,WHY,Social cohesion,1
 WHO,Users,WHY,Alignment with human values,1
-HOW,Metamoderation,WHY,Alignment with human values,1
 HOW,Enframing,WHY,Alignment with human values,1
+HOW,Metamoderation,WHY,Alignment with human values,1
 WHO,Legislatures,WHY,Misinformation or disinformation as harm,1
 WHO,Journalists,WHY,Political control,1
 WHO,Regulators,HOW,Removal from circulation,1
-HOW,Removal from circulation,WHY,Protection of children,1
 HOW,Removal from circulation,WHY,Compliance,1
+HOW,Removal from circulation,WHY,Protection of children,1
 HOW,Prompting,WHY,Brand safety,1
 GROUP,Other,HOW,Redirection,1
 HOW,Redirection,WHY,Coherence,1
@@ -1589,10 +1601,10 @@ WHO,Users,WHY,Political control,1
 HOW,Rating,WHY,Political control,1
 WHO,Regulators,WHY,Obscenity and decency,1
 WHO,Self-censorship,WHAT,Platform governance,1
-WHO,Media owners,HOW,Agenda setting,1
 WHO,Users,HOW,Agenda setting,1
-WHO,Police / intelligence services,HOW,Rating,1
+WHO,Media owners,HOW,Agenda setting,1
 WHO,Police / intelligence services,HOW,Blocking,1
+WHO,Police / intelligence services,HOW,Rating,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Redirection,1
 GROUP,Other,HOW,Metamoderation,1
 HOW,Access restriction,WHY,Economic pressure,1
@@ -1665,22 +1677,22 @@ GROUP,Moderating extremism,WHO,Fact-checkers and verification units,1
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Disclosure,1
 GROUP,Moderation as the enforcement of community norms and identity,HOW,Bridging,1
 WHO,"Schools, curricula, librarians, academia",WHAT,Infrastructural,1
-WHO,Private firms,HOW,Economic,1
 WHO,Private firms,HOW,Removal,1
+WHO,Private firms,HOW,Economic,1
 WHO,Private firms,WHAT,Regulative,1
 WHO,Private firms,WHY,Economic pressure,1
 WHO,Private firms,WHY,Political control,1
-WHO,Police / intelligence services,WHY,Protection of children,1
 WHO,Police / intelligence services,WHY,Other,1
+WHO,Police / intelligence services,WHY,Protection of children,1
 HOW,Disclosure,WHY,Other,1
 WHO,Content moderators / BPO workforces,HOW,Redirection,1
-WHO,Platform oversight bodies,HOW,Redirection,1
 WHO,Platform oversight bodies,HOW,Self-censorship,1
+WHO,Platform oversight bodies,HOW,Redirection,1
 HOW,Redirection,WHY,Economic pressure,1
 WHO,Self-censorship,WHAT,Other,1
 WHO,Self-censorship,WHY,Other,1
-HOW,Redirection,WHAT,Other,1
 HOW,Self-censorship,WHAT,Other,1
+HOW,Redirection,WHAT,Other,1
 HOW,Redirection,WHY,Other,1
 GROUP,Moderation as a component of platform governance,HOW,Intelligibility,1
 WHO,Platforms,HOW,Intelligibility,1
@@ -1688,8 +1700,8 @@ WHO,Users,HOW,Intelligibility,1
 HOW,Intelligibility,WHAT,Platform governance,1
 HOW,Intelligibility,WHY,Harm principles and hate speech regulation,1
 GROUP,Moderation as a component of platform regulation,WHO,Pre-platform moderators,1
-WHO,Pre-platform moderators,WHY,Protection of children,1
 WHO,Pre-platform moderators,WHY,Obscenity and decency,1
+WHO,Pre-platform moderators,WHY,Protection of children,1
 HOW,Correcting,WHY,Other,1
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Online mobs / pile-ons,1
 GROUP,Moderation as the cultivation of a democratic public sphere,HOW,Coersive,1
@@ -1751,13 +1763,13 @@ GROUP,Other,WHY,State security,1
 WHO,Public-private partnerships,HOW,Profiling,1
 WHO,Public-private partnerships,HOW,Marginalisation,1
 WHO,Public-private partnerships,WHAT,Infrastructural,1
-WHO,Public-private partnerships,WHY,Economic pressure,1
 WHO,Public-private partnerships,WHY,Compliance,1
+WHO,Public-private partnerships,WHY,Economic pressure,1
 WHO,Civil society,HOW,Intermediate,1
 WHO,Civil society,WHY,Obscenity and decency,1
-HOW,Intermediate,WHY,Obscenity and decency,1
-HOW,Intermediate,WHY,Compliance,1
 HOW,Monitoring,WHY,Obscenity and decency,1
+HOW,Intermediate,WHY,Compliance,1
+HOW,Intermediate,WHY,Obscenity and decency,1
 WHO,Government agencies,HOW,Economic,1
 WHO,Editors,WHAT,Regulative,1
 WHO,Editors,WHY,Harm principles and hate speech regulation,1
@@ -1790,15 +1802,15 @@ HOW,Inclusion,WHY,Brand safety,1
 GROUP,Moderation as the cultivation of a democratic public sphere,WHY,Conflict transformation,1
 WHO,Algorithmic systems,WHY,Conflict transformation,1
 GROUP,Moderation as a component of platform regulation,WHAT,Other,1
-WHO,Private firms,HOW,Metamoderation,1
 WHO,Private firms,HOW,Enframing,1
-WHO,Courts and prosecutors,WHAT,Other,1
+WHO,Private firms,HOW,Metamoderation,1
 WHO,Private firms,WHAT,Other,1
 WHO,Private firms,WHAT,Platform governance,1
+WHO,Courts and prosecutors,WHAT,Other,1
 WHO,Private firms,WHY,Democratic enhancement,1
 WHO,Private firms,WHY,Harm principles and hate speech regulation,1
-HOW,Metamoderation,WHAT,Other,1
 HOW,Enframing,WHAT,Other,1
+HOW,Metamoderation,WHAT,Other,1
 WHAT,Other,WHY,Democratic enhancement,1
 WHO,Algorithmic systems,WHY,Clear and present danger,1
 GROUP,Moderation as a component of platform governance,WHO,Other,1
@@ -1811,8 +1823,8 @@ GROUP,Moderation as the cultivation of a democratic public sphere,WHO,App stores
 WHO,App stores,HOW,Deplatforming,1
 WHO,App stores,WHAT,Regulative,1
 HOW,Blocking,WHY,Protection of children,1
-WHO,App stores,HOW,Filtering,1
 WHO,App stores,HOW,Access restriction,1
+WHO,App stores,HOW,Filtering,1
 HOW,Algorithmic systems,WHY,Brand safety,1
 WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Blocking,1
 WHO,"Legislatures (memory laws, foreign-agent statutes)",WHY,Political control,1
@@ -1864,8 +1876,8 @@ HOW,Modification,WHY,Democratic enhancement,1
 GROUP,Moderation as the cultivation of a democratic public sphere,WHO,Payment processors / financial infrastructure,1
 WHO,Payment processors / financial infrastructure,HOW,Access restriction,1
 WHO,Payment processors / financial infrastructure,WHY,Ideological consolidation,1
-HOW,Economic,WHY,Ideological consolidation,1
 HOW,Access restriction,WHY,Ideological consolidation,1
+HOW,Economic,WHY,Ideological consolidation,1
 WHAT,Infrastructural,WHY,Ideological consolidation,1
 GROUP,Moderation as industrial labour,HOW,Coherence,1
 GROUP,Moderation as industrial labour,WHY,Coherence,1
@@ -1874,3 +1886,23 @@ WHO,Platform oversight bodies,HOW,Blocking,1
 WHO,Pre-platform moderators,HOW,Blocking,1
 WHO,"Legislatures (memory laws, foreign-agent statutes)",HOW,Metamoderation,1
 GROUP,Moderation as industrial labour,WHO,Journalists,1
+GROUP,Debate management,WHO,Self-censorship (analytical),1
+GROUP,Debate management,HOW,Self-censorship,1
+WHO,Self-censorship (analytical),HOW,Self-censorship,1
+WHO,Self-censorship (analytical),WHAT,Communicative / discourse-ethics / debate management,1
+WHO,Self-censorship (analytical),WHY,Democratic enhancement,1
+WHO,Self-censorship (analytical),WHY,Social cohesion,1
+GROUP,Debate management,WHO,Civil society,1
+GROUP,Debate management,WHY,Compliance,1
+GROUP,Debate management,WHO,Media owners,1
+WHO,Media owners,HOW,Intelligibility,1
+WHO,"Schools, curricula, librarians, academia",HOW,Balancing,1
+GROUP,Debate management,WHO,Platforms,1
+GROUP,Debate management,WHY,Brand safety,1
+HOW,Intelligibility,WHY,Coherence,1
+GROUP,Metamoderation,WHO,"Schools, curricula, librarians, academia",1
+GROUP,Metamoderation,HOW,Enframing,1
+GROUP,Metamoderation,HOW,Prompting,1
+GROUP,Metamoderation,WHAT,Communicative / discourse-ethics / debate management,1
+GROUP,Metamoderation,WHY,Social cohesion,1
+GROUP,Metamoderation,WHY,Coherence,1

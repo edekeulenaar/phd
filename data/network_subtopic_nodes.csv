@@ -8,11 +8,13 @@ GROUP,Moderating extremism,64
 GROUP,Moderation as industrial labour,46
 GROUP,Automated or algorithmic content moderation,19
 GROUP,Other,18
+GROUP,Debate management,12
 GROUP,Moderation as brand safety and the commercial viability of the platform,1
-HOW,Filtering,403
+GROUP,Metamoderation,1
+HOW,Filtering,405
 HOW,Removal,324
 HOW,Review,312
-HOW,Enframing,243
+HOW,Enframing,252
 HOW,Marginalisation,204
 HOW,Deplatforming,130
 HOW,Metamoderation,97
@@ -20,11 +22,11 @@ HOW,Correcting,78
 HOW,Monitoring,62
 HOW,Labeling,51
 HOW,Rating,42
-HOW,Prompting,38
-HOW,Coherence,36
+HOW,Prompting,42
+HOW,Coherence,38
 HOW,Economic,35
-HOW,Balancing,32
-HOW,Self-censorship,28
+HOW,Balancing,34
+HOW,Self-censorship,29
 HOW,Access restriction,25
 HOW,Profiling,21
 HOW,Blocking,21
@@ -36,11 +38,11 @@ HOW,Coersive,10
 HOW,Intermediate,8
 HOW,Modification,6
 HOW,Agenda setting,4
+HOW,Intelligibility,4
 HOW,Algorithmic systems,4
 HOW,Other,4
 HOW,Removal from circulation,4
 HOW,Inclusion,4
-HOW,Intelligibility,2
 HOW,Obfuscation,1
 HOW,Confiscation,1
 HOW,Moderating powers,1
@@ -48,28 +50,28 @@ HOW,Friction,1
 HOW,Fairness,1
 WHAT,Platform governance,951
 WHAT,Regulative,504
-WHAT,Communicative / discourse-ethics / debate management,384
+WHAT,Communicative / discourse-ethics / debate management,397
 WHAT,Infrastructural,54
 WHAT,Constitutive,21
 WHAT,Other,8
 WHAT,Censorship,1
-WHO,Platforms,851
-WHO,Content moderators / BPO workforces,342
+WHO,Platforms,852
+WHO,Content moderators / BPO workforces,349
 WHO,Algorithmic systems,307
 WHO,Users,159
 WHO,Regulators,127
 WHO,Courts and prosecutors,108
 WHO,Government agencies,108
 WHO,Platform oversight bodies,56
-WHO,"Schools, curricula, librarians, academia",41
+WHO,"Schools, curricula, librarians, academia",45
 WHO,Journalists,35
 WHO,Fact-checkers and verification units,27
+WHO,Civil society,23
 WHO,Pre-platform moderators,23
-WHO,Civil society,22
 WHO,Cloud / infrastructure providers,20
 WHO,"Legislatures (memory laws, foreign-agent statutes)",18
+WHO,Media owners,17
 WHO,Debate moderators,17
-WHO,Media owners,16
 WHO,Editors,12
 WHO,"Public-private partnerships (""free-speech triangle"")",12
 WHO,Self-censorship,11
@@ -89,13 +91,14 @@ WHO,Censorship boards or agencies,2
 WHO,Private firms,2
 WHO,Police / law enforcement agencies,1
 WHO,Religious authories and groups,1
+WHO,Self-censorship (analytical),1
 WHY,Harm principles and hate speech regulation,432
-WHY,Democratic enhancement,377
-WHY,Social cohesion,318
+WHY,Democratic enhancement,386
+WHY,Social cohesion,325
 WHY,Misinformation or disinformation as harm,223
-WHY,Brand safety,207
-WHY,Compliance,203
-WHY,Coherence,144
+WHY,Brand safety,208
+WHY,Compliance,204
+WHY,Coherence,147
 WHY,Protection of children,72
 WHY,Political control,71
 WHY,Economic pressure,60

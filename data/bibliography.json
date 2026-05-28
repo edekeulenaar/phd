@@ -132,6 +132,13 @@
     "harvard": "Gorwa, R. (2019) ‘What Is Platform Governance?’, *Information, Communication & Society*, 22(6), pp. 854–871. doi:10.1080/1369118x.2019.1573914",
     "link": "https://doi.org/10.1080/1369118x.2019.1573914"
   },
+  "habermasNewStructuralTransformation2023": {
+    "author": "Habermas",
+    "year": "2023",
+    "inline": "(Habermas, 2023)",
+    "harvard": "Habermas, J. (2023) *A New Structural Transformation of the Public Sphere and Deliberative Politics*.",
+    "link": ""
+  },
   "holquistIntroductionCorruptOriginals1994": {
     "author": "Holquist",
     "year": "1994",
@@ -243,6 +250,13 @@
     "inline": "(Wohn, 2019)",
     "harvard": "Wohn, D. Y. (2019) ‘Volunteer Moderators in Twitch Micro Communities: How They Get Involved, the Roles They Play, and the Emotional Labor They Experience’, in *Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems*. Glasgow Scotland Uk: ACM, pp. 1–13. doi:10.1145/3290605.3300390",
     "link": "https://doi.org/10.1145/3290605.3300390"
+  },
+  "wojcikForumsElectroniquesMunicipaux2003": {
+    "author": "Wojcik",
+    "year": "2003",
+    "inline": "(Wojcik, 2003)",
+    "harvard": "Wojcik, S. (2003) ‘Les forums électroniques municipaux, espaces de débat démocratique?’, *Sciences de la Société*.",
+    "link": ""
   },
   "wrightDemocracyDeliberationDesign2007b": {
     "author": "Wright and Street",
