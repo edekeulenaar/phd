@@ -2250,22 +2250,56 @@ function promoteInlineFigures() {
            (outer.parentElement.children.length === 1 ||
             outer.parentElement.tagName === "A")) {
       const p = outer.parentElement;
-      // Only climb past <a>, <picture>, or single-child <p>/<span>/<figure>.
       if (!/^(A|PICTURE|P|SPAN|FIGURE)$/.test(p.tagName)) break;
       outer = p;
     }
-    // Drop any "View interactive ↗" pill we'd attached as a sibling.
     (outer.parentElement || document)
        .querySelectorAll(".fig-live-pill").forEach(el => el.remove());
 
     outer.replaceWith(live);
     live.classList.add("fig-live-mounted");
-    // Smooth scroll position recovery if the URL already points at the slug.
     if (location.hash === "#" + slug) {
       requestAnimationFrame(() =>
         live.scrollIntoView({ block: "start", behavior: "smooth" }));
     }
   });
+
+  // ── Tidy the Analysis / Overview section as figures move out of it ──
+  // For each <h2> inside `#analysis`, look at the elements between it and
+  // the next <h2>: if none of them contains a `.fig`, hide the heading.
+  // If `#analysis` ends up with no `.fig` at all, hide the whole section
+  // (including its lede paragraph). All hidden so the slug-anchored
+  // permalinks still resolve if anything later wants to un-hide them.
+  const analysis = document.getElementById("analysis");
+  if (!analysis) return;
+  const allHeadings = [...analysis.querySelectorAll("h1, h2, h3")];
+  allHeadings.forEach((h, i) => {
+    const next = allHeadings[i + 1] || null;
+    let hasFig = false;
+    let el = h.nextElementSibling;
+    while (el && el !== next) {
+      if (el.matches(".fig") || el.querySelector(".fig")) { hasFig = true; break; }
+      el = el.nextElementSibling;
+    }
+    if (!hasFig) {
+      h.hidden = true;
+      // also hide everything between this heading and the next heading
+      // (intro paragraphs / "lede" text under an empty subsection).
+      let cur = h.nextElementSibling;
+      while (cur && cur !== next) {
+        if (!cur.classList.contains("fig")) cur.hidden = true;
+        cur = cur.nextElementSibling;
+      }
+    }
+  });
+  // If no figure remains in Analysis at all, hide the section header too.
+  if (!analysis.querySelector(".fig")) {
+    const head = analysis.querySelector(".analysis-head");
+    if (head) head.hidden = true;
+    // The `.analysis` wrapper itself stays in the DOM (it provides the
+    // section landmark and may host the page footer), but its contents
+    // are now all hidden.
+  }
 }
 
 /* ────────────────────────────────────────────────────────────────────────

@@ -381,14 +381,13 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 
 /* When the live figure is moved INTO the manuscript flow it BREAKS OUT
-   of the prose column to use most of the available content width, so
-   ribbons, labels and dots stay legible at a normal reading distance.
-   The prose around it stays at its comfortable measure. */
+   of the prose column to the RIGHT, up to the right edge of the content
+   area. The figure's left edge stays anchored to the prose column (so it
+   can never overlap the sidebar), and it grows rightward until it runs
+   into the inner edge of the viewport. */
 .prose figure.fig.fig-live-mounted {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(96vw - var(--side-w), 1200px);
+  width: min(calc(100vw - var(--side-w) - 6rem), 1200px);
   max-width: none;
   margin: 2.2em 0 2.4em;
   padding: 1rem 1.2rem 0.9rem;
@@ -400,11 +399,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 .prose figure.fig.fig-live-mounted > .fig-body  { width: 100%; }
 .prose figure.fig.fig-live-mounted > .fig-foot  { margin-top: 0.7em; }
 @media (max-width: 900px) {
-  .prose figure.fig.fig-live-mounted {
-    width: 100%;
-    left: 0;
-    transform: none;
-  }
+  .prose figure.fig.fig-live-mounted { width: 100%; }
 }
 
 /* Soft flash when an in-text link jumps to its target block (^slug anchor). */
