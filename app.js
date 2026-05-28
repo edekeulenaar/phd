@@ -2163,15 +2163,15 @@ window.addEventListener("DOMContentLoaded", async () => {
   //   view:   Sankey ⟷  Bump           (chart type)
   //   filter: <select id="bump-media-select">  (which Topic / Sub-topic
   //            slice the Bump lines should be restricted to)
-  let _bumpTopicCache = { scope: null, options: null };
+  // Only rebuild the dropdown when the SCOPE changes (Topic ⇄ CM Sub-topic).
+  // For every other render (e.g. the user's own change event) leave the
+  // <select> alone — overwriting innerHTML would reset the selection back
+  // to "All", silently discarding whatever the user just picked.
+  let _bumpScopeLoaded = null;
   async function populateBumpSelect(scope) {
     const sel = document.getElementById("bump-media-select");
     if (!sel) return;
-    if (_bumpTopicCache.scope === scope && _bumpTopicCache.options) {
-      // restore previous options without re-fetch
-      sel.innerHTML = _bumpTopicCache.options;
-      return;
-    }
+    if (_bumpScopeLoaded === scope) return;     // already populated
     const csv = scope === "cm"
       ? "data/media_per_item_year_cm_subtopic.csv"
       : "data/media_per_item_year_topic.csv";
@@ -2179,10 +2179,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     const rows = await loadCSV(csv);
     const vals = [...new Set(rows.map(r => (r[field] || "").trim())
                                   .filter(Boolean))].sort();
-    const html = `<option value="ALL">All ${field.toLowerCase()}s</option>` +
-                 vals.map(v => `<option value="${v.replace(/"/g, "&quot;")}">${v}</option>`).join("");
-    sel.innerHTML = html;
-    _bumpTopicCache = { scope, options: html };
+    sel.innerHTML =
+      `<option value="ALL">All ${field.toLowerCase()}s</option>` +
+      vals.map(v => `<option value="${v.replace(/"/g, "&quot;")}">${v}</option>`).join("");
+    _bumpScopeLoaded = scope;
   }
   async function renderMediaFig() {
     const fig = document.querySelector("#fig-media");
@@ -2222,7 +2222,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     .forEach(btn => btn.addEventListener("click", () => {
       const group = btn.dataset.scope !== undefined ? "scope" : "view";
       // Switching scope invalidates the dropdown options (different field).
-      if (group === "scope") _bumpTopicCache = { scope: null, options: null };
+      if (group === "scope") _bumpScopeLoaded = null;
       document.querySelectorAll(`#fig-media [data-${group}]`).forEach(b => {
         b.classList.toggle("active", b === btn);
         b.setAttribute("aria-selected", b === btn ? "true" : "false");
