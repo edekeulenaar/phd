@@ -2252,56 +2252,30 @@ function setupFigureDownloads() {
   });
 }
 
-/* For SVG exports only: walk every sankey/alluvial link in the SOURCE svg,
-   read its bound value (D3 stashes it in __data__.value), find the midpoint
-   of the link's path, and annotate the clone with a <text> showing the
-   number. The live on-page SVG is left untouched. */
+/* For SVG exports only: append each node's flow value to its label, so the
+   exported figure reads "UNITED STATES — 567" instead of the bare label.
+   The live on-page SVG is left untouched — these annotations live in the
+   clone consumed by the exporter. */
 function annotateEdgesForExport(srcSvg, cloneSvg) {
-  const srcLinks = srcSvg.querySelectorAll("path.link");
-  if (!srcLinks.length) return;
-  const cloneLinks = cloneSvg.querySelectorAll("path.link");
-  // Defensive: source/clone must line up index-for-index.
-  if (srcLinks.length !== cloneLinks.length) return;
-
-  // Build (or find) a <g> for the edge-value labels in the clone.
-  let layer = cloneSvg.querySelector("g.export-edge-labels");
-  if (!layer) {
-    layer = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    layer.setAttribute("class", "export-edge-labels");
-    layer.setAttribute("pointer-events", "none");
-    cloneSvg.appendChild(layer);   // last child = on top of the ribbons
-  }
+  const srcNodes  = srcSvg.querySelectorAll(".node");
+  if (!srcNodes.length) return;
+  const cloneNodes = cloneSvg.querySelectorAll(".node");
+  if (srcNodes.length !== cloneNodes.length) return;
 
   const fmt = (typeof d3 !== "undefined" && d3.format) ? d3.format(",") : String;
-  // Threshold so we don't pepper tiny ribbons (< 1 px wide) with labels.
-  const MIN_PX = 2;
 
-  for (let i = 0; i < srcLinks.length; i++) {
-    const src = srcLinks[i];
-    const d = src.__data__;
-    const v = d && (d.value ?? d.weight);
+  for (let i = 0; i < srcNodes.length; i++) {
+    const d = srcNodes[i].__data__;
+    if (!d) continue;
+    const v = d.value;
     if (!Number.isFinite(+v) || +v <= 0) continue;
-    const sw = parseFloat(src.getAttribute("stroke-width")) || 0;
-    if (sw < MIN_PX) continue;
-
-    let mid;
-    try {
-      const len = src.getTotalLength();
-      mid = src.getPointAtLength(len / 2);
-    } catch { continue; }
-
-    const t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    t.setAttribute("x", mid.x);
-    t.setAttribute("y", mid.y);
-    t.setAttribute("text-anchor", "middle");
-    t.setAttribute("dominant-baseline", "central");
-    t.setAttribute("style",
-      "font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Inter," +
-      "'Segoe UI',Arial,sans-serif;font-weight:600;letter-spacing:0.02em;" +
-      "fill:#2a2724;paint-order:stroke;stroke:#faf7f2;stroke-width:3px;" +
-      `font-size:${Math.max(8, Math.min(13, sw * 0.55))}px;`);
-    t.textContent = fmt(v);
-    layer.appendChild(t);
+    // Find the label tspan inside the cloned node — that's where the
+    // human-readable name lives. Append " — N" to it.
+    const lbl = cloneNodes[i].querySelector("tspan.lbl-name")
+             || cloneNodes[i].querySelector("text");
+    if (!lbl) continue;
+    const cur = lbl.textContent.replace(/\s*[—–-]\s*[\d,]+\s*$/, "");
+    lbl.textContent = `${cur} — ${fmt(v)}`;
   }
 }
 
