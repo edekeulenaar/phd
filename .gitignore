@@ -1,0 +1,10 @@
+.DS_Store
+*.tgz
+node_modules/
+.cache/
+__pycache__/
+*.pyc
+
+# Sensitive: never commit credentials.
+.env
+.env.*
