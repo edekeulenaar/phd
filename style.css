@@ -917,15 +917,23 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .chart.network text.node-label     { transition: opacity 0.15s; }
 .chart.network text.node-label.dim { opacity: 0.18; }
 /* Bump chart (#10): thin, clean lines à la rawgraphs/bumpchart; no scatter dots. */
-.chart.bump .series         { transition: opacity 0.15s; }
-.chart.bump .series.dim     { opacity: 0.12; }
+.chart.bump .series         { transition: opacity 0.15s; cursor: pointer; }
+.chart.bump .series.dim     { opacity: 0.08; }
 .chart.bump .series.hi      { opacity: 1; }
-.chart.bump .series path    { stroke-width: 1.6px; fill: none; opacity: 0.95; }
+.chart.bump .series path.hit { pointer-events: stroke; }   /* widen hit area */
+.chart.bump .series path:not(.hit) { stroke-width: 1.6px; fill: none; opacity: 0.95; }
+.chart.bump .series.hi path:not(.hit) { stroke-width: 3px; opacity: 1; }
 .chart.bump .series circle  { r: 1.6; opacity: 0; }   /* hover targets only */
+.chart.bump .series.hi circle,
 .chart.bump .series:hover circle { opacity: 1; }
 .chart.bump .series .label  {
   font-size: 10.5px; font-weight: 700;
   fill: var(--ink); letter-spacing: 0.04em;
+}
+.chart.bump .series.hi .label {
+  font-size: 12px; font-weight: 800;
+  paint-order: stroke;                            /* halo for legibility */
+  stroke: var(--paper); stroke-width: 3px;
 }
 
 /* ─── Data hover-card (chart elements) ────────────────────────────────── */

@@ -2101,6 +2101,27 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
     gSel.append("path")
       .attr("stroke", d => colorFn(d.group))
       .attr("d", d => line(d.values));
+    // Wide transparent hit-area path so hovering anywhere near the line
+    // (including between the very thin visible stroke and the labels)
+    // triggers the highlight. Sits below labels but above the visible
+    // path so pointer events land here first.
+    gSel.append("path")
+      .attr("class", "hit")
+      .attr("stroke", "transparent")
+      .attr("stroke-width", 14)
+      .attr("fill", "none")
+      .attr("d", d => line(d.values));
+    // Hovering ANY child of the series — the visible path, the wide
+    // hit-area, the dots, or the end-of-line label — highlights only
+    // this line and dims every other.
+    gSel.on("mouseenter", function () {
+        const me = this;
+        gSel.classed("dim", function () { return this !== me; })
+            .classed("hi",  function () { return this === me; });
+      })
+      .on("mouseleave", function () {
+        gSel.classed("dim", false).classed("hi", false);
+      });
     // Tiny hover dots (CSS keeps them invisible until series:hover).
     gSel.selectAll("circle")
       .data(d => d.values.map(v => ({ group: d.group, year: v[0], n: v[1] })))
