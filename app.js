@@ -2080,13 +2080,13 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
       .attr("transform", `translate(${m.left},0)`)
       .call(d3.axisLeft(y).ticks(6));
 
-    // Straight segments between data points — no Kandinsky-style humps
-    // between zero-value years. Each line is now an honest representation
-    // of "items mentioning this medium in year Y".
+    // Centripetal Catmull–Rom (α = 0.5) — gentle smoothing that passes
+    // through every data point without the overshoot / Kandinsky humps
+    // that curveMonotoneX produces on sparse year-by-year counts.
     const line = d3.line()
       .x(([yr]) => x(yr))
       .y(([, n]) => y(n))
-      .curve(d3.curveLinear);
+      .curve(d3.curveCatmullRom.alpha(0.5));
 
     const series = groups.map(g => ({
       group: g,
