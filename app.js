@@ -1284,6 +1284,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   const selT = controls.typeSel    ? document.getElementById(controls.typeSel)    : null;
   const selS = controls.sortSel    ? document.getElementById(controls.sortSel)    : null;
   const selL = controls.langSel    ? document.getElementById(controls.langSel)    : null;
+  const selM = controls.mediaSel   ? document.getElementById(controls.mediaSel)   : null;
   const selQ = controls.searchSel  ? document.getElementById(controls.searchSel)  : null;
   const tabs = controls.tabsRoot   ? document.querySelector(controls.tabsRoot)    : null;
 
@@ -1307,6 +1308,24 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     });
     selL.value = "ALL";
     selL.addEventListener("change", () => render());
+  }
+  // Medium dropdown — every distinct Media category found in any row's
+  // "Media categories" column (pipe-separated multi-value field).
+  if (selM && !selM.options.length) {
+    const allMedia = new Set();
+    all.forEach(r => {
+      const v = (r["Media categories"] || "").trim();
+      if (!v) return;
+      v.split("|").forEach(m => {
+        const t = m.trim();
+        if (t) allMedia.add(t);
+      });
+    });
+    const codes = [...allMedia].sort();
+    selM.add(new Option("All media", "ALL"));
+    codes.forEach(m => selM.add(new Option(m, m)));
+    selM.value = "ALL";
+    selM.addEventListener("change", () => render());
   }
 
   const getYears = controls.yearInputs
@@ -1338,6 +1357,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const p  = sel1 ? sel1.value : null;
     const ty = selT ? selT.value : "ALL";
     const lg = selL ? selL.value : "ALL";
+    const md = selM ? selM.value : "ALL";
     const q  = (selQ ? selQ.value : "").trim().toLowerCase();
     const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
     const [lo, hi] = getYears();
@@ -1345,6 +1365,8 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
       (lg === "ALL" || (r.Language || "und") === lg) &&
+      (md === "ALL" ||
+        (r["Media categories"] || "").split("|").map(s => s.trim()).includes(md)) &&
       inRange(r, lo, hi) &&
       matchesQuery(r, tokens));
   }
@@ -2306,6 +2328,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         typeSel:    "bee-type-select",
         sortSel:    "bee-sort-select",
         langSel:    "bee-lang-select",
+        mediaSel:   "bee-media-select",
         searchSel:  "bee-search",
         tabsRoot:   "#fig-beeswarm-topics .seg",
         yearInputs: ["bt-y0", "bt-y1"],
@@ -2320,6 +2343,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         typeSel:    "bee-cm-type-select",
         sortSel:    "bee-cm-sort-select",
         langSel:    "bee-cm-lang-select",
+        mediaSel:   "bee-cm-media-select",
         searchSel:  "bee-cm-search",
         tabsRoot:   "#fig-beeswarm-cm .seg",
         yearInputs: ["bc-y0", "bc-y1"],
