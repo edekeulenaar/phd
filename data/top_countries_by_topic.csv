@@ -6,9 +6,9 @@ AI alignment,Russia,3
 AI alignment,Germany,3
 AI alignment,Hong Kong,2
 AI alignment,Taiwan,2
+AI alignment,South Africa,2
 AI alignment,Brazil,2
 AI alignment,Iran,2
-AI alignment,South Africa,2
 Censorship,United States,214
 Censorship,France,192
 Censorship,China,125
@@ -33,25 +33,25 @@ Debate management,United States,26
 Debate management,France,15
 Debate management,Canada,10
 Debate management,Spain,7
-Debate management,Mexico,6
 Debate management,Switzerland,6
+Debate management,Mexico,6
 Debate management,Germany,6
 Debate management,Brazil,5
 Debate management,Italy,5
 Debate management,European Union,5
 Moderation,United Kingdom,2
 Moderation,United States,2
-Moderation,Italy,1
 Moderation,Netherlands,1
+Moderation,Italy,1
 Other,United States,6
 Other,China,3
 Other,Canada,2
 Other,Italy,2
 Other,France,2
-Other,US,1
-Other,UK,1
-Other,Russia,1
 Other,Netherlands,1
+Other,Russia,1
+Other,UK,1
+Other,US,1
 Other,Burkina Faso,1
 Political moderation,United States,9
 Political moderation,France,6
@@ -60,6 +60,6 @@ Political moderation,Italy,3
 Political moderation,Brazil,2
 Political moderation,Argentina,2
 Political moderation,Canada,1
+Political moderation,Netherlands,1
 Political moderation,Denmark,1
-Political moderation,Greece,1
-Political moderation,Western Europe,1
+Political moderation,Switzerland,1

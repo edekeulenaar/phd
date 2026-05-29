@@ -241,6 +241,7 @@ def main() -> None:
     item_lang     = {}                       # Language (first non-empty)
     item_countries:   dict[str, set] = defaultdict(set)
     item_media_cat:   dict[str, set] = defaultdict(set)  # 'Media category' (v2_final)
+    item_how:         dict[str, set] = defaultdict(set)  # HOW categories per item
     for r in F:
         t = item_id(r)
         if not t:
@@ -271,6 +272,11 @@ def main() -> None:
         # in case the CSV is renamed.
         item_media_cat[t].update(split_multi(
             r.get("Media category") or r.get("Medium category") or ""))
+        # HOW categories: collect the per-finding Category whenever Type=HOW.
+        if (r.get("Type") or "").strip().upper() == "HOW":
+            cat = (r.get("Category") or "").strip()
+            if cat:
+                item_how[t].add(cat)
 
     items = list(item_title.keys())
     topic_of    = lambda t: item_topic[t].most_common(1)[0][0]    if item_topic[t]    else ""
@@ -434,6 +440,22 @@ def main() -> None:
     write_csv(OUT / "media_per_item_year_cm_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Media category",
                "Title", "Author", "Key", "Abstract Note", "Sub-topic"], rows_s)
+
+    # ── 4g. items_by_topic_medium_how.csv (Topic → Medium → How alluvial) ──
+    # One row per (Topic, Medium, HOW-category) triple. Each item contributes
+    # 1 to every (its Topic × each of its mediums × each of its HOW codes).
+    tmh = Counter()
+    for t in items:
+        topic = topic_of(t) or "(unknown)"
+        if not item_media_cat[t] or not item_how[t]:
+            continue
+        for m in item_media_cat[t]:
+            for h in item_how[t]:
+                tmh[(topic, m, h)] += 1
+    write_csv(OUT / "items_by_topic_medium_how.csv",
+              ["Topic", "Medium", "How", "Items"],
+              [[T, M, H, n] for (T, M, H), n in sorted(tmh.items(),
+                                                       key=lambda x: (-x[1], x[0]))])
 
     # ── 5–8. Top-10 countries / media by Topic and by CM Sub-topic ──────────
     def _top_by(group_of, label_col: str, items_field: dict, n: int):

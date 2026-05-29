@@ -2302,6 +2302,17 @@ window.addEventListener("DOMContentLoaded", async () => {
                     minInputId: "net-subtopics-min",
                     figId: "fig-network-subtopics" }));
 
+  // Figure 10 — Topic → Medium → How three-stage alluvial.
+  await safe("topic × medium × how", "#sankey-topic-medium-how")(() =>
+    renderSankeyTwo({
+      csv: "data/items_by_topic_medium_how.csv",
+      stages: ["Topic", "Medium", "How"],
+      valueField: "Items",
+      hostSel: "#sankey-topic-medium-how",
+      figId: "fig-topic-medium-how",
+      topRight: 15,    // cap the middle (Medium) column at the top 15
+    }));
+
   // Figure 1 — Language → Country → (Topic | CM Sub-topic) alluvial.
   // The "by Topic" tab uses every item in the corpus; the "by CM Sub-topic"
   // tab restricts to items whose Topic is Content moderation. The middle

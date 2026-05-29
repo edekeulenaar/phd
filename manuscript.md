@@ -689,32 +689,28 @@ Before we compare conceptions of (content) moderation to censorship, we will beg
 [![Figure 3. Items per Discipline, per year, per Topic — node size = Citations. Switch to a Bump view (publications per Topic per year).](images/fig-year-topic.png)](https://edekeulenaar.github.io/censorship-and-moderation/#fig-year-topic)
 **Figure 3**. Publications per discipline, per year and per topic. Node size equals approximative citations. ^figure-3
 
-Throughout, the most predominant definition to censorship has remained that of a regulative power: the top-down, intentional suppression by power-holders (state, church, employer, platform owner) on an asymmetric structure, where the censor holds coercive authority — legal, financial, infrastructural, or doctrinal — over the speaker, and acts deliberately to prohibit, sanction, or pre-empt. ==The definition has a strong link to the actors and the media used for censorship.== Pre-Internet, studies describe a media environment where information could be "pre" and "post" filtered [cit] by passing through the hands of gatekeepers like government actors, censorship boards, religious authorities, courts and prosecutors and media owners. These actors would behold more power in decreting the conditions for information to be accessed 
+Throughout, the most predominant definition to censorship has remained that of a regulative power: the top-down, intentional suppression by power-holders (state, church, employer, platform owner) on an asymmetric structure, where the censor holds coercive authority — legal, financial, infrastructural, or doctrinal — over the speaker, and acts deliberately to prohibit, sanction, or pre-empt. ==The definition has a strong link to the actors and the media used for censorship as a means of maintaining a normative order.== In its classic sense, the censor is that who “administers” public manners and morals [@jansensuecurryCensorshipKnotThat1988, 14] through legislation — what Moore has identified as “custos morum”. They were one of two magistrates in Roman censorial bureaucracy tasked with supervising public morals by “overseeing”, “appraising”, “valuing” or “judging” individuals in the register or census of citizens [@jansensuecurryCensorshipKnotThat1988, 14]. The authority to perform censorship and how has changed over time. Most scholarly identified governmental actors as possessing the means to control the circulation of information through state-bound media publishers [cit]; mobilising forces to capture and destroy information, or coerce information producers [cit]; or colliding with other censorial powers for to 
 
+This definition has been extended to the “tutelary” role of modern states [@levinsonSilencingPublicMonuments], who may initiate laws intended to maintain a historical status quo (e.g. against historical revisionism) or moderate historically extreme language. The emphasis falls less on a singular authority than on the supervision of institutions charged with conserving a particular moral status. 
 
-and also civil society are most mentioned. 
+Indeed, some of the reasons scholars identify for censorship are a need for *normative coherence*: maintaining a state of affairs that renders governance possible through what is criticised as "political control", but also by ensuring the basis for social cohesion through religious or other bodies of morality. 
 
-until platforms appear in the literature around 2008 [@farisCensorship202008a]. 
+Other times justifications are about *functional coherence*. The wartime necessity to filter images proving realities harmful to battle or population morale would result in an existential threat to a given army, ==as it would to laws designed to maintain a status quo==. 
 
+==Part of *coherence* is also prospective; i.e., a project of *consolidating* new ideals==. Studies highlight the need for censorship in states emerging from revolutions, where there is a need to reconsolidate information around a new set of ideals [@peschanskiPolitiqueCensure1988a, 48]. The same can be said about cultural reformation projects, equally prospective. Several publications detail denazification and pacification projects in post-war Germany and Japan to "correct" [cit], and thus neutralise, an ideological body seen as problematic. [Example of Nazi Germany or Japan here] ==Partisanship playing a role.==
 
-Cultural and literature historians have pinpointed to different actors exercising different forms of censorship. One of the earliest of these is the censor as one who “administers” public manners and morals [@jansensuecurryCensorshipKnotThat1988, 14] through legislation — what Moore has identified as “custos morum”. The censor was one of two magistrates in Roman censorial bureaucracy tasked with supervising public morals by “overseeing”, “appraising”, “valuing” or “judging” individuals in the register or census of citizens [@jansensuecurryCensorshipKnotThat1988, 14]. This definition may well be extended to the “tutelary” role of modern states [@levinsonSilencingPublicMonuments], who, through more or less democratic processes, may initiate laws intended to maintain a historical status quo (e.g. against historical revisionism) or moderate historically extreme language. These practices have altogether consisted of “public and communal forms of regulation” by the state, the church or other institutions capable of “contracted and legitimated forms of power over groups or populations” [@mooreCensorship2016; @esquerreAffresDisparitionCensure2020, 2]. The emphasis falls less on a singular authority than on the routinisation of supervision across institutions charged with conserving a particular moral or historical settlement.
+***Each of these actors tend to do different things in different media types.*** 
 
-This definition is extended to nineteen and mid-twentieth century dictionaries, which by then had given an institutional dimension to censorship, exercised in particular in the exchange of public information. In a 1974 dictionary uncovered by Moore (2016), for example, a censor was defined as “an official whose duty it is to inspect books, journals, plays […] before publication, to ensure that they contain nothing immoral, heretical, or offensive or injurious to the State” [@mooreCensorship2016]. Several actors have taken this role. Literary scholars have written about editors in sixteenth century Britain [@burtAdministrationAestheticsCensorship1994], eighteenth (Darnton) and nineteenth century France (E. S. Burt, 1998), as well as the bureaucratic apparatus of the German Democratic Republic’s (GDR) media or information bureau [@darntonCensorshipComparativePerspective1994]. 
+Technically, these actors would behold power in decreting the conditions for information to be accepted, and thus accessed, via relations with sources of information production. Typically, censorship scholarship identifies "pre" and "post" censorship affordances; the latter consisting of detecting, filtering, reviewing, and if necessary modifying intercepted information; and the latter, especially applicable to decentralised technologies, is to monitor, restrict access, or attempt to remove entire information sources out of circulation via economic, technical or legal means. This, of course, depended largely on the media. 
 
+In a 1974 dictionary, a censor was defined as “an official whose duty it is to inspect books, journals, plays […] before publication, to ensure that they contain nothing immoral, heretical, or offensive or injurious to the State” [@mooreCensorship2016]. Censorial regimes across time and space have combined _pre_- and post-publication methods through multiple spaces, ==such as punishing individuals (via prosecutions); minimising public information; surveilling groups (via customs, visa controls, point-of-scale, postal regulation, consumer education, ratings systems); or, as pointed out by Badouard (2020), via industry regulation (Moore 2016). ==
 
-
-
-
-[GRAPH - SENTENCES APPEARING IN 'WHO' CENSORSHIP]
-
-***...acting in a different information environment***
-
-- Primary media: ...
-- Describe a situation where the circulation of information is easier to control: the capacity to precondition format, content and circulation of information as gatekeepers.
+- In environments where information is produced within, and without as much of the control that publishing, radio and television infrastructure granted, studies point to a diversification of methods that tap into online information access:
+	- TCP etc in Chinese media infrastructure 
 
 [GRAPH - CONNECTIONS BETWEEN WHO, MEDIUM AND HOW]
 
-***Each of these actors tend to do different things in different media types.*** 
+
 
 - Modification of items: ... 
 - Reviewing: the evolution of a technique ...
@@ -724,24 +720,9 @@ This definition is extended to nineteen and mid-twentieth century dictionaries, 
 - ...but not necessarily removal!
 - Usually pointed at specific countries: China, Syria, Iran, India
 
-Typically, moderation is seen as exercising a more complex repertoire of techniques, different in kind to "censor" as “only removal of material” [@klonickNewGovernorsPeople2017, 1601]. Censorial regimes across time and space have combined _pre_- and _post_-publication methods through multiple spaces, such as punishing individuals (via prosecutions); minimising public information; surveilling groups (via customs, visa controls, point-of-scale, postal regulation, consumer education, ratings systems); or, as pointed out by Badouard (2020), via industry regulation (Moore 2016). The repertoire is therefore modular and cumulative, mixing visibility management with sanction, and coupling prior restraint with downstream discipline.
+Typically, moderation is seen as exercising a more complex repertoire of techniques, different in kind to "censor" as “only removal of material” [@klonickNewGovernorsPeople2017, 1601]. 
 
 Scholars still speak of censorship online when the practice involves techniques used by governmental agencies designed to monitor, detect, limit and block entire sites or specific content. Authors like Zuckerman, X, Y and Z were instrumental in pointing censorship studies to a new breadth of techniques that specialise in passively intercepting content *posterior* to publication, in accordance with the abundance of new information sources that new media provide. These techniques sit in between pre-emptive and posterior censorship techniques by actively *monitoring* information production as it comes in. 
-
-[GRAPH - SENTENCES APPEARING IN 'HOW' CENSORSHIP]
-
-***For specific reasons:***
-
-- Political control — also in the sense that the very term 'censorship' implies something a publication is critical of. 
-- Obscenity and decency
-- Social cohesion
-- Religious moral authority
-- Ideological consolidation. 
-
-- In environments where information is produced within, and without as much of the control that publishing, radio and television infrastructure granted, studies point to a diversification of methods that tap into online information access:
-	- TCP etc in Chinese media infrastructure 
-
-[GRAPH - SENTENCES APPEARING IN 'WHY' CENSORSHIP]
 
 # Moderation - general 
 
