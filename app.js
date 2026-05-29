@@ -1996,7 +1996,7 @@ function inRange(r, lo, hi) {
    ─────────────────────────────────────────────────────────────────────── */
 
 async function renderBump({ csv, yField, hostSel, figId, yearInputs,
-                            filterField, filterValue }) {
+                            filterField, filterValue, topGroups }) {
   const all   = await loadCSV(csv);
   const data0 = all.filter(r => Number.isFinite(+r["Publication Year"]));
   // Optional row-level filter (e.g. "Topic = Content moderation"), used by
@@ -2033,7 +2033,20 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
       host.append("div").attr("class", "placeholder").text("No data in this year range.");
       return;
     }
-    const groups = [...new Set(rows.map(r => r[yField] || "(unknown)"))].sort();
+    let groups = [...new Set(rows.map(r => r[yField] || "(unknown)"))].sort();
+    // Optional top-N cap: keep only the largest `topGroups` groups by total
+    // count over all years; the long tail is dropped so the right-edge
+    // labels stay legible.
+    if (topGroups && Number.isFinite(+topGroups) && groups.length > +topGroups) {
+      const totals = d3.rollup(rows, v => v.length,
+                                r => r[yField] || "(unknown)");
+      const ranked = [...totals.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, +topGroups)
+        .map(([g]) => g);
+      const keep = new Set(ranked);
+      groups = groups.filter(g => keep.has(g));
+    }
     currentGroups = groups;
     // Rebuild the categorical colour scale on every redraw so a new filter
     // doesn't end up with stale group→colour bindings.
@@ -2043,8 +2056,10 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
     const counts = new Map(groups.map(g => [g, new Map(years.map(y => [y, 0]))]));
     rows.forEach(r => {
       const g = r[yField] || "(unknown)";
-      counts.get(g).set(+r["Publication Year"],
-                        (counts.get(g).get(+r["Publication Year"]) || 0) + 1);
+      const c = counts.get(g);                // undefined for trimmed long-tail
+      if (!c) return;
+      const yr = +r["Publication Year"];
+      c.set(yr, (c.get(yr) || 0) + 1);
     });
 
     const W = Math.max(720, host.node().clientWidth || 880);
@@ -2243,6 +2258,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       hostSel: "#sankey-media", figId: "fig-media",
       yearInputs: null,
       filterField, filterValue,
+      topGroups: 10,             // top-10 mediums in the chosen scope/slice
     });
   }
   await safe("media figure", "#sankey-media")(() => renderMediaFig());
