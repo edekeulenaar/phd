@@ -233,6 +233,31 @@ async function renderManuscript() {
       }
     });
 
+    // 4a-epi) Wrap runs of right-aligned <div> blocks (the inline-styled
+    //         `<div style="text-align: right;">…</div>` epigraph convention
+    //         used in the source) into a single `<div class="epigraph">`
+    //         so the whole quote-block can be styled as one unit with a
+    //         monospace typeface and generous top/bottom gaps.
+    {
+      const isRA = el => el && el.tagName === "DIV" &&
+        /text-align\s*:\s*right/i.test(el.getAttribute("style") || "");
+      const seen = new WeakSet();
+      [...host.querySelectorAll("div")].forEach(el => {
+        if (seen.has(el) || !isRA(el) || el.classList.contains("epigraph")) return;
+        const run = [];
+        let cur = el;
+        while (isRA(cur)) {
+          run.push(cur);
+          seen.add(cur);
+          cur = cur.nextElementSibling;
+        }
+        const wrap = document.createElement("div");
+        wrap.className = "epigraph";
+        el.parentNode.insertBefore(wrap, el);
+        run.forEach(n => wrap.appendChild(n));
+      });
+    }
+
     // 4a-fig) Mark in-prose figure placeholders. An <img> whose filename is
     //         `fig-<slug>.(png|jpg|svg|…)` is a placeholder for the live
     //         interactive `<figure id="fig-<slug>">`. We mark it here; the
