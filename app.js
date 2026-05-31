@@ -2682,6 +2682,22 @@ const FIG_SPAWNERS = {
 // `for` attribute suffixed so the new instance doesn't collide with the
 // original (or with any sibling instance). Empties the inner chart host
 // in case the snapshot happened to capture a rendered SVG.
+// Overwrite an inline-mounted figure's <figcaption> with the placeholder
+// image's alt text. The alt is parsed for a leading "Figure N." token so
+// the existing terracotta `<span class="fig-num">` styling can be reused;
+// the rest of the alt becomes the running caption.
+function overrideFigCaptionFromAlt(figEl, altText) {
+  if (!figEl || !altText) return;
+  const cap = figEl.querySelector(".fig-cap");
+  if (!cap) return;
+  const m = altText.trim().match(/^((?:Figure|Table|Listing|Prompt)\s+\d+[a-z]?)\s*\.?\s*(.*)$/i);
+  if (m) {
+    cap.innerHTML = `<span class="fig-num">${escapeHtml(m[1])}.</span> ${escapeHtml(m[2])}`;
+  } else {
+    cap.textContent = altText;
+  }
+}
+
 function buildFigureInstance(slug) {
   const template = FIG_TEMPLATES.get(slug);
   if (!template) return null;
@@ -2735,8 +2751,12 @@ function promoteInlineFigures() {
 
     const n = (seenCount.get(slug) || 0) + 1;
     seenCount.set(slug, n);
+    // Capture the caption the author wrote in the embed's alt text so
+    // every inline instance gets its own "Figure N. <title>" instead
+    // of inheriting the template's generic caption.
+    const altText = (img.getAttribute("alt") || "").trim();
 
-    let targetEl, targetId;
+    let targetEl, targetId, renderReady = Promise.resolve();
     if (n === 1) {
       // First occurrence — move the original live figure to this spot.
       const live = document.getElementById(slug);
@@ -2744,6 +2764,7 @@ function promoteInlineFigures() {
       outer.replaceWith(live);
       live.classList.add("fig-live-mounted");
       targetEl = live; targetId = slug;
+      // The original figure has already rendered; no need to wait.
     } else {
       // Subsequent occurrence — spawn an independent instance so this
       // placeholder gets its own interactive chart with its own filter
@@ -2755,14 +2776,23 @@ function promoteInlineFigures() {
       outer.replaceWith(inst.fig);
       inst.fig.classList.add("fig-live-mounted");
       targetEl = inst.fig; targetId = inst.fig.id;
-      // Kick off the renderer for this fresh instance.
-      Promise.resolve().then(() => spawner(inst.sfx)).catch(console.error);
+      // Kick off the renderer for this fresh instance and remember its
+      // promise so we can apply URL filters AFTER the initial render has
+      // populated every <select>. Otherwise el.value="…" lands on an
+      // empty dropdown and is silently overwritten by `sel1.value = pv[0]`.
+      renderReady = Promise.resolve()
+        .then(() => spawner(inst.sfx))
+        .catch(e => { console.error(e); });
     }
 
+    if (altText) overrideFigCaptionFromAlt(targetEl, altText);
+
     if (inheritedParams && Object.keys(inheritedParams).length) {
-      // Defer until after the chart's controls finish populating, so
-      // <select>s have the right options to receive the value.
-      setTimeout(() => applyFigureFilters(targetId, inheritedParams), 120);
+      renderReady.then(() => {
+        // One extra microtask so the renderer's initial render-on-mount
+        // settles before we override its defaults.
+        setTimeout(() => applyFigureFilters(targetId, inheritedParams), 30);
+      });
     }
     if (location.hash === "#" + slug && targetEl) {
       requestAnimationFrame(() =>
