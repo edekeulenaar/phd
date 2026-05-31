@@ -2655,64 +2655,73 @@ function _resolveFilterEl(cfg, sfx, figEl) {
   return null;
 }
 
-async function applyFigureFilters(figId, params) {
-  // Spawned instances carry a `-iN` suffix on every id inside their card.
-  // Strip it to look up the base filter map, then re-apply the same suffix
-  // when resolving control ids.
+function _trySetSelect(el, v) {
+  // Try several matching strategies — exact value, case-insensitive,
+  // URL-decoded — so an `%20`-encoded URL param can still bind to a
+  // raw-space option in the dropdown if anything intermediate decoded
+  // or normalised the value.
+  if (!el) return false;
+  for (const opt of el.options) if (opt.value === v) { el.value = v; return true; }
+  const vL = String(v).toLowerCase();
+  for (const opt of el.options) {
+    if (opt.value.toLowerCase() === vL ||
+        opt.textContent.toLowerCase() === vL) {
+      el.value = opt.value; return true;
+    }
+  }
+  let vD = v; try { vD = decodeURIComponent(v); } catch {}
+  if (vD !== v) {
+    for (const opt of el.options) if (opt.value === vD) { el.value = vD; return true; }
+  }
+  return false;
+}
+
+function _applyOne(figId, params) {
   const m = /-i\d+$/.exec(figId);
   const baseId = m ? figId.slice(0, m.index) : figId;
   const sfx    = m ? m[0] : "";
   const map    = FIG_FILTER_MAP[baseId];
-  if (!map || !params) return;
+  if (!map || !params) return { allOk: true, missing: [] };
   const figEl = document.getElementById(figId);
-
-  // Poll briefly: a spawned instance may have just finished its initial
-  // render but its <select>s might not have populated *all* options yet
-  // (in particular the topic dropdown — the renderer populates it before
-  // it returns, but a busy main thread can stretch the timing).
-  async function ready() {
-    for (let attempt = 0; attempt < 30; attempt++) {
-      let needWait = false;
-      for (const [k, v] of Object.entries(params)) {
-        const cfg = map[k]; if (!cfg) continue;
-        if (cfg.kind !== "select") continue;
-        const el = _resolveFilterEl(cfg, sfx, figEl);
-        if (!el || !el.options.length) { needWait = true; break; }
-        // Option present yet?
-        if (![...el.options].some(o => o.value === v)) { needWait = true; break; }
-      }
-      if (!needWait) return;
-      await new Promise(r => setTimeout(r, 50));
-    }
-  }
-  await ready();
-
+  const missing = [];
   for (const [k, v] of Object.entries(params)) {
     const cfg = map[k]; if (!cfg) continue;
     const el = _resolveFilterEl(cfg, sfx, figEl);
-    if (!el) continue;
+    if (!el) { missing.push(k); continue; }
     if (cfg.kind === "tab") {
       const attr = cfg.attr || "data-mode";
       const btn = el.querySelector(`[${attr}="${CSS.escape(v)}"]`);
-      if (btn) btn.click();
-    } else if (cfg.kind === "select" || cfg.kind === "input") {
+      if (btn) btn.click(); else missing.push(k);
+    } else if (cfg.kind === "select") {
+      if (!_trySetSelect(el, v)) { missing.push(k); continue; }
+      el.dispatchEvent(new Event("change", { bubbles: true }));
+    } else if (cfg.kind === "input") {
       el.value = v;
       el.dispatchEvent(new Event("change", { bubbles: true }));
       el.dispatchEvent(new Event("input",  { bubbles: true }));
     }
   }
-  // Defensive re-application: once more after a short tick, in case any
-  // race condition reset a dropdown back to its default.
-  setTimeout(() => {
-    for (const [k, v] of Object.entries(params)) {
-      const cfg = map[k]; if (!cfg || cfg.kind === "tab") continue;
-      const el = _resolveFilterEl(cfg, sfx, figEl);
-      if (!el || el.value === v) continue;
-      el.value = v;
-      el.dispatchEvent(new Event("change", { bubbles: true }));
-      el.dispatchEvent(new Event("input",  { bubbles: true }));
+  return { allOk: missing.length === 0, missing };
+}
+
+async function applyFigureFilters(figId, params) {
+  if (!params || !Object.keys(params).length) return;
+  // Run several apply passes spread out over ~3 seconds. Each pass tries to
+  // bind every param; we stop early once a pass binds them all. This
+  // tolerates the slowest spawn pipelines (8+ concurrent renderBeeswarm
+  // calls on the same CSV) without giving up.
+  const delays = [0, 80, 200, 400, 800, 1500, 2500];
+  for (const ms of delays) {
+    if (ms) await new Promise(r => setTimeout(r, ms));
+    const { allOk, missing } = _applyOne(figId, params);
+    if (allOk) return;
+    // Diagnostic: surface what we couldn't bind so a quick console glance
+    // explains a stuck filter. Throttled so it doesn't flood.
+    if (ms >= 800) {
+      console.warn(`[fig-filter] ${figId}: still unbound after ${ms} ms →`,
+                   missing);
     }
-  }, 150);
+  }
 }
 
 function applyHashFiltersAndScroll() {
