@@ -921,6 +921,15 @@ function topDisciplines(rows, k = TOP_K) {
   const cs = d3.scaleOrdinal().domain(ordered).range(PALETTE_TOP);
   const fn = d => ordered.includes(d || "(unspecified)") ? cs(d) : GREY_OTHER;
   fn.legend = ordered;
+  // "Other" lump: every row not in the top-K, summed.
+  const otherCit = [...agg.entries()]
+    .filter(([d]) => !ordered.includes(d))
+    .reduce((s, [, v]) => s + v.cit, 0);
+  const otherN = [...agg.entries()]
+    .filter(([d]) => !ordered.includes(d))
+    .reduce((s, [, v]) => s + v.n, 0);
+  fn.cits      = d => (d === "other" ? otherCit : (agg.get(d)?.cit || 0));
+  fn.itemsOf   = d => (d === "other" ? otherN   : (agg.get(d)?.n   || 0));
   return fn;
 }
 
@@ -1093,8 +1102,8 @@ async function renderBubble({ csv, yField, hostSel, figId, yearInputs }) {
     // Register the sidebar key for this figure.
     figKey.register(figId, {
       title: "Discipline (top 10)",
-      legend: color.legend.map(d => ({ label: d, color: color(d) }))
-                  .concat([{ label: "other", color: GREY_OTHER }]),
+      legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
+                  .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
       onHighlight(name) {
         dots
           .classed("dim", d => name && !(
@@ -1536,8 +1545,8 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     // Sidebar key — top-10 disciplines + "other".
     figKey.register(figId, {
       title: "Discipline (top 10)",
-      legend: color.legend.map(d => ({ label: d, color: color(d) }))
-                  .concat([{ label: "other", color: GREY_OTHER }]),
+      legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
+                  .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
       onHighlight(name) {
         dots
           .classed("dim", d => name && !(
@@ -1607,8 +1616,8 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
 
     figKey.register(figId, {
       title: "Dominant Discipline (top 10)",
-      legend: color.legend.map(d => ({ label: d, color: color(d) }))
-                  .concat([{ label: "other", color: GREY_OTHER }]),
+      legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
+                  .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
       onHighlight(name) {
         cellsSel
           .classed("dim", d => name && !(
@@ -1857,9 +1866,12 @@ const figKey = (() => {
     r.legend.forEach(it => {
       const d = document.createElement("div");
       d.className = "fk-item" + (active === it.label ? " active" : "");
+      // Estimated citation count (sum of Citations within the filtered data)
+      // shown as a muted right-aligned chip, when the registrar provided one.
+      const cit = (it.cit != null) ? `<span class="fk-cit">${d3.format(",")(it.cit)}</span>` : "";
       d.innerHTML =
         `<span class="fk-sw" style="background:${it.color}"></span>
-         <span class="fk-lab">${escapeHtml(it.label)}</span>`;
+         <span class="fk-lab">${escapeHtml(it.label)}</span>` + cit;
       d.addEventListener("click", () => {
         active = (active === it.label) ? null : it.label;
         r.onHighlight && r.onHighlight(active);
@@ -2471,6 +2483,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   observeActiveFigure();    // swap the sidebar fig-key as you scroll
   setupFigureDownloads();   // ⬇ PNG / ⬇ SVG buttons on every chart
   promoteInlineFigures();   // swap manuscript placeholders for live figures
+  setTimeout(applyHashFiltersAndScroll, 60); // honour any `?key=val` in #hash
 });
 
 /* If `manuscript.md` embeds a screenshot called `fig-<slug>.png`, we treat
@@ -2479,6 +2492,108 @@ window.addEventListener("DOMContentLoaded", async () => {
    into the placeholder's spot, so the prose flows directly into the
    interactive chart. The PNG and any "View interactive" pill we added earlier
    are discarded — they were only for the static (PDF) surface. */
+/* ── URL filter system ─────────────────────────────────────────────────
+   Lets manuscript embeds carry a filter state via the URL fragment:
+       #fig-beeswarm-topics?topic=Censorship&type=WHO&sort=qty-desc
+   On load and on every hashchange we parse this, find the figure, set
+   each control to its declared value, and trigger a re-render. The same
+   parser feeds `promoteInlineFigures()` so an inline placeholder wrapped
+   in such a link inherits the filter state when its live figure is
+   promoted into the manuscript flow.
+   ─────────────────────────────────────────────────────────────────── */
+
+const FIG_FILTER_MAP = {
+  "fig-year-topic": {
+    view:  { sel: '#fig-year-topic .seg', kind: "tab", attr: "data-mode" },
+    y0:    { sel: "#yt-y0", kind: "input" }, y1: { sel: "#yt-y1", kind: "input" },
+  },
+  "fig-year-subtopic": {
+    view:  { sel: '#fig-year-subtopic .seg', kind: "tab", attr: "data-mode" },
+    y0:    { sel: "#ys-y0", kind: "input" }, y1: { sel: "#ys-y1", kind: "input" },
+  },
+  "fig-beeswarm-topics": {
+    topic:    { sel: "#bee-topic-select",   kind: "select" },
+    type:     { sel: "#bee-type-select",    kind: "select" },
+    sort:     { sel: "#bee-sort-select",    kind: "select" },
+    language: { sel: "#bee-lang-select",    kind: "select" },
+    medium:   { sel: "#bee-media-select",   kind: "select" },
+    country:  { sel: "#bee-country-select", kind: "select" },
+    search:   { sel: "#bee-search",         kind: "input" },
+    view:     { sel: "#fig-beeswarm-topics .seg", kind: "tab", attr: "data-mode" },
+    y0:       { sel: "#bt-y0",              kind: "input" },
+    y1:       { sel: "#bt-y1",              kind: "input" },
+  },
+  "fig-beeswarm-cm": {
+    subtopic: { sel: "#bee-cm-select",         kind: "select" },
+    type:     { sel: "#bee-cm-type-select",    kind: "select" },
+    sort:     { sel: "#bee-cm-sort-select",    kind: "select" },
+    language: { sel: "#bee-cm-lang-select",    kind: "select" },
+    medium:   { sel: "#bee-cm-media-select",   kind: "select" },
+    country:  { sel: "#bee-cm-country-select", kind: "select" },
+    search:   { sel: "#bee-cm-search",         kind: "input" },
+    view:     { sel: "#fig-beeswarm-cm .seg",  kind: "tab", attr: "data-mode" },
+    y0:       { sel: "#bc-y0",                 kind: "input" },
+    y1:       { sel: "#bc-y1",                 kind: "input" },
+  },
+  "fig-media": {
+    scope: { sel: '#fig-media [aria-label="Universe"]', kind: "tab", attr: "data-scope" },
+    view:  { sel: '#fig-media [aria-label="View"]',     kind: "tab", attr: "data-view"  },
+    show:  { sel: "#bump-media-select", kind: "select" },
+  },
+  "fig-lang-country": {
+    mode: { sel: '#fig-lang-country .fig-controls', kind: "tab", attr: "data-mode" },
+  },
+};
+
+/** Parse a hash string like "fig-id?key=val&…" → {id, params}. */
+function parseFigHash(hashStr) {
+  const h = (hashStr || location.hash || "").replace(/^#/, "");
+  if (!h) return null;
+  const i = h.indexOf("?");
+  const id = (i < 0 ? h : h.slice(0, i)).trim();
+  if (!id) return null;
+  const params = {};
+  if (i >= 0) {
+    new URLSearchParams(h.slice(i + 1)).forEach((v, k) => { params[k] = v; });
+  }
+  return { id, params };
+}
+
+function applyFigureFilters(figId, params) {
+  const map = FIG_FILTER_MAP[figId];
+  if (!map || !params) return;
+  for (const [k, v] of Object.entries(params)) {
+    const cfg = map[k]; if (!cfg) continue;
+    const el = document.querySelector(cfg.sel); if (!el) continue;
+    if (cfg.kind === "tab") {
+      const attr = cfg.attr || "data-mode";
+      const btn = el.querySelector(`[${attr}="${CSS.escape(v)}"]`);
+      if (btn) btn.click();
+    } else if (cfg.kind === "select" || cfg.kind === "input") {
+      el.value = v;
+      el.dispatchEvent(new Event("change", { bubbles: true }));
+      el.dispatchEvent(new Event("input",  { bubbles: true }));
+    }
+  }
+}
+
+function applyHashFiltersAndScroll() {
+  const parsed = parseFigHash(location.hash);
+  if (!parsed) return;
+  applyFigureFilters(parsed.id, parsed.params);
+  const fig = document.getElementById(parsed.id);
+  if (fig) {
+    let el = fig;
+    while (el && el !== document.body) {
+      if (el.tagName === "DETAILS" && !el.open) el.open = true;
+      el = el.parentElement;
+    }
+    requestAnimationFrame(() =>
+      fig.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
+}
+window.addEventListener("hashchange", applyHashFiltersAndScroll);
+
 function promoteInlineFigures() {
   const placeholders = document.querySelectorAll("img.inline-fig-placeholder");
   placeholders.forEach(img => {
@@ -2503,8 +2618,25 @@ function promoteInlineFigures() {
     (outer.parentElement || document)
        .querySelectorAll(".fig-live-pill").forEach(el => el.remove());
 
+    // If the placeholder is wrapped in a markdown link whose href carries
+    // filter params (e.g. ".../#fig-beeswarm-topics?topic=Censorship&type=HOW"),
+    // capture them now so we can apply them AFTER the figure is in place.
+    let inheritedParams = null;
+    if (outer.tagName === "A" && outer.getAttribute("href")) {
+      try {
+        const u = new URL(outer.getAttribute("href"), location.href);
+        const parsed = parseFigHash(u.hash);
+        if (parsed && parsed.id === slug) inheritedParams = parsed.params;
+      } catch { /* ignore malformed URLs */ }
+    }
+
     outer.replaceWith(live);
     live.classList.add("fig-live-mounted");
+    if (inheritedParams && Object.keys(inheritedParams).length) {
+      // Defer until after the chart's controls finish populating, so
+      // <select>s have the right options to receive the value.
+      setTimeout(() => applyFigureFilters(slug, inheritedParams), 50);
+    }
     if (location.hash === "#" + slug) {
       requestAnimationFrame(() =>
         live.scrollIntoView({ block: "start", behavior: "smooth" }));
