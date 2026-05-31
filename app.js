@@ -919,6 +919,27 @@ const GREY_OTHER   = "#cdc8c0";
 
 /** Top-K disciplines in `rows` by item count, ties broken by total citations.
  *  Returns a fn(d)→colour AND fn.legend (the top-K names in order). */
+/** Build a "Size" sub-legend for figures whose dots encode Citations.
+ *  Given the same rScale the chart uses and the citation domain, picks
+ *  three round-number ticks (small / mid / large) and returns
+ *  `{ title, unit, ticks: [{value, radius}, …] }` ready for figKey. */
+function buildCitationSizeLegend(rScale, rows, citField = "Citations") {
+  if (!rScale) return null;
+  const cits = rows.map(r => +r[citField] || 0).filter(c => c > 0);
+  if (!cits.length) return null;
+  const max = d3.max(cits) || 1;
+  // Pick three "nice" ticks spanning the visible range. We bias to the
+  // upper half because readers care more about how big the BIG dots are
+  // than the small ones (which are visually indistinguishable anyway).
+  const pow10 = Math.pow(10, Math.floor(Math.log10(Math.max(max, 10))));
+  const candidates = [1, 10, 100, 1_000, 10_000, 100_000]
+    .filter(v => v <= max * 1.1);
+  while (candidates.length > 3) candidates.shift();   // keep last three
+  if (candidates.length < 3) candidates.unshift(1);   // pad small end
+  const ticks = candidates.map(v => ({ value: v, radius: rScale(v) }));
+  return { title: "Citations", unit: "", ticks };
+}
+
 function topDisciplines(rows, k = TOP_K) {
   const agg = d3.rollup(rows,
     v => ({ n: v.length, cit: d3.sum(v, r => +r.Citations || 0) }),
@@ -1112,6 +1133,7 @@ async function renderBubble({ csv, yField, hostSel, figId, yearInputs }) {
       title: "Discipline (top 10)",
       legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
                   .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
+      sizeLegend: buildCitationSizeLegend(rScale, data),
       onHighlight(name) {
         dots
           .classed("dim", d => name && !(
@@ -1555,6 +1577,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       title: "Discipline (top 10)",
       legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
                   .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
+      sizeLegend: buildCitationSizeLegend(rScale, data),
       onHighlight(name) {
         dots
           .classed("dim", d => name && !(
@@ -1626,6 +1649,16 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       title: "Dominant Discipline (top 10)",
       legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
                   .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
+      sizeLegend: (() => {
+        // Matrix view dot scale is "items per cell" rather than per-item
+        // citations — surface the same idea with three round ticks.
+        if (!rs) return null;
+        const maxV = rs.domain()[1] || 1;
+        const ticks = [1, 5, 10, 25, 50, 100, 250, 500, 1000]
+          .filter(v => v <= maxV * 1.1).slice(-3)
+          .map(value => ({ value, radius: rs(value) }));
+        return { title: "Items per cell", unit: "", ticks };
+      })(),
       onHighlight(name) {
         cellsSel
           .classed("dim", d => name && !(
@@ -1887,6 +1920,30 @@ const figKey = (() => {
       });
       body.appendChild(d);
     });
+    // Optional size legend — e.g. "Citations" with three example dots
+    // sized by the same scale the chart uses. Passed by figures whose
+    // datapoint area encodes a magnitude (beeswarm, matrix, bubble).
+    if (r.sizeLegend && r.sizeLegend.ticks && r.sizeLegend.ticks.length) {
+      const sizes = document.createElement("div");
+      sizes.className = "fk-sizes";
+      sizes.innerHTML = `<div class="fk-sub-h">${
+        escapeHtml(r.sizeLegend.title || "Size")
+      }</div>`;
+      const fmt = d3.format(",");
+      r.sizeLegend.ticks.forEach(t => {
+        const radius = Math.max(2, +t.radius || 2);
+        const row = document.createElement("div");
+        row.className = "fk-size-row";
+        row.innerHTML =
+          `<span class="fk-size-dot" style="width:${2*radius}px;height:${2*radius}px"></span>
+           <span class="fk-size-lab">${fmt(+t.value || 0)}${
+             r.sizeLegend.unit ? ` ${escapeHtml(r.sizeLegend.unit)}` : ""
+           }</span>`;
+        sizes.appendChild(row);
+      });
+      body.appendChild(sizes);
+    }
+
     clear.hidden = !active;
     clear.onclick = () => {
       active = null;

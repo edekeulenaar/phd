@@ -807,6 +807,38 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   white-space: nowrap;
 }
 #fig-key .fk-item.active .fk-cit { color: var(--paper); opacity: 0.7; }
+/* Size-encoding section: "Citations" with three example bubbles
+   scaled by the same rScale the chart uses. Sits below the colour
+   legend, separated by a thin rule. */
+#fig-key .fk-sizes {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--rule);
+}
+#fig-key .fk-sub-h {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+#fig-key .fk-size-row {
+  display: flex; align-items: center; gap: 0.55em;
+  padding: 0.12em 0.25em;
+  font-size: 12px;
+}
+#fig-key .fk-size-dot {
+  display: inline-block;
+  background: var(--ink-soft);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  flex: 0 0 auto;
+  /* dot is centred in a 24px column so different sizes align horizontally */
+  margin: 0 calc(12px - 0.5 * var(--w, 12px));
+}
+#fig-key .fk-size-lab {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
 #fig-key .fk-item.active .fk-sw { outline: 1px solid var(--paper); }
 #fig-key .fk-clear {
   margin-top: 0.5rem;
