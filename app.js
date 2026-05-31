@@ -2584,32 +2584,55 @@ function parseFigHash(hashStr) {
   return { id, params };
 }
 
-function applyFigureFilters(figId, params) {
+function _resolveFilterEl(cfg, sfx, figEl) {
+  if (cfg.sel && cfg.sel.startsWith("#")) {
+    const baseSel = cfg.sel.replace(/^#/, "");
+    const space   = baseSel.indexOf(" ");
+    const idPart  = space < 0 ? baseSel : baseSel.slice(0, space);
+    const tail    = space < 0 ? ""      : baseSel.slice(space);
+    let el = document.getElementById(idPart + sfx);
+    if (el && tail) el = el.querySelector(tail);
+    return el;
+  }
+  if (cfg.sel) return (figEl || document).querySelector(cfg.sel);
+  return null;
+}
+
+async function applyFigureFilters(figId, params) {
   // Spawned instances carry a `-iN` suffix on every id inside their card.
   // Strip it to look up the base filter map, then re-apply the same suffix
-  // when resolving control ids; for tab selectors, scope the query to the
-  // instance's <figure> element so the right tablist is found.
+  // when resolving control ids.
   const m = /-i\d+$/.exec(figId);
   const baseId = m ? figId.slice(0, m.index) : figId;
   const sfx    = m ? m[0] : "";
   const map    = FIG_FILTER_MAP[baseId];
   if (!map || !params) return;
   const figEl = document.getElementById(figId);
+
+  // Poll briefly: a spawned instance may have just finished its initial
+  // render but its <select>s might not have populated *all* options yet
+  // (in particular the topic dropdown — the renderer populates it before
+  // it returns, but a busy main thread can stretch the timing).
+  async function ready() {
+    for (let attempt = 0; attempt < 30; attempt++) {
+      let needWait = false;
+      for (const [k, v] of Object.entries(params)) {
+        const cfg = map[k]; if (!cfg) continue;
+        if (cfg.kind !== "select") continue;
+        const el = _resolveFilterEl(cfg, sfx, figEl);
+        if (!el || !el.options.length) { needWait = true; break; }
+        // Option present yet?
+        if (![...el.options].some(o => o.value === v)) { needWait = true; break; }
+      }
+      if (!needWait) return;
+      await new Promise(r => setTimeout(r, 50));
+    }
+  }
+  await ready();
+
   for (const [k, v] of Object.entries(params)) {
     const cfg = map[k]; if (!cfg) continue;
-    let el = null;
-    if (cfg.sel && cfg.sel.startsWith("#")) {
-      // ID selector — append suffix to find the spawned-instance variant.
-      const baseSel = cfg.sel.replace(/^#/, "");
-      // For sels like "#fig-X .seg" we split off any descendant suffix.
-      const space = baseSel.indexOf(" ");
-      const idPart = space < 0 ? baseSel : baseSel.slice(0, space);
-      const tail   = space < 0 ? ""      : baseSel.slice(space);
-      el = document.getElementById(idPart + sfx);
-      if (el && tail) el = el.querySelector(tail);
-    } else if (cfg.sel) {
-      el = (figEl || document).querySelector(cfg.sel);
-    }
+    const el = _resolveFilterEl(cfg, sfx, figEl);
     if (!el) continue;
     if (cfg.kind === "tab") {
       const attr = cfg.attr || "data-mode";
@@ -2621,6 +2644,18 @@ function applyFigureFilters(figId, params) {
       el.dispatchEvent(new Event("input",  { bubbles: true }));
     }
   }
+  // Defensive re-application: once more after a short tick, in case any
+  // race condition reset a dropdown back to its default.
+  setTimeout(() => {
+    for (const [k, v] of Object.entries(params)) {
+      const cfg = map[k]; if (!cfg || cfg.kind === "tab") continue;
+      const el = _resolveFilterEl(cfg, sfx, figEl);
+      if (!el || el.value === v) continue;
+      el.value = v;
+      el.dispatchEvent(new Event("change", { bubbles: true }));
+      el.dispatchEvent(new Event("input",  { bubbles: true }));
+    }
+  }, 150);
 }
 
 function applyHashFiltersAndScroll() {
