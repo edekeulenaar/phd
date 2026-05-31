@@ -260,17 +260,25 @@ async function renderManuscript() {
 
     // 4a-fig) Mark in-prose figure placeholders. An <img> whose filename is
     //         `fig-<slug>.(png|jpg|svg|…)` is a placeholder for the live
-    //         interactive `<figure id="fig-<slug>">`. We mark it here; the
-    //         actual swap (move the live <figure> into this spot) happens in
-    //         `promoteInlineFigures()`, after every chart has finished
-    //         rendering in the Analysis section.
+    //         interactive `<figure id="fig-<slug>">`. Filenames may carry
+    //         extra suffixes denoting filter slices — `fig-beeswarm-topics-
+    //         what.png` is a slice of the base `fig-beeswarm-topics`
+    //         figure — so we walk progressively shorter hyphenated
+    //         prefixes until one matches an actual figure id on the page.
     host.querySelectorAll("img").forEach(img => {
       const src = img.getAttribute("src") || "";
       const fname = src.split("/").pop() || "";
       const m = fname.match(/^(fig[-_][\w.-]+?)(?:\.(?:png|jpe?g|gif|svg|webp))?$/i);
       if (!m) return;
-      const slug = m[1].replace(/_/g, "-").toLowerCase();
-      img.dataset.fig = slug;
+      let slug = m[1].replace(/_/g, "-").toLowerCase();
+      let resolved = slug;
+      while (!document.getElementById(resolved)) {
+        const i = resolved.lastIndexOf("-");
+        if (i < 4) { resolved = null; break; }   // can't trim past "fig-"
+        resolved = resolved.slice(0, i);
+      }
+      if (!resolved) return;     // no matching figure id → leave as static
+      img.dataset.fig = resolved;
       img.classList.add("inline-fig-placeholder");
     });
 
