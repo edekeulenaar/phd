@@ -13,13 +13,6 @@
     "harvard": "Allan, K. (2016) ‘A Benchmark for Politeness’, in A. Capone and J. L. Mey (eds.) *Interdisciplinary Studies in Pragmatics, Culture and Society*. Cham: Springer International Publishing, pp. 397–420. doi:10.1007/978-3-319-12616-6_15",
     "link": "https://doi.org/10.1007/978-3-319-12616-6_15"
   },
-  "allanForbiddenWordsTaboo2006": {
-    "author": "Allan and Burridge",
-    "year": "2006",
-    "inline": "(Allan and Burridge, 2006)",
-    "harvard": "Allan, K. and Burridge, K. (2006) *Forbidden Words: Taboo and the Censoring of Language*. Cambridge University Press.",
-    "link": ""
-  },
   "amadieuFormesContemporainesCensure2020": {
     "author": "Amadieu and Talon-Hugon",
     "year": "2020",
@@ -139,13 +132,6 @@
     "harvard": "De Gregorio, G. (2020) ‘Democratising Online Content Moderation: A Constitutional Framework’, *Computer Law & Security Review*, 36, pp. 105374. doi:10.1016/j.clsr.2019.105374",
     "link": "https://doi.org/10.1016/j.clsr.2019.105374"
   },
-  "deibertAccessDeniedPractice2008": {
-    "author": "Deibert et al.",
-    "year": "2008",
-    "inline": "(Deibert et al., 2008)",
-    "harvard": "R. Deibert, J. Palfrey, R. Rohozinski and J. Zittrain (eds.) (2008) *Access Denied: The Practice and Policy of Global Internet Filtering*. Cambridge, Massachusetts: The MIT Press.",
-    "link": ""
-  },
   "deibertGeopoliticsInternetControl2008": {
     "author": "Deibert",
     "year": "2008",
@@ -187,13 +173,6 @@
     "inline": "(Faugere et al., 2023)",
     "harvard": "Faugere, C., Mugnier, V. and Sylvos, F. (2023) *Censure et tabou*. Classiques Garnier.",
     "link": ""
-  },
-  "foucaultHistoireSexualiteVol2019": {
-    "author": "Foucault",
-    "year": "2019",
-    "inline": "(Foucault, 2019)",
-    "harvard": "Foucault, M. (2019) ‘Histoire de la sexualité, vol. 1, La volonté de savoir’, *Socio-anthropologie*, pp. 217–222. doi:10.4000/socio-anthropologie.6345",
-    "link": "https://doi.org/10.4000/socio-anthropologie.6345"
   },
   "fraserRethinkingPublicSphere1990": {
     "author": "Fraser",
@@ -335,6 +314,13 @@
     "harvard": "Moretti, F. (2013) *Distant Reading*. London ; New York: Verso.",
     "link": ""
   },
+  "mullerCensorshipCulturalRegulation2004b": {
+    "author": "Müller",
+    "year": "2004",
+    "inline": "(Müller, 2004)",
+    "harvard": "Müller, B. (2004) *Censorship and Cultural Regulation in the Modern Age*. Boston: BRILL.",
+    "link": ""
+  },
   "mungerRightWingYouTubeSupply2020": {
     "author": "Munger and Phillips",
     "year": "2020",
@@ -377,6 +363,13 @@
     "harvard": "Roberts, S. T. (2019) *Behind the Screen: Content Moderation in the Shadows of Social Media*. New Haven and London: Yale University Press.",
     "link": ""
   },
+  "roussinLiberteDexpressionNouvelles2020": {
+    "author": "Roussin",
+    "year": "2020",
+    "inline": "(Roussin, 2020)",
+    "harvard": "Roussin, P. (2020) ‘Liberté d'expression et nouvelles théories de la censure’, *Communications*, n° 106(1), pp. 17–32. doi:10.3917/commu.106.0017",
+    "link": "https://doi.org/10.3917/commu.106.0017"
+  },
   "ruckensteinRehumanizingPlatformContent2020": {
     "author": "Ruckenstein and Turunen",
     "year": "2020",
@@ -390,13 +383,6 @@
     "inline": "(Sander, 2019-2020)",
     "harvard": "Sander, B. (2019-2020) ‘Freedom of Expression in the Age of Online Platforms: The Promise and Pitfalls of a Human Rights-Based Approach to Content Moderation’, *Fordham International Law Journal*, 43, pp. 939.",
     "link": ""
-  },
-  "seeringMetaphorsModeration2020": {
-    "author": "Seering et al.",
-    "year": "2020",
-    "inline": "(Seering et al., 2020)",
-    "harvard": "Seering, J., Kaufman, G. and Chancellor, S. (2020) ‘Metaphors in Moderation’, *New Media & Society*, pp. 1461444820964968. doi:10.1177/1461444820964968",
-    "link": "https://doi.org/10.1177/1461444820964968"
   },
   "seeringMetaphorsModeration2022": {
     "author": "Seering et al.",
