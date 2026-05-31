@@ -188,27 +188,35 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 
 /* Obsidian `==highlight==` passages flag prose the author still wants to
-   revisit. Fade the text and append a tiny asterisk. The native browser
-   tooltip from `title="To be edited"` surfaces on hover.  */
+   revisit. Yellow background highlight (the same canary Obsidian uses) +
+   a small terracotta "to be edited" badge to the right of the passage. */
 .prose mark.edit-me {
-  background: transparent;
+  background: rgba(255, 224, 0, 0.42);
   color: inherit;
-  opacity: 0.45;
-  border-bottom: 1px dotted rgba(192, 67, 31, 0.45);
-  padding: 0 0.05em;
+  padding: 0.05em 0.15em;
+  border-radius: 2px;
   cursor: help;
-  transition: opacity 0.15s;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
-.prose mark.edit-me:hover { opacity: 0.85; }
 .prose mark.edit-me::after {
-  content: "*";
+  content: " ✎ to be edited";
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0 0.45em;
+  border-radius: 2px;
   font-family: var(--sans);
-  font-size: 0.85em;
-  color: var(--accent);
-  vertical-align: super;
-  margin-left: 0.15em;
-  opacity: 1;
+  font-size: 0.72em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: 0.18em;
+  background: var(--accent);
+  color: var(--paper);
+  font-style: normal;
+  font-weight: 600;
+  white-space: nowrap;
 }
+.prose mark.edit-me:hover { background: rgba(255, 224, 0, 0.65); }
 
 /* Prose tables (markdown GFM). Match the paper palette and keep them tight. */
 .prose table {
