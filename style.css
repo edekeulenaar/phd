@@ -168,6 +168,29 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .prose .loading { color: var(--muted); font-style: italic; }
 
+/* Obsidian `==highlight==` passages flag prose the author still wants to
+   revisit. Fade the text and append a tiny asterisk. The native browser
+   tooltip from `title="To be edited"` surfaces on hover.  */
+.prose mark.edit-me {
+  background: transparent;
+  color: inherit;
+  opacity: 0.45;
+  border-bottom: 1px dotted rgba(192, 67, 31, 0.45);
+  padding: 0 0.05em;
+  cursor: help;
+  transition: opacity 0.15s;
+}
+.prose mark.edit-me:hover { opacity: 0.85; }
+.prose mark.edit-me::after {
+  content: "*";
+  font-family: var(--sans);
+  font-size: 0.85em;
+  color: var(--accent);
+  vertical-align: super;
+  margin-left: 0.15em;
+  opacity: 1;
+}
+
 /* Prose tables (markdown GFM). Match the paper palette and keep them tight. */
 .prose table {
   border-collapse: collapse;

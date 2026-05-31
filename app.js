@@ -78,6 +78,27 @@ async function renderManuscript() {
       (_, src, cap) => `![${(cap || "").trim()}](${src.trim()})`
     );
 
+    // 3a-iv) Obsidian highlights: ==text== → <mark class="edit-me">text</mark>.
+    //        Used by the author to flag passages that still need editing;
+    //        the CSS fades them and appends a small "*" with a "To be
+    //        edited" tooltip. Skipped when the markers sit inside a fenced
+    //        code block (everything between matching ``` fences is held out
+    //        of the pre-processor and restored afterwards).
+    {
+      const blocks = [];
+      // Stash fenced code blocks so the `==` inside them stays literal.
+      md = md.replace(/```[\s\S]*?```/g, m => {
+        const i = blocks.push(m) - 1;
+        return `FENCE${i}`;
+      });
+      md = md.replace(
+        /==([^=\n][^=]*?[^=\n]|[^=\n])==/g,
+        (_, t) =>
+          `<mark class="edit-me" title="To be edited">${t}</mark>`
+      );
+      md = md.replace(/FENCE(\d+)/g, (_, i) => blocks[+i]);
+    }
+
     // 3b) Pre-process Obsidian-style wikilinks. We tolerate any of:
     //        [[#^slug]]                    → <a href="#slug">slug</a>
     //        [[#^slug|Display]]            → <a href="#slug">Display</a>
