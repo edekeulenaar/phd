@@ -2287,7 +2287,24 @@ function observeActiveFigure() {
   document.querySelectorAll("figure.fig").forEach(f => obs.observe(f));
 }
 
+// `FIG_TEMPLATES` snapshots every `.fig` card's outerHTML before any
+// renderer runs, so we can spawn fresh, fully-controlled instances of the
+// same figure later (one per inline manuscript placeholder that points at
+// the same id). Captured eagerly at script-eval time so the snapshot is
+// always pre-render.
+const FIG_TEMPLATES = new Map();
+function snapshotFigureTemplates() {
+  if (FIG_TEMPLATES.size) return;
+  document.querySelectorAll(".fig").forEach(fig => {
+    FIG_TEMPLATES.set(fig.id, fig.outerHTML);
+  });
+}
+if (document.readyState !== "loading") snapshotFigureTemplates();
+else document.addEventListener("DOMContentLoaded", snapshotFigureTemplates,
+                               { once: true });
+
 window.addEventListener("DOMContentLoaded", async () => {
+  snapshotFigureTemplates();          // safety: ensure captured before render
   try { await renderManuscript(); } catch (e) { console.error(e); }
 
   await safe("summary",  "#summary-table")(() => renderSummary());
@@ -2560,11 +2577,32 @@ function parseFigHash(hashStr) {
 }
 
 function applyFigureFilters(figId, params) {
-  const map = FIG_FILTER_MAP[figId];
+  // Spawned instances carry a `-iN` suffix on every id inside their card.
+  // Strip it to look up the base filter map, then re-apply the same suffix
+  // when resolving control ids; for tab selectors, scope the query to the
+  // instance's <figure> element so the right tablist is found.
+  const m = /-i\d+$/.exec(figId);
+  const baseId = m ? figId.slice(0, m.index) : figId;
+  const sfx    = m ? m[0] : "";
+  const map    = FIG_FILTER_MAP[baseId];
   if (!map || !params) return;
+  const figEl = document.getElementById(figId);
   for (const [k, v] of Object.entries(params)) {
     const cfg = map[k]; if (!cfg) continue;
-    const el = document.querySelector(cfg.sel); if (!el) continue;
+    let el = null;
+    if (cfg.sel && cfg.sel.startsWith("#")) {
+      // ID selector — append suffix to find the spawned-instance variant.
+      const baseSel = cfg.sel.replace(/^#/, "");
+      // For sels like "#fig-X .seg" we split off any descendant suffix.
+      const space = baseSel.indexOf(" ");
+      const idPart = space < 0 ? baseSel : baseSel.slice(0, space);
+      const tail   = space < 0 ? ""      : baseSel.slice(space);
+      el = document.getElementById(idPart + sfx);
+      if (el && tail) el = el.querySelector(tail);
+    } else if (cfg.sel) {
+      el = (figEl || document).querySelector(cfg.sel);
+    }
+    if (!el) continue;
     if (cfg.kind === "tab") {
       const attr = cfg.attr || "data-mode";
       const btn = el.querySelector(`[${attr}="${CSS.escape(v)}"]`);
@@ -2594,18 +2632,75 @@ function applyHashFiltersAndScroll() {
 }
 window.addEventListener("hashchange", applyHashFiltersAndScroll);
 
+// Per-figure spawner: given a slug + a unique suffix, render a fresh
+// instance of the figure with suffixed control ids so it's independent of
+// any other instance already on the page. Returns a Promise.
+const FIG_SPAWNERS = {
+  "fig-beeswarm-topics": (sfx) => renderBeeswarm({
+    csv: "data/beeswarm_by_topic.csv", groupField: "Category",
+    hostSel: "#beeswarm-topics" + sfx,
+    figId:   "fig-beeswarm-topics" + sfx,
+    controls: {
+      primarySel: "bee-topic-select" + sfx, primaryField: "Topic",
+      typeSel:    "bee-type-select" + sfx,
+      sortSel:    "bee-sort-select" + sfx,
+      langSel:    "bee-lang-select" + sfx,
+      mediaSel:   "bee-media-select" + sfx,
+      countrySel: "bee-country-select" + sfx,
+      searchSel:  "bee-search" + sfx,
+      tabsRoot:   "#fig-beeswarm-topics" + sfx + " .seg",
+      yearInputs: ["bt-y0" + sfx, "bt-y1" + sfx],
+    },
+  }),
+  "fig-beeswarm-cm": (sfx) => renderBeeswarm({
+    csv: "data/beeswarm_by_cm_subtopic.csv", groupField: "Category",
+    hostSel: "#beeswarm-cm" + sfx,
+    figId:   "fig-beeswarm-cm" + sfx,
+    controls: {
+      primarySel: "bee-cm-select" + sfx, primaryField: "Sub-topic",
+      typeSel:    "bee-cm-type-select" + sfx,
+      sortSel:    "bee-cm-sort-select" + sfx,
+      langSel:    "bee-cm-lang-select" + sfx,
+      mediaSel:   "bee-cm-media-select" + sfx,
+      countrySel: "bee-cm-country-select" + sfx,
+      searchSel:  "bee-cm-search" + sfx,
+      tabsRoot:   "#fig-beeswarm-cm" + sfx + " .seg",
+      yearInputs: ["bc-y0" + sfx, "bc-y1" + sfx],
+    },
+  }),
+};
+
+// Build a new figure card from the captured template, with every `id` and
+// `for` attribute suffixed so the new instance doesn't collide with the
+// original (or with any sibling instance). Empties the inner chart host
+// in case the snapshot happened to capture a rendered SVG.
+function buildFigureInstance(slug) {
+  const template = FIG_TEMPLATES.get(slug);
+  if (!template) return null;
+  let n = 1;
+  while (document.getElementById(slug + "-i" + n)) n++;
+  const sfx = "-i" + n;
+  const wrap = document.createElement("div");
+  wrap.innerHTML = template;
+  const fig = wrap.firstElementChild;
+  fig.id = slug + sfx;
+  fig.querySelectorAll("[id]").forEach(el => { el.id = el.id + sfx; });
+  fig.querySelectorAll("[for]").forEach(el =>
+    el.setAttribute("for", el.getAttribute("for") + sfx));
+  fig.querySelectorAll(".fig-body > div").forEach(host => { host.innerHTML = ""; });
+  return { fig, sfx };
+}
+
 function promoteInlineFigures() {
   const placeholders = document.querySelectorAll("img.inline-fig-placeholder");
+  const seenCount = new Map();        // slug → how many we've placed so far
   placeholders.forEach(img => {
     const slug = img.dataset.fig;
     if (!slug) return;
-    const live = document.getElementById(slug);
-    if (!live || live.classList.contains("fig-live-mounted")) return;
 
     // Walk up to the outermost wrapper the user might have written:
     //   `[![alt](fig.png)](url)` → wrapping <a>
     //   `![alt](fig.png)`        → just the <img>
-    // Replace whichever is at the top with the live figure.
     let outer = img;
     while (outer.parentElement &&
            outer.parentElement !== document.body &&
@@ -2620,7 +2715,7 @@ function promoteInlineFigures() {
 
     // If the placeholder is wrapped in a markdown link whose href carries
     // filter params (e.g. ".../#fig-beeswarm-topics?topic=Censorship&type=HOW"),
-    // capture them now so we can apply them AFTER the figure is in place.
+    // capture them so we can apply them AFTER the figure is in place.
     let inheritedParams = null;
     if (outer.tagName === "A" && outer.getAttribute("href")) {
       try {
@@ -2630,16 +2725,40 @@ function promoteInlineFigures() {
       } catch { /* ignore malformed URLs */ }
     }
 
-    outer.replaceWith(live);
-    live.classList.add("fig-live-mounted");
+    const n = (seenCount.get(slug) || 0) + 1;
+    seenCount.set(slug, n);
+
+    let targetEl, targetId;
+    if (n === 1) {
+      // First occurrence — move the original live figure to this spot.
+      const live = document.getElementById(slug);
+      if (!live || live.classList.contains("fig-live-mounted")) return;
+      outer.replaceWith(live);
+      live.classList.add("fig-live-mounted");
+      targetEl = live; targetId = slug;
+    } else {
+      // Subsequent occurrence — spawn an independent instance so this
+      // placeholder gets its own interactive chart with its own filter
+      // state. Only figures with a registered spawner can multiply.
+      const spawner = FIG_SPAWNERS[slug];
+      if (!spawner) return;                  // leave the static image alone
+      const inst = buildFigureInstance(slug);
+      if (!inst) return;
+      outer.replaceWith(inst.fig);
+      inst.fig.classList.add("fig-live-mounted");
+      targetEl = inst.fig; targetId = inst.fig.id;
+      // Kick off the renderer for this fresh instance.
+      Promise.resolve().then(() => spawner(inst.sfx)).catch(console.error);
+    }
+
     if (inheritedParams && Object.keys(inheritedParams).length) {
       // Defer until after the chart's controls finish populating, so
       // <select>s have the right options to receive the value.
-      setTimeout(() => applyFigureFilters(slug, inheritedParams), 50);
+      setTimeout(() => applyFigureFilters(targetId, inheritedParams), 120);
     }
-    if (location.hash === "#" + slug) {
+    if (location.hash === "#" + slug && targetEl) {
       requestAnimationFrame(() =>
-        live.scrollIntoView({ block: "start", behavior: "smooth" }));
+        targetEl.scrollIntoView({ block: "start", behavior: "smooth" }));
     }
   });
 
