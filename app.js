@@ -545,14 +545,10 @@ async function renderManuscript() {
 
 function buildToc(items) {
   const ol = document.getElementById("toc");
-  // Insert the Analysis section as the last entries.
-  const tail = [
-    { level: 1, text: "Analysis",        id: "analysis"        },
-    { level: 2, text: "1. Overview",     id: "overview"        },
-    { level: 2, text: "2. Analysis",     id: "analysis-files"  },
-  ];
-  const list = items.concat(tail);
-  ol.innerHTML = list.map(it =>
+  // The TOC reflects ONLY the manuscript headings. The Analysis /
+  // 1. Overview / 2. Analysis entries that used to live here are dropped
+  // because the section itself is hidden — see promoteInlineFigures().
+  ol.innerHTML = items.map(it =>
     `<li class="lvl-${it.level}"><a href="#${it.id}">${escapeHtml(it.text)}</a></li>`
   ).join("");
 }
