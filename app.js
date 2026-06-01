@@ -3003,42 +3003,24 @@ function promoteInlineFigures() {
     }
   });
 
-  // ── Tidy the Analysis / Overview section as figures move out of it ──
-  // For each <h2> inside `#analysis`, look at the elements between it and
-  // the next <h2>: if none of them contains a `.fig`, hide the heading.
-  // If `#analysis` ends up with no `.fig` at all, hide the whole section
-  // (including its lede paragraph). All hidden so the slug-anchored
-  // permalinks still resolve if anything later wants to un-hide them.
+  // ── Stash the Analysis / Overview section ──
+  // The figures in `#analysis` are FIGURE TEMPLATES — `promoteInlineFigures`
+  // either moves them into the manuscript flow (first occurrence of a slug)
+  // or clones them from a captured snapshot (subsequent spawns). Once the
+  // manuscript has finished pulling out everything it wants, the section
+  // itself has served its purpose: the figures it still owns are unreferenced
+  // in the prose, and we don't want the Analysis / Overview headings
+  // appearing on the public page either. So we hide the whole `<section>`
+  // wholesale. Crucially, the DOM is preserved so:
+  //   • slug-anchored permalinks (#fig-bump-cm-how etc.) still resolve to
+  //     the hidden node — the figure can be un-hidden by future code, or
+  //     scrolled to from a deep link;
+  //   • the FIG_SPAWNERS captured snapshots (taken at app boot, BEFORE this
+  //     tidy step) remain valid for cloning future inline instances.
   const analysis = document.getElementById("analysis");
   if (!analysis) return;
-  const allHeadings = [...analysis.querySelectorAll("h1, h2, h3")];
-  allHeadings.forEach((h, i) => {
-    const next = allHeadings[i + 1] || null;
-    let hasFig = false;
-    let el = h.nextElementSibling;
-    while (el && el !== next) {
-      if (el.matches(".fig") || el.querySelector(".fig")) { hasFig = true; break; }
-      el = el.nextElementSibling;
-    }
-    if (!hasFig) {
-      h.hidden = true;
-      // also hide everything between this heading and the next heading
-      // (intro paragraphs / "lede" text under an empty subsection).
-      let cur = h.nextElementSibling;
-      while (cur && cur !== next) {
-        if (!cur.classList.contains("fig")) cur.hidden = true;
-        cur = cur.nextElementSibling;
-      }
-    }
-  });
+  analysis.hidden = true;
   // If no figure remains in Analysis at all, hide the section header too.
-  if (!analysis.querySelector(".fig")) {
-    const head = analysis.querySelector(".analysis-head");
-    if (head) head.hidden = true;
-    // The `.analysis` wrapper itself stays in the DOM (it provides the
-    // section landmark and may host the page footer), but its contents
-    // are now all hidden.
-  }
 }
 
 /* ────────────────────────────────────────────────────────────────────────
