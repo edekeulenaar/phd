@@ -2148,7 +2148,7 @@ function inRange(r, lo, hi) {
 
 async function renderBump({ csv, yField, hostSel, figId, yearInputs,
                             filterField, filterValue, topGroups,
-                            relative = true }) {
+                            relative = true, minYearN = 10 }) {
   const all   = await loadCSV(csv);
   const data0 = all.filter(r => Number.isFinite(+r["Publication Year"]));
   // Optional row-level filter (e.g. "Topic = Content moderation"), used by
@@ -2178,6 +2178,9 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
   let currentGroups = [];
 
   function draw() {
+    // Local copy so a sample-size-driven fallback in one draw doesn't
+    // permanently disable relative mode across subsequent redraws.
+    let rel = relative;
     const [lo, hi]  = getYears();
     const rows      = data.filter(r => inRange(r, lo, hi));
     host.selectAll("*").remove();
@@ -2203,9 +2206,9 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
     // Rebuild the categorical colour scale on every redraw so a new filter
     // doesn't end up with stale group→colour bindings.
     if (yField !== "Topic") _scale = makeSubtopicScale(groups);
-    const years  = d3.range(d3.min(rows, r => +r["Publication Year"]),
-                             d3.max(rows, r => +r["Publication Year"]) + 1);
-    const counts = new Map(groups.map(g => [g, new Map(years.map(y => [y, 0]))]));
+    let years  = d3.range(d3.min(rows, r => +r["Publication Year"]),
+                           d3.max(rows, r => +r["Publication Year"]) + 1);
+    let counts = new Map(groups.map(g => [g, new Map(years.map(y => [y, 0]))]));
     rows.forEach(r => {
       const g = r[yField] || "(unknown)";
       const c = counts.get(g);                // undefined for trimmed long-tail
@@ -2214,20 +2217,37 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
       c.set(yr, (c.get(yr) || 0) + 1);
     });
     // Relative mode: each year's group counts become shares of that year's
-    // total (across *kept* groups). Empty years stay at 0.
-    if (relative) {
+    // total (across *kept* groups). With sparse early years (n ≤ 2 findings)
+    // a single coding lands at 100 % and the chart looks like Morse code — so
+    // drop any year with fewer than `minYearN` total findings BEFORE we
+    // normalise. The x-axis then starts at the first year that clears the bar.
+    if (rel) {
       const yearTotal = new Map(years.map(yr => [yr, 0]));
       groups.forEach(g => {
         const c = counts.get(g);
         years.forEach(yr => yearTotal.set(yr, yearTotal.get(yr) + (c.get(yr) || 0)));
       });
-      groups.forEach(g => {
-        const c = counts.get(g);
-        years.forEach(yr => {
-          const t = yearTotal.get(yr);
-          c.set(yr, t > 0 ? (c.get(yr) || 0) / t : 0);
+      const keepYears = years.filter(yr => yearTotal.get(yr) >= minYearN);
+      if (keepYears.length >= 2) {
+        years = keepYears;
+        const kept = new Set(years);
+        counts = new Map(groups.map(g => {
+          const c = counts.get(g);
+          return [g, new Map(years.map(yr => [yr, c.get(yr) || 0]))];
+        }));
+        // Re-normalise on the restricted year set.
+        groups.forEach(g => {
+          const c = counts.get(g);
+          years.forEach(yr => {
+            const t = yearTotal.get(yr);
+            c.set(yr, t > 0 ? (c.get(yr) || 0) / t : 0);
+          });
         });
-      });
+      } else {
+        // Not enough qualifying years — fall back to raw counts so the user
+        // sees *something* instead of an empty chart.
+        rel = false;
+      }
     }
 
     const W = Math.max(720, host.node().clientWidth || 880);
@@ -2235,7 +2255,7 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
     const m = { top: 24, right: 200, bottom: 36, left: 56 };
     const x = d3.scaleLinear().domain([years[0], years[years.length - 1]])
                               .range([m.left, W - m.right]);
-    const yMax = relative
+    const yMax = rel
       ? (d3.max(groups.flatMap(g => [...counts.get(g).values()])) || 1)
       : (d3.max(groups.flatMap(g => [...counts.get(g).values()])) || 1);
     const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - m.bottom, m.top]);
@@ -2249,7 +2269,7 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
     svg.append("g").attr("class", "axis")
       .attr("transform", `translate(${m.left},0)`)
       .call(d3.axisLeft(y).ticks(6)
-        .tickFormat(relative ? d3.format(".0%") : d3.format("d")));
+        .tickFormat(rel ? d3.format(".0%") : d3.format("d")));
 
     // Centripetal Catmull–Rom (α = 0.5) — gentle smoothing that passes
     // through every data point without the overshoot / Kandinsky humps
@@ -2301,8 +2321,8 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
         .attr("fill", d => colorFn(d.group))
         .on("mouseenter", (e, d) => dataCard.show(
           `<div class="dc-t">${escapeHtml(d.group)} · ${d.year}</div>
-           <div class="dc-row"><span>${relative ? "Share of year" : "Unique items"}</span>${
-              relative ? d3.format(".1%")(d.n) : d3.format(",")(d.n)
+           <div class="dc-row"><span>${rel ? "Share of year" : "Unique items"}</span>${
+              rel ? d3.format(".1%")(d.n) : d3.format(",")(d.n)
            }</div>`, e))
         .on("mousemove",  e => dataCard.move(e))
         .on("mouseleave", () => dataCard.hide());
