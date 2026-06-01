@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorship and moderation — the oscillations of a contested practice</title>
-<link rel="stylesheet" href="style.css?v=p6-67">
+<link rel="stylesheet" href="style.css?v=p6-68">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -420,6 +420,56 @@
       </div>
     </figure>
 
+    <!-- Figure 11: top-10 content-moderation HOWs over time (bump) -->
+    <figure class="fig" id="fig-bump-cm-how">
+      <figcaption class="fig-cap">
+        <span class="fig-num">Figure 11.</span>
+        Top-10 content-moderation <em>how</em> techniques over time —
+        one line per HOW category, restricted to items whose Topic is
+        Content moderation.
+      </figcaption>
+      <div class="fig-controls">
+        <span class="year-range">Years
+          <input type="number" id="bch-y0" step="1"> –
+          <input type="number" id="bch-y1" step="1">
+        </span>
+      </div>
+      <div class="fig-body"><div id="bump-cm-how"></div></div>
+      <div class="fig-foot">
+        <a class="dl" href="data/beeswarm_by_cm_subtopic.csv" download>⬇ Download CSV</a>
+        <span class="alt">
+          Each HOW category (Filtering, Removal, Review, Enframing, …) gets
+          one line; Y-axis is the number of findings published in that year.
+          Rows are taken from the <code>Type = HOW</code> slice of the
+          content-moderation beeswarm CSV, so an item can contribute multiple
+          HOW lines if it codes several techniques.
+        </span>
+      </div>
+    </figure>
+
+    <!-- Figure 12: WHO × HOW alluvial for content moderation -->
+    <figure class="fig" id="fig-cm-who-how">
+      <figcaption class="fig-cap">
+        <span class="fig-num">Figure 12.</span>
+        Content-moderation <em>who</em> → <em>how</em> — alluvial of the
+        top-10 actors against the top-10 HOW techniques most used by
+        platforms.
+      </figcaption>
+      <div class="fig-body"><div id="alluvial-cm-who-how"></div></div>
+      <div class="fig-foot">
+        <a class="dl" href="data/cm_who_how.csv" download>⬇ Download CSV</a>
+        <span class="alt">
+          Each ribbon is an (Actor × Technique) co-occurrence within an item.
+          The HOW column is the ten techniques most associated with
+          <em>Platforms</em> across the corpus; the WHO column is the ten
+          most-mentioned actors among items that deploy any of those
+          techniques. Width = number of items where the pair co-occurs.
+          Source: <code>cm_who_how.csv</code> (derived from
+          <code>beeswarm_by_cm_subtopic.csv</code>).
+        </span>
+      </div>
+    </figure>
+
     <footer class="page-foot">
       <p>Data rebuilt with <code>site/scripts/build_site_data.py</code>.</p>
     </footer>
@@ -443,7 +493,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
-<script src="app.js?v=p6-67" defer></script>
+<script src="app.js?v=p6-68" defer></script>
 
 </body>
 </html>

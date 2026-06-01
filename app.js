@@ -2522,6 +2522,32 @@ window.addEventListener("DOMContentLoaded", async () => {
       topRight: 15,    // cap the middle (Medium) column at the top 15
     }));
 
+  // Figure 11 — top-10 content-moderation HOW techniques over time.
+  // Reuses the CM beeswarm CSV with a Type=HOW row filter; renderBump
+  // groups by Category and caps at the 10 most-frequent lines.
+  await safe("CM HOW bump", "#bump-cm-how")(() =>
+    renderBump({
+      csv: "data/beeswarm_by_cm_subtopic.csv",
+      yField: "Category",
+      hostSel: "#bump-cm-how",
+      figId: "fig-bump-cm-how",
+      yearInputs: ["bch-y0", "bch-y1"],
+      filterField: "Type",
+      filterValue: "HOW",
+      topGroups: 10,
+    }));
+
+  // Figure 12 — content-moderation WHO × HOW alluvial.
+  // Two-stage Sankey driven by a pre-aggregated (Who, How, Items) CSV.
+  await safe("CM WHO × HOW", "#alluvial-cm-who-how")(() =>
+    renderSankeyTwo({
+      csv: "data/cm_who_how.csv",
+      stages: ["Who", "How"],
+      valueField: "Items",
+      hostSel: "#alluvial-cm-who-how",
+      figId: "fig-cm-who-how",
+    }));
+
   // Figure 1 — Language → Country → (Topic | CM Sub-topic) alluvial.
   // The "by Topic" tab uses every item in the corpus; the "by CM Sub-topic"
   // tab restricts to items whose Topic is Content moderation. The middle
