@@ -2147,7 +2147,8 @@ function inRange(r, lo, hi) {
    ─────────────────────────────────────────────────────────────────────── */
 
 async function renderBump({ csv, yField, hostSel, figId, yearInputs,
-                            filterField, filterValue, topGroups }) {
+                            filterField, filterValue, topGroups,
+                            relative = false }) {
   const all   = await loadCSV(csv);
   const data0 = all.filter(r => Number.isFinite(+r["Publication Year"]));
   // Optional row-level filter (e.g. "Topic = Content moderation"), used by
@@ -2212,13 +2213,31 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
       const yr = +r["Publication Year"];
       c.set(yr, (c.get(yr) || 0) + 1);
     });
+    // Relative mode: each year's group counts become shares of that year's
+    // total (across *kept* groups). Empty years stay at 0.
+    if (relative) {
+      const yearTotal = new Map(years.map(yr => [yr, 0]));
+      groups.forEach(g => {
+        const c = counts.get(g);
+        years.forEach(yr => yearTotal.set(yr, yearTotal.get(yr) + (c.get(yr) || 0)));
+      });
+      groups.forEach(g => {
+        const c = counts.get(g);
+        years.forEach(yr => {
+          const t = yearTotal.get(yr);
+          c.set(yr, t > 0 ? (c.get(yr) || 0) / t : 0);
+        });
+      });
+    }
 
     const W = Math.max(720, host.node().clientWidth || 880);
     const H = 420;
     const m = { top: 24, right: 200, bottom: 36, left: 56 };
     const x = d3.scaleLinear().domain([years[0], years[years.length - 1]])
                               .range([m.left, W - m.right]);
-    const yMax = d3.max(groups.flatMap(g => [...counts.get(g).values()])) || 1;
+    const yMax = relative
+      ? (d3.max(groups.flatMap(g => [...counts.get(g).values()])) || 1)
+      : (d3.max(groups.flatMap(g => [...counts.get(g).values()])) || 1);
     const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - m.bottom, m.top]);
 
     const svg = host.append("svg").attr("class", "chart bump")
@@ -2229,7 +2248,8 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
       .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
     svg.append("g").attr("class", "axis")
       .attr("transform", `translate(${m.left},0)`)
-      .call(d3.axisLeft(y).ticks(6));
+      .call(d3.axisLeft(y).ticks(6)
+        .tickFormat(relative ? d3.format(".0%") : d3.format("d")));
 
     // Centripetal Catmull–Rom (α = 0.5) — gentle smoothing that passes
     // through every data point without the overshoot / Kandinsky humps
@@ -2281,7 +2301,9 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
         .attr("fill", d => colorFn(d.group))
         .on("mouseenter", (e, d) => dataCard.show(
           `<div class="dc-t">${escapeHtml(d.group)} · ${d.year}</div>
-           <div class="dc-row"><span>Unique items</span>${d3.format(",")(d.n)}</div>`, e))
+           <div class="dc-row"><span>${relative ? "Share of year" : "Unique items"}</span>${
+              relative ? d3.format(".1%")(d.n) : d3.format(",")(d.n)
+           }</div>`, e))
         .on("mousemove",  e => dataCard.move(e))
         .on("mouseleave", () => dataCard.hide());
     // End-of-line labels — the rawgraphs bumpchart convention.
@@ -2535,6 +2557,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       filterField: "Type",
       filterValue: "HOW",
       topGroups: 10,
+      relative: true,
     }));
 
   // Figure 12 — content-moderation WHO × HOW alluvial.
