@@ -449,7 +449,11 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .prose figure.fig.fig-live-mounted > .fig-cap   { margin-bottom: 0.6em; }
 .prose figure.fig.fig-live-mounted > .fig-body  { width: 100%; }
-.prose figure.fig.fig-live-mounted > .fig-foot  { margin-top: 0.7em; }
+/* The .fig-foot block carries the template's Download-CSV link and the
+ * long descriptive `.alt` paragraph. Neither is sourced from manuscript.md,
+ * so we hide the whole footer on figures mounted in the prose flow.
+ * (The Analysis section, where the templates live, is itself hidden.) */
+.prose figure.fig.fig-live-mounted > .fig-foot  { display: none; }
 @media (max-width: 900px) {
   .prose figure.fig.fig-live-mounted {
     width: 100%; left: 0; transform: none;
