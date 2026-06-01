@@ -2823,28 +2823,36 @@ function promoteInlineFigures() {
     const slug = img.dataset.fig;
     if (!slug) return;
 
-    // Walk up to the outermost wrapper the user might have written:
-    //   `[![alt](fig.png)](url)` → wrapping <a>
-    //   `![alt](fig.png)`        → just the <img>
-    let outer = img;
-    while (outer.parentElement &&
+    // Locate the wrapping anchor (if any) FIRST — its href carries the
+    // filter params. We track it separately from `outer` (the element we
+    // replace) because marked.js typically wraps the whole construct in
+    // a <p>, and the earlier loop would walk past the <a> up to the <p>,
+    // losing the href.
+    let anchor = null;
+    for (let p = img.parentElement, hops = 0;
+         p && hops < 3 && p !== document.body; p = p.parentElement, hops++) {
+      if (p.tagName === "A") { anchor = p; break; }
+    }
+
+    // The element we eventually replaceWith() should contain JUST this
+    // placeholder. Prefer the anchor (covers `[![alt](fig)](url)`); else
+    // walk up through single-child wrappers (PICTURE/SPAN/FIGURE), but
+    // STOP at <p> — a paragraph usually holds other text we mustn't nuke.
+    let outer = anchor || img;
+    while (!anchor && outer.parentElement &&
            outer.parentElement !== document.body &&
-           (outer.parentElement.children.length === 1 ||
-            outer.parentElement.tagName === "A")) {
-      const p = outer.parentElement;
-      if (!/^(A|PICTURE|P|SPAN|FIGURE)$/.test(p.tagName)) break;
-      outer = p;
+           outer.parentElement.children.length === 1 &&
+           /^(PICTURE|SPAN|FIGURE)$/.test(outer.parentElement.tagName)) {
+      outer = outer.parentElement;
     }
     (outer.parentElement || document)
        .querySelectorAll(".fig-live-pill").forEach(el => el.remove());
 
-    // If the placeholder is wrapped in a markdown link whose href carries
-    // filter params (e.g. ".../#fig-beeswarm-topics?topic=Censorship&type=HOW"),
-    // capture them so we can apply them AFTER the figure is in place.
+    // Pull filter params off the anchor's href if it points at this slug.
     let inheritedParams = null;
-    if (outer.tagName === "A" && outer.getAttribute("href")) {
+    if (anchor && anchor.getAttribute("href")) {
       try {
-        const u = new URL(outer.getAttribute("href"), location.href);
+        const u = new URL(anchor.getAttribute("href"), location.href);
         const parsed = parseFigHash(u.hash);
         if (parsed && parsed.id === slug) inheritedParams = parsed.params;
       } catch { /* ignore malformed URLs */ }
