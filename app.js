@@ -2361,23 +2361,32 @@ const safe = (label, hostSel) => async fn => {
   }
 };
 
-/** Attach a Bubble/Bump segmented toggle on a figure card. */
+/** Attach a Bubble/Bump segmented toggle on a figure card. The card may
+ *  also carry an `[data-scale]` seg (Share / Abs) — when present, its
+ *  current value is passed through to renderBump as `relative`. */
 function bindBubbleBump(opts) {
   const fig = document.querySelector(opts.figSel);
-  let mode = "bump";   // Bump view first (per #3).
+  let mode  = "bump";   // Bump view first (per #3).
+  let scale = "share";  // Share-of-year first (statistical default).
   function run() {
     const fn = (mode === "bump") ? renderBump : renderBubble;
-    fn({ csv: opts.csv, yField: opts.yField, hostSel: opts.hostSel,
-         figId: opts.figId, yearInputs: opts.yearInputs })
+    const args = { csv: opts.csv, yField: opts.yField, hostSel: opts.hostSel,
+                   figId: opts.figId, yearInputs: opts.yearInputs };
+    if (mode === "bump") args.relative = (scale === "share");
+    fn(args)
       .catch(e => e.missing ? renderPending(opts.hostSel, "Awaiting data.") : console.error(e));
   }
-  fig.querySelectorAll(".seg .tab").forEach(b => b.addEventListener("click", () => {
-    fig.querySelectorAll(".seg .tab").forEach(x => {
-      x.classList.toggle("active", x === b);
-      x.setAttribute("aria-selected", x === b ? "true" : "false");
-    });
-    mode = b.dataset.mode; run();
-  }));
+  fig.querySelectorAll(".seg").forEach(seg => {
+    seg.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+      seg.querySelectorAll(".tab").forEach(x => {
+        x.classList.toggle("active", x === b);
+        x.setAttribute("aria-selected", x === b ? "true" : "false");
+      });
+      if (b.dataset.mode)  mode  = b.dataset.mode;
+      if (b.dataset.scale) scale = b.dataset.scale;
+      run();
+    }));
+  });
   run();
 }
 
@@ -2484,18 +2493,22 @@ window.addEventListener("DOMContentLoaded", async () => {
       ? "data/media_per_item_year_cm_subtopic.csv"
       : "data/media_per_item_year_topic.csv";
     if (dl) dl.href = csv;
+    const scale = fig.querySelector('[data-scale].active')?.dataset.scale || "share";
     return renderBump({
       csv, yField: "Media category",
       hostSel: "#sankey-media", figId: "fig-media",
       yearInputs: null,
       filterField, filterValue,
       topGroups: 10,             // top-10 mediums in the chosen scope/slice
+      relative: scale === "share",
     });
   }
   await safe("media figure", "#sankey-media")(() => renderMediaFig());
-  document.querySelectorAll("#fig-media [data-scope], #fig-media [data-view]")
+  document.querySelectorAll("#fig-media [data-scope], #fig-media [data-view], #fig-media [data-scale]")
     .forEach(btn => btn.addEventListener("click", () => {
-      const group = btn.dataset.scope !== undefined ? "scope" : "view";
+      const group = btn.dataset.scope !== undefined ? "scope"
+                  : btn.dataset.view  !== undefined ? "view"
+                  : "scale";
       // Switching scope invalidates the dropdown options (different field).
       if (group === "scope") _bumpScopeLoaded = null;
       document.querySelectorAll(`#fig-media [data-${group}]`).forEach(b => {
@@ -2567,8 +2580,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   // Figure 11 — top-10 content-moderation HOW techniques over time.
   // Reuses the CM beeswarm CSV with a Type=HOW row filter; renderBump
   // groups by Category and caps at the 10 most-frequent lines.
-  await safe("CM HOW bump", "#bump-cm-how")(() =>
-    renderBump({
+  function renderCmHowBump() {
+    const fig = document.querySelector("#fig-bump-cm-how");
+    const scale = fig?.querySelector('[data-scale].active')?.dataset.scale || "share";
+    return renderBump({
       csv: "data/beeswarm_by_cm_subtopic.csv",
       yField: "Category",
       hostSel: "#bump-cm-how",
@@ -2577,6 +2592,17 @@ window.addEventListener("DOMContentLoaded", async () => {
       filterField: "Type",
       filterValue: "HOW",
       topGroups: 10,
+      relative: scale === "share",
+    });
+  }
+  await safe("CM HOW bump", "#bump-cm-how")(() => renderCmHowBump());
+  document.querySelectorAll("#fig-bump-cm-how [data-scale]")
+    .forEach(btn => btn.addEventListener("click", () => {
+      document.querySelectorAll("#fig-bump-cm-how [data-scale]").forEach(b => {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      renderCmHowBump().catch(console.error);
     }));
 
   // Figure 12 — content-moderation WHO × HOW alluvial.
