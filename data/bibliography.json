@@ -76,13 +76,6 @@
     "harvard": "Bourdieu, P. (2001) *Langage et pouvoir symbolique*. Seuil.",
     "link": ""
   },
-  "butlerRuledOutVocabularies1998": {
-    "author": "Butler",
-    "year": "1998",
-    "inline": "(Butler, 1998)",
-    "harvard": "Butler, J. (1998) ‘Ruled out: Vocabularies of the Censor’ *Censorship and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Publications, pp. 247–259.",
-    "link": ""
-  },
   "carmiHiddenListenersRegulatingb": {
     "author": "Carmi",
     "year": "n.d.",
@@ -160,6 +153,13 @@
     "harvard": "Douek, E. (2021) ‘Governing Online Speech: From 'Posts-As-Trumps' to Proportionality and Probability’, *Columbia Law Review*, 121(3), pp. 759–834. doi:10.2139/ssrn.3679607",
     "link": "https://doi.org/10.2139/ssrn.3679607"
   },
+  "downsCordonSanitaireEffective2012": {
+    "author": "Downs",
+    "year": "2012",
+    "inline": "(Downs, 2012)",
+    "harvard": "Downs, W. M. (2012) ‘Is the Cordon Sanitaire Effective?’, in W. M. Downs (ed.) *Political Extremism in Democracies: Combating Intolerance*. New York: Palgrave Macmillan US, pp. 81–109. doi:10.1057/9781137052834_4",
+    "link": "https://doi.org/10.1057/9781137052834_4"
+  },
   "edwardsModeratorEmergingDemocratic2002": {
     "author": "Edwards",
     "year": "2002",
@@ -172,13 +172,6 @@
     "year": "2023",
     "inline": "(Faugere et al., 2023)",
     "harvard": "Faugere, C., Mugnier, V. and Sylvos, F. (2023) *Censure et tabou*. Classiques Garnier.",
-    "link": ""
-  },
-  "fraserRethinkingPublicSphere1990": {
-    "author": "Fraser",
-    "year": "1990",
-    "inline": "(Fraser, 1990)",
-    "harvard": "Fraser, N. (1990) ‘Rethinking the Public Sphere: A Contribution to the Critique of Actually Existing Democracy’, *Social Text*, pp. 58–80.",
     "link": ""
   },
   "ganeshContentModerationCensorship2020": {
@@ -194,6 +187,13 @@
     "inline": "(Gibson, 2019)",
     "harvard": "Gibson, A. (2019) ‘Free Speech and Safe Spaces: How Moderation Policies Shape Online Discussion Spaces’, *Social Media + Society*, 5(1), pp. 2056305119832588. doi:10.1177/2056305119832588",
     "link": "https://doi.org/10.1177/2056305119832588"
+  },
+  "gillespieContentModerationAI2020": {
+    "author": "Gillespie",
+    "year": "2020",
+    "inline": "(Gillespie, 2020)",
+    "harvard": "Gillespie, T. (2020) ‘Content Moderation, AI, and the Question of Scale’, *Big Data & Society*, 7(2), pp. 2053951720943234. doi:10.1177/2053951720943234",
+    "link": "https://doi.org/10.1177/2053951720943234"
   },
   "gillespieCustodiansInternet2018": {
     "author": "Gillespie",
@@ -286,13 +286,6 @@
     "harvard": "Liu, D. (2024) ‘Content Moderation, Platformised Speech Governance, and Legitimacy: TikTok in South and Southeast Asia’, in *Companion Proceedings of the 16th ACM Web Science Conference*. Stuttgart Germany: ACM, pp. 27–31. doi:10.1145/3630744.3658613",
     "link": "https://doi.org/10.1145/3630744.3658613"
   },
-  "mcintoshLanguageTrumpEra2020": {
-    "author": "McIntosh and Mendoza-Denton",
-    "year": "2020",
-    "inline": "(McIntosh and Mendoza-Denton, 2020)",
-    "harvard": "McIntosh, J. and Mendoza-Denton, N. (2020) *Language in the Trump Era: Scandals and Emergencies*. Cambridge University Press.",
-    "link": ""
-  },
   "mcintoshMaledictiveLanguageObscenity2020": {
     "author": "McIntosh",
     "year": "2020",
@@ -321,13 +314,6 @@
     "harvard": "Müller, B. (2004) *Censorship and Cultural Regulation in the Modern Age*. Boston: BRILL.",
     "link": ""
   },
-  "mungerRightWingYouTubeSupply2020": {
-    "author": "Munger and Phillips",
-    "year": "2020",
-    "inline": "(Munger and Phillips, 2020)",
-    "harvard": "Munger, K. and Phillips, J. (2020) ‘Right-Wing YouTube: A Supply and Demand Perspective’, *The International Journal of Press/Politics*, 27(1), pp. 186–219. doi:10.1177/1940161220964767",
-    "link": "https://doi.org/10.1177/1940161220964767"
-  },
   "myerswestCensoredSuspendedShadowbanned2018": {
     "author": "Myers West",
     "year": "2018",
@@ -342,11 +328,18 @@
     "harvard": "Post, R. (1998) *Censorship and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Publications.",
     "link": ""
   },
-  "richardburtUncensoringDetailFetish1998": {
-    "author": "Burt",
-    "year": "1998",
-    "inline": "(Burt, 1998)",
-    "harvard": "Burt, R. (1998) ‘(Un)Censoring in Detail: The Fetish of Censorship in the Early Modern Past and the Postmodern Present’, in R. C. Post (ed.) *Censoring and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Research Institute for the History of Art and the Humanities, pp. 17–42.",
+  "prochazkaMakingSenseFacebooks2019": {
+    "author": "Procházka",
+    "year": "2019",
+    "inline": "(Procházka, 2019)",
+    "harvard": "Procházka, O. (2019) ‘Making Sense of Facebook's Content Moderation: A Posthumanist Perspective on Communicative Competence and Internet Memes’, *Signs and Society*, 7(3), pp. 362–397. doi:10.1086/704763",
+    "link": "https://doi.org/10.1086/704763"
+  },
+  "robertsCommercialContentModeration": {
+    "author": "Roberts",
+    "year": "n.d.",
+    "inline": "(Roberts, n.d.)",
+    "harvard": "Roberts, S. T. (n.d.) ‘Commercial Content Moderation: Digital Laborers' Dirty Work’.",
     "link": ""
   },
   "robertsCommercialContentModeration2016": {
@@ -390,6 +383,13 @@
     "inline": "(Seering et al., 2022)",
     "harvard": "Seering, J., Kaufman, G. and Chancellor, S. (2022) ‘Metaphors in Moderation’, *New Media & Society*, 24(3), pp. 621–640. doi:10.1177/1461444820964968",
     "link": "https://doi.org/10.1177/1461444820964968"
+  },
+  "seeringModeratorEngagementCommunity2019": {
+    "author": "Seering et al.",
+    "year": "2019",
+    "inline": "(Seering et al., 2019)",
+    "harvard": "Seering, J., Wang, T., Yoon, J. and Kaufman, G. (2019) ‘Moderator Engagement and Community Development in the Age of Algorithms’, *New Media & Society*, 21(7), pp. 1417–1443. doi:10.1177/1461444818821316",
+    "link": "https://doi.org/10.1177/1461444818821316"
   },
   "templetonTopicModelingHumanities2011": {
     "author": "Templeton",
