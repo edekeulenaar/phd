@@ -2148,7 +2148,7 @@ function inRange(r, lo, hi) {
 
 async function renderBump({ csv, yField, hostSel, figId, yearInputs,
                             filterField, filterValue, topGroups,
-                            relative = false }) {
+                            relative = true }) {
   const all   = await loadCSV(csv);
   const data0 = all.filter(r => Number.isFinite(+r["Publication Year"]));
   // Optional row-level filter (e.g. "Topic = Content moderation"), used by
@@ -2557,7 +2557,6 @@ window.addEventListener("DOMContentLoaded", async () => {
       filterField: "Type",
       filterValue: "HOW",
       topGroups: 10,
-      relative: true,
     }));
 
   // Figure 12 — content-moderation WHO × HOW alluvial.
