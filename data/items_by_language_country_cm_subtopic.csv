@@ -1,772 +1,783 @@
 Language,LanguageName,Country,Sub-topic,Items
-en,English,United States,Moderation as a component of platform governance,149
-pt,Portuguese,Brazil,Moderation as a component of platform regulation,114
-en,English,United States,Moderation as a component of platform regulation,87
-en,English,European Union,Moderation as a component of platform regulation,79
-it,Italian,European Union,Moderation as a component of platform regulation,63
-pt,Portuguese,Brazil,Moderation as a component of platform governance,58
-pt,Portuguese,Brazil,Moderation as the cultivation of a democratic public sphere,46
-it,Italian,Italy,Moderation as a component of platform regulation,43
-en,English,United States,Moderation as the enforcement of community norms and identity,41
-en,English,European Union,Moderation as a component of platform governance,40
-en,English,(unspecified),Moderation as a component of platform governance,39
-pt,Portuguese,European Union,Moderation as a component of platform regulation,37
-en,English,Germany,Moderation as a component of platform regulation,34
-en,English,United States,Moderation as the cultivation of a democratic public sphere,34
-pt,Portuguese,United States,Moderation as a component of platform regulation,31
-en,English,United States,Moderation and censorship,30
-en,English,United States,Moderating extremism,28
-it,Italian,United States,Moderation as a component of platform regulation,27
-en,English,(unspecified),Moderation as the enforcement of community norms and identity,26
-fr,French,France,Moderation as the cultivation of a democratic public sphere,26
-en,English,Germany,Moderation as a component of platform governance,25
-en,English,United Kingdom,Moderation as a component of platform governance,25
-pt,Portuguese,Germany,Moderation as a component of platform regulation,25
-en,English,India,Moderation as a component of platform governance,21
-en,English,United Kingdom,Moderation as a component of platform regulation,21
-en,English,China,Moderation and censorship,20
-en,English,Australia,Moderation as a component of platform governance,19
-en,English,France,Moderation as a component of platform regulation,18
-fr,French,European Union,Moderation as a component of platform regulation,18
-fr,French,France,Moderation as a component of platform regulation,18
-en,English,Brazil,Moderation as a component of platform regulation,17
-en,English,China,Moderation as a component of platform governance,17
-pt,Portuguese,Brazil,Moderation and censorship,17
-en,English,India,Moderation as a component of platform regulation,16
-en,English,(unspecified),Moderation and censorship,15
-en,English,Australia,Moderation as a component of platform regulation,15
-en,English,European Union,Moderation and censorship,15
-es,Spanish,Spain,Moderation as the cultivation of a democratic public sphere,15
-en,English,Brazil,Moderation as a component of platform governance,14
-en,English,Germany,Moderating extremism,14
-en,English,United Kingdom,Moderation as the cultivation of a democratic public sphere,14
-en,English,United Kingdom,Moderating extremism,13
-en,English,(unspecified),Moderation as the cultivation of a democratic public sphere,12
-en,English,China,Moderation as a component of platform regulation,12
-es,Spanish,European Union,Moderation as a component of platform regulation,12
-fr,French,France,Moderation and censorship,12
-pt,Portuguese,European Union,Moderation as a component of platform governance,12
-pt,Portuguese,United States,Moderation as a component of platform governance,12
-en,English,United States,Moderation as industrial labour,11
-fr,French,(unspecified),Moderation and censorship,11
-it,Italian,(unspecified),Moderation as a component of platform governance,11
-it,Italian,European Union,Moderation and censorship,11
-it,Italian,Italy,Moderation as the cultivation of a democratic public sphere,11
-it,Italian,United States,Moderation as a component of platform governance,11
-pt,Portuguese,United Kingdom,Moderation as a component of platform regulation,11
-en,English,France,Moderation as a component of platform governance,10
-en,English,Germany,Moderation as the cultivation of a democratic public sphere,10
-en,English,Myanmar,Moderation as a component of platform governance,10
-en,English,Pakistan,Moderation as a component of platform governance,10
-en,English,Russia,Moderation as a component of platform governance,10
-en,English,United Kingdom,Moderation as the enforcement of community norms and identity,10
-es,Spanish,Spain,Moderation as a component of platform regulation,10
-it,Italian,European Union,Moderation as a component of platform governance,10
-it,Italian,Germany,Moderation as a component of platform regulation,10
-it,Italian,United States,Moderation and censorship,10
-en,English,Canada,Moderation as a component of platform regulation,9
-en,English,Germany,Moderation as the enforcement of community norms and identity,9
-en,English,Philippines,Moderation as a component of platform governance,9
-en,English,United Kingdom,Moderation and censorship,9
-it,Italian,(unspecified),Moderation as a component of platform regulation,9
-it,Italian,Italy,Moderation and censorship,9
-pt,Portuguese,Portugal,Moderation as the cultivation of a democratic public sphere,9
-pt,Portuguese,United States,Moderation as the cultivation of a democratic public sphere,9
-en,English,Australia,Moderation as the enforcement of community norms and identity,8
-en,English,Canada,Moderating extremism,8
-en,English,Israel,Moderation and censorship,8
-fr,French,France,Moderation as a component of platform governance,8
-fr,French,United States,Moderation and censorship,8
-fr,French,United States,Moderation as a component of platform regulation,8
-it,Italian,France,Moderation as a component of platform regulation,8
-it,Italian,Italy,Moderation as a component of platform governance,8
-pt,Portuguese,United States,Moderation and censorship,8
-en,English,(unspecified),Other,7
-en,English,Canada,Moderation as a component of platform governance,7
-en,English,European Union,Moderation as the cultivation of a democratic public sphere,7
-en,English,Myanmar,Moderation as a component of platform regulation,7
-en,English,Palestine,Moderation and censorship,7
-en,English,Russia,Moderation as a component of platform regulation,7
-pt,Portuguese,Germany,Moderation as a component of platform governance,7
-en,English,(unspecified),Automated or algorithmic content moderation,6
-en,English,(unspecified),Moderation as industrial labour,6
-en,English,Canada,Moderation as the enforcement of community norms and identity,6
-en,English,European Union,Moderating extremism,6
-en,English,Germany,Moderation and censorship,6
-en,English,India,Moderation as the enforcement of community norms and identity,6
-en,English,Indonesia,Moderation as a component of platform regulation,6
-en,English,Ireland,Moderation as a component of platform governance,6
-en,English,Philippines,Moderation as a component of platform regulation,6
+en,English,United States,Platform governance,174
+pt,Portuguese,Brazil,Platform governance,92
+en,English,European Union,Platform governance,61
+en,English,United States,Censorship,46
+en,English,United States,Community norms and identity,45
+en,English,(unspecified),Platform governance,40
+en,English,Germany,Platform governance,39
+en,English,United Kingdom,Platform governance,37
+pt,Portuguese,Brazil,Platform regulation,33
+pt,Portuguese,United States,Platform governance,29
+en,English,China,Platform governance,26
+en,English,India,Platform governance,26
+en,English,United States,Compliance,26
+en,English,Australia,Platform governance,23
+pt,Portuguese,European Union,Platform governance,23
+en,English,European Union,Compliance,21
+it,Italian,European Union,Compliance,21
+en,English,European Union,Platform regulation,20
+en,English,France,Platform governance,20
+en,English,United States,Debate management,20
+en,English,Brazil,Platform governance,19
+en,English,European Union,Censorship,19
+en,English,United States,Regulative,18
+it,Italian,United States,Platform governance,17
+en,English,(unspecified),Community norms and identity,16
+en,English,Myanmar,Platform governance,16
+it,Italian,European Union,Platform governance,16
+en,English,Russia,Platform governance,15
+en,English,United States,Moderation as industrial labour,15
+en,English,United States,Platform regulation,15
+it,Italian,Italy,Platform governance,15
+pt,Portuguese,Germany,Platform governance,15
+it,Italian,Italy,Compliance,14
+en,English,Canada,Platform governance,12
+en,English,Germany,Compliance,12
+it,Italian,European Union,Platform regulation,12
+pt,Portuguese,Brazil,Compliance,12
+pt,Portuguese,Brazil,Debate management,12
+pt,Portuguese,Brazil,Regulative,11
+en,English,Germany,Censorship,10
+en,English,Germany,Regulative,10
+en,English,Philippines,Platform governance,10
+fr,French,France,Community norms and identity,10
+fr,French,France,Debate management,10
+fr,French,United States,Platform governance,10
+pt,Portuguese,Brazil,Censorship,10
+en,English,Germany,Debate management,9
+en,English,Ireland,Platform governance,9
+en,English,Pakistan,Platform governance,9
+en,English,Turkey,Platform governance,9
+fr,French,France,Platform governance,9
+it,Italian,United States,Compliance,9
+it,Italian,United States,Platform regulation,9
+pt,Portuguese,European Union,Platform regulation,9
+pt,Portuguese,Germany,Platform regulation,9
+en,English,China,Regulative,8
+en,English,European Union,Community norms and identity,8
+en,English,United Kingdom,Censorship,8
+en,English,United Kingdom,Debate management,8
+it,Italian,European Union,Censorship,8
+it,Italian,Italy,Platform regulation,8
+pt,Portuguese,European Union,Compliance,8
+pt,Portuguese,United Kingdom,Platform governance,8
+pt,Portuguese,United States,Platform regulation,8
+en,English,Germany,Community norms and identity,7
+en,English,New Zealand,Platform governance,7
+en,English,Russia,Regulative,7
+en,English,United Kingdom,Community norms and identity,7
+en,English,United Kingdom,Compliance,7
+en,English,United Kingdom,Regulative,7
+es,Spanish,United States,Platform governance,7
+fr,French,France,Censorship,7
+en,English,Australia,Compliance,6
+en,English,Australia,Regulative,6
+en,English,Canada,Debate management,6
+en,English,China,Compliance,6
+en,English,European Union,Regulative,6
+en,English,France,Regulative,6
+en,English,Indonesia,Platform governance,6
+en,English,Italy,Platform governance,6
+en,English,Mexico,Platform governance,6
+en,English,Nigeria,Platform governance,6
 en,English,Philippines,Moderation as industrial labour,6
-en,English,Turkey,Moderation and censorship,6
-en,English,Ukraine,Moderation as a component of platform governance,6
-es,Spanish,Mexico,Moderation as the cultivation of a democratic public sphere,6
-es,Spanish,United States,Moderation as a component of platform governance,6
-fr,French,(unspecified),Moderation as a component of platform governance,6
-fr,French,Germany,Moderation as a component of platform regulation,6
-fr,French,United States,Moderation as a component of platform governance,6
-it,Italian,(unspecified),Moderation as the cultivation of a democratic public sphere,6
-it,Italian,Italy,Moderating extremism,6
-pt,Portuguese,Portugal,Moderation as a component of platform regulation,6
-en,English,(unspecified),Moderation as a component of platform regulation,5
-en,English,France,Moderating extremism,5
-en,English,France,Moderation as the enforcement of community norms and identity,5
-en,English,Indonesia,Moderation as a component of platform governance,5
-en,English,Ireland,Moderation as a component of platform regulation,5
-en,English,Mexico,Moderation as the enforcement of community norms and identity,5
-en,English,Netherlands,Moderation as a component of platform governance,5
-en,English,New Zealand,Moderation as a component of platform regulation,5
-en,English,South Korea,Moderation as a component of platform governance,5
-en,English,Spain,Moderation as the cultivation of a democratic public sphere,5
-en,English,Sweden,Moderating extremism,5
-en,English,Thailand,Moderation as a component of platform regulation,5
-en,English,Turkey,Moderation as a component of platform governance,5
-en,English,United States,Automated or algorithmic content moderation,5
-en,English,United States,Other,5
-es,Spanish,Brazil,Moderation as a component of platform regulation,5
-es,Spanish,United States,Moderation as a component of platform regulation,5
-fr,French,(unspecified),Moderation as a component of platform regulation,5
-fr,French,France,Moderation as the enforcement of community norms and identity,5
-it,Italian,(unspecified),Moderation and censorship,5
-pt,Portuguese,Brazil,Moderation as industrial labour,5
-pt,Portuguese,United Kingdom,Moderation as a component of platform governance,5
-en,English,Australia,Moderation as the cultivation of a democratic public sphere,4
-en,English,Austria,Moderation as the cultivation of a democratic public sphere,4
-en,English,Brazil,Moderation as the enforcement of community norms and identity,4
-en,English,Canada,Moderation as the cultivation of a democratic public sphere,4
-en,English,China,Moderation as the cultivation of a democratic public sphere,4
-en,English,Estonia,Moderation as a component of platform regulation,4
-en,English,France,Moderation as the cultivation of a democratic public sphere,4
+en,English,United Kingdom,Moderating extremism,6
+en,English,United States,Moderating extremism,6
+es,Spanish,Brazil,Platform governance,6
+fr,French,European Union,Platform governance,6
+fr,French,European Union,Platform regulation,6
+fr,French,France,Platform regulation,6
+it,Italian,Germany,Platform governance,6
+it,Italian,United States,Censorship,6
+pt,Portuguese,Brazil,Community norms and identity,6
+en,English,Brazil,Compliance,5
+en,English,China,Community norms and identity,5
+en,English,France,Community norms and identity,5
+en,English,India,Community norms and identity,5
+en,English,Russia,Censorship,5
+en,English,Singapore,Platform governance,5
+en,English,Sweden,Platform governance,5
+en,English,Thailand,Platform governance,5
+en,English,Ukraine,Platform governance,5
+en,English,United States,Common carriage / neutral conduit,5
+es,Spanish,European Union,Platform governance,5
+fr,French,Canada,Platform governance,5
+fr,French,France,Regulative,5
+fr,French,United States,Censorship,5
+it,Italian,European Union,Regulative,5
+it,Italian,Italy,Censorship,5
+it,Italian,Italy,Regulative,5
+it,Italian,United States,Regulative,5
+pt,Portuguese,Germany,Compliance,5
+pt,Portuguese,United Kingdom,Platform regulation,5
+pt,Portuguese,United States,Compliance,5
+en,English,(unspecified),Moderation as industrial labour,4
+en,English,Australia,Community norms and identity,4
+en,English,Brazil,Censorship,4
+en,English,Canada,Community norms and identity,4
+en,English,China,Platform regulation,4
+en,English,Europe,Platform governance,4
+en,English,European Union,Moderating extremism,4
+en,English,Germany,Moderating extremism,4
+en,English,Germany,Platform regulation,4
+en,English,India,Compliance,4
 en,English,India,Moderation as industrial labour,4
-en,English,Italy,Moderating extremism,4
-en,English,Italy,Moderation as a component of platform governance,4
-en,English,Italy,Moderation as the cultivation of a democratic public sphere,4
-en,English,Kenya,Moderation as a component of platform governance,4
-en,English,Malaysia,Moderation as a component of platform regulation,4
-en,English,Myanmar,Moderating extremism,4
-en,English,Netherlands,Moderation as the enforcement of community norms and identity,4
-en,English,New Zealand,Moderation as a component of platform governance,4
-en,English,Nigeria,Moderation as a component of platform regulation,4
-en,English,Russia,Moderation and censorship,4
-en,English,Singapore,Moderation as a component of platform regulation,4
-en,English,South Africa,Moderation as a component of platform regulation,4
-en,English,Turkey,Moderation as a component of platform regulation,4
-es,Spanish,(unspecified),Moderation as the cultivation of a democratic public sphere,4
-es,Spanish,Brazil,Moderation as a component of platform governance,4
-es,Spanish,Colombia,Moderation as a component of platform regulation,4
-es,Spanish,Mexico,Moderation as a component of platform regulation,4
-fr,French,(unspecified),Moderation as the enforcement of community norms and identity,4
-fr,French,Canada,Moderation as a component of platform regulation,4
-fr,French,European Union,Moderation as a component of platform governance,4
-it,Italian,China,Moderation as a component of platform regulation,4
-it,Italian,European Union,Moderating extremism,4
-pt,Portuguese,(unspecified),Moderation as a component of platform governance,4
-pt,Portuguese,(unspecified),Moderation as a component of platform regulation,4
-pt,Portuguese,Australia,Moderation as a component of platform governance,4
-pt,Portuguese,Brazil,Moderation as the enforcement of community norms and identity,4
-pt,Portuguese,China,Moderation as the cultivation of a democratic public sphere,4
-pt,Portuguese,European Union,Moderation as the cultivation of a democratic public sphere,4
-pt,Portuguese,France,Moderation as a component of platform regulation,4
-pt,Portuguese,United States,Moderation as industrial labour,4
-en,English,Brazil,Moderating extremism,3
-en,English,Brazil,Moderation as the cultivation of a democratic public sphere,3
+en,English,India,Platform regulation,4
+en,English,Iran,Platform governance,4
+en,English,Italy,Regulative,4
+en,English,Netherlands,Community norms and identity,4
+en,English,Netherlands,Debate management,4
+en,English,Netherlands,Platform governance,4
+en,English,South Africa,Platform governance,4
+en,English,South Korea,Platform governance,4
+en,English,Spain,Platform governance,4
+en,English,United Kingdom,Moderation as industrial labour,4
+en,English,United States,Brand safety,4
+es,Spanish,European Union,Platform regulation,4
+es,Spanish,Mexico,Platform regulation,4
+es,Spanish,Spain,Community norms and identity,4
+es,Spanish,Spain,Debate management,4
+es,Spanish,Spain,Regulative,4
+fr,French,European Union,Regulative,4
+fr,French,France,Compliance,4
+it,Italian,Brazil,Platform governance,4
+it,Italian,Italy,Community norms and identity,4
+pt,Portuguese,European Union,Regulative,4
+pt,Portuguese,Portugal,Platform governance,4
+pt,Portuguese,United States,Regulative,4
+en,English,(unspecified),Censorship,3
+en,English,(unspecified),Compliance,3
+en,English,(unspecified),Debate management,3
+en,English,Africa,Platform governance,3
+en,English,Australia,Censorship,3
+en,English,Austria,Platform governance,3
+en,English,Brazil,Community norms and identity,3
+en,English,Brazil,Regulative,3
+en,English,Canada,Compliance,3
+en,English,Canada,Moderating extremism,3
 en,English,Canada,Moderation as industrial labour,3
-en,English,Egypt,Moderation and censorship,3
-en,English,Egypt,Moderation as a component of platform regulation,3
-en,English,France,Moderation and censorship,3
-en,English,Germany,Automated or algorithmic content moderation,3
-en,English,India,Moderating extremism,3
-en,English,Iran,Moderation as a component of platform regulation,3
-en,English,Ireland,Moderation as the cultivation of a democratic public sphere,3
-en,English,Italy,Moderation and censorship,3
-en,English,Italy,Moderation as a component of platform regulation,3
-en,English,Italy,Moderation as the enforcement of community norms and identity,3
-en,English,Libya,Moderation as a component of platform governance,3
-en,English,Netherlands,Moderation as a component of platform regulation,3
-en,English,New Zealand,Moderation and censorship,3
-en,English,Nigeria,Moderation as a component of platform governance,3
-en,English,Portugal,Moderation as the cultivation of a democratic public sphere,3
-en,English,Russia,Moderating extremism,3
-en,English,Russia,Moderation as the cultivation of a democratic public sphere,3
-en,English,Singapore,Moderation as a component of platform governance,3
-en,English,Spain,Moderation and censorship,3
-en,English,Spain,Moderation as a component of platform regulation,3
-en,English,Sweden,Moderation as the enforcement of community norms and identity,3
-en,English,Syria,Moderation as a component of platform governance,3
-en,English,Taiwan,Moderation as the cultivation of a democratic public sphere,3
-en,English,Thailand,Moderation as a component of platform governance,3
-en,English,Tunisia,Moderation and censorship,3
-en,English,Uganda,Moderation as a component of platform regulation,3
-en,English,United Kingdom,Moderation as industrial labour,3
-es,Spanish,Argentina,Moderation as a component of platform regulation,3
-es,Spanish,Argentina,Moderation as the cultivation of a democratic public sphere,3
-es,Spanish,Colombia,Moderation as the cultivation of a democratic public sphere,3
-fr,French,(unspecified),Moderation as industrial labour,3
-fr,French,Canada,Moderation as a component of platform governance,3
-fr,French,European Union,Moderation and censorship,3
-fr,French,European Union,Moderation as the cultivation of a democratic public sphere,3
-fr,French,France,Moderation as industrial labour,3
-fr,French,United States,Moderation as industrial labour,3
-fr,French,United States,Moderation as the enforcement of community norms and identity,3
-it,Italian,(unspecified),Moderating extremism,3
-it,Italian,(unspecified),Moderation as the enforcement of community norms and identity,3
-it,Italian,European Union,Moderation as the cultivation of a democratic public sphere,3
-it,Italian,Germany,Moderation and censorship,3
-it,Italian,Italy,Moderation as industrial labour,3
-it,Italian,Italy,Moderation as the enforcement of community norms and identity,3
-it,Italian,United Kingdom,Moderation as a component of platform regulation,3
-it,Italian,United States,Moderating extremism,3
-it,Italian,United States,Moderation as industrial labour,3
-it,Italian,United States,Moderation as the cultivation of a democratic public sphere,3
-pt,Portuguese,(unspecified),Moderation as the cultivation of a democratic public sphere,3
-pt,Portuguese,European Union,Moderation and censorship,3
-pt,Portuguese,France,Moderation as a component of platform governance,3
-pt,Portuguese,India,Moderation as a component of platform governance,3
-pt,Portuguese,Portugal,Moderation as a component of platform governance,3
-und,undetermined,United States,Moderation as a component of platform regulation,3
-en,English,(unspecified),Moderating extremism,2
-en,English,Africa,Moderation as a component of platform governance,2
-en,English,Asia,Moderation as a component of platform governance,2
-en,English,Austria,Moderating extremism,2
-en,English,Austria,Moderation as a component of platform regulation,2
-en,English,Brazil,Moderation and censorship,2
-en,English,Canada,Moderation and censorship,2
-en,English,China,Moderation as the enforcement of community norms and identity,2
-en,English,Colombia,Moderation as the enforcement of community norms and identity,2
-en,English,Croatia,Moderation as a component of platform regulation,2
-en,English,Czech Republic,Moderation as a component of platform regulation,2
-en,English,Denmark,Moderating extremism,2
-en,English,Denmark,Moderation as the cultivation of a democratic public sphere,2
-en,English,Ethiopia,Moderation as a component of platform governance,2
-en,English,Ethiopia,Moderation as a component of platform regulation,2
-en,English,Europe,Moderation as a component of platform governance,2
-en,English,European Union,Automated or algorithmic content moderation,2
-en,English,European Union,Other,2
-en,English,Finland,Moderating extremism,2
+en,English,Canada,Regulative,3
+en,English,China,Censorship,3
+en,English,China,Debate management,3
+en,English,Egypt,Platform governance,3
+en,English,European Union,Moderation as industrial labour,3
+en,English,France,Censorship,3
+en,English,India,Censorship,3
+en,English,India,Debate management,3
+en,English,Israel,Platform governance,3
+en,English,Italy,Debate management,3
+en,English,Kenya,Platform governance,3
+en,English,Malaysia,Platform governance,3
+en,English,Myanmar,Censorship,3
+en,English,Myanmar,Platform regulation,3
+en,English,Netherlands,Regulative,3
+en,English,Norway,Debate management,3
+en,English,Norway,Platform governance,3
+en,English,Poland,Censorship,3
+en,English,Saudi Arabia,Platform governance,3
+en,English,Switzerland,Debate management,3
+en,English,Syria,Platform governance,3
+en,English,Turkey,Regulative,3
+es,Spanish,Spain,Censorship,3
+es,Spanish,Spain,Platform governance,3
+es,Spanish,Spain,Platform regulation,3
+es,Spanish,United States,Platform regulation,3
+fr,French,Germany,Platform governance,3
+fr,French,Germany,Platform regulation,3
+pt,Portuguese,Australia,Platform governance,3
+pt,Portuguese,France,Platform governance,3
+pt,Portuguese,France,Regulative,3
+pt,Portuguese,Philippines,Platform governance,3
+pt,Portuguese,Russia,Regulative,3
+pt,Portuguese,United States,Censorship,3
+en,English,Asia,Compliance,2
+en,English,Australia,Debate management,2
+en,English,Australia,Moderation as industrial labour,2
+en,English,Australia,Platform regulation,2
+en,English,Austria,Debate management,2
+en,English,Belgium,Regulative,2
+en,English,Brazil,Debate management,2
+en,English,Brazil,Platform regulation,2
+en,English,Canada,Censorship,2
+en,English,China,Moderation as industrial labour,2
+en,English,Colombia,Platform governance,2
+en,English,Czech Republic,Censorship,2
+en,English,Denmark,Platform governance,2
+en,English,Denmark,Regulative,2
+en,English,England,Platform governance,2
+en,English,Ethiopia,Platform governance,2
+en,English,European Union,Common carriage / neutral conduit,2
+en,English,European Union,Gatekeeping (selection theory),2
+en,English,Finland,Regulative,2
+en,English,France,Compliance,2
+en,English,France,Debate management,2
+en,English,France,Moderating extremism,2
+en,English,France,Platform regulation,2
+en,English,Germany,Brand safety,2
 en,English,Germany,Moderation as industrial labour,2
-en,English,Germany,Other,2
-en,English,Hungary,Moderating extremism,2
-en,English,Hungary,Moderation as a component of platform governance,2
-en,English,Hungary,Moderation as a component of platform regulation,2
-en,English,India,Moderation and censorship,2
-en,English,Iran,Moderation as a component of platform governance,2
-en,English,Israel,Moderating extremism,2
-en,English,Israel,Moderation as a component of platform governance,2
-en,English,Israel,Moderation as a component of platform regulation,2
-en,English,Japan,Moderation as the cultivation of a democratic public sphere,2
-en,English,Kenya,Moderating extremism,2
-en,English,Kenya,Moderation as a component of platform regulation,2
-en,English,Latin America,Moderation as a component of platform governance,2
-en,English,Mexico,Moderation and censorship,2
-en,English,Mexico,Moderation as a component of platform governance,2
-en,English,Myanmar,Moderation as the cultivation of a democratic public sphere,2
-en,English,Nepal,Moderation as a component of platform governance,2
-en,English,Netherlands,Moderating extremism,2
-en,English,Netherlands,Moderation and censorship,2
-en,English,Netherlands,Moderation as the cultivation of a democratic public sphere,2
-en,English,Nigeria,Moderation and censorship,2
-en,English,Norway,Moderating extremism,2
-en,English,Pakistan,Moderation as a component of platform regulation,2
-en,English,Palestine,Moderation as a component of platform governance,2
-en,English,Philippines,Moderation as the cultivation of a democratic public sphere,2
-en,English,Poland,Moderation as a component of platform governance,2
-en,English,Portugal,Moderation as a component of platform regulation,2
-en,English,Romania,Moderation as a component of platform regulation,2
-en,English,Saudi Arabia,Moderation as a component of platform governance,2
-en,English,South Korea,Moderation as a component of platform regulation,2
-en,English,Spain,Moderating extremism,2
-en,English,Spain,Moderation as a component of platform governance,2
-en,English,Sri Lanka,Moderation as a component of platform regulation,2
-en,English,Sweden,Moderation as the cultivation of a democratic public sphere,2
-en,English,Syria,Moderation and censorship,2
-en,English,Taiwan,Moderation as a component of platform governance,2
-en,English,Turkey,Moderating extremism,2
-en,English,Ukraine,Moderation as the enforcement of community norms and identity,2
-en,English,United States,Debate management,2
-en,English,Vietnam,Moderation as a component of platform regulation,2
-en,English,Zimbabwe,Moderation as a component of platform regulation,2
-es,Spanish,Argentina,Other,2
-es,Spanish,Brazil,Moderation as the cultivation of a democratic public sphere,2
-es,Spanish,Chile,Moderation as a component of platform regulation,2
-es,Spanish,Chile,Moderation as the cultivation of a democratic public sphere,2
-es,Spanish,European Union,Moderation as a component of platform governance,2
-es,Spanish,France,Moderation as a component of platform governance,2
-es,Spanish,Germany,Moderation as a component of platform regulation,2
-es,Spanish,India,Moderation as a component of platform governance,2
-es,Spanish,Latin America,Moderation as a component of platform regulation,2
-es,Spanish,Mexico,Moderation as a component of platform governance,2
-es,Spanish,Peru,Moderation as a component of platform regulation,2
-es,Spanish,Peru,Moderation as the cultivation of a democratic public sphere,2
-es,Spanish,Russia,Moderation as a component of platform regulation,2
-es,Spanish,Spain,Debate management,2
-es,Spanish,Spain,Moderation and censorship,2
-es,Spanish,United States,Moderation as the cultivation of a democratic public sphere,2
-es,Spanish,Venezuela,Moderation as the cultivation of a democratic public sphere,2
-fr,French,(unspecified),Moderation as the cultivation of a democratic public sphere,2
-fr,French,Bangladesh,Moderation as a component of platform regulation,2
-fr,French,Belgium,Moderation as a component of platform governance,2
-fr,French,Belgium,Moderation as a component of platform regulation,2
-fr,French,Belgium,Moderation as the cultivation of a democratic public sphere,2
-fr,French,Cameroon,Moderation as a component of platform regulation,2
-fr,French,Canada,Moderation and censorship,2
-fr,French,Canada,Moderation as the cultivation of a democratic public sphere,2
-fr,French,Canada,Moderation as the enforcement of community norms and identity,2
-fr,French,Chad,Moderation as a component of platform regulation,2
-fr,French,China,Moderation as the enforcement of community norms and identity,2
-fr,French,Ethiopia,Moderation as a component of platform regulation,2
-fr,French,France,Moderating extremism,2
-fr,French,Gambia,Moderation as a component of platform regulation,2
-fr,French,Germany,Moderation and censorship,2
-fr,French,Germany,Moderation as a component of platform governance,2
-fr,French,Hungary,Moderation as a component of platform regulation,2
-fr,French,India,Moderation as a component of platform regulation,2
-fr,French,Iraq,Moderation as a component of platform regulation,2
-fr,French,Myanmar,Moderation as a component of platform regulation,2
-fr,French,Philippines,Moderation as a component of platform regulation,2
-fr,French,Philippines,Moderation as industrial labour,2
-fr,French,Switzerland,Moderation as a component of platform governance,2
-fr,French,Thailand,Moderation as a component of platform regulation,2
-fr,French,Togo,Moderation as a component of platform regulation,2
-fr,French,United Kingdom,Moderation and censorship,2
-fr,French,United Kingdom,Moderation as a component of platform regulation,2
-it,Italian,(unspecified),Debate management,2
-it,Italian,Brazil,Moderation as a component of platform governance,2
-it,Italian,China,Moderation as a component of platform governance,2
-it,Italian,Europe,Moderation as a component of platform regulation,2
-it,Italian,France,Moderation and censorship,2
-it,Italian,Germany,Moderating extremism,2
-it,Italian,Germany,Moderation as a component of platform governance,2
-it,Italian,Germany,Moderation as industrial labour,2
-it,Italian,India,Moderation as a component of platform governance,2
-it,Italian,Japan,Moderation as a component of platform regulation,2
-it,Italian,New Zealand,Moderating extremism,2
-it,Italian,Romania,Moderation as a component of platform regulation,2
-it,Italian,Russia,Moderation as a component of platform governance,2
-it,Italian,Russia,Moderation as a component of platform regulation,2
-it,Italian,Spain,Moderation and censorship,2
-pt,Portuguese,Canada,Moderation as a component of platform regulation,2
-pt,Portuguese,China,Moderation as a component of platform regulation,2
-pt,Portuguese,Colombia,Moderation as the cultivation of a democratic public sphere,2
-pt,Portuguese,Germany,Moderation as the cultivation of a democratic public sphere,2
-pt,Portuguese,India,Moderation as a component of platform regulation,2
-pt,Portuguese,India,Moderation as industrial labour,2
-pt,Portuguese,Indonesia,Moderation as a component of platform governance,2
-pt,Portuguese,Philippines,Moderation as industrial labour,2
-pt,Portuguese,Spain,Moderation as a component of platform regulation,2
-pt,Portuguese,Spain,Moderation as the cultivation of a democratic public sphere,2
-pt,Portuguese,United Kingdom,Moderation as the cultivation of a democratic public sphere,2
-pt,Portuguese,United States,Moderation as the enforcement of community norms and identity,2
-und,undetermined,European Union,Moderation as a component of platform regulation,2
-und,undetermined,Germany,Moderation as a component of platform regulation,2
-de,German,(unspecified),Debate management,1
-en,English,Africa,Automated or algorithmic content moderation,1
-en,English,Africa,Moderation as a component of platform regulation,1
-en,English,Algeria,Moderation as a component of platform governance,1
-en,English,Algeria,Other,1
-en,English,Americas,Moderating extremism,1
-en,English,Americas,Moderation and censorship,1
-en,English,Argentina,Moderation and censorship,1
-en,English,Argentina,Moderation as a component of platform governance,1
-en,English,Australia,Automated or algorithmic content moderation,1
-en,English,Australia,Moderating extremism,1
-en,English,Australia,Moderation as industrial labour,1
-en,English,Australia,Other,1
-en,English,Austria,Moderation and censorship,1
-en,English,Bahrain,Moderation as a component of platform regulation,1
-en,English,Bangladesh,Moderation as a component of platform regulation,1
-en,English,Bangladesh,Moderation as the enforcement of community norms and identity,1
-en,English,Belarus,Moderation as a component of platform regulation,1
-en,English,Belgium,Moderation as a component of platform governance,1
-en,English,Belgium,Moderation as a component of platform regulation,1
-en,English,Belgium,Moderation as the cultivation of a democratic public sphere,1
-en,English,Bolivia,Moderation as a component of platform regulation,1
-en,English,Bosnia,Moderation as the cultivation of a democratic public sphere,1
-en,English,Brazil,Debate management,1
-en,English,Brazil,Other,1
-en,English,Bulgaria,Moderation as a component of platform regulation,1
-en,English,Cambodia,Moderation as a component of platform regulation,1
-en,English,Cameroon,Moderation as a component of platform regulation,1
-en,English,Canada,Debate management,1
-en,English,Central African Republic,Moderation as a component of platform regulation,1
-en,English,China,Automated or algorithmic content moderation,1
-en,English,China,Moderation as brand safety and the commercial viability of the platform,1
-en,English,China,Moderation as industrial labour,1
-en,English,China,Other,1
-en,English,Colombia,Moderation as a component of platform governance,1
-en,English,Czech Republic,Moderation as a component of platform governance,1
-en,English,Denmark,Moderation as a component of platform regulation,1
-en,English,Denmark,Moderation as the enforcement of community norms and identity,1
-en,English,Eastern Europe,Moderation as a component of platform governance,1
-en,English,Ecuador,Moderation as a component of platform governance,1
-en,English,Egypt,Moderation as a component of platform governance,1
-en,English,Egypt,Other,1
-en,English,England,Moderation as a component of platform governance,1
-en,English,England,Other,1
-en,English,Ethiopia,Moderating extremism,1
-en,English,Europe,Moderating extremism,1
-en,English,Europe,Moderation as a component of platform regulation,1
-en,English,Europe,Moderation as brand safety and the commercial viability of the platform,1
-en,English,Europe,Moderation as the cultivation of a democratic public sphere,1
-en,English,Europe,Moderation as the enforcement of community norms and identity,1
-en,English,European Union,Moderation as industrial labour,1
-en,English,Finland,Moderation as industrial labour,1
-en,English,Finland,Moderation as the cultivation of a democratic public sphere,1
+en,English,Hungary,Compliance,2
+en,English,Hungary,Platform regulation,2
+en,English,Indonesia,Compliance,2
+en,English,Indonesia,Platform regulation,2
+en,English,Iran,Community norms and identity,2
+en,English,Iran,Regulative,2
+en,English,Ireland,Regulative,2
+en,English,Israel,Censorship,2
+en,English,Israel,Regulative,2
+en,English,Italy,Community norms and identity,2
+en,English,Lebanon,Platform governance,2
+en,English,Mexico,Debate management,2
+en,English,Nepal,Platform governance,2
+en,English,Nigeria,Compliance,2
+en,English,Norway,Regulative,2
+en,English,Pakistan,Platform regulation,2
+en,English,Palestine,Platform governance,2
+en,English,Philippines,Censorship,2
+en,English,Philippines,Compliance,2
+en,English,Philippines,Platform regulation,2
+en,English,Portugal,Debate management,2
+en,English,Russia,Compliance,2
+en,English,Russia,Platform regulation,2
+en,English,Slovakia,Platform governance,2
+en,English,South Korea,Community norms and identity,2
+en,English,South Korea,Regulative,2
+en,English,Spain,Censorship,2
+en,English,Spain,Regulative,2
+en,English,Sri Lanka,Platform governance,2
+en,English,Sweden,Community norms and identity,2
+en,English,Sweden,Regulative,2
+en,English,Switzerland,Regulative,2
+en,English,Taiwan,Community norms and identity,2
+en,English,Turkey,Censorship,2
+en,English,Turkey,Compliance,2
+en,English,Uganda,Platform governance,2
+en,English,Ukraine,Censorship,2
+en,English,United Kingdom,Platform regulation,2
+en,English,United States,Gatekeeping (selection theory),2
+en,English,Vietnam,Platform governance,2
+es,Spanish,Argentina,Community norms and identity,2
+es,Spanish,Argentina,Debate management,2
+es,Spanish,Argentina,Platform regulation,2
+es,Spanish,Brazil,Platform regulation,2
+es,Spanish,Colombia,Debate management,2
+es,Spanish,Colombia,Platform regulation,2
+es,Spanish,European Union,Censorship,2
+es,Spanish,European Union,Regulative,2
+es,Spanish,India,Platform governance,2
+es,Spanish,Mexico,Debate management,2
+es,Spanish,Mexico,Platform governance,2
+fr,French,Belgium,Debate management,2
+fr,French,Canada,Compliance,2
+fr,French,China,Censorship,2
+fr,French,China,Platform governance,2
+fr,French,European Union,Compliance,2
+fr,French,India,Platform governance,2
+fr,French,Palestine,Platform governance,2
+fr,French,Switzerland,Platform governance,2
+fr,French,United Kingdom,Platform governance,2
+fr,French,United States,Community norms and identity,2
+fr,French,United States,Platform regulation,2
+fr,French,United States,Regulative,2
+it,Italian,(unspecified),Platform governance,2
+it,Italian,China,Platform governance,2
+it,Italian,France,Compliance,2
+it,Italian,France,Regulative,2
+it,Italian,Germany,Censorship,2
+it,Italian,Germany,Compliance,2
+it,Italian,Germany,Platform regulation,2
+it,Italian,Germany,Regulative,2
+it,Italian,India,Platform governance,2
+it,Italian,Italy,Debate management,2
+it,Italian,Myanmar,Platform governance,2
+it,Italian,New Zealand,Platform governance,2
+it,Italian,Russia,Platform governance,2
+it,Italian,United Kingdom,Platform governance,2
+it,Italian,United Kingdom,Regulative,2
+it,Italian,United States,Moderation as industrial labour,2
+pt,Portuguese,Australia,Regulative,2
+pt,Portuguese,Brazil,Brand safety,2
+pt,Portuguese,Brazil,Moderation as industrial labour,2
+pt,Portuguese,Canada,Platform governance,2
+pt,Portuguese,Germany,Regulative,2
+pt,Portuguese,India,Platform governance,2
+pt,Portuguese,India,Regulative,2
+pt,Portuguese,Indonesia,Regulative,2
+pt,Portuguese,Myanmar,Platform governance,2
+pt,Portuguese,Portugal,Debate management,2
+pt,Portuguese,Portugal,Platform regulation,2
+pt,Portuguese,Turkey,Regulative,2
+pt,Portuguese,United Kingdom,Compliance,2
+pt,Portuguese,United Kingdom,Regulative,2
+pt,Portuguese,United States,Community norms and identity,2
+pt,Portuguese,United States,Debate management,2
+pt,Portuguese,United States,Gatekeeping (selection theory),2
+pt,Portuguese,United States,Moderation as industrial labour,2
+und,undetermined,European Union,Platform governance,2
+und,undetermined,France,Debate management,2
+und,undetermined,Germany,Platform governance,2
+und,undetermined,United States,Platform governance,2
+en,English,(unspecified),Constitutive,1
+en,English,(unspecified),Gatekeeping (selection theory),1
+en,English,(unspecified),Moderating extremism,1
+en,English,(unspecified),Platform regulation,1
+en,English,(unspecified),Regulative,1
+en,English,Africa,Compliance,1
+en,English,Algeria,Common carriage / neutral conduit,1
+en,English,Algeria,Debate management,1
+en,English,Americas,Censorship,1
+en,English,Americas,Platform governance,1
+en,English,Argentina,Censorship,1
+en,English,Argentina,Platform governance,1
+en,English,Austria,Censorship,1
+en,English,Austria,Compliance,1
+en,English,Austria,Moderating extremism,1
+en,English,Austria,Regulative,1
+en,English,Bahrain,Public trusteeship / public interest,1
+en,English,Bangladesh,Community norms and identity,1
+en,English,Bangladesh,Platform governance,1
+en,English,Belarus,Compliance,1
+en,English,Belarus,Regulative,1
+en,English,Belgium,Platform governance,1
+en,English,Bolivia,Compliance,1
+en,English,Bolivia,Debate management,1
+en,English,Bosnia,Censorship,1
+en,English,Bosnia,Debate management,1
+en,English,Brazil,Common carriage / neutral conduit,1
+en,English,Bulgaria,Censorship,1
+en,English,Cameroon,Platform governance,1
+en,English,Central African Republic,Platform governance,1
+en,English,Chile,Censorship,1
+en,English,Chile,Platform governance,1
+en,English,China,Public trusteeship / public interest,1
+en,English,Colombia,Community norms and identity,1
+en,English,Croatia,Censorship,1
+en,English,Cuba,Platform governance,1
+en,English,Denmark,Debate management,1
+en,English,Eastern Europe,Compliance,1
+en,English,Ecuador,Platform governance,1
+en,English,Egypt,Common carriage / neutral conduit,1
+en,English,Egypt,Public trusteeship / public interest,1
+en,English,Egypt,Regulative,1
+en,English,Estonia,Censorship,1
+en,English,Estonia,Compliance,1
+en,English,Estonia,Platform governance,1
+en,English,Estonia,Platform regulation,1
+en,English,Estonia,Regulative,1
+en,English,Ethiopia,Censorship,1
+en,English,Ethiopia,Regulative,1
+en,English,Europe,Community norms and identity,1
+en,English,Europe,Compliance,1
+en,English,European Union,Brand safety,1
+en,English,European Union,Debate management,1
+en,English,European Union,Infrastructural,1
+en,English,European Union,Public trusteeship / public interest,1
+en,English,Fiji,Debate management,1
+en,English,Finland,Debate management,1
+en,English,Finland,Other: not censorship state,1
+en,English,Finland,Platform governance,1
+en,English,France,Infrastructural,1
+en,English,France,Moderation as industrial labour,1
 en,English,Global South,Moderation as industrial labour,1
-en,English,Greece,Moderation as the cultivation of a democratic public sphere,1
-en,English,Guatemala,Moderation as a component of platform governance,1
-en,English,Honduras,Moderation as a component of platform governance,1
-en,English,Hong Kong,Moderation and censorship,1
-en,English,India,Automated or algorithmic content moderation,1
-en,English,India,Moderation as the cultivation of a democratic public sphere,1
+en,English,Greece,Debate management,1
+en,English,Greece,Regulative,1
+en,English,Guatemala,Platform governance,1
+en,English,Honduras,Compliance,1
+en,English,Honduras,Platform regulation,1
+en,English,Hungary,Censorship,1
+en,English,Hungary,Moderating extremism,1
+en,English,Hungary,Regulative,1
+en,English,Iceland,Regulative,1
+en,English,India,Public trusteeship / public interest,1
+en,English,India,Regulative,1
 en,English,Indonesia,Moderating extremism,1
 en,English,Indonesia,Moderation as industrial labour,1
-en,English,Iran,Moderation and censorship,1
-en,English,Iran,Moderation as the cultivation of a democratic public sphere,1
-en,English,Iran,Moderation as the enforcement of community norms and identity,1
+en,English,Iran,Public trusteeship / public interest,1
+en,English,Ireland,Censorship,1
+en,English,Ireland,Community norms and identity,1
+en,English,Ireland,Debate management,1
 en,English,Ireland,Moderation as industrial labour,1
-en,English,Ireland,Moderation as the enforcement of community norms and identity,1
-en,English,Ireland,Other,1
-en,English,Italy,Other,1
-en,English,Japan,Moderation as a component of platform governance,1
-en,English,Japan,Moderation as a component of platform regulation,1
-en,English,Jordan,Moderation as a component of platform governance,1
-en,English,Jordan,Moderation as the cultivation of a democratic public sphere,1
-en,English,Jordan,Moderation as the enforcement of community norms and identity,1
-en,English,Kuwait,Moderation as a component of platform regulation,1
-en,English,Lebanon,Moderation and censorship,1
-en,English,Lebanon,Moderation as a component of platform governance,1
-en,English,Lebanon,Moderation as a component of platform regulation,1
-en,English,Libya,Moderation as a component of platform regulation,1
-en,English,Mexico,Moderation as a component of platform regulation,1
+en,English,Ireland,Platform regulation,1
+en,English,Israel,Common carriage / neutral conduit,1
+en,English,Israel,Compliance,1
+en,English,Italy,Censorship,1
+en,English,Italy,Common carriage / neutral conduit,1
+en,English,Italy,Compliance,1
+en,English,Italy,Moderating extremism,1
+en,English,Italy,Platform regulation,1
+en,English,Japan,Censorship,1
+en,English,Japan,Compliance,1
+en,English,Japan,Platform governance,1
+en,English,Jordan,Censorship,1
+en,English,Jordan,Common carriage / neutral conduit,1
+en,English,Jordan,Compliance,1
+en,English,Kenya,Censorship,1
+en,English,Kenya,Community norms and identity,1
+en,English,Kenya,Compliance,1
+en,English,Kenya,Platform regulation,1
+en,English,Latin America,Compliance,1
+en,English,Lebanon,Censorship,1
+en,English,Lebanon,Debate management,1
+en,English,Libya,Censorship,1
+en,English,Libya,Platform governance,1
+en,English,Libya,Platform regulation,1
+en,English,Libya,Public trusteeship / public interest,1
+en,English,Malaysia,Compliance,1
+en,English,Malaysia,Debate management,1
+en,English,Mexico,Community norms and identity,1
 en,English,Mexico,Moderation as industrial labour,1
-en,English,Middle East,Moderation as a component of platform regulation,1
-en,English,Morocco,Moderation as a component of platform governance,1
-en,English,Myanmar,Automated or algorithmic content moderation,1
-en,English,Myanmar,Moderation and censorship,1
+en,English,Mexico,Regulative,1
+en,English,Middle East,Platform governance,1
+en,English,Morocco,Common carriage / neutral conduit,1
+en,English,Myanmar,Compliance,1
 en,English,Myanmar,Moderation as industrial labour,1
+en,English,Myanmar,Regulative,1
+en,English,Namibia,Platform governance,1
+en,English,Netherlands,Censorship,1
+en,English,Netherlands,Moderating extremism,1
+en,English,Netherlands,Other: not censorship state,1
+en,English,New Zealand,Community norms and identity,1
+en,English,New Zealand,Compliance,1
 en,English,New Zealand,Moderating extremism,1
-en,English,Nigeria,Moderating extremism,1
-en,English,North America,Moderation as a component of platform governance,1
-en,English,Norway,Moderation and censorship,1
-en,English,Norway,Moderation as a component of platform regulation,1
-en,English,Norway,Moderation as the cultivation of a democratic public sphere,1
-en,English,Norway,Moderation as the enforcement of community norms and identity,1
-en,English,Palestine,Moderation as a component of platform regulation,1
-en,English,Philippines,Automated or algorithmic content moderation,1
-en,English,Philippines,Moderation as the enforcement of community norms and identity,1
-en,English,Poland,Moderating extremism,1
-en,English,Poland,Moderation as the cultivation of a democratic public sphere,1
-en,English,Portugal,Debate management,1
-en,English,Portugal,Moderation as the enforcement of community norms and identity,1
-en,English,Qatar,Moderation as a component of platform governance,1
-en,English,Qatar,Moderation as the cultivation of a democratic public sphere,1
-en,English,Republic of Korea,Moderation as the enforcement of community norms and identity,1
-en,English,Romania,Moderation and censorship,1
-en,English,Russia,Moderation as the enforcement of community norms and identity,1
-en,English,Russia,Other,1
-en,English,Russian Federation,Moderation as a component of platform regulation,1
-en,English,Rwanda,Moderating extremism,1
-en,English,Saudi Arabia,Moderating extremism,1
-en,English,Saudi Arabia,Moderation as a component of platform regulation,1
-en,English,Saudi Arabia,Moderation as industrial labour,1
-en,English,Saudi Arabia,Other,1
-en,English,Slovakia,Automated or algorithmic content moderation,1
-en,English,Slovakia,Moderating extremism,1
-en,English,Slovakia,Moderation and censorship,1
-en,English,Slovenia,Moderation as a component of platform governance,1
-en,English,Slovenia,Moderation as a component of platform regulation,1
-en,English,Somalia,Moderating extremism,1
-en,English,South Africa,Moderation as a component of platform governance,1
-en,English,South Asia,Moderation as a component of platform regulation,1
-en,English,South Korea,Moderating extremism,1
-en,English,South Korea,Moderation and censorship,1
-en,English,South Sudan,Moderation as a component of platform governance,1
-en,English,Sri Lanka,Moderating extremism,1
-en,English,Sudan,Moderation as a component of platform governance,1
-en,English,Sudan,Moderation as a component of platform regulation,1
-en,English,Sudan,Other,1
+en,English,New Zealand,Platform regulation,1
+en,English,Nigeria,Debate management,1
+en,English,North America,Compliance,1
+en,English,Northern Ireland,Debate management,1
+en,English,Norway,Censorship,1
+en,English,Norway,Gatekeeping (selection theory),1
+en,English,Pakistan,Compliance,1
+en,English,Palestine,Censorship,1
+en,English,Palestine,Common carriage / neutral conduit,1
+en,English,Palestine,Compliance,1
+en,English,Palestine,Regulative,1
+en,English,Papua New Guinea,Debate management,1
+en,English,Philippines,Brand safety,1
+en,English,Poland,Regulative,1
+en,English,Portugal,Censorship,1
+en,English,Portugal,Platform governance,1
+en,English,Portugal,Regulative,1
+en,English,Qatar,Debate management,1
+en,English,Qatar,Platform governance,1
+en,English,Republic of Korea,Community norms and identity,1
+en,English,Romania,Censorship,1
+en,English,Romania,Compliance,1
+en,English,Romania,Regulative,1
+en,English,Russia,Public trusteeship / public interest,1
+en,English,Russian Federation,Censorship,1
+en,English,Saudi Arabia,Common carriage / neutral conduit,1
+en,English,Singapore,Compliance,1
+en,English,Singapore,Regulative,1
+en,English,Slovakia,Compliance,1
+en,English,Slovenia,Platform governance,1
+en,English,Slovenia,Platform regulation,1
+en,English,South Africa,Compliance,1
+en,English,South Africa,Debate management,1
+en,English,South Asia,Platform governance,1
+en,English,South Korea,Compliance,1
+en,English,South Korea,Public trusteeship / public interest,1
+en,English,South Sudan,Censorship,1
+en,English,Spain,Community norms and identity,1
+en,English,Spain,Debate management,1
+en,English,Spain,Moderation as industrial labour,1
+en,English,Sri Lanka,Censorship,1
+en,English,Sri Lanka,Debate management,1
+en,English,Sudan,Censorship,1
 en,English,Sweden,Debate management,1
-en,English,Sweden,Moderation as a component of platform governance,1
-en,English,Sweden,Moderation as a component of platform regulation,1
-en,English,Switzerland,(unspecified),1
-en,English,Switzerland,Moderating extremism,1
-en,English,Switzerland,Moderation and censorship,1
-en,English,Switzerland,Moderation as the cultivation of a democratic public sphere,1
-en,English,Syria,Moderation as a component of platform regulation,1
-en,English,Taiwan,Moderation as a component of platform regulation,1
-en,English,Tanzania,Moderation as a component of platform regulation,1
-en,English,Thailand,Moderation and censorship,1
-en,English,Togo,Moderation as a component of platform regulation,1
-en,English,Tunisia,Moderation as a component of platform governance,1
-en,English,Tunisia,Moderation as a component of platform regulation,1
-en,English,Turkey,Moderation as the cultivation of a democratic public sphere,1
-en,English,Turkey,Moderation as the enforcement of community norms and identity,1
-en,English,Türkiye,Moderation as the cultivation of a democratic public sphere,1
-en,English,UAE,Other,1
+en,English,Sweden,Moderating extremism,1
+en,English,Sweden,Other: not censorship state,1
+en,English,Syria,Platform regulation,1
+en,English,Syria,Public trusteeship / public interest,1
+en,English,Syria,Regulative,1
+en,English,Taiwan,Debate management,1
+en,English,Taiwan,Platform governance,1
+en,English,Taiwan,Regulative,1
+en,English,Thailand,Compliance,1
+en,English,Thailand,Platform regulation,1
+en,English,Thailand,Regulative,1
+en,English,Togo,Platform governance,1
+en,English,Tunisia,Common carriage / neutral conduit,1
+en,English,Tunisia,Platform governance,1
+en,English,Tunisia,Public trusteeship / public interest,1
+en,English,Tunisia,Regulative,1
+en,English,Turkey,Debate management,1
+en,English,Turkey,Platform regulation,1
+en,English,Türkiye,Censorship,1
+en,English,UK,Community norms and identity,1
 en,English,UK,Moderating extremism,1
-en,English,UK,Moderation as the enforcement of community norms and identity,1
-en,English,USA,Moderation and censorship,1
-en,English,USA,Moderation as the enforcement of community norms and identity,1
-en,English,Uganda,Moderation as a component of platform governance,1
-en,English,Ukraine,Moderation and censorship,1
-en,English,United Arab Emirates,Moderating extremism,1
-en,English,United Arab Emirates,Moderation as a component of platform governance,1
-en,English,United Kingdom,Other,1
-en,English,United States,Moderation as brand safety and the commercial viability of the platform,1
-en,English,Uruguay,Moderation as the enforcement of community norms and identity,1
-en,English,Uzbekistan,Moderation and censorship,1
-en,English,Venezuela,Moderation as a component of platform governance,1
-en,English,Venezuela,Moderation as a component of platform regulation,1
-en,English,Vietnam,Moderation and censorship,1
-en,English,Vietnam,Moderation as a component of platform governance,1
-en,English,Western Europe,Moderation as the enforcement of community norms and identity,1
-en,English,Yemen,Moderation as a component of platform governance,1
-es,Spanish,(unspecified),Moderation and censorship,1
-es,Spanish,(unspecified),Moderation as a component of platform governance,1
-es,Spanish,(unspecified),Moderation as a component of platform regulation,1
-es,Spanish,(unspecified),Moderation as the enforcement of community norms and identity,1
-es,Spanish,Argentina,Debate management,1
-es,Spanish,Argentina,Moderation as the enforcement of community norms and identity,1
-es,Spanish,Austria,Moderation as a component of platform regulation,1
-es,Spanish,Bolivia,Moderation as a component of platform regulation,1
-es,Spanish,Bosnia and Herzegovina,Moderation as a component of platform regulation,1
-es,Spanish,Brazil,Moderation as the enforcement of community norms and identity,1
-es,Spanish,China,Moderation as a component of platform regulation,1
-es,Spanish,Colombia,Moderating extremism,1
-es,Spanish,Colombia,Moderation and censorship,1
-es,Spanish,Colombia,Moderation as a component of platform governance,1
-es,Spanish,Cuba,Moderation as a component of platform governance,1
-es,Spanish,Cuba,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,Dominican Republic,Moderation as a component of platform regulation,1
-es,Spanish,Ecuador,Moderation as a component of platform regulation,1
-es,Spanish,Ecuador,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,Egypt,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,España,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,European Union,Moderation and censorship,1
-es,Spanish,European Union,Moderation as industrial labour,1
-es,Spanish,Finland,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,France,Moderation as a component of platform regulation,1
-es,Spanish,France,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,Germany,Moderation as a component of platform governance,1
-es,Spanish,Global South,Moderation as a component of platform governance,1
-es,Spanish,Honduras,Moderation as a component of platform regulation,1
-es,Spanish,Hungary,Moderation as a component of platform regulation,1
-es,Spanish,India,Moderation as a component of platform regulation,1
-es,Spanish,India,Moderation as industrial labour,1
-es,Spanish,Indonesia,Moderation as a component of platform regulation,1
-es,Spanish,Iran,Moderation as a component of platform regulation,1
-es,Spanish,Ireland,Moderation as industrial labour,1
+en,English,UK,Regulative,1
+en,English,US,Regulative,1
+en,English,USA,Community norms and identity,1
+en,English,USA,Regulative,1
+en,English,Uganda,Platform regulation,1
+en,English,Ukraine,Community norms and identity,1
+en,English,Ukraine,Debate management,1
+en,English,United Arab Emirates,Platform governance,1
+en,English,United Kingdom,Brand safety,1
+en,English,United Kingdom,Other: not censorship state,1
+en,English,United States,Infrastructural,1
+en,English,United States,Public trusteeship / public interest,1
+en,English,Uruguay,Community norms and identity,1
+en,English,Uzbekistan,Compliance,1
+en,English,Venezuela,Compliance,1
+en,English,Venezuela,Platform governance,1
+en,English,Venezuela,Regulative,1
+en,English,Vietnam,Compliance,1
+en,English,Vietnam,Platform regulation,1
+en,English,Western Europe,Debate management,1
+en,English,Western Europe,Platform governance,1
+en,English,Yemen,Platform regulation,1
+en,English,Yugoslavia,Debate management,1
+en,English,Zimbabwe,Platform governance,1
+es,Spanish,(unspecified),Community norms and identity,1
+es,Spanish,(unspecified),Debate management,1
+es,Spanish,Argentina,Compliance,1
+es,Spanish,Argentina,Platform governance,1
+es,Spanish,Austria,Platform regulation,1
+es,Spanish,Bolivia,Platform regulation,1
+es,Spanish,Bosnia and Herzegovina,Brand safety,1
+es,Spanish,Brazil,Brand safety,1
+es,Spanish,Brazil,Community norms and identity,1
+es,Spanish,Brazil,Compliance,1
+es,Spanish,Brazil,Debate management,1
+es,Spanish,Chile,Compliance,1
+es,Spanish,Chile,Debate management,1
+es,Spanish,Chile,Platform regulation,1
+es,Spanish,China,Compliance,1
+es,Spanish,Colombia,Brand safety,1
+es,Spanish,Colombia,Community norms and identity,1
+es,Spanish,Colombia,Compliance,1
+es,Spanish,Colombia,Platform governance,1
+es,Spanish,Cuba,Platform governance,1
+es,Spanish,Dominican Republic,Platform regulation,1
+es,Spanish,Ecuador,Debate management,1
+es,Spanish,Ecuador,Platform regulation,1
+es,Spanish,Egypt,Community norms and identity,1
+es,Spanish,European Union,Brand safety,1
+es,Spanish,European Union,Compliance,1
+es,Spanish,Finland,Debate management,1
+es,Spanish,France,Censorship,1
+es,Spanish,France,Platform governance,1
+es,Spanish,France,Platform regulation,1
+es,Spanish,Germany,Brand safety,1
+es,Spanish,Germany,Platform governance,1
+es,Spanish,Germany,Platform regulation,1
+es,Spanish,Honduras,Platform regulation,1
+es,Spanish,Hungary,Platform governance,1
+es,Spanish,India,Compliance,1
+es,Spanish,India,Platform regulation,1
+es,Spanish,Indonesia,Brand safety,1
+es,Spanish,Iran,Compliance,1
+es,Spanish,Ireland,Platform governance,1
 es,Spanish,Italy,Debate management,1
-es,Spanish,Italy,Moderation as a component of platform governance,1
-es,Spanish,Italy,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,Kenya,Moderation as a component of platform regulation,1
-es,Spanish,Latin America,Moderation as a component of platform governance,1
-es,Spanish,Malaysia,Moderation as industrial labour,1
-es,Spanish,Mexico,Moderation as industrial labour,1
-es,Spanish,New Zealand,Moderation as a component of platform governance,1
-es,Spanish,Nicaragua,Moderation as a component of platform governance,1
-es,Spanish,Panama,Moderation as a component of platform regulation,1
-es,Spanish,Peru,Moderation as a component of platform governance,1
-es,Spanish,Philippines,Moderation as a component of platform governance,1
-es,Spanish,Philippines,Moderation as industrial labour,1
-es,Spanish,Poland,Moderation as industrial labour,1
-es,Spanish,Portugal,Moderation as industrial labour,1
-es,Spanish,Portugal,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,Senegal,Moderation as a component of platform regulation,1
-es,Spanish,Spain,Moderating extremism,1
+es,Spanish,Kenya,Brand safety,1
+es,Spanish,Latin America,Community norms and identity,1
+es,Spanish,Latin America,Compliance,1
+es,Spanish,Latin America,Platform regulation,1
+es,Spanish,Malaysia,Platform governance,1
+es,Spanish,Mexico,Compliance,1
+es,Spanish,New Zealand,Platform governance,1
+es,Spanish,Nicaragua,Platform governance,1
+es,Spanish,Panama,Platform regulation,1
+es,Spanish,Peru,Compliance,1
+es,Spanish,Peru,Debate management,1
+es,Spanish,Peru,Platform governance,1
+es,Spanish,Peru,Platform regulation,1
+es,Spanish,Philippines,Platform governance,1
+es,Spanish,Philippines,Platform regulation,1
+es,Spanish,Poland,Platform governance,1
+es,Spanish,Portugal,Debate management,1
+es,Spanish,Portugal,Platform governance,1
+es,Spanish,Russia,Brand safety,1
+es,Spanish,Russia,Compliance,1
+es,Spanish,Senegal,Brand safety,1
+es,Spanish,Spain,Compliance,1
 es,Spanish,Spain,Moderation as industrial labour,1
-es,Spanish,Spain,Moderation as the enforcement of community norms and identity,1
-es,Spanish,Thailand,Moderation as a component of platform regulation,1
-es,Spanish,United Kingdom,Moderation as a component of platform governance,1
-es,Spanish,United Kingdom,Moderation as a component of platform regulation,1
-es,Spanish,United States,Moderation and censorship,1
-es,Spanish,United States,Moderation as industrial labour,1
-es,Spanish,Uruguay,Moderation as a component of platform regulation,1
-es,Spanish,Uruguay,Moderation as the cultivation of a democratic public sphere,1
-es,Spanish,Venezuela,Moderation as a component of platform governance,1
-es,Spanish,Venezuela,Moderation as a component of platform regulation,1
-fr,French,(unspecified),Metamoderation,1
-fr,French,Australia,Moderation as a component of platform governance,1
-fr,French,Belarus,Moderation and censorship,1
-fr,French,Belgium,Moderation as the enforcement of community norms and identity,1
-fr,French,Brazil,Moderation as a component of platform governance,1
-fr,French,Cambodia,Moderation as a component of platform governance,1
-fr,French,Canada,Debate management,1
+es,Spanish,Thailand,Brand safety,1
+es,Spanish,United Kingdom,Brand safety,1
+es,Spanish,United Kingdom,Platform governance,1
+es,Spanish,United States,Censorship,1
+es,Spanish,United States,Compliance,1
+es,Spanish,United States,Regulative,1
+es,Spanish,Uruguay,Compliance,1
+es,Spanish,Uruguay,Debate management,1
+es,Spanish,Venezuela,Compliance,1
+es,Spanish,Venezuela,Debate management,1
+es,Spanish,Venezuela,Platform governance,1
+fr,French,(unspecified),Debate management,1
+fr,French,(unspecified),Platform governance,1
+fr,French,Australia,Platform governance,1
+fr,French,Belgium,Censorship,1
+fr,French,Belgium,Community norms and identity,1
+fr,French,Belgium,Platform governance,1
+fr,French,Brazil,Platform governance,1
+fr,French,Canada,Censorship,1
 fr,French,Canada,Moderating extremism,1
-fr,French,China,Moderation and censorship,1
-fr,French,China,Moderation as a component of platform governance,1
-fr,French,Cuba,Moderation and censorship,1
-fr,French,Denmark,Moderation as the enforcement of community norms and identity,1
-fr,French,Ecuador,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Egypt,Moderation and censorship,1
-fr,French,Egypt,Moderation as a component of platform governance,1
+fr,French,Canada,Platform regulation,1
+fr,French,Denmark,Platform governance,1
+fr,French,European Union,Censorship,1
+fr,French,European Union,Gatekeeping (selection theory),1
 fr,French,European Union,Moderating extremism,1
-fr,French,Finland,Moderation as the enforcement of community norms and identity,1
-fr,French,France,Debate management,1
-fr,French,Germany,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Greece,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Hong Kong,Moderation and censorship,1
-fr,French,India,Moderation as the enforcement of community norms and identity,1
-fr,French,Iran,Moderation as a component of platform governance,1
-fr,French,Ireland,Moderation as the enforcement of community norms and identity,1
-fr,French,Israel,Moderation as a component of platform governance,1
-fr,French,Italy,Moderation as a component of platform regulation,1
-fr,French,Lebanon,Moderation and censorship,1
-fr,French,Libya,Moderation as a component of platform governance,1
-fr,French,Lithuania,Moderation as a component of platform regulation,1
-fr,French,Mali,Moderation as a component of platform regulation,1
-fr,French,Morocco,Moderation and censorship,1
-fr,French,Netherlands,Moderation as the enforcement of community norms and identity,1
+fr,French,Finland,Platform governance,1
+fr,French,France,Brand safety,1
+fr,French,France,Gatekeeping (selection theory),1
+fr,French,France,Moderating extremism,1
+fr,French,Germany,Censorship,1
+fr,French,Germany,Community norms and identity,1
+fr,French,Germany,Compliance,1
+fr,French,Germany,Debate management,1
+fr,French,Germany,Gatekeeping (selection theory),1
+fr,French,Germany,Regulative,1
+fr,French,Greece,Debate management,1
+fr,French,Ireland,Platform governance,1
+fr,French,Israel,Platform governance,1
+fr,French,Italy,Platform governance,1
+fr,French,Kenya,Moderation as industrial labour,1
+fr,French,Morocco,Platform governance,1
+fr,French,Netherlands,Platform governance,1
 fr,French,New Zealand,Moderating extremism,1
-fr,French,Niger,Moderation and censorship,1
-fr,French,Palestine,Moderation and censorship,1
-fr,French,Palestine,Moderation as a component of platform governance,1
-fr,French,Philippines,Moderation and censorship,1
-fr,French,Republic of Korea,Moderation as a component of platform regulation,1
-fr,French,Republic of the Congo,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Russia,Moderation and censorship,1
-fr,French,Russia,Moderation as a component of platform governance,1
+fr,French,Philippines,Community norms and identity,1
+fr,French,Philippines,Platform governance,1
+fr,French,Russia,Platform governance,1
 fr,French,Saudi Arabia,Moderating extremism,1
-fr,French,Senegal,Automated or algorithmic content moderation,1
-fr,French,Singapore,Moderation as the cultivation of a democratic public sphere,1
-fr,French,South Africa,Moderation as the cultivation of a democratic public sphere,1
-fr,French,South Korea,Moderation as a component of platform regulation,1
-fr,French,Spain,Moderation and censorship,1
-fr,French,Spain,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Switzerland,Moderation and censorship,1
-fr,French,Switzerland,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Tunisia,Moderation and censorship,1
-fr,French,Ukraine,Moderation as a component of platform governance,1
-fr,French,United Kingdom,Moderation as a component of platform governance,1
-fr,French,United Kingdom,Moderation as the enforcement of community norms and identity,1
+fr,French,Senegal,Platform governance,1
+fr,French,Spain,Censorship,1
+fr,French,Switzerland,Content moderation as industrial labour,1
+fr,French,United Kingdom,Censorship,1
+fr,French,United Kingdom,Community norms and identity,1
+fr,French,United Kingdom,Gatekeeping (selection theory),1
+fr,French,United Kingdom,Platform regulation,1
+fr,French,United States,Brand safety,1
+fr,French,United States,Compliance,1
 fr,French,United States,Moderating extremism,1
-fr,French,United States,Moderation as the cultivation of a democratic public sphere,1
-fr,French,Zimbabwe,Moderation as a component of platform governance,1
-it,Italian,(unspecified),Automated or algorithmic content moderation,1
-it,Italian,Australia,Moderation and censorship,1
-it,Italian,Australia,Moderation as a component of platform governance,1
-it,Italian,Australia,Moderation as a component of platform regulation,1
-it,Italian,Austria,Moderation as a component of platform governance,1
-it,Italian,Austria,Moderation as a component of platform regulation,1
-it,Italian,Brazil,Moderation and censorship,1
-it,Italian,Brazil,Moderation as a component of platform regulation,1
-it,Italian,Brazil,Moderation as the cultivation of a democratic public sphere,1
-it,Italian,Canada,Moderation as a component of platform governance,1
-it,Italian,China,Moderation and censorship,1
-it,Italian,France,Moderating extremism,1
-it,Italian,Honduras,Moderation and censorship,1
-it,Italian,India,Moderation and censorship,1
+it,Italian,(unspecified),Community norms and identity,1
+it,Italian,Australia,Censorship,1
+it,Italian,Australia,Regulative,1
+it,Italian,Austria,Platform governance,1
+it,Italian,Canada,Community norms and identity,1
+it,Italian,China,Platform regulation,1
+it,Italian,China,Regulative,1
+it,Italian,Europe,Platform regulation,1
+it,Italian,European Union,Community norms and identity,1
+it,Italian,European Union,Gatekeeping (selection theory),1
+it,Italian,France,Censorship,1
+it,Italian,France,Debate management,1
+it,Italian,France,Platform governance,1
+it,Italian,Germany,Moderation as industrial labour,1
+it,Italian,Honduras,Platform governance,1
 it,Italian,India,Moderation as industrial labour,1
-it,Italian,Israel,Moderation and censorship,1
-it,Italian,Italy,(unspecified),1
-it,Italian,Japan,Moderating extremism,1
+it,Italian,India,Regulative,1
+it,Italian,Israel,Platform governance,1
+it,Italian,Italy,Gatekeeping (selection theory),1
+it,Italian,Italy,Moderation as industrial labour,1
+it,Italian,Japan,Platform regulation,1
 it,Italian,Kenya,Moderation as industrial labour,1
-it,Italian,Myanmar,Moderation and censorship,1
-it,Italian,Myanmar,Moderation as a component of platform regulation,1
-it,Italian,North Korea,Moderation and censorship,1
-it,Italian,Norway,Moderation and censorship,1
-it,Italian,Palestine,Moderation and censorship,1
-it,Italian,Philippines,Moderation as a component of platform governance,1
+it,Italian,Palestine,Platform governance,1
 it,Italian,Philippines,Moderation as industrial labour,1
-it,Italian,Russia,Moderation and censorship,1
+it,Italian,Philippines,Platform governance,1
+it,Italian,Romania,Platform regulation,1
+it,Italian,Russia,Compliance,1
+it,Italian,Russia,Moderating extremism,1
 it,Italian,Russia,Moderation as industrial labour,1
-it,Italian,Spain,Moderation as a component of platform regulation,1
-it,Italian,Syria,Moderation and censorship,1
-it,Italian,Trinidad,Moderation as a component of platform governance,1
-it,Italian,Uganda,Moderation and censorship,1
-it,Italian,Ukraine,Moderation as a component of platform governance,1
+it,Italian,Spain,Censorship,1
+it,Italian,Spain,Platform regulation,1
+it,Italian,Spain,Regulative,1
+it,Italian,Syria,Platform governance,1
+it,Italian,Trinidad,Platform governance,1
+it,Italian,Uganda,Platform governance,1
+it,Italian,Ukraine,Moderating extremism,1
 it,Italian,Ukraine,Moderation as industrial labour,1
-it,Italian,United Kingdom,Moderating extremism,1
-it,Italian,United Kingdom,Moderation and censorship,1
-it,Italian,United Kingdom,Moderation as a component of platform governance,1
-it,Italian,United Kingdom,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,(unspecified),Moderation and censorship,1
+it,Italian,United Kingdom,Censorship,1
+it,Italian,United States,Community norms and identity,1
+it,Italian,United States,Gatekeeping (selection theory),1
+it,Italian,United States,Moderating extremism,1
 pt,Portuguese,(unspecified),Moderation as industrial labour,1
-pt,Portuguese,(unspecified),Moderation as the enforcement of community norms and identity,1
-pt,Portuguese,(unspecified),Other,1
+pt,Portuguese,(unspecified),Platform governance,1
 pt,Portuguese,Alemanha,Moderation as industrial labour,1
-pt,Portuguese,Americas,Moderation as a component of platform regulation,1
-pt,Portuguese,Australia,Moderation as a component of platform regulation,1
-pt,Portuguese,Australia,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Belgium,Moderation as a component of platform governance,1
-pt,Portuguese,Belgium,Moderation as a component of platform regulation,1
+pt,Portuguese,Australia,Censorship,1
+pt,Portuguese,Belgium,Censorship,1
+pt,Portuguese,Belgium,Platform regulation,1
 pt,Portuguese,Brasil,Moderation as industrial labour,1
-pt,Portuguese,Brasil,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Brazil,Automated or algorithmic content moderation,1
-pt,Portuguese,Brazil,Debate management,1
-pt,Portuguese,Cambodia,Moderation as a component of platform governance,1
-pt,Portuguese,Canada,Moderation as a component of platform governance,1
-pt,Portuguese,Canada,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Chile,Moderation as a component of platform regulation,1
-pt,Portuguese,Chile,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,China,Moderation and censorship,1
-pt,Portuguese,Cuba,Moderation as a component of platform governance,1
-pt,Portuguese,Czech Republic,Moderation as a component of platform governance,1
-pt,Portuguese,Denmark,Moderation as a component of platform governance,1
+pt,Portuguese,Brazil,Gatekeeping (selection theory),1
+pt,Portuguese,Brazil,Social responsibility / self-regulation,1
+pt,Portuguese,Cambodia,Platform governance,1
+pt,Portuguese,Canada,Censorship,1
+pt,Portuguese,Canada,Compliance,1
+pt,Portuguese,Chile,Platform governance,1
+pt,Portuguese,Chile,Platform regulation,1
+pt,Portuguese,China,Brand safety,1
+pt,Portuguese,China,Censorship,1
+pt,Portuguese,China,Compliance,1
+pt,Portuguese,China,Gatekeeping (selection theory),1
+pt,Portuguese,China,Platform governance,1
+pt,Portuguese,China,Regulative,1
+pt,Portuguese,Colombia,Debate management,1
+pt,Portuguese,Colombia,Platform governance,1
+pt,Portuguese,Cuba,Platform governance,1
+pt,Portuguese,Czech Republic,Platform governance,1
+pt,Portuguese,Denmark,Censorship,1
 pt,Portuguese,Espanha,Moderation as industrial labour,1
 pt,Portuguese,Estados Unidos,Moderation as industrial labour,1
-pt,Portuguese,Estados Unidos,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Estonia,Moderation as a component of platform regulation,1
-pt,Portuguese,Europa,Moderation as the cultivation of a democratic public sphere,1
+pt,Portuguese,Estonia,Platform regulation,1
+pt,Portuguese,European Union,Brand safety,1
+pt,Portuguese,European Union,Censorship,1
+pt,Portuguese,European Union,Gatekeeping (selection theory),1
 pt,Portuguese,Filipinas,Moderation as industrial labour,1
-pt,Portuguese,Finland,Moderation as a component of platform regulation,1
-pt,Portuguese,Germany,Moderation and censorship,1
-pt,Portuguese,Greece,Moderation as a component of platform governance,1
-pt,Portuguese,Indonesia,Moderation as a component of platform regulation,1
-pt,Portuguese,Iran,Moderation and censorship,1
-pt,Portuguese,Iran,Moderation as a component of platform governance,1
-pt,Portuguese,Iraq,Moderation as a component of platform governance,1
+pt,Portuguese,France,Platform regulation,1
+pt,Portuguese,Germany,Brand safety,1
+pt,Portuguese,Germany,Censorship,1
+pt,Portuguese,Germany,Moderation as industrial labour,1
+pt,Portuguese,Greece,Platform governance,1
+pt,Portuguese,India,Censorship,1
+pt,Portuguese,India,Moderation as industrial labour,1
+pt,Portuguese,India,Platform regulation,1
+pt,Portuguese,Indonesia,Censorship,1
+pt,Portuguese,Iran,Platform governance,1
+pt,Portuguese,Iraq,Platform governance,1
 pt,Portuguese,Irlanda,Moderation as industrial labour,1
-pt,Portuguese,Israel,Moderation and censorship,1
-pt,Portuguese,Italy,Moderation and censorship,1
-pt,Portuguese,Italy,Moderation as a component of platform regulation,1
-pt,Portuguese,Italy,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Japan,Moderation as a component of platform governance,1
+pt,Portuguese,Italy,Debate management,1
+pt,Portuguese,Italy,Platform regulation,1
+pt,Portuguese,Japan,Platform governance,1
 pt,Portuguese,Letônia,Moderation as industrial labour,1
 pt,Portuguese,Malásia,Moderation as industrial labour,1
-pt,Portuguese,Myanmar,Moderation and censorship,1
-pt,Portuguese,Myanmar,Moderation as a component of platform governance,1
-pt,Portuguese,Myanmar,Moderation as a component of platform regulation,1
-pt,Portuguese,New Zealand,Moderation as a component of platform governance,1
-pt,Portuguese,North Korea,Moderation and censorship,1
-pt,Portuguese,Norway,Moderation as a component of platform regulation,1
-pt,Portuguese,Pakistan,Moderation as a component of platform governance,1
-pt,Portuguese,Palestine,Moderation and censorship,1
-pt,Portuguese,Philippines,Moderation as a component of platform regulation,1
-pt,Portuguese,Poland,Moderation as a component of platform governance,1
-pt,Portuguese,Poland,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Portugal,Moderation and censorship,1
+pt,Portuguese,Myanmar,Regulative,1
+pt,Portuguese,New Zealand,Platform governance,1
+pt,Portuguese,Norway,Platform governance,1
+pt,Portuguese,Pakistan,Platform governance,1
+pt,Portuguese,Poland,Platform governance,1
+pt,Portuguese,Portugal,Censorship,1
+pt,Portuguese,Portugal,Compliance,1
+pt,Portuguese,Portugal,Gatekeeping (selection theory),1
 pt,Portuguese,Portugal,Moderation as industrial labour,1
-pt,Portuguese,Portugal,Moderation as the enforcement of community norms and identity,1
 pt,Portuguese,Quênia,Moderation as industrial labour,1
-pt,Portuguese,Russia,Moderation and censorship,1
-pt,Portuguese,Russia,Moderation as a component of platform governance,1
-pt,Portuguese,Russia,Moderation as a component of platform regulation,1
-pt,Portuguese,Russia,Moderation as the cultivation of a democratic public sphere,1
-pt,Portuguese,Singapore,Moderation as a component of platform governance,1
-pt,Portuguese,Spain,Moderation as a component of platform governance,1
-pt,Portuguese,Sweden,Moderation as a component of platform governance,1
-pt,Portuguese,Switzerland,Moderation as a component of platform governance,1
-pt,Portuguese,Turkey,Moderation as a component of platform governance,1
-pt,Portuguese,Turkey,Moderation as a component of platform regulation,1
-pt,Portuguese,United Kingdom,Moderation as industrial labour,1
-pt,Portuguese,United Kingdom,Moderation as the enforcement of community norms and identity,1
-pt,Portuguese,Venezuela,Moderation and censorship,1
+pt,Portuguese,Singapore,Censorship,1
+pt,Portuguese,Spain,Censorship,1
+pt,Portuguese,Spain,Compliance,1
+pt,Portuguese,Spain,Debate management,1
+pt,Portuguese,Spain,Platform governance,1
+pt,Portuguese,Spain,Platform regulation,1
+pt,Portuguese,Sweden,Platform governance,1
+pt,Portuguese,Switzerland,Censorship,1
+pt,Portuguese,United Kingdom,Debate management,1
+pt,Portuguese,United States,Brand safety,1
 pt,Portuguese,Índia,Moderation as industrial labour,1
-so,Somali,Brazil,Moderation as a component of platform governance,1
-so,Somali,Canada,Moderation as a component of platform governance,1
-so,Somali,United Kingdom,Moderation as a component of platform governance,1
-so,Somali,United States,Moderation as a component of platform governance,1
-und,undetermined,(unspecified),Moderation as the cultivation of a democratic public sphere,1
-und,undetermined,Brazil,Moderation as a component of platform governance,1
-und,undetermined,Brazil,Moderation as a component of platform regulation,1
-und,undetermined,China,Moderation as a component of platform governance,1
-und,undetermined,India,Moderation as a component of platform governance,1
-und,undetermined,India,Moderation as a component of platform regulation,1
-und,undetermined,Iran,Moderation as a component of platform governance,1
-und,undetermined,New Zealand,Moderation as a component of platform regulation,1
-und,undetermined,Philippines,Moderation as a component of platform regulation,1
-und,undetermined,Russia,Moderation as a component of platform governance,1
-und,undetermined,Saudi Arabia,Moderation as a component of platform governance,1
-und,undetermined,Syria,Moderation as a component of platform regulation,1
-und,undetermined,United States,Moderation as a component of platform governance,1
+so,Somali,Brazil,Compliance,1
+so,Somali,Canada,Platform governance,1
+so,Somali,United Kingdom,Platform governance,1
+so,Somali,United States,Platform governance,1
+und,undetermined,Australia,Debate management,1
+und,undetermined,Brazil,Censorship,1
+und,undetermined,Brazil,Platform governance,1
+und,undetermined,Canada,Debate management,1
+und,undetermined,China,Censorship,1
+und,undetermined,China,Debate management,1
+und,undetermined,European Union,Debate management,1
+und,undetermined,India,Censorship,1
+und,undetermined,Iran,Censorship,1
+und,undetermined,Myanmar,Debate management,1
+und,undetermined,New Zealand,Platform governance,1
+und,undetermined,Russia,Censorship,1
+und,undetermined,Saudi Arabia,Censorship,1
+und,undetermined,South Africa,Debate management,1
+und,undetermined,Syria,Platform governance,1
+und,undetermined,United States,Censorship,1
+und,undetermined,United States,Debate management,1

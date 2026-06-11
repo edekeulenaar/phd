@@ -52,7 +52,7 @@ csv.field_size_limit(10**7)
 # The script lives at  site/scripts/build_site_data.py
 # Project root is two levels up.
 ROOT   = Path(__file__).resolve().parent.parent.parent
-SRC    = ROOT / "Chapter 1 - Final results - Results.csv"
+SRC    = ROOT / "Chapter 1 - Final results - New results.csv"
 MASTER = ROOT / "master_bibliography.csv"   # only for: (a) Fig 1 counts,
                                             # (b) URL-by-Key (Fig 7 hover-link)
 OUT    = Path(__file__).resolve().parent.parent / "data"
@@ -66,7 +66,7 @@ SUBTOPIC_PARENT = "Content moderation"
 
 # Source markdown we mirror into site/manuscript.md on every build.
 MANUSCRIPT_SRC = Path("/Users/edekeulenaar/Projects/Master_vault/Manuscript/"
-                      "Chapter 1. New.md")
+                      "Chapter 1. Censorship and moderation.md")
 SITE_MANUSCRIPT = Path(__file__).resolve().parent.parent / "manuscript.md"
 
 
@@ -76,11 +76,14 @@ def _is_other(v: str) -> bool:
 
 
 def derive_topics(rows: list[dict]) -> list[str]:
-    """Every Topic value present in the data, minus the catch-all 'Other'."""
+    """Every Topic value present in the data, minus the catch-all 'Other'.
+    Under the v2 schema 'Topic' is the WHAT-typed finding's Category."""
     seen = set()
     out = []
     for r in rows:
-        t = (r.get("Topic") or "").strip()
+        if (r.get("Type") or "").strip().upper() != "WHAT":
+            continue
+        t = (r.get("Category") or "").strip()
         if not t or _is_other(t) or t in seen:
             continue
         seen.add(t); out.append(t)
@@ -254,10 +257,19 @@ def main() -> None:
         lg = (r.get("Language") or "").strip().lower()
         if lg and t not in item_lang:
             item_lang[t] = lg
-        if (r.get("Topic") or "").strip():
-            item_topic[t][(r.get("Topic") or "").strip()] += 1
-        if (r.get("Sub-topic") or "").strip():
-            item_subtopic[t][(r.get("Sub-topic") or "").strip()] += 1
+        # New v2 schema: Topic/Sub-topic don't exist as their own columns —
+        # they are the Category + Sub-category of the row when Type == WHAT.
+        # Each finding's WHAT category contributes one vote toward the item's
+        # most-common WHAT framing (its 'Topic'); same for sub-categories.
+        if (r.get("Type") or "").strip().upper() == "WHAT":
+            wc = (r.get("Category") or "").strip()
+            ws = (r.get("Sub-category") or "").strip()
+            if wc:
+                item_topic[t][wc] += 1
+                # Per the chapter's data convention, an "Other" category never
+                # carries a sub-category — keep it consistent here.
+                if ws and not wc.lower().startswith("other"):
+                    item_subtopic[t][ws] += 1
         item_disc[t][disc(r.get("Discipline"))] += 1
         y = clean_year(r.get("Year"))
         if y:
@@ -498,6 +510,12 @@ def main() -> None:
     bee_t: list[list] = []
     bee_s: list[list] = []
     TYPES_ALLOWED = {"WHO", "WHAT", "HOW", "WHY"}
+    # The v2 dataset carries paragraph-length verbatim quotes plus full
+    # abstracts; per-finding repetition of these would balloon each beeswarm
+    # CSV well past GitHub Pages' file-size limits. Truncate the hover-card
+    # quote to a readable preview (the full quote lives in the source v2 CSV)
+    # and drop fields the chart never consults.
+    QUOTE_PREVIEW_MAX = 240
     for r in F:
         t = item_id(r)
         if not t:
@@ -509,24 +527,24 @@ def main() -> None:
         top = topic_of(t)
         if top not in TOPICS:
             continue
-        pdf = (r.get("PDF Path") or "").strip()
         # Pipe-joined lists of every Media category / Country the item
         # touches; the client filters via substring-match against these
         # multi-valued columns.
         media     = " | ".join(sorted(item_media_cat[t]))
         countries = " | ".join(sorted(item_countries[t]))
+        quote = (r.get("Mentioned item") or "").strip()
+        if len(quote) > QUOTE_PREVIEW_MAX:
+            quote = quote[:QUOTE_PREVIEW_MAX - 1].rstrip() + "…"
         row = [
             item_cit.get(t, 0),
             year_of(t) or "",
             disc_of(t),
             top, ty, cat,
-            (r.get("Mentioned item") or "").strip(),
+            quote,
             (r.get("Page") or "").strip(),
             item_title.get(t, ""),
             item_author.get(t, ""),
             item_key.get(t, ""),
-            item_abstract.get(t, ""),
-            pdf,
             item_lang.get(t, ""),
             media,
             countries,
@@ -538,12 +556,10 @@ def main() -> None:
                 bee_s.append([
                     item_cit.get(t, 0), year_of(t) or "", disc_of(t),
                     sub, ty, cat,
-                    (r.get("Mentioned item") or "").strip(),
+                    quote,
                     (r.get("Page") or "").strip(),
                     item_title.get(t, ""), item_author.get(t, ""),
                     item_key.get(t, ""),
-                    item_abstract.get(t, ""),
-                    pdf,
                     item_lang.get(t, ""),
                     media,
                     countries,
@@ -554,14 +570,12 @@ def main() -> None:
     write_csv(OUT / "beeswarm_by_topic.csv",
               ["Citations", "Publication Year", "Discipline", "Topic", "Type",
                "Category", "Mentioned item", "Page", "Title", "Author", "Key",
-               "Abstract Note", "PDF Path", "Language", "Media categories",
-               "Countries"],
+               "Language", "Media categories", "Countries"],
               bee_t)
     write_csv(OUT / "beeswarm_by_cm_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Sub-topic", "Type",
                "Category", "Mentioned item", "Page", "Title", "Author", "Key",
-               "Abstract Note", "PDF Path", "Language", "Media categories",
-               "Countries"],
+               "Language", "Media categories", "Countries"],
               bee_s)
 
     # ── 11–14. Network CSVs (Topic-level and CM Sub-topic-level) ────────────

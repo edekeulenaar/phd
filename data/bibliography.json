@@ -6,13 +6,6 @@
     "harvard": "Aceto, G. and Pescapé, A. (2015) ‘Internet Censorship Detection: A Survey’, *Computer Networks*, 83, pp. 381–421. doi:10.1016/j.comnet.2015.03.008",
     "link": "https://doi.org/10.1016/j.comnet.2015.03.008"
   },
-  "allanBenchmarkPoliteness2016": {
-    "author": "Allan",
-    "year": "2016",
-    "inline": "(Allan, 2016)",
-    "harvard": "Allan, K. (2016) ‘A Benchmark for Politeness’, in A. Capone and J. L. Mey (eds.) *Interdisciplinary Studies in Pragmatics, Culture and Society*. Cham: Springer International Publishing, pp. 397–420. doi:10.1007/978-3-319-12616-6_15",
-    "link": "https://doi.org/10.1007/978-3-319-12616-6_15"
-  },
   "amadieuFormesContemporainesCensure2020": {
     "author": "Amadieu and Talon-Hugon",
     "year": "2020",
@@ -47,13 +40,6 @@
     "inline": "(Badouard, 2020)",
     "harvard": "Badouard, R. (2020) ‘La régulation des contenus sur Internet à l'heure des << fake news >> et des discours de haine’, *Communications*, n° 106(1), pp. 161–173. doi:10.3917/commu.106.0161",
     "link": "https://doi.org/10.3917/commu.106.0161"
-  },
-  "balkinFreeSpeechTriangle2018": {
-    "author": "Balkin",
-    "year": "2018",
-    "inline": "(Balkin, 2018)",
-    "harvard": "Balkin, J. M. (2018) *Free Speech Is a Triangle*. Social Science Research Network.",
-    "link": ""
   },
   "bammanCensorshipDeletionPractices2012": {
     "author": "Bamman et al.",
@@ -103,13 +89,6 @@
     "inline": "(Davidson et al., 2010)",
     "harvard": "Davidson, J., Liebald, B., Liu, J., Nandy, P., Van Vleet, T., Gargi, U., Gupta, S., He, Y., Lambert, M., Livingston, B. and others (2010) ‘The YouTube Video Recommendation System’, in *Proceedings of the Fourth ACM Conference on Recommender Systems*: ACM, pp. 293–296.",
     "link": ""
-  },
-  "decookSafeHarmGovernance2022b": {
-    "author": "DeCook et al.",
-    "year": "2022",
-    "inline": "(DeCook et al., 2022)",
-    "harvard": "DeCook, J. R., Cotter, K., Kanthawala, S. and Foyle, K. (2022) ‘Safe from ``Harm'': The Governance of Violence by Platforms’, *Policy & Internet*, 14(1), pp. 63–78. doi:10.1002/poi3.290",
-    "link": "https://doi.org/10.1002/poi3.290"
   },
   "degandModerationFilsDiscussion2011": {
     "author": "Degand and Simonson",
@@ -174,13 +153,6 @@
     "harvard": "Faugere, C., Mugnier, V. and Sylvos, F. (2023) *Censure et tabou*. Classiques Garnier.",
     "link": ""
   },
-  "ganeshContentModerationCensorship2020": {
-    "author": "Ganesh",
-    "year": "2020",
-    "inline": "(Ganesh, 2020)",
-    "harvard": "Ganesh, B. (2020) ‘Content Moderation and Censorship: Can We Handle a Double Standard’, in E. Leidig (ed.) *Mainstreaming the Global Radical Right*. Stuttgart: ibidem-Verlag, pp. 280–284.",
-    "link": ""
-  },
   "gibsonFreeSpeechSafe2019": {
     "author": "Gibson",
     "year": "2019",
@@ -209,26 +181,12 @@
     "harvard": "Gorwa, R., Binns, R. and Katzenbach, C. (2020) ‘Algorithmic Content Moderation: Technical and Political Challenges in the Automation of Platform Governance’, *Big Data & Society*, 7(1), pp. 2053951719897945. doi:10.1177/2053951719897945",
     "link": "https://doi.org/10.1177/2053951719897945"
   },
-  "gorwaPlatformGovernanceTriangle2019a": {
-    "author": "Gorwa",
-    "year": "2019",
-    "inline": "(Gorwa, 2019)",
-    "harvard": "Gorwa, R. (2019) ‘The Platform Governance Triangle: Conceptualising the Informal Regulation of Online Content’, *Internet Policy Review*, 8(2), pp. 1–22. doi:10.14763/2019.2.1407",
-    "link": "https://doi.org/10.14763/2019.2.1407"
-  },
   "gorwaWhatPlatformGovernance2019b": {
     "author": "Gorwa",
     "year": "2019",
     "inline": "(Gorwa, 2019)",
     "harvard": "Gorwa, R. (2019) ‘What Is Platform Governance?’, *Information, Communication & Society*, 22(6), pp. 854–871. doi:10.1080/1369118x.2019.1573914",
     "link": "https://doi.org/10.1080/1369118x.2019.1573914"
-  },
-  "grimmelmannVirtuesModeration2015c": {
-    "author": "Grimmelmann",
-    "year": "2015",
-    "inline": "(Grimmelmann, 2015)",
-    "harvard": "Grimmelmann, J. (2015) ‘The Virtues of Moderation’, *Yale Journal of Law and Technology*, 17, pp. 42.",
-    "link": ""
   },
   "gyetvanCensorshipFreedomExpression2025": {
     "author": "Gyetván",
@@ -244,6 +202,13 @@
     "harvard": "Habermas, J. (2023) *A New Structural Transformation of the Public Sphere and Deliberative Politics*.",
     "link": ""
   },
+  "hendrixTranscriptMarkZuckerberg2025": {
+    "author": "Hendrix",
+    "year": "2025",
+    "inline": "(Hendrix, 2025)",
+    "harvard": "Hendrix, J. (2025) *Transcript: Mark Zuckerberg Announces Major Changes to Meta's Content Moderation Policies and Operations TechPolicy.Press*.",
+    "link": ""
+  },
   "holquistIntroductionCorruptOriginals1994": {
     "author": "Holquist",
     "year": "1994",
@@ -251,19 +216,12 @@
     "harvard": "Holquist, M. (1994) ‘Introduction: Corrupt Originals: The Paradox of Censorship’, *PMLA*, 109(1), pp. 14–25. doi:10.1632/S0030812900058363",
     "link": "https://doi.org/10.1632/S0030812900058363"
   },
-  "jansenCensorshipKnotThat1988": {
-    "author": "Jansen",
-    "year": "1988",
-    "inline": "(Jansen, 1988)",
-    "harvard": "Jansen, S. C. (1988) *Censorship: The Knot That Binds Power and Knowledge*. New York: Oxford University Press.",
+  "institutfuerzeitgeschichteHitlerMeinKampf2015": {
+    "author": "Zeitgeschichte",
+    "year": "2015",
+    "inline": "(Zeitgeschichte, 2015)",
+    "harvard": "Zeitgeschichte, I. (2015) *Hitler, Mein Kampf. A critical edition*.",
     "link": ""
-  },
-  "katzenbachPlatformGovernanceArchive2023": {
-    "author": "Katzenbach et al.",
-    "year": "2023",
-    "inline": "(Katzenbach et al., 2023)",
-    "harvard": "Katzenbach, C., Dergacheva, D., Fischer, A., Kopps, A., Kolesnikov, S., Redeker, D. and Viejo Otero, P. (2023) ‘Platform Governance Archive (PGA): Dataset PGA v2 [Data Paper]’. doi:10.26092/elib/2373",
-    "link": "https://doi.org/10.26092/elib/2373"
   },
   "klonickNewGovernorsPeople2017": {
     "author": "Klonick",
@@ -278,13 +236,6 @@
     "inline": "(Langvardt, 2017-2018)",
     "harvard": "Langvardt, K. (2017-2018) ‘Regulating Online Content Moderation’, *Georgetown Law Journal*, 106, pp. 1353.",
     "link": ""
-  },
-  "liuContentModerationPlatformised2024": {
-    "author": "Liu",
-    "year": "2024",
-    "inline": "(Liu, 2024)",
-    "harvard": "Liu, D. (2024) ‘Content Moderation, Platformised Speech Governance, and Legitimacy: TikTok in South and Southeast Asia’, in *Companion Proceedings of the 16th ACM Web Science Conference*. Stuttgart Germany: ACM, pp. 27–31. doi:10.1145/3630744.3658613",
-    "link": "https://doi.org/10.1145/3630744.3658613"
   },
   "mcintoshMaledictiveLanguageObscenity2020": {
     "author": "McIntosh",
@@ -314,12 +265,12 @@
     "harvard": "Müller, B. (2004) *Censorship and Cultural Regulation in the Modern Age*. Boston: BRILL.",
     "link": ""
   },
-  "myerswestCensoredSuspendedShadowbanned2018": {
-    "author": "Myers West",
-    "year": "2018",
-    "inline": "(Myers West, 2018)",
-    "harvard": "Myers West, S. (2018) ‘Censored, Suspended, Shadowbanned: User Interpretations of Content Moderation on Social Media Platforms’, *New Media & Society*, 20(11), pp. 4366–4383. doi:10.1177/1461444818773059",
-    "link": "https://doi.org/10.1177/1461444818773059"
+  "ovadyaBridgingSystemsOpen2023": {
+    "author": "Ovadya and Thorburn",
+    "year": "2023",
+    "inline": "(Ovadya and Thorburn, 2023)",
+    "harvard": "Ovadya, A. and Thorburn, L. (2023) ‘Bridging Systems: Open Problems for Countering Destructive Divisiveness Across Ranking, Recommenders, and Governance’, *Knight First Amendment Institute*, pp. Online.",
+    "link": ""
   },
   "postCensorshipSilencingPractices1998": {
     "author": "Post",
@@ -342,19 +293,19 @@
     "harvard": "Roberts, S. T. (n.d.) ‘Commercial Content Moderation: Digital Laborers' Dirty Work’.",
     "link": ""
   },
-  "robertsCommercialContentModeration2016": {
-    "author": "Roberts",
-    "year": "2016",
-    "inline": "(Roberts, 2016)",
-    "harvard": "Roberts, S. T. (2016) ‘Commercial Content Moderation: Digital Laborers' Dirty Work’, *Dirty Work*, pp. 12.",
-    "link": ""
-  },
   "robertsScreenContentModeration2019": {
     "author": "Roberts",
     "year": "2019",
     "inline": "(Roberts, 2019)",
     "harvard": "Roberts, S. T. (2019) *Behind the Screen: Content Moderation in the Shadows of Social Media*. New Haven and London: Yale University Press.",
     "link": ""
+  },
+  "rogersDeplatformingFollowingExtreme2020": {
+    "author": "Rogers",
+    "year": "2020",
+    "inline": "(Rogers, 2020)",
+    "harvard": "Rogers, R. (2020) ‘Deplatforming: Following Extreme Internet Celebrities to Telegram and Alternative Social Media’, *European Journal of Communication*, pp. 0267323120922066. doi:10.1177/0267323120922066",
+    "link": "https://doi.org/10.1177/0267323120922066"
   },
   "roussinLiberteDexpressionNouvelles2020": {
     "author": "Roussin",
@@ -398,6 +349,13 @@
     "harvard": "Templeton, C. (2011) *Topic Modeling in the Humanities: An Overview*.",
     "link": ""
   },
+  "theredirectmethodRedirectMethod2016": {
+    "author": "Method",
+    "year": "2016",
+    "inline": "(Method, 2016)",
+    "harvard": "Method, T. R. (2016) *The Redirect Method*.",
+    "link": ""
+  },
   "underwoodDistantReadingRecent2016": {
     "author": "Underwood",
     "year": "2016",
@@ -439,5 +397,19 @@
     "inline": "(Wu, 2022)",
     "harvard": "Wu, Y. (2022) ‘Privacy, Free Speech and Content Moderation: A Literature Review and Constitutional Framework Analysis’, *Innovation in Science and Technology*, 1(4), pp. 30–39. doi:10.56397/ist.2022.11.04",
     "link": "https://doi.org/10.56397/ist.2022.11.04"
+  },
+  "xcommunitynotesDiversityPerspectives2025": {
+    "author": "Notes",
+    "year": "2025",
+    "inline": "(Notes, 2025)",
+    "harvard": "Notes, X. C. (2025) *Diversity of Perspectives*.",
+    "link": ""
+  },
+  "youtubeYouTubeMisinformationHow2021": {
+    "author": "YouTube",
+    "year": "2021",
+    "inline": "(YouTube, 2021)",
+    "harvard": "YouTube (2021) *YouTube Misinformation - How YouTube Works*.",
+    "link": ""
   }
 }

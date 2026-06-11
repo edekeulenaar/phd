@@ -1,65 +1,61 @@
 Topic,Country,Quantity
-AI alignment,United States,15
-AI alignment,China,11
-AI alignment,European Union,7
-AI alignment,Russia,3
-AI alignment,Germany,3
-AI alignment,Hong Kong,2
-AI alignment,Taiwan,2
-AI alignment,Brazil,2
-AI alignment,United Kingdom,2
-AI alignment,South Africa,2
-Censorship,United States,213
-Censorship,France,192
-Censorship,China,125
-Censorship,Italy,116
-Censorship,Spain,109
-Censorship,United Kingdom,89
-Censorship,Germany,79
-Censorship,Russia,64
-Censorship,Brazil,49
-Censorship,Canada,44
-Content moderation,United States,566
-Content moderation,European Union,346
-Content moderation,Brazil,312
-Content moderation,Germany,175
-Content moderation,France,142
-Content moderation,United Kingdom,132
-Content moderation,Italy,113
-Content moderation,China,79
-Content moderation,India,74
-Content moderation,Canada,61
-Debate management,United States,26
-Debate management,France,15
-Debate management,Canada,10
-Debate management,Spain,7
-Debate management,Germany,6
-Debate management,Switzerland,6
-Debate management,Mexico,6
-Debate management,European Union,5
-Debate management,Brazil,5
-Debate management,Italy,5
-Moderation,United States,2
-Moderation,United Kingdom,2
-Moderation,Netherlands,1
-Moderation,Italy,1
-Other,United States,6
-Other,China,3
-Other,Italy,2
-Other,France,2
+Censorship,United States,209
+Censorship,China,122
+Censorship,France,119
+Censorship,United Kingdom,81
+Censorship,Brazil,75
+Censorship,Spain,73
+Censorship,Germany,71
+Censorship,Italy,66
+Censorship,Russia,59
+Censorship,Canada,49
+Content moderation,United States,529
+Content moderation,European Union,300
+Content moderation,Brazil,241
+Content moderation,Germany,165
+Content moderation,United Kingdom,120
+Content moderation,France,117
+Content moderation,Italy,79
+Content moderation,China,75
+Content moderation,India,69
+Content moderation,Australia,58
+Debate management,United States,21
+Debate management,France,18
+Debate management,Spain,13
+Debate management,Brazil,13
+Debate management,Italy,8
+Debate management,United Kingdom,8
+Debate management,Portugal,6
+Debate management,European Union,6
+Debate management,Canada,6
+Debate management,Mexico,5
+Media moderation,United States,14
+Media moderation,Brazil,9
+Media moderation,European Union,8
+Media moderation,France,7
+Media moderation,United Kingdom,7
+Media moderation,Germany,5
+Media moderation,Italy,4
+Media moderation,China,3
+Media moderation,Mexico,2
+Media moderation,Spain,2
+Media regulation,United States,6
+Media regulation,Brazil,3
+Media regulation,United Kingdom,2
+Media regulation,France,2
+Media regulation,Romania,2
+Media regulation,European Union,2
+Media regulation,India,2
+Media regulation,China,2
+Media regulation,Czechoslovakia,1
+Media regulation,Israel,1
+Other,United States,12
+Other,France,6
+Other,Germany,5
+Other,Brazil,4
+Other,European Union,4
+Other,China,4
+Other,Spain,3
+Other,Saudi Arabia,2
 Other,Canada,2
-Other,South Korea,1
-Other,Thailand,1
-Other,Netherlands,1
-Other,Russia,1
-Other,US,1
-Political moderation,United States,9
-Political moderation,France,6
-Political moderation,United Kingdom,6
-Political moderation,Italy,3
-Political moderation,Brazil,2
-Political moderation,Argentina,2
-Political moderation,Sweden,1
-Political moderation,Germany,1
-Political moderation,Mexico,1
-Political moderation,Venezuela,1
+Other,United Kingdom,2

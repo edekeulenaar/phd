@@ -1,5 +1,5 @@
 metric,value
-master_total_items,7895
-master_yes_maybe,4278
-final_unique_items,2507
-final_with_pdf_on_disk,2137
+master_total_items,2302
+master_yes_maybe,2302
+final_unique_items,1959
+final_with_pdf_on_disk,1959

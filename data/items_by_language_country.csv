@@ -1,194 +1,187 @@
 Language,LanguageName,Country,Items
-en,English,United States,607
-pt,Portuguese,Brazil,279
-fr,French,France,202
-en,English,(unspecified),186
-en,English,China,182
-en,English,United Kingdom,175
-en,English,European Union,173
-en,English,Germany,166
-it,Italian,Italy,144
-en,English,France,96
-es,Spanish,Spain,96
-it,Italian,European Union,93
-en,English,Russia,85
-en,English,India,83
-en,English,Australia,74
-pt,Portuguese,United States,72
-en,English,Canada,71
-it,Italian,United States,67
-en,English,Brazil,62
-en,English,Italy,62
-pt,Portuguese,European Union,57
-fr,French,(unspecified),55
+en,English,United States,578
+pt,Portuguese,Brazil,262
+en,English,European Union,172
+en,English,China,171
+en,English,United Kingdom,164
+en,English,Germany,159
+fr,French,France,144
+en,English,(unspecified),97
+it,Italian,Italy,93
+en,English,France,85
+en,English,Russia,84
+it,Italian,European Union,82
+en,English,India,81
+en,English,Australia,72
+pt,Portuguese,United States,71
+es,Spanish,Spain,70
+en,English,Canada,69
+it,Italian,United States,63
+en,English,Brazil,59
+pt,Portuguese,European Union,55
 en,English,Iran,52
-it,Italian,(unspecified),50
-fr,French,United States,49
+en,English,Italy,51
 en,English,Turkey,48
-pt,Portuguese,Portugal,40
+fr,French,United States,41
 pt,Portuguese,Germany,39
 en,English,Pakistan,38
-en,English,Spain,38
-fr,French,Canada,37
-en,English,Egypt,36
-fr,French,European Union,35
+en,English,Egypt,35
 en,English,Myanmar,34
-en,English,Philippines,30
-en,English,Saudi Arabia,30
-es,Spanish,United States,30
+en,English,Spain,34
+pt,Portuguese,Portugal,34
+fr,French,Canada,31
+en,English,Philippines,29
+en,English,Saudi Arabia,29
 en,English,South Africa,29
-en,English,South Korea,28
+es,Spanish,United States,29
+fr,French,European Union,29
 en,English,Indonesia,27
-it,Italian,France,27
-en,English,Netherlands,26
-es,Spanish,Mexico,26
-fr,French,Germany,24
-en,English,Israel,23
-en,English,Mexico,23
-en,English,Syria,22
+en,English,South Korea,27
+en,English,Netherlands,24
+es,Spanish,Mexico,23
+en,English,Mexico,22
 en,English,Thailand,22
-it,Italian,Germany,22
 pt,Portuguese,United Kingdom,22
-en,English,Ireland,21
-fr,French,Italy,21
-en,English,Nigeria,20
+en,English,Israel,21
+en,English,Syria,21
+fr,French,Germany,21
+en,English,Ireland,20
 en,English,Ukraine,20
-en,English,Soviet Union,19
+it,Italian,Germany,20
+en,English,Nigeria,19
 es,Spanish,Argentina,19
 en,English,Singapore,18
+en,English,Soviet Union,18
 es,Spanish,European Union,18
-pt,Portuguese,(unspecified),18
-fr,French,Spain,17
-fr,French,United Kingdom,17
-en,English,England,16
+it,Italian,France,17
 en,English,Japan,16
 en,English,Malaysia,16
 en,English,Poland,16
-en,English,Sweden,16
-en,English,Tunisia,16
 en,English,Vietnam,16
-en,English,Kenya,15
+fr,French,United Kingdom,16
+en,English,Sweden,15
+en,English,Tunisia,15
 en,English,United Arab Emirates,15
-en,English,Austria,14
-en,English,Ethiopia,14
 en,English,Hungary,14
-en,English,Libya,14
 en,English,New Zealand,14
-en,English,Portugal,14
 es,Spanish,Brazil,14
-es,Spanish,Colombia,13
-fr,French,Switzerland,13
-en,English,Lebanon,12
-en,English,Palestine,12
-fr,French,Belgium,12
-fr,French,China,12
-it,Italian,United Kingdom,12
-und,undetermined,France,12
-en,English,Bahrain,11
+en,English,Austria,13
+en,English,Ethiopia,13
+en,English,Kenya,13
+en,English,Libya,13
+en,English,Portugal,13
+es,Spanish,Colombia,12
 en,English,Belarus,11
 en,English,Denmark,11
+en,English,Lebanon,11
 en,English,Norway,11
 en,English,Uganda,11
-es,Spanish,(unspecified),11
+fr,French,China,11
+fr,French,Italy,11
 pt,Portuguese,France,11
 und,undetermined,United States,11
+en,English,Bahrain,10
 en,English,Cuba,10
 en,English,Estonia,10
 en,English,Finland,10
 en,English,Kazakhstan,10
-en,English,Sudan,10
+en,English,Palestine,10
 en,English,Taiwan,10
 en,English,Zimbabwe,10
-fr,French,Russia,10
-en,English,Europe,9
+und,undetermined,France,10
 en,English,Jordan,9
+en,English,Sudan,9
 en,English,Uzbekistan,9
-es,Spanish,France,9
-it,Italian,China,9
+fr,French,Spain,9
+it,Italian,United Kingdom,9
 pt,Portuguese,Spain,9
-en,English,Argentina,8
 en,English,Bangladesh,8
-en,English,Colombia,8
+en,English,England,8
 en,English,Hong Kong,8
 en,English,Romania,8
 en,English,Sri Lanka,8
 en,English,Yemen,8
-es,Spanish,Peru,8
+fr,French,Belgium,8
+fr,French,Russia,8
+it,Italian,China,8
 pt,Portuguese,Australia,8
 pt,Portuguese,China,8
-en,English,Algeria,7
+en,English,Argentina,7
 en,English,Azerbaijan,7
-en,English,Belgium,7
+en,English,Colombia,7
 en,English,Czechoslovakia,7
+en,English,Europe,7
 en,English,Switzerland,7
 en,English,Venezuela,7
-es,Spanish,Chile,7
+es,Spanish,France,7
 es,Spanish,Germany,7
+es,Spanish,Peru,7
 fr,French,India,7
+it,Italian,(unspecified),7
 it,Italian,Brazil,7
-it,Italian,Russia,7
-it,Italian,Spain,7
 pt,Portuguese,India,7
-en,English,Morocco,6
+en,English,Algeria,6
+en,English,Belgium,6
 en,English,North Korea,6
-en,English,Qatar,6
 en,English,USSR,6
-en,English,Uruguay,6
-es,Spanish,Italy,6
-es,Spanish,Portugal,6
+es,Spanish,Chile,6
 es,Spanish,Venezuela,6
-fr,French,Egypt,6
-fr,French,Philippines,6
-fr,French,Portugal,6
-pt,Portuguese,Italy,6
-und,undetermined,(unspecified),6
+fr,French,Switzerland,6
+it,Italian,Russia,6
+it,Italian,Spain,6
 en,English,Africa,5
 en,English,Cambodia,5
 en,English,Czech Republic,5
-en,English,Iraq,5
-en,English,Kuwait,5
 en,English,Kyrgyzstan,5
 en,English,Malawi,5
+en,English,Morocco,5
+en,English,Qatar,5
 en,English,Rwanda,5
+en,English,Uruguay,5
 es,Spanish,India,5
+es,Spanish,Portugal,5
 es,Spanish,United Kingdom,5
-fr,French,England,5
+fr,French,Egypt,5
+fr,French,Philippines,5
+fr,French,Portugal,5
+pt,Portuguese,(unspecified),5
+pt,Portuguese,Italy,5
 pt,Portuguese,Russia,5
 und,undetermined,China,5
-und,undetermined,Germany,5
-en,English,Afghanistan,4
 en,English,Armenia,4
 en,English,Burma,4
 en,English,Chile,4
 en,English,East Germany,4
 en,English,Georgia,4
-en,English,Ghana,4
 en,English,Great Britain,4
 en,English,Greece,4
-en,English,Latin America,4
+en,English,Iraq,4
+en,English,Kuwait,4
 en,English,Oman,4
 en,English,Slovakia,4
-en,English,Yugoslavia,4
+es,Spanish,Italy,4
 es,Spanish,Uruguay,4
-fr,French,Brazil,4
-fr,French,Cameroon,4
-fr,French,Greece,4
+fr,French,(unspecified),4
 fr,French,USSR,4
-fr,French,Vatican City,4
 it,Italian,India,4
 it,Italian,Japan,4
 pt,Portuguese,Canada,4
+und,undetermined,Germany,4
 und,undetermined,Spain,4
+en,English,Afghanistan,3
 en,English,Angola,3
 en,English,Cameroon,3
 en,English,Ecuador,3
+en,English,Ghana,3
 en,English,Honduras,3
 en,English,Nepal,3
 en,English,Tanzania,3
 en,English,Turkmenistan,3
 en,English,UK,3
+en,English,Yugoslavia,3
 en,English,Zaire,3
 en,English,Zambia,3
+es,Spanish,(unspecified),3
 es,Spanish,Canada,3
 es,Spanish,China,3
 es,Spanish,Ecuador,3
@@ -196,25 +189,17 @@ es,Spanish,Hungary,3
 es,Spanish,Latin America,3
 es,Spanish,Soviet Union,3
 fr,French,Ethiopia,3
-fr,French,Gambia,3
 fr,French,Myanmar,3
-fr,French,Netherlands,3
 fr,French,Poland,3
 fr,French,Romania,3
-fr,French,Togo,3
-fr,French,Turkey,3
-it,Italian,Ancient Rome,3
+fr,French,Vatican City,3
 it,Italian,Argentina,3
 it,Italian,Australia,3
-it,Italian,Austria,3
-it,Italian,Vatican City,3
 pt,Portuguese,Indonesia,3
 pt,Portuguese,Myanmar,3
 pt,Portuguese,Philippines,3
-und,undetermined,Brazil,3
 und,undetermined,European Union,3
 und,undetermined,United Kingdom,3
-de,German,France,2
 en,English,Americas,2
 en,English,Ancient Rome,2
 en,English,Asia,2
@@ -230,9 +215,7 @@ en,English,Latvia,2
 en,English,Middle East,2
 en,English,Moldova,2
 en,English,Ottoman Empire,2
-en,English,Serbia,2
 en,English,Slovenia,2
-en,English,South Asia,2
 en,English,Soviet Russia,2
 en,English,The Gambia,2
 en,English,Türkiye,2
@@ -241,38 +224,33 @@ en,English,Western Europe,2
 es,Spanish,Cuba,2
 es,Spanish,Philippines,2
 es,Spanish,Russia,2
-fr,French,Africa,2
-fr,French,Austria,2
 fr,French,Bangladesh,2
 fr,French,Belarus,2
-fr,French,Burkina Faso,2
+fr,French,Brazil,2
+fr,French,Cameroon,2
 fr,French,Chad,2
 fr,French,Cuba,2
-fr,French,Czechoslovakia,2
 fr,French,Denmark,2
-fr,French,Europe,2
 fr,French,Finland,2
-fr,French,Holy See,2
+fr,French,Gambia,2
+fr,French,Greece,2
 fr,French,Hong Kong,2
 fr,French,Hungary,2
 fr,French,Iran,2
 fr,French,Iraq,2
 fr,French,Ireland,2
 fr,French,Israel,2
-fr,French,Mali,2
-fr,French,Niger,2
 fr,French,Pakistan,2
 fr,French,Palestine,2
-fr,French,Senegal,2
 fr,French,South Africa,2
 fr,French,Soviet Union,2
 fr,French,Thailand,2
-fr,French,Tunisia,2
+fr,French,Togo,2
+fr,French,Turkey,2
 fr,French,Ukraine,2
-it,Italian,Europe,2
+it,Italian,Austria,2
 it,Italian,Myanmar,2
 it,Italian,New Zealand,2
-it,Italian,Norway,2
 it,Italian,Philippines,2
 it,Italian,Romania,2
 it,Italian,Ukraine,2
@@ -285,8 +263,8 @@ pt,Portuguese,Estados Unidos,2
 pt,Portuguese,Iran,2
 pt,Portuguese,Poland,2
 pt,Portuguese,Singapore,2
-pt,Portuguese,Switzerland,2
 pt,Portuguese,Turkey,2
+und,undetermined,Brazil,2
 und,undetermined,Canada,2
 und,undetermined,India,2
 und,undetermined,Russia,2
@@ -297,31 +275,26 @@ ca,Catalan,Soviet Union,1
 ca,Catalan,Spain,1
 cy,Welsh,Spain,1
 de,German,(unspecified),1
+de,German,France,1
 de,German,Germany,1
 de,German,Russia,1
 de,German,Sweden,1
 de,German,Switzerland,1
 de,German,USSR,1
-de,German,Vatican City,1
 de,German,Yemen,1
 en,English,Ancient Greece,1
 en,English,Antigua and Barbuda,1
 en,English,Austrian Empire,1
 en,English,Britain,1
 en,English,Bulgaria,1
-en,English,Burundi,1
 en,English,Central African Republic,1
 en,English,Chad,1
-en,English,East Timor,1
 en,English,Eastern Europe,1
 en,English,El Salvador,1
 en,English,Fiji,1
 en,English,Gambia,1
 en,English,Global South,1
-en,English,Guyana,1
-en,English,Haiti,1
-en,English,Jamaica,1
-en,English,Kingdom of Sardinia,1
+en,English,Latin America,1
 en,English,Lithuania,1
 en,English,Macedonia,1
 en,English,Mozambique,1
@@ -331,25 +304,20 @@ en,English,North America,1
 en,English,Northern Ireland,1
 en,English,Palestinian Territory,1
 en,English,Papua New Guinea,1
-en,English,Paraguay,1
-en,English,Peru,1
 en,English,Republic of Korea,1
 en,English,Republic of the Congo,1
-en,English,Roman Empire,1
-en,English,Russian Empire,1
 en,English,Russian Federation,1
-en,English,Sierra Leone,1
+en,English,Serbia,1
 en,English,Somalia,1
+en,English,South Asia,1
 en,English,South Sudan,1
 en,English,Sudan (North),1
 en,English,Tajikistan,1
 en,English,Togo,1
-en,English,Trinidad and Tobago,1
 en,English,UAE,1
 en,English,US,1
 en,English,United American Emirates,1
 en,English,West Germany,1
-es,Spanish,Americas,1
 es,Spanish,Austria,1
 es,Spanish,Bolivia,1
 es,Spanish,Bosnia and Herzegovina,1
@@ -358,8 +326,6 @@ es,Spanish,Egypt,1
 es,Spanish,England,1
 es,Spanish,España,1
 es,Spanish,Finland,1
-es,Spanish,Global South,1
-es,Spanish,Holy See,1
 es,Spanish,Honduras,1
 es,Spanish,Indonesia,1
 es,Spanish,Iran,1
@@ -371,75 +337,67 @@ es,Spanish,Nicaragua,1
 es,Spanish,Panama,1
 es,Spanish,Poland,1
 es,Spanish,Romania,1
-es,Spanish,Rome,1
 es,Spanish,Senegal,1
 es,Spanish,South Africa,1
 es,Spanish,Thailand,1
 es,Spanish,USSR,1
-fr,French,Afghanistan,1
+fr,French,Africa,1
 fr,French,Algeria,1
 fr,French,Allemagne,1
 fr,French,Ancient Rome,1
 fr,French,Argentina,1
 fr,French,Armenia,1
 fr,French,Australia,1
+fr,French,Austria,1
 fr,French,Austria-Hungary,1
 fr,French,Baltic States,1
-fr,French,Benin,1
 fr,French,Bosnia and Herzegovina,1
-fr,French,Byzantine Empire,1
+fr,French,Burkina Faso,1
 fr,French,Cambodia,1
 fr,French,Caucasus,1
 fr,French,East Germany,1
 fr,French,Ecuador,1
 fr,French,Espagne,1
+fr,French,Europe,1
 fr,French,Fédération de Russie,1
-fr,French,Great Britain,1
-fr,French,Guinea Bissau,1
+fr,French,Holy See,1
 fr,French,Italie,1
-fr,French,Ivory Coast,1
 fr,French,Japan,1
 fr,French,Kazakhstan,1
 fr,French,Kenya,1
-fr,French,Latin America,1
 fr,French,Lebanon,1
 fr,French,Libya,1
 fr,French,Lithuania,1
+fr,French,Mali,1
 fr,French,Malta,1
-fr,French,Mauritania,1
 fr,French,Morocco,1
+fr,French,Netherlands,1
 fr,French,New Zealand,1
+fr,French,Niger,1
 fr,French,Republic of Korea,1
-fr,French,Republic of the Congo,1
 fr,French,Royaume-Uni,1
 fr,French,Saudi Arabia,1
+fr,French,Senegal,1
 fr,French,Singapore,1
 fr,French,South Korea,1
-fr,French,Syria,1
 fr,French,Uzbekistan,1
-fr,French,Yugoslavia,1
 fr,French,Zimbabwe,1
 fr,French,États-Unis d’Amérique,1
 hu,Hungarian,Spain,1
-it,Italian,Albania,1
 it,Italian,Canada,1
-it,Italian,Croatia,1
 it,Italian,Cuba,1
-it,Italian,Denmark,1
 it,Italian,Egypt,1
-it,Italian,Greece,1
+it,Italian,Europe,1
 it,Italian,Honduras,1
 it,Italian,Iran,1
 it,Italian,Israel,1
 it,Italian,Kenya,1
 it,Italian,Morocco,1
-it,Italian,Netherlands,1
 it,Italian,North Korea,1
+it,Italian,Norway,1
 it,Italian,Palestine,1
 it,Italian,Portugal,1
-it,Italian,Slovenia,1
 it,Italian,Soviet Union,1
-it,Italian,Sweden,1
 it,Italian,Syria,1
 it,Italian,Trinidad,1
 it,Italian,Tunisia,1
@@ -447,7 +405,6 @@ it,Italian,Turkey,1
 it,Italian,Uganda,1
 it,Italian,Vatican,1
 pt,Portuguese,Alemanha,1
-pt,Portuguese,Americas,1
 pt,Portuguese,Ancient Rome,1
 pt,Portuguese,Austria,1
 pt,Portuguese,Cambodia,1
@@ -462,7 +419,6 @@ pt,Portuguese,Finland,1
 pt,Portuguese,Greece,1
 pt,Portuguese,Iraq,1
 pt,Portuguese,Irlanda,1
-pt,Portuguese,Israel,1
 pt,Portuguese,Japan,1
 pt,Portuguese,Letônia,1
 pt,Portuguese,Malásia,1
@@ -470,17 +426,18 @@ pt,Portuguese,New Zealand,1
 pt,Portuguese,North Korea,1
 pt,Portuguese,Norway,1
 pt,Portuguese,Pakistan,1
-pt,Portuguese,Palestine,1
 pt,Portuguese,Quênia,1
 pt,Portuguese,Serbia,1
 pt,Portuguese,South Africa,1
 pt,Portuguese,Sweden,1
+pt,Portuguese,Switzerland,1
 pt,Portuguese,Venezuela,1
 pt,Portuguese,Índia,1
 so,Somali,Brazil,1
 so,Somali,Canada,1
 so,Somali,United Kingdom,1
 so,Somali,United States,1
+und,undetermined,(unspecified),1
 und,undetermined,Algeria,1
 und,undetermined,Argentina,1
 und,undetermined,Australia,1
@@ -497,7 +454,6 @@ und,undetermined,Portugal,1
 und,undetermined,Saudi Arabia,1
 und,undetermined,South Korea,1
 und,undetermined,Soviet Union,1
-und,undetermined,Sweden,1
 und,undetermined,Vietnam,1
 und,undetermined,Zimbabwe,1
 vi,Vietnamese,China,1
