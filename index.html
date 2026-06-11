@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorship and moderation — the oscillations of a contested practice</title>
-<link rel="stylesheet" href="style.css?v=p6-76">
+<link rel="stylesheet" href="style.css?v=p6-77">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -166,10 +166,15 @@
     <figure class="fig" id="fig-year-subtopic">
       <figcaption class="fig-cap">
         <span class="fig-num">Figure 4.</span>
-        Content-moderation items per Discipline, per year, per Sub-topic.
-        Switch to a Bump view (publications per Sub-topic per year).
+        Items per Discipline, per year, per Sub-topic — Censorship or
+        Content-moderation framings of the WHAT taxonomy. Switch to a Bump
+        view (publications per Sub-topic per year).
       </figcaption>
       <div class="fig-controls">
+        <div role="tablist" class="seg" aria-label="Topic">
+          <button class="tab active" data-topic="censorship" aria-selected="true">Censorship</button>
+          <button class="tab"        data-topic="cm"         aria-selected="false">Content moderation</button>
+        </div>
         <span class="year-range">Years
           <input type="number" id="ys-y0" step="1"> –
           <input type="number" id="ys-y1" step="1">
@@ -186,13 +191,18 @@
       </div>
       <div class="fig-body"><div id="bubble-year-subtopic"></div></div>
       <div class="fig-foot">
-        <a class="dl" href="data/items_year_disc_subtopic.csv" download>⬇ Download CSV</a>
+        <a class="dl" id="dl-year-subtopic"
+           href="data/items_year_disc_censorship_subtopic.csv" download>⬇ Download CSV</a>
         <span class="alt">
-          Bubble plot of items whose Topic is Content moderation, grouped on Y
-          by the four Sub-topics; X = publication year, size = Citations, colour
-          = top-10 Discipline. The Bump view shows one line per Sub-topic,
-          Y = that Sub-topic's <em>share</em> of all content-moderation items
-          published that year (lines sum to 100&nbsp;% per year).
+          Bubble plot of items grouped on Y by their WHAT Sub-category.
+          The <em>Censorship</em> tab restricts to items whose dominant WHAT
+          category is Censorship (lanes: Constitutive, Infrastructural,
+          Regulative); the <em>Content moderation</em> tab restricts to items
+          whose dominant WHAT category is Content moderation. X = publication
+          year, size = Citations, colour = top-10 Discipline. The Bump view
+          shows one line per Sub-topic, Y = that Sub-topic's <em>share</em>
+          of items in the chosen Topic published that year (lines sum to 100&nbsp;%
+          per year).
         </span>
       </div>
     </figure>
@@ -516,7 +526,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
-<script src="app.js?v=p6-76" defer></script>
+<script src="app.js?v=p6-77" defer></script>
 
 </body>
 </html>

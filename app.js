@@ -2359,16 +2359,30 @@ const safe = (label, hostSel) => async fn => {
 
 /** Attach a Bubble/Bump segmented toggle on a figure card. The card may
  *  also carry an `[data-scale]` seg (Share / Abs) — when present, its
- *  current value is passed through to renderBump as `relative`. */
+ *  current value is passed through to renderBump as `relative`.
+ *  When `opts.csvByTopic` is given (a `{topicKey: csvPath}` map), the figure
+ *  also wires a `[data-topic]` seg whose current value selects which CSV
+ *  to load — used by Fig 4 to switch between Censorship and Content-moderation
+ *  WHAT sub-categories. The matching `<a id=opts.downloadId>` href is
+ *  rewritten in lockstep so the "Download CSV" link tracks the active topic. */
 function bindBubbleBump(opts) {
   const fig = document.querySelector(opts.figSel);
   let mode  = "bump";   // Bump view first (per #3).
   let scale = "share";  // Share-of-year first (statistical default).
+  let topic = opts.csvByTopic
+    ? (fig.querySelector('[data-topic].active')?.dataset.topic
+       || Object.keys(opts.csvByTopic)[0])
+    : null;
+  function activeCsv() {
+    return opts.csvByTopic ? opts.csvByTopic[topic] : opts.csv;
+  }
   function run() {
     const fn = (mode === "bump") ? renderBump : renderBubble;
-    const args = { csv: opts.csv, yField: opts.yField, hostSel: opts.hostSel,
+    const args = { csv: activeCsv(), yField: opts.yField, hostSel: opts.hostSel,
                    figId: opts.figId, yearInputs: opts.yearInputs };
     if (mode === "bump") args.relative = (scale === "share");
+    const dl = opts.downloadId && document.getElementById(opts.downloadId);
+    if (dl) dl.href = activeCsv();
     fn(args)
       .catch(e => e.missing ? renderPending(opts.hostSel, "Awaiting data.") : console.error(e));
   }
@@ -2380,6 +2394,7 @@ function bindBubbleBump(opts) {
       });
       if (b.dataset.mode)  mode  = b.dataset.mode;
       if (b.dataset.scale) scale = b.dataset.scale;
+      if (b.dataset.topic) topic = b.dataset.topic;
       run();
     }));
   });
@@ -2433,7 +2448,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     bindBubbleBump({
       figSel: "#fig-year-subtopic", hostSel: "#bubble-year-subtopic",
       figId:  "fig-year-subtopic",  yField:  "Sub-topic",
-      csv:    "data/items_year_disc_subtopic.csv",
+      // Per-Topic CSV swap — driven by the [data-topic] seg in the figure
+      // controls. Censorship is the default per the chapter's framing.
+      csvByTopic: {
+        censorship: "data/items_year_disc_censorship_subtopic.csv",
+        cm:         "data/items_year_disc_subtopic.csv",
+      },
+      downloadId: "dl-year-subtopic",
       yearInputs: ["ys-y0", "ys-y1"],
     }));
 

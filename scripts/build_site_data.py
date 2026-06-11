@@ -245,6 +245,7 @@ def main() -> None:
     item_countries:   dict[str, set] = defaultdict(set)
     item_media_cat:   dict[str, set] = defaultdict(set)  # 'Media category' (v2_final)
     item_how:         dict[str, set] = defaultdict(set)  # HOW categories per item
+    item_subtopic_scoped: dict[tuple[str, str], Counter] = {}   # (Key, WHAT-Category) → Counter of Sub-categories
     for r in F:
         t = item_id(r)
         if not t:
@@ -260,7 +261,10 @@ def main() -> None:
         # New v2 schema: Topic/Sub-topic don't exist as their own columns —
         # they are the Category + Sub-category of the row when Type == WHAT.
         # Each finding's WHAT category contributes one vote toward the item's
-        # most-common WHAT framing (its 'Topic'); same for sub-categories.
+        # most-common WHAT framing (its 'Topic'); sub-categories are tracked
+        # *scoped to their parent Category* so that the dominant Censorship
+        # sub-category and the dominant Content-moderation sub-category can be
+        # resolved independently for items that touch both topics.
         if (r.get("Type") or "").strip().upper() == "WHAT":
             wc = (r.get("Category") or "").strip()
             ws = (r.get("Sub-category") or "").strip()
@@ -269,7 +273,8 @@ def main() -> None:
                 # Per the chapter's data convention, an "Other" category never
                 # carries a sub-category — keep it consistent here.
                 if ws and not wc.lower().startswith("other"):
-                    item_subtopic[t][ws] += 1
+                    item_subtopic[t][ws] += 1   # legacy: any sub-cat
+                    item_subtopic_scoped.setdefault((t, wc), Counter())[ws] += 1
         item_disc[t][disc(r.get("Discipline"))] += 1
         y = clean_year(r.get("Year"))
         if y:
@@ -352,6 +357,43 @@ def main() -> None:
     write_csv(OUT / "items_year_disc_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Sub-topic",
                "Title", "Author", "Key", "Abstract Note", "Language"], rows4)
+
+    # ── 4-bis. items_year_disc_censorship_subtopic ──────────────────────────
+    # Same shape as the CM-subtopic file above, but scoped to items whose
+    # dominant WHAT category is Censorship (Constitutive / Infrastructural /
+    # Regulative). Drives the Censorship view of Figure 4.
+    CENSORSHIP_TOPIC = "Censorship"
+    # The taxonomy lists three canonical Censorship sub-categories. Anything
+    # else (e.g. an LLM-fabricated "Self-censorship" sub-category, which is
+    # really a HOW finding mis-placed) is dropped from the chart's Topic axis
+    # to keep the lanes legible.
+    CENSORSHIP_SUBS = {"Constitutive", "Infrastructural", "Regulative"}
+    rows4c = []
+    for t in items:
+        if topic_of(t) != CENSORSHIP_TOPIC:
+            continue
+        subs = item_subtopic_scoped.get((t, CENSORSHIP_TOPIC))
+        if not subs:
+            continue
+        # Pick the most-common sub-category that's actually in the taxonomy.
+        sub = next((s for s, _ in subs.most_common() if s in CENSORSHIP_SUBS), None)
+        if not sub:
+            continue
+        rows4c.append([
+            item_cit.get(t, 0),
+            year_of(t) or "",
+            disc_of(t),
+            sub,
+            item_title.get(t, ""),
+            item_author.get(t, ""),
+            item_key.get(t, ""),
+            item_abstract.get(t, ""),
+            item_lang.get(t, ""),
+        ])
+    rows4c.sort(key=lambda r: (str(r[3]), str(r[1]), -r[0]))
+    write_csv(OUT / "items_year_disc_censorship_subtopic.csv",
+              ["Citations", "Publication Year", "Discipline", "Sub-topic",
+               "Title", "Author", "Key", "Abstract Note", "Language"], rows4c)
 
     # ── 4b. language_summary.csv (one row per language code) ────────────────
     LANG_NAMES = {

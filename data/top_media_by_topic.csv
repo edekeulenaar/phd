@@ -1,8 +1,8 @@
 Topic,Media category,Quantity
 Algorithmic sorting,Video streaming platform,1
-Algorithmic sorting,Search engine,1
-Algorithmic sorting,Social media platform,1
 Algorithmic sorting,AI,1
+Algorithmic sorting,Social media platform,1
+Algorithmic sorting,Search engine,1
 Algorithmic sorting,Music streaming,1
 Censorship,Print media,396
 Censorship,Social media platform,203
@@ -46,11 +46,11 @@ Media moderation,ISP,5
 Media moderation,Internet (general),4
 Media regulation,Social media platform,6
 Media regulation,Internet (general),5
-Media regulation,Television,4
 Media regulation,Film,4
+Media regulation,Television,4
 Media regulation,Radio,4
-Media regulation,Print media,3
 Media regulation,Music,3
+Media regulation,Print media,3
 Media regulation,Search engine,3
 Media regulation,Performing arts,2
 Media regulation,Video sharing platform,2
