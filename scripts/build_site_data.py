@@ -810,9 +810,70 @@ def main() -> None:
     # the six Venn categories (Algorithmic sorting excluded by request).
     V1      = ROOT / "Chapter 1 - Censorship and moderation - Final results.csv"
     GAPFILL = ROOT / "Chapter 1 - Keywords gapfill.csv"
+    # Five-set flower Venn — AI alignment dropped per user spec (the WHAT
+    # taxonomy treats it as adjacent to the moderation literature but its
+    # vocabulary is too distinct to read against the others on the same
+    # diagram). Keywords from AI-alignment publications still flow into
+    # the per-Type CSVs for download / reference, but no AI-alignment
+    # circle is drawn.
     VENN_CATS = ["Content moderation", "Censorship", "Debate management",
-                 "Media moderation", "Media regulation", "AI alignment"]
+                 "Media moderation", "Media regulation"]
     VENN_TYPES = ["WHAT", "WHO", "HOW", "WHY"]
+
+    # ── Keyword denylist (Figure 14) ────────────────────────────────────
+    # Keywords that survive corpus-wide but don't represent what / who /
+    # how / why of moderation, censorship or speech governance. Three
+    # families:
+    #   • pedagogy / online-learning vocabulary — Debate-management
+    #     publications often discuss tutoring contexts that aren't about
+    #     speech governance;
+    #   • specific individuals who are objects of moderation (deplatforming
+    #     subjects) rather than moderating actors;
+    #   • generic words that pass the LLM extraction filter but carry no
+    #     analytic content on their own.
+    KEYWORD_DENY = {
+        # pedagogy / online learning
+        "tutor", "tutors", "tutorship", "tutoring",
+        "e-tutor", "e-tutors", "etutor", "etutors",
+        "e-moderator", "e-moderators", "emoderator",
+        "learning community", "learning communities",
+        "online learning", "online learning community",
+        "online learning communities", "online communities of learning",
+        "e-learning", "distance learning", "distance education",
+        "blended learning", "collaborative learning",
+        "cooperative learning", "lifelong learning",
+        "pedagogy", "pedagogues", "pedagogue",
+        "students", "pupils", "learners",
+        "classroom", "classrooms", "virtual classroom",
+        "professor", "professors",
+        "lecturer", "lecturers",
+        "teacher", "teachers", "instructor", "instructors",
+        "facilitator", "facilitators",
+        "moodle", "lms", "learning management system",
+        "course", "courses", "online course", "online courses",
+        "mooc", "moocs", "newcomer", "newcomers",
+        "training", "education", "educators", "scholarship",
+        # deplatformed / sanctioned individuals (objects, not actors)
+        "donald trump", "trump",
+        "donald j. trump", "donald j trump",
+        "jair bolsonaro", "bolsonaro",
+        "alex jones", "andrew tate", "kanye west", "ye",
+        "milo yiannopoulos", "tommy robinson",
+        "joe biden", "biden",
+        "barack obama", "obama",
+        "elon musk",
+        # generic / non-analytic
+        "moderators", "moderator",
+        "users", "user",
+        "people", "individuals", "citizens",
+        "society", "public", "audience",
+        "internet", "online", "digital", "platform", "platforms",
+        "content", "information", "media",
+        "research", "study", "studies", "literature",
+        "examples", "case", "cases",
+        "context", "framework",
+    }
+    _kw_ok = lambda w: w.lower() not in KEYWORD_DENY
     if V1.exists():
         from itertools import combinations
         _vnorm = lambda x: re.sub(r"[^a-z0-9]+", "", (x or "").lower())
@@ -841,7 +902,7 @@ def main() -> None:
             ty = (ty or "").strip().upper()
             for w in phrases.split(";"):
                 w = w.strip().lower().strip("\"'")
-                if len(w) < 3:
+                if len(w) < 3 or not _kw_ok(w):
                     continue
                 kw[("ALL", top)][w] += 1
                 if ty in VENN_TYPES:
@@ -895,6 +956,9 @@ def main() -> None:
                 for w in all_el:
                     sig[frozenset(c for c in VENN_CATS
                                   if w in present[c])].append(w)
+                # Top-10 most unique per category and top-10 most convergent
+                # across categories — per user spec. Intermediate regions
+                # (pair, triple) get the same top-10 cap.
                 for c in VENN_CATS:
                     ws = sorted(sig.get(frozenset([c]), []),
                                 key=lambda w: -cset[c][w])
@@ -903,23 +967,26 @@ def main() -> None:
                 for a, b in combinations(VENN_CATS, 2):
                     ws = sorted(sig.get(frozenset([a, b]), []),
                                 key=lambda w: -(cset[a][w] + cset[b][w]))
-                    for w in ws[:8]:
+                    for w in ws[:10]:
                         out.append([vt, "pair", f"{a} + {b}", w,
                                     cset[a][w] + cset[b][w]])
-                # Triple regions — elements in EXACTLY three categories. The
-                # renderer draws the geometrically consecutive triples; the
-                # rest remain available in the CSV.
                 for combo in combinations(VENN_CATS, 3):
                     ws = sorted(sig.get(frozenset(combo), []),
                                 key=lambda w: -sum(cset[c][w] for c in combo))
-                    for w in ws[:6]:
+                    for w in ws[:10]:
                         out.append([vt, "triple", " + ".join(combo), w,
                                     sum(cset[c][w] for c in combo)])
-                # Core: elements spanning four or more of the six sets.
-                broad = [w for s, ws_ in sig.items() if len(s) >= 4
-                         for w in ws_]
-                for w in sorted(broad, key=lambda w: -tot[w])[:8]:
-                    out.append([vt, "center", "(≥4 categories)", w, tot[w]])
+                # Core: keywords that converge across the most categories.
+                # With five sets the threshold relaxes to ≥3 so the centre
+                # is always populated even for sparse Types.
+                for k_min in (5, 4, 3):
+                    broad = [w for s, ws_ in sig.items() if len(s) >= k_min
+                             for w in ws_]
+                    if len(broad) >= 10 or k_min == 3:
+                        break
+                for w in sorted(broad, key=lambda w: -tot[w])[:10]:
+                    out.append([vt, "center", f"(≥{k_min} categories)",
+                                w, tot[w]])
             return out
 
         write_csv(OUT / "venn_keywords.csv",

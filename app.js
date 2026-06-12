@@ -1786,14 +1786,15 @@ async function renderTermsVenn() {
   // topic. The closed-set taxonomy categories remain in venn_categories.csv
   // for cross-reference.
   const srcRows = { keywords: await loadCSV("data/venn_keywords.csv") };
-  let vsrc = "keywords", vtype = "WHO";
+  let vsrc = "keywords", vtype = "WHAT";
   const host = d3.select("#terms-venn");
   const figEl = document.getElementById("fig-terms-venn");
 
-  // Ring order chosen so the historically richest pairs are adjacent
-  // (only adjacent circles overlap geometrically in a flower Venn).
+  // Five-set ring (AI alignment dropped per user spec). Order chosen so
+  // the historically richest pairs are adjacent — only adjacent circles
+  // overlap geometrically in a flower Venn.
   const CATS = ["Content moderation", "Censorship", "Media moderation",
-                "Media regulation", "AI alignment", "Debate management"];
+                "Media regulation", "Debate management"];
   const color = makeSubtopicScale(CATS.slice().sort());
   const fmtN = d3.format(",");
 
