@@ -1823,10 +1823,21 @@ async function renderTermsVenn() {
     const sub = rows.filter(r => r.Type === vtype);
     const excl  = d3.group(sub.filter(r => r.Kind === "exclusive"), r => r.Topic);
     const pairs = d3.group(sub.filter(r => r.Kind === "pair"),      r => r.Topic);
+    const triples = d3.group(sub.filter(r => r.Kind === "triple"),  r => r.Topic);
     const center = sub.filter(r => r.Kind === "center");
     const centerLbl = center.length ? center[0].Topic.replace(/[()]/g, "") : "";
     const pairOf = (a, b) =>
       pairs.get(`${a} + ${b}`) || pairs.get(`${b} + ${a}`) || [];
+    // Triple keys were emitted in VENN_CATS combination order — probe every
+    // permutation-insensitive ordering of the three names.
+    const tripleOf = (names) => {
+      for (const k of triples.keys()) {
+        const parts = k.split(" + ");
+        if (parts.length === 3 && names.every(n => parts.includes(n)))
+          return triples.get(k);
+      }
+      return [];
+    };
 
     const svg = host.append("svg").attr("class", "chart termsmap venn")
       .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
@@ -1841,14 +1852,14 @@ async function renderTermsVenn() {
 
     function block(g, x, y, name, nameFill, terms, lh, cls, max) {
       const ts = terms.slice(0, max);
-      const total = (name ? 22 : 0) + ts.length * lh;
-      let yy = y - total / 2 + 10;
+      const total = (name ? 30 : 0) + ts.length * lh;
+      let yy = y - total / 2 + 12;
       if (name) {
         g.append("text").attr("class", "tm-head vn-name")
           .attr("x", x).attr("y", yy).attr("text-anchor", "middle")
           .attr("fill", nameFill || "var(--ink)")
           .text(name);
-        yy += 22;
+        yy += 30;
       }
       g.selectAll(null).data(ts).join("text")
         .attr("class", cls)
@@ -1863,9 +1874,9 @@ async function renderTermsVenn() {
       const b = bandAlong(centres[i][2], [i]);
       if (!b) return;
       const g = svg.append("g").attr("class", "tm-card").attr("data-cat", c);
-      const max = Math.max(3, Math.min(8, Math.floor((b.len - 40) / 16)));
+      const max = Math.max(3, Math.min(8, Math.floor((b.len - 50) / 22)));
       block(g, b.x, b.y, c.toUpperCase(), color(c),
-            excl.get(c) || [], 15.5, "term vn-excl", max);
+            excl.get(c) || [], 22, "term vn-excl", max);
     });
 
     // Adjacent pair lenses — along the mid-angle between neighbours.
@@ -1878,15 +1889,30 @@ async function renderTermsVenn() {
       const b = bandAlong(am, [Math.min(i, j), Math.max(i, j)]);
       if (!b) return;
       const g = svg.append("g").attr("class", "tm-card").attr("data-cat", c);
-      const max = Math.max(2, Math.min(6, Math.floor(b.len / 14)));
-      block(g, b.x, b.y, null, null, terms, 13, "term vn-pair", max);
+      const max = Math.max(2, Math.min(5, Math.floor(b.len / 20)));
+      block(g, b.x, b.y, null, null, terms, 18, "term vn-pair", max);
+    });
+
+    // Consecutive triple regions — exactly {i, i+1, i+2}; the band runs
+    // along the MIDDLE circle's angle, between the pair lenses and the core.
+    CATS.forEach((c, i) => {
+      const idx = [i, (i + 1) % N, (i + 2) % N];
+      const names = idx.map(k => CATS[k]);
+      const terms = tripleOf(names);
+      if (!terms.length) return;
+      const b = bandAlong(centres[idx[1]][2], idx.slice().sort((a, b2) => a - b2));
+      if (!b) return;
+      const g = svg.append("g").attr("class", "tm-card")
+        .attr("data-cat", CATS[idx[1]]);
+      const max = Math.max(2, Math.min(4, Math.floor(b.len / 18)));
+      block(g, b.x, b.y, null, null, terms, 16.5, "term vn-triple", max);
     });
 
     // Core — keywords spanning most categories.
     if (center.length) {
       const g = svg.append("g").attr("class", "tm-card");
       block(g, cx, cy, ("shared across " + centerLbl).toUpperCase(), null,
-            center, 14.5, "term vn-center", 10);
+            center, 21, "term vn-center", 8);
     }
 
     figKey.register("fig-terms-venn", {

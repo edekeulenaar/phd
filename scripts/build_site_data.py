@@ -890,16 +890,19 @@ def main() -> None:
                 for w in ws[:8]:
                     rows_venn.append([vt, "pair", f"{a} + {b}", w,
                                       cset[a][w] + cset[b][w]])
-            # Centre: spanning ≥5 sets; relax for sparse types so the centre
-            # never comes up empty when there IS cross-category vocabulary.
-            for k_min in (5, 4, 3):
-                broad = [w for s, ws_ in sig.items() if len(s) >= k_min
-                         for w in ws_]
-                if len(broad) >= 3 or k_min == 3:
-                    break
-            for w in sorted(broad, key=lambda w: -tot[w])[:10]:
-                rows_venn.append([vt, "center", f"(≥{k_min} categories)",
-                                  w, tot[w]])
+            # Triple regions — keywords in EXACTLY three categories. The
+            # renderer draws the geometrically consecutive triples; the rest
+            # remain available in the CSV.
+            for combo in combinations(VENN_CATS, 3):
+                ws = sorted(sig.get(frozenset(combo), []),
+                            key=lambda w: -sum(cset[c][w] for c in combo))
+                for w in ws[:6]:
+                    rows_venn.append([vt, "triple", " + ".join(combo), w,
+                                      sum(cset[c][w] for c in combo)])
+            # Core: keywords spanning four or more of the six sets.
+            broad = [w for s, ws_ in sig.items() if len(s) >= 4 for w in ws_]
+            for w in sorted(broad, key=lambda w: -tot[w])[:8]:
+                rows_venn.append([vt, "center", "(≥4 categories)", w, tot[w]])
 
         write_csv(OUT / "venn_keywords.csv",
                   ["Type", "Kind", "Topic", "Keyword", "Count"], rows_venn)
