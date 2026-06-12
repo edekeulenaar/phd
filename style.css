@@ -73,7 +73,7 @@
   --serif:      "AGaramond Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
   --sans:       "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
   --mono:       ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  --fs:         14.5px;
+  --fs:         16.5px;
 }
 
 * { box-sizing: border-box; }
@@ -85,7 +85,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-size: var(--fs);
-  line-height: 1.8;             /* ssrn-paper.css: body line-height 1.8 */
+  line-height: 1.55;            /* original web-comfortable line-height */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -181,31 +181,24 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 
 .prose { max-width: var(--content-w); margin-left: auto; margin-right: auto; }
-/* Headings — Test National (sans), gently scaled; ssrn-paper line-height 1.5,
-   ~1em vertical margins. Sizes proportionally mapped to the print scale
-   (h1 21pt → 1.85rem, h2 18pt → 1.55rem, h3 16pt → 1.32rem, h4 14pt → 1.15rem). */
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+/* Headings — Test National (sans). Original site spacing/sizes kept;
+   only the typeface changed from serif to sans. */
+.prose h1, .prose h2, .prose h3 {
   font-family: var(--sans);
   font-weight: 600;
-  letter-spacing: 0;
+  letter-spacing: -0.005em;
   color: var(--ink);
-  line-height: 1.5;
-  text-align: left;
+  line-height: 1.2;
 }
-.prose h1 { font-size: 1.85rem; margin: 1.6em 0 0.8em; }
-.prose h2 { font-size: 1.55rem; margin: 1.4em 0 0.7em; }
-.prose h3 { font-size: 1.32rem; margin: 1.2em 0 0.6em; }
-.prose h4 { font-size: 1.15rem; margin: 1em 0 0.55em; font-style: italic; }
-.prose h5 { font-size: 1rem;    margin: 1em 0 0.5em;  font-style: italic; }
-.prose h6 { font-size: 1rem;    margin: 1em 0 0.5em;  font-style: italic; }
-.prose h1:first-child { margin-top: 0; }
+.prose h1 { font-size: 1.95rem; margin: 3rem 0 1.2rem; }
+.prose h2 { font-size: 1.40rem; margin: 2.4rem 0 0.9rem; }
+.prose h3 { font-size: 1.12rem; margin: 1.8rem 0 0.7rem; color: var(--ink); }
+.prose h1:first-child { margin-top: 0; font-size: 1.95rem; }
+.prose p { margin: 0 0 1.1em; }
 .prose a { border-bottom: 1px solid rgba(28,26,24,0.18); }
 .prose a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-/* Body paragraphs — justified, 0.8em margin, line-height inherited 1.8 */
-.prose p { margin: 0.8em 0; text-align: justify; }
+.prose p { margin: 0 0 0.95em; }
 .prose ul, .prose ol { padding-left: 1.2rem; }
-/* List items stay ragged-left (justified URL-heavy bullets look bad) */
-.prose li, .prose li p { text-align: left; }
 .prose blockquote {
   margin: 2.2em 0;
   padding: 0.3em 0 0.3em 1em;
@@ -271,14 +264,14 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .prose mark.edit-me:hover { background: rgba(255, 224, 0, 0.65); }
 
-/* Prose tables (markdown GFM). ssrn-paper.css: Test National, 11pt-ish,
-   uppercase tracked header on warm-grey, zebra rows white / off-white. */
+/* Prose tables (markdown GFM). Test National, uppercase tracked header on
+   warm-grey, zebra rows white / off-white. Original web spacing kept. */
 .prose table {
   border-collapse: collapse;
   margin: 1.4em 0;
   font-family: var(--sans);
-  font-size: 0.88em;
-  line-height: 1.5;
+  font-size: 0.92em;
+  line-height: 1.45;
   width: 100%;
   max-width: 100%;
 }
@@ -290,12 +283,12 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   letter-spacing: 0.02em;
   background: #EFEDE6;
   border: 0.5px solid #B0B0B0;
-  padding: 0.4em 0.6em;
+  padding: 0.45em 0.7em;
 }
 .prose tbody td {
   font-family: var(--sans);
   border: 0.5px solid #B0B0B0;
-  padding: 0.4em 0.6em;
+  padding: 0.35em 0.7em;
   vertical-align: top;
 }
 .prose tbody tr:nth-child(odd)  td { background: #FFFFFF; }
@@ -772,8 +765,10 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
    (two lines: NAME + count), italic stage headers, pastel ribbons
    with a visible gap between rect and ribbon. */
 .sankey {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter,
-               "Segoe UI", Arial, sans-serif;
+  font-family: "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   font-size: 13px; color: var(--ink);
 }
 .sankey .node rect {
@@ -785,19 +780,19 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .sankey .node rect:hover { fill: #f5efe2; }
 .sankey .node text { fill: var(--ink); pointer-events: none; }
 
-.sankey .node-label { font-size: 11px; }
+.sankey .node-label { font-size: 13px; }
 .sankey .lbl-name {
-  font-size: 10.5px; font-weight: 700;
+  font-size: 12.5px; font-weight: 600;
   letter-spacing: 0.04em; text-transform: uppercase;
   fill: var(--ink);
 }
 .sankey .lbl-count {
-  font-size: 9.5px; font-weight: 400; fill: var(--muted);
+  font-size: 11.5px; font-weight: 400; fill: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
 .sankey .stage-headers text {
-  font-size: 10.5px; font-style: italic; font-weight: 400;
+  font-size: 12px; font-style: italic; font-weight: 400;
   fill: var(--muted);
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -1046,28 +1041,28 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
    shrink the width to fit, squeezing the chart into a thin strip. */
 .chart {
   font-family: var(--sans);
-  font-size: 13px;          /* bumped from 11px (Figs 3, 4, 7–10 readability) */
+  font-size: 15px;
   color: var(--ink);
   width: 100%;
   height: auto;
   display: block;
 }
-/* Uniform editorial label style across ALL chart text — matches alluvial
-   labels: sans-serif, uppercase, bold, slight tracking. */
+/* Uniform editorial label style across ALL chart text:
+   Test National Semibold, uppercase, slight tracking. */
 .chart text {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter,
-               "Segoe UI", Arial, sans-serif;
+  font-family: "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
-.chart .axis text       { font-size: 9.5px;  font-weight: 600; }
-.chart .y-labels text   { font-size: 9px;    font-weight: 700; }
+.chart .axis text       { font-size: 11.5px; font-weight: 600; }
+.chart .y-labels text   { font-size: 11px;   font-weight: 600; }
 .chart .axis path, .chart .axis line { stroke: var(--rule); }
 .chart .axis text { fill: var(--ink-soft); }
 .chart .y-labels text { fill: var(--ink); }
-.chart .legend text { font-size: 10.5px; font-weight: 600; }
+.chart .legend text { font-size: 12.5px; font-weight: 600; }
 .chart .rowguides line { stroke: var(--rule); stroke-dasharray: 2 3; }
-.chart .legend text { fill: var(--ink-soft); font-size: 12px; }
+.chart .legend text { fill: var(--ink-soft); font-size: 13px; }
 .chart circle { stroke: rgba(30, 29, 28, 0.18); stroke-width: 0.4px;
                 transition: opacity 0.15s; }
 .chart circle.dim { opacity: 0.10; }
@@ -1079,8 +1074,8 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 }
 /* Static-PNG-style network: clear labels, click → highlight neighbours. */
 .chart.network .node-label    {
-  fill: var(--ink); font-weight: 700;
-  font-size: 9.5px; letter-spacing: 0.03em;
+  fill: var(--ink); font-weight: 600;
+  font-size: 11.5px; letter-spacing: 0.03em;
 }
 .chart.network circle         { transition: opacity 0.15s, r 0.15s; }
 .chart.network circle.hi      { stroke: var(--ink); stroke-width: 1.5px; }
@@ -1100,11 +1095,11 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .chart.bump .series.hi circle,
 .chart.bump .series:hover circle { opacity: 1; }
 .chart.bump .series .label  {
-  font-size: 10.5px; font-weight: 700;
+  font-size: 12.5px; font-weight: 600;
   fill: var(--ink); letter-spacing: 0.04em;
 }
 .chart.bump .series.hi .label {
-  font-size: 12px; font-weight: 800;
+  font-size: 14px; font-weight: 700;
   paint-order: stroke;                            /* halo for legibility */
   stroke: var(--paper); stroke-width: 3px;
 }
