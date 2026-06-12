@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorship and moderation — the oscillations of a contested practice</title>
-<link rel="stylesheet" href="style.css?v=p6-89">
+<link rel="stylesheet" href="style.css?v=p6-90">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -513,23 +513,25 @@
     <figure class="fig" id="fig-terms-venn">
       <figcaption class="fig-cap">
         <span class="fig-num">Figure 14.</span>
-        Distinctive and convergent vocabularies — Content moderation at the
-        hub, each other WHAT category around it; the dashed boxes on the
-        connectors list the terms the pair shares.
+        Keyword Venn — coded keywords exclusive to, paired between, and
+        shared across the WHAT categories, with Content moderation as the
+        central set.
       </figcaption>
       <div class="fig-body"><div id="terms-venn"></div></div>
       <div class="fig-foot">
-        <a class="dl" href="data/terms_by_category.csv" download>⬇ Download CSV</a>
+        <a class="dl" href="data/venn_keywords.csv" download>⬇ Download CSV</a>
         <span class="alt">
-          Hub-and-spokes convergence map. Each card lists the ten uni-/bi-gram
-          terms (stopwords removed for all nineteen corpus languages) most
-          distinctive of one WHAT category's quoted findings, scored by
-          log-odds with an informative Dirichlet prior against the rest of
-          the corpus. The dashed box on each connector lists the terms most
-          typical of that PAIR — frequent in both Content moderation and the
-          partner category, rare elsewhere (geometric-mean share lift). The
-          corner box lists the terms that appear most evenly across all
-          categories. Source: <code>terms_by_category.csv</code>.
+          Flower-Venn of the coded keyword vocabulary ("Mentioned items",
+          recovered from the v1 coding pass and re-grouped by each
+          publication's current WHAT category; Algorithmic sorting excluded).
+          The central circle is Content moderation; the five petals are the
+          other categories. Keywords listed inside a lens occur in EXACTLY
+          that pair of categories; the lists outside each circle are the
+          keywords exclusive to that category; the centre lists keywords
+          present in at least five of the six sets. Only adjacent petals
+          overlap geometrically — non-adjacent petal pairs (all involving
+          small keyword sets) are in the CSV. Source:
+          <code>venn_keywords.csv</code>.
         </span>
       </div>
     </figure>
@@ -557,7 +559,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
-<script src="app.js?v=p6-89" defer></script>
+<script src="app.js?v=p6-90" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,155 @@
+Kind,Topic,Keyword,Count
+exclusive,Content moderation,volunteer moderators,48
+exclusive,Content moderation,misinformation,25
+exclusive,Content moderation,oversight board,22
+exclusive,Content moderation,community guidelines,22
+exclusive,Content moderation,bots,19
+exclusive,Content moderation,section 230,15
+exclusive,Content moderation,community-driven moderation,15
+exclusive,Content moderation,platform,15
+exclusive,Content moderation,inteligência artificial,13
+exclusive,Content moderation,shielding a platform from legal liability,13
+exclusive,Censorship,censors,18
+exclusive,Censorship,constitutive,16
+exclusive,Censorship,institutional,16
+exclusive,Censorship,deep packet inspection,14
+exclusive,Censorship,middleboxes,13
+exclusive,Censorship,translators,12
+exclusive,Censorship,translation,10
+exclusive,Censorship,bons costumes,10
+exclusive,Censorship,libraries,9
+exclusive,Censorship,individuals,9
+exclusive,Debate management,e-moderador,5
+exclusive,Debate management,manager,4
+exclusive,Debate management,intermédiaire,3
+exclusive,Debate management,formateur,3
+exclusive,Debate management,pace setter,3
+exclusive,Debate management,débat,3
+exclusive,Debate management,organizer,3
+exclusive,Debate management,explainer,3
+exclusive,Debate management,reconciliar opuestos,3
+exclusive,Debate management,discriminator,2
+exclusive,Media moderation,contrôle éditorial,2
+exclusive,Media moderation,metamoderação,2
+exclusive,Media moderation,responsabilité légale,2
+exclusive,Media moderation,postmodération,1
+exclusive,Media moderation,framing,1
+exclusive,Media moderation,pré-modération,1
+exclusive,Media moderation,rentabilité,1
+exclusive,Media moderation,moderador das redes sociais,1
+exclusive,Media moderation,representative democracy,1
+exclusive,Media moderation,improve journalistic work,1
+exclusive,Media regulation,ratings system,2
+exclusive,Media regulation,organismos policiais,1
+exclusive,Media regulation,radios,1
+exclusive,Media regulation,responsabilização das empresas,1
+exclusive,Media regulation,advice,1
+exclusive,Media regulation,proporcionalidad,1
+exclusive,Media regulation,marginalized groups,1
+exclusive,Media regulation,guiding,1
+exclusive,Media regulation,junta electoral regional,1
+exclusive,Media regulation,good taste,1
+exclusive,AI alignment,ccp,4
+exclusive,AI alignment,toxicity detection,2
+exclusive,AI alignment,prompt engineering,2
+exclusive,AI alignment,censored content,2
+exclusive,AI alignment,ai-based systems,2
+exclusive,AI alignment,compliance with the state,2
+exclusive,AI alignment,judicial control,2
+exclusive,AI alignment,censorship rules,2
+exclusive,AI alignment,developers,2
+exclusive,AI alignment,scraping,2
+pair,Content moderation + Censorship,social media platforms,36
+pair,Content moderation + Censorship,government agencies,32
+pair,Content moderation + Censorship,liability,29
+pair,Content moderation + Censorship,downranking,28
+pair,Content moderation + Censorship,censura privada,28
+pair,Content moderation + Censorship,adjudication,28
+pair,Content moderation + Censorship,shadowbanning,27
+pair,Content moderation + Censorship,moral,26
+pair,Content moderation + Debate management,distributed moderation,34
+pair,Content moderation + Debate management,volunteer moderation,21
+pair,Content moderation + Debate management,moderador,14
+pair,Content moderation + Debate management,tutor,11
+pair,Content moderation + Debate management,moderator,10
+pair,Content moderation + Debate management,host,7
+pair,Content moderation + Debate management,public sphere,6
+pair,Content moderation + Debate management,ngos,6
+pair,Content moderation + Media moderation,moderation workers,22
+pair,Content moderation + Media moderation,youtube,15
+pair,Content moderation + Media moderation,remoção de conteúdo,15
+pair,Content moderation + Media moderation,autorregulação,10
+pair,Content moderation + Media moderation,ranking,9
+pair,Content moderation + Media moderation,maintaining credibility and reputation,7
+pair,Content moderation + Media moderation,filtrado,6
+pair,Content moderation + Media moderation,gatekeeping,5
+pair,Content moderation + Media regulation,remover,17
+pair,Content moderation + Media regulation,governança de plataformas,9
+pair,Content moderation + Media regulation,ordem judicial,8
+pair,Content moderation + Media regulation,pré-moderação,5
+pair,Content moderation + Media regulation,counterspeech,5
+pair,Content moderation + Media regulation,warning labels,5
+pair,Content moderation + Media regulation,child safety,3
+pair,Content moderation + Media regulation,pluralismo,3
+pair,Content moderation + AI alignment,user safety,72
+pair,Content moderation + AI alignment,human moderators,24
+pair,Content moderation + AI alignment,site moderators,23
+pair,Content moderation + AI alignment,preventing abuse,21
+pair,Content moderation + AI alignment,digital services act,19
+pair,Content moderation + AI alignment,complying with local speech regulation laws,16
+pair,Content moderation + AI alignment,screening user-generated content,13
+pair,Content moderation + AI alignment,llms,12
+pair,Censorship + Debate management,editor,13
+pair,Censorship + Debate management,arbitre,4
+pair,Censorship + Debate management,block websites,3
+pair,Censorship + Debate management,árbitro,3
+pair,Censorship + Debate management,mediador,3
+pair,Censorship + Debate management,filtros-bolha,2
+pair,Censorship + Debate management,contrôler,2
+pair,Censorship + Debate management,procédures,2
+pair,Censorship + Media moderation,internet service providers,18
+pair,Censorship + Media moderation,publishers,17
+pair,Censorship + Media moderation,librarians,10
+pair,Censorship + Media moderation,editing,8
+pair,Censorship + Media moderation,obscene,6
+pair,Censorship + Media moderation,media owners,6
+pair,Censorship + Media moderation,information control,4
+pair,Censorship + Media moderation,journalist,4
+pair,Censorship + Media regulation,administrative censorship,16
+pair,Censorship + Media regulation,classificação,5
+pair,Censorship + Media regulation,censura oficial,5
+pair,Censorship + Media regulation,cultural censorship,5
+pair,Censorship + Media regulation,regime stability,4
+pair,Censorship + Media regulation,copyright,4
+pair,Censorship + Media regulation,polícia federal,3
+pair,Censorship + Media regulation,objectionable,3
+pair,Censorship + AI alignment,state,14
+pair,Censorship + AI alignment,child protection,8
+pair,Censorship + AI alignment,chinese government,6
+pair,Censorship + AI alignment,sanctions,5
+pair,Censorship + AI alignment,information manipulation,4
+pair,Censorship + AI alignment,analysis,4
+pair,Censorship + AI alignment,political content,3
+pair,Censorship + AI alignment,modification,3
+pair,Debate management + Media moderation,sélection,5
+pair,Debate management + Media moderation,démocratie participative,4
+pair,Debate management + Media moderation,webmestre,3
+pair,Debate management + Media moderation,modération a priori,3
+pair,Debate management + Media moderation,educating the public,2
+pair,Debate management + Media moderation,journaliste,2
+pair,Debate management + Media moderation,modération a posteriori,2
+pair,Debate management + Media moderation,commission nationale du débat public,2
+pair,Debate management + Media regulation,formato,3
+pair,Debate management + AI alignment,justification,2
+pair,Media moderation + AI alignment,state media,2
+pair,Media regulation + AI alignment,prohibited,2
+center,(≥5 categories),platform governance,216
+center,(≥5 categories),filtering,124
+center,(≥5 categories),safety,79
+center,(≥5 categories),plataformas,72
+center,(≥5 categories),moderators,64
+center,(≥5 categories),suppression,50
+center,(≥5 categories),government,40
+center,(≥5 categories),labeling,38
+center,(≥5 categories),filter,22
+center,(≥5 categories),public participation,19

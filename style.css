@@ -1164,6 +1164,22 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .chart.termsmap text.tm-pair-term { font-size: 12px; fill: var(--ink-soft); }
 .chart.termsmap .tm-pair .tm-head { font-size: 10px; fill: var(--muted); }
 
+/* Venn variant (Figure 14): translucent set circles + region keyword lists. */
+.chart.termsmap.venn .vn-circle { transition: opacity 0.15s; }
+.chart.termsmap.venn .vn-circle.dim { opacity: 0.12; }
+.chart.termsmap.venn .vn-name {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+.chart.termsmap.venn text.vn-excl   { font-size: 13px; }
+.chart.termsmap.venn text.vn-pair   {
+  font-size: 11.5px;
+  fill: var(--ink-soft);
+  font-style: italic;
+}
+.chart.termsmap.venn text.vn-pp     { font-size: 10.5px; }
+.chart.termsmap.venn text.vn-center { font-size: 13px; font-weight: 600; }
+
 /* ─── Data hover-card (chart elements) ────────────────────────────────── */
 
 #data-card {

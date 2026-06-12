@@ -800,6 +800,82 @@ def main() -> None:
               ["Kind", "Topic", "Term", "Count", "Score"],
               rows_terms)
 
+    # ── 10-ter. venn_keywords.csv — keyword set-regions for Figure 14 ──────
+    # The v1 coding pass produced a curated 'Mentioned items' keyword column
+    # (semicolon-separated short phrases) that later iterations dropped.
+    # Recover it from the v1 results CSV (joined on normalised Title, falling
+    # back to PDF filename), group keywords by each publication's CURRENT
+    # WHAT category, and emit true set-regions: keywords EXCLUSIVE to one
+    # category, keywords in EXACTLY one pair, and keywords spanning ≥5 of
+    # the six Venn categories (Algorithmic sorting excluded by request).
+    V1 = ROOT / "Chapter 1 - Censorship and moderation - Final results.csv"
+    VENN_CATS = ["Content moderation", "Censorship", "Debate management",
+                 "Media moderation", "Media regulation", "AI alignment"]
+    if V1.exists():
+        from itertools import combinations
+        _vnorm = lambda x: re.sub(r"[^a-z0-9]+", "", (x or "").lower())
+        t2k: dict[str, str] = {}
+        f2k: dict[str, str] = {}
+        for t in items:
+            k = item_key.get(t, "")
+            if not k:
+                continue
+            t2k.setdefault(_vnorm(item_title.get(t, "")), k)
+        for r in F:
+            k = (r.get("Key") or "").strip()
+            fn = (r.get("File") or "").split("/")[-1].strip().lower()
+            if k and fn:
+                f2k.setdefault(fn, k)
+        key_topic = {item_key.get(t, ""): topic_of(t) for t in items}
+
+        kw_cat: dict[str, Counter] = defaultdict(Counter)
+        matched_pubs: set[str] = set()
+        for r in load_csv(V1):
+            kws = (r.get("Mentioned items") or "").strip()
+            if not kws:
+                continue
+            k = (t2k.get(_vnorm(r.get("Title"))) or
+                 f2k.get((r.get("File") or "").split("/")[-1].strip().lower()))
+            if not k:
+                continue
+            top = key_topic.get(k)
+            if top not in VENN_CATS:
+                continue
+            matched_pubs.add(k)
+            for kw in kws.split(";"):
+                kw = kw.strip().lower().strip("\"'")
+                if len(kw) >= 3:
+                    kw_cat[top][kw] += 1
+        print(f"  venn keywords: {len(matched_pubs):,} publications matched "
+              f"from v1 'Mentioned items'")
+
+        present = {c: set(kw_cat[c]) for c in VENN_CATS}
+        all_kw = set().union(*present.values())
+        tot_kw = {w: sum(kw_cat[c][w] for c in VENN_CATS) for w in all_kw}
+        sig: dict[frozenset, list[str]] = defaultdict(list)
+        for w in all_kw:
+            sig[frozenset(c for c in VENN_CATS if w in present[c])].append(w)
+
+        rows_venn: list[list] = []
+        for c in VENN_CATS:
+            ws = sorted(sig.get(frozenset([c]), []), key=lambda w: -kw_cat[c][w])
+            for w in ws[:10]:
+                rows_venn.append(["exclusive", c, w, kw_cat[c][w]])
+        for a, b in combinations(VENN_CATS, 2):
+            ws = sorted(sig.get(frozenset([a, b]), []),
+                        key=lambda w: -(kw_cat[a][w] + kw_cat[b][w]))
+            for w in ws[:8]:
+                rows_venn.append(["pair", f"{a} + {b}", w,
+                                  kw_cat[a][w] + kw_cat[b][w]])
+        broad = [w for s, ws in sig.items() if len(s) >= 5 for w in ws]
+        for w in sorted(broad, key=lambda w: -tot_kw[w])[:10]:
+            rows_venn.append(["center", "(≥5 categories)", w, tot_kw[w]])
+
+        write_csv(OUT / "venn_keywords.csv",
+                  ["Kind", "Topic", "Keyword", "Count"], rows_venn)
+    else:
+        print(f"  (v1 results CSV not found — venn_keywords.csv skipped)")
+
     # ── 11–14. Network CSVs (Topic-level and CM Sub-topic-level) ────────────
     # Five layers — we emit edges for EVERY ordered layer pair (GROUP→WHO,
     # GROUP→HOW, GROUP→WHAT, GROUP→WHY, WHO→HOW, WHO→WHAT, WHO→WHY,

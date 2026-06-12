@@ -1779,130 +1779,141 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
    ─────────────────────────────────────────────────────────────────────── */
 
 async function renderTermsVenn() {
-  const rows = await loadCSV("data/terms_by_category.csv");
+  const rows = await loadCSV("data/venn_keywords.csv");
   const host = d3.select("#terms-venn");
   host.selectAll("*").remove();
 
   const HUB = "Content moderation";
-  const dist   = rows.filter(r => r.Kind === "distinctive");
-  const shared = rows.filter(r => r.Kind === "shared");
-  const pairsR = rows.filter(r => r.Kind === "pair");
-  const byCat  = d3.group(dist, r => r.Topic);
-  const byPair = d3.group(pairsR, r => r.Topic);   // "Content moderation + X"
-  // Partners: every category that has a pair with the hub, ordered by how
-  // much pair material there is (denser pairs get the wider top/bottom slots).
-  const partners = [...byPair.keys()].map(k => k.split(" + ")[1]);
-  const cats = [HUB, ...partners];
-  const color = makeSubtopicScale([...new Set([...byCat.keys(), ...cats])].sort());
+  const excl   = d3.group(rows.filter(r => r.Kind === "exclusive"), r => r.Topic);
+  const pairs  = d3.group(rows.filter(r => r.Kind === "pair"),      r => r.Topic);
+  const center = rows.filter(r => r.Kind === "center");
+  // Petal ring order chosen so the richest petal–petal overlaps are adjacent
+  // (Censorship∩Media moderation, Censorship∩Media regulation, Debate
+  // management∩Media moderation), since only adjacent circles overlap
+  // geometrically in a flower Venn.
+  const petals = ["Media regulation", "Censorship", "Media moderation",
+                  "Debate management", "AI alignment"]
+    .filter(c => excl.has(c) ||
+      [...pairs.keys()].some(k => k.split(" + ").includes(c)));
+  const cats = [HUB, ...petals];
+  const color = makeSubtopicScale(cats.slice().sort());
   const fmtN = d3.format(",");
+  const pairOf = (a, b) =>
+    pairs.get(`${a} + ${b}`) || pairs.get(`${b} + ${a}`) || [];
 
-  const CARD_W = 252, LINE_H = 16.5, PAD = 12, HEAD_H = 26;
-  const PAIR_W = 196, PAIR_LH = 14.5, PAIR_HEAD = 20;
-  const cardH = c => HEAD_H + PAD * 1.6 + (byCat.get(c) || []).length * LINE_H;
-  const pairH = k => PAIR_HEAD + 10 + (byPair.get(k) || []).length * PAIR_LH;
-
-  const W = 1400, H = 1280, cx = W / 2, cy = H / 2 + 20;
-  const rx = 510, ry = 500;
-  const svg = host.append("svg").attr("class", "chart termsmap")
+  const W = 1340, H = 1280, cx = W / 2, cy = H / 2 - 10;
+  const Rc = 235;            // hub circle radius
+  const Rp = 215;            // petal circle radius
+  const D  = 318;            // petal-centre distance from hub centre
+  const svg = host.append("svg").attr("class", "chart termsmap venn")
     .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
     .attr("width", "100%");
-  const linesG = svg.append("g");
 
-  function card(g, c, x0, y0, w) {
-    const h = cardH(c);
-    g.append("rect").attr("x", x0).attr("y", y0).attr("width", w).attr("height", h)
-      .attr("rx", 6).attr("fill", "#ffffff")
+  const angles = petals.map((c, i) =>
+    -Math.PI / 2 + (2 * Math.PI * i) / petals.length);
+
+  // ── Circles (translucent, painted petals-first so the hub reads on top) ─
+  petals.forEach((c, i) => {
+    const a = angles[i];
+    svg.append("circle").attr("class", "vn-circle").attr("data-cat", c)
+      .attr("cx", cx + D * Math.cos(a)).attr("cy", cy + D * Math.sin(a))
+      .attr("r", Rp)
+      .attr("fill", color(c)).attr("fill-opacity", 0.16)
       .attr("stroke", color(c)).attr("stroke-width", 1.6);
-    g.append("rect").attr("x", x0).attr("y", y0).attr("width", w).attr("height", HEAD_H)
-      .attr("rx", 6).attr("fill", color(c)).attr("opacity", 0.18);
-    g.append("text").attr("class", "tm-head")
-      .attr("x", x0 + w / 2).attr("y", y0 + HEAD_H - 8).attr("text-anchor", "middle")
-      .text(c.length > 30 ? c.slice(0, 28) + "…" : c)
-      .append("title").text(c);
-    g.selectAll(null).data(byCat.get(c) || []).join("text")
-      .attr("class", "term")
-      .attr("x", x0 + PAD).attr("y", (d, j) => y0 + HEAD_H + PAD + (j + 0.7) * LINE_H)
-      .text(d => `${d.Term}  ·  ${fmtN(+d.Count)}`)
-      .append("title").text(d => `log-odds z = ${d.Score}`);
-    return h;
+  });
+  svg.append("circle").attr("class", "vn-circle").attr("data-cat", HUB)
+    .attr("cx", cx).attr("cy", cy).attr("r", Rc)
+    .attr("fill", color(HUB)).attr("fill-opacity", 0.14)
+    .attr("stroke", color(HUB)).attr("stroke-width", 2);
+
+  // ── Text helpers ─────────────────────────────────────────────────────────
+  function list(g, terms, x, y, lh, cls, max) {
+    g.selectAll(null).data(terms.slice(0, max)).join("text")
+      .attr("class", cls)
+      .attr("x", x).attr("y", (d, j) => y + j * lh)
+      .attr("text-anchor", "middle")
+      .text(d => d.Keyword)
+      .append("title").text(d => `${d.Keyword} · ${fmtN(+d.Count)} mentions`);
   }
 
-  // ── Hub card (Content moderation), centred ──────────────────────────────
-  const hubH = cardH(HUB);
-  const hubG = svg.append("g").attr("class", "tm-card").attr("data-cat", HUB);
-  card(hubG, HUB, cx - CARD_W / 2, cy - hubH / 2, CARD_W);
-
-  // ── Partners + pair boxes on each connector ──────────────────────────────
-  const angles = partners.map((c, i) =>
-    -Math.PI / 2 + (2 * Math.PI * i) / partners.length);
-  partners.forEach((c, i) => {
+  // Petal name + EXCLUSIVE keywords — outside each petal, anchored to it.
+  petals.forEach((c, i) => {
     const a = angles[i];
-    const px = cx + rx * Math.cos(a);
-    const py = cy + ry * Math.sin(a);
-    linesG.append("line")
-      .attr("x1", cx).attr("y1", cy).attr("x2", px).attr("y2", py)
-      .attr("stroke", color(c)).attr("stroke-width", 1.4)
-      .attr("stroke-dasharray", "3 4").attr("opacity", 0.75);
+    const lx = cx + (D + Rp + 26) * Math.cos(a);
+    const ly = cy + (D + Rp + 26) * Math.sin(a);
     const g = svg.append("g").attr("class", "tm-card").attr("data-cat", c);
-    const h = cardH(c);
-    card(g, c, px - CARD_W / 2, py - h / 2, CARD_W);
-
-    // Pair box midway along the connector: terms typical of hub + partner.
-    const key = `${HUB} + ${c}`;
-    const terms = byPair.get(key) || [];
-    if (!terms.length) return;
-    const mx = cx + 0.52 * rx * Math.cos(a);
-    const my = cy + 0.55 * ry * Math.sin(a);
-    const ph = pairH(key);
-    const x0 = mx - PAIR_W / 2, y0 = my - ph / 2;
-    const pg = svg.append("g").attr("class", "tm-card tm-pair").attr("data-cat", c);
-    pg.append("rect").attr("x", x0).attr("y", y0)
-      .attr("width", PAIR_W).attr("height", ph).attr("rx", 8)
-      .attr("fill", "#faf7f2").attr("stroke", color(c))
-      .attr("stroke-width", 1.2).attr("stroke-dasharray", "4 3");
-    pg.append("text").attr("class", "tm-head")
-      .attr("x", x0 + PAIR_W / 2).attr("y", y0 + PAIR_HEAD - 5)
-      .attr("text-anchor", "middle")
-      .text("shared with " + (c.length > 18 ? c.slice(0, 16) + "…" : c))
-      .append("title").text(key);
-    pg.selectAll(null).data(terms).join("text")
-      .attr("class", "term tm-pair-term")
-      .attr("x", x0 + PAIR_W / 2)
-      .attr("y", (d, j) => y0 + PAIR_HEAD + 8 + (j + 0.55) * PAIR_LH)
-      .attr("text-anchor", "middle")
-      .text(d => `${d.Term} · ${fmtN(+d.Count)}`)
-      .append("title").text(d => `pair lift = ${d.Score}`);
+    // pull the label block fully into view at the vertical extremes
+    const bx = Math.max(120, Math.min(W - 120, lx));
+    const by = Math.max(40,  Math.min(H - 150, ly));
+    g.append("text").attr("class", "tm-head vn-name")
+      .attr("x", bx).attr("y", by).attr("text-anchor", "middle")
+      .attr("fill", color(c))
+      .text(c);
+    list(g, excl.get(c) || [], bx, by + 19, 15.5, "term vn-excl", 8);
+    // exclusive keywords also echo INSIDE the petal's outer crescent
+    const ix = cx + (D + Rp * 0.42) * Math.cos(a);
+    const iy = cy + (D + Rp * 0.42) * Math.sin(a);
   });
 
-  // ── Shared-across-all box, top-left corner ───────────────────────────────
-  if (shared.length) {
-    const x0 = 18, y0 = 18, w = 230;
-    const h = PAIR_HEAD + 12 + shared.length * PAIR_LH;
-    const sg = svg.append("g").attr("class", "tm-card");
-    sg.append("rect").attr("x", x0).attr("y", y0).attr("width", w).attr("height", h)
-      .attr("rx", 8).attr("fill", "#ffffff")
-      .attr("stroke", "#2a2724").attr("stroke-width", 1.1);
-    sg.append("text").attr("class", "tm-head")
-      .attr("x", x0 + w / 2).attr("y", y0 + PAIR_HEAD - 2).attr("text-anchor", "middle")
-      .text("Shared across all categories");
-    sg.selectAll(null).data(shared).join("text")
-      .attr("class", "term tm-pair-term")
-      .attr("x", x0 + w / 2)
-      .attr("y", (d, j) => y0 + PAIR_HEAD + 8 + (j + 0.55) * PAIR_LH)
+  // Hub name + exclusive list — bottom-right corner card with a connector.
+  {
+    const x0 = W - 252, y0 = H - 246;
+    const g = svg.append("g").attr("class", "tm-card").attr("data-cat", HUB);
+    g.append("line")
+      .attr("x1", cx + Rc * Math.cos(Math.PI / 4) - 18)
+      .attr("y1", cy + Rc * Math.sin(Math.PI / 4) + 18)
+      .attr("x2", x0 + 90).attr("y2", y0 + 4)
+      .attr("stroke", color(HUB)).attr("stroke-width", 1.2)
+      .attr("stroke-dasharray", "3 4").attr("opacity", 0.8);
+    g.append("text").attr("class", "tm-head vn-name")
+      .attr("x", x0 + 100).attr("y", y0).attr("text-anchor", "middle")
+      .attr("fill", color(HUB)).text(HUB + " (exclusive)");
+    list(g, excl.get(HUB) || [], x0 + 100, y0 + 19, 15.5, "term vn-excl", 8);
+  }
+
+  // CM ∩ petal lenses — inside the hub, towards each petal.
+  petals.forEach((c, i) => {
+    const a = angles[i];
+    const terms = pairOf(HUB, c);
+    if (!terms.length) return;
+    const lx = cx + (Rc * 0.64) * Math.cos(a);
+    const ly = cy + (Rc * 0.66) * Math.sin(a);
+    const g = svg.append("g").attr("class", "tm-card").attr("data-cat", c);
+    list(g, terms, lx, ly - (Math.min(terms.length, 5) - 1) * 6.5, 13, "term vn-pair", 5);
+  });
+
+  // petal ∩ petal lenses — between adjacent petals, just outside the hub.
+  petals.forEach((c, i) => {
+    const nb = petals[(i + 1) % petals.length];
+    const terms = pairOf(c, nb);
+    if (!terms.length) return;
+    const a = (angles[i] + angles[(i + 1) % petals.length]) / 2 +
+              (i === petals.length - 1 ? Math.PI : 0);   // wrap-around midpoint
+    const lx = cx + (Rc + 56) * Math.cos(a);
+    const ly = cy + (Rc + 56) * Math.sin(a);
+    const g = svg.append("g").attr("class", "tm-card").attr("data-cat", c);
+    list(g, terms, lx, ly - (Math.min(terms.length, 3) - 1) * 6, 12.5, "term vn-pair vn-pp", 3);
+  });
+
+  // Centre — keywords spanning ≥5 of the six categories.
+  {
+    const g = svg.append("g").attr("class", "tm-card");
+    g.append("text").attr("class", "tm-head")
+      .attr("x", cx).attr("y", cy - (center.length * 14) / 2 - 10)
       .attr("text-anchor", "middle")
-      .text(d => `${d.Term} · ${fmtN(+d.Count)}`)
-      .append("title").text(d => `present in ${d.Score} categories`);
+      .text("shared across ≥5 categories");
+    list(g, center, cx, cy - (center.length * 14) / 2 + 8, 14, "term vn-center", 10);
   }
 
   figKey.register("fig-terms-venn", {
     title: "WHAT category",
     legend: cats.map(c => ({ label: c, color: color(c) })),
     onHighlight(name) {
-      svg.selectAll(".tm-card")
+      svg.selectAll(".tm-card, .vn-circle")
         .classed("dim", function () {
           if (!name) return false;
-          const c = this.getAttribute("data-cat");
-          return c !== name && !(name === HUB && c === HUB);
+          return this.getAttribute("data-cat") !== name &&
+                 this.getAttribute("data-cat") != null;
         });
     },
   });
