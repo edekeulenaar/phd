@@ -1779,12 +1779,14 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
    ─────────────────────────────────────────────────────────────────────── */
 
 async function renderTermsVenn() {
-  // Figure 14 now reads ONLY the closed-set taxonomy categories: per Type
-  // (WHO/HOW/WHY) the Venn shows which category-codes are specific to one
-  // WHAT topic and which overlap across topics. Keywords are kept available
-  // in venn_keywords.csv for downloads but no longer drive the figure.
-  const srcRows = { categories: await loadCSV("data/venn_categories.csv") };
-  let vsrc = "categories", vtype = "WHO";
+  // Figure 14 reads the per-Type keyword vocabulary: per Type (WHO/HOW/WHY)
+  // the Venn shows which keywords are specific to one WHAT topic and which
+  // overlap across topics. Six circles = six WHAT topics; keywords come from
+  // findings of the selected Type inside publications categorised under that
+  // topic. The closed-set taxonomy categories remain in venn_categories.csv
+  // for cross-reference.
+  const srcRows = { keywords: await loadCSV("data/venn_keywords.csv") };
+  let vsrc = "keywords", vtype = "WHO";
   const host = d3.select("#terms-venn");
   const figEl = document.getElementById("fig-terms-venn");
 
