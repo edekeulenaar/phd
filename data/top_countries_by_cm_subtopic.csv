@@ -6,9 +6,9 @@ Brand safety,Brazil,6
 Brand safety,Germany,6
 Brand safety,United Kingdom,6
 Brand safety,China,4
-Brand safety,Thailand,2
-Brand safety,Indonesia,2
 Brand safety,Philippines,2
+Brand safety,Indonesia,2
+Brand safety,Thailand,2
 Brand safety,Spain,2
 Censorship,United States,108
 Censorship,European Union,55
@@ -23,21 +23,21 @@ Censorship,Russia,11
 Common carriage / neutral conduit,United States,4
 Common carriage / neutral conduit,European Union,4
 Common carriage / neutral conduit,Italy,1
-Common carriage / neutral conduit,Jordan,1
 Common carriage / neutral conduit,Egypt,1
-Common carriage / neutral conduit,Israel,1
-Common carriage / neutral conduit,Tunisia,1
-Common carriage / neutral conduit,Algeria,1
-Common carriage / neutral conduit,Morocco,1
 Common carriage / neutral conduit,Palestine,1
+Common carriage / neutral conduit,Morocco,1
+Common carriage / neutral conduit,Saudi Arabia,1
+Common carriage / neutral conduit,Jordan,1
+Common carriage / neutral conduit,Algeria,1
+Common carriage / neutral conduit,Tunisia,1
 Community norms and identity,United States,57
 Community norms and identity,France,18
 Community norms and identity,Germany,14
 Community norms and identity,Brazil,14
 Community norms and identity,United Kingdom,10
 Community norms and identity,European Union,10
-Community norms and identity,Canada,6
 Community norms and identity,Italy,6
+Community norms and identity,Canada,6
 Community norms and identity,India,6
 Community norms and identity,Spain,5
 Compliance,European Union,70
@@ -52,8 +52,8 @@ Compliance,Australia,7
 Compliance,Canada,7
 Constitutive,United States,2
 Constitutive,Ireland,1
-Constitutive,Germany,1
 Constitutive,China,1
+Constitutive,Germany,1
 Constitutive,France,1
 Content moderation as industrial labour,Switzerland,1
 Debate management,United States,10
@@ -66,9 +66,9 @@ Debate management,France,3
 Debate management,Colombia,2
 Debate management,United Kingdom,2
 Debate management,Venezuela,2
-Gatekeeping (selection theory),United Kingdom,1
 Gatekeeping (selection theory),United States,1
 Gatekeeping (selection theory),Qatar,1
+Gatekeeping (selection theory),United Kingdom,1
 Infrastructural,United States,2
 Infrastructural,France,1
 Infrastructural,European Union,1
@@ -76,8 +76,8 @@ Moderating extremism,United States,9
 Moderating extremism,European Union,6
 Moderating extremism,Canada,3
 Moderating extremism,United Kingdom,3
-Moderating extremism,New Zealand,2
 Moderating extremism,France,2
+Moderating extremism,New Zealand,2
 Moderating extremism,Italy,2
 Moderating extremism,Austria,2
 Moderating extremism,Sweden,2
@@ -85,8 +85,8 @@ Moderating extremism,Germany,2
 Moderation as industrial labour,United States,20
 Moderation as industrial labour,India,7
 Moderation as industrial labour,Philippines,6
-Moderation as industrial labour,Germany,5
 Moderation as industrial labour,Brazil,5
+Moderation as industrial labour,Germany,5
 Moderation as industrial labour,European Union,5
 Moderation as industrial labour,Canada,4
 Moderation as industrial labour,China,3

@@ -9,11 +9,11 @@ AI alignment,Video sharing platform,2
 AI alignment,Platforms,2
 AI alignment,Print media,1
 AI alignment,Deliberation platform,1
-Algorithmic sorting,Video streaming platform,1
 Algorithmic sorting,Search engine,1
-Algorithmic sorting,Music streaming,1
 Algorithmic sorting,Social media platform,1
+Algorithmic sorting,Video streaming platform,1
 Algorithmic sorting,AI,1
+Algorithmic sorting,Music streaming,1
 Censorship,Print media,393
 Censorship,Social media platform,192
 Censorship,Film,165
@@ -53,7 +53,7 @@ Media moderation,Radio,7
 Media moderation,Film,6
 Media moderation,ISP,5
 Media moderation,Wikis,5
-Media moderation,Library,3
+Media moderation,Internet (general),3
 Media regulation,Film,7
 Media regulation,Print media,7
 Media regulation,Radio,6

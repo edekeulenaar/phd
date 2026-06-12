@@ -848,64 +848,114 @@ def main() -> None:
                     kw[(ty, top)][w] += 1
             matched_pubs.add(key)
 
-        for r in load_csv(V1):
-            kws = (r.get("Mentioned items") or "").strip()
-            if not kws:
-                continue
-            k = (t2k.get(_vnorm(r.get("Title"))) or
-                 f2k.get((r.get("File") or "").split("/")[-1].strip().lower()))
-            if k:
-                add_kw(k, r.get("Type") or "", kws)
-        n_v1 = len(matched_pubs)
-        if GAPFILL.exists():
-            for r in load_csv(GAPFILL):
+        FULLKW = ROOT / "Chapter 1 - Keywords full.csv"
+        if FULLKW.exists():
+            # One consistent GPT-5.4 extraction convention over the whole
+            # corpus (generate_type_keywords.py) — used as the SOLE source.
+            for r in load_csv(FULLKW):
                 add_kw((r.get("Key") or "").strip(), r.get("Type") or "",
                        (r.get("Keywords") or "").strip())
-            print(f"  venn keywords: {n_v1:,} pubs from v1 + "
-                  f"{len(matched_pubs) - n_v1:,} from gapfill = "
-                  f"{len(matched_pubs):,} total")
+            print(f"  venn keywords: {len(matched_pubs):,} pubs from "
+                  f"{FULLKW.name} (full-corpus GPT-5.4 extraction)")
         else:
-            print(f"  venn keywords: {n_v1:,} pubs from v1 "
-                  f"(no gapfill CSV — run generate_missing_keywords.py)")
+            for r in load_csv(V1):
+                kws = (r.get("Mentioned items") or "").strip()
+                if not kws:
+                    continue
+                k = (t2k.get(_vnorm(r.get("Title"))) or
+                     f2k.get((r.get("File") or "").split("/")[-1].strip().lower()))
+                if k:
+                    add_kw(k, r.get("Type") or "", kws)
+            n_v1 = len(matched_pubs)
+            if GAPFILL.exists():
+                for r in load_csv(GAPFILL):
+                    add_kw((r.get("Key") or "").strip(), r.get("Type") or "",
+                           (r.get("Keywords") or "").strip())
+                print(f"  venn keywords: {n_v1:,} pubs from v1 + "
+                      f"{len(matched_pubs) - n_v1:,} from gapfill = "
+                      f"{len(matched_pubs):,} total")
+            else:
+                print(f"  venn keywords: {n_v1:,} pubs from v1 "
+                      f"(no full/gapfill CSV — run generate_type_keywords.py)")
 
-        rows_venn: list[list] = []
-        for vt in ["ALL"] + VENN_TYPES:
-            cset = {c: kw.get((vt, c), Counter()) for c in VENN_CATS}
-            present = {c: set(cset[c]) for c in VENN_CATS}
-            all_kw_t = set().union(*present.values())
-            if not all_kw_t:
-                continue
-            tot = {w: sum(cset[c][w] for c in VENN_CATS) for w in all_kw_t}
-            sig: dict[frozenset, list[str]] = defaultdict(list)
-            for w in all_kw_t:
-                sig[frozenset(c for c in VENN_CATS if w in present[c])].append(w)
-            for c in VENN_CATS:
-                ws = sorted(sig.get(frozenset([c]), []),
-                            key=lambda w: -cset[c][w])
-                for w in ws[:10]:
-                    rows_venn.append([vt, "exclusive", c, w, cset[c][w]])
-            for a, b in combinations(VENN_CATS, 2):
-                ws = sorted(sig.get(frozenset([a, b]), []),
-                            key=lambda w: -(cset[a][w] + cset[b][w]))
-                for w in ws[:8]:
-                    rows_venn.append([vt, "pair", f"{a} + {b}", w,
-                                      cset[a][w] + cset[b][w]])
-            # Triple regions — keywords in EXACTLY three categories. The
-            # renderer draws the geometrically consecutive triples; the rest
-            # remain available in the CSV.
-            for combo in combinations(VENN_CATS, 3):
-                ws = sorted(sig.get(frozenset(combo), []),
-                            key=lambda w: -sum(cset[c][w] for c in combo))
-                for w in ws[:6]:
-                    rows_venn.append([vt, "triple", " + ".join(combo), w,
-                                      sum(cset[c][w] for c in combo)])
-            # Core: keywords spanning four or more of the six sets.
-            broad = [w for s, ws_ in sig.items() if len(s) >= 4 for w in ws_]
-            for w in sorted(broad, key=lambda w: -tot[w])[:8]:
-                rows_venn.append([vt, "center", "(≥4 categories)", w, tot[w]])
+        def venn_regions(elems: dict[tuple[str, str], Counter]) -> list[list]:
+            """Per Type: exclusive / exact-pair / exact-triple / ≥4-core rows
+            from a dict[(type, topic)] → Counter of set elements."""
+            out: list[list] = []
+            types_present = sorted({t for t, _ in elems})
+            order = [t for t in ["ALL"] + VENN_TYPES if t in types_present]
+            for vt in order:
+                cset = {c: elems.get((vt, c), Counter()) for c in VENN_CATS}
+                present = {c: set(cset[c]) for c in VENN_CATS}
+                all_el = set().union(*present.values())
+                if not all_el:
+                    continue
+                tot = {w: sum(cset[c][w] for c in VENN_CATS) for w in all_el}
+                sig: dict[frozenset, list[str]] = defaultdict(list)
+                for w in all_el:
+                    sig[frozenset(c for c in VENN_CATS
+                                  if w in present[c])].append(w)
+                for c in VENN_CATS:
+                    ws = sorted(sig.get(frozenset([c]), []),
+                                key=lambda w: -cset[c][w])
+                    for w in ws[:10]:
+                        out.append([vt, "exclusive", c, w, cset[c][w]])
+                for a, b in combinations(VENN_CATS, 2):
+                    ws = sorted(sig.get(frozenset([a, b]), []),
+                                key=lambda w: -(cset[a][w] + cset[b][w]))
+                    for w in ws[:8]:
+                        out.append([vt, "pair", f"{a} + {b}", w,
+                                    cset[a][w] + cset[b][w]])
+                # Triple regions — elements in EXACTLY three categories. The
+                # renderer draws the geometrically consecutive triples; the
+                # rest remain available in the CSV.
+                for combo in combinations(VENN_CATS, 3):
+                    ws = sorted(sig.get(frozenset(combo), []),
+                                key=lambda w: -sum(cset[c][w] for c in combo))
+                    for w in ws[:6]:
+                        out.append([vt, "triple", " + ".join(combo), w,
+                                    sum(cset[c][w] for c in combo)])
+                # Core: elements spanning four or more of the six sets.
+                broad = [w for s, ws_ in sig.items() if len(s) >= 4
+                         for w in ws_]
+                for w in sorted(broad, key=lambda w: -tot[w])[:8]:
+                    out.append([vt, "center", "(≥4 categories)", w, tot[w]])
+            return out
 
         write_csv(OUT / "venn_keywords.csv",
-                  ["Type", "Kind", "Topic", "Keyword", "Count"], rows_venn)
+                  ["Type", "Kind", "Topic", "Keyword", "Count"],
+                  venn_regions(kw))
+
+        # ── venn_categories.csv — taxonomy categories as the set elements ──
+        # Same regions, but the elements are the closed-set CATEGORIES of the
+        # findings themselves: WHO/HOW/WHY findings contribute their Category;
+        # WHAT findings contribute their Sub-category (the WHAT Category IS
+        # the circle, so it would be trivially exclusive). Presence in a
+        # topic requires ≥3 findings, so one stray coding doesn't create an
+        # overlap.
+        MIN_CAT_N = 3
+        el: dict[tuple[str, str], Counter] = defaultdict(Counter)
+        for r in F:
+            t = item_id(r)
+            k = item_key.get(t, "") if t else ""
+            top = key_topic.get(k)
+            if top not in VENN_CATS:
+                continue
+            ty = (r.get("Type") or "").strip().upper()
+            if ty not in VENN_TYPES:
+                continue
+            v = (r.get("Sub-category") if ty == "WHAT"
+                 else r.get("Category")) or ""
+            v = v.strip()
+            if not v or v.lower().startswith("other"):
+                continue
+            el[(ty, top)][v] += 1
+            el[("ALL", top)][v] += 1
+        el = {k2: Counter({w: n for w, n in c.items() if n >= MIN_CAT_N})
+              for k2, c in el.items()}
+        write_csv(OUT / "venn_categories.csv",
+                  ["Type", "Kind", "Topic", "Keyword", "Count"],
+                  venn_regions(el))
     else:
         print(f"  (v1 results CSV not found — venn_keywords.csv skipped)")
 

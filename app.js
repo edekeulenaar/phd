@@ -1779,7 +1779,10 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
    ─────────────────────────────────────────────────────────────────────── */
 
 async function renderTermsVenn() {
-  const rows = await loadCSV("data/venn_keywords.csv");
+  const srcRows = { keywords: await loadCSV("data/venn_keywords.csv") };
+  try { srcRows.categories = await loadCSV("data/venn_categories.csv"); }
+  catch { srcRows.categories = []; }
+  let vsrc = "keywords", vtype = "ALL";
   const host = d3.select("#terms-venn");
   const figEl = document.getElementById("fig-terms-venn");
 
@@ -1818,8 +1821,9 @@ async function renderTermsVenn() {
              len: r1 - r0 };
   }
 
-  function render(vtype) {
+  function render() {
     host.selectAll("*").remove();
+    const rows = srcRows[vsrc] || [];
     const sub = rows.filter(r => r.Type === vtype);
     const excl  = d3.group(sub.filter(r => r.Kind === "exclusive"), r => r.Topic);
     const pairs = d3.group(sub.filter(r => r.Kind === "pair"),      r => r.Topic);
@@ -1929,21 +1933,25 @@ async function renderTermsVenn() {
     });
   }
 
-  // Type tabs (All / What / Who / How / Why) on every instance of the card.
+  // Tabs: finding Type (All/What/Who/How/Why) + element source
+  // (Keywords | Categories). Each seg toggles independently.
   document.querySelectorAll("[id^='fig-terms-venn'] .fig-controls .tab")
     .forEach(btn => {
       if (btn.dataset.bound) return;
       btn.dataset.bound = "1";
       btn.addEventListener("click", () => {
-        btn.closest(".fig-controls").querySelectorAll(".tab").forEach(b => {
+        const seg = btn.closest(".seg") || btn.closest(".fig-controls");
+        seg.querySelectorAll(".tab").forEach(b => {
           b.classList.toggle("active", b === btn);
           b.setAttribute("aria-selected", b === btn ? "true" : "false");
         });
-        render(btn.dataset.vtype);
+        if (btn.dataset.vtype) vtype = btn.dataset.vtype;
+        if (btn.dataset.vsrc)  vsrc  = btn.dataset.vsrc;
+        render();
       });
     });
 
-  render("ALL");
+  render();
 }
 
 /* ────────────────────────────────────────────────────────────────────────
