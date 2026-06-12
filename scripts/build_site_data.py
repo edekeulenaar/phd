@@ -808,9 +808,11 @@ def main() -> None:
     # WHAT category, and emit true set-regions: keywords EXCLUSIVE to one
     # category, keywords in EXACTLY one pair, and keywords spanning ≥5 of
     # the six Venn categories (Algorithmic sorting excluded by request).
-    V1 = ROOT / "Chapter 1 - Censorship and moderation - Final results.csv"
+    V1      = ROOT / "Chapter 1 - Censorship and moderation - Final results.csv"
+    GAPFILL = ROOT / "Chapter 1 - Keywords gapfill.csv"
     VENN_CATS = ["Content moderation", "Censorship", "Debate management",
                  "Media moderation", "Media regulation", "AI alignment"]
+    VENN_TYPES = ["WHAT", "WHO", "HOW", "WHY"]
     if V1.exists():
         from itertools import combinations
         _vnorm = lambda x: re.sub(r"[^a-z0-9]+", "", (x or "").lower())
@@ -828,51 +830,79 @@ def main() -> None:
                 f2k.setdefault(fn, k)
         key_topic = {item_key.get(t, ""): topic_of(t) for t in items}
 
-        kw_cat: dict[str, Counter] = defaultdict(Counter)
+        # kw[(type, topic)] → Counter of keywords. Type "ALL" aggregates.
+        kw: dict[tuple[str, str], Counter] = defaultdict(Counter)
         matched_pubs: set[str] = set()
+
+        def add_kw(key: str, ty: str, phrases: str):
+            top = key_topic.get(key)
+            if top not in VENN_CATS:
+                return
+            ty = (ty or "").strip().upper()
+            for w in phrases.split(";"):
+                w = w.strip().lower().strip("\"'")
+                if len(w) < 3:
+                    continue
+                kw[("ALL", top)][w] += 1
+                if ty in VENN_TYPES:
+                    kw[(ty, top)][w] += 1
+            matched_pubs.add(key)
+
         for r in load_csv(V1):
             kws = (r.get("Mentioned items") or "").strip()
             if not kws:
                 continue
             k = (t2k.get(_vnorm(r.get("Title"))) or
                  f2k.get((r.get("File") or "").split("/")[-1].strip().lower()))
-            if not k:
-                continue
-            top = key_topic.get(k)
-            if top not in VENN_CATS:
-                continue
-            matched_pubs.add(k)
-            for kw in kws.split(";"):
-                kw = kw.strip().lower().strip("\"'")
-                if len(kw) >= 3:
-                    kw_cat[top][kw] += 1
-        print(f"  venn keywords: {len(matched_pubs):,} publications matched "
-              f"from v1 'Mentioned items'")
-
-        present = {c: set(kw_cat[c]) for c in VENN_CATS}
-        all_kw = set().union(*present.values())
-        tot_kw = {w: sum(kw_cat[c][w] for c in VENN_CATS) for w in all_kw}
-        sig: dict[frozenset, list[str]] = defaultdict(list)
-        for w in all_kw:
-            sig[frozenset(c for c in VENN_CATS if w in present[c])].append(w)
+            if k:
+                add_kw(k, r.get("Type") or "", kws)
+        n_v1 = len(matched_pubs)
+        if GAPFILL.exists():
+            for r in load_csv(GAPFILL):
+                add_kw((r.get("Key") or "").strip(), r.get("Type") or "",
+                       (r.get("Keywords") or "").strip())
+            print(f"  venn keywords: {n_v1:,} pubs from v1 + "
+                  f"{len(matched_pubs) - n_v1:,} from gapfill = "
+                  f"{len(matched_pubs):,} total")
+        else:
+            print(f"  venn keywords: {n_v1:,} pubs from v1 "
+                  f"(no gapfill CSV — run generate_missing_keywords.py)")
 
         rows_venn: list[list] = []
-        for c in VENN_CATS:
-            ws = sorted(sig.get(frozenset([c]), []), key=lambda w: -kw_cat[c][w])
-            for w in ws[:10]:
-                rows_venn.append(["exclusive", c, w, kw_cat[c][w]])
-        for a, b in combinations(VENN_CATS, 2):
-            ws = sorted(sig.get(frozenset([a, b]), []),
-                        key=lambda w: -(kw_cat[a][w] + kw_cat[b][w]))
-            for w in ws[:8]:
-                rows_venn.append(["pair", f"{a} + {b}", w,
-                                  kw_cat[a][w] + kw_cat[b][w]])
-        broad = [w for s, ws in sig.items() if len(s) >= 5 for w in ws]
-        for w in sorted(broad, key=lambda w: -tot_kw[w])[:10]:
-            rows_venn.append(["center", "(≥5 categories)", w, tot_kw[w]])
+        for vt in ["ALL"] + VENN_TYPES:
+            cset = {c: kw.get((vt, c), Counter()) for c in VENN_CATS}
+            present = {c: set(cset[c]) for c in VENN_CATS}
+            all_kw_t = set().union(*present.values())
+            if not all_kw_t:
+                continue
+            tot = {w: sum(cset[c][w] for c in VENN_CATS) for w in all_kw_t}
+            sig: dict[frozenset, list[str]] = defaultdict(list)
+            for w in all_kw_t:
+                sig[frozenset(c for c in VENN_CATS if w in present[c])].append(w)
+            for c in VENN_CATS:
+                ws = sorted(sig.get(frozenset([c]), []),
+                            key=lambda w: -cset[c][w])
+                for w in ws[:10]:
+                    rows_venn.append([vt, "exclusive", c, w, cset[c][w]])
+            for a, b in combinations(VENN_CATS, 2):
+                ws = sorted(sig.get(frozenset([a, b]), []),
+                            key=lambda w: -(cset[a][w] + cset[b][w]))
+                for w in ws[:8]:
+                    rows_venn.append([vt, "pair", f"{a} + {b}", w,
+                                      cset[a][w] + cset[b][w]])
+            # Centre: spanning ≥5 sets; relax for sparse types so the centre
+            # never comes up empty when there IS cross-category vocabulary.
+            for k_min in (5, 4, 3):
+                broad = [w for s, ws_ in sig.items() if len(s) >= k_min
+                         for w in ws_]
+                if len(broad) >= 3 or k_min == 3:
+                    break
+            for w in sorted(broad, key=lambda w: -tot[w])[:10]:
+                rows_venn.append([vt, "center", f"(≥{k_min} categories)",
+                                  w, tot[w]])
 
         write_csv(OUT / "venn_keywords.csv",
-                  ["Kind", "Topic", "Keyword", "Count"], rows_venn)
+                  ["Type", "Kind", "Topic", "Keyword", "Count"], rows_venn)
     else:
         print(f"  (v1 results CSV not found — venn_keywords.csv skipped)")
 
