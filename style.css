@@ -1160,6 +1160,9 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 }
 .chart.termsmap .tm-card { transition: opacity 0.15s; }
 .chart.termsmap .tm-card.dim { opacity: 0.15; }
+/* Pair-overlap boxes: smaller, denser term rows than the category cards. */
+.chart.termsmap text.tm-pair-term { font-size: 12px; fill: var(--ink-soft); }
+.chart.termsmap .tm-pair .tm-head { font-size: 10px; fill: var(--muted); }
 
 /* ─── Data hover-card (chart elements) ────────────────────────────────── */
 

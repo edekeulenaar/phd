@@ -1783,74 +1783,116 @@ async function renderTermsVenn() {
   const host = d3.select("#terms-venn");
   host.selectAll("*").remove();
 
-  const dist = rows.filter(r => r.Kind === "distinctive");
+  const HUB = "Content moderation";
+  const dist   = rows.filter(r => r.Kind === "distinctive");
   const shared = rows.filter(r => r.Kind === "shared");
-  const cats = [...new Set(dist.map(r => r.Topic))];
-  const byCat = d3.group(dist, r => r.Topic);
-  const color = makeSubtopicScale(cats);
+  const pairsR = rows.filter(r => r.Kind === "pair");
+  const byCat  = d3.group(dist, r => r.Topic);
+  const byPair = d3.group(pairsR, r => r.Topic);   // "Content moderation + X"
+  // Partners: every category that has a pair with the hub, ordered by how
+  // much pair material there is (denser pairs get the wider top/bottom slots).
+  const partners = [...byPair.keys()].map(k => k.split(" + ")[1]);
+  const cats = [HUB, ...partners];
+  const color = makeSubtopicScale([...new Set([...byCat.keys(), ...cats])].sort());
+  const fmtN = d3.format(",");
 
-  const CARD_W = 250, LINE_H = 16.5, PAD = 12, HEAD_H = 26;
+  const CARD_W = 252, LINE_H = 16.5, PAD = 12, HEAD_H = 26;
+  const PAIR_W = 196, PAIR_LH = 14.5, PAIR_HEAD = 20;
   const cardH = c => HEAD_H + PAD * 1.6 + (byCat.get(c) || []).length * LINE_H;
-  const W = 1180, H = 1010, cx = W / 2, cy = H / 2;
-  const rx = 410, ry = 380;
+  const pairH = k => PAIR_HEAD + 10 + (byPair.get(k) || []).length * PAIR_LH;
 
+  const W = 1400, H = 1280, cx = W / 2, cy = H / 2 + 20;
+  const rx = 510, ry = 500;
   const svg = host.append("svg").attr("class", "chart termsmap")
     .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
     .attr("width", "100%");
-
-  // Connector lines first (under everything else).
-  const angles = cats.map((c, i) => -Math.PI / 2 + (2 * Math.PI * i) / cats.length);
   const linesG = svg.append("g");
 
-  // Central shared disc.
-  const R = 158;
-  svg.append("circle")
-    .attr("cx", cx).attr("cy", cy).attr("r", R)
-    .attr("fill", "#ffffff").attr("stroke", "#2a2724").attr("stroke-width", 1.2);
-  svg.append("text").attr("class", "tm-head")
-    .attr("x", cx).attr("y", cy - R + 30)
-    .attr("text-anchor", "middle")
-    .text("Shared across categories");
-  const fmtN = d3.format(",");
-  svg.append("g").selectAll("text.term").data(shared).join("text")
-    .attr("class", "term")
-    .attr("x", cx).attr("y", (d, i) => cy - R + 52 + i * (LINE_H + 8.5))
-    .attr("text-anchor", "middle")
-    .text(d => `${d.Term}  ·  ${fmtN(+d.Count)}`)
-    .append("title").text(d => `present in ${d.Score} categories · ${fmtN(+d.Count)} occurrences`);
-
-  // Category cards around the ellipse.
-  cats.forEach((c, i) => {
-    const a = angles[i];
-    const px = cx + rx * Math.cos(a);
-    const py = cy + ry * Math.sin(a);
-    const h  = cardH(c);
-    const x0 = px - CARD_W / 2, y0 = py - h / 2;
-    linesG.append("line")
-      .attr("x1", cx + (R + 4) * Math.cos(a)).attr("y1", cy + (R + 4) * Math.sin(a))
-      .attr("x2", px).attr("y2", py)
-      .attr("stroke", color(c)).attr("stroke-width", 1.4)
-      .attr("stroke-dasharray", "3 4").attr("opacity", 0.75);
-    const g = svg.append("g").attr("class", "tm-card");
-    g.append("rect")
-      .attr("x", x0).attr("y", y0).attr("width", CARD_W).attr("height", h)
-      .attr("rx", 6)
-      .attr("fill", "#ffffff").attr("stroke", color(c)).attr("stroke-width", 1.6);
-    g.append("rect")
-      .attr("x", x0).attr("y", y0).attr("width", CARD_W).attr("height", HEAD_H)
-      .attr("rx", 6)
-      .attr("fill", color(c)).attr("opacity", 0.18);
+  function card(g, c, x0, y0, w) {
+    const h = cardH(c);
+    g.append("rect").attr("x", x0).attr("y", y0).attr("width", w).attr("height", h)
+      .attr("rx", 6).attr("fill", "#ffffff")
+      .attr("stroke", color(c)).attr("stroke-width", 1.6);
+    g.append("rect").attr("x", x0).attr("y", y0).attr("width", w).attr("height", HEAD_H)
+      .attr("rx", 6).attr("fill", color(c)).attr("opacity", 0.18);
     g.append("text").attr("class", "tm-head")
-      .attr("x", x0 + CARD_W / 2).attr("y", y0 + HEAD_H - 8)
-      .attr("text-anchor", "middle")
+      .attr("x", x0 + w / 2).attr("y", y0 + HEAD_H - 8).attr("text-anchor", "middle")
       .text(c.length > 30 ? c.slice(0, 28) + "…" : c)
       .append("title").text(c);
-    g.selectAll("text.term").data(byCat.get(c) || []).join("text")
+    g.selectAll(null).data(byCat.get(c) || []).join("text")
       .attr("class", "term")
       .attr("x", x0 + PAD).attr("y", (d, j) => y0 + HEAD_H + PAD + (j + 0.7) * LINE_H)
       .text(d => `${d.Term}  ·  ${fmtN(+d.Count)}`)
       .append("title").text(d => `log-odds z = ${d.Score}`);
+    return h;
+  }
+
+  // ── Hub card (Content moderation), centred ──────────────────────────────
+  const hubH = cardH(HUB);
+  const hubG = svg.append("g").attr("class", "tm-card").attr("data-cat", HUB);
+  card(hubG, HUB, cx - CARD_W / 2, cy - hubH / 2, CARD_W);
+
+  // ── Partners + pair boxes on each connector ──────────────────────────────
+  const angles = partners.map((c, i) =>
+    -Math.PI / 2 + (2 * Math.PI * i) / partners.length);
+  partners.forEach((c, i) => {
+    const a = angles[i];
+    const px = cx + rx * Math.cos(a);
+    const py = cy + ry * Math.sin(a);
+    linesG.append("line")
+      .attr("x1", cx).attr("y1", cy).attr("x2", px).attr("y2", py)
+      .attr("stroke", color(c)).attr("stroke-width", 1.4)
+      .attr("stroke-dasharray", "3 4").attr("opacity", 0.75);
+    const g = svg.append("g").attr("class", "tm-card").attr("data-cat", c);
+    const h = cardH(c);
+    card(g, c, px - CARD_W / 2, py - h / 2, CARD_W);
+
+    // Pair box midway along the connector: terms typical of hub + partner.
+    const key = `${HUB} + ${c}`;
+    const terms = byPair.get(key) || [];
+    if (!terms.length) return;
+    const mx = cx + 0.52 * rx * Math.cos(a);
+    const my = cy + 0.55 * ry * Math.sin(a);
+    const ph = pairH(key);
+    const x0 = mx - PAIR_W / 2, y0 = my - ph / 2;
+    const pg = svg.append("g").attr("class", "tm-card tm-pair").attr("data-cat", c);
+    pg.append("rect").attr("x", x0).attr("y", y0)
+      .attr("width", PAIR_W).attr("height", ph).attr("rx", 8)
+      .attr("fill", "#faf7f2").attr("stroke", color(c))
+      .attr("stroke-width", 1.2).attr("stroke-dasharray", "4 3");
+    pg.append("text").attr("class", "tm-head")
+      .attr("x", x0 + PAIR_W / 2).attr("y", y0 + PAIR_HEAD - 5)
+      .attr("text-anchor", "middle")
+      .text("shared with " + (c.length > 18 ? c.slice(0, 16) + "…" : c))
+      .append("title").text(key);
+    pg.selectAll(null).data(terms).join("text")
+      .attr("class", "term tm-pair-term")
+      .attr("x", x0 + PAIR_W / 2)
+      .attr("y", (d, j) => y0 + PAIR_HEAD + 8 + (j + 0.55) * PAIR_LH)
+      .attr("text-anchor", "middle")
+      .text(d => `${d.Term} · ${fmtN(+d.Count)}`)
+      .append("title").text(d => `pair lift = ${d.Score}`);
   });
+
+  // ── Shared-across-all box, top-left corner ───────────────────────────────
+  if (shared.length) {
+    const x0 = 18, y0 = 18, w = 230;
+    const h = PAIR_HEAD + 12 + shared.length * PAIR_LH;
+    const sg = svg.append("g").attr("class", "tm-card");
+    sg.append("rect").attr("x", x0).attr("y", y0).attr("width", w).attr("height", h)
+      .attr("rx", 8).attr("fill", "#ffffff")
+      .attr("stroke", "#2a2724").attr("stroke-width", 1.1);
+    sg.append("text").attr("class", "tm-head")
+      .attr("x", x0 + w / 2).attr("y", y0 + PAIR_HEAD - 2).attr("text-anchor", "middle")
+      .text("Shared across all categories");
+    sg.selectAll(null).data(shared).join("text")
+      .attr("class", "term tm-pair-term")
+      .attr("x", x0 + w / 2)
+      .attr("y", (d, j) => y0 + PAIR_HEAD + 8 + (j + 0.55) * PAIR_LH)
+      .attr("text-anchor", "middle")
+      .text(d => `${d.Term} · ${fmtN(+d.Count)}`)
+      .append("title").text(d => `present in ${d.Score} categories`);
+  }
 
   figKey.register("fig-terms-venn", {
     title: "WHAT category",
@@ -1859,8 +1901,8 @@ async function renderTermsVenn() {
       svg.selectAll(".tm-card")
         .classed("dim", function () {
           if (!name) return false;
-          const t = d3.select(this).select(".tm-head title").text();
-          return t !== name;
+          const c = this.getAttribute("data-cat");
+          return c !== name && !(name === HUB && c === HUB);
         });
     },
   });

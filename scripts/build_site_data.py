@@ -639,35 +639,46 @@ def main() -> None:
     # corpus), plus the 10 terms that most CONVERGE across categories
     # (present in most categories, ranked by cross-category evenness).
     import math
-    STOP = set("""
-      a about above after again against all also among an and any are as at
-      be because been before being below between both but by can could did do
-      does doing down during each few for from further had has have having he
-      her here hers herself him himself his how i if in into is it its itself
-      just like may me might more most must my myself no nor not now of off on
-      once only or other our ours ourselves out over own same she should so
-      some such than that the their theirs them themselves then there these
-      they this those through to too under until up very was we were what when
-      where which while who whom why will with would you your yours yourself
-      one two three new first second using used use however thus also well
-      within without upon would could many much may often see eg ie et al
-      la le les de des du un une et en dans sur pour par que qui ne pas plus
-      au aux ce cette ces son sa ses il elle ils elles nous vous leur lui mais
-      ou où donc car si comme être avoir fait été tout tous toute toutes
-      el los las uno una unos unas y o pero como para por con sin sobre entre
-      su sus este esta estos estas ese esa esos esas lo al del se les más muy
-      es son fue eran ser estar hay han ha sido también ya cuando donde porque
-      o os as um uma uns umas e ou mas não com sem sobre entre seu sua seus
-      suas este esta isto esse essa isso aquele aquela aquilo se ao dos das
-      no na nos nas é são foi eram ser estar há têm tem sido também já
-      der die das ein eine einer eines dem den und oder aber nicht mit von zu
-      für auf als auch wie bei nach aus durch über unter gegen ohne um an
-      ist sind war waren sein haben hat hatte werden wird wurde
-      il lo la i gli le un uno una e o ma non con su per tra fra di da in
-      che chi cui questo questa questi queste quello quella è sono era erano
-      come modo più anche perché essere stato alla alle agli allo nel nella
-      pode forma assim ainda mesmo outros outras todo toda
-    """.split())
+    # Stopwords for EVERY language detected in the corpus (Table 3) — built
+    # from the ISO-639 `stopwordsiso` lists, with a small in-line fallback if
+    # the package isn't importable in this environment.
+    CORPUS_LANGS = ["en", "pt", "fr", "it", "es", "de", "ca", "nl", "ru",
+                    "tr", "hu", "vi", "pl", "hr", "ro", "af", "id", "so", "cy"]
+    try:
+        import stopwordsiso
+        STOP = set(stopwordsiso.stopwords(
+            [l for l in CORPUS_LANGS if l in stopwordsiso.langs()]))
+        print(f"  stopwords: stopwordsiso · {len(STOP):,} words "
+              f"({len(CORPUS_LANGS)} corpus languages)")
+    except ImportError:
+        STOP = set("""
+          a about after again all also among an and any are as at be because
+          been before being between both but by can could did do does down
+          during each few for from had has have having he her here him his how
+          i if in into is it its just like may me more most must my no nor not
+          now of off on once only or other our out over own same she should so
+          some such than that the their them then there these they this those
+          through to too under until up very was we were what when where which
+          while who whom why will with would you your one two new first using
+          used use however thus well within without upon many much often
+          la le les de des du un une et en dans sur pour par que qui ne pas
+          plus au aux ce cette ces son sa ses il elle ils elles nous vous leur
+          mais ou où donc car si comme être avoir fait été tout tous toutes
+          el los las uno una unos y o pero como para por con sin sobre entre
+          su sus este esta estos ese esa lo al del se más muy es son fue ser
+          estar hay han ha sido también ya cuando donde porque
+          o os as um uma uns umas e mas não com sem seu sua seus suas isto
+          esse essa isso ao dos das no na nos nas é são foi há têm tem já
+          der die das ein eine einer dem den und oder aber nicht mit von zu
+          für auf als auch wie bei nach aus durch über unter gegen ohne um an
+          ist sind war waren sein haben hat hatte werden wird wurde
+          il lo i gli ma non su per tra fra di da che chi cui questo questa
+          quello quella è sono era erano come modo più anche perché essere
+          stato alla alle nel nella pode forma assim ainda mesmo outros todo
+          de het een en van te dat die in op aan met als voor er maar om door
+          over zij hij ook tot je mij dit zo dan zou wat wordt
+        """.split())
+        print(f"  stopwords: inline fallback · {len(STOP):,} words")
     TOKEN_RE = re.compile(r"[a-zà-öø-ÿœæ]+(?:'[a-z]+)?", re.IGNORECASE)
 
     def terms_of(text: str):
@@ -750,8 +761,40 @@ def main() -> None:
         gm = math.exp(sum(math.log(s) for s in shares) / len(shares))
         shared_scored.append((len(present), gm, y, w))
     shared_scored.sort(reverse=True)
+    shared_all = {w for _, _, _, w in shared_scored[:10]}
     for npres, gm, y, w in shared_scored[:10]:
         rows_terms.append(["shared", "(all categories)", w, y, npres])
+
+    # Pairwise convergences — terms typical of a PAIR of categories: frequent
+    # in both members, rare in the rest of the corpus. Score = geometric mean
+    # of the two members' shares divided by the rest-of-corpus share.
+    # Prioritised pairs: Content moderation against each other category.
+    HUB = "Content moderation"
+    pairs = [(HUB, c) for c in cats if c != HUB]
+    for a, b in pairs:
+        n_rest = grand_total - tot_by_cat[a] - tot_by_cat[b]
+        scored_pair = []
+        for w in set(cat_terms[a]) & set(cat_terms[b]):
+            ya, yb = cat_terms[a][w], cat_terms[b][w]
+            if ya < 5 or yb < 5 or w in claimed or w in shared_all:
+                continue
+            sa, sb = ya / tot_by_cat[a], yb / tot_by_cat[b]
+            y_rest = grand[w] - ya - yb
+            s_rest = (y_rest + 1) / (n_rest + 1)
+            lift = math.sqrt(sa * sb) / s_rest
+            scored_pair.append((lift, ya + yb, w))
+        scored_pair.sort(reverse=True)
+        kept = 0
+        words_used = set()
+        for lift, n, w in scored_pair:
+            parts = w.split()
+            if any(p in words_used for p in parts):
+                continue
+            words_used.update(parts)
+            rows_terms.append(["pair", f"{a} + {b}", w, n, round(lift, 1)])
+            kept += 1
+            if kept == 10:
+                break
 
     write_csv(OUT / "terms_by_category.csv",
               ["Kind", "Topic", "Term", "Count", "Score"],
