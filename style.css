@@ -4,6 +4,50 @@
    Background: off-white. Two-column layout: fixed sidebar + scrolling main.
    ──────────────────────────────────────────────────────────────────────── */
 
+/* ── Self-hosted fonts ──────────────────────────────────────────────────
+   Body prose: Adobe Garamond Pro (Regular / Italic / Semibold).
+   Headings, sidebar, table cells, figure UI: Test National. */
+@font-face {
+  font-family: "AGaramond Pro";
+  src: url("fonts/AGaramondPro-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "AGaramond Pro";
+  src: url("fonts/AGaramondPro-Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "AGaramond Pro";
+  src: url("fonts/AGaramondPro-Semibold.ttf") format("truetype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "AGaramond Pro";
+  src: url("fonts/AGaramondPro-Semibold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Test National";
+  src: url("fonts/TestNational-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Test National";
+  src: url("fonts/TestNational-BookItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Test National";
+  src: url("fonts/TestNational-Semibold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Test National";
+  src: url("fonts/TestNational-Semibold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
 /* Aesthetic ported from edekeulenaar.github.io/ai-alignment-actors —
    warm-paper editorial palette, Iowan Old Style serif, italic side nav
    with terracotta active state, uppercase tracked side-block headers. */
@@ -26,8 +70,8 @@
   --side-w:     250px;
   --content-w:  46rem;
   --prose-w:    65rem;            /* prose + 17rem margin-cites column */
-  --serif:      "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
-  --sans:       "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
+  --serif:      "AGaramond Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --sans:       "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
   --mono:       ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --fs:         14.5px;
 }
@@ -41,7 +85,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-size: var(--fs);
-  line-height: 1.55;
+  line-height: 1.8;             /* ssrn-paper.css: body line-height 1.8 */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -63,20 +107,21 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   background: var(--paper-alt);
   border-right: 1px solid var(--border);
   overflow-y: auto;
+  font-family: var(--sans);    /* Test National for the whole sidebar */
   font-size: 13px;
   line-height: 1.5;
 }
 .sb-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
   letter-spacing: 0.01em;
   line-height: 1.2;
   margin: 0 0 0.35em 0;
 }
 .sb-sub {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-style: normal;          /* no italic on sidebar headings */
   color: var(--muted);
   font-size: 11.5px;
@@ -136,23 +181,31 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 
 .prose { max-width: var(--content-w); margin-left: auto; margin-right: auto; }
-/* Editorial typography: serif headings, weight 600, gently scaled. */
-.prose h1, .prose h2, .prose h3 {
-  font-family: var(--serif);
+/* Headings — Test National (sans), gently scaled; ssrn-paper line-height 1.5,
+   ~1em vertical margins. Sizes proportionally mapped to the print scale
+   (h1 21pt → 1.85rem, h2 18pt → 1.55rem, h3 16pt → 1.32rem, h4 14pt → 1.15rem). */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: var(--sans);
   font-weight: 600;
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
   color: var(--ink);
-  line-height: 1.2;
+  line-height: 1.5;
+  text-align: left;
 }
-.prose h1 { font-size: 1.85rem; margin: 3rem 0 1.2rem; }
-.prose h2 { font-size: 1.30rem; margin: 2.4rem 0 0.9rem; }
-.prose h3 { font-size: 1.05rem; margin: 1.8rem 0 0.7rem; color: var(--ink); }
-.prose h1:first-child { margin-top: 0; font-size: 1.85rem; }
-.prose p { margin: 0 0 1.1em; }
+.prose h1 { font-size: 1.85rem; margin: 1.6em 0 0.8em; }
+.prose h2 { font-size: 1.55rem; margin: 1.4em 0 0.7em; }
+.prose h3 { font-size: 1.32rem; margin: 1.2em 0 0.6em; }
+.prose h4 { font-size: 1.15rem; margin: 1em 0 0.55em; font-style: italic; }
+.prose h5 { font-size: 1rem;    margin: 1em 0 0.5em;  font-style: italic; }
+.prose h6 { font-size: 1rem;    margin: 1em 0 0.5em;  font-style: italic; }
+.prose h1:first-child { margin-top: 0; }
 .prose a { border-bottom: 1px solid rgba(28,26,24,0.18); }
 .prose a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-.prose p { margin: 0 0 0.95em; }
+/* Body paragraphs — justified, 0.8em margin, line-height inherited 1.8 */
+.prose p { margin: 0.8em 0; text-align: justify; }
 .prose ul, .prose ol { padding-left: 1.2rem; }
+/* List items stay ragged-left (justified URL-heavy bullets look bad) */
+.prose li, .prose li p { text-align: left; }
 .prose blockquote {
   margin: 2.2em 0;
   padding: 0.3em 0 0.3em 1em;
@@ -218,27 +271,35 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .prose mark.edit-me:hover { background: rgba(255, 224, 0, 0.65); }
 
-/* Prose tables (markdown GFM). Match the paper palette and keep them tight. */
+/* Prose tables (markdown GFM). ssrn-paper.css: Test National, 11pt-ish,
+   uppercase tracked header on warm-grey, zebra rows white / off-white. */
 .prose table {
   border-collapse: collapse;
   margin: 1.4em 0;
-  font-size: 0.92em;
-  line-height: 1.45;
+  font-family: var(--sans);
+  font-size: 0.88em;
+  line-height: 1.5;
   width: 100%;
   max-width: 100%;
 }
 .prose thead th {
+  font-family: var(--sans);
   text-align: left;
-  font-weight: 700;
-  border-bottom: 1.5px solid var(--ink);
-  padding: 0.45em 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: #EFEDE6;
+  border: 0.5px solid #B0B0B0;
+  padding: 0.4em 0.6em;
 }
 .prose tbody td {
-  border-bottom: 1px solid var(--rule);
-  padding: 0.35em 0.7em;
+  font-family: var(--sans);
+  border: 0.5px solid #B0B0B0;
+  padding: 0.4em 0.6em;
   vertical-align: top;
 }
-.prose tbody tr:last-child td { border-bottom: none; }
+.prose tbody tr:nth-child(odd)  td { background: #FFFFFF; }
+.prose tbody tr:nth-child(even) td { background: #FAF9F6; }
 
 /* Obsidian-style wikilinks: rendered as terracotta anchors in the prose. */
 .prose a.wiki {
@@ -518,7 +579,7 @@ a.cite-link { cursor: pointer; }
 
 /* Harvard reference inside the hover #data-card. */
 #data-card .dc-cite {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 12.5px;
   line-height: 1.45;
   color: var(--ink);
@@ -549,7 +610,7 @@ a.cite-link { cursor: pointer; }
   border: 1px solid var(--border);
   border-radius: 3px;
   box-shadow: 0 6px 20px rgba(28, 26, 24, 0.10);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 13px;
   line-height: 1.45;
   color: var(--ink);
@@ -567,8 +628,8 @@ a.cite-link { cursor: pointer; }
   border-top: 1px solid var(--rule);
 }
 .analysis-head h1 {
-  font-family: var(--serif); font-size: 1.85rem; font-weight: 600;
-  letter-spacing: -0.005em; line-height: 1.2;
+  font-family: var(--sans); font-size: 1.85rem; font-weight: 600;
+  letter-spacing: 0; line-height: 1.5;
   margin: 0 0 0.5rem;
 }
 .analysis-head .lede {
@@ -579,7 +640,7 @@ a.cite-link { cursor: pointer; }
 /* Section heads mirror the reference's .side-block h4: uppercase, tracked,
    muted, with a rule line underneath. */
 .analysis h2 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
   text-transform: uppercase; color: var(--muted);
   margin: 3rem 0 1rem; padding-bottom: 0.35rem;
@@ -623,7 +684,7 @@ a.cite-link { cursor: pointer; }
 }
 
 .fig-cap {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 13.5px;
   line-height: 1.5;
   color: var(--ink);
@@ -648,7 +709,7 @@ a.cite-link { cursor: pointer; }
   display: flex; align-items: center; justify-content: center;
   height: 9rem;
   color: var(--muted);
-  font-family: var(--serif); font-style: italic;
+  font-family: var(--sans); font-style: italic;
   border: 1px dashed var(--border);
   border-radius: 3px;
   background: var(--paper);
@@ -659,7 +720,7 @@ a.cite-link { cursor: pointer; }
   align-items: baseline;
   padding-top: 0.6rem;
   border-top: 1px dotted var(--rule);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 12.5px;
   color: var(--muted);
 }
@@ -683,7 +744,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .page-foot {
   margin-top: 2rem; padding-top: 1.2rem;
   border-top: 1px solid var(--rule);
-  font-family: var(--serif); font-style: italic;
+  font-family: var(--sans); font-style: italic;
   font-size: 12px;
   color: var(--muted);
 }
@@ -692,7 +753,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 #summary-table table {
   border-collapse: collapse;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 14px;
 }
 #summary-table td {
@@ -767,7 +828,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   background: var(--paper);
   border: 1px solid var(--border);
   border-radius: 3px;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 12.5px;
   color: var(--ink);
   max-height: 60vh;
@@ -870,7 +931,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   background: var(--paper);
   border: 1px dashed var(--border);
   border-radius: 3px;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 13px;
   line-height: 1.5;
   color: var(--ink);
@@ -883,12 +944,12 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .notes-bar {
   display: flex; align-items: center; gap: 0.7rem;
   margin: 0.4rem 0 1.8rem;
-  font-family: var(--serif); font-style: italic;
+  font-family: var(--sans); font-style: italic;
   font-size: 12.5px;
   color: var(--muted);
 }
 .notes-bar button {
-  font-family: var(--serif); font-style: normal; font-weight: 600;
+  font-family: var(--sans); font-style: normal; font-weight: 600;
   font-size: 13px;
   padding: 0.4em 0.85em;
   background: var(--paper);
@@ -904,7 +965,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem;
   align-items: center;
   margin: 0.4rem 0 0.8rem;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 12.5px;
   color: var(--muted);
 }
@@ -921,7 +982,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .fig-controls .bump-only { display: none; }
 .fig.view-bump .fig-controls .bump-only { display: inline-flex; }
 .fig-controls input[type="search"] {
-  font-family: var(--serif); font: inherit; font-size: 12.5px;
+  font-family: var(--sans); font: inherit; font-size: 12.5px;
   padding: 0.3em 0.55em;
   background: var(--paper);
   color: var(--ink);
@@ -932,7 +993,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .fig-controls input[type="search"]::placeholder { color: var(--muted); }
 .fig-controls select,
 .fig-controls input[type="number"] {
-  font-family: var(--serif); font: inherit; font-size: 12.5px;
+  font-family: var(--sans); font: inherit; font-size: 12.5px;
   padding: 0.3em 0.55em;
   background: var(--paper);
   color: var(--ink);
@@ -944,7 +1005,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .fig-controls .seg { display: inline-flex; gap: 0; }
 .fig-controls .tab,
 .tab {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 12px;
   padding: 0.3em 0.7em;
   background: var(--paper);
@@ -1047,7 +1108,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   border: 1px solid var(--border);
   border-radius: 3px;
   box-shadow: 0 8px 24px rgba(28, 26, 24, 0.10);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 13px;
   line-height: 1.5;
   color: var(--ink);
@@ -1088,7 +1149,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   margin-bottom: 0.5rem;
 }
 #data-card .dc-t {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   color: var(--ink);
   font-size: 1.05rem;
