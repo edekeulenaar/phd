@@ -1,141 +1,136 @@
 Language,LanguageName,Country,Sub-topic,Items
-en,English,United States,Platform governance,127
-en,English,United States,Censorship,92
-pt,Portuguese,Brazil,Platform governance,85
-en,English,United States,Community norms and identity,53
-en,English,European Union,Platform governance,40
-en,English,European Union,Censorship,38
-en,English,European Union,Compliance,34
-en,English,United States,Compliance,33
-en,English,Germany,Platform governance,31
-en,English,United Kingdom,Platform governance,24
+en,English,United States,Platform governance,123
+pt,Portuguese,Brazil,Platform governance,84
+en,English,United States,Censorship,81
+en,English,United States,Community norms and identity,50
+en,English,European Union,Platform governance,39
+en,English,European Union,Censorship,34
+en,English,European Union,Compliance,29
+en,English,Germany,Platform governance,29
+en,English,United States,Compliance,27
+en,English,United States,Regulative,25
 pt,Portuguese,Brazil,Platform regulation,24
-it,Italian,European Union,Compliance,23
-pt,Portuguese,Brazil,Censorship,23
+en,English,United Kingdom,Platform governance,23
 pt,Portuguese,United States,Platform governance,23
-pt,Portuguese,Brazil,Compliance,22
+it,Italian,European Union,Compliance,22
 en,English,(unspecified),Platform governance,21
-en,English,Australia,Platform governance,21
+en,English,Australia,Platform governance,20
 en,English,China,Platform governance,20
+pt,Portuguese,Brazil,Compliance,20
 pt,Portuguese,European Union,Platform governance,20
-en,English,Germany,Censorship,19
-en,English,Germany,Compliance,19
 en,English,India,Platform governance,19
-en,English,United Kingdom,Censorship,19
 en,English,(unspecified),Community norms and identity,18
+en,English,Germany,Compliance,18
+pt,Portuguese,Brazil,Censorship,18
+en,English,Germany,Censorship,17
+en,English,United Kingdom,Censorship,17
 en,English,France,Platform governance,16
-it,Italian,Italy,Platform governance,16
+it,Italian,Italy,Platform governance,15
 en,English,Brazil,Platform governance,14
-en,English,United Kingdom,Compliance,14
-fr,French,France,Censorship,14
-it,Italian,Italy,Compliance,14
+en,English,European Union,Regulative,13
 en,English,Myanmar,Platform governance,13
-en,English,United States,Brand safety,13
+en,English,United Kingdom,Compliance,13
 en,English,United States,Moderation as industrial labour,13
-fr,French,France,Community norms and identity,13
-it,Italian,European Union,Censorship,13
-it,Italian,European Union,Platform governance,13
-it,Italian,Italy,Censorship,13
-it,Italian,United States,Platform governance,13
-en,English,Germany,Community norms and identity,12
-it,Italian,United States,Censorship,12
+fr,French,France,Censorship,13
+it,Italian,Italy,Compliance,13
+en,English,United States,Brand safety,12
+fr,French,France,Community norms and identity,12
+it,Italian,European Union,Platform governance,12
+it,Italian,United States,Platform governance,12
+pt,Portuguese,Brazil,Regulative,12
 pt,Portuguese,Germany,Platform governance,12
-en,English,(unspecified),Censorship,11
-en,English,Brazil,Censorship,11
 en,English,European Union,Platform regulation,11
-en,English,India,Censorship,11
-en,English,Russia,Platform governance,11
+en,English,Germany,Community norms and identity,11
+it,Italian,European Union,Censorship,11
 pt,Portuguese,European Union,Compliance,11
+en,English,India,Censorship,10
 en,English,Russia,Censorship,10
-en,English,United States,Regulative,10
-it,Italian,United States,Compliance,10
+en,English,Russia,Platform governance,10
+it,Italian,Italy,Censorship,10
 pt,Portuguese,Brazil,Community norms and identity,10
-en,English,Australia,Censorship,9
-en,English,China,Censorship,9
+en,English,Brazil,Censorship,9
+en,English,Germany,Regulative,9
 en,English,Philippines,Censorship,9
-en,English,United Kingdom,Community norms and identity,9
-fr,French,United States,Censorship,9
+it,Italian,United States,Censorship,9
+it,Italian,United States,Compliance,9
+en,English,Australia,Censorship,8
 en,English,Brazil,Compliance,8
 en,English,Canada,Platform governance,8
+en,English,China,Censorship,8
 en,English,European Union,Community norms and identity,8
 en,English,Pakistan,Platform governance,8
 en,English,Philippines,Platform governance,8
 en,English,Turkey,Platform governance,8
+en,English,United Kingdom,Community norms and identity,8
+en,English,United Kingdom,Regulative,8
 en,English,United States,Debate management,8
-pt,Portuguese,Brazil,Debate management,8
+fr,French,United States,Censorship,8
+it,Italian,European Union,Regulative,8
 pt,Portuguese,European Union,Platform regulation,8
 pt,Portuguese,Germany,Compliance,8
-pt,Portuguese,United States,Censorship,8
 pt,Portuguese,United States,Compliance,8
-en,English,Australia,Compliance,7
-en,English,France,Community norms and identity,7
+en,English,(unspecified),Censorship,7
+en,English,China,Regulative,7
 en,English,Ireland,Platform governance,7
-en,English,United States,Moderating extremism,7
 en,English,United States,Platform regulation,7
 es,Spanish,United States,Platform governance,7
 fr,French,France,Platform governance,7
-it,Italian,European Union,Platform regulation,7
+pt,Portuguese,Brazil,Debate management,7
 pt,Portuguese,United States,Platform regulation,7
-en,English,Canada,Censorship,6
-en,English,Canada,Community norms and identity,6
+en,English,Australia,Compliance,6
 en,English,China,Compliance,6
-en,English,China,Regulative,6
 en,English,France,Censorship,6
-en,English,France,Compliance,6
-en,English,Germany,Regulative,6
+en,English,France,Community norms and identity,6
 en,English,India,Community norms and identity,6
 en,English,Indonesia,Platform governance,6
 en,English,Italy,Platform governance,6
 en,English,New Zealand,Platform governance,6
-en,English,United Kingdom,Regulative,6
+en,English,United States,Moderating extremism,6
 es,Spanish,Brazil,Platform governance,6
-fr,French,European Union,Compliance,6
 fr,French,United States,Platform governance,6
-it,Italian,Germany,Platform governance,6
-pt,Portuguese,Brazil,Brand safety,6
-pt,Portuguese,Brazil,Regulative,6
+it,Italian,European Union,Platform regulation,6
+it,Italian,Italy,Regulative,6
+it,Italian,United States,Regulative,6
 pt,Portuguese,Germany,Platform regulation,6
 pt,Portuguese,United Kingdom,Platform governance,6
-en,English,European Union,Brand safety,5
-en,English,European Union,Moderating extremism,5
-en,English,India,Compliance,5
+en,English,Canada,Censorship,5
+en,English,Canada,Community norms and identity,5
+en,English,France,Compliance,5
+en,English,France,Regulative,5
 en,English,Israel,Censorship,5
 en,English,Netherlands,Community norms and identity,5
 en,English,Nigeria,Platform governance,5
 en,English,Russia,Regulative,5
-en,English,Spain,Censorship,5
 en,English,Syria,Platform governance,5
 en,English,Thailand,Platform governance,5
 en,English,Turkey,Censorship,5
 es,Spanish,European Union,Platform governance,5
 es,Spanish,Spain,Community norms and identity,5
 fr,French,European Union,Censorship,5
+fr,French,European Union,Compliance,5
 fr,French,France,Compliance,5
 it,Italian,Brazil,Platform governance,5
+it,Italian,Germany,Platform governance,5
+pt,Portuguese,Brazil,Brand safety,5
 pt,Portuguese,Brazil,Moderation as industrial labour,5
-pt,Portuguese,European Union,Censorship,5
-pt,Portuguese,United Kingdom,Compliance,5
 pt,Portuguese,United Kingdom,Platform regulation,5
+pt,Portuguese,United States,Censorship,5
 en,English,Australia,Community norms and identity,4
+en,English,Australia,Regulative,4
 en,English,Canada,Compliance,4
 en,English,Canada,Moderation as industrial labour,4
 en,English,China,Community norms and identity,4
-en,English,European Union,Regulative,4
-en,English,France,Regulative,4
+en,English,European Union,Moderating extremism,4
 en,English,Germany,Brand safety,4
+en,English,India,Compliance,4
 en,English,India,Moderation as industrial labour,4
 en,English,Italy,Censorship,4
 en,English,Kenya,Platform governance,4
 en,English,Mexico,Platform governance,4
 en,English,Myanmar,Censorship,4
 en,English,Philippines,Moderation as industrial labour,4
-en,English,Russia,Compliance,4
-en,English,Singapore,Platform governance,4
+en,English,Spain,Censorship,4
 en,English,Sweden,Platform governance,4
-en,English,Ukraine,Platform governance,4
-en,English,United Kingdom,Brand safety,4
-en,English,United Kingdom,Moderating extremism,4
-en,English,United States,Common carriage / neutral conduit,4
 es,Spanish,Argentina,Debate management,4
 es,Spanish,Spain,Censorship,4
 es,Spanish,United States,Censorship,4
@@ -143,11 +138,11 @@ fr,French,Canada,Platform governance,4
 fr,French,Germany,Censorship,4
 it,Italian,Italy,Community norms and identity,4
 it,Italian,United States,Platform regulation,4
-pt,Portuguese,Germany,Censorship,4
 pt,Portuguese,Portugal,Platform governance,4
+pt,Portuguese,United Kingdom,Compliance,4
+pt,Portuguese,United States,Regulative,4
 en,English,(unspecified),Compliance,3
 en,English,(unspecified),Moderation as industrial labour,3
-en,English,Australia,Regulative,3
 en,English,Austria,Censorship,3
 en,English,Brazil,Community norms and identity,3
 en,English,Canada,Regulative,3
@@ -155,10 +150,10 @@ en,English,China,Brand safety,3
 en,English,China,Platform regulation,3
 en,English,Czech Republic,Censorship,3
 en,English,Egypt,Platform governance,3
+en,English,European Union,Brand safety,3
 en,English,European Union,Common carriage / neutral conduit,3
 en,English,European Union,Moderation as industrial labour,3
 en,English,Germany,Platform regulation,3
-en,English,Hungary,Censorship,3
 en,English,India,Platform regulation,3
 en,English,Iran,Platform governance,3
 en,English,Italy,Regulative,3
@@ -168,11 +163,16 @@ en,English,Norway,Platform governance,3
 en,English,Palestine,Censorship,3
 en,English,Poland,Censorship,3
 en,English,Saudi Arabia,Platform governance,3
+en,English,Singapore,Platform governance,3
 en,English,South Korea,Community norms and identity,3
 en,English,South Korea,Platform governance,3
 en,English,Spain,Platform governance,3
 en,English,Tunisia,Platform governance,3
 en,English,Ukraine,Censorship,3
+en,English,Ukraine,Platform governance,3
+en,English,United Kingdom,Brand safety,3
+en,English,United Kingdom,Moderating extremism,3
+en,English,United States,Common carriage / neutral conduit,3
 es,Spanish,European Union,Censorship,3
 es,Spanish,European Union,Compliance,3
 es,Spanish,European Union,Platform regulation,3
@@ -181,30 +181,31 @@ es,Spanish,Spain,Platform governance,3
 es,Spanish,Spain,Platform regulation,3
 fr,French,European Union,Platform governance,3
 fr,French,European Union,Platform regulation,3
-fr,French,France,Brand safety,3
+fr,French,France,Regulative,3
 fr,French,United States,Community norms and identity,3
-it,Italian,European Union,Brand safety,3
-it,Italian,European Union,Regulative,3
-it,Italian,France,Platform governance,3
-it,Italian,Germany,Censorship,3
+fr,French,United States,Regulative,3
+it,Italian,France,Regulative,3
 it,Italian,Germany,Compliance,3
+it,Italian,Germany,Regulative,3
 it,Italian,Italy,Platform regulation,3
-it,Italian,Italy,Regulative,3
-it,Italian,United States,Brand safety,3
 it,Italian,United States,Moderation as industrial labour,3
 pt,Portuguese,Australia,Platform governance,3
-pt,Portuguese,France,Compliance,3
+pt,Portuguese,European Union,Regulative,3
+pt,Portuguese,Germany,Censorship,3
 pt,Portuguese,Philippines,Platform governance,3
 pt,Portuguese,Portugal,Compliance,3
 pt,Portuguese,United States,Brand safety,3
 pt,Portuguese,United States,Community norms and identity,3
 pt,Portuguese,United States,Moderation as industrial labour,3
+en,English,(unspecified),Constitutive,2
+en,English,(unspecified),Regulative,2
 en,English,Africa,Platform governance,2
 en,English,Asia,Compliance,2
 en,English,Australia,Platform regulation,2
 en,English,Austria,Moderating extremism,2
 en,English,Bahrain,Platform governance,2
 en,English,Belgium,Regulative,2
+en,English,Brazil,Regulative,2
 en,English,Canada,Moderating extremism,2
 en,English,China,Moderation as industrial labour,2
 en,English,Colombia,Platform governance,2
@@ -216,11 +217,12 @@ en,English,Europe,Compliance,2
 en,English,France,Platform regulation,2
 en,English,Germany,Debate management,2
 en,English,Germany,Moderation as industrial labour,2
+en,English,Hungary,Censorship,2
 en,English,Hungary,Compliance,2
+en,English,India,Regulative,2
 en,English,Indonesia,Compliance,2
 en,English,Indonesia,Moderation as industrial labour,2
 en,English,Iran,Censorship,2
-en,English,Ireland,Censorship,2
 en,English,Ireland,Compliance,2
 en,English,Italy,Community norms and identity,2
 en,English,Jordan,Censorship,2
@@ -232,85 +234,77 @@ en,English,Myanmar,Compliance,2
 en,English,Nepal,Platform governance,2
 en,English,Netherlands,Compliance,2
 en,English,Netherlands,Regulative,2
-en,English,New Zealand,Community norms and identity,2
 en,English,New Zealand,Compliance,2
-en,English,Nigeria,Compliance,2
-en,English,Norway,Censorship,2
+en,English,New Zealand,Regulative,2
 en,English,Norway,Debate management,2
+en,English,Norway,Regulative,2
 en,English,Pakistan,Compliance,2
 en,English,Philippines,Brand safety,2
 en,English,Portugal,Censorship,2
-en,English,Portugal,Community norms and identity,2
 en,English,Romania,Censorship,2
-en,English,Singapore,Compliance,2
+en,English,Russia,Compliance,2
 en,English,Slovakia,Platform governance,2
-en,English,South Africa,Platform governance,2
+en,English,South Africa,Regulative,2
 en,English,South Korea,Censorship,2
-en,English,Spain,Compliance,2
 en,English,Sweden,Community norms and identity,2
 en,English,Sweden,Moderating extremism,2
 en,English,Switzerland,Censorship,2
 en,English,Taiwan,Community norms and identity,2
+en,English,Turkey,Regulative,2
 en,English,Ukraine,Compliance,2
 en,English,United Arab Emirates,Platform governance,2
 en,English,United Kingdom,Debate management,2
 en,English,United Kingdom,Moderation as industrial labour,2
+en,English,United States,Infrastructural,2
 en,English,Vietnam,Platform governance,2
 es,Spanish,Argentina,Community norms and identity,2
-es,Spanish,Argentina,Compliance,2
-es,Spanish,Brazil,Compliance,2
 es,Spanish,Brazil,Debate management,2
-es,Spanish,Colombia,Compliance,2
 es,Spanish,France,Censorship,2
 es,Spanish,India,Platform governance,2
 es,Spanish,Mexico,Censorship,2
-es,Spanish,Mexico,Compliance,2
 es,Spanish,Mexico,Debate management,2
 es,Spanish,Mexico,Platform governance,2
 es,Spanish,Mexico,Platform regulation,2
-es,Spanish,Spain,Compliance,2
 es,Spanish,United States,Platform regulation,2
 es,Spanish,Venezuela,Debate management,2
 fr,French,Canada,Censorship,2
 fr,French,Canada,Compliance,2
 fr,French,China,Censorship,2
+fr,French,European Union,Regulative,2
+fr,French,France,Brand safety,2
 fr,French,France,Platform regulation,2
 fr,French,Germany,Community norms and identity,2
 fr,French,Germany,Platform regulation,2
 fr,French,United Kingdom,Censorship,2
 fr,French,United Kingdom,Platform governance,2
-fr,French,United States,Compliance,2
-fr,French,United States,Regulative,2
 it,Italian,(unspecified),Platform governance,2
-it,Italian,China,Censorship,2
+it,Italian,Australia,Regulative,2
 it,Italian,China,Platform governance,2
+it,Italian,European Union,Brand safety,2
 it,Italian,France,Compliance,2
-it,Italian,France,Regulative,2
-it,Italian,Germany,Regulative,2
+it,Italian,France,Platform governance,2
+it,Italian,Germany,Censorship,2
 it,Italian,India,Platform governance,2
 it,Italian,Italy,Brand safety,2
 it,Italian,Russia,Platform governance,2
-it,Italian,United Kingdom,Brand safety,2
+it,Italian,Spain,Regulative,2
 it,Italian,United Kingdom,Platform governance,2
 it,Italian,United Kingdom,Regulative,2
+it,Italian,United States,Brand safety,2
 it,Italian,United States,Moderating extremism,2
-it,Italian,United States,Regulative,2
-pt,Portuguese,Australia,Compliance,2
 pt,Portuguese,Canada,Platform governance,2
-pt,Portuguese,China,Censorship,2
 pt,Portuguese,China,Compliance,2
 pt,Portuguese,European Union,Brand safety,2
+pt,Portuguese,European Union,Censorship,2
+pt,Portuguese,France,Compliance,2
 pt,Portuguese,France,Platform governance,2
+pt,Portuguese,France,Regulative,2
 pt,Portuguese,Germany,Moderation as industrial labour,2
-pt,Portuguese,India,Compliance,2
 pt,Portuguese,India,Platform governance,2
-pt,Portuguese,Indonesia,Compliance,2
 pt,Portuguese,Myanmar,Platform governance,2
 pt,Portuguese,Portugal,Debate management,2
 pt,Portuguese,Portugal,Platform regulation,2
-pt,Portuguese,Russia,Compliance,2
-pt,Portuguese,Turkey,Compliance,2
-pt,Portuguese,United States,Regulative,2
+pt,Portuguese,Russia,Regulative,2
 und,undetermined,European Union,Platform governance,2
 und,undetermined,Germany,Platform governance,2
 und,undetermined,United States,Platform governance,2
@@ -331,7 +325,6 @@ en,English,Austria,Platform governance,1
 en,English,Austria,Regulative,1
 en,English,Bangladesh,Censorship,1
 en,English,Bangladesh,Community norms and identity,1
-en,English,Belarus,Compliance,1
 en,English,Belarus,Regulative,1
 en,English,Belgium,Platform governance,1
 en,English,Bolivia,Compliance,1
@@ -343,7 +336,6 @@ en,English,Burma,Platform governance,1
 en,English,Canada,Brand safety,1
 en,English,Canada,Debate management,1
 en,English,Chile,Censorship,1
-en,English,Chile,Platform governance,1
 en,English,Colombia,Community norms and identity,1
 en,English,Colombia,Compliance,1
 en,English,Croatia,Censorship,1
@@ -363,25 +355,24 @@ en,English,Europe,Censorship,1
 en,English,Europe,Community norms and identity,1
 en,English,Europe,Platform governance,1
 en,English,European Union,Debate management,1
+en,English,European Union,Infrastructural,1
 en,English,Finland,Community norms and identity,1
 en,English,Finland,Debate management,1
 en,English,Finland,Platform governance,1
 en,English,Finland,Regulative,1
-en,English,France,Brand safety,1
 en,English,France,Debate management,1
+en,English,France,Infrastructural,1
 en,English,France,Moderating extremism,1
 en,English,Germany,Moderating extremism,1
 en,English,Global South,Moderation as industrial labour,1
 en,English,Greece,Debate management,1
 en,English,Greece,Regulative,1
 en,English,Guatemala,Platform governance,1
-en,English,Honduras,Compliance,1
 en,English,Honduras,Moderating extremism,1
 en,English,Hungary,Moderating extremism,1
 en,English,Hungary,Platform regulation,1
-en,English,Iceland,Regulative,1
+en,English,Hungary,Regulative,1
 en,English,India,Debate management,1
-en,English,India,Regulative,1
 en,English,Indonesia,Brand safety,1
 en,English,Indonesia,Moderating extremism,1
 en,English,Indonesia,Platform regulation,1
@@ -389,13 +380,14 @@ en,English,Iran,Community norms and identity,1
 en,English,Iran,Compliance,1
 en,English,Iran,Regulative,1
 en,English,Ireland,Brand safety,1
+en,English,Ireland,Censorship,1
 en,English,Ireland,Community norms and identity,1
+en,English,Ireland,Constitutive,1
 en,English,Ireland,Moderation as industrial labour,1
 en,English,Ireland,Platform regulation,1
 en,English,Ireland,Regulative,1
 en,English,Israel,Common carriage / neutral conduit,1
 en,English,Israel,Compliance,1
-en,English,Israel,Moderating extremism,1
 en,English,Israel,Platform governance,1
 en,English,Israel,Regulative,1
 en,English,Italy,Common carriage / neutral conduit,1
@@ -408,14 +400,12 @@ en,English,Japan,Platform governance,1
 en,English,Jordan,Common carriage / neutral conduit,1
 en,English,Kenya,Censorship,1
 en,English,Kenya,Community norms and identity,1
-en,English,Kenya,Compliance,1
 en,English,Latin America,Compliance,1
 en,English,Lebanon,Censorship,1
 en,English,Libya,Censorship,1
 en,English,Libya,Compliance,1
 en,English,Libya,Moderating extremism,1
 en,English,Libya,Platform governance,1
-en,English,Malaysia,Compliance,1
 en,English,Mexico,Community norms and identity,1
 en,English,Mexico,Compliance,1
 en,English,Middle East,Platform governance,1
@@ -427,42 +417,45 @@ en,English,Myanmar,Moderating extremism,1
 en,English,Myanmar,Platform regulation,1
 en,English,Myanmar,Regulative,1
 en,English,Netherlands,Debate management,1
-en,English,Netherlands,Moderating extremism,1
+en,English,New Zealand,Community norms and identity,1
 en,English,New Zealand,Debate management,1
 en,English,New Zealand,Platform regulation,1
-en,English,New Zealand,Regulative,1
+en,English,Nigeria,Compliance,1
 en,English,North America,Compliance,1
 en,English,North Korea,Platform governance,1
+en,English,Norway,Censorship,1
 en,English,Norway,Platform regulation,1
-en,English,Norway,Regulative,1
 en,English,Pakistan,Brand safety,1
 en,English,Pakistan,Censorship,1
 en,English,Pakistan,Platform regulation,1
 en,English,Palestine,Common carriage / neutral conduit,1
 en,English,Palestine,Platform governance,1
 en,English,Palestine,Regulative,1
-en,English,Philippines,Compliance,1
 en,English,Philippines,Platform regulation,1
 en,English,Poland,Regulative,1
+en,English,Portugal,Community norms and identity,1
 en,English,Portugal,Debate management,1
 en,English,Portugal,Regulative,1
 en,English,Qatar,Gatekeeping (selection theory),1
 en,English,Qatar,Platform governance,1
 en,English,Republic of Korea,Community norms and identity,1
-en,English,Romania,Compliance,1
+en,English,Romania,Regulative,1
 en,English,Russia,Platform regulation,1
 en,English,Russian Federation,Censorship,1
 en,English,Saudi Arabia,Common carriage / neutral conduit,1
+en,English,Singapore,Compliance,1
+en,English,Singapore,Regulative,1
 en,English,Slovakia,Censorship,1
-en,English,Slovakia,Compliance,1
+en,English,Slovakia,Regulative,1
 en,English,Slovenia,Platform governance,1
 en,English,Slovenia,Platform regulation,1
-en,English,South Africa,Censorship,1
 en,English,South Africa,Compliance,1
+en,English,South Africa,Platform governance,1
 en,English,South Asia,Platform governance,1
 en,English,South Korea,Regulative,1
 en,English,South Sudan,Censorship,1
 en,English,Spain,Brand safety,1
+en,English,Spain,Compliance,1
 en,English,Spain,Regulative,1
 en,English,Sri Lanka,Censorship,1
 en,English,Sri Lanka,Platform governance,1
@@ -481,10 +474,7 @@ en,English,Thailand,Compliance,1
 en,English,Thailand,Regulative,1
 en,English,Tunisia,Common carriage / neutral conduit,1
 en,English,Tunisia,Regulative,1
-en,English,Turkey,Community norms and identity,1
-en,English,Turkey,Compliance,1
 en,English,Turkey,Platform regulation,1
-en,English,Turkey,Regulative,1
 en,English,Türkiye,Censorship,1
 en,English,UK,Community norms and identity,1
 en,English,UK,Moderating extremism,1
@@ -501,23 +491,24 @@ en,English,United Kingdom,Platform regulation,1
 en,English,United States,Constitutive,1
 en,English,United States,Gatekeeping (selection theory),1
 en,English,Uruguay,Community norms and identity,1
-en,English,Uzbekistan,Compliance,1
-en,English,Venezuela,Compliance,1
 en,English,Venezuela,Platform governance,1
 en,English,Vietnam,Brand safety,1
-en,English,Vietnam,Compliance,1
 en,English,Western Europe,Debate management,1
 en,English,Western Europe,Moderation as industrial labour,1
 en,English,Yemen,Moderating extremism,1
 es,Spanish,(unspecified),Community norms and identity,1
 es,Spanish,(unspecified),Debate management,1
+es,Spanish,Argentina,Compliance,1
 es,Spanish,Argentina,Platform regulation,1
+es,Spanish,Argentina,Regulative,1
 es,Spanish,Austria,Platform regulation,1
-es,Spanish,Bolivia,Compliance,1
+es,Spanish,Bolivia,Regulative,1
 es,Spanish,Bosnia and Herzegovina,Brand safety,1
 es,Spanish,Brazil,Brand safety,1
 es,Spanish,Brazil,Community norms and identity,1
+es,Spanish,Brazil,Compliance,1
 es,Spanish,Brazil,Platform regulation,1
+es,Spanish,Brazil,Regulative,1
 es,Spanish,Chile,Compliance,1
 es,Spanish,Chile,Debate management,1
 es,Spanish,Chile,Platform regulation,1
@@ -525,13 +516,15 @@ es,Spanish,China,Compliance,1
 es,Spanish,Colombia,Brand safety,1
 es,Spanish,Colombia,Censorship,1
 es,Spanish,Colombia,Community norms and identity,1
+es,Spanish,Colombia,Compliance,1
 es,Spanish,Colombia,Debate management,1
 es,Spanish,Colombia,Platform governance,1
 es,Spanish,Colombia,Platform regulation,1
+es,Spanish,Colombia,Regulative,1
 es,Spanish,Cuba,Platform governance,1
 es,Spanish,Dominican Republic,Platform regulation,1
-es,Spanish,Ecuador,Compliance,1
 es,Spanish,Ecuador,Debate management,1
+es,Spanish,Ecuador,Regulative,1
 es,Spanish,European Union,Brand safety,1
 es,Spanish,Finland,Debate management,1
 es,Spanish,France,Platform governance,1
@@ -553,9 +546,11 @@ es,Spanish,Latin America,Community norms and identity,1
 es,Spanish,Latin America,Compliance,1
 es,Spanish,Latin America,Platform regulation,1
 es,Spanish,Malaysia,Platform governance,1
+es,Spanish,Mexico,Compliance,1
+es,Spanish,Mexico,Regulative,1
 es,Spanish,New Zealand,Platform governance,1
 es,Spanish,Nicaragua,Platform governance,1
-es,Spanish,Panama,Compliance,1
+es,Spanish,Panama,Regulative,1
 es,Spanish,Peru,Compliance,1
 es,Spanish,Peru,Debate management,1
 es,Spanish,Peru,Platform governance,1
@@ -569,6 +564,7 @@ es,Spanish,Russia,Brand safety,1
 es,Spanish,Russia,Compliance,1
 es,Spanish,Senegal,Brand safety,1
 es,Spanish,Spain,Brand safety,1
+es,Spanish,Spain,Compliance,1
 es,Spanish,Spain,Moderation as industrial labour,1
 es,Spanish,Thailand,Brand safety,1
 es,Spanish,United Kingdom,Brand safety,1
@@ -589,25 +585,22 @@ fr,French,Brazil,Censorship,1
 fr,French,Canada,Advisory classification / audience segmentation,1
 fr,French,Canada,Moderating extremism,1
 fr,French,Canada,Platform regulation,1
-fr,French,China,Compliance,1
 fr,French,China,Moderation as industrial labour,1
 fr,French,China,Platform governance,1
 fr,French,Cuba,Censorship,1
 fr,French,Denmark,Platform governance,1
 fr,French,Egypt,Censorship,1
-fr,French,European Union,Brand safety,1
 fr,French,European Union,Common carriage / neutral conduit,1
 fr,French,European Union,Community norms and identity,1
 fr,French,European Union,Moderating extremism,1
-fr,French,European Union,Regulative,1
 fr,French,Finland,Platform governance,1
+fr,French,France,Constitutive,1
 fr,French,France,Debate management,1
 fr,French,France,Moderating extremism,1
 fr,French,France,Moderation as industrial labour,1
-fr,French,France,Regulative,1
-fr,French,Germany,Brand safety,1
 fr,French,Germany,Compliance,1
 fr,French,Germany,Platform governance,1
+fr,French,Germany,Regulative,1
 fr,French,Greece,Community norms and identity,1
 fr,French,Hong Kong,Censorship,1
 fr,French,India,Moderation as industrial labour,1
@@ -632,28 +625,27 @@ fr,French,Spain,Censorship,1
 fr,French,Switzerland,Compliance,1
 fr,French,Switzerland,Content moderation as industrial labour,1
 fr,French,Switzerland,Platform governance,1
-fr,French,Turkey,Compliance,1
-fr,French,United Kingdom,Brand safety,1
 fr,French,United Kingdom,Community norms and identity,1
+fr,French,United Kingdom,Regulative,1
 fr,French,United States,Brand safety,1
 fr,French,United States,Common carriage / neutral conduit,1
+fr,French,United States,Compliance,1
 fr,French,United States,Moderating extremism,1
 fr,French,United States,Moderation as industrial labour,1
 it,Italian,(unspecified),Community norms and identity,1
-it,Italian,Australia,Brand safety,1
 it,Italian,Australia,Platform governance,1
-it,Italian,Australia,Regulative,1
 it,Italian,Austria,Platform governance,1
 it,Italian,Canada,Community norms and identity,1
+it,Italian,China,Censorship,1
+it,Italian,China,Constitutive,1
 it,Italian,China,Platform regulation,1
 it,Italian,China,Regulative,1
 it,Italian,Europe,Platform governance,1
 it,Italian,European Union,Community norms and identity,1
 it,Italian,European Union,Moderating extremism,1
 it,Italian,European Union,Moderation as industrial labour,1
-it,Italian,France,Brand safety,1
 it,Italian,France,Platform regulation,1
-it,Italian,Germany,Brand safety,1
+it,Italian,Germany,Constitutive,1
 it,Italian,Germany,Moderating extremism,1
 it,Italian,Germany,Moderation as industrial labour,1
 it,Italian,Honduras,Platform governance,1
@@ -676,20 +668,22 @@ it,Italian,Romania,Compliance,1
 it,Italian,Russia,Compliance,1
 it,Italian,Russia,Moderating extremism,1
 it,Italian,Russia,Moderation as industrial labour,1
-it,Italian,Spain,Brand safety,1
 it,Italian,Spain,Compliance,1
-it,Italian,Spain,Platform governance,1
 it,Italian,Syria,Platform governance,1
 it,Italian,Trinidad,Platform governance,1
 it,Italian,Uganda,Platform governance,1
 it,Italian,Ukraine,Moderating extremism,1
 it,Italian,Ukraine,Moderation as industrial labour,1
+it,Italian,United Kingdom,Brand safety,1
 it,Italian,United States,Community norms and identity,1
+it,Italian,United States,Constitutive,1
 pt,Portuguese,(unspecified),Brand safety,1
 pt,Portuguese,(unspecified),Community norms and identity,1
 pt,Portuguese,(unspecified),Platform governance,1
 pt,Portuguese,Alemanha,Moderation as industrial labour,1
 pt,Portuguese,Australia,Censorship,1
+pt,Portuguese,Australia,Compliance,1
+pt,Portuguese,Australia,Regulative,1
 pt,Portuguese,Belgium,Censorship,1
 pt,Portuguese,Belgium,Platform governance,1
 pt,Portuguese,Brasil,Moderation as industrial labour,1
@@ -699,7 +693,9 @@ pt,Portuguese,Canada,Compliance,1
 pt,Portuguese,Chile,Platform governance,1
 pt,Portuguese,Chile,Platform regulation,1
 pt,Portuguese,China,Brand safety,1
+pt,Portuguese,China,Censorship,1
 pt,Portuguese,China,Platform governance,1
+pt,Portuguese,China,Regulative,1
 pt,Portuguese,Colombia,Debate management,1
 pt,Portuguese,Colombia,Platform governance,1
 pt,Portuguese,Cuba,Platform governance,1
@@ -709,23 +705,25 @@ pt,Portuguese,Espanha,Moderation as industrial labour,1
 pt,Portuguese,Estados Unidos,Moderation as industrial labour,1
 pt,Portuguese,Estonia,Platform governance,1
 pt,Portuguese,European Union,Moderation as industrial labour,1
-pt,Portuguese,European Union,Regulative,1
 pt,Portuguese,Filipinas,Moderation as industrial labour,1
-pt,Portuguese,France,Censorship,1
 pt,Portuguese,France,Platform regulation,1
 pt,Portuguese,Germany,Brand safety,1
 pt,Portuguese,Germany,Community norms and identity,1
+pt,Portuguese,Germany,Regulative,1
 pt,Portuguese,Greece,Platform governance,1
 pt,Portuguese,India,Censorship,1
+pt,Portuguese,India,Compliance,1
 pt,Portuguese,India,Moderation as industrial labour,1
 pt,Portuguese,India,Platform regulation,1
+pt,Portuguese,India,Regulative,1
 pt,Portuguese,Indonesia,Censorship,1
+pt,Portuguese,Indonesia,Compliance,1
+pt,Portuguese,Indonesia,Regulative,1
 pt,Portuguese,Iran,Platform governance,1
 pt,Portuguese,Iraq,Platform governance,1
 pt,Portuguese,Irlanda,Moderation as industrial labour,1
 pt,Portuguese,Italy,Debate management,1
 pt,Portuguese,Italy,Platform governance,1
-pt,Portuguese,Italy,Regulative,1
 pt,Portuguese,Japan,Platform governance,1
 pt,Portuguese,Letônia,Moderation as industrial labour,1
 pt,Portuguese,Malásia,Moderation as industrial labour,1
@@ -737,7 +735,7 @@ pt,Portuguese,Poland,Platform governance,1
 pt,Portuguese,Portugal,Censorship,1
 pt,Portuguese,Portugal,Moderation as industrial labour,1
 pt,Portuguese,Quênia,Moderation as industrial labour,1
-pt,Portuguese,Russia,Censorship,1
+pt,Portuguese,Russia,Compliance,1
 pt,Portuguese,Singapore,Censorship,1
 pt,Portuguese,Spain,Censorship,1
 pt,Portuguese,Spain,Compliance,1
@@ -746,8 +744,11 @@ pt,Portuguese,Spain,Platform governance,1
 pt,Portuguese,Spain,Platform regulation,1
 pt,Portuguese,Sweden,Platform governance,1
 pt,Portuguese,Switzerland,Censorship,1
+pt,Portuguese,Turkey,Compliance,1
+pt,Portuguese,Turkey,Regulative,1
 pt,Portuguese,United Kingdom,Brand safety,1
 pt,Portuguese,United Kingdom,Community norms and identity,1
+pt,Portuguese,United Kingdom,Regulative,1
 pt,Portuguese,United States,Debate management,1
 pt,Portuguese,Índia,Moderation as industrial labour,1
 so,Somali,Brazil,Censorship,1

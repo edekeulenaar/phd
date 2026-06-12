@@ -10,67 +10,67 @@ AI alignment,Platforms,2
 AI alignment,Print media,1
 AI alignment,Deliberation platform,1
 Algorithmic sorting,Music streaming,1
-Algorithmic sorting,Search engine,1
-Algorithmic sorting,Social media platform,1
 Algorithmic sorting,Video streaming platform,1
+Algorithmic sorting,Social media platform,1
 Algorithmic sorting,AI,1
-Censorship,Print media,382
-Censorship,Social media platform,168
-Censorship,Film,162
-Censorship,Television,114
-Censorship,Radio,90
-Censorship,ISP,72
-Censorship,Performing arts,66
-Censorship,Search engine,56
-Censorship,Video sharing platform,53
-Censorship,Internet (general),45
-Content moderation,Social media platform,893
-Content moderation,Video sharing platform,424
-Content moderation,Search engine,220
-Content moderation,Messaging platform,171
-Content moderation,AI,90
-Content moderation,Platforms,83
-Content moderation,Wikis,57
-Content moderation,ISP,47
-Content moderation,Online fora,39
+Algorithmic sorting,Search engine,1
+Censorship,Print media,393
+Censorship,Social media platform,192
+Censorship,Film,165
+Censorship,Television,119
+Censorship,Radio,95
+Censorship,ISP,77
+Censorship,Performing arts,68
+Censorship,Search engine,65
+Censorship,Video sharing platform,61
+Censorship,Internet (general),47
+Content moderation,Social media platform,872
+Content moderation,Video sharing platform,417
+Content moderation,Search engine,214
+Content moderation,Messaging platform,168
+Content moderation,AI,88
+Content moderation,Platforms,81
+Content moderation,Wikis,56
+Content moderation,ISP,42
 Content moderation,Alt-tech,38
-Debate management,Social media platform,36
+Content moderation,E-commerce,38
+Debate management,Social media platform,38
 Debate management,Online fora,20
 Debate management,Online learning platform,10
-Debate management,Print media,7
+Debate management,Print media,8
 Debate management,Messaging platform,6
+Debate management,Video sharing platform,5
 Debate management,Deliberation platform,5
 Debate management,News media,3
-Debate management,Video sharing platform,3
 Debate management,Wikis,3
 Debate management,Online community,2
-Media moderation,Social media platform,30
-Media moderation,Print media,30
-Media moderation,Search engine,14
-Media moderation,Television,12
-Media moderation,Video sharing platform,9
-Media moderation,Radio,9
-Media moderation,Film,7
+Media moderation,Social media platform,27
+Media moderation,Print media,22
+Media moderation,Search engine,11
+Media moderation,Television,10
+Media moderation,Video sharing platform,8
+Media moderation,Radio,7
+Media moderation,Film,6
 Media moderation,ISP,5
 Media moderation,Wikis,5
-Media moderation,E-commerce,5
-Media regulation,Film,9
-Media regulation,Print media,9
-Media regulation,Radio,8
-Media regulation,Television,7
-Media regulation,Social media platform,5
+Media moderation,Internet (general),3
+Media regulation,Film,7
+Media regulation,Print media,7
+Media regulation,Television,6
+Media regulation,Radio,6
 Media regulation,Music,4
+Media regulation,Social media platform,4
 Media regulation,Internet (general),4
-Media regulation,Performing arts,3
-Media regulation,Video sharing platform,2
+Media regulation,Performing arts,2
 Media regulation,Web,2
-Other,Social media platform,20
-Other,Video sharing platform,11
-Other,Messaging platform,5
-Other,Search engine,4
-Other,Internet (general),4
+Media regulation,Search engine,1
+Other,Social media platform,19
+Other,Video sharing platform,10
+Other,Internet (general),5
+Other,Messaging platform,4
+Other,Print media,4
+Other,Search engine,3
 Other,AI,3
-Other,Print media,2
-Other,Online fora,2
 Other,Blog,2
+Other,Online fora,2
 Other,Wikis,2

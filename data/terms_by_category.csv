@@ -1,0 +1,71 @@
+Kind,Topic,Term,Count,Score
+distinctive,Media moderation,usagers,42,16.1
+distinctive,Media moderation,gatekeeper,30,13.98
+distinctive,Media moderation,lms,35,13.13
+distinctive,Media moderation,commentaires,31,12.58
+distinctive,Media moderation,journalists,53,11.79
+distinctive,Media moderation,éviter,25,11.41
+distinctive,Media moderation,canada,26,11.13
+distinctive,Media moderation,gates,16,10.31
+distinctive,Media moderation,sont,68,10.04
+distinctive,Media moderation,sfera pubblica,15,9.86
+distinctive,Media regulation,censura,127,20.14
+distinctive,Media regulation,diversões,23,16.56
+distinctive,Media regulation,públicas,28,14.21
+distinctive,Media regulation,costumes,17,12.57
+distinctive,Media regulation,ministro justiça,12,11.98
+distinctive,Media regulation,labels,23,11.69
+distinctive,Media regulation,teatral,11,11.06
+distinctive,Media regulation,política,32,10.72
+distinctive,Media regulation,teatrais,10,10.61
+distinctive,Media regulation,directives,12,10.12
+distinctive,Censorship,censorship,4300,57.99
+distinctive,Censorship,censura,1960,35.23
+distinctive,Censorship,censor,882,26.16
+distinctive,Censorship,censure,805,25.65
+distinctive,Censorship,government,1243,23.62
+distinctive,Censorship,state,1109,22.75
+distinctive,Censorship,book,523,20.23
+distinctive,Censorship,film,480,19.84
+distinctive,Censorship,censors,506,19.59
+distinctive,Censorship,books,636,19.2
+distinctive,Debate management,debate,334,33.87
+distinctive,Debate management,dialogue,209,30.83
+distinctive,Debate management,discussion,223,27.66
+distinctive,Debate management,moderador,167,27.53
+distinctive,Debate management,radio,122,22.69
+distinctive,Debate management,questions,137,21.67
+distinctive,Debate management,debates,121,21.64
+distinctive,Debate management,débat,93,20.74
+distinctive,Debate management,participantes,94,20.0
+distinctive,Debate management,argument,101,19.85
+distinctive,Content moderation,content,10796,57.31
+distinctive,Content moderation,moderation,5029,42.74
+distinctive,Content moderation,platforms,4502,42.18
+distinctive,Content moderation,conteúdo,3397,36.63
+distinctive,Content moderation,users,3683,33.44
+distinctive,Content moderation,facebook,2522,30.7
+distinctive,Content moderation,plataformas,2347,30.48
+distinctive,Content moderation,platform,2196,29.1
+distinctive,Content moderation,online,3300,28.73
+distinctive,Content moderation,moderação,1875,26.68
+distinctive,AI alignment,models,130,31.77
+distinctive,AI alignment,model,146,30.8
+distinctive,AI alignment,moderation,371,27.22
+distinctive,AI alignment,content,551,23.4
+distinctive,AI alignment,llms,168,23.29
+distinctive,AI alignment,safety,105,21.97
+distinctive,AI alignment,prompt,54,21.33
+distinctive,AI alignment,outputs,63,21.12
+distinctive,AI alignment,llm,110,20.38
+distinctive,AI alignment,human,130,19.36
+shared,(all categories),social,5053,7
+shared,(all categories),media,3972,7
+shared,(all categories),power,978,7
+shared,(all categories),article,676,7
+shared,(all categories),cultural,554,7
+shared,(all categories),learning,481,7
+shared,(all categories),critical,391,7
+shared,(all categories),main,298,7
+shared,(all categories),authority,422,7
+shared,(all categories),agency,208,7

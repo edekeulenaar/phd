@@ -1,82 +1,91 @@
 Sub-topic,Media category,Quantity
-Advisory classification / audience segmentation,Blog,1
+Advisory classification / audience segmentation,Wikis,1
 Advisory classification / audience segmentation,Social media platform,1
 Advisory classification / audience segmentation,Video sharing platform,1
+Advisory classification / audience segmentation,Blog,1
 Advisory classification / audience segmentation,ISP,1
-Advisory classification / audience segmentation,Wikis,1
-Brand safety,Social media platform,27
-Brand safety,Video sharing platform,19
-Brand safety,Search engine,6
+Brand safety,Social media platform,22
+Brand safety,Video sharing platform,15
+Brand safety,Search engine,5
 Brand safety,Messaging platform,4
-Brand safety,Platforms,3
 Brand safety,Alt-tech,3
-Brand safety,News media,2
+Brand safety,Platforms,2
 Brand safety,Imageboard,2
 Brand safety,E-commerce,1
+Brand safety,News media,1
 Brand safety,Print media,1
-Censorship,Social media platform,196
-Censorship,Video sharing platform,94
-Censorship,Search engine,45
-Censorship,Messaging platform,27
-Censorship,AI,19
-Censorship,Platforms,17
-Censorship,Alt-tech,11
-Censorship,Wikis,11
-Censorship,Print media,10
-Censorship,Decentralized social media,7
-Common carriage / neutral conduit,Social media platform,7
+Censorship,Social media platform,167
+Censorship,Video sharing platform,80
+Censorship,Search engine,37
+Censorship,Messaging platform,25
+Censorship,AI,17
+Censorship,Platforms,15
+Censorship,Wikis,10
+Censorship,Alt-tech,9
+Censorship,E-commerce,7
+Censorship,Print media,6
+Common carriage / neutral conduit,Social media platform,6
 Common carriage / neutral conduit,Video sharing platform,4
-Common carriage / neutral conduit,ISP,1
 Common carriage / neutral conduit,App store,1
 Common carriage / neutral conduit,Alt-tech,1
-Common carriage / neutral conduit,Platforms,1
-Common carriage / neutral conduit,E-commerce,1
-Common carriage / neutral conduit,Search engine,1
-Community norms and identity,Social media platform,98
-Community norms and identity,Video sharing platform,25
-Community norms and identity,Messaging platform,20
-Community norms and identity,Online fora,16
-Community norms and identity,Wikis,15
+Common carriage / neutral conduit,ISP,1
+Community norms and identity,Social media platform,94
+Community norms and identity,Video sharing platform,23
+Community norms and identity,Messaging platform,19
+Community norms and identity,Online fora,15
+Community norms and identity,Wikis,14
 Community norms and identity,Decentralized social media,10
-Community norms and identity,Print media,9
-Community norms and identity,News media,8
+Community norms and identity,Print media,8
 Community norms and identity,AI,8
-Community norms and identity,Search engine,7
-Compliance,Social media platform,118
-Compliance,Video sharing platform,57
-Compliance,Search engine,50
-Compliance,Messaging platform,25
-Compliance,AI,18
-Compliance,Platforms,18
-Compliance,E-commerce,11
-Compliance,ISP,8
+Community norms and identity,News media,6
+Community norms and identity,Search engine,6
+Compliance,Social media platform,106
+Compliance,Video sharing platform,52
+Compliance,Search engine,43
+Compliance,Messaging platform,24
+Compliance,AI,17
+Compliance,Platforms,14
+Compliance,E-commerce,10
 Compliance,Wikis,7
+Compliance,ISP,6
 Compliance,Marketplace,5
-Constitutive,Social media platform,1
+Constitutive,Social media platform,5
+Constitutive,AI,2
+Constitutive,Video sharing platform,1
+Content moderation as industrial labour,Messaging platform,1
 Content moderation as industrial labour,Dating app,1
 Content moderation as industrial labour,Social media platform,1
-Content moderation as industrial labour,Messaging platform,1
 Debate management,Social media platform,10
-Debate management,Online fora,7
-Debate management,Print media,4
+Debate management,Online fora,6
 Debate management,News media,4
+Debate management,Print media,4
 Debate management,Online learning platform,3
 Debate management,Video sharing platform,2
-Debate management,Blog,1
 Debate management,Wikis,1
-Debate management,Political website,1
+Debate management,Blog,1
 Debate management,Messaging platform,1
+Debate management,AI,1
 Gatekeeping (selection theory),Video sharing platform,1
-Moderating extremism,Social media platform,13
+Infrastructural,Social media platform,2
+Infrastructural,Video sharing platform,2
+Infrastructural,Search engine,2
+Infrastructural,Fanfiction platform,1
+Infrastructural,ISP,1
+Infrastructural,App store,1
+Infrastructural,Messaging platform,1
+Infrastructural,Alt-tech,1
+Infrastructural,Infrastructure,1
+Infrastructural,Payment platform,1
+Moderating extremism,Social media platform,12
 Moderating extremism,Video sharing platform,11
-Moderating extremism,Imageboard,4
 Moderating extremism,Alt-tech,4
+Moderating extremism,Imageboard,4
 Moderating extremism,Messaging platform,3
-Moderating extremism,Platforms,1
 Moderating extremism,AI,1
+Moderating extremism,Platforms,1
 Moderating extremism,App,1
 Moderating extremism,News aggregator,1
-Moderating extremism,ISP,1
+Moderating extremism,Encrypted messaging,1
 Moderation as industrial labour,Social media platform,28
 Moderation as industrial labour,Video sharing platform,16
 Moderation as industrial labour,Search engine,8
@@ -87,33 +96,33 @@ Moderation as industrial labour,Messaging platform,3
 Moderation as industrial labour,Adult content platform,1
 Moderation as industrial labour,Web,1
 Moderation as industrial labour,Crowdsourcing platform,1
-Platform governance,Social media platform,313
-Platform governance,Video sharing platform,151
-Platform governance,Search engine,73
-Platform governance,Messaging platform,61
-Platform governance,AI,28
+Platform governance,Social media platform,304
+Platform governance,Video sharing platform,149
+Platform governance,Search engine,72
+Platform governance,Messaging platform,59
+Platform governance,AI,27
 Platform governance,Platforms,25
 Platform governance,Wikis,20
-Platform governance,ISP,19
+Platform governance,ISP,18
 Platform governance,Alt-tech,11
-Platform governance,Decentralized social media,10
-Platform regulation,Social media platform,52
-Platform regulation,Video sharing platform,27
+Platform governance,E-commerce,9
+Platform regulation,Social media platform,51
+Platform regulation,Video sharing platform,26
 Platform regulation,Messaging platform,18
-Platform regulation,Search engine,18
+Platform regulation,Search engine,17
 Platform regulation,AI,9
-Platform regulation,Platforms,7
 Platform regulation,ISP,6
+Platform regulation,Platforms,6
 Platform regulation,Marketplace,3
 Platform regulation,Short video platform,3
 Platform regulation,Imageboard,2
-Regulative,Social media platform,28
-Regulative,Video sharing platform,16
-Regulative,Search engine,11
-Regulative,Messaging platform,8
-Regulative,Print media,5
-Regulative,ISP,4
-Regulative,Television,3
-Regulative,Wikis,2
-Regulative,Radio,2
-Regulative,Platforms,2
+Regulative,Social media platform,63
+Regulative,Video sharing platform,34
+Regulative,Search engine,23
+Regulative,Messaging platform,10
+Regulative,Platforms,10
+Regulative,Print media,8
+Regulative,ISP,6
+Regulative,Television,4
+Regulative,E-commerce,3
+Regulative,Wikis,3

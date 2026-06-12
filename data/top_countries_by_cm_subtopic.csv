@@ -1,59 +1,63 @@
 Sub-topic,Country,Quantity
 Advisory classification / audience segmentation,Canada,1
-Brand safety,United States,20
-Brand safety,European Union,12
-Brand safety,United Kingdom,9
-Brand safety,Germany,8
-Brand safety,Brazil,7
-Brand safety,France,5
+Brand safety,United States,18
+Brand safety,European Union,8
+Brand safety,Brazil,6
+Brand safety,Germany,6
+Brand safety,United Kingdom,6
 Brand safety,China,4
-Brand safety,Spain,3
+Brand safety,Philippines,2
 Brand safety,Thailand,2
 Brand safety,Indonesia,2
-Censorship,United States,126
-Censorship,European Union,64
-Censorship,Brazil,37
-Censorship,Germany,30
-Censorship,France,23
-Censorship,United Kingdom,21
-Censorship,Italy,18
-Censorship,China,16
-Censorship,India,14
-Censorship,Russia,12
-Common carriage / neutral conduit,United States,5
+Brand safety,Spain,2
+Censorship,United States,108
+Censorship,European Union,55
+Censorship,Brazil,30
+Censorship,Germany,26
+Censorship,France,21
+Censorship,United Kingdom,19
+Censorship,Italy,15
+Censorship,China,13
+Censorship,India,13
+Censorship,Russia,11
 Common carriage / neutral conduit,European Union,4
+Common carriage / neutral conduit,United States,4
 Common carriage / neutral conduit,Italy,1
 Common carriage / neutral conduit,Egypt,1
-Common carriage / neutral conduit,Morocco,1
-Common carriage / neutral conduit,Jordan,1
 Common carriage / neutral conduit,Israel,1
 Common carriage / neutral conduit,Algeria,1
+Common carriage / neutral conduit,Saudi Arabia,1
+Common carriage / neutral conduit,Morocco,1
+Common carriage / neutral conduit,Jordan,1
 Common carriage / neutral conduit,Palestine,1
-Common carriage / neutral conduit,Tunisia,1
-Community norms and identity,United States,60
-Community norms and identity,France,20
-Community norms and identity,Germany,15
+Community norms and identity,United States,57
+Community norms and identity,France,18
+Community norms and identity,Germany,14
 Community norms and identity,Brazil,14
-Community norms and identity,United Kingdom,11
+Community norms and identity,United Kingdom,10
 Community norms and identity,European Union,10
-Community norms and identity,Canada,7
 Community norms and identity,Italy,6
+Community norms and identity,Canada,6
 Community norms and identity,India,6
 Community norms and identity,Spain,5
-Compliance,European Union,77
-Compliance,United States,54
-Compliance,Brazil,32
-Compliance,Germany,31
-Compliance,United Kingdom,19
-Compliance,France,16
-Compliance,Italy,15
-Compliance,China,10
-Compliance,Australia,9
-Compliance,Russia,8
-Constitutive,United States,1
+Compliance,European Union,70
+Compliance,United States,46
+Compliance,Germany,30
+Compliance,Brazil,29
+Compliance,United Kingdom,17
+Compliance,France,14
+Compliance,Italy,14
+Compliance,China,9
+Compliance,Australia,7
+Compliance,Canada,7
+Constitutive,United States,2
+Constitutive,Ireland,1
+Constitutive,Germany,1
+Constitutive,China,1
+Constitutive,France,1
 Content moderation as industrial labour,Switzerland,1
-Debate management,Brazil,11
 Debate management,United States,10
+Debate management,Brazil,10
 Debate management,Spain,4
 Debate management,Argentina,4
 Debate management,Portugal,4
@@ -62,19 +66,22 @@ Debate management,France,3
 Debate management,Colombia,2
 Debate management,United Kingdom,2
 Debate management,Mexico,2
-Gatekeeping (selection theory),United States,1
 Gatekeeping (selection theory),Qatar,1
 Gatekeeping (selection theory),United Kingdom,1
-Moderating extremism,United States,10
-Moderating extremism,European Union,7
-Moderating extremism,United Kingdom,4
+Gatekeeping (selection theory),United States,1
+Infrastructural,United States,2
+Infrastructural,France,1
+Infrastructural,European Union,1
+Moderating extremism,United States,9
+Moderating extremism,European Union,6
 Moderating extremism,Canada,3
+Moderating extremism,United Kingdom,3
 Moderating extremism,France,2
+Moderating extremism,New Zealand,2
 Moderating extremism,Italy,2
+Moderating extremism,Sweden,2
 Moderating extremism,Austria,2
 Moderating extremism,Germany,2
-Moderating extremism,Sweden,2
-Moderating extremism,New Zealand,2
 Moderation as industrial labour,United States,20
 Moderation as industrial labour,India,7
 Moderation as industrial labour,Philippines,6
@@ -85,17 +92,17 @@ Moderation as industrial labour,Canada,4
 Moderation as industrial labour,China,3
 Moderation as industrial labour,United Kingdom,2
 Moderation as industrial labour,Mexico,2
-Platform governance,United States,179
-Platform governance,Brazil,111
-Platform governance,European Union,83
-Platform governance,Germany,53
-Platform governance,United Kingdom,36
-Platform governance,France,29
+Platform governance,United States,174
+Platform governance,Brazil,110
+Platform governance,European Union,81
+Platform governance,Germany,50
+Platform governance,United Kingdom,35
+Platform governance,France,28
 Platform governance,India,26
-Platform governance,Australia,26
+Platform governance,Australia,25
 Platform governance,China,24
-Platform governance,Italy,24
-Platform regulation,European Union,32
+Platform governance,Italy,23
+Platform regulation,European Union,31
 Platform regulation,Brazil,26
 Platform regulation,United States,20
 Platform regulation,Germany,12
@@ -105,13 +112,13 @@ Platform regulation,China,4
 Platform regulation,India,4
 Platform regulation,Spain,4
 Platform regulation,Italy,3
-Regulative,United States,16
-Regulative,European Union,9
-Regulative,Germany,8
-Regulative,United Kingdom,8
-Regulative,China,7
-Regulative,Italy,7
-Regulative,France,7
-Regulative,Brazil,6
-Regulative,Russia,5
-Regulative,Australia,4
+Regulative,United States,38
+Regulative,European Union,26
+Regulative,Brazil,15
+Regulative,Germany,14
+Regulative,France,13
+Regulative,United Kingdom,12
+Regulative,China,9
+Regulative,Italy,9
+Regulative,Australia,7
+Regulative,Russia,7

@@ -581,11 +581,17 @@ def main() -> None:
         # Other Types' Sub-category cells should be empty regardless of what
         # the LLM emitted there.
         sub_cat = (r.get("Sub-category") or "").strip() if ty == "WHAT" else ""
+        # Publication-level WHAT Sub-categories, scoped to the item's Topic.
+        # WHO/HOW/WHY findings carry no Sub-category of their own; the client
+        # filters them via this pipe-joined list so a "WHY within Censorship"
+        # view can still be narrowed to e.g. Regulative-censorship items.
+        item_subs = " | ".join(sorted(
+            item_subtopic_scoped.get((t, top), Counter()).keys()))
         row = [
             item_cit.get(t, 0),
             year_of(t) or "",
             disc_of(t),
-            top, ty, cat, sub_cat,
+            top, ty, cat, sub_cat, item_subs,
             quote,
             (r.get("Page") or "").strip(),
             item_title.get(t, ""),
@@ -601,7 +607,7 @@ def main() -> None:
             if sub:
                 bee_s.append([
                     item_cit.get(t, 0), year_of(t) or "", disc_of(t),
-                    sub, ty, cat, sub_cat,
+                    sub, ty, cat, sub_cat, item_subs,
                     quote,
                     (r.get("Page") or "").strip(),
                     item_title.get(t, ""), item_author.get(t, ""),
@@ -615,16 +621,141 @@ def main() -> None:
     bee_s.sort(key=lambda r: (r[3], r[4], r[5], str(r[1]), -r[0]))
     write_csv(OUT / "beeswarm_by_topic.csv",
               ["Citations", "Publication Year", "Discipline", "Topic", "Type",
-               "Category", "Sub-category",
+               "Category", "Sub-category", "Item Sub-categories",
                "Mentioned item", "Page", "Title", "Author", "Key",
                "Language", "Media categories", "Countries"],
               bee_t)
     write_csv(OUT / "beeswarm_by_cm_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Sub-topic", "Type",
-               "Category", "Sub-category",
+               "Category", "Sub-category", "Item Sub-categories",
                "Mentioned item", "Page", "Title", "Author", "Key",
                "Language", "Media categories", "Countries"],
               bee_s)
+
+    # ── 10-bis. terms_by_category.csv — distinctive & shared vocabularies ──
+    # For the Conclusions figure: per WHAT category (item Topic), the 10
+    # uni/bi-gram terms most TYPICAL of that category's "Mentioned item"
+    # quotes (log-odds with informative Dirichlet prior vs the rest of the
+    # corpus), plus the 10 terms that most CONVERGE across categories
+    # (present in most categories, ranked by cross-category evenness).
+    import math
+    STOP = set("""
+      a about above after again against all also among an and any are as at
+      be because been before being below between both but by can could did do
+      does doing down during each few for from further had has have having he
+      her here hers herself him himself his how i if in into is it its itself
+      just like may me might more most must my myself no nor not now of off on
+      once only or other our ours ourselves out over own same she should so
+      some such than that the their theirs them themselves then there these
+      they this those through to too under until up very was we were what when
+      where which while who whom why will with would you your yours yourself
+      one two three new first second using used use however thus also well
+      within without upon would could many much may often see eg ie et al
+      la le les de des du un une et en dans sur pour par que qui ne pas plus
+      au aux ce cette ces son sa ses il elle ils elles nous vous leur lui mais
+      ou où donc car si comme être avoir fait été tout tous toute toutes
+      el los las uno una unos unas y o pero como para por con sin sobre entre
+      su sus este esta estos estas ese esa esos esas lo al del se les más muy
+      es son fue eran ser estar hay han ha sido también ya cuando donde porque
+      o os as um uma uns umas e ou mas não com sem sobre entre seu sua seus
+      suas este esta isto esse essa isso aquele aquela aquilo se ao dos das
+      no na nos nas é são foi eram ser estar há têm tem sido também já
+      der die das ein eine einer eines dem den und oder aber nicht mit von zu
+      für auf als auch wie bei nach aus durch über unter gegen ohne um an
+      ist sind war waren sein haben hat hatte werden wird wurde
+      il lo la i gli le un uno una e o ma non con su per tra fra di da in
+      che chi cui questo questa questi queste quello quella è sono era erano
+      come modo più anche perché essere stato alla alle agli allo nel nella
+      pode forma assim ainda mesmo outros outras todo toda
+    """.split())
+    TOKEN_RE = re.compile(r"[a-zà-öø-ÿœæ]+(?:'[a-z]+)?", re.IGNORECASE)
+
+    def terms_of(text: str):
+        toks = [w.lower() for w in TOKEN_RE.findall(text or "")]
+        toks = [w for w in toks if len(w) >= 3 and w not in STOP]
+        out = list(toks)
+        # bigrams from ADJACENT kept tokens only when both survive filtering
+        # in the original order (approximation: consecutive in `toks`).
+        out += [f"{a} {b}" for a, b in zip(toks, toks[1:])]
+        return out
+
+    cat_terms: dict[str, Counter] = defaultdict(Counter)
+    for r in F:
+        t = item_id(r)
+        if not t:
+            continue
+        top = topic_of(t)
+        if top not in TOPICS:
+            continue
+        for w in terms_of(r.get("Mentioned item") or ""):
+            cat_terms[top][w] += 1
+
+    cats = [c for c in TOPICS if cat_terms.get(c)]
+    tot_by_cat = {c: sum(cat_terms[c].values()) for c in cats}
+    grand = Counter()
+    for c in cats:
+        grand.update(cat_terms[c])
+    grand_total = sum(tot_by_cat.values())
+
+    PRIOR_STRENGTH = 500.0
+    MIN_IN_CAT = 10
+    rows_terms: list[list] = []
+    claimed: set[str] = set()
+    for c in cats:
+        n_i = tot_by_cat[c]
+        n_j = grand_total - n_i
+        scored = []
+        for w, y_i in cat_terms[c].items():
+            if y_i < MIN_IN_CAT:
+                continue
+            y    = grand[w]
+            y_j  = y - y_i
+            a_w  = max(PRIOR_STRENGTH * y / grand_total, 0.01)
+            a0   = PRIOR_STRENGTH
+            try:
+                d = (math.log((y_i + a_w) / (n_i + a0 - y_i - a_w)) -
+                     math.log((y_j + a_w) / (n_j + a0 - y_j - a_w)))
+                v = 1.0 / (y_i + a_w) + 1.0 / (y_j + a_w)
+                z = d / math.sqrt(v)
+            except ValueError:
+                continue
+            scored.append((z, w, y_i))
+        scored.sort(reverse=True)
+        kept = 0
+        words_used: set[str] = set()
+        for z, w, y_i in scored:
+            parts = w.split()
+            # Skip a term whose words are already covered by a higher-ranked
+            # pick (unigram inside an already-kept bigram, or vice versa) so
+            # the top-10 doesn't read the same word twice.
+            if any(p in words_used for p in parts):
+                continue
+            words_used.update(parts)
+            rows_terms.append(["distinctive", c, w, y_i, round(z, 2)])
+            claimed.add(w)
+            kept += 1
+            if kept == 10:
+                break
+
+    # Convergent terms: present in the most categories; ties broken by the
+    # geometric mean of per-category shares (evenness), then total count.
+    shared_scored = []
+    for w, y in grand.items():
+        if y < 50 or w in claimed:
+            continue
+        present = [c for c in cats if cat_terms[c].get(w, 0) > 0]
+        if len(present) < max(2, int(0.75 * len(cats))):
+            continue
+        shares = [cat_terms[c][w] / tot_by_cat[c] for c in present]
+        gm = math.exp(sum(math.log(s) for s in shares) / len(shares))
+        shared_scored.append((len(present), gm, y, w))
+    shared_scored.sort(reverse=True)
+    for npres, gm, y, w in shared_scored[:10]:
+        rows_terms.append(["shared", "(all categories)", w, y, npres])
+
+    write_csv(OUT / "terms_by_category.csv",
+              ["Kind", "Topic", "Term", "Count", "Score"],
+              rows_terms)
 
     # ── 11–14. Network CSVs (Topic-level and CM Sub-topic-level) ────────────
     # Five layers — we emit edges for EVERY ordered layer pair (GROUP→WHO,

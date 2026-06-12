@@ -1128,6 +1128,25 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   stroke: var(--paper); stroke-width: 3px;
 }
 
+/* ─── Figure 14: radial convergence map (terms) ───────────────────────── */
+
+/* Term rows read as text, not chart labels: Caslon, lowercase, no tracking. */
+.chart.termsmap text.term {
+  font-family: var(--serif);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 13.5px;
+  fill: var(--ink);
+}
+.chart.termsmap .tm-head {
+  font-size: 11.5px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+.chart.termsmap .tm-card { transition: opacity 0.15s; }
+.chart.termsmap .tm-card.dim { opacity: 0.15; }
+
 /* ─── Data hover-card (chart elements) ────────────────────────────────── */
 
 #data-card {

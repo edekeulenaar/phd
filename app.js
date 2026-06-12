@@ -1466,24 +1466,39 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   function inMultiCol(r, col, v) {
     return (r[col] || "").split("|").some(x => x.trim() === v);
   }
-  // Re-populate the Sub-category dropdown with the EXACT 'Sub-category' values
-  // from the data. We scope by Topic only (not Type) — so picking a Sub-category
-  // remains available even when the user later switches Type to WHO/HOW/WHY,
-  // and the dropdown stays usable on Type=ALL views.
+  // ── WHAT-view semantics (Topic-grouped beeswarms only) ──────────────────
+  // When Type=WHAT, the figure shows the WHAT findings whose Category IS the
+  // current Topic, grouped by their Sub-category — so "WHAT within
+  // Censorship" lays out Censorship's own sub-categories (Regulative /
+  // Constitutive / Infrastructural …) as the lanes. The Sub-category
+  // dropdown is hidden in that view (the lanes already encode it).
+  // For WHO/HOW/WHY (and ALL), the lanes stay the findings' own Category and
+  // the Sub-category dropdown narrows the view at the PUBLICATION level —
+  // via the 'Item Sub-categories' roll-up of each item's WHAT sub-categories.
+  const isTopicFig = controls.primaryField === "Topic";
+  const curType    = () => (selT ? selT.value : "ALL");
+  const whatView   = () => isTopicFig && curType() === "WHAT";
+  const gfield     = () => (whatView() ? "Sub-category" : groupField);
+
+  // Re-populate the Sub-category dropdown with the EXACT 'Sub-category'
+  // values from the data, scoped to the current Topic's publications.
   function repopulateSubcat() {
     if (!selSC) return;
+    const lab = selSC.closest("label");
+    if (whatView()) {           // lanes are the sub-categories — redundant
+      if (lab) lab.style.display = "none";
+      selSC.value = "ALL";
+      return;
+    }
     const p  = sel1 ? sel1.value : null;
     const scope = all.filter(r => !p || r[controls.primaryField] === p);
-    const vals = [...new Set(scope.map(r => (r["Sub-category"] || "").trim())
-                                  .filter(Boolean))].sort();
+    const vals = [...new Set(scope.flatMap(r =>
+        (r["Item Sub-categories"] || "").split("|").map(x => x.trim())
+      ).filter(Boolean))].sort();
     const prev = selSC.value;
     selSC.innerHTML = '<option value="ALL">All</option>'
       + vals.map(v => `<option value="${v.replace(/"/g, '&quot;')}">${v}</option>`).join("");
     selSC.value = vals.includes(prev) ? prev : "ALL";
-    // Always keep the control visible — its enclosing label may have been
-    // hidden by a prior render or by .fig-control-fixed on inline spawns
-    // (we keep the latter, which is class-driven, intact).
-    const lab = selSC.closest("label");
     if (lab && !lab.classList.contains("fig-control-fixed")) lab.style.display = "";
   }
   if (selSC && !selSC.dataset.bound) {
@@ -1492,7 +1507,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   }
   function subset() {
     const p  = sel1 ? sel1.value : null;
-    const ty = selT ? selT.value : "ALL";
+    const ty = curType();
     const sc = selSC ? selSC.value : "ALL";
     const lg = selL ? selL.value : "ALL";
     const md = selM ? selM.value : "ALL";
@@ -1500,10 +1515,17 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const q  = (selQ ? selQ.value : "").trim().toLowerCase();
     const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
     const [lo, hi] = getYears();
+    const wv = whatView();
     return all.filter(r =>
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
-      (sc === "ALL" || (r["Sub-category"] || "").trim() === sc) &&
+      // WHAT view: only findings whose Category IS the current Topic, and
+      // that carry one of its sub-categories.
+      (!wv || (p && (r.Category || "").trim() === p &&
+               (r["Sub-category"] || "").trim() !== "")) &&
+      // Other views: publication-level WHAT sub-category filter.
+      (wv || sc === "ALL" ||
+        (r["Item Sub-categories"] || "").split("|").some(x => x.trim() === sc)) &&
       (lg === "ALL" || (r.Language || "und") === lg) &&
       (md === "ALL" || inMultiCol(r, "Media categories", md)) &&
       (cn === "ALL" || inMultiCol(r, "Countries", cn)) &&
@@ -1519,7 +1541,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     if (sortMode === "alpha-asc")  return groups.slice().sort();
     if (sortMode === "alpha-desc") return groups.slice().sort().reverse();
     if (sortMode === "qty-desc" || sortMode === "qty-asc") {
-      const cnt = d3.rollup(data, v => v.length, r => r[groupField] || "(uncategorized)");
+      const cnt = d3.rollup(data, v => v.length, r => r[gfield()] || "(uncategorized)");
       return groups.slice().sort((a, b) =>
         (cnt.get(b) - cnt.get(a)) * (sortMode === "qty-desc" ? 1 : -1));
     }
@@ -1527,7 +1549,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       const yr = d3.rollup(data,
         v => sortMode === "earliest" ? d3.min(v, r => +r["Publication Year"])
                                      : d3.max(v, r => +r["Publication Year"]),
-        r => r[groupField] || "(uncategorized)");
+        r => r[gfield()] || "(uncategorized)");
       return groups.slice().sort((a, b) =>
         sortMode === "earliest" ? (yr.get(a) - yr.get(b)) : (yr.get(b) - yr.get(a)));
     }
@@ -1536,7 +1558,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
 
   function bee(data) {
     const color = topDisciplines(data);
-    const groups = sortGroups([...new Set(data.map(r => r[groupField] || "(uncategorized)"))], data);
+    const groups = sortGroups([...new Set(data.map(r => r[gfield()] || "(uncategorized)"))], data);
     const W = Math.max(720, host.node().clientWidth || 880);
     const ROW_H = 60;
     const H = Math.max(340, groups.length * ROW_H + 110);
@@ -1569,7 +1591,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
         .attr("y1", g => yScale(g)).attr("y2", g => yScale(g));
     const dots = svg.append("g").selectAll("circle").data(data).join("circle")
         .attr("cx", d => x(+d["Publication Year"]))
-        .attr("cy", d => yScale(d[groupField] || "(uncategorized)") + jit())
+        .attr("cy", d => yScale(d[gfield()] || "(uncategorized)") + jit())
         .attr("r",  d => rScale(+d.Citations || 0))
         .attr("fill", d => color(d.Discipline))
         .attr("opacity", 0.68)
@@ -1643,7 +1665,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
 
   function gantt(data) {
     const color  = topDisciplines(data);
-    const groups = sortGroups([...new Set(data.map(r => r[groupField] || "(uncategorized)"))], data);
+    const groups = sortGroups([...new Set(data.map(r => r[gfield()] || "(uncategorized)"))], data);
     const [y0, y1] = d3.extent(data, r => +r["Publication Year"]);
     const years = d3.range(y0, y1 + 1);
     const cells = d3.rollups(data,
@@ -1652,7 +1674,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
         const dom = [...byD.entries()].sort((a, b) => b[1] - a[1])[0][0];
         return { n: v.length, disc: dom };
       },
-      r => r[groupField] || "(uncategorized)",
+      r => r[gfield()] || "(uncategorized)",
       r => +r["Publication Year"]);
 
     const W = Math.max(720, host.node().clientWidth || 880);
@@ -1747,6 +1769,101 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     }));
   }
   render();
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   8-bis. Figure 14 — radial convergence map of distinctive vs shared terms.
+   An 8-set Venn isn't drawable, so the "or similar": one card per WHAT
+   category with its top-10 distinctive terms, arranged around a central
+   disc holding the top-10 terms shared most evenly across categories.
+   ─────────────────────────────────────────────────────────────────────── */
+
+async function renderTermsVenn() {
+  const rows = await loadCSV("data/terms_by_category.csv");
+  const host = d3.select("#terms-venn");
+  host.selectAll("*").remove();
+
+  const dist = rows.filter(r => r.Kind === "distinctive");
+  const shared = rows.filter(r => r.Kind === "shared");
+  const cats = [...new Set(dist.map(r => r.Topic))];
+  const byCat = d3.group(dist, r => r.Topic);
+  const color = makeSubtopicScale(cats);
+
+  const CARD_W = 250, LINE_H = 16.5, PAD = 12, HEAD_H = 26;
+  const cardH = c => HEAD_H + PAD * 1.6 + (byCat.get(c) || []).length * LINE_H;
+  const W = 1180, H = 1010, cx = W / 2, cy = H / 2;
+  const rx = 410, ry = 380;
+
+  const svg = host.append("svg").attr("class", "chart termsmap")
+    .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
+    .attr("width", "100%");
+
+  // Connector lines first (under everything else).
+  const angles = cats.map((c, i) => -Math.PI / 2 + (2 * Math.PI * i) / cats.length);
+  const linesG = svg.append("g");
+
+  // Central shared disc.
+  const R = 158;
+  svg.append("circle")
+    .attr("cx", cx).attr("cy", cy).attr("r", R)
+    .attr("fill", "#ffffff").attr("stroke", "#2a2724").attr("stroke-width", 1.2);
+  svg.append("text").attr("class", "tm-head")
+    .attr("x", cx).attr("y", cy - R + 30)
+    .attr("text-anchor", "middle")
+    .text("Shared across categories");
+  const fmtN = d3.format(",");
+  svg.append("g").selectAll("text.term").data(shared).join("text")
+    .attr("class", "term")
+    .attr("x", cx).attr("y", (d, i) => cy - R + 52 + i * (LINE_H + 8.5))
+    .attr("text-anchor", "middle")
+    .text(d => `${d.Term}  ·  ${fmtN(+d.Count)}`)
+    .append("title").text(d => `present in ${d.Score} categories · ${fmtN(+d.Count)} occurrences`);
+
+  // Category cards around the ellipse.
+  cats.forEach((c, i) => {
+    const a = angles[i];
+    const px = cx + rx * Math.cos(a);
+    const py = cy + ry * Math.sin(a);
+    const h  = cardH(c);
+    const x0 = px - CARD_W / 2, y0 = py - h / 2;
+    linesG.append("line")
+      .attr("x1", cx + (R + 4) * Math.cos(a)).attr("y1", cy + (R + 4) * Math.sin(a))
+      .attr("x2", px).attr("y2", py)
+      .attr("stroke", color(c)).attr("stroke-width", 1.4)
+      .attr("stroke-dasharray", "3 4").attr("opacity", 0.75);
+    const g = svg.append("g").attr("class", "tm-card");
+    g.append("rect")
+      .attr("x", x0).attr("y", y0).attr("width", CARD_W).attr("height", h)
+      .attr("rx", 6)
+      .attr("fill", "#ffffff").attr("stroke", color(c)).attr("stroke-width", 1.6);
+    g.append("rect")
+      .attr("x", x0).attr("y", y0).attr("width", CARD_W).attr("height", HEAD_H)
+      .attr("rx", 6)
+      .attr("fill", color(c)).attr("opacity", 0.18);
+    g.append("text").attr("class", "tm-head")
+      .attr("x", x0 + CARD_W / 2).attr("y", y0 + HEAD_H - 8)
+      .attr("text-anchor", "middle")
+      .text(c.length > 30 ? c.slice(0, 28) + "…" : c)
+      .append("title").text(c);
+    g.selectAll("text.term").data(byCat.get(c) || []).join("text")
+      .attr("class", "term")
+      .attr("x", x0 + PAD).attr("y", (d, j) => y0 + HEAD_H + PAD + (j + 0.7) * LINE_H)
+      .text(d => `${d.Term}  ·  ${fmtN(+d.Count)}`)
+      .append("title").text(d => `log-odds z = ${d.Score}`);
+  });
+
+  figKey.register("fig-terms-venn", {
+    title: "WHAT category",
+    legend: cats.map(c => ({ label: c, color: color(c) })),
+    onHighlight(name) {
+      svg.selectAll(".tm-card")
+        .classed("dim", function () {
+          if (!name) return false;
+          const t = d3.select(this).select(".tm-head title").text();
+          return t !== name;
+        });
+    },
+  });
 }
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -2715,6 +2832,9 @@ window.addEventListener("DOMContentLoaded", async () => {
       hostSel: "#alluvial-cm-who-how",
       figId: "fig-cm-who-how",
     }));
+
+  // Figure 14 — distinctive vs shared vocabularies (radial convergence map).
+  await safe("terms map", "#terms-venn")(() => renderTermsVenn());
 
   // Figure 1 — Language → Country → (Topic | CM Sub-topic) alluvial.
   // The "by Topic" tab uses every item in the corpus; the "by CM Sub-topic"

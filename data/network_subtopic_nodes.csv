@@ -1,50 +1,51 @@
 Type,Category,n_items
-GROUP,Platform governance,336
-GROUP,Censorship,207
-GROUP,Community norms and identity,135
-GROUP,Compliance,125
-GROUP,Platform regulation,55
-GROUP,Debate management,34
-GROUP,Brand safety,32
+GROUP,Platform governance,327
+GROUP,Censorship,176
+GROUP,Community norms and identity,128
+GROUP,Compliance,111
+GROUP,Regulative,67
+GROUP,Platform regulation,54
+GROUP,Debate management,33
 GROUP,Moderation as industrial labour,31
-GROUP,Regulative,29
-GROUP,Moderating extremism,16
-GROUP,Common carriage / neutral conduit,7
+GROUP,Brand safety,27
+GROUP,Moderating extremism,15
+GROUP,Common carriage / neutral conduit,6
+GROUP,Constitutive,5
+GROUP,Infrastructural,2
 GROUP,Advisory classification / audience segmentation,1
-GROUP,Constitutive,1
 GROUP,Content moderation as industrial labour,1
 GROUP,Gatekeeping (selection theory),1
-HOW,Removal,762
-HOW,Filtering,696
-HOW,Review,683
-HOW,Enframing,631
-HOW,Monitoring,452
-HOW,Marginalisation,415
-HOW,Profiling,384
-HOW,Labeling,380
-HOW,Blocking,371
-HOW,Deplatforming,343
-HOW,Metamoderation,236
-HOW,Restricting access,235
-HOW,Disclosure,234
-HOW,Economic,196
-HOW,Correcting,186
-HOW,Rating,146
-HOW,Self-censorship,122
-HOW,Modification,111
-HOW,Prompting,86
-HOW,Removal from circulation,74
-HOW,Redirection,70
-HOW,Intelligibility,55
+HOW,Removal,742
+HOW,Filtering,675
+HOW,Review,663
+HOW,Enframing,617
+HOW,Monitoring,446
+HOW,Marginalisation,407
+HOW,Labeling,376
+HOW,Profiling,372
+HOW,Blocking,360
+HOW,Deplatforming,334
+HOW,Metamoderation,234
+HOW,Disclosure,232
+HOW,Restricting access,229
+HOW,Economic,189
+HOW,Correcting,182
+HOW,Rating,144
+HOW,Self-censorship,115
+HOW,Modification,106
+HOW,Prompting,85
+HOW,Removal from circulation,73
+HOW,Redirection,68
+HOW,Intelligibility,54
 HOW,Obfuscation,52
-HOW,Coersive,52
-HOW,Interiorisation,44
-HOW,Agenda setting,39
-HOW,Balancing,39
-HOW,Coherence,36
-HOW,Intermediate,36
-HOW,Scheduling,30
-HOW,Bridging,29
+HOW,Coersive,51
+HOW,Interiorisation,40
+HOW,Agenda setting,38
+HOW,Balancing,38
+HOW,Coherence,35
+HOW,Intermediate,35
+HOW,Scheduling,29
+HOW,Bridging,28
 HOW,Licensing,27
 HOW,Fairness,15
 HOW,Inclusion,13
@@ -63,90 +64,89 @@ HOW,Task delegation,1
 HOW,Restrictiong access,1
 HOW,Transparencyreport.google.com सरकार-278? nope,1
 HOW,Reporting,1
-HOW,Political censorship,1
 HOW,Transparency in moderation/reporting,1
 HOW,Warning,1
 HOW,Mediators,1
-WHAT,Content moderation,1011
-WHAT,Censorship,346
-WHAT,Media moderation,153
-WHAT,Debate management,111
-WHAT,Other,63
+WHAT,Content moderation,985
+WHAT,Censorship,320
+WHAT,Media moderation,148
+WHAT,Debate management,109
+WHAT,Other,62
 WHAT,Media regulation,26
 WHAT,Algorithmic sorting,4
 WHAT,Professional / industry self-governance,1
-WHO,Platforms,840
-WHO,Algorithmic moderation systems,564
-WHO,Users,462
-WHO,Content moderators / BPO workforces,310
-WHO,Government agencies,256
-WHO,Legislators,182
-WHO,Courts and prosecutors,180
-WHO,Regulators,165
-WHO,Platform oversight bodies,151
-WHO,"Public-private partnerships (""free-speech triangle"")",116
+WHO,Platforms,820
+WHO,Algorithmic moderation systems,552
+WHO,Users,451
+WHO,Content moderators / BPO workforces,301
+WHO,Government agencies,245
+WHO,Legislators,177
+WHO,Courts and prosecutors,173
+WHO,Regulators,164
+WHO,Platform oversight bodies,149
+WHO,"Public-private partnerships (""free-speech triangle"")",110
 WHO,Fact-checkers and verification units,98
-WHO,Other,81
-WHO,Editors,68
+WHO,Other,80
 WHO,Civic advocacy & moral-pressure groups,66
-WHO,Advertisers,56
-WHO,Journalists,54
-WHO,"Schools, curricula, librarians, academia",50
-WHO,Police / intelligence services,43
+WHO,Editors,64
+WHO,Advertisers,55
+WHO,Journalists,50
+WHO,"Schools, curricula, librarians, academia",49
+WHO,Police / intelligence services,41
 WHO,Pre-platform moderators,38
 WHO,Cloud / infrastructure providers,32
 WHO,Public-health bodies (NGOs / WHO),32
 WHO,Broadcasting regulators,32
-WHO,Private firms,27
-WHO,Political groups,27
-WHO,Online mobs / pile-ons,23
+WHO,Private firms,26
+WHO,Political groups,25
 WHO,App stores,23
-WHO,Media owners,22
+WHO,Online mobs / pile-ons,22
+WHO,Media owners,21
 WHO,Debate moderators,15
-WHO,Mediators,14
 WHO,AI labs as moderators,13
-WHO,Censorship boards or agencies,9
+WHO,Mediators,13
+WHO,Censorship boards or agencies,8
 WHO,Press councils & ombudsmen,8
 WHO,RLHF annotators,7
-WHO,Self-censorship (analytical),7
 WHO,Payment processors / financial infrastructure,6
+WHO,Self-censorship (analytical),6
 WHO,Distributors & booksellers,4
 WHO,Religious organisations,4
 WHO,News agencies / wire services,4
-WHO,Religious authorities,3
 WHO,Military censors,3
+WHO,Religious authorities,2
 WHO,Employers,1
 WHO,Ethical investors / shareholders,1
-WHY,Compliance,536
-WHY,Misinformation or disinformation as harm,507
-WHY,Brand safety,474
-WHY,Harm principles and hate speech regulation,470
-WHY,"Privacy, reputation & dignity",341
-WHY,Social cohesion,339
-WHY,Coherence,293
-WHY,Protection of children,288
-WHY,Professional / industry self-governance,265
-WHY,State security,247
-WHY,Political control,229
-WHY,Economic pressure,121
-WHY,Harm reduction / public health,113
-WHY,News values / editorial judgment,98
-WHY,Democratic self-defence,83
-WHY,Obscenity and decency,59
+WHY,Compliance,523
+WHY,Misinformation or disinformation as harm,499
+WHY,Brand safety,460
+WHY,Harm principles and hate speech regulation,457
+WHY,"Privacy, reputation & dignity",331
+WHY,Social cohesion,331
+WHY,Coherence,286
+WHY,Protection of children,285
+WHY,Professional / industry self-governance,261
+WHY,State security,240
+WHY,Political control,222
+WHY,Economic pressure,117
+WHY,Harm reduction / public health,110
+WHY,News values / editorial judgment,97
+WHY,Democratic self-defence,82
+WHY,Obscenity and decency,58
 WHY,Alignment with human values,58
-WHY,Ideological consolidation,45
 WHY,Consumer protection / fair competition,42
+WHY,Ideological consolidation,41
 WHY,Clear and present danger,32
 WHY,Conflict transformation,26
 WHY,Other,26
-WHY,Genocide prevention / dangerous speech,21
+WHY,Genocide prevention / dangerous speech,20
 WHY,Religious moral authority,15
 WHY,Fairness,8
 WHY,Fair trial / administration of justice,7
 WHY,Wartime necessity,6
 WHY,Freedom of speech or information,5
 WHY,Coersive,4
-WHY,State secrets,4
+WHY,State secrets,3
 WHY,Public interest,3
 WHY,Censorship,2
 WHY,Community norms and identity,1
