@@ -577,11 +577,15 @@ def main() -> None:
         quote = (r.get("Mentioned item") or "").strip()
         if len(quote) > QUOTE_PREVIEW_MAX:
             quote = quote[:QUOTE_PREVIEW_MAX - 1].rstrip() + "…"
+        # Per-finding Sub-category: only WHAT findings carry one in the taxonomy.
+        # Other Types' Sub-category cells should be empty regardless of what
+        # the LLM emitted there.
+        sub_cat = (r.get("Sub-category") or "").strip() if ty == "WHAT" else ""
         row = [
             item_cit.get(t, 0),
             year_of(t) or "",
             disc_of(t),
-            top, ty, cat,
+            top, ty, cat, sub_cat,
             quote,
             (r.get("Page") or "").strip(),
             item_title.get(t, ""),
@@ -597,7 +601,7 @@ def main() -> None:
             if sub:
                 bee_s.append([
                     item_cit.get(t, 0), year_of(t) or "", disc_of(t),
-                    sub, ty, cat,
+                    sub, ty, cat, sub_cat,
                     quote,
                     (r.get("Page") or "").strip(),
                     item_title.get(t, ""), item_author.get(t, ""),
@@ -611,12 +615,14 @@ def main() -> None:
     bee_s.sort(key=lambda r: (r[3], r[4], r[5], str(r[1]), -r[0]))
     write_csv(OUT / "beeswarm_by_topic.csv",
               ["Citations", "Publication Year", "Discipline", "Topic", "Type",
-               "Category", "Mentioned item", "Page", "Title", "Author", "Key",
+               "Category", "Sub-category",
+               "Mentioned item", "Page", "Title", "Author", "Key",
                "Language", "Media categories", "Countries"],
               bee_t)
     write_csv(OUT / "beeswarm_by_cm_subtopic.csv",
               ["Citations", "Publication Year", "Discipline", "Sub-topic", "Type",
-               "Category", "Mentioned item", "Page", "Title", "Author", "Key",
+               "Category", "Sub-category",
+               "Mentioned item", "Page", "Title", "Author", "Key",
                "Language", "Media categories", "Countries"],
               bee_s)
 

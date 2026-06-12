@@ -19,11 +19,11 @@ Censorship,Decentralized social media,4
 Censorship,Print media,4
 Common carriage / neutral conduit,Social media platform,7
 Common carriage / neutral conduit,Video sharing platform,4
-Common carriage / neutral conduit,Platforms,3
 Common carriage / neutral conduit,E-commerce,3
+Common carriage / neutral conduit,Platforms,3
 Common carriage / neutral conduit,Search engine,2
-Common carriage / neutral conduit,Alt-tech,2
 Common carriage / neutral conduit,App store,2
+Common carriage / neutral conduit,Alt-tech,2
 Common carriage / neutral conduit,ISP,1
 Community norms and identity,Social media platform,79
 Community norms and identity,Video sharing platform,21
@@ -44,11 +44,11 @@ Compliance,Platforms,12
 Compliance,E-commerce,7
 Compliance,Wikis,5
 Compliance,ISP,4
-Compliance,Blog,4
+Compliance,Online fora,4
 Constitutive,Social media platform,1
 Constitutive,Video sharing platform,1
-Content moderation as industrial labour,Social media platform,1
 Content moderation as industrial labour,Dating app,1
+Content moderation as industrial labour,Social media platform,1
 Content moderation as industrial labour,Messaging platform,1
 Debate management,Social media platform,33
 Debate management,Print media,11
@@ -61,26 +61,26 @@ Debate management,Online learning platform,3
 Debate management,Search engine,2
 Debate management,Government website,1
 Gatekeeping (selection theory),Social media platform,7
-Gatekeeping (selection theory),Search engine,4
 Gatekeeping (selection theory),Video sharing platform,4
+Gatekeeping (selection theory),Search engine,4
 Gatekeeping (selection theory),AI,2
 Gatekeeping (selection theory),Messaging platform,1
 Gatekeeping (selection theory),Print media,1
-Infrastructural,ISP,1
 Infrastructural,Social media platform,1
-Infrastructural,Search engine,1
 Infrastructural,Video sharing platform,1
+Infrastructural,Search engine,1
+Infrastructural,ISP,1
 Infrastructural,Fanfiction platform,1
 Moderating extremism,Social media platform,12
 Moderating extremism,Video sharing platform,10
-Moderating extremism,Imageboard,5
 Moderating extremism,Alt-tech,5
+Moderating extremism,Imageboard,5
 Moderating extremism,Messaging platform,4
 Moderating extremism,Search engine,2
 Moderating extremism,Platforms,2
 Moderating extremism,AI,1
 Moderating extremism,Encrypted messaging,1
-Moderating extremism,Pastebin,1
+Moderating extremism,E-commerce,1
 Moderation as industrial labour,Social media platform,29
 Moderation as industrial labour,Video sharing platform,14
 Moderation as industrial labour,AI,6
@@ -88,11 +88,11 @@ Moderation as industrial labour,Messaging platform,3
 Moderation as industrial labour,Search engine,3
 Moderation as industrial labour,Platforms,3
 Moderation as industrial labour,Decentralized social media,2
-Moderation as industrial labour,Marketplace,1
 Moderation as industrial labour,E-commerce,1
 Moderation as industrial labour,Video game,1
-Other: not censorship state,Social media platform,1
+Moderation as industrial labour,Marketplace,1
 Other: not censorship state,News media,1
+Other: not censorship state,Social media platform,1
 Platform governance,Social media platform,388
 Platform governance,Video sharing platform,195
 Platform governance,Search engine,86
@@ -113,12 +113,12 @@ Platform regulation,ISP,8
 Platform regulation,E-commerce,6
 Platform regulation,Marketplace,3
 Platform regulation,Short video platform,3
-Public trusteeship / public interest,ISP,1
 Public trusteeship / public interest,Social media platform,1
+Public trusteeship / public interest,Video sharing platform,1
 Public trusteeship / public interest,Mobile device,1
 Public trusteeship / public interest,Search engine,1
 Public trusteeship / public interest,Platforms,1
-Public trusteeship / public interest,Video sharing platform,1
+Public trusteeship / public interest,ISP,1
 Regulative,Social media platform,55
 Regulative,Video sharing platform,28
 Regulative,Search engine,21

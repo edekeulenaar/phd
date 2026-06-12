@@ -909,6 +909,12 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   color: var(--muted);
 }
 .fig-controls label { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* When a URL pins a control's value (Topic/Type on the inline-spawned
+ * beeswarms), the corresponding label drops out of the layout entirely —
+ * the scoped figure no longer needs a chooser for the dimension it's
+ * already fixed to. */
+.fig-controls label.fig-control-fixed { display: none; }
 /* Controls that only make sense in Bump view (e.g. the topic / sub-topic
    filter for Fig 5) are hidden by default; the JS adds `view-bump` to the
    parent `.fig` to reveal them when Bump is the active view. */

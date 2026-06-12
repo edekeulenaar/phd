@@ -1361,14 +1361,19 @@ function bindSankeyTabs({ figSel, topicCsv, cmCsv, dlSel, hostSel, leftField, fi
 async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   const all = await loadCSV(csv);
   const host = d3.select(hostSel);
-  const sel1 = controls.primarySel ? document.getElementById(controls.primarySel) : null;
-  const selT = controls.typeSel    ? document.getElementById(controls.typeSel)    : null;
-  const selS = controls.sortSel    ? document.getElementById(controls.sortSel)    : null;
-  const selL = controls.langSel    ? document.getElementById(controls.langSel)    : null;
-  const selM = controls.mediaSel   ? document.getElementById(controls.mediaSel)   : null;
-  const selC = controls.countrySel ? document.getElementById(controls.countrySel) : null;
-  const selQ = controls.searchSel  ? document.getElementById(controls.searchSel)  : null;
-  const tabs = controls.tabsRoot   ? document.querySelector(controls.tabsRoot)    : null;
+  const sel1  = controls.primarySel ? document.getElementById(controls.primarySel) : null;
+  const selT  = controls.typeSel    ? document.getElementById(controls.typeSel)    : null;
+  // Sub-category filter: populated dynamically from the *current* Topic+Type
+  // slice, so the dropdown only ever lists values that are reachable. In the
+  // inline-spawned figures that fix Topic and Type via URL params, this is
+  // the analyst's main drill-down control.
+  const selSC = controls.subcatSel  ? document.getElementById(controls.subcatSel)  : null;
+  const selS  = controls.sortSel    ? document.getElementById(controls.sortSel)    : null;
+  const selL  = controls.langSel    ? document.getElementById(controls.langSel)    : null;
+  const selM  = controls.mediaSel   ? document.getElementById(controls.mediaSel)   : null;
+  const selC  = controls.countrySel ? document.getElementById(controls.countrySel) : null;
+  const selQ  = controls.searchSel  ? document.getElementById(controls.searchSel)  : null;
+  const tabs  = controls.tabsRoot   ? document.querySelector(controls.tabsRoot)    : null;
 
   if (sel1 && !sel1.options.length) {
     const pv = [...new Set(all.map(r => r[controls.primaryField]))].filter(Boolean).sort();
@@ -1439,18 +1444,44 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   function inMultiCol(r, col, v) {
     return (r[col] || "").split("|").some(x => x.trim() === v);
   }
+  // Re-populate the Sub-category dropdown to reflect what's reachable under
+  // the current Topic+Type slice. For WHAT-typed slices the column source is
+  // 'Sub-category' (the taxonomy's actual sub-categories); for WHO/HOW/WHY
+  // it's 'Category' (acting as the second-level filter for the fixed Type).
+  function repopulateSubcat() {
+    if (!selSC) return;
+    const p  = sel1 ? sel1.value : null;
+    const ty = selT ? selT.value : "ALL";
+    const col = ty === "WHAT" ? "Sub-category" : "Category";
+    const scope = all.filter(r =>
+      (!p || r[controls.primaryField] === p) &&
+      (ty === "ALL" || (r.Type || "").toUpperCase() === ty));
+    const vals = [...new Set(scope.map(r => (r[col] || "").trim())
+                                  .filter(Boolean))].sort();
+    const prev = selSC.value;
+    selSC.innerHTML = '<option value="ALL">All</option>'
+      + vals.map(v => `<option value="${v.replace(/"/g, '&quot;')}">${v}</option>`).join("");
+    selSC.value = vals.includes(prev) ? prev : "ALL";
+  }
+  if (selSC && !selSC.dataset.bound) {
+    selSC.dataset.bound = "1";
+    selSC.addEventListener("change", () => render());
+  }
   function subset() {
     const p  = sel1 ? sel1.value : null;
     const ty = selT ? selT.value : "ALL";
+    const sc = selSC ? selSC.value : "ALL";
     const lg = selL ? selL.value : "ALL";
     const md = selM ? selM.value : "ALL";
     const cn = selC ? selC.value : "ALL";
     const q  = (selQ ? selQ.value : "").trim().toLowerCase();
     const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
     const [lo, hi] = getYears();
+    const subcatCol = ty === "WHAT" ? "Sub-category" : "Category";
     return all.filter(r =>
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
+      (sc === "ALL" || (r[subcatCol] || "").trim() === sc) &&
       (lg === "ALL" || (r.Language || "und") === lg) &&
       (md === "ALL" || inMultiCol(r, "Media categories", md)) &&
       (cn === "ALL" || inMultiCol(r, "Countries", cn)) &&
@@ -1679,9 +1710,11 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     (mode === "gantt" ? gantt : bee)(data);
   }
 
-  if (sel1) sel1.addEventListener("change", render);
-  if (selT) selT.addEventListener("change", render);
+  if (sel1) sel1.addEventListener("change", () => { repopulateSubcat(); render(); });
+  if (selT) selT.addEventListener("change", () => { repopulateSubcat(); render(); });
   if (selS) selS.addEventListener("change", render);
+  // Initial population of the Sub-category dropdown.
+  repopulateSubcat();
   if (tabs) {
     tabs.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
       tabs.querySelectorAll(".tab").forEach(x => {
@@ -2544,6 +2577,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       controls: {
         primarySel: "bee-topic-select", primaryField: "Topic",
         typeSel:    "bee-type-select",
+        subcatSel:  "bee-subcat-select",
         sortSel:    "bee-sort-select",
         langSel:    "bee-lang-select",
         mediaSel:   "bee-media-select",
@@ -2560,6 +2594,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       controls: {
         primarySel: "bee-cm-select", primaryField: "Sub-topic",
         typeSel:    "bee-cm-type-select",
+        subcatSel:  "bee-cm-subcat-select",
         sortSel:    "bee-cm-sort-select",
         langSel:    "bee-cm-lang-select",
         mediaSel:   "bee-cm-media-select",
@@ -2705,28 +2740,30 @@ const FIG_FILTER_MAP = {
     y0:    { sel: "#ys-y0", kind: "input" }, y1: { sel: "#ys-y1", kind: "input" },
   },
   "fig-beeswarm-topics": {
-    topic:    { sel: "#bee-topic-select",   kind: "select" },
-    type:     { sel: "#bee-type-select",    kind: "select" },
-    sort:     { sel: "#bee-sort-select",    kind: "select" },
-    language: { sel: "#bee-lang-select",    kind: "select" },
-    medium:   { sel: "#bee-media-select",   kind: "select" },
-    country:  { sel: "#bee-country-select", kind: "select" },
-    search:   { sel: "#bee-search",         kind: "input" },
-    view:     { sel: "#fig-beeswarm-topics .seg", kind: "tab", attr: "data-mode" },
-    y0:       { sel: "#bt-y0",              kind: "input" },
-    y1:       { sel: "#bt-y1",              kind: "input" },
+    topic:       { sel: "#bee-topic-select",   kind: "select" },
+    type:        { sel: "#bee-type-select",    kind: "select" },
+    subcategory: { sel: "#bee-subcat-select",  kind: "select" },
+    sort:        { sel: "#bee-sort-select",    kind: "select" },
+    language:    { sel: "#bee-lang-select",    kind: "select" },
+    medium:      { sel: "#bee-media-select",   kind: "select" },
+    country:     { sel: "#bee-country-select", kind: "select" },
+    search:      { sel: "#bee-search",         kind: "input" },
+    view:        { sel: "#fig-beeswarm-topics .seg", kind: "tab", attr: "data-mode" },
+    y0:          { sel: "#bt-y0",              kind: "input" },
+    y1:          { sel: "#bt-y1",              kind: "input" },
   },
   "fig-beeswarm-cm": {
-    subtopic: { sel: "#bee-cm-select",         kind: "select" },
-    type:     { sel: "#bee-cm-type-select",    kind: "select" },
-    sort:     { sel: "#bee-cm-sort-select",    kind: "select" },
-    language: { sel: "#bee-cm-lang-select",    kind: "select" },
-    medium:   { sel: "#bee-cm-media-select",   kind: "select" },
-    country:  { sel: "#bee-cm-country-select", kind: "select" },
-    search:   { sel: "#bee-cm-search",         kind: "input" },
-    view:     { sel: "#fig-beeswarm-cm .seg",  kind: "tab", attr: "data-mode" },
-    y0:       { sel: "#bc-y0",                 kind: "input" },
-    y1:       { sel: "#bc-y1",                 kind: "input" },
+    subtopic:    { sel: "#bee-cm-select",         kind: "select" },
+    type:        { sel: "#bee-cm-type-select",    kind: "select" },
+    subcategory: { sel: "#bee-cm-subcat-select",  kind: "select" },
+    sort:        { sel: "#bee-cm-sort-select",    kind: "select" },
+    language:    { sel: "#bee-cm-lang-select",    kind: "select" },
+    medium:      { sel: "#bee-cm-media-select",   kind: "select" },
+    country:     { sel: "#bee-cm-country-select", kind: "select" },
+    search:      { sel: "#bee-cm-search",         kind: "input" },
+    view:        { sel: "#fig-beeswarm-cm .seg",  kind: "tab", attr: "data-mode" },
+    y0:          { sel: "#bc-y0",                 kind: "input" },
+    y1:          { sel: "#bc-y1",                 kind: "input" },
   },
   "fig-media": {
     scope: { sel: '#fig-media [aria-label="Universe"]', kind: "tab", attr: "data-scope" },
@@ -2811,6 +2848,16 @@ function _applyOne(figId, params) {
       el.dispatchEvent(new Event("change", { bubbles: true }));
       el.dispatchEvent(new Event("input",  { bubbles: true }));
     }
+    // Hide controls the URL fixes. Each `<label data-hide-when-fixed="X">`
+    // contains the corresponding control; the label collapses (CSS) as soon
+    // as the URL pins its value. Lets the inline-spawned beeswarms drop the
+    // Topic/Type dropdowns once those are URL-locked, keeping just the
+    // filters that matter to the scoped view (Sub-category, Sort, Language,
+    // Medium, Country, Search, Year-range).
+    if (cfg.kind === "select" && el) {
+      const lab = el.closest(`label[data-hide-when-fixed="${k}"]`);
+      if (lab) lab.classList.add("fig-control-fixed");
+    }
   }
   return { allOk: missing.length === 0, missing };
 }
@@ -2863,6 +2910,7 @@ const FIG_SPAWNERS = {
     controls: {
       primarySel: "bee-topic-select" + sfx, primaryField: "Topic",
       typeSel:    "bee-type-select" + sfx,
+      subcatSel:  "bee-subcat-select" + sfx,
       sortSel:    "bee-sort-select" + sfx,
       langSel:    "bee-lang-select" + sfx,
       mediaSel:   "bee-media-select" + sfx,
@@ -2879,6 +2927,7 @@ const FIG_SPAWNERS = {
     controls: {
       primarySel: "bee-cm-select" + sfx, primaryField: "Sub-topic",
       typeSel:    "bee-cm-type-select" + sfx,
+      subcatSel:  "bee-cm-subcat-select" + sfx,
       sortSel:    "bee-cm-sort-select" + sfx,
       langSel:    "bee-cm-lang-select" + sfx,
       mediaSel:   "bee-cm-media-select" + sfx,
