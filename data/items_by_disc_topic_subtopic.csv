@@ -1,141 +1,138 @@
 Quantity,Discipline,Topic,Sub-topic
-297,communication_media_studies,Content moderation,Platform governance
-182,history_book_history,Censorship,(none)
-138,communication_media_studies,Censorship,(none)
-114,arts_literary_cultural_studies,Censorship,(none)
-97,communication_media_studies,Content moderation,Community norms and identity
-79,public_policy_governance,Content moderation,Platform governance
-66,communication_media_studies,Content moderation,Censorship
-65,communication_media_studies,Debate management,(none)
-62,computer_science_ai,Censorship,(none)
-54,communication_media_studies,Content moderation,Debate management
-53,censorship_studies,Censorship,(none)
-45,political_science_ir,Censorship,(none)
-38,public_policy_governance,Content moderation,Platform regulation
-37,communication_media_studies,Content moderation,Regulative
-35,computer_science_ai,Content moderation,Platform governance
-33,sociology_anthropology,Censorship,(none)
-31,communication_media_studies,Content moderation,Compliance
-31,communication_media_studies,Content moderation,Platform regulation
-31,communication_media_studies,Media moderation,(none)
-31,public_policy_governance,Content moderation,Compliance
-26,communication_media_studies,Content moderation,Moderation as industrial labour
-24,public_policy_governance,Censorship,(none)
-22,education_pedagogy,Censorship,(none)
-21,communication_media_studies,Other,(none)
-18,law_legal_studies,Censorship,(none)
+233,communication_media_studies,Content moderation,Platform governance
+178,history_book_history,Censorship,(none)
+135,communication_media_studies,Content moderation,Censorship
+120,communication_media_studies,Content moderation,Community norms and identity
+116,communication_media_studies,Censorship,(none)
+111,arts_literary_cultural_studies,Censorship,(none)
+80,communication_media_studies,Debate management,(none)
+68,public_policy_governance,Content moderation,Platform governance
+56,computer_science_ai,Censorship,(none)
+51,public_policy_governance,Content moderation,Compliance
+50,censorship_studies,Censorship,(none)
+42,communication_media_studies,Content moderation,Compliance
+42,communication_media_studies,Media moderation,(none)
+40,political_science_ir,Censorship,(none)
+32,sociology_anthropology,Censorship,(none)
+31,public_policy_governance,Content moderation,Censorship
+27,communication_media_studies,Content moderation,Brand safety
+24,communication_media_studies,Content moderation,Moderation as industrial labour
+21,communication_media_studies,Content moderation,Debate management
+21,computer_science_ai,AI alignment,(none)
+21,education_pedagogy,Censorship,(none)
+21,public_policy_governance,Content moderation,Platform regulation
+20,communication_media_studies,Content moderation,Regulative
+19,computer_science_ai,Content moderation,Platform governance
+18,public_policy_governance,Censorship,(none)
+17,communication_media_studies,Content moderation,Platform regulation
+17,communication_media_studies,Other,(none)
+16,law_legal_studies,Content moderation,Compliance
+15,law_legal_studies,Content moderation,Censorship
+14,law_legal_studies,Censorship,(none)
 13,computer_science_ai,Content moderation,Compliance
-13,law_legal_studies,Content moderation,Compliance
-12,law_legal_studies,Content moderation,Platform regulation
+12,communication_media_studies,Content moderation,Moderating extremism
 11,communication_media_studies,(unknown),(none)
+11,communication_media_studies,AI alignment,(none)
 11,political_philosophy,Censorship,(none)
-11,public_policy_governance,Content moderation,Censorship
-11,public_policy_governance,Content moderation,Regulative
-10,communication_media_studies,Content moderation,Moderating extremism
-8,law_legal_studies,Content moderation,Censorship
-8,law_legal_studies,Content moderation,Platform governance
-7,communication_media_studies,Content moderation,Brand safety
+8,law_legal_studies,Content moderation,Platform regulation
+7,computer_science_ai,Content moderation,Community norms and identity
 7,education_pedagogy,Debate management,(none)
-6,political_science_ir,Content moderation,Debate management
-6,public_policy_governance,Content moderation,Debate management
-6,public_policy_governance,Media regulation,(none)
+7,history_book_history,Media moderation,(none)
+7,law_legal_studies,Content moderation,Platform governance
+6,censorship_studies,Content moderation,Censorship
+6,computer_science_ai,Content moderation,Censorship
 6,science_technology_studies,Censorship,(none)
 6,sociology_anthropology,Debate management,(none)
-5,censorship_studies,Content moderation,Censorship
-5,communication_media_studies,Content moderation,Gatekeeping (selection theory)
-5,computer_science_ai,Content moderation,Platform regulation
 5,computer_science_ai,Debate management,(none)
-5,history_book_history,Media moderation,(none)
+5,history_book_history,Media regulation,(none)
+5,political_science_ir,Content moderation,Censorship
 5,political_science_ir,Content moderation,Platform governance
-4,censorship_studies,Content moderation,Regulative
-4,communication_media_studies,Content moderation,Common carriage / neutral conduit
-4,law_legal_studies,Content moderation,Regulative
-4,political_science_ir,Content moderation,Platform regulation
+5,political_science_ir,Content moderation,Platform regulation
+5,public_policy_governance,Debate management,(none)
+5,public_policy_governance,Media moderation,(none)
+4,arts_literary_cultural_studies,Media moderation,(none)
+4,political_philosophy,Debate management,(none)
+4,political_science_ir,Debate management,(none)
+4,public_policy_governance,Content moderation,Brand safety
 4,public_policy_governance,Other,(none)
-4,science_technology_studies,Content moderation,Platform governance
-3,computer_science_ai,Content moderation,Censorship
-3,computer_science_ai,Content moderation,Community norms and identity
+3,censorship_studies,Content moderation,Regulative
+3,communication_media_studies,Content moderation,Common carriage / neutral conduit
+3,communication_media_studies,Media regulation,(none)
 3,education_pedagogy,Content moderation,Community norms and identity
 3,history_book_history,(unknown),(none)
+3,law_legal_studies,Content moderation,Regulative
 3,philosophy_ethics,Debate management,(none)
-3,political_philosophy,Debate management,(none)
-3,public_policy_governance,Debate management,(none)
-3,public_policy_governance,Media moderation,(none)
-3,sociology_anthropology,Content moderation,Moderation as industrial labour
-3,sociology_anthropology,Other,(none)
+3,political_science_ir,Content moderation,Debate management
+3,public_policy_governance,AI alignment,(none)
+3,public_policy_governance,Content moderation,Common carriage / neutral conduit
+3,public_policy_governance,Content moderation,Regulative
+3,public_policy_governance,Media regulation,(none)
+3,science_technology_studies,AI alignment,(none)
+3,sociology_anthropology,Content moderation,Censorship
+2,arts_literary_cultural_studies,Content moderation,Censorship
 2,arts_literary_cultural_studies,Content moderation,Community norms and identity
+2,arts_literary_cultural_studies,Media regulation,(none)
+2,censorship_studies,Content moderation,Compliance
+2,censorship_studies,Media moderation,(none)
 2,computer_science_ai,Content moderation,Debate management
-2,computer_science_ai,Content moderation,Regulative
+2,computer_science_ai,Content moderation,Platform regulation
 2,computer_science_ai,Other,(none)
-2,economics_business_management,Content moderation,Debate management
-2,history_book_history,Content moderation,Debate management
-2,history_book_history,Media regulation,(none)
+2,history_book_history,Debate management,(none)
 2,philosophy_ethics,Censorship,(none)
 2,political_philosophy,Content moderation,Censorship
-2,political_science_ir,Content moderation,Censorship
-2,political_science_ir,Content moderation,Regulative
-2,political_science_ir,Debate management,(none)
+2,political_philosophy,Content moderation,Platform governance
+2,political_science_ir,AI alignment,(none)
+2,political_science_ir,Media regulation,(none)
+2,political_science_ir,Other,(none)
 2,psychology_behavioral_science,Content moderation,Debate management
-2,public_policy_governance,Content moderation,Common carriage / neutral conduit
-2,public_policy_governance,Content moderation,Gatekeeping (selection theory)
+2,public_policy_governance,Content moderation,Debate management
+2,public_policy_governance,Content moderation,Moderation as industrial labour
+2,science_technology_studies,Content moderation,Censorship
 2,sociology_anthropology,(unknown),(none)
+2,sociology_anthropology,Content moderation,Moderation as industrial labour
 2,sociology_anthropology,Media moderation,(none)
+2,sociology_anthropology,Other,(none)
 1,arts_literary_cultural_studies,(unknown),(none)
-1,arts_literary_cultural_studies,Content moderation,Censorship
-1,arts_literary_cultural_studies,Content moderation,Platform governance
-1,arts_literary_cultural_studies,Media moderation,(none)
-1,arts_literary_cultural_studies,Media regulation,(none)
-1,arts_literary_cultural_studies,Other,(none)
-1,censorship_studies,Content moderation,Compliance
+1,censorship_studies,AI alignment,(none)
+1,censorship_studies,Content moderation,Brand safety
 1,censorship_studies,Content moderation,Platform governance
 1,censorship_studies,Content moderation,Platform regulation
-1,censorship_studies,Media moderation,(none)
 1,censorship_studies,Media regulation,(none)
-1,censorship_studies,Other,(none)
 1,communication_media_studies,Content moderation,Constitutive
 1,communication_media_studies,Content moderation,Content moderation as industrial labour
-1,communication_media_studies,Content moderation,Other: not censorship state
-1,communication_media_studies,Content moderation,Public trusteeship / public interest
-1,communication_media_studies,Media regulation,(none)
+1,communication_media_studies,Content moderation,Gatekeeping (selection theory)
 1,computer_science_ai,Content moderation,Moderating extremism
 1,computer_science_ai,Content moderation,Moderation as industrial labour
 1,computer_science_ai,Media regulation,(none)
 1,economics_business_management,(unknown),(none)
+1,economics_business_management,Content moderation,Debate management
+1,economics_business_management,Debate management,(none)
 1,economics_business_management,Media moderation,(none)
+1,education_pedagogy,AI alignment,(none)
 1,history_book_history,Content moderation,Compliance
-1,history_book_history,Debate management,(none)
-1,history_book_history,Other,(none)
+1,history_book_history,Content moderation,Debate management
 1,law_legal_studies,(unknown),(none)
+1,law_legal_studies,Content moderation,Advisory classification / audience segmentation
 1,law_legal_studies,Content moderation,Common carriage / neutral conduit
-1,law_legal_studies,Content moderation,Moderation as industrial labour
 1,law_legal_studies,Media moderation,(none)
 1,law_legal_studies,Media regulation,(none)
 1,linguistics,Debate management,(none)
 1,philosophy_ethics,Content moderation,Debate management
 1,philosophy_ethics,Content moderation,Moderation as industrial labour
-1,political_philosophy,Content moderation,Debate management
-1,political_philosophy,Content moderation,Platform governance
-1,political_philosophy,Content moderation,Regulative
 1,political_philosophy,Other,(none)
-1,political_science_ir,Content moderation,Compliance
-1,political_science_ir,Content moderation,Gatekeeping (selection theory)
+1,political_science_ir,Content moderation,Community norms and identity
 1,political_science_ir,Content moderation,Moderating extremism
 1,political_science_ir,Media moderation,(none)
-1,political_science_ir,Other,(none)
 1,psychology_behavioral_science,Censorship,(none)
 1,psychology_behavioral_science,Content moderation,Moderating extremism
 1,psychology_behavioral_science,Debate management,(none)
 1,public_policy_governance,(unknown),(none)
-1,public_policy_governance,Content moderation,Brand safety
 1,public_policy_governance,Content moderation,Community norms and identity
-1,public_policy_governance,Content moderation,Infrastructural
 1,public_policy_governance,Content moderation,Moderating extremism
-1,public_policy_governance,Content moderation,Social responsibility / self-regulation
 1,science_technology_studies,Algorithmic sorting,(none)
-1,science_technology_studies,Content moderation,Censorship
-1,science_technology_studies,Content moderation,Compliance
-1,science_technology_studies,Content moderation,Debate management
-1,science_technology_studies,Content moderation,Platform regulation
-1,sociology_anthropology,Content moderation,Compliance
+1,science_technology_studies,Content moderation,Moderation as industrial labour
+1,science_technology_studies,Content moderation,Platform governance
+1,science_technology_studies,Debate management,(none)
+1,sociology_anthropology,Content moderation,Community norms and identity
 1,sociology_anthropology,Content moderation,Debate management
 1,sociology_anthropology,Content moderation,Platform regulation

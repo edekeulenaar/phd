@@ -1,66 +1,76 @@
 Topic,Media category,Quantity
-Algorithmic sorting,Social media platform,1
-Algorithmic sorting,Search engine,1
+AI alignment,AI,38
+AI alignment,Social media platform,22
+AI alignment,Search engine,5
+AI alignment,E-commerce,4
+AI alignment,Wikis,3
+AI alignment,Messaging platform,2
+AI alignment,Video sharing platform,2
+AI alignment,Platforms,2
+AI alignment,Print media,1
+AI alignment,Deliberation platform,1
 Algorithmic sorting,Music streaming,1
-Algorithmic sorting,AI,1
+Algorithmic sorting,Search engine,1
+Algorithmic sorting,Social media platform,1
 Algorithmic sorting,Video streaming platform,1
-Censorship,Print media,396
-Censorship,Social media platform,203
-Censorship,Film,167
-Censorship,Television,119
-Censorship,Radio,96
-Censorship,ISP,76
-Censorship,Performing arts,68
-Censorship,Search engine,67
-Censorship,Video sharing platform,64
-Censorship,Internet (general),46
+Algorithmic sorting,AI,1
+Censorship,Print media,382
+Censorship,Social media platform,168
+Censorship,Film,162
+Censorship,Television,114
+Censorship,Radio,90
+Censorship,ISP,72
+Censorship,Performing arts,66
+Censorship,Search engine,56
+Censorship,Video sharing platform,53
+Censorship,Internet (general),45
 Content moderation,Social media platform,893
-Content moderation,Video sharing platform,419
-Content moderation,Search engine,217
-Content moderation,Messaging platform,163
-Content moderation,AI,119
-Content moderation,Platforms,82
+Content moderation,Video sharing platform,424
+Content moderation,Search engine,220
+Content moderation,Messaging platform,171
+Content moderation,AI,90
+Content moderation,Platforms,83
 Content moderation,Wikis,57
-Content moderation,ISP,44
-Content moderation,Online fora,41
-Content moderation,Print media,41
-Debate management,Social media platform,24
-Debate management,Online fora,16
-Debate management,Online learning platform,9
+Content moderation,ISP,47
+Content moderation,Online fora,39
+Content moderation,Alt-tech,38
+Debate management,Social media platform,36
+Debate management,Online fora,20
+Debate management,Online learning platform,10
+Debate management,Print media,7
 Debate management,Messaging platform,6
-Debate management,Deliberation platform,4
-Debate management,Print media,4
-Debate management,Online community,3
-Debate management,Blog,3
-Debate management,Newsgroup,2
-Debate management,Wikis,2
-Media moderation,Social media platform,24
-Media moderation,Print media,18
-Media moderation,Television,8
-Media moderation,Video sharing platform,8
-Media moderation,Search engine,7
-Media moderation,Film,6
-Media moderation,Wikis,6
-Media moderation,Radio,5
+Debate management,Deliberation platform,5
+Debate management,News media,3
+Debate management,Video sharing platform,3
+Debate management,Wikis,3
+Debate management,Online community,2
+Media moderation,Social media platform,30
+Media moderation,Print media,30
+Media moderation,Search engine,14
+Media moderation,Television,12
+Media moderation,Video sharing platform,9
+Media moderation,Radio,9
+Media moderation,Film,7
 Media moderation,ISP,5
-Media moderation,Internet (general),4
-Media regulation,Social media platform,6
-Media regulation,Internet (general),5
-Media regulation,Radio,4
-Media regulation,Television,4
-Media regulation,Film,4
-Media regulation,Print media,3
-Media regulation,Music,3
-Media regulation,Search engine,3
-Media regulation,Performing arts,2
+Media moderation,Wikis,5
+Media moderation,E-commerce,5
+Media regulation,Film,9
+Media regulation,Print media,9
+Media regulation,Radio,8
+Media regulation,Television,7
+Media regulation,Social media platform,5
+Media regulation,Music,4
+Media regulation,Internet (general),4
+Media regulation,Performing arts,3
 Media regulation,Video sharing platform,2
-Other,Social media platform,23
-Other,Video sharing platform,9
-Other,Print media,7
-Other,Search engine,5
+Media regulation,Web,2
+Other,Social media platform,20
+Other,Video sharing platform,11
 Other,Messaging platform,5
+Other,Search engine,4
 Other,Internet (general),4
-Other,AI,4
-Other,Television,3
-Other,Radio,2
-Other,E-commerce,2
+Other,AI,3
+Other,Print media,2
+Other,Online fora,2
+Other,Blog,2
+Other,Wikis,2
