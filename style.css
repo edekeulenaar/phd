@@ -413,7 +413,9 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   background: var(--paper-alt);
   border-bottom: 1px solid transparent;
   display: flex;
-  align-items: center;
+  /* Baseline-align so the TABLE/PROMPT label sits on the FIRST line of the
+     wrapped caption, not centred against the whole multi-line block. */
+  align-items: baseline;
   gap: 0.55em;
 }
 .prose details.foldable[open] > summary {

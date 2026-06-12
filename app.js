@@ -1466,24 +1466,27 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   function inMultiCol(r, col, v) {
     return (r[col] || "").split("|").some(x => x.trim() === v);
   }
-  // Re-populate the Sub-category dropdown to reflect what's reachable under
-  // the current Topic+Type slice. For WHAT-typed slices the column source is
-  // 'Sub-category' (the taxonomy's actual sub-categories); for WHO/HOW/WHY
-  // it's 'Category' (acting as the second-level filter for the fixed Type).
+  // Re-populate the Sub-category dropdown with the EXACT 'Sub-category' values
+  // from the data (per user spec). If the current scope contains no non-empty
+  // Sub-category values — e.g. WHO/HOW/WHY findings, whose taxonomy doesn't
+  // define sub-categories — the dropdown's enclosing <label> is hidden so the
+  // figure UI doesn't expose a useless control.
   function repopulateSubcat() {
     if (!selSC) return;
     const p  = sel1 ? sel1.value : null;
     const ty = selT ? selT.value : "ALL";
-    const col = ty === "WHAT" ? "Sub-category" : "Category";
     const scope = all.filter(r =>
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty));
-    const vals = [...new Set(scope.map(r => (r[col] || "").trim())
+    const vals = [...new Set(scope.map(r => (r["Sub-category"] || "").trim())
                                   .filter(Boolean))].sort();
     const prev = selSC.value;
     selSC.innerHTML = '<option value="ALL">All</option>'
       + vals.map(v => `<option value="${v.replace(/"/g, '&quot;')}">${v}</option>`).join("");
     selSC.value = vals.includes(prev) ? prev : "ALL";
+    // Hide the whole label when there's nothing to filter on (non-WHAT scopes).
+    const lab = selSC.closest("label");
+    if (lab) lab.style.display = vals.length ? "" : "none";
   }
   if (selSC && !selSC.dataset.bound) {
     selSC.dataset.bound = "1";
@@ -1499,11 +1502,10 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const q  = (selQ ? selQ.value : "").trim().toLowerCase();
     const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
     const [lo, hi] = getYears();
-    const subcatCol = ty === "WHAT" ? "Sub-category" : "Category";
     return all.filter(r =>
       (!p || r[controls.primaryField] === p) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
-      (sc === "ALL" || (r[subcatCol] || "").trim() === sc) &&
+      (sc === "ALL" || (r["Sub-category"] || "").trim() === sc) &&
       (lg === "ALL" || (r.Language || "und") === lg) &&
       (md === "ALL" || inMultiCol(r, "Media categories", md)) &&
       (cn === "ALL" || inMultiCol(r, "Countries", cn)) &&
