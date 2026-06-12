@@ -5,27 +5,37 @@
    ──────────────────────────────────────────────────────────────────────── */
 
 /* ── Self-hosted fonts ──────────────────────────────────────────────────
-   Body prose: Adobe Garamond Pro (Regular / Italic / Semibold).
+   Body prose (incl. beeswarm hover-card quotations): Adobe Caslon Pro.
    Headings, sidebar, table cells, figure UI: Test National. */
 @font-face {
-  font-family: "AGaramond Pro";
-  src: url("fonts/AGaramondPro-Regular.ttf") format("truetype");
+  font-family: "ACaslon Pro";
+  src: url("fonts/ACaslonPro-Regular.otf") format("opentype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: "AGaramond Pro";
-  src: url("fonts/AGaramondPro-Italic.ttf") format("truetype");
+  font-family: "ACaslon Pro";
+  src: url("fonts/ACaslonPro-Italic.otf") format("opentype");
   font-weight: 400; font-style: italic; font-display: swap;
 }
 @font-face {
-  font-family: "AGaramond Pro";
-  src: url("fonts/AGaramondPro-Semibold.ttf") format("truetype");
+  font-family: "ACaslon Pro";
+  src: url("fonts/ACaslonPro-Semibold.otf") format("opentype");
   font-weight: 600; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: "AGaramond Pro";
-  src: url("fonts/AGaramondPro-Semibold.ttf") format("truetype");
+  font-family: "ACaslon Pro";
+  src: url("fonts/ACaslonPro-SemiboldItalic.otf") format("opentype");
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "ACaslon Pro";
+  src: url("fonts/ACaslonPro-Bold.otf") format("opentype");
   font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ACaslon Pro";
+  src: url("fonts/ACaslonPro-BoldItalic.otf") format("opentype");
+  font-weight: 700; font-style: italic; font-display: swap;
 }
 @font-face {
   font-family: "Test National";
@@ -70,7 +80,7 @@
   --side-w:     250px;
   --content-w:  46rem;
   --prose-w:    65rem;            /* prose + 17rem margin-cites column */
-  --serif:      "AGaramond Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --serif:      "ACaslon Pro", "Adobe Caslon Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
   --sans:       "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
   --mono:       ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --fs:         16.5px;
