@@ -1467,26 +1467,24 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     return (r[col] || "").split("|").some(x => x.trim() === v);
   }
   // Re-populate the Sub-category dropdown with the EXACT 'Sub-category' values
-  // from the data (per user spec). If the current scope contains no non-empty
-  // Sub-category values — e.g. WHO/HOW/WHY findings, whose taxonomy doesn't
-  // define sub-categories — the dropdown's enclosing <label> is hidden so the
-  // figure UI doesn't expose a useless control.
+  // from the data. We scope by Topic only (not Type) — so picking a Sub-category
+  // remains available even when the user later switches Type to WHO/HOW/WHY,
+  // and the dropdown stays usable on Type=ALL views.
   function repopulateSubcat() {
     if (!selSC) return;
     const p  = sel1 ? sel1.value : null;
-    const ty = selT ? selT.value : "ALL";
-    const scope = all.filter(r =>
-      (!p || r[controls.primaryField] === p) &&
-      (ty === "ALL" || (r.Type || "").toUpperCase() === ty));
+    const scope = all.filter(r => !p || r[controls.primaryField] === p);
     const vals = [...new Set(scope.map(r => (r["Sub-category"] || "").trim())
                                   .filter(Boolean))].sort();
     const prev = selSC.value;
     selSC.innerHTML = '<option value="ALL">All</option>'
       + vals.map(v => `<option value="${v.replace(/"/g, '&quot;')}">${v}</option>`).join("");
     selSC.value = vals.includes(prev) ? prev : "ALL";
-    // Hide the whole label when there's nothing to filter on (non-WHAT scopes).
+    // Always keep the control visible — its enclosing label may have been
+    // hidden by a prior render or by .fig-control-fixed on inline spawns
+    // (we keep the latter, which is class-driven, intact).
     const lab = selSC.closest("label");
-    if (lab) lab.style.display = vals.length ? "" : "none";
+    if (lab && !lab.classList.contains("fig-control-fixed")) lab.style.display = "";
   }
   if (selSC && !selSC.dataset.bound) {
     selSC.dataset.bound = "1";
