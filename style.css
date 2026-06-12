@@ -864,12 +864,24 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   border: 1px solid var(--border); border-radius: 2px;
   flex: 0 0 12px;
 }
-#fig-key .fk-lab { flex: 1; min-width: 0; }
+#fig-key .fk-lab {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* Underscored slugs like "communication_media_studies" have no natural
+     break opportunities, so flex:1 alone won't shrink them — they overflow
+     into the count chip. Allow breaking anywhere as a last resort, with
+     normal word-wrap preferred when whitespace is available. */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.3;
+}
 #fig-key .fk-cit {
   font-size: 10.5px; color: var(--muted);
   font-variant-numeric: tabular-nums;
   padding-left: 0.4em;
   white-space: nowrap;
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 #fig-key .fk-item.active .fk-cit { color: var(--paper); opacity: 0.7; }
 /* Size-encoding section: "Citations" with three example bubbles

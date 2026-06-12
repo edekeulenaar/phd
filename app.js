@@ -1936,6 +1936,7 @@ const figKey = (() => {
     r.legend.forEach(it => {
       const d = document.createElement("div");
       d.className = "fk-item" + (active === it.label ? " active" : "");
+      d.title = it.label;       // full label on hover, even if it wraps/truncates
       // Estimated citation count (sum of Citations within the filtered data)
       // shown as a muted right-aligned chip, when the registrar provided one.
       const cit = (it.cit != null) ? `<span class="fk-cit">${d3.format(",")(it.cit)}</span>` : "";
@@ -2434,17 +2435,42 @@ function bindBubbleBump(opts) {
   run();
 }
 
-/** Watch which figure is in view; tell figKey to swap the sidebar key. */
+/** Pick the figure currently closest to the viewport centre and tell figKey
+ *  to show its legend. Re-evaluated on every scroll/resize so the sidebar
+ *  key always matches what's on screen — including the inline-spawned figure
+ *  cards in the manuscript flow (Figures 5, 7–12) that may share an id-stem
+ *  with the analysis-section template but render with a different scope. */
 function observeActiveFigure() {
-  if (typeof IntersectionObserver !== "function") return;
-  const obs = new IntersectionObserver(entries => {
-    // Pick the most-visible figure currently intersecting.
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-    if (visible.length) figKey.setActive(visible[0].target.id);
-  }, { rootMargin: "-25% 0px -45% 0px", threshold: [0, 0.3, 0.6, 1] });
-  document.querySelectorAll("figure.fig").forEach(f => obs.observe(f));
+  let raf = 0;
+  function update() {
+    raf = 0;
+    const figs = document.querySelectorAll("figure.fig");
+    if (!figs.length) return;
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    const centre = vh / 2;
+    let best = null, bestScore = Infinity;
+    figs.forEach(f => {
+      const r = f.getBoundingClientRect();
+      if (r.bottom <= 0 || r.top >= vh) return;        // fully off-screen
+      // distance from the figure's vertical midpoint to the viewport centre
+      const mid = (r.top + r.bottom) / 2;
+      const score = Math.abs(mid - centre);
+      if (score < bestScore) { bestScore = score; best = f; }
+    });
+    if (best) figKey.setActive(best.id);
+  }
+  function schedule() {
+    if (raf) return;
+    raf = requestAnimationFrame(update);
+  }
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule);
+  // Re-pick when new figures land (inline spawns, late-mounted live figures).
+  if (typeof MutationObserver === "function") {
+    const mo = new MutationObserver(schedule);
+    mo.observe(document.body, { childList: true, subtree: true });
+  }
+  update();
 }
 
 // `FIG_TEMPLATES` snapshots every `.fig` card's outerHTML before any
