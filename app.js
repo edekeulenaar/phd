@@ -168,13 +168,36 @@ async function renderManuscript() {
       if (lines <= 18) wrap.open = true;        // small blocks: open by default
       // Preserve any block id (anchor) on the wrapper so jumps still work.
       if (pre.id) { wrap.id = pre.id; pre.removeAttribute("id"); }
-      const sum = document.createElement("summary");
       const langLabel = LANG_PRETTY[lang] || (lang ? lang.toUpperCase() : "Code");
-      sum.innerHTML = `<span class="lbl">${langLabel}</span>` +
-                      `<span class="meta">· ${lines} lines</span>`;
+
+      // Pull in a sibling "Prompt N. …" / "Listing N. …" caption — either the
+      // paragraph immediately AFTER the <pre> (what the source uses) or, as
+      // a fallback, the one immediately BEFORE it. Surface it in the summary
+      // and remove the standalone caption so it doesn't appear twice.
+      const isCap = el => el && el.tagName === "P" &&
+        /^(prompt|listing|code|figure|table)\s+\d/i.test(el.textContent.trim());
+      let cap = isCap(pre.nextElementSibling) ? pre.nextElementSibling
+              : isCap(pre.previousElementSibling) ? pre.previousElementSibling
+              : null;
+
+      const sum = document.createElement("summary");
+      if (cap) {
+        // "Prompt 1. System prompt …" → lbl = "Prompt 1", rest = "System prompt …"
+        const txt = cap.textContent.trim();
+        const dot = txt.indexOf(".");
+        const lbl = dot > 0 ? txt.slice(0, dot) : txt;
+        const rest = dot > 0 ? txt.slice(dot + 1).trim().replace(/\.\s*$/, "") : "";
+        sum.innerHTML =
+          `<span class="lbl">${lbl}</span>` +
+          `<span class="meta">· ${rest} · ${langLabel} · ${lines} lines</span>`;
+      } else {
+        sum.innerHTML = `<span class="lbl">${langLabel}</span>` +
+                        `<span class="meta">· ${lines} lines</span>`;
+      }
       pre.parentNode.insertBefore(wrap, pre);
       wrap.appendChild(sum);
       wrap.appendChild(pre);
+      if (cap) cap.remove();                  // no duplicate caption below
     });
 
     // Also resolve table block-anchors: an Obsidian convention is `^slug` on
@@ -227,10 +250,9 @@ async function renderManuscript() {
       wrap.appendChild(sum);
       inner.appendChild(tbl);
       wrap.appendChild(inner);
-      if (cap) {
-        cap.classList.add("table-cap");
-        wrap.appendChild(cap);
-      }
+      // Caption text is already surfaced in the summary — drop the standalone
+      // paragraph so the same line doesn't appear twice.
+      if (cap) cap.remove();
     });
 
     // 4a-epi) Wrap runs of right-aligned <div> blocks (the inline-styled
