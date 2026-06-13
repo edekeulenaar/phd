@@ -182,8 +182,11 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   text-transform: uppercase; color: var(--ink);
   margin-top: 0.9rem;
 }
-.toc .toc-front a { font-size: 12.5px; color: var(--muted); font-style: italic; }
-.toc .toc-ch a    { font-size: 12.5px; padding-left: 0.9rem; }
+/* Front matter (Acknowledgments / Abstract / Introduction) reads like a
+   chapter entry — plain, not italic. */
+.toc .toc-front a,
+.toc .toc-ch a    { font-size: 12.5px; padding-left: 0.9rem; color: var(--muted); }
+.toc .chapter-subnav.folded { display: none; }   /* second click folds */
 /* Per-chapter heading nav injected under the active chapter, indented by
    heading level so sub- and sub-sub-sections nest visibly. */
 .toc .chapter-subnav {
@@ -230,7 +233,28 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   margin: 2.4rem 0 1rem; padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--rule);
 }
-#landing .cover-abstract p { text-align: justify; }
+#landing .cover-abstract p { text-align: left; }   /* left, like chapter prose */
+
+/* PDF download button (cover title + each chapter title). */
+.pdf-btn {
+  display: inline-flex; align-items: center; gap: 0.35em;
+  margin: 0.4rem 0 1.2rem;
+  padding: 0.35em 0.8em;
+  font-family: var(--sans); font-size: 12px; letter-spacing: 0.02em;
+  color: var(--ink); background: var(--paper);
+  border: 1px solid var(--border); border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.pdf-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+#landing .cover .pdf-btn { margin-top: 0.8rem; }
+
+/* Inline video embeds (`![](clip.mp4)`). */
+.prose .embed-video {
+  display: block; max-width: 100%; height: auto;
+  margin: 1.2em auto; border-radius: 3px;
+  background: #000;
+}
 #landing .land-toc {
   list-style: none; margin: 0; padding: 0;
   display: flex; flex-direction: column; gap: 0.1rem;
@@ -1382,4 +1406,62 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 @media (max-width: 1180px) and (min-width: 881px) {
   :root { --right-w: 0px; }
   #right-rail { display: none; }
+}
+
+/* ─── Print / "Download PDF" — mirrors ssrn-paper.css (Obsidian export) ──── */
+@media print {
+  @page { size: A4; margin: 3cm 2.5cm; }
+  html, body { background: #fff !important; }
+  /* Hide all chrome — only the visible chapter / cover prints. */
+  #sidebar, #right-rail, #analysis, #cite-card, #data-card,
+  .pdf-btn, .fig-foot, .fig-controls, .sb-foot { display: none !important; }
+  #content { margin: 0 !important; padding: 0 !important; max-width: none !important; }
+  .prose { max-width: none !important; margin: 0 !important; }
+  [hidden] { display: none !important; }
+
+  /* Body — Adobe Caslon, justified, ssrn spacing. */
+  body, .prose, .prose p, .prose li {
+    font-family: var(--serif) !important;
+    color: #000 !important;
+  }
+  .prose p {
+    font-size: 12.5pt !important;
+    line-height: 1.8 !important;
+    margin: 0.8em 0 !important;
+    text-align: justify !important;
+    orphans: 2; widows: 2;
+  }
+  .prose li { text-align: left !important; }
+
+  /* Headings — Test National, left, kept with following content. */
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
+  #landing .cover-title, #landing .cover-sub,
+  #landing .cover-abstract h2, #landing .cover-ack h2, #landing .cover-toc h2 {
+    font-family: var(--sans) !important;
+    color: #000 !important;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .prose h1 { font-size: 21pt !important; margin: 1.4cm 0 0.5cm !important; }
+  .prose h2 { font-size: 17pt !important; margin: 1cm 0 0.4cm !important; }
+  .prose h3 { font-size: 14pt !important; margin: 0.8cm 0 0.3cm !important; }
+  #landing .cover-title { font-size: 26pt !important; }
+  #landing .cover-sub   { font-size: 15pt !important; color: #333 !important; }
+
+  /* Links: print as plain inked text (no terracotta, no underline noise). */
+  .prose a, .cite-grp, .cite-link { color: #000 !important;
+    text-decoration: none !important; border: none !important; }
+
+  /* Keep figures, tables, images whole on a page. */
+  .prose figure, .prose table, .prose img, .prose pre, .embed-video {
+    break-inside: avoid; page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+  /* Live-mounted Chapter-1 figures: undo the viewport break-out for print. */
+  .prose figure.fig.fig-live-mounted {
+    position: static !important; width: 100% !important;
+    left: auto !important; transform: none !important;
+    border: none !important; background: none !important; padding: 0 !important;
+  }
+  /* Page break before each top-level chapter heading after the first. */
+  .prose h1 + * { break-before: avoid; }
 }

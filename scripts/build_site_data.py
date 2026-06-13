@@ -248,8 +248,11 @@ _MD_LINK_RE  = re.compile(r"(?<!!)\]\(([^)]+?\.md)((?:#[^)]*)?)\)")
 # manually rather than with a regex (a nested-quantifier regex ReDoS-hangs on
 # the larger chapters).
 _IMG_OPEN_RE = re.compile(r"!\[[^\]]*\]\(")
-_IMG_EXT     = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
-VAULT_IMAGES = MANUSCRIPT_DIR / "images"
+_IMG_EXT     = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg",
+                ".mp4", ".webm", ".mov", ".m4v")   # video embeds too
+# Chapters pull attachments from more than one vault folder (the original
+# `Manuscript/images/` plus the shared `Figures/` folder newer chapters use).
+VAULT_IMAGE_DIRS = [MANUSCRIPT_DIR / "images", MANUSCRIPT_DIR.parent / "Figures"]
 SITE_IMAGES  = Path(__file__).resolve().parent.parent / "images"
 _referenced_images: set[str] = set()      # basenames to copy at sync time
 
@@ -350,17 +353,22 @@ def sync_thesis() -> None:
     # live-figure placeholders (fig-*.png) are already committed there.
     SITE_IMAGES.mkdir(parents=True, exist_ok=True)
     n_img = n_img_missing = 0
+    unresolved = []
     for name in sorted(_referenced_images):
-        src = VAULT_IMAGES / name
+        src = next((d / name for d in VAULT_IMAGE_DIRS if (d / name).exists()),
+                   None)
         dst = SITE_IMAGES / name
-        if src.exists():
+        if src:
             if not dst.exists() or src.stat().st_mtime > dst.stat().st_mtime:
                 _sh.copy2(src, dst)
             n_img += 1
         elif not dst.exists():
             n_img_missing += 1
+            unresolved.append(name)
     print(f"  images: {n_img} referenced copied/present "
           f"({n_img_missing} unresolved)")
+    if unresolved:
+        print("    unresolved: " + ", ".join(unresolved[:12]))
 
 
 # ─── Main ─────────────────────────────────────────────────────────────────────

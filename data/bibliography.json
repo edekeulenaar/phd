@@ -482,6 +482,13 @@
     "harvard": "Edwards, A. R. (2002) ‘The Moderator as an Emerging Democratic Intermediary: The Role of the Moderator in Internet Discussions about Public Issues’, *Information Polity*, 7(1), pp. 3–20. doi:10.3233/ip-2002-0002",
     "link": "https://doi.org/10.3233/ip-2002-0002"
   },
+  "farkasFakeNewsFloating2018": {
+    "author": "Farkas and Schou",
+    "year": "2018",
+    "inline": "(Farkas and Schou, 2018)",
+    "harvard": "Farkas, J. and Schou, J. (2018) ‘Fake News as a Floating Signifier: Hegemony, Antagonism and the Politics of Falsehood’, *Javnost - The Public*, 25(3), pp. 298–314. doi:10.1080/13183222.2018.1463047",
+    "link": "https://doi.org/10.1080/13183222.2018.1463047"
+  },
   "faugereCensureTabou2023": {
     "author": "Faugere et al.",
     "year": "2023",
@@ -1586,6 +1593,13 @@
     "year": "1966",
     "inline": "(Webb et al., 1966)",
     "harvard": "Webb, E. J., Campbell, D. T., Schwartz, R. D. and Sechrest, L. (1966) *Unobtrusive Measures: Nonreactive Research in the Social Sciences*. Oxford, England: Rand Mcnally.",
+    "link": ""
+  },
+  "wikipediaWikipediaFringeTheories2018": {
+    "author": "Wikipedia",
+    "year": "2018",
+    "inline": "(Wikipedia, 2018)",
+    "harvard": "Wikipedia (2018) *Wikipedia:Fringe Theories*.",
     "link": ""
   },
   "wilsonHateSpeechSocial2020": {

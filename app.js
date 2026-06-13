@@ -533,17 +533,30 @@ async function renderManuscript(chapterSlug) {
     //    sidebar title still anchors there) but DROP it from the sidebar TOC.
     collapseBlankRuns(host);
 
+    // Video embeds: the source uses `![](clip.mp4)`, which marked renders as
+    // an <img>. Swap those for a real <video controls> element.
+    host.querySelectorAll('img[src$=".mp4"], img[src$=".webm"], img[src$=".mov"], img[src$=".m4v"]')
+      .forEach(img => {
+        const v = document.createElement("video");
+        v.src = img.getAttribute("src");
+        v.controls = true; v.preload = "metadata"; v.playsInline = true;
+        v.className = "embed-video";
+        img.replaceWith(v);
+      });
+
     const headings = host.querySelectorAll("h1, h2, h3, h4");
     const toc = [];
     // Drop the leading title block from the chapter nav: the "Chapter N" /
     // "Part" marker H1 and the chapter-title H1 that immediately follows it.
     let dropLeading = 2;
+    let lastTitleEl = null;
     headings.forEach((h, i) => {
       const id = "h-" + slug(h.textContent);
       h.id = id;
       if (dropLeading > 0 && h.tagName === "H1" &&
           toc.length === 0 && i < 2) {
         dropLeading--;
+        lastTitleEl = h;
         return;
       }
       toc.push({
@@ -552,6 +565,14 @@ async function renderManuscript(chapterSlug) {
         id
       });
     });
+    // Per-chapter PDF download, placed just under the chapter title block.
+    const pdfBtn = document.createElement("button");
+    pdfBtn.type = "button";
+    pdfBtn.className = "pdf-btn";
+    pdfBtn.setAttribute("data-pdf", "");
+    pdfBtn.textContent = "⬇ Download PDF";
+    if (lastTitleEl) lastTitleEl.after(pdfBtn);
+    else host.prepend(pdfBtn);
     // Per-chapter heading nav lives in the sidebar UNDER the active chapter;
     // the global thesis TOC (parts → chapters) is built once from toc.json.
     buildChapterNav(chapterSlug, toc);
@@ -3037,6 +3058,18 @@ function buildGlobalToc() {
     li.push(`<li class="${cls}"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
   }
   ol.innerHTML = li.join("");
+  // Click the already-open chapter again → fold/unfold its heading nav.
+  if (!ol.dataset.foldBound) {
+    ol.dataset.foldBound = "1";
+    ol.addEventListener("click", e => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      if (a.getAttribute("href") === `#/${routeSlug()}`) {
+        const sub = a.parentElement.querySelector(".chapter-subnav");
+        if (sub) { e.preventDefault(); sub.classList.toggle("folded"); }
+      }
+    });
+  }
   highlightToc();
 }
 
@@ -3118,6 +3151,7 @@ async function renderLanding() {
       <h1 class="cover-title">${escapeHtml(TOC?.title || "")}</h1>
       <p class="cover-sub">${escapeHtml(TOC?.subtitle || "")}</p>
       <p class="cover-author">${escapeHtml(TOC?.author || "")}</p>
+      <button type="button" class="pdf-btn" data-pdf>⬇ Download PDF</button>
     </header>
     ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
     ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}
@@ -3174,6 +3208,15 @@ async function route() {
   if (!tocEntry(slug))        return renderLanding();   // unknown → cover
   return renderChapter(slug);
 }
+
+// PDF download = print the current view with the ssrn-style print stylesheet
+// (the browser's "Save as PDF" produces a file matching the Obsidian export).
+document.addEventListener("click", e => {
+  if (e.target.closest("[data-pdf]")) {
+    e.preventDefault();
+    window.print();
+  }
+});
 
 window.addEventListener("DOMContentLoaded", async () => {
   snapshotFigureTemplates();
