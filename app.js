@@ -14,8 +14,9 @@ const slug = s => String(s).toLowerCase()
    1. Manuscript: fetch markdown → render → build TOC → wire citations
    ─────────────────────────────────────────────────────────────────────── */
 
-async function renderManuscript(chapterSlug) {
-  const host = document.getElementById("manuscript");
+async function renderManuscript(chapterSlug, opts = {}) {
+  const forPrint = !!opts.forPrint;
+  const host = opts.host || document.getElementById("manuscript");
   if (!host) { console.error("renderManuscript: #manuscript host missing"); return; }
 
   try {
@@ -565,25 +566,19 @@ async function renderManuscript(chapterSlug) {
         id
       });
     });
-    // Per-chapter PDF download, placed just under the chapter title block.
-    const pdfBtn = document.createElement("button");
-    pdfBtn.type = "button";
-    pdfBtn.className = "pdf-btn";
-    pdfBtn.setAttribute("data-pdf", "");
-    pdfBtn.textContent = "⬇ Download PDF";
-    if (lastTitleEl) lastTitleEl.after(pdfBtn);
-    else host.prepend(pdfBtn);
+    void lastTitleEl;   // (per-chapter PDF button removed — cover handles PDF)
     // Per-chapter heading nav lives in the sidebar UNDER the active chapter;
     // the global thesis TOC (parts → chapters) is built once from toc.json.
-    buildChapterNav(chapterSlug, toc);
-
-    // 6) Wire citation hover-cards.
-    host.querySelectorAll(".cite").forEach(c => {
-      c.addEventListener("mouseenter", showCiteCard);
-      c.addEventListener("focus",      showCiteCard);
-      c.addEventListener("mouseleave", hideCiteCard);
-      c.addEventListener("blur",       hideCiteCard);
-    });
+    // Skipped when rendering off-screen for the PDF assembler.
+    if (!forPrint) {
+      buildChapterNav(chapterSlug, toc);
+      host.querySelectorAll(".cite").forEach(c => {
+        c.addEventListener("mouseenter", showCiteCard);
+        c.addEventListener("focus",      showCiteCard);
+        c.addEventListener("mouseleave", hideCiteCard);
+        c.addEventListener("blur",       hideCiteCard);
+      });
+    }
   } catch (e) {
     console.error("renderManuscript:", e);
     host.innerHTML =
@@ -3148,10 +3143,10 @@ async function renderLanding() {
   }).join("");
   el.innerHTML = `
     <header class="cover">
+      <button type="button" class="pdf-btn cover-pdf-btn" data-pdf-open>⬇ Download PDF</button>
       <h1 class="cover-title">${escapeHtml(TOC?.title || "")}</h1>
       <p class="cover-sub">${escapeHtml(TOC?.subtitle || "")}</p>
       <p class="cover-author">${escapeHtml(TOC?.author || "")}</p>
-      <button type="button" class="pdf-btn" data-pdf>⬇ Download PDF</button>
     </header>
     ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
     ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}
@@ -3161,6 +3156,105 @@ async function renderLanding() {
   highlightToc();
   window.scrollTo(0, 0);
 }
+
+/* ── PDF export: pick chapters on the cover, assemble + print (ssrn CSS) ── */
+
+// One <label><input> per includable section (parts + chapters + front/back).
+function pdfChapterChecklist() {
+  const items = (TOC?.entries || []).filter(e => e.kind !== "part");
+  return items.map(e =>
+    `<label class="pdf-check"><input type="checkbox" value="${e.slug}" checked>` +
+    `<span>${escapeHtml(e.title)}</span></label>`).join("");
+}
+
+function openPdfPanel() {
+  let panel = document.getElementById("pdf-panel");
+  if (!panel) {
+    panel = document.createElement("div");
+    panel.id = "pdf-panel";
+    panel.innerHTML = `
+      <div class="pdf-panel-inner" role="dialog" aria-label="Download PDF">
+        <button class="pdf-close" data-pdf-close aria-label="Close">×</button>
+        <h2>Download PDF</h2>
+        <p class="pdf-help">Select the chapters to include. The PDF is
+          typeset exactly like the manuscript.</p>
+        <div class="pdf-checks">${pdfChapterChecklist()}</div>
+        <div class="pdf-panel-actions">
+          <button type="button" class="pdf-mini" data-pdf-all>All</button>
+          <button type="button" class="pdf-mini" data-pdf-none>None</button>
+          <span class="spacer"></span>
+          <button type="button" class="pdf-go" data-pdf-go>⬇ Download</button>
+        </div>
+      </div>`;
+    document.body.appendChild(panel);
+    panel.addEventListener("click", e => {
+      if (e.target === panel || e.target.closest("[data-pdf-close]")) {
+        panel.hidden = true; return;
+      }
+      if (e.target.closest("[data-pdf-all]"))
+        panel.querySelectorAll("input").forEach(c => (c.checked = true));
+      if (e.target.closest("[data-pdf-none]"))
+        panel.querySelectorAll("input").forEach(c => (c.checked = false));
+      if (e.target.closest("[data-pdf-go]")) {
+        const slugs = [...panel.querySelectorAll("input:checked")].map(c => c.value);
+        if (slugs.length) { panel.hidden = true; assembleThesisPDF(slugs); }
+      }
+    });
+  } else {
+    panel.querySelector(".pdf-checks").innerHTML = pdfChapterChecklist();
+  }
+  panel.hidden = false;
+}
+
+// Render the bibliography into a given element (shared by the route + PDF).
+function renderBibInto(el, bib) {
+  const entries = Object.values(bib || {})
+    .map(v => v.harvard || v.inline || "")
+    .filter(Boolean).sort((a, b) => a.localeCompare(b));
+  el.innerHTML = `<h1>References</h1>` +
+    entries.map(h => `<p class="ref-entry">${h}</p>`).join("");
+}
+
+// Assemble the chosen sections off-screen, then print (the @media print rules
+// mirror ssrn-paper.css, so the browser's "Save as PDF" matches the export).
+let _pdfBusy = false;
+async function assembleThesisPDF(slugs) {
+  if (_pdfBusy) return;
+  _pdfBusy = true;
+  let root = document.getElementById("print-root");
+  if (!root) { root = document.createElement("div"); root.id = "print-root";
+               document.body.appendChild(root); }
+  root.innerHTML = `<section class="print-titlepage">
+      <h1>${escapeHtml(TOC?.title || "")}</h1>
+      <p class="pt-sub">${escapeHtml(TOC?.subtitle || "")}</p>
+      <p class="pt-author">${escapeHtml(TOC?.author || "")}</p>
+    </section>`;
+  let bib = null;
+  for (const slug of slugs) {
+    const sec = document.createElement("section");
+    sec.className = "print-chapter prose";
+    root.appendChild(sec);
+    if (slug === "references") {
+      if (!bib) {
+        try { bib = await (await fetch(`data/bibliography.json?t=${CSV_BUST}`,
+              { cache: "no-store" })).json(); } catch { bib = {}; }
+      }
+      renderBibInto(sec, bib);
+    } else {
+      try { await renderManuscript(slug, { host: sec, forPrint: true }); }
+      catch (e) { console.error("pdf chapter", slug, e); }
+    }
+  }
+  // setTimeout (not rAF — rAF is paused in background tabs) lets the DOM
+  // paint, then opens the print dialog. window.print() blocks until the
+  // dialog closes, so we can release the guard right after.
+  setTimeout(() => { try { window.print(); } finally { _pdfBusy = false; } }, 80);
+}
+window.addEventListener("afterprint", () => {
+  _pdfBusy = false;
+  const root = document.getElementById("print-root");
+  if (root) root.innerHTML = "";
+});
 
 // Render the global References list from the built bibliography.
 async function renderReferences() {
@@ -3209,12 +3303,11 @@ async function route() {
   return renderChapter(slug);
 }
 
-// PDF download = print the current view with the ssrn-style print stylesheet
-// (the browser's "Save as PDF" produces a file matching the Obsidian export).
+// Cover "Download PDF" → open the chapter-selection panel.
 document.addEventListener("click", e => {
-  if (e.target.closest("[data-pdf]")) {
+  if (e.target.closest("[data-pdf-open]")) {
     e.preventDefault();
-    window.print();
+    openPdfPanel();
   }
 });
 

@@ -235,11 +235,10 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 #landing .cover-abstract p { text-align: left; }   /* left, like chapter prose */
 
-/* PDF download button (cover title + each chapter title). */
+/* PDF download button — sits at the far right of the cover title row. */
 .pdf-btn {
   display: inline-flex; align-items: center; gap: 0.35em;
-  margin: 0.4rem 0 1.2rem;
-  padding: 0.35em 0.8em;
+  padding: 0.4em 0.85em;
   font-family: var(--sans); font-size: 12px; letter-spacing: 0.02em;
   color: var(--ink); background: var(--paper);
   border: 1px solid var(--border); border-radius: 3px;
@@ -247,7 +246,61 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
 .pdf-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-#landing .cover .pdf-btn { margin-top: 0.8rem; }
+#landing .cover { position: relative; }
+#landing .cover .cover-pdf-btn { position: absolute; top: 0; right: 0; }
+
+/* Chapter-selection modal. */
+#pdf-panel {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(28, 26, 24, 0.34);
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem;
+}
+#pdf-panel[hidden] { display: none; }
+#pdf-panel .pdf-panel-inner {
+  position: relative;
+  width: min(34rem, 100%); max-height: 80vh; overflow-y: auto;
+  background: var(--paper); border: 1px solid var(--border);
+  border-radius: 5px; padding: 1.5rem 1.6rem;
+  box-shadow: 0 18px 50px rgba(28, 26, 24, 0.28);
+}
+#pdf-panel h2 {
+  font-family: var(--sans); font-size: 1.1rem; font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+#pdf-panel .pdf-help { color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem; }
+#pdf-panel .pdf-checks { display: flex; flex-direction: column; gap: 0.1rem; }
+#pdf-panel .pdf-check {
+  display: flex; align-items: flex-start; gap: 0.55em;
+  padding: 0.18em 0; font-size: 0.92rem; cursor: pointer;
+}
+#pdf-panel .pdf-check input { margin-top: 0.25em; }
+#pdf-panel .pdf-panel-actions {
+  display: flex; align-items: center; gap: 0.5rem;
+  margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+}
+#pdf-panel .pdf-panel-actions .spacer { flex: 1; }
+#pdf-panel .pdf-mini {
+  font-family: var(--sans); font-size: 11px; padding: 0.35em 0.7em;
+  background: var(--paper); border: 1px solid var(--border); border-radius: 3px;
+  color: var(--muted); cursor: pointer;
+}
+#pdf-panel .pdf-mini:hover { color: var(--ink); }
+#pdf-panel .pdf-go {
+  font-family: var(--sans); font-size: 12.5px; font-weight: 600;
+  padding: 0.45em 1em; background: var(--ink); color: var(--paper);
+  border: 1px solid var(--ink); border-radius: 3px; cursor: pointer;
+}
+#pdf-panel .pdf-go:hover { background: var(--accent); border-color: var(--accent); }
+#pdf-panel .pdf-close {
+  position: absolute; top: 0.6rem; right: 0.7rem;
+  width: 1.6rem; height: 1.6rem; border: none; background: none;
+  font-size: 1.3rem; line-height: 1; color: var(--muted); cursor: pointer;
+}
+#pdf-panel .pdf-close:hover { color: var(--ink); }
+
+/* Off-screen print assembly root — only visible to the print renderer. */
+#print-root { display: none; }
 
 /* Inline video embeds (`![](clip.mp4)`). */
 .prose .embed-video {
@@ -1408,60 +1461,77 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   #right-rail { display: none; }
 }
 
-/* ─── Print / "Download PDF" — mirrors ssrn-paper.css (Obsidian export) ──── */
+/* ─── Print / "Download PDF" — EXACTLY mirrors ssrn-paper.css ─────────────
+   Only #print-root (the assembled selection) prints; everything else is
+   hidden. Values copied verbatim from .obsidian/snippets/ssrn-paper.css so
+   the output matches the Obsidian Better-Export-PDF render. */
 @media print {
   @page { size: A4; margin: 3cm 2.5cm; }
   html, body { background: #fff !important; }
-  /* Hide all chrome — only the visible chapter / cover prints. */
-  #sidebar, #right-rail, #analysis, #cite-card, #data-card,
-  .pdf-btn, .fig-foot, .fig-controls, .sb-foot { display: none !important; }
-  #content { margin: 0 !important; padding: 0 !important; max-width: none !important; }
-  .prose { max-width: none !important; margin: 0 !important; }
-  [hidden] { display: none !important; }
+  body > *:not(#print-root) { display: none !important; }
+  #print-root { display: block !important; }
 
-  /* Body — Adobe Caslon, justified, ssrn spacing. */
-  body, .prose, .prose p, .prose li {
-    font-family: var(--serif) !important;
-    color: #000 !important;
+  #print-root, #print-root.prose, #print-root .prose,
+  #print-root p, #print-root li {
+    font-family: "Adobe Caslon Pro", "EB Garamond", Garamond, serif !important;
+    color: #1c1a18 !important;
   }
-  .prose p {
+  #print-root p {
     font-size: 12.5pt !important;
-    line-height: 1.8 !important;
-    margin: 0.8em 0 !important;
-    text-align: justify !important;
+    line-height: 1.55 !important;
+    margin: 0 0 0.95em !important;
+    text-align: left !important;
     orphans: 2; widows: 2;
   }
-  .prose li { text-align: left !important; }
+  #print-root li { text-align: left !important; }
 
-  /* Headings — Test National, left, kept with following content. */
-  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
-  #landing .cover-title, #landing .cover-sub,
-  #landing .cover-abstract h2, #landing .cover-ack h2, #landing .cover-toc h2 {
-    font-family: var(--sans) !important;
-    color: #000 !important;
+  /* Headings — Test National Semibold, ssrn sizes. */
+  #print-root h1, #print-root h2, #print-root h3,
+  #print-root h4, #print-root h5, #print-root h6 {
+    font-family: "Test National Semibold", "Helvetica Neue", sans-serif !important;
+    font-weight: 600 !important; color: #1c1a18 !important;
+    line-height: 1.2 !important;
     break-after: avoid; page-break-after: avoid;
   }
-  .prose h1 { font-size: 21pt !important; margin: 1.4cm 0 0.5cm !important; }
-  .prose h2 { font-size: 17pt !important; margin: 1cm 0 0.4cm !important; }
-  .prose h3 { font-size: 14pt !important; margin: 0.8cm 0 0.3cm !important; }
-  #landing .cover-title { font-size: 26pt !important; }
-  #landing .cover-sub   { font-size: 15pt !important; color: #333 !important; }
+  #print-root h1 { font-size: 24pt !important;  margin: 0 0 0.6cm !important; }
+  #print-root h2 { font-size: 17pt !important;  margin: 0.8cm 0 0.35cm !important; }
+  #print-root h3 { font-size: 14pt !important;  margin: 0.6cm 0 0.3cm !important; }
+  #print-root h4 { font-size: 12.5pt !important; margin: 0.5cm 0 0.25cm !important; }
 
-  /* Links: print as plain inked text (no terracotta, no underline noise). */
-  .prose a, .cite-grp, .cite-link { color: #000 !important;
-    text-decoration: none !important; border: none !important; }
+  /* Links: terracotta like ssrn-paper.css. */
+  #print-root a, #print-root .cite-grp, #print-root .cite-link {
+    color: #c0431f !important; text-decoration: none !important; border: none !important;
+  }
 
-  /* Keep figures, tables, images whole on a page. */
-  .prose figure, .prose table, .prose img, .prose pre, .embed-video {
-    break-inside: avoid; page-break-inside: avoid;
-    max-width: 100% !important;
+  /* Tables: ssrn — Test National, uppercase header on warm grey, zebra rows. */
+  #print-root table { border-collapse: collapse !important; width: 100% !important;
+    font-family: "Test National", sans-serif !important; font-size: 11pt !important; }
+  #print-root th { background: #EFEDE6 !important; text-transform: uppercase !important;
+    letter-spacing: 0.02em !important; border: 0.5px solid #B0B0B0 !important;
+    padding: 0.4em !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #print-root td { border: 0.5px solid #B0B0B0 !important; padding: 0.4em !important; }
+  #print-root tbody tr:nth-child(even) td { background: #FAF9F6 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Keep blocks whole; one page break per included section. */
+  #print-root figure, #print-root table, #print-root img,
+  #print-root pre, #print-root .embed-video {
+    break-inside: avoid; page-break-inside: avoid; max-width: 100% !important;
   }
-  /* Live-mounted Chapter-1 figures: undo the viewport break-out for print. */
-  .prose figure.fig.fig-live-mounted {
-    position: static !important; width: 100% !important;
-    left: auto !important; transform: none !important;
-    border: none !important; background: none !important; padding: 0 !important;
+  #print-root .print-chapter { break-before: page; page-break-before: always; }
+  #print-root .print-titlepage {
+    break-after: page; page-break-after: always;
+    text-align: center; padding-top: 7cm;
   }
-  /* Page break before each top-level chapter heading after the first. */
-  .prose h1 + * { break-before: avoid; }
+  #print-root .print-titlepage h1 {
+    font-size: 30pt !important; margin: 0 0 0.6cm !important;
+  }
+  #print-root .print-titlepage .pt-sub { font-size: 15pt !important; color: #3c3934 !important; }
+  #print-root .print-titlepage .pt-author {
+    margin-top: 2cm !important; font-family: "Test National", sans-serif !important;
+    letter-spacing: 0.04em !important;
+  }
+  /* Foldable wrappers print as plain content; live-fig break-out undone. */
+  #print-root details.foldable > summary { display: none !important; }
+  #print-root details.foldable { border: none !important; background: none !important; }
 }
