@@ -49,7 +49,7 @@ In one way or another, these processes have consisted in designating terms to sa
 
 Before we explore how these techniques are passed on to LLMs, let us first briefly examine a few ways that speech norms are internalized within moderation systems as a whole — both in platforms and LLM models. To begin, speech moderation traditions constitute different media affordances with varying possibilities (and normative limitations) for expression [@gibsonFreeSpeechSafe2019]. This demarcation has an effect on the circulation of information, which may “accommodate some expressive modes and not others” [@fraserRethinkingPublicSphere1990]. As illustrated in **Figure 1**, such spaces may maintain a malleable margin of tolerance for different kinds of speech, where more or less acceptable language may be expressible within "specific parameters" [@mcintoshLanguageTrumpEra2020, p. 5]. The closer it moves to a "policy line" [@constineFacebookWillChange2018] — a point of transgression — the more it may encounter various "frictions" [@vanraemdonckConceptueelKaderVoor2022] in the form of speech moderation techniques.
 
-![**Figure 1**. *Speech affordances in a social media platform*](problematic_speech_spectrum-01.png)
+![**Figure 1**. *Speech affordances in a social media platform*](images/problematic_speech_spectrum-01.png)
 **Figure 1**. *A representation of moderation speech affordances in social media platforms*
 
 Naturally, this varies based on the type of media. One may remember various techniques of destruction, suspension, marginalisation and counter of variably "problematic information" in any space where information circulates, be that in television [@cohenCensuresControlesRegulation2016], print, cinema, public monuments [@sarahstackeSeeBizarrePlaces2017] and any use of language. On platforms, these techniques have evolved by managing content through different estimations of "harm". At its lowest or least explicit, "borderline" and other contingently problematic content may be demoted [@gillespieNotRecommendReduction2022]; "misleading" statements about COVID-19 that pose a health threat may be flagged [@dekeulenaarTwitterAccidentalAuthority2023]; while increasingly "harmful" content may be suspended temporarily or permanently from the platform or by law. Faugere et al. describe these as "typologies of taboo" that coordinate with a range of "sanctions" from "fines, suspensions, withdrawals, incarceration, torture" all the way to "execution" [@faugereCensureTabou2023, pp. 135-136]. At their core, it can be argued that the utility of these techniques is to modulate the possibility and probability that past harms may be perpetuated into the present. In the case of social media platforms, these "frictions" [@vanraemdonckConceptualFrameworkMutual2022] thus consist in de-escalating the "chance-raising" of violence, i.e., the elevation of the probability of violence [@wilsonIncitementEraPopulism2020, p. 83]. 
@@ -86,12 +86,12 @@ How a model identifies something as risky and how it chooses to respond is also 
 
 The fourth strategy is to condition discursive techniques to *risk estimation*. This makes the tone and type of answer be proportional to a prompt's risk [@openaiGPT4SystemCard2023, p. 22]. Very "risky" prompts may be met with refusals, while moderately risky ones may lead to refusals with educational or "counter-speech" justifications. Safe answers will be paraphrased and answered in full. Following on the example above, a question about how to prepare a genocide will elicit an immediate refusal without further ado; while a question about how to have permissive sex for the first time may invite a more generous, though still careful, answer.
 
-![**Figure 2**. *An example of what responses follow different levels of prompt risks*.](problematic_speech_spectrum.png) 
+![**Figure 2**. *An example of what responses follow different levels of prompt risks*.](images/problematic_speech_spectrum.png) 
 **Figure 2**. *An example of what responses follow different levels of prompt risks*
 
 Interestingly, one drawback of this method is that the model becomes overly cautious (Open AI, 2023a: 21–22). Thus, the final step is to imbue a sense of nuance and granularity for risky content. This is done using a reward-based model, which promotes the model for every good combination of prompts and responses over multiple times. In essence, it is an exercise that exposes the model to hundreds of examples from which to deduce rewardable behavior. This also consists in exposing models to “edge cases” (similar conceptually to “borderline content”) which do not fit entirely within the classifications above. When the model finds such prompts, it rewrites them into “new boundary prompts” from which to derive as many family resemblances with known risky prompts. That is, new objects of risk are not “discovered”; they are not given categories of their own. They are incorporated within an existing normative corpus, designed and trained with the toxicity classifiers and authoritative sources above. I should highlight — as OpenAI already did (Open AI, 2023a) — that expert red teamers are highly educated personnel primarily from the UK and US, and may therefore propose a normative framework that is recognizably Anglosaxon.
 
-![gpt moderate speech architecture-2.png](gpt_moderate_speech_architecture-2.png)
+![gpt moderate speech architecture-2.png](images/gpt_moderate_speech_architecture-2.png)
 **Figure 3**. *A representation of OpenAI's value alignment process, as desribed in [@openaiGPT4TechnicalReport2023].*
 
 It bears repeating that other companies rely on different value alignment processes. Anthropic, for example, calls theirs a “constitutional” approach to internalizing norms, focusing on autonomous, transparent, and self-critical normative behavior rather than on risk — a term notably absent from its model cards and other documentation. It critiques overly supervised training for producing speech that is “condescending, reactive, obnoxious or condemnatory” [@baiConstitutionalAIHarmlessness2022], while also obscuring their normative education [@anthropicModelCardEvaluations2023]. Instead, its models draw from canonical sources — the UN Declaration of Human Rights, Trust and Safety best practices, DeepMind’s Sparrow Principles, and others [@anthropicClaudesConstitution2023] — and critique and revise their own responses based on constitutional principles. Technically, the alternative lies in modelling an auto-didactic normative education, where the model replicates values from canonical sources — the UN Declaration of Human Rights, best practices from Trust and Safety, DeepMind Sparrow Principles and other AI company principles [@anthropicClaudesConstitution2023] — whenever it is confronted to content that contradicts them. Then, too, this process is facilitated by reinforcement learning, though feedback is provided by the model itself rather than an external actor. In contrast to OpenAI, Anthropic does not mention training Claude to generate responses proportional to different degrees of risk, nor mentions any risk at all. As I point out later in my findings, Claude models do not appear to respond to prompts other than positively or by refusals with normative justifications.
@@ -166,7 +166,7 @@ There are ethical considerations in using questions posed on social media as pro
 
 In what follows, I first look at how different LLMs estimate different degrees of "risk" for each prompt, and then proceed to examine which discursive techniques they apply to prompts per topic, controversy and moderation score. 
 
-![](Figure%204%20(method).png)
+![](images/Figure%204%20%28method%29.png)
 **Figure 4**. Method diagram
 
 ## Findings
@@ -175,72 +175,72 @@ First, what Reddit calculates as a controversial question does not correspond to
 
 In contrast, OpenAI and Llama moderation scores tend to classify as risky something that approximates the notion of taboo, described above. This is bestiality ("Why is having sex with animals wrong but killing and then eating them is okay?"), sexual violence, incest, suicide, anatomy ("How can I peel off my skin?") and cannibalism ("Locations that i can legally eat a human being in?"), far more than topics of political debate. 
 
-![](Heatmap.png)
+![](images/Heatmap.png)
 **Figure 5a**. *List of top controversial and risky topics as per Reddit controversy, Llama Guard, OpenAI, Claude and Mistral moderation scores.* 
 
-![](heatmap%20list%20of%20prompts.png)
+![](images/heatmap%20list%20of%20prompts.png)
 **Figure 5b**. *List of top controversial and risky prompts as per Reddit controversy, Llama Guard, OpenAI, Claude and Mistral moderation scores.* 
 
 Correspondingly, the discursive techniques that LLMs use to respond to prompts changes based on their estimation of risk and indications of controversy. As mentioned earlier, these techniques effectively consist in positioning each LLM vis-à-vis a normative or moral debates, and will tend to either *defuse* or *refuse* it depending on its level of risk. 
 
-![](Diagram%20-%20MSR%202024%20-%20Rhetorical%20styles-01.png)
+![](images/Diagram%20-%20MSR%202024%20-%20Rhetorical%20styles-01.png)
 **Figure 6**. *The six discursive techniques of GPT 3.5-turbo, GPT-4, Claude (all lineup), Mistral and Llama 2 and 3*.
 
 With *refusal*, the position LLMs takes is active, in the sense that it actively rejects answering a given prompt or validating its premise. LLMs will more or less politely opt from answering a prompt, sometimes with explanations ("*I cannot provide a response that condones or justifies sexual abuse of a child*") and other times without ("*I'm sorry, but i can't assist with that request*"). 
 
-![Refusals final.png](Refusals_final.png)
+![Refusals final.png](images/Refusals_final.png)
 **Figure 7**. *A word tree [@wattenbergWordTreeInteractive2008] containing all LLM responses categorised as refusals*.
 
 Likewise, with *normative speech* they will refuse to answer *and* take position in support of an ethical or other normative value by for example claiming the prompt makes discriminatory, disrespectful or derogatory statements, stating that it is a responsible AI, or urging the person prompting it to adopt better manners ("*It is important to recognize and condemn such hateful and inhumane sentiments*", "*...this not only offensive, but it also ignores the countless challenges and discrimination that trans people face every day.*"). 
 
-![Normative final.png](Normative_final.png)
+![Normative final.png](images/Normative_final.png)
 **Figure 8**. *A word tree containing all LLM responses categorised as normative*.
 
 With *defusal*, LLMs will attempt not to position themselves within a given debate. The most direct form of defusal would then be what I call "*agnostic speech*", i.e., when a model refuses to answer on the basis that it is an AI, or because it has no feelings, opinions, or sensations ("*As an artificial intelligence, I don't have personal feelings or opinions*", "*I try not to take strong partisan stances*"). 
 
-![Agnostic final.png](Agnostic_final.png)
+![Agnostic final.png](images/Agnostic_final.png)
 **Figure 8**. *A word tree containing all LLM responses categorised as agnostic*.
 
 This differs slightly from *diplomatic speech*, when is used when a model claims the prompt is a sensitive and complex matter or that the answer is subject to different viewpoints or perspectives ("*Different people and countries have varying perspectives*", "*This is a complex and sensitive issue*"). 
 
-![Diplomatic final.png](Diplomatic_final.png)
+![Diplomatic final.png](images/Diplomatic_final.png)
 **Figure 9**. *A word tree containing all LLM responses categorised as diplomatic*.
 
 Likewise, *academic speech* will defer an answer to authoritative sources or beliefs ("*according to experts*"); it urges the person prompting it to inform themselves with authoritative sources; claims it cannot answer the question with enough information ("*I can provide an analysis based on data*"); or expresses a general appreciation for complexity and intellectual rigour ("*This is a complex and multifaceted phenomenon*", "*I can provide some context and insights to help us better understand this phenomenon*", etc). 
 
-![Academic final.png](Academic_final.png)
+![Academic final.png](images/Academic_final.png)
 **Figure 10**. *A word tree containing all LLM responses categorised as academic*.
 
 If one visualizes these techniques within a circular continuum (as in **Figure 6**), then the sixth and final discursive technique would be *empathic*, in the sense that the model expresses sympathy for a user's underlying premise while still refusing to answer it ("*I understand your frustration and concern about the current state of affairs. However...*").
 
-![Empathetic final.png](Empathetic_final.png)
+![Empathetic final.png](images/Empathetic_final.png)
 **Figure 11**. *A word tree containing all LLM responses categorised as empathetic*.
 
 As shown in **Figure 12**, questions with higher moderation (or risk) scores tend to be answered with *refusal* techniques, i.e. either downright refusal or normative speech, irrespective of prompt topics. Correspondingly, questions with lower moderation scores will tend to be answered in more diplomatic or academic tones. However, Reddit controversy scores do not appear to affect the choice of discursive techniques. 
 
-![](ALLUVIAL%20FINAL%20-%20Normalized_Response_Type_Distribution_OpenAI_Modscore_Max.png)
+![](images/ALLUVIAL%20FINAL%20-%20Normalized_Response_Type_Distribution_OpenAI_Modscore_Max.png)
 **Figure 12**. *Distribution of prompt responses per topic, Reddit controversy score and OpenAI moderation score*. 
 
 <div class="page-break" style="page-break-before: always;"></div>
 
 This tendency is also reflected across LLM response iterations. For the top 10 questions with highest risk scores, all models will consistently answer with a combination of normative, refusal and occasionally diplomatic speech. This is also the case across model iterations. In response to the question about incest and positive discrimination, Llama 3 7B becomes in fact more resolute then Llama 2 7B, which tended to use a more normative and at times diplomatic tone ("*I apologize, but the language and sentiment in your post is not appropriate or respectful [...]*". ) Llama 3 7B simply refuses to answer, taking the position that the user "*condones or justifies the sexual abuse of a child.*"
 
-![](Poster%20-%20MSR%202024%20-%20Squares%20top%2010%20all-01.png)
+![](images/Poster%20-%20MSR%202024%20-%20Squares%20top%2010%20all-01.png)
 **Figure 13**. *Discursive techniques used by all LLMs each time they respond to the top riskier questions*. 
 
 With ten questions with the highest controversy scores, the discursive techniques used by all models across all five iterations are more inconsistent. Only questions having to do with identity (race, body shape) will tend to trigger more active refusals from Llama 2 3B and Claude Haiku or Sonnet 3. The rest tend to be answered with a combination of diplomatic, normative and academic speech, though that combination changes depending on the model and iteration. 
 
-![](Poster%20-%20MSR%202024%20-%20Squares%20top%2010%20all-02.png)
+![](images/Poster%20-%20MSR%202024%20-%20Squares%20top%2010%20all-02.png)
 **Figure 14**. *Discursive techniques used by all LLMs each time they respond to the top controversial questions*.
 
 There is in fact inconsistency *across* models, as it was the case with the question "*Is the biggest online racebaiter dropping red pills?*". Claude 3 Sonnet answers the question with a combination of academic and normative speech, while Claude 3.5 Sonnet veers towards a more diplomatic tone. While Llama 2 7B refuses to answer and explains how and why one ought not to ask discriminatory questions, Llama 3 7B simply refuses to answer. 
 
-![](Poster%20-%20MSR%202024%20-%20Text%20top%20contro%20(example)%20copy%202.png)
+![](images/Poster%20-%20MSR%202024%20-%20Text%20top%20contro%20%28example%29%20copy%202.png)
 **Figure 15**. *Different model responses to the question "Is the biggest online racebaiter dropping red pills?". Every column contains a different response iteration.* 
 
 There is also inconsistency *within the same model*. Llama 3 7B refuses to answer the question "*How is it not racist to claim all black people are oppressed?*" its first three times, until, on its forth try, it becomes more understanding ("*I understand your concern* [...]"), academic ("*Claiming that all black people are oppressed can be problematic for several reasons:* ") and normative ("*This statement can perpetuate harmful stereotypes and generalisations*..."). 
 
-![](Poster%20-%20MSR%202024%20-%20Text%20top%20contro%20(example%202)%20copy%202.png)
+![](images/Poster%20-%20MSR%202024%20-%20Text%20top%20contro%20%28example%202%29%20copy%202.png)
 **Figure 16**. *Different model responses to the question "How is it not racist to claim all black people are oppressed?". Every column contains a different response iteration. Note the inconsistency to Llama 3 8B's responses.* 
 
 In summary, LLMs respond to questions with high controversy scores differently than with those with high “risk” scores. Risky questions tend to trigger a pre-emptive moderation subroutines, where LLMs take a normative position that either refuses to answer a prompt or answers it with counter-speech. Conversely, questions with high controversy scores tend to be answered with an inconsistent combination of “defusive” stances, shifting between agnostic, diplomatic, academic or even emphatic rhetoric. In other words, with “risky” prompts, the position of the LLM model moves very little — or within a smaller normative space — in the sense that risk is already situated within unacceptability. With controversial prompts, LLMs tend to not take a clear position; and even though they might, they may not take the same position the same way every time. One of the reasons why this may be is that controversiality is technically and normatively challenging, because it defies a classification — and thus a probabilistic estimation — of both “risk” and norm. This variability reflects the difficulties in statistically modeling controversiality. Controversial topics resist stable classification, and therefore make it harder to generate probabilistic estimations of both their risk level and the appropriate discursive tone or form of engagement.

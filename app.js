@@ -531,15 +531,20 @@ async function renderManuscript(chapterSlug) {
     // 5) Add stable ids to headings + collect for TOC.
     //    The very first H1 is the chapter title — keep its id (so the
     //    sidebar title still anchors there) but DROP it from the sidebar TOC.
-    const headings = host.querySelectorAll("h1, h2, h3");
+    collapseBlankRuns(host);
+
+    const headings = host.querySelectorAll("h1, h2, h3, h4");
     const toc = [];
-    let droppedFirstH1 = false;
-    headings.forEach(h => {
+    // Drop the leading title block from the chapter nav: the "Chapter N" /
+    // "Part" marker H1 and the chapter-title H1 that immediately follows it.
+    let dropLeading = 2;
+    headings.forEach((h, i) => {
       const id = "h-" + slug(h.textContent);
       h.id = id;
-      if (h.tagName === "H1" && !droppedFirstH1) {
-        droppedFirstH1 = true;
-        return;          // omit the chapter title from the TOC (per #9)
+      if (dropLeading > 0 && h.tagName === "H1" &&
+          toc.length === 0 && i < 2) {
+        dropLeading--;
+        return;
       }
       toc.push({
         level: Number(h.tagName.slice(1)),
@@ -2729,6 +2734,12 @@ else document.addEventListener("DOMContentLoaded", snapshotFigureTemplates,
 // manuscript flow at their placeholders. Run ONLY when chapter-1 is shown.
 async function mountChapter1Analysis() {
   snapshotFigureTemplates();          // safety: ensure captured before render
+  // The #analysis section is a TEMPLATE source — its figures get cloned into
+  // the chapter flow by promoteInlineFigures(). It must be on-screen while
+  // they render (SVG getBBox() returns 0 in a display:none subtree), then
+  // hidden so it doesn't trail at the bottom of the chapter.
+  const analysisEl = document.getElementById("analysis");
+  if (analysisEl) analysisEl.style.display = "block";
 
   await safe("summary",  "#summary-table")(() => renderSummary());
   await safe("sankey D→T→S", "#sankey-discipline-topic")(() => renderSankeyDTS());
@@ -2978,6 +2989,9 @@ async function mountChapter1Analysis() {
   setupFigureDownloads();   // ⬇ PNG / ⬇ SVG buttons on every chart
   promoteInlineFigures();   // swap manuscript placeholders for live figures
   setTimeout(applyHashFiltersAndScroll, 60); // honour any `?key=val` in #hash
+  // Templates are cloned into the chapter now — hide the source section so
+  // it doesn't render a second, empty copy at the foot of the chapter.
+  if (analysisEl) analysisEl.style.display = "none";
 }
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -3014,14 +3028,13 @@ function buildGlobalToc() {
   const ol = document.getElementById("toc");
   if (!ol || !TOC) return;
   const li = [];
-  li.push(`<li class="toc-home"><a href="#/">Cover</a></li>`);
+  li.push(`<li class="toc-section"><a href="#/">Cover</a></li>`);
   for (const e of TOC.entries) {
-    if (e.kind === "part") {
-      li.push(`<li class="toc-part"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
-    } else {
-      const cls = e.kind === "chapter" ? "toc-ch" : "toc-front";
-      li.push(`<li class="${cls}"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
-    }
+    const cls = e.kind === "part" ? "toc-part"
+              : e.kind === "chapter" ? "toc-ch"
+              : e.kind === "back" ? "toc-section"   // Conclusion, References
+              : "toc-front";                          // Acknowledgments, Abstract, Intro
+    li.push(`<li class="${cls}"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
   }
   ol.innerHTML = li.join("");
   highlightToc();
@@ -3038,6 +3051,25 @@ function highlightToc() {
 
 // Per-chapter heading nav: a nested list injected right after the active
 // chapter's sidebar entry, so readers can jump within the open chapter.
+// Collapse the over-generous vertical whitespace the source markdown carries
+// (runs of blank paragraphs, stray <br>, Obsidian page-break divs) so each
+// section keeps at most one blank line under its heading.
+function collapseBlankRuns(host) {
+  if (!host) return;
+  const isBlank = el =>
+    el && el.nodeType === 1 &&
+    (el.tagName === "P" || el.tagName === "DIV") &&
+    !el.querySelector("img, figure, table, svg, iframe, video") &&
+    el.textContent.replace(/ /g, "").trim() === "";
+  // Remove page-break helpers and empty block elements outright.
+  host.querySelectorAll(".page-break").forEach(n => n.remove());
+  [...host.children].forEach(el => { if (isBlank(el)) el.remove(); });
+  // Collapse 2+ consecutive <br> into a single line break.
+  host.querySelectorAll("br + br + br, br + br").forEach(br => {
+    if (br.previousElementSibling?.tagName === "BR") br.remove();
+  });
+}
+
 function buildChapterNav(slug, headings) {
   document.querySelectorAll("#toc .chapter-subnav").forEach(n => n.remove());
   if (!slug || !headings || !headings.length) return;
@@ -3090,6 +3122,8 @@ async function renderLanding() {
     ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
     ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}
     <nav class="cover-toc"><h2>Contents</h2><ol class="land-toc">${toc}</ol></nav>`;
+  el.querySelectorAll(".cover-abstract, .cover-ack").forEach(collapseBlankRuns);
+  buildChapterNav(null, null);   // clear any prior chapter's heading nav
   highlightToc();
   window.scrollTo(0, 0);
 }

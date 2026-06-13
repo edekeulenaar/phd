@@ -75,38 +75,76 @@ SITE_CHAPTERS  = Path(__file__).resolve().parent.parent / "chapters"
 SITE_MANUSCRIPT = Path(__file__).resolve().parent.parent / "manuscript.md"
 SITE_TOC = Path(__file__).resolve().parent.parent / "data" / "toc.json"
 
-# Ordered manifest — the single source of truth for the thesis structure.
-# Each entry: (slug, kind, source-filename | None, display-title).
-# kind ∈ {front, part, chapter, back}. `part` rows have no source body of
-# their own beyond a short framing note; they group the chapters that follow.
-THESIS_MANIFEST = [
-    ("acknowledgments", "front", "Acknowledgments.md", "Acknowledgments"),
-    ("abstract",        "front", "Abstract.md",        "Abstract"),
-    ("intro",           "front", "Introduction.md",    "Introduction"),
-    ("part-1", "part", "Part I. What is moderation?.md", "Part I · What is moderation?"),
-    ("chapter-1",  "chapter", "Chapter 1. Censorship and moderation.md", "1 · Censorship and moderation"),
-    ("chapter-2",  "chapter", "Chapter 2. After deplatforming.md", "2 · After deplatforming"),
-    ("part-2", "part", "Part II. Speech affordances.md", "Part II · Speech affordances"),
-    ("chapter-3",  "chapter", "Chapter 3. The affordances of extreme speech.md", "3 · The affordances of extreme speech"),
-    ("chapter-4",  "chapter", "Chapter 4. The affordances of replacement narratives.md", "4 · The affordances of replacement narratives"),
-    ("chapter-5",  "chapter", "Chapter 5. LLMs and the generation of moderate speech.md", "5 · LLMs and the generation of moderate speech"),
-    ("part-3", "part", "Part III. Moderation crises.md", "Part III · Moderation crises"),
-    ("chapter-6",  "chapter", "Chapter 6. Moderation in crisis.md", "6 · Moderation in crisis"),
-    ("chapter-7",  "chapter", "Chapter 7. Of migrants and strangers.md", "7 · Of migrants and strangers"),
-    ("chapter-8",  "chapter", "Chapter 8. Twitter as an accidental authority.md", "8 · Twitter as an accidental authority"),
-    ("chapter-9",  "chapter", "Chapter 9. Normative dislocation.md", "9 · Normative dislocation"),
-    ("part-4", "part", "Part IV. Ruptures.md", "Part IV · Ruptures"),
-    ("chapter-10", "chapter", "Chapter 10. Platform ruptures and the formation of online counter spheres.md", "10 · Platform ruptures and online counter-spheres"),
-    ("chapter-11", "chapter", "Chapter 11. Deplatforming, demotion and folk theories of Big Tech persecution.md", "11 · Deplatforming, demotion and folk theories"),
-    ("part-5", "part", "Part V. Modulation and consensus.md", "Part V · Modulation and consensus"),
-    ("chapter-12", "chapter", "Chapter 12.  Modulating moderation.md", "12 · Modulating moderation"),
-    ("chapter-13", "chapter", "Chapter 13. From Twitter to X.md", "13 · From Twitter to X"),
-    ("conclusion", "back", "Conclusion.md", "Conclusion"),
-    ("references",  "back", None, "References"),
-]
-# Decoded source-filename → slug, for rewriting cross-chapter links the
-# author wrote as `[Chapter 8. …](Chapter%208.%20….md)`.
-SRC_TO_SLUG = {src: slug for slug, _k, src, _t in THESIS_MANIFEST if src}
+# The thesis structure is DERIVED from the vault filenames on every build, so
+# it survives the author renumbering / inserting / dropping chapters. Two
+# small bits of config remain:
+#   FRONT_MATTER  — front sections, in reading order (fixed names);
+#   PART_START    — the first chapter number under each Part (which Part a
+#                   chapter belongs to). Update only when a Part gains/loses
+#                   its opening chapter.
+FRONT_MATTER = ["Acknowledgments.md", "Abstract.md", "Introduction.md"]
+BACK_MATTER  = ["Conclusion.md"]
+PART_START   = {1: 1, 2: 3, 3: 6, 4: 10, 5: 13}   # Part N → its first chapter
+_ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6,
+          "VII": 7, "VIII": 8, "IX": 9, "X": 10}
+
+# Filled by build_manifest() at the start of sync_thesis().
+THESIS_MANIFEST: list[tuple] = []
+SRC_TO_SLUG: dict[str, str] = {}
+
+
+def build_manifest() -> None:
+    """Scan MANUSCRIPT_DIR and (re)build THESIS_MANIFEST + SRC_TO_SLUG from the
+    current filenames: front matter, then each Part followed by the chapters
+    whose number falls in its range, then back matter + a generated
+    References entry."""
+    global THESIS_MANIFEST, SRC_TO_SLUG
+    files = {p.name for p in MANUSCRIPT_DIR.glob("*.md")}
+
+    chapters: dict[int, tuple[str, str]] = {}   # num → (filename, title)
+    parts: dict[int, tuple[str, str]] = {}      # num → (filename, title)
+    ch_re   = re.compile(r"^Chapter\s+(\d+)\s*\.\s*(.+)\.md$")
+    part_re = re.compile(r"^Part\s+([IVX]+)\s*\.\s*(.+)\.md$")
+    for name in files:
+        m = ch_re.match(name)
+        if m:
+            chapters[int(m.group(1))] = (name, m.group(2).strip())
+            continue
+        m = part_re.match(name)
+        if m and m.group(1) in _ROMAN:
+            parts[_ROMAN[m.group(1)]] = (name, m.group(2).strip())
+
+    manifest: list[tuple] = []
+    for fn in FRONT_MATTER:
+        if fn in files:
+            manifest.append((Path(fn).stem.lower(), "front", fn, Path(fn).stem))
+
+    part_nums = sorted(parts)
+    for i, pn in enumerate(part_nums):
+        fname, ptitle = parts[pn]
+        roman = next(r for r, v in _ROMAN.items() if v == pn)
+        manifest.append((f"part-{pn}", "part", fname, f"Part {roman} · {ptitle}"))
+        lo = PART_START.get(pn, 0)
+        hi = PART_START.get(part_nums[i + 1] if i + 1 < len(part_nums) else 0,
+                            10**6)
+        for cn in sorted(c for c in chapters if lo <= c < hi):
+            cfn, ctitle = chapters[cn]
+            manifest.append((f"chapter-{cn}", "chapter", cfn, f"{cn} · {ctitle}"))
+
+    # Any chapter not captured by a part range (e.g. before Part I) — append in
+    # order so nothing silently vanishes.
+    placed = {int(s.split("-")[1]) for s, k, *_ in manifest if k == "chapter"}
+    for cn in sorted(c for c in chapters if c not in placed):
+        cfn, ctitle = chapters[cn]
+        manifest.append((f"chapter-{cn}", "chapter", cfn, f"{cn} · {ctitle}"))
+
+    for fn in BACK_MATTER:
+        if fn in files:
+            manifest.append((Path(fn).stem.lower(), "back", fn, Path(fn).stem))
+    manifest.append(("references", "back", None, "References"))
+
+    THESIS_MANIFEST = manifest
+    SRC_TO_SLUG = {src: slug for slug, _k, src, _t in manifest if src}
 
 # NOTE: "Censorship and moderation: the oscillations of a contested practice"
 # is CHAPTER 1's title, not the thesis title. The thesis title is TBD — keep
@@ -201,17 +239,28 @@ def write_csv(path: Path, header: list[str], rows: list[list]) -> None:
 
 # ─── Thesis sync ──────────────────────────────────────────────────────────────
 
-from urllib.parse import unquote as _unquote
+from urllib.parse import unquote as _unquote, quote as _quote
 
 _ABS_SITE_RE = re.compile(r"https?://[\w.-]*github\.io/[\w.-]+/(#)")
-_MD_LINK_RE  = re.compile(r"\]\(([^)]+?\.md)((?:#[^)]*)?)\)")
+_MD_LINK_RE  = re.compile(r"(?<!!)\]\(([^)]+?\.md)((?:#[^)]*)?)\)")
+# Image openings: `![alt](`. The URL that follows may itself contain balanced
+# parens (e.g. `method(2) alt.png`), so we scan for the matching close paren
+# manually rather than with a regex (a nested-quantifier regex ReDoS-hangs on
+# the larger chapters).
+_IMG_OPEN_RE = re.compile(r"!\[[^\]]*\]\(")
+_IMG_EXT     = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
+VAULT_IMAGES = MANUSCRIPT_DIR / "images"
+SITE_IMAGES  = Path(__file__).resolve().parent.parent / "images"
+_referenced_images: set[str] = set()      # basenames to copy at sync time
 
 
 def rewrite_links(text: str) -> str:
     """Make a chapter's markdown path-agnostic and SPA-routable:
       • absolute GitHub-Pages URLs → relative fragments, so a repo rename
         never breaks the embedded figure links;
-      • cross-chapter `](Chapter%20N…md)` links → `](#/<slug>)` hash routes.
+      • cross-chapter `](Chapter%20N…md)` links → `](#/<slug>)` hash routes;
+      • bare image filenames → `images/<name>` and recorded for copying
+        (Obsidian resolves attachments without the folder; the web can't).
     """
     text = _ABS_SITE_RE.sub(r"\1", text)
 
@@ -221,7 +270,38 @@ def rewrite_links(text: str) -> str:
         slug = SRC_TO_SLUG.get(name)
         return f"](#/{slug}{anchor})" if slug else m.group(0)
 
-    return _MD_LINK_RE.sub(_md, text)
+    text = _MD_LINK_RE.sub(_md, text)
+
+    # Rewrite image srcs with a single linear left-to-right scan.
+    out, pos = [], 0
+    for m in _IMG_OPEN_RE.finditer(text):
+        if m.start() < pos:
+            continue                       # inside an already-consumed span
+        # Find the matching close paren, honouring one+ levels of nesting.
+        i, depth = m.end(), 1
+        while i < len(text) and depth:
+            c = text[i]
+            if c == "(":
+                depth += 1
+            elif c == ")":
+                depth -= 1
+            i += 1
+        if depth:
+            break                          # unbalanced — leave the rest as-is
+        src = text[m.end():i - 1]
+        out.append(text[pos:m.end()])      # `![alt](`
+        low = src.lower()
+        if (low.endswith(_IMG_EXT) and
+                not src.startswith(("http://", "https://", "images/", "data:"))):
+            name = _unquote(src).split("/")[-1]
+            _referenced_images.add(name)
+            out.append(f"images/{_quote(name)}")
+        else:
+            out.append(src)
+        out.append(")")
+        pos = i
+    out.append(text[pos:])
+    return "".join(out)
 
 
 def sync_thesis() -> None:
@@ -230,8 +310,11 @@ def sync_thesis() -> None:
     and write site/data/toc.json (parts → chapters tree)."""
     import json as _json
     import shutil as _sh
+    build_manifest()      # derive structure from current vault filenames
     SITE_CHAPTERS.mkdir(parents=True, exist_ok=True)
     SITE_TOC.parent.mkdir(parents=True, exist_ok=True)
+    for stale in SITE_CHAPTERS.glob("*.md"):   # drop renamed/removed chapters
+        stale.unlink()
 
     entries = []          # flat, ordered list for the router
     n_copied = n_missing = 0
@@ -261,6 +344,23 @@ def sync_thesis() -> None:
                         encoding="utf-8")
     print(f"Synced thesis: {n_copied} files → {SITE_CHAPTERS.name}/ "
           f"({n_missing} missing) · wrote {SITE_TOC.name}")
+
+    # Copy every referenced image from the vault into site/images/ (only the
+    # ones chapters actually use — the vault folder is far larger). Chapter-1
+    # live-figure placeholders (fig-*.png) are already committed there.
+    SITE_IMAGES.mkdir(parents=True, exist_ok=True)
+    n_img = n_img_missing = 0
+    for name in sorted(_referenced_images):
+        src = VAULT_IMAGES / name
+        dst = SITE_IMAGES / name
+        if src.exists():
+            if not dst.exists() or src.stat().st_mtime > dst.stat().st_mtime:
+                _sh.copy2(src, dst)
+            n_img += 1
+        elif not dst.exists():
+            n_img_missing += 1
+    print(f"  images: {n_img} referenced copied/present "
+          f"({n_img_missing} unresolved)")
 
 
 # ─── Main ─────────────────────────────────────────────────────────────────────

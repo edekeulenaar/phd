@@ -78,6 +78,7 @@
   --bg-soft:    var(--paper-alt);
 
   --side-w:     250px;
+  --right-w:    232px;           /* right rail: figure key + resources */
   --content-w:  46rem;
   --prose-w:    65rem;            /* prose + 17rem margin-cites column */
   --serif:      "ACaslon Pro", "Adobe Caslon Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
@@ -171,11 +172,10 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 .toc .lvl-3 a { font-size: 11.5px; padding-left: 2.2rem; margin-left: -0.6rem; }
 
 /* ── Global thesis TOC (parts → chapters) in the sidebar ──────────────── */
-.toc .toc-home a {
-  font-family: var(--sans);
-  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
-  color: var(--muted);
-}
+/* Cover, Part dividers, Conclusion and References are structural — bold,
+   black, uppercase. Front matter (Acknowledgments / Abstract / Introduction)
+   is italic-muted; chapters are plain and slightly indented. */
+.toc .toc-section a,
 .toc .toc-part a {
   font-family: var(--sans);
   font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
@@ -184,17 +184,23 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 }
 .toc .toc-front a { font-size: 12.5px; color: var(--muted); font-style: italic; }
 .toc .toc-ch a    { font-size: 12.5px; padding-left: 0.9rem; }
-/* Per-chapter heading nav injected under the active chapter. */
+/* Per-chapter heading nav injected under the active chapter, indented by
+   heading level so sub- and sub-sub-sections nest visibly. */
 .toc .chapter-subnav {
   list-style: none; margin: 0.1rem 0 0.3rem; padding: 0;
 }
 .toc .chapter-subnav a {
-  font-size: 11.5px; color: var(--muted);
-  padding: 0.12em 0 0.12em 1.4rem; margin-left: -0.6rem;
+  display: block;
+  font-size: 11.5px; color: var(--muted); font-style: normal;
+  text-transform: none; letter-spacing: 0; font-weight: 400;
+  padding: 0.12em 0 0.12em 0.9rem; margin-left: -0.6rem;
   border-left: 2px solid transparent;
 }
-.toc .chapter-subnav .sub-lvl-3 a { padding-left: 2.1rem; font-size: 11px; }
+.toc .chapter-subnav .sub-lvl-2 a { padding-left: 1.7rem; }
+.toc .chapter-subnav .sub-lvl-3 a { padding-left: 2.5rem; font-size: 11px; }
+.toc .chapter-subnav .sub-lvl-4 a { padding-left: 3.3rem; font-size: 11px; font-style: italic; }
 .toc .chapter-subnav a:hover { color: var(--ink); }
+.toc .chapter-subnav a.is-active { color: var(--ink); border-left-color: var(--accent); }
 
 /* ── Cover / landing view ─────────────────────────────────────────────── */
 #landing .cover {
@@ -262,10 +268,25 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 
 #content {
   margin-left: var(--side-w);
+  margin-right: var(--right-w);
   /* Reference uses 1.5rem top, 3rem sides — matches sidebar's top padding. */
   padding: 1.5rem 3rem 6rem;
-  max-width: calc(100vw - var(--side-w));
+  max-width: calc(100vw - var(--side-w) - var(--right-w));
 }
+
+/* ── Right rail: figure key + future per-chapter resources ────────────── */
+#right-rail {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: var(--right-w);
+  padding: 1.5rem 1.1rem;
+  overflow-y: auto;
+  border-left: 1px solid var(--border);
+  background: var(--paper);
+}
+/* Hidden analysis templates (Chapter 1 figure sources) never show in flow;
+   mountChapter1Analysis() toggles display while figures render. */
+#analysis { display: none; }
 
 .prose { max-width: var(--content-w); margin-left: auto; margin-right: auto; }
 /* Headings — Test National (sans). Original site spacing/sizes kept;
@@ -606,7 +627,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
    3 rem of breathing room on each side of the centred figure. */
 .prose figure.fig.fig-live-mounted {
   position: relative;
-  width: min(calc(100vw - var(--side-w) - 6rem), 1200px);
+  width: min(calc(100vw - var(--side-w) - var(--right-w) - 6rem), 1200px);
   max-width: none;
   left: 50%;
   transform: translateX(-50%);
@@ -927,22 +948,12 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .sankey .link.hi  { stroke-opacity: 0.65; }
 .sankey .node.hi rect { stroke: var(--accent); stroke-width: 1.4px; }
 
-/* ─── Figure-key panel: lives at the bottom of the sidebar, swaps on scroll */
+/* ─── Figure-key panel: lives in the right rail, swaps on scroll ──────── */
 
 #fig-key {
-  margin-top: 1.2rem;
-  /* Reserve room at the bottom so the sticky "Source on GitHub" footer
-     never overlaps the last legend chip. */
-  margin-bottom: 3rem;
-  padding: 0.7rem 0.8rem;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 3px;
   font-family: var(--sans);
   font-size: 12.5px;
   color: var(--ink);
-  max-height: 60vh;
-  overflow-y: auto;
 }
 #fig-key .fk-h {
   font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
@@ -1356,7 +1367,7 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
 /* ─── Responsive ─────────────────────────────────────────────────────── */
 
 @media (max-width: 880px) {
-  :root { --side-w: 0px; }
+  :root { --side-w: 0px; --right-w: 0px; }
   #sidebar {
     position: static;
     width: 100%;
@@ -1364,5 +1375,11 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
     border-bottom: 1px solid var(--rule);
     padding: 1rem 1.2rem;
   }
-  #content { margin-left: 0; padding: 1.4rem 1.2rem 3rem; }
+  #right-rail { display: none; }   /* key/resources hidden on narrow screens */
+  #content { margin-left: 0; margin-right: 0; padding: 1.4rem 1.2rem 3rem; }
+}
+/* Below a comfortable two-rail width, drop the right rail before the left. */
+@media (max-width: 1180px) and (min-width: 881px) {
+  :root { --right-w: 0px; }
+  #right-rail { display: none; }
 }

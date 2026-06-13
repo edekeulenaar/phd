@@ -45,11 +45,11 @@ These user-based or “vernacular” methods of speech moderation are at the fou
 
 Though existing studies have described the progressive dissemination of these vernaculars across Facebook, YouTube, Twitter, Instagram and other platforms, they have seldom specified the kinds of affordances that facilitate it. We develop the hypothesis that the relatively lax speech regulations of 4chan and the YouTube comment section can be thought of as access points for objectionable language to cross through and concentrate in. Under this analytical framework, 4chan is typically considered the baseline from which objectionable language arises. Due to its unique affordances, the site has been the home of many memes, vernaculars and tropes that have been characterized (erroneously or not) the nascent “alt-right” during the online culture wars of 2015-2018: Pepe the Frog, Kekistan [(Tuters, 2019)](https://www.zotero.org/google-docs/?RAa75O), conspiracy theories like “Qanon” [(Zeeuw et al., 2020)](https://www.zotero.org/google-docs/?nqC21W) and Pizzagate [(Tuters et al., 2018)](https://www.zotero.org/google-docs/?3GLuFZ), as well as various hateful slurs [(E. de Keulenaar et al., 2021; Peeters et al., 2020)](https://www.zotero.org/google-docs/?CDPNtY)). In previous research, we have also described how YouTube could not prevent comments from expressing conspiratorial narratives linked to COVID-19, despite its “deplatforming” of numerous related videos [(E. de Keulenaar et al., 2021)](https://www.zotero.org/google-docs/?JxF0PY). The same could be hypothesized for conspiracies linked to demographic replacement, which, due to its xenophobic, islamophobic, racist and antisemitic components, could arguably be classified by YouTube’s hate speech policy as bordering on “Conspiracy theories saying individuals or groups are evil, corrupt, or malicious” [(YouTube, 2020)](https://www.zotero.org/google-docs/?NFQl4K). While a considerable number of channels spreading such conspiracies have been terminated since 2019 [(E. de Keulenaar et al., 2021)](https://www.zotero.org/google-docs/?geDsV2), comments claiming the veracity of replacement conspiracies in otherwise “authoritative” reports, such as a Deutsche Welle feature on migration towards Europe, are indeed still online [(DW News, 2019)](https://www.zotero.org/google-docs/?P9UMQ0).
 
-![Figure 1a](Figure%209.1a.png)
+![Figure 1a](images/Figure%209.1a.png)
 
-![Figure 1b](Figure%209.1b.png)
+![Figure 1b](images/Figure%209.1b.png)
 
-![Figure 1c](Figure%209.1c.png)
+![Figure 1c](images/Figure%209.1c.png)
 **Figure 1a, 1b and 1c**. *Diagrams showing the effect of speech affordances on the spread of objectionable language across 4chan, YouTube videos and YouTube comments.*
 
 ## Method
@@ -66,14 +66,14 @@ Our obvious choice of keywords for filtering the two above-mentioned datasets we
 
 Our results comprised 3 terms related to the “white genocide” conspiracy theory, 7 terms related to “great replacement” (2 of which were in French), 5 terms related to either conspiracy (“hybrid” terms), and 7 terms from Peeters et al.’s list of hate speech slurs (Figure 2). With these queries, we found a maximum of 3,127 4chan posts and 58,387 comments. For a baseline comparison, we also found a total of 2,881 video transcripts.
 
-![Figure 2](Figure%209.3.png)
+![Figure 2](images/Figure%209.3.png)
 _Figure 2. List of queries divided by category and number of returned 4chan posts and YouTube comments._
 
 ### Finding ideological convergences between the “great replacement” and “white genocide” conspiracies on 4chan and YouTube comments
 
 Our analysis consisted in first (1) tracing the spread of the great replacement and white genocide conspiracies on 4chan and YouTube comment sections; (2) finding any mention of the two conspiracies in the same YouTube comment sections; (3) measuring the extent to which YouTube commenters have began to mention the great replacement or white genocide conspiracies interchangeably – i.e., whether these two concepts have begun to converge _semantically_. To trace the cross-platform dissemination of the two concepts, we simply counted the amount of times that 4chan posts, YouTube comments and YouTube video transcripts mentioned any of our 23 queries over time (**Figure 4**). We then looked at whether any of these queries were mentioned in the comment section of the same channels (**Figure 5**). Finally, we measured _semantic_ converges between the two concepts based on whether commenters mentioned the same words next to any of our 23 queries . Technically, this meant comparing frequently collocated words, or bigrams, for each of the 23 queries related to the “great replacement” and “white genocide” theories (**Figure 6**).
 
-![Figure 3](Method.png)
+![Figure 3](images/Method.png)
 **Figure 3**. *Method pipeline.*
 
 ## The cross-platform dissemination of the great replacement and white genocide conspiracy theories
@@ -82,14 +82,14 @@ Our analysis consisted in first (1) tracing the spread of the great replacement 
 
 If we take 4chan/pol/ as a baseline for contemporary extreme-right political discussion, as we do below, we note that while “great replacement” experienced a significant spike in discussion around the time of Tarrant’s shooting, in general there has been a sustained growth on the extreme right around the term “white genocide”. While discussions on 4chan/pol/ cover a wide range of topics, they are virulently antisemitic, racist, and preoccupied with an dea of European identity that is entwined with fascist ideas.
 
-![Figure 4](Figure%209.4.png)
+![Figure 4](images/Figure%209.4.png)
 **Figure 4**. *Number of YouTube comments, videos and 4chan posts that mention “great replacement”, “white genocide” and related terms, 2008-2022.*
 
 While /pol/ is not primarily a neo-Nazi website, there does for example exists a distinct sub-community in /pol/ specifically devoted to the discussion of National Socialist ideology [(OILab, 2019)](https://www.zotero.org/google-docs/?d9G9q3). As seen in the graphic below, the general tendency of growth in discussion on /pol/ has grown along with the Trump insurgency and reached a nadir in the summer of 2017, coinciding with the much-publicized attempts to “Unite the Right” at a march in Charlottesville Virginia, at which point National Socialist discussions also reached their peak and then markedly diminished. The same spike can also be seen above, especially in discussions including the term “white genocide”. In a cry heard around the world, marchers were heard chanting “You will not replace us” and “Jews will not replace us.” While this twist of Camus’ conspiracy theory may seem puzzling when one considers that Jews make up a small percent of the population and have a low birth rate, it resonates with the extreme antisemitism to be found on 4chan/pol/.
 
 To get a sense of how 4chan’s (current) speech affordances facilitate the expression of theories of demographic “replacement” conspiracy theories, below we describe a selection of two of the top most posted images from posts using the term “white genocide”. One image includes the antisemitic “Happy Merchant”, who eliminates cultural and racial difference by mass producing the mixed-race “Amerimutt” [(see Hagen, 2018)](https://www.zotero.org/google-docs/?LcVA2g). The anti-semitic twists of the replacement narrative may be attributable to the influence of the work of Kevin MacDonald, whose book _Culture of Critique: An Evolutionary Analysis of Jewish Involvement in Twentieth-Century Political Movements_ (2002) is one of the more book popular intellectual resources on 4chan/pol/ [(E. V. de Keulenaar & Kisjes, 2019)](https://www.zotero.org/google-docs/?OuU1ny). MacDonald’s antisemitic argument is that Jews use their disproportionate influence as cultural gatekeepers to dilute to undermine “white culture” because they fear that a racially cohesive nations would expel them.
 
-![Figure 5](Figure%205b.png)
+![Figure 5](images/Figure%205b.png)
 **Figure 5**. *An infograph on the “Kalergi plan” found on 4chan/pol.*
 
 Another oft-shared image in posts featuring “white genocide” that refers to a "Kalergi plan’, which alleges that the European Union is a secret Bolshevik and Jewish “plan for the genocide of the white people of Europe” (**Figure 5b**). Richard von Coudenhove-Kalergi (1894–1972), an early advocate of European unification and founding president of the Paneuropean Union. The Paneuropean Union was an organization opposed by the Nazis on the basis that it was allegedly under the control of Freemasonry. In the early 2010s, a conspiracy theory developed in the far-right around the "Kalergi Plan’ accused the EU of conspiring to intentionally encourage a mass immigration into Europe in order to replace its original population. This theory was even aired within the European Parliament, in a speech in which the British National Party MEP Nick Griffin referred to Kalergi as the "godfather of the European Union’ and spoke of Kalergi’s plan as the "biggest genocide in human history" and a "breeding-out" of "indigenous Europeans" via “the encouragement of mass non-white immigration" [(Thorpe, 2018, p. 227)](https://www.zotero.org/google-docs/?kOuO3m).
@@ -102,14 +102,14 @@ While the “white genocide” conspiracy bore more popularity on the largely Am
 
 We find that the terms “great replacement” and “white genocide” are mentioned in the same comment sections, namely those of European and North-American far-right YouTubers Tommy Robinson, Stefan Molyneux, Millennial Woes, Lauren Southern and Paul Joseph Watson and  (highlighted in red) (**Figure 6**). These “bridges”, particularly Lauren Southern, act as locales where users also mention other variations of the two conspiracy theories such as “dieversity”, “demographic” and “population replacement”. Though we find evidence that users mention the racial and civilisational aspects of the two conspiracies interchangeably, we also see that “great replacement” is mentioned in channels where “white genocide” does not appear and vice-versa. These include channels of European political parties or movements, like the Irish branch of the (originally) French _Génération Identitaire_ (in yellow). The same can be said about the term “white genocide”, which is mentioned in comment sections of a majority of North-American or British channels (in green).
 
-![Figure 6](Figure%209.6(1).png)
+![Figure 6](images/Figure%209.6%281%29.png)
 **Figure 6**. *Comments sections where users mention “white genocide”, “great replacement” and related terms (located by channels).*
 
 ### To what extent do “white genocide” and “great replacement” converge semantically?
 
 Looking closely at terms mentioned by commenters that refer to “great replacement” and “white genocide”, we find that the two conspiracies converge around equivalences of “europeans” as “whites”. Words mentioned in combination with both concepts include allusions to a given culture (“Western”, “european”), race (“whites”, “ethnic”), reproduction (“women”, “children”) and government conspiracies (“left”, “plan”, “real”). The same can be said about comments in French, which allude to race and ethnicity (“épuration ethnique”, “asiatiques”, “congolais”, “blanches”), culture (“paganisme”, “occidentale”) and antisemitism (“juif”). It is nevertheless clear that content in French bears little connection to that in English, and that words similar to “white genocide” and “great replacement” only converge around English-speaking conversations. In this sense, we deduce here that convergences between “white genocide” and “great replacement” mostly occur in English-speaking comment spaces, where we see equivalences between the concept of “white” and “European”. 
 
-![Figure 7](Figure%209.7.png)
+![Figure 7](images/Figure%209.7.png)
 **Figure 7.** *Comments sections where users mention “white genocide”, “great replacement” and related terms (located by word connotations).*
 ## Conclusion: Countering Mainstreaming 
 

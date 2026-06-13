@@ -396,11 +396,11 @@ HOW,Restricting access,WHY,Social cohesion,164
 HOW,Marginalisation,WHY,Social cohesion,164
 HOW,Deplatforming,WHY,State security,164
 GROUP,Content moderation,WHO,Regulators,164
-WHO,Courts and prosecutors,WHY,Misinformation or disinformation as harm,163
 WHO,Legislators,WHY,Misinformation or disinformation as harm,163
+WHO,Courts and prosecutors,WHY,Misinformation or disinformation as harm,163
 WHO,Government agencies,HOW,Removal from circulation,162
-HOW,Marginalisation,WHY,Protection of children,162
 HOW,Metamoderation,WHY,Misinformation or disinformation as harm,162
+HOW,Marginalisation,WHY,Protection of children,162
 HOW,Modification,WHY,Obscenity and decency,162
 GROUP,Censorship,WHO,Censorship boards or agencies,161
 WHO,Algorithmic moderation systems,HOW,Metamoderation,161
@@ -431,8 +431,8 @@ WHAT,Censorship,WHY,Religious moral authority,153
 HOW,Self-censorship,WHY,Ideological consolidation,153
 WHO,Platforms,WHY,Economic pressure,153
 WHO,Government agencies,HOW,Disclosure,153
-WHO,Regulators,HOW,Review,152
 WHO,Regulators,HOW,Enframing,152
+WHO,Regulators,HOW,Review,152
 WHO,Censorship boards or agencies,WHY,Political control,152
 HOW,Blocking,WHY,Coherence,152
 HOW,Economic,WHY,Protection of children,152
@@ -453,8 +453,8 @@ GROUP,Content moderation,WHO,Platform oversight bodies,149
 WHO,Users,WHY,State security,149
 HOW,Modification,WHAT,Content moderation,149
 WHO,Users,HOW,Metamoderation,149
-WHO,Editors,HOW,Review,148
 WHO,Government agencies,HOW,Coersive,148
+WHO,Editors,HOW,Review,148
 GROUP,Content moderation,WHAT,Media moderation,148
 HOW,Economic,WHY,"Privacy, reputation & dignity",148
 GROUP,Censorship,WHY,Compliance,147
@@ -522,8 +522,8 @@ HOW,Disclosure,WHY,Professional / industry self-governance,130
 HOW,Disclosure,WHY,State security,130
 WHO,Courts and prosecutors,HOW,Economic,129
 WHO,Police / intelligence services,HOW,Monitoring,128
-WHAT,Content moderation,WHY,News values / editorial judgment,128
 WHAT,Debate management,WHY,Social cohesion,128
+WHAT,Content moderation,WHY,News values / editorial judgment,128
 HOW,Correcting,WHY,Harm principles and hate speech regulation,128
 HOW,Blocking,WHY,Economic pressure,128
 WHO,Users,HOW,Rating,128
@@ -531,8 +531,8 @@ WHAT,Media moderation,WHY,Misinformation or disinformation as harm,128
 WHO,Regulators,HOW,Monitoring,127
 WHO,Police / intelligence services,HOW,Review,127
 WHO,Courts and prosecutors,WHY,State security,126
-WHO,Police / intelligence services,HOW,Removal,125
 WHO,Censorship boards or agencies,HOW,Modification,125
+WHO,Police / intelligence services,HOW,Removal,125
 WHO,Courts and prosecutors,WHY,Brand safety,125
 WHAT,Censorship,WHY,Coherence,125
 WHO,Platforms,WHY,Harm reduction / public health,125
@@ -544,8 +544,8 @@ WHO,Algorithmic moderation systems,HOW,Economic,125
 WHO,"Public-private partnerships (""free-speech triangle"")",WHAT,Content moderation,125
 GROUP,Debate management,WHAT,Debate management,124
 WHO,Platform oversight bodies,HOW,Enframing,124
-WHO,Courts and prosecutors,HOW,Profiling,124
 WHO,Algorithmic moderation systems,HOW,Correcting,124
+WHO,Courts and prosecutors,HOW,Profiling,124
 WHO,Content moderators / BPO workforces,HOW,Deplatforming,123
 WHO,Legislators,HOW,Economic,123
 GROUP,Censorship,WHO,Other,123
@@ -561,8 +561,8 @@ WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Removal,122
 WHO,Religious authorities,WHAT,Censorship,121
 HOW,Self-censorship,WHY,Brand safety,121
 HOW,Metamoderation,WHY,"Privacy, reputation & dignity",121
-HOW,Coersive,WHY,Social cohesion,120
 HOW,Removal from circulation,WHY,Ideological consolidation,120
+HOW,Coersive,WHY,Social cohesion,120
 WHO,"Schools, curricula, librarians, academia",WHY,Social cohesion,120
 WHO,Political groups,WHAT,Censorship,120
 WHO,Users,HOW,Economic,120
@@ -657,8 +657,8 @@ HOW,Profiling,WHY,Ideological consolidation,104
 WHO,Courts and prosecutors,HOW,Disclosure,104
 HOW,Rating,WHY,Brand safety,104
 WHO,Other,WHY,Social cohesion,104
-WHO,Police / intelligence services,HOW,Blocking,103
 WHO,Censorship boards or agencies,HOW,Filtering,103
+WHO,Police / intelligence services,HOW,Blocking,103
 WHO,Government agencies,WHY,Religious moral authority,103
 HOW,Economic,WHY,Ideological consolidation,103
 WHO,Police / intelligence services,HOW,Self-censorship,103
@@ -713,8 +713,8 @@ WHO,Regulators,WHY,"Privacy, reputation & dignity",96
 WHO,Fact-checkers and verification units,HOW,Removal,96
 WHO,Algorithmic moderation systems,WHAT,Media moderation,96
 WHAT,Media moderation,WHY,Social cohesion,95
-WHO,"Schools, curricula, librarians, academia",HOW,Economic,95
 WHO,Government agencies,HOW,Interiorisation,95
+WHO,"Schools, curricula, librarians, academia",HOW,Economic,95
 HOW,Self-censorship,WHY,Economic pressure,95
 HOW,Removal from circulation,WHAT,Content moderation,95
 WHO,Users,WHAT,Media moderation,95
@@ -841,8 +841,8 @@ HOW,Review,WHAT,Other,81
 WHO,Regulators,WHY,State security,81
 WHO,Platforms,WHAT,Other,81
 HOW,Coersive,WHAT,Content moderation,81
-WHO,Editors,HOW,Removal from circulation,80
 WHO,Censorship boards or agencies,HOW,Removal from circulation,80
+WHO,Editors,HOW,Removal from circulation,80
 GROUP,Censorship,WHY,Misinformation or disinformation as harm,80
 WHO,"Schools, curricula, librarians, academia",HOW,Restricting access,80
 WHO,Government agencies,HOW,Confiscation,80
@@ -854,8 +854,8 @@ WHO,Courts and prosecutors,WHY,Economic pressure,80
 WHO,Regulators,HOW,Restricting access,80
 WHO,Journalists,HOW,Review,80
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,State security,80
-WHO,Political groups,HOW,Removal,79
 WHO,Political groups,HOW,Review,79
+WHO,Political groups,HOW,Removal,79
 WHO,Journalists,WHAT,Content moderation,79
 HOW,Labeling,WHY,Economic pressure,79
 WHO,Legislators,HOW,Metamoderation,79
@@ -882,11 +882,11 @@ HOW,Filtering,WHY,Alignment with human values,77
 HOW,Redirection,WHAT,Censorship,77
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Brand safety,77
 WHO,Platform oversight bodies,HOW,Labeling,77
-WHO,Police / intelligence services,HOW,Deplatforming,76
 WHO,Police / intelligence services,HOW,Removal from circulation,76
+WHO,Police / intelligence services,HOW,Deplatforming,76
 WHO,"Schools, curricula, librarians, academia",HOW,Labeling,76
-WHO,Political groups,WHY,Social cohesion,76
 WHO,"Schools, curricula, librarians, academia",WHY,Compliance,76
+WHO,Political groups,WHY,Social cohesion,76
 WHO,Civic advocacy & moral-pressure groups,WHY,Compliance,76
 HOW,Coersive,WHY,Obscenity and decency,76
 HOW,Licensing,WHY,Protection of children,76
@@ -894,8 +894,8 @@ HOW,Rating,WHY,"Privacy, reputation & dignity",76
 WHO,Editors,WHY,Obscenity and decency,76
 HOW,Modification,WHY,News values / editorial judgment,76
 HOW,Modification,WHY,Coherence,76
-WHO,Regulators,WHY,Professional / industry self-governance,75
 WHO,Censorship boards or agencies,WHY,Social cohesion,75
+WHO,Regulators,WHY,Professional / industry self-governance,75
 WHO,Journalists,WHY,Political control,75
 HOW,Obfuscation,WHY,Political control,75
 WHAT,Media moderation,WHY,News values / editorial judgment,75
@@ -971,8 +971,8 @@ HOW,Removal from circulation,WHY,Harm principles and hate speech regulation,69
 WHO,Debate moderators,HOW,Enframing,69
 WHO,"Schools, curricula, librarians, academia",WHY,Harm principles and hate speech regulation,69
 WHO,Platform oversight bodies,WHY,Professional / industry self-governance,69
-HOW,Monitoring,WHY,Religious moral authority,68
 HOW,Enframing,WHY,Religious moral authority,68
+HOW,Monitoring,WHY,Religious moral authority,68
 WHAT,Censorship,WHY,Harm reduction / public health,68
 GROUP,Censorship,HOW,Obfuscation,68
 HOW,Coherence,WHY,Coherence,68
@@ -1046,13 +1046,13 @@ HOW,Self-censorship,WHY,News values / editorial judgment,64
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Deplatforming,64
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Political control,64
 GROUP,Censorship,WHAT,Media moderation,63
-WHO,Religious authorities,HOW,Filtering,63
 WHO,Religious authorities,HOW,Removal from circulation,63
+WHO,Religious authorities,HOW,Filtering,63
 WHO,Religious authorities,WHY,Social cohesion,63
 WHO,Journalists,WHY,Social cohesion,63
 WHO,Political groups,HOW,Monitoring,63
-WHO,Self-censorship (analytical),WHAT,Censorship,63
 WHO,Government agencies,WHAT,Other,63
+WHO,Self-censorship (analytical),WHAT,Censorship,63
 WHAT,Other,WHY,Compliance,63
 WHO,Platform oversight bodies,HOW,Deplatforming,63
 HOW,Labeling,WHAT,Debate management,63
@@ -1091,8 +1091,8 @@ HOW,Self-censorship,WHAT,Media moderation,61
 WHO,Editors,HOW,Coersive,60
 HOW,Licensing,WHY,Professional / industry self-governance,60
 GROUP,Censorship,WHO,Journalists,60
-WHO,Police / intelligence services,WHY,Compliance,60
 WHO,Censorship boards or agencies,WHY,State security,60
+WHO,Police / intelligence services,WHY,Compliance,60
 WHAT,Other,WHY,Harm principles and hate speech regulation,60
 WHO,Advertisers,WHAT,Content moderation,60
 HOW,Deplatforming,WHY,News values / editorial judgment,60
@@ -1122,8 +1122,8 @@ WHO,Content moderators / BPO workforces,HOW,Rating,59
 HOW,Review,WHAT,Media regulation,58
 GROUP,Censorship,WHO,Self-censorship (analytical),58
 HOW,Interiorisation,WHY,State security,58
-WHO,Courts and prosecutors,WHY,Religious moral authority,58
 WHO,Journalists,WHY,Brand safety,58
+WHO,Courts and prosecutors,WHY,Religious moral authority,58
 HOW,Agenda setting,WHAT,Content moderation,58
 GROUP,Content moderation,WHY,Obscenity and decency,58
 HOW,Interiorisation,WHY,Protection of children,58
@@ -1139,8 +1139,8 @@ HOW,Coersive,WHY,Economic pressure,58
 WHO,Content moderators / BPO workforces,WHAT,Media moderation,58
 HOW,Restricting access,WHY,Religious moral authority,58
 GROUP,Content moderation,WHY,Alignment with human values,58
-WHO,Editors,HOW,Restricting access,57
 WHO,Political groups,HOW,Modification,57
+WHO,Editors,HOW,Restricting access,57
 HOW,Agenda setting,WHY,Social cohesion,57
 WHO,Private firms,HOW,Filtering,57
 WHO,Civic advocacy & moral-pressure groups,WHY,Professional / industry self-governance,57
@@ -1164,8 +1164,8 @@ HOW,Restricting access,WHY,News values / editorial judgment,56
 WHO,Government agencies,HOW,Redirection,56
 HOW,Licensing,WHY,Religious moral authority,55
 WHO,"Schools, curricula, librarians, academia",HOW,Interiorisation,55
-WHO,Political groups,HOW,Blocking,55
 WHO,Government agencies,HOW,Obfuscation,55
+WHO,Political groups,HOW,Blocking,55
 GROUP,Content moderation,WHO,Advertisers,55
 GROUP,Debate management,HOW,Prompting,55
 WHO,Fact-checkers and verification units,WHY,Harm principles and hate speech regulation,55
@@ -1206,8 +1206,8 @@ HOW,Licensing,WHY,"Privacy, reputation & dignity",53
 HOW,Obfuscation,WHY,Protection of children,53
 WHO,Distributors & booksellers,WHY,Political control,53
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Disclosure,53
-HOW,Removal,WHAT,Media regulation,52
 HOW,Removal from circulation,WHAT,Media moderation,52
+HOW,Removal,WHAT,Media regulation,52
 HOW,Licensing,WHY,Brand safety,52
 WHO,Government agencies,WHY,Harm reduction / public health,52
 HOW,Confiscation,WHY,Social cohesion,52
@@ -1231,8 +1231,8 @@ WHAT,Other,WHY,Professional / industry self-governance,51
 WHO,Courts and prosecutors,HOW,Confiscation,51
 WHAT,Other,WHY,"Privacy, reputation & dignity",51
 WHO,Content moderators / BPO workforces,HOW,Self-censorship,51
-WHO,Advertisers,HOW,Filtering,51
 WHO,Advertisers,HOW,Review,51
+WHO,Advertisers,HOW,Filtering,51
 WHO,Political groups,HOW,Removal from circulation,51
 WHO,Algorithmic moderation systems,HOW,Obfuscation,51
 HOW,Balancing,WHAT,Content moderation,51
@@ -1249,8 +1249,8 @@ GROUP,Censorship,WHAT,Other,50
 WHO,Translators / localisers,WHAT,Censorship,50
 HOW,Licensing,WHAT,Content moderation,50
 GROUP,Content moderation,WHO,Journalists,50
-WHO,Journalists,WHY,Compliance,50
 WHO,Civic advocacy & moral-pressure groups,WHY,"Privacy, reputation & dignity",50
+WHO,Journalists,WHY,Compliance,50
 HOW,Redirection,WHY,Misinformation or disinformation as harm,50
 WHO,Other,WHY,Religious moral authority,50
 HOW,Coersive,WHY,Misinformation or disinformation as harm,50
@@ -1289,8 +1289,8 @@ HOW,Enframing,WHAT,Media regulation,48
 WHO,Self-censorship (analytical),WHY,Political control,48
 HOW,Confiscation,WHY,Religious moral authority,48
 GROUP,Censorship,HOW,Correcting,48
-WHO,Other,WHY,News values / editorial judgment,48
 WHO,Private firms,WHY,Political control,48
+WHO,Other,WHY,News values / editorial judgment,48
 WHO,Algorithmic moderation systems,HOW,Interiorisation,48
 WHO,Editors,WHY,Misinformation or disinformation as harm,48
 WHO,Algorithmic moderation systems,HOW,Removal from circulation,48
@@ -1308,9 +1308,9 @@ WHO,Police / intelligence services,WHY,Misinformation or disinformation as harm,
 WHO,Censorship boards or agencies,HOW,Confiscation,47
 WHO,Courts and prosecutors,HOW,Rating,47
 WHO,Fact-checkers and verification units,WHAT,Censorship,47
-HOW,Removal,WHY,Consumer protection / fair competition,47
-HOW,Balancing,WHY,Social cohesion,47
 HOW,Enframing,WHY,Alignment with human values,47
+HOW,Balancing,WHY,Social cohesion,47
+HOW,Removal,WHY,Consumer protection / fair competition,47
 WHAT,Content moderation,WHY,Consumer protection / fair competition,47
 WHO,Civic advocacy & moral-pressure groups,WHY,Ideological consolidation,47
 HOW,Restricting access,WHY,Harm reduction / public health,47
@@ -1327,8 +1327,8 @@ GROUP,Debate management,HOW,Coherence,46
 HOW,Interiorisation,WHY,Harm principles and hate speech regulation,46
 HOW,Interiorisation,WHY,"Privacy, reputation & dignity",46
 WHO,Legislators,HOW,Licensing,46
-WHO,Users,WHAT,Other,46
 WHO,Algorithmic moderation systems,WHAT,Other,46
+WHO,Users,WHAT,Other,46
 HOW,Prompting,WHY,Brand safety,46
 WHAT,Other,WHY,Brand safety,46
 GROUP,Censorship,WHO,Private firms,46
@@ -1344,10 +1344,10 @@ WHO,Other,HOW,Coersive,46
 WHO,Broadcasting regulators,HOW,Filtering,46
 GROUP,Debate management,WHY,Conflict transformation,46
 WHO,Mediators,WHAT,Debate management,46
-WHO,Religious authorities,HOW,Monitoring,45
 WHO,Religious authorities,HOW,Enframing,45
-WHO,"Schools, curricula, librarians, academia",WHY,Misinformation or disinformation as harm,45
+WHO,Religious authorities,HOW,Monitoring,45
 WHO,Journalists,WHY,Professional / industry self-governance,45
+WHO,"Schools, curricula, librarians, academia",WHY,Misinformation or disinformation as harm,45
 WHO,Translators / localisers,HOW,Modification,45
 HOW,Obfuscation,WHY,Ideological consolidation,45
 WHO,Police / intelligence services,HOW,Confiscation,45
@@ -1364,8 +1364,8 @@ HOW,Confiscation,WHY,Protection of children,45
 WHO,Government agencies,WHY,Democratic self-defence,45
 HOW,Disclosure,WHY,Democratic self-defence,45
 WHO,Platforms,WHY,Consumer protection / fair competition,45
-HOW,Filtering,WHY,Consumer protection / fair competition,45
 HOW,Review,WHY,Consumer protection / fair competition,45
+HOW,Filtering,WHY,Consumer protection / fair competition,45
 HOW,Marginalisation,WHY,Ideological consolidation,45
 GROUP,Debate management,HOW,Balancing,45
 WHO,Other,HOW,Marginalisation,45
@@ -1388,15 +1388,15 @@ WHO,Distributors & booksellers,HOW,Review,44
 WHO,"Schools, curricula, librarians, academia",HOW,Rating,44
 HOW,Obfuscation,WHY,Obscenity and decency,44
 WHO,Broadcasting regulators,HOW,Review,44
-WHO,Other,HOW,Disclosure,44
 WHO,Other,HOW,Rating,44
+WHO,Other,HOW,Disclosure,44
 WHO,Platform oversight bodies,HOW,Economic,44
 WHO,Users,HOW,Intelligibility,44
 HOW,Disclosure,WHY,Harm reduction / public health,44
 WHAT,Media regulation,WHY,Political control,43
 HOW,Economic,WHY,Harm reduction / public health,43
-WHO,Self-censorship (analytical),HOW,Filtering,43
 WHO,Political groups,HOW,Labeling,43
+WHO,Self-censorship (analytical),HOW,Filtering,43
 WHO,Government agencies,WHAT,Debate management,43
 HOW,Agenda setting,WHY,News values / editorial judgment,43
 WHAT,Debate management,WHY,Political control,43
@@ -1454,21 +1454,21 @@ WHO,Religious authorities,HOW,Confiscation,41
 WHAT,Censorship,WHY,Other,41
 WHO,Distributors & booksellers,HOW,Removal,41
 WHO,Religious organisations,HOW,Review,41
-HOW,Modification,WHAT,Debate management,41
 HOW,Correcting,WHAT,Debate management,41
+HOW,Modification,WHAT,Debate management,41
 GROUP,Content moderation,WHY,Ideological consolidation,41
 HOW,Disclosure,WHY,Obscenity and decency,41
 GROUP,Content moderation,WHO,Police / intelligence services,41
 WHO,Religious authorities,HOW,Coersive,40
 WHO,Journalists,HOW,Labeling,40
-WHO,Censorship boards or agencies,HOW,Labeling,40
 WHO,Translators / localisers,HOW,Self-censorship,40
+WHO,Censorship boards or agencies,HOW,Labeling,40
 WHO,Advertisers,WHY,Harm principles and hate speech regulation,40
 GROUP,Content moderation,HOW,Interiorisation,40
 WHO,Religious authorities,WHY,State security,40
 WHO,Political groups,WHY,Brand safety,40
-HOW,Disclosure,WHAT,Other,40
 HOW,Economic,WHAT,Other,40
+HOW,Disclosure,WHAT,Other,40
 WHO,Cloud / infrastructure providers,HOW,Filtering,40
 WHO,Advertisers,HOW,Enframing,40
 WHO,Civic advocacy & moral-pressure groups,HOW,Rating,40
@@ -1487,13 +1487,13 @@ WHO,Journalists,WHY,State security,39
 WHO,Civic advocacy & moral-pressure groups,WHAT,Media moderation,39
 WHO,Content moderators / BPO workforces,WHAT,Debate management,39
 WHO,Advertisers,WHAT,Censorship,39
-WHO,Censorship boards or agencies,HOW,Rating,39
 WHO,Legislators,HOW,Rating,39
+WHO,Censorship boards or agencies,HOW,Rating,39
 HOW,Marginalisation,WHAT,Debate management,39
 HOW,Metamoderation,WHY,Economic pressure,39
 WHO,Courts and prosecutors,WHAT,Other,39
-WHO,Fact-checkers and verification units,WHY,State security,39
 WHO,Fact-checkers and verification units,WHY,Professional / industry self-governance,39
+WHO,Fact-checkers and verification units,WHY,State security,39
 WHO,Platform oversight bodies,WHAT,Media moderation,39
 WHO,Religious organisations,HOW,Modification,39
 WHO,Advertisers,HOW,Marginalisation,39
@@ -1501,8 +1501,8 @@ WHO,Advertisers,WHY,Misinformation or disinformation as harm,39
 HOW,Redirection,WHY,Coherence,39
 WHO,Algorithmic moderation systems,WHY,Ideological consolidation,39
 WHO,Broadcasting regulators,WHY,Protection of children,39
-WHO,Other,HOW,Licensing,39
 WHO,"Schools, curricula, librarians, academia",HOW,Marginalisation,39
+WHO,Other,HOW,Licensing,39
 WHO,Religious organisations,HOW,Self-censorship,39
 WHO,Other,HOW,Correcting,39
 HOW,Correcting,WHY,News values / editorial judgment,39
@@ -1510,8 +1510,8 @@ HOW,Prompting,WHY,Professional / industry self-governance,39
 HOW,Prompting,WHY,Misinformation or disinformation as harm,39
 WHO,Other,WHAT,Debate management,39
 WHO,Algorithmic moderation systems,HOW,Coersive,39
-WHO,Platforms,HOW,Scheduling,38
 WHO,Government agencies,HOW,Scheduling,38
+WHO,Platforms,HOW,Scheduling,38
 WHO,Military censors,WHAT,Censorship,38
 WHO,Police / intelligence services,WHY,Professional / industry self-governance,38
 HOW,Monitoring,WHAT,Media regulation,38
@@ -1548,16 +1548,16 @@ HOW,Agenda setting,WHAT,Debate management,37
 WHO,Private firms,WHY,Brand safety,37
 HOW,Metamoderation,WHY,Democratic self-defence,37
 WHO,Media owners,WHY,Social cohesion,37
-HOW,Review,WHY,Wartime necessity,37
 HOW,Rating,WHY,Ideological consolidation,37
+HOW,Review,WHY,Wartime necessity,37
 HOW,Labeling,WHY,Religious moral authority,37
 HOW,Rating,WHY,News values / editorial judgment,37
 HOW,Rating,WHY,Economic pressure,37
-WHO,Fact-checkers and verification units,WHY,Protection of children,37
 WHO,Fact-checkers and verification units,WHY,"Privacy, reputation & dignity",37
 WHO,Fact-checkers and verification units,WHY,Social cohesion,37
-HOW,Labeling,WHY,Alignment with human values,37
+WHO,Fact-checkers and verification units,WHY,Protection of children,37
 HOW,Monitoring,WHY,Consumer protection / fair competition,37
+HOW,Labeling,WHY,Alignment with human values,37
 WHAT,Content moderation,WHY,Other,37
 WHO,Journalists,HOW,Marginalisation,37
 HOW,Removal,WHY,Clear and present danger,37
@@ -1623,8 +1623,8 @@ WHO,Users,WHY,Alignment with human values,35
 GROUP,Debate management,WHO,Mediators,35
 WHO,Platform oversight bodies,HOW,Correcting,35
 WHO,Military censors,WHY,Political control,34
-WHO,Police / intelligence services,HOW,Obfuscation,34
 WHO,Translators / localisers,HOW,Review,34
+WHO,Police / intelligence services,HOW,Obfuscation,34
 WHO,Translators / localisers,WHY,Ideological consolidation,34
 HOW,Modification,WHAT,Other,34
 WHO,Private firms,HOW,Economic,34
@@ -1636,8 +1636,8 @@ HOW,Enframing,WHY,Other,34
 WHO,Legislators,WHAT,Other,34
 WHO,Platforms,HOW,Balancing,34
 WHO,Religious organisations,WHY,Protection of children,34
-HOW,Disclosure,WHAT,Debate management,34
 HOW,Restricting access,WHAT,Debate management,34
+HOW,Disclosure,WHAT,Debate management,34
 HOW,Agenda setting,WHY,Compliance,34
 WHO,"Schools, curricula, librarians, academia",HOW,Agenda setting,34
 WHO,Religious authorities,HOW,Interiorisation,34
@@ -1656,8 +1656,8 @@ GROUP,Censorship,WHAT,Media regulation,33
 WHO,Religious authorities,HOW,Deplatforming,33
 HOW,Blocking,WHAT,Media regulation,33
 WHAT,Media regulation,WHY,Professional / industry self-governance,33
-WHO,Self-censorship (analytical),HOW,Review,33
 WHO,Translators / localisers,HOW,Removal,33
+WHO,Self-censorship (analytical),HOW,Review,33
 HOW,Agenda setting,WHY,Professional / industry self-governance,33
 HOW,Obfuscation,WHY,Harm principles and hate speech regulation,33
 WHO,Advertisers,HOW,Blocking,33
@@ -1717,9 +1717,9 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHAT,Media moderati
 WHO,Military censors,HOW,Removal,31
 WHO,Censorship boards or agencies,WHY,Brand safety,31
 WHAT,Censorship,WHY,State secrets,31
+WHO,Translators / localisers,HOW,Filtering,31
 WHO,Political groups,HOW,Interiorisation,31
 WHO,Censorship boards or agencies,HOW,Obfuscation,31
-WHO,Translators / localisers,HOW,Filtering,31
 HOW,Correcting,WHAT,Other,31
 WHO,Cloud / infrastructure providers,HOW,Blocking,31
 HOW,Intelligibility,WHY,Professional / industry self-governance,31
@@ -1741,9 +1741,9 @@ HOW,Agenda setting,WHY,State security,31
 HOW,Agenda setting,WHY,Ideological consolidation,31
 HOW,Agenda setting,WHY,Misinformation or disinformation as harm,31
 WHO,Advertisers,WHY,State security,31
+WHO,Government agencies,HOW,Prompting,31
 WHO,Pre-platform moderators,HOW,Removal,31
 WHO,Civic advocacy & moral-pressure groups,HOW,Correcting,31
-WHO,Government agencies,HOW,Prompting,31
 HOW,Prompting,WHY,Compliance,31
 WHO,Broadcasting regulators,HOW,Monitoring,31
 HOW,Inclusion,WHAT,Debate management,31
@@ -1796,9 +1796,9 @@ GROUP,Content moderation,HOW,Scheduling,29
 HOW,Scheduling,WHY,Protection of children,29
 HOW,Prompting,WHY,State security,29
 WHO,Political groups,WHY,Misinformation or disinformation as harm,29
+WHO,Cloud / infrastructure providers,HOW,Enframing,29
 WHO,Cloud / infrastructure providers,HOW,Restricting access,29
 WHO,Cloud / infrastructure providers,HOW,Monitoring,29
-WHO,Cloud / infrastructure providers,HOW,Enframing,29
 WHO,Legislators,WHAT,Debate management,29
 HOW,Disclosure,WHY,Alignment with human values,29
 HOW,Profiling,WHY,Consumer protection / fair competition,29
@@ -1835,9 +1835,9 @@ WHAT,Media regulation,WHY,"Privacy, reputation & dignity",28
 WHO,Content moderators / BPO workforces,WHAT,Other,28
 WHO,Cloud / infrastructure providers,HOW,Review,28
 WHO,Courts and prosecutors,WHY,Consumer protection / fair competition,28
-HOW,Blocking,WHY,Consumer protection / fair competition,28
-HOW,Balancing,WHY,Compliance,28
 HOW,Balancing,WHY,Political control,28
+HOW,Balancing,WHY,Compliance,28
+HOW,Blocking,WHY,Consumer protection / fair competition,28
 WHO,Media owners,HOW,Removal from circulation,28
 HOW,Filtering,WHY,Clear and present danger,28
 WHO,Editors,HOW,Metamoderation,28
@@ -1856,8 +1856,8 @@ WHO,Debate moderators,WHY,Conflict transformation,28
 HOW,Balancing,WHY,Conflict transformation,28
 GROUP,Content moderation,HOW,Bridging,28
 WHO,Users,HOW,Intermediate,28
-WHO,Other,WHAT,Other,28
 WHO,"Schools, curricula, librarians, academia",WHAT,Debate management,28
+WHO,Other,WHAT,Other,28
 WHO,Broadcasting regulators,WHY,Brand safety,28
 WHO,Regulators,HOW,Rating,28
 HOW,Intelligibility,WHY,"Privacy, reputation & dignity",28
@@ -1866,11 +1866,11 @@ WHO,Algorithmic moderation systems,WHAT,AI alignment,28
 WHO,Mediators,HOW,Prompting,28
 WHO,Mediators,WHY,Social cohesion,28
 WHO,Regulators,HOW,Removal from circulation,27
-WHO,Self-censorship (analytical),HOW,Blocking,27
 WHO,"Schools, curricula, librarians, academia",HOW,Obfuscation,27
-WHO,Journalists,WHY,Obscenity and decency,27
-WHO,Civic advocacy & moral-pressure groups,WHY,News values / editorial judgment,27
+WHO,Self-censorship (analytical),HOW,Blocking,27
 WHO,Advertisers,WHY,Political control,27
+WHO,Civic advocacy & moral-pressure groups,WHY,News values / editorial judgment,27
+WHO,Journalists,WHY,Obscenity and decency,27
 WHO,Platforms,WHY,Genocide prevention / dangerous speech,27
 WHO,Advertisers,WHY,Social cohesion,27
 WHAT,Media moderation,WHY,Democratic self-defence,27
@@ -1912,8 +1912,8 @@ WHO,Translators / localisers,WHY,Social cohesion,26
 GROUP,Media moderation,HOW,Removal,26
 GROUP,Content moderation,WHO,Private firms,26
 WHO,Private firms,HOW,Deplatforming,26
-WHO,Cloud / infrastructure providers,WHY,Political control,26
 WHO,Private firms,WHY,"Privacy, reputation & dignity",26
+WHO,Cloud / infrastructure providers,WHY,Political control,26
 WHAT,Content moderation,WHY,Genocide prevention / dangerous speech,26
 WHO,"Schools, curricula, librarians, academia",HOW,Metamoderation,26
 WHO,Online mobs / pile-ons,WHAT,Content moderation,26
@@ -1982,8 +1982,8 @@ HOW,Coherence,WHY,Conflict transformation,25
 HOW,Monitoring,WHY,Conflict transformation,25
 WHO,Platforms,HOW,Bridging,25
 WHO,Platform oversight bodies,WHY,Economic pressure,25
-WHO,Journalists,HOW,Metamoderation,25
 WHO,Online mobs / pile-ons,HOW,Review,25
+WHO,Journalists,HOW,Metamoderation,25
 HOW,Profiling,WHAT,Media regulation,25
 WHO,Online mobs / pile-ons,HOW,Enframing,25
 WHO,Advertisers,HOW,Correcting,25
@@ -2005,9 +2005,9 @@ WHO,Online mobs / pile-ons,HOW,Monitoring,24
 HOW,Intermediate,WHY,Professional / industry self-governance,24
 WHAT,Media regulation,WHY,Harm principles and hate speech regulation,24
 WHO,Algorithmic moderation systems,HOW,Licensing,24
-WHO,Cloud / infrastructure providers,WHY,Misinformation or disinformation as harm,24
 WHO,Algorithmic moderation systems,WHY,Other,24
 WHO,Algorithmic moderation systems,WHY,Consumer protection / fair competition,24
+WHO,Cloud / infrastructure providers,WHY,Misinformation or disinformation as harm,24
 HOW,Restricting access,WHY,Consumer protection / fair competition,24
 WHO,Military censors,HOW,Self-censorship,24
 HOW,Redirection,WHY,Harm reduction / public health,24
@@ -2028,17 +2028,17 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Coherence,24
 HOW,Removal from circulation,WHAT,Media regulation,23
 WHAT,Media regulation,WHY,Ideological consolidation,23
 GROUP,Media moderation,WHAT,Content moderation,23
-HOW,Confiscation,WHY,News values / editorial judgment,23
 HOW,Confiscation,WHY,Brand safety,23
+HOW,Confiscation,WHY,News values / editorial judgment,23
 WHO,Advertisers,WHAT,Media moderation,23
-WHO,Private firms,WHY,Protection of children,23
 WHO,Private firms,WHY,Misinformation or disinformation as harm,23
+WHO,Private firms,WHY,Protection of children,23
 GROUP,Censorship,HOW,Metamoderation,23
 GROUP,Censorship,WHY,Democratic self-defence,23
 WHO,Content moderators / BPO workforces,HOW,Redirection,23
 HOW,Redirection,WHY,Economic pressure,23
-WHO,Media owners,WHY,Misinformation or disinformation as harm,23
 WHO,Online mobs / pile-ons,WHY,Brand safety,23
+WHO,Media owners,WHY,Misinformation or disinformation as harm,23
 WHO,Media owners,HOW,Licensing,23
 WHO,Legislators,WHAT,Media regulation,23
 HOW,Blocking,WHY,Conflict transformation,23
@@ -2049,16 +2049,16 @@ WHO,Private firms,WHY,Economic pressure,23
 HOW,Confiscation,WHY,"Privacy, reputation & dignity",23
 WHO,Political groups,HOW,Disclosure,23
 WHO,Content moderators / BPO workforces,HOW,Removal from circulation,23
-WHO,Religious organisations,HOW,Enframing,23
 WHO,Algorithmic moderation systems,HOW,Balancing,23
+WHO,Religious organisations,HOW,Enframing,23
 HOW,Balancing,WHY,"Privacy, reputation & dignity",23
 WHO,Editors,WHY,Wartime necessity,23
 HOW,Agenda setting,WHY,"Privacy, reputation & dignity",23
 WHO,Private firms,HOW,Modification,23
 WHO,Religious authorities,WHY,Compliance,23
 WHO,Media owners,WHAT,Media moderation,23
-WHO,Algorithmic moderation systems,WHY,Clear and present danger,23
 WHO,Platform oversight bodies,WHY,News values / editorial judgment,23
+WHO,Algorithmic moderation systems,WHY,Clear and present danger,23
 GROUP,Content moderation,WHO,App stores,23
 WHO,Public-health bodies (NGOs / WHO),HOW,Marginalisation,23
 GROUP,Censorship,WHO,Broadcasting regulators,23
@@ -2068,8 +2068,8 @@ HOW,Self-censorship,WHAT,Media regulation,23
 WHO,Religious organisations,HOW,Interiorisation,23
 HOW,Intelligibility,WHY,Political control,23
 WHO,Distributors & booksellers,HOW,Interiorisation,23
-HOW,Intermediate,WHY,Compliance,23
 HOW,Intermediate,WHY,Brand safety,23
+HOW,Intermediate,WHY,Compliance,23
 WHO,Debate moderators,WHY,News values / editorial judgment,23
 HOW,Agenda setting,WHY,Harm principles and hate speech regulation,23
 HOW,Redirection,WHY,Obscenity and decency,23
@@ -2086,8 +2086,8 @@ WHAT,Other,WHY,Coherence,23
 GROUP,Media moderation,HOW,Monitoring,23
 WHO,Religious authorities,WHY,Brand safety,22
 WHO,Journalists,HOW,Interiorisation,22
-WHO,Editors,WHAT,Other,22
 WHO,Political groups,WHAT,Other,22
+WHO,Editors,WHAT,Other,22
 WHO,Journalists,HOW,Licensing,22
 WHO,Religious organisations,HOW,Licensing,22
 WHO,Platforms,HOW,Coherence,22
@@ -2100,8 +2100,8 @@ HOW,Self-censorship,WHY,Other,22
 HOW,Self-censorship,WHY,Harm reduction / public health,22
 GROUP,Censorship,WHAT,Debate management,22
 WHO,Religious organisations,HOW,Monitoring,22
-HOW,Labeling,WHY,Other,22
 HOW,Restricting access,WHY,Other,22
+HOW,Labeling,WHY,Other,22
 WHO,Advertisers,HOW,Restricting access,22
 WHO,Advertisers,WHY,Economic pressure,22
 WHO,Media owners,HOW,Agenda setting,22
@@ -2133,17 +2133,17 @@ WHO,Mediators,HOW,Balancing,22
 WHO,Cloud / infrastructure providers,WHY,State security,22
 GROUP,Media moderation,HOW,Review,22
 GROUP,Debate management,HOW,Removal,22
-WHO,Military censors,HOW,Blocking,21
 WHO,Military censors,HOW,Monitoring,21
+WHO,Military censors,HOW,Blocking,21
 WHO,Censorship boards or agencies,WHAT,Media regulation,21
 WHO,Government agencies,WHY,State secrets,21
-WHO,Self-censorship (analytical),HOW,Labeling,21
 WHO,Translators / localisers,HOW,Licensing,21
+WHO,Self-censorship (analytical),HOW,Labeling,21
 HOW,Removal,WHY,State secrets,21
 WHAT,Other,WHY,Ideological consolidation,21
 GROUP,Media moderation,WHY,Political control,21
-WHO,Private firms,WHY,Harm principles and hate speech regulation,21
 WHO,Advertisers,WHY,"Privacy, reputation & dignity",21
+WHO,Private firms,WHY,Harm principles and hate speech regulation,21
 WHO,Content moderators / BPO workforces,HOW,Interiorisation,21
 WHO,Legislators,HOW,Agenda setting,21
 GROUP,Content moderation,WHO,Media owners,21
@@ -2152,10 +2152,10 @@ HOW,Intermediate,WHY,Protection of children,21
 HOW,Scheduling,WHY,Harm principles and hate speech regulation,21
 WHO,Private firms,WHY,Professional / industry self-governance,21
 WHO,Fact-checkers and verification units,WHY,Economic pressure,21
-WHO,Cloud / infrastructure providers,HOW,Profiling,21
 WHO,Religious organisations,HOW,Restricting access,21
-WHO,Religious organisations,WHY,Economic pressure,21
+WHO,Cloud / infrastructure providers,HOW,Profiling,21
 WHO,Legislators,WHY,Consumer protection / fair competition,21
+WHO,Religious organisations,WHY,Economic pressure,21
 HOW,Removal from circulation,WHY,Consumer protection / fair competition,21
 WHAT,Media moderation,WHY,Consumer protection / fair competition,21
 WHO,Media owners,HOW,Interiorisation,21
@@ -2176,8 +2176,8 @@ WHO,Debate moderators,HOW,Removal,21
 WHO,AI labs as moderators,HOW,Filtering,21
 HOW,Metamoderation,WHY,Alignment with human values,21
 WHO,Translators / localisers,WHY,Religious moral authority,21
-WHO,Translators / localisers,HOW,Removal from circulation,21
 WHO,Online mobs / pile-ons,HOW,Blocking,21
+WHO,Translators / localisers,HOW,Removal from circulation,21
 WHO,Civic advocacy & moral-pressure groups,WHAT,Other,21
 HOW,Coersive,WHY,Harm reduction / public health,21
 WHO,Other,HOW,Coherence,21
@@ -2209,11 +2209,11 @@ HOW,Restricting access,WHAT,Media regulation,20
 HOW,Confiscation,WHY,Harm principles and hate speech regulation,20
 WHAT,Other,WHY,Democratic self-defence,20
 WHO,Distributors & booksellers,HOW,Coersive,20
-WHO,Cloud / infrastructure providers,HOW,Disclosure,20
 WHO,Religious organisations,HOW,Blocking,20
+WHO,Cloud / infrastructure providers,HOW,Disclosure,20
 HOW,Removal from circulation,WHAT,Debate management,20
-HOW,Economic,WHY,Other,20
 HOW,Correcting,WHY,Alignment with human values,20
+HOW,Economic,WHY,Other,20
 WHO,Media owners,WHY,News values / editorial judgment,20
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Democratic self-defence,20
 WHO,Political groups,HOW,Confiscation,20
@@ -2241,8 +2241,8 @@ WHO,App stores,WHY,Misinformation or disinformation as harm,20
 WHO,App stores,WHY,Compliance,20
 WHO,Regulators,WHY,News values / editorial judgment,20
 HOW,Bridging,WHAT,Debate management,20
-WHO,Military censors,WHY,Social cohesion,19
 WHO,Military censors,WHY,Ideological consolidation,19
+WHO,Military censors,WHY,Social cohesion,19
 HOW,Scheduling,WHY,Professional / industry self-governance,19
 HOW,Self-censorship,WHY,State secrets,19
 WHO,Police / intelligence services,HOW,Agenda setting,19
@@ -2252,8 +2252,8 @@ GROUP,Debate management,WHO,Platforms,19
 WHO,Cloud / infrastructure providers,HOW,Economic,19
 WHO,Cloud / infrastructure providers,WHY,"Privacy, reputation & dignity",19
 HOW,Review,WHY,Genocide prevention / dangerous speech,19
-WHO,Content moderators / BPO workforces,WHY,Ideological consolidation,19
 WHO,Advertisers,WHY,Professional / industry self-governance,19
+WHO,Content moderators / BPO workforces,WHY,Ideological consolidation,19
 WHO,Media owners,WHY,Professional / industry self-governance,19
 HOW,Labeling,WHY,Wartime necessity,19
 HOW,Scheduling,WHY,Obscenity and decency,19
@@ -2283,19 +2283,19 @@ HOW,Inclusion,WHAT,Content moderation,19
 HOW,Labeling,WHY,Clear and present danger,19
 WHO,Translators / localisers,HOW,Confiscation,19
 WHO,Online mobs / pile-ons,HOW,Coersive,19
-WHO,Online mobs / pile-ons,HOW,Self-censorship,19
-WHO,Online mobs / pile-ons,HOW,Profiling,19
 WHO,Online mobs / pile-ons,HOW,Economic,19
+WHO,Online mobs / pile-ons,HOW,Profiling,19
+WHO,Online mobs / pile-ons,HOW,Self-censorship,19
 WHO,Broadcasting regulators,HOW,Rating,19
 WHO,Political groups,WHY,Coherence,19
 WHO,"Schools, curricula, librarians, academia",WHY,Conflict transformation,19
 WHO,Translators / localisers,HOW,Enframing,19
-WHO,Platforms,WHY,Conflict transformation,19
 WHO,Other,WHY,Democratic self-defence,19
+WHO,Platforms,WHY,Conflict transformation,19
 HOW,Rating,WHY,Harm reduction / public health,19
 WHO,App stores,HOW,Review,19
-HOW,Filtering,WHY,Fair trial / administration of justice,19
 HOW,Review,WHY,Fair trial / administration of justice,19
+HOW,Filtering,WHY,Fair trial / administration of justice,19
 WHAT,Censorship,WHY,Fair trial / administration of justice,19
 WHO,Online mobs / pile-ons,WHY,"Privacy, reputation & dignity",19
 GROUP,Debate management,WHAT,Content moderation,19
@@ -2318,8 +2318,8 @@ WHO,Regulators,WHAT,Other,18
 WHO,Fact-checkers and verification units,WHY,Democratic self-defence,18
 WHAT,Other,WHY,Religious moral authority,18
 WHO,Courts and prosecutors,HOW,Balancing,18
-WHO,Cloud / infrastructure providers,WHY,Protection of children,18
 WHO,Legislators,WHY,Alignment with human values,18
+WHO,Cloud / infrastructure providers,WHY,Protection of children,18
 HOW,Economic,WHY,Alignment with human values,18
 WHO,Private firms,WHY,Ideological consolidation,18
 WHO,Platform oversight bodies,WHY,Clear and present danger,18
@@ -2330,9 +2330,9 @@ WHO,Self-censorship (analytical),HOW,Profiling,18
 WHO,Advertisers,HOW,Metamoderation,18
 WHO,Distributors & booksellers,HOW,Rating,18
 WHO,Police / intelligence services,HOW,Metamoderation,18
-WHO,Editors,HOW,Prompting,18
-WHO,Pre-platform moderators,HOW,Profiling,18
 WHO,Pre-platform moderators,HOW,Blocking,18
+WHO,Pre-platform moderators,HOW,Profiling,18
+WHO,Editors,HOW,Prompting,18
 WHO,Self-censorship (analytical),WHY,"Privacy, reputation & dignity",18
 HOW,Coherence,WHY,Brand safety,18
 GROUP,Debate management,WHO,Other,18
@@ -2349,8 +2349,8 @@ WHO,Platform oversight bodies,HOW,Removal from circulation,18
 WHO,Users,WHY,Religious moral authority,18
 HOW,Self-censorship,WHY,Democratic self-defence,18
 HOW,Correcting,WHY,Conflict transformation,18
-WHO,Private firms,HOW,Coersive,18
 WHO,Online mobs / pile-ons,HOW,Restricting access,18
+WHO,Private firms,HOW,Coersive,18
 WHO,Distributors & booksellers,WHY,Compliance,18
 WHO,Police / intelligence services,WHY,Coherence,18
 GROUP,AI alignment,WHY,Compliance,18
@@ -2358,8 +2358,8 @@ WHAT,AI alignment,WHY,Compliance,18
 GROUP,AI alignment,HOW,Monitoring,18
 HOW,Monitoring,WHAT,AI alignment,18
 HOW,Prompting,WHAT,Media moderation,18
-WHO,Platform oversight bodies,HOW,Self-censorship,18
 WHO,App stores,HOW,Enframing,18
+WHO,Platform oversight bodies,HOW,Self-censorship,18
 WHO,Users,WHY,Genocide prevention / dangerous speech,18
 WHO,Public-health bodies (NGOs / WHO),HOW,Monitoring,18
 WHO,Censorship boards or agencies,HOW,Scheduling,17
@@ -2378,8 +2378,8 @@ WHO,Algorithmic moderation systems,HOW,Scheduling,17
 GROUP,Censorship,HOW,Balancing,17
 WHO,Cloud / infrastructure providers,WHY,Economic pressure,17
 WHO,Cloud / infrastructure providers,WHY,Social cohesion,17
-HOW,Balancing,WHY,Protection of children,17
 HOW,Removal from circulation,WHY,Other,17
+HOW,Balancing,WHY,Protection of children,17
 WHAT,Other,WHY,Alignment with human values,17
 WHO,Military censors,WHY,Wartime necessity,17
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,News values / editorial judgment,17
@@ -2400,8 +2400,8 @@ HOW,Scheduling,WHY,"Privacy, reputation & dignity",17
 WHO,Cloud / infrastructure providers,HOW,Marginalisation,17
 HOW,Bridging,WHY,Coherence,17
 WHO,Online mobs / pile-ons,HOW,Disclosure,17
-WHO,Translators / localisers,WHY,Protection of children,17
 WHO,Broadcasting regulators,WHY,Obscenity and decency,17
+WHO,Translators / localisers,WHY,Protection of children,17
 WHO,Fact-checkers and verification units,HOW,Redirection,17
 GROUP,AI alignment,HOW,Removal,17
 HOW,Removal,WHAT,AI alignment,17
@@ -2436,15 +2436,15 @@ WHO,Legislators,HOW,Obfuscation,16
 HOW,Obfuscation,WHAT,Media moderation,16
 HOW,Removal from circulation,WHY,State secrets,16
 WHO,Censorship boards or agencies,HOW,Correcting,16
-WHO,App stores,HOW,Marginalisation,16
-WHO,App stores,HOW,Blocking,16
 WHO,App stores,HOW,Filtering,16
-WHO,Public-health bodies (NGOs / WHO),WHY,Protection of children,16
+WHO,App stores,HOW,Blocking,16
+WHO,App stores,HOW,Marginalisation,16
 WHO,Public-health bodies (NGOs / WHO),WHY,Harm principles and hate speech regulation,16
+WHO,Public-health bodies (NGOs / WHO),WHY,Protection of children,16
 WHO,"Schools, curricula, librarians, academia",WHY,Other,16
 WHO,Courts and prosecutors,HOW,Scheduling,16
-WHO,Editors,HOW,Balancing,16
 WHO,"Schools, curricula, librarians, academia",HOW,Prompting,16
+WHO,Editors,HOW,Balancing,16
 WHO,Self-censorship (analytical),WHAT,Content moderation,16
 WHO,Pre-platform moderators,WHY,"Privacy, reputation & dignity",16
 WHO,Self-censorship (analytical),WHY,News values / editorial judgment,16
@@ -2457,9 +2457,9 @@ WHO,Censorship boards or agencies,WHY,Misinformation or disinformation as harm,1
 HOW,Rating,WHY,Alignment with human values,16
 WHO,Users,HOW,Inclusion,16
 WHO,Religious authorities,WHY,Harm principles and hate speech regulation,16
+HOW,Profiling,WHY,Clear and present danger,16
 HOW,Coersive,WHY,Democratic self-defence,16
 HOW,Scheduling,WHY,News values / editorial judgment,16
-HOW,Profiling,WHY,Clear and present danger,16
 HOW,Modification,WHY,Democratic self-defence,16
 WHO,Translators / localisers,HOW,Profiling,16
 WHO,Pre-platform moderators,HOW,Rating,16
@@ -2493,8 +2493,8 @@ WHO,Military censors,HOW,Licensing,15
 WHO,Religious authorities,WHAT,Media moderation,15
 WHO,Translators / localisers,HOW,Blocking,15
 WHO,Editors,WHY,State secrets,15
-HOW,Blocking,WHY,State secrets,15
 HOW,Monitoring,WHY,State secrets,15
+HOW,Blocking,WHY,State secrets,15
 WHAT,Media moderation,WHY,Conflict transformation,15
 WHO,Private firms,WHAT,Media moderation,15
 WHO,Private firms,WHY,News values / editorial judgment,15
@@ -2505,20 +2505,20 @@ WHO,Media owners,HOW,Rating,15
 WHO,Religious authorities,WHY,Wartime necessity,15
 WHO,Other,WHY,Conflict transformation,15
 GROUP,Censorship,WHO,Cloud / infrastructure providers,15
-WHO,Courts and prosecutors,WHY,Alignment with human values,15
 WHO,Religious organisations,WHY,Harm principles and hate speech regulation,15
+WHO,Courts and prosecutors,WHY,Alignment with human values,15
 WHO,Advertisers,HOW,Disclosure,15
 WHO,Censorship boards or agencies,HOW,Agenda setting,15
 HOW,Redirection,WHAT,Media moderation,15
 WHO,Debate moderators,HOW,Monitoring,15
 HOW,Metamoderation,WHY,Consumer protection / fair competition,15
 WHO,Media owners,HOW,Disclosure,15
-WHO,Religious authorities,HOW,Agenda setting,15
 WHO,Distributors & booksellers,HOW,Obfuscation,15
+WHO,Religious authorities,HOW,Agenda setting,15
 HOW,Restricting access,WHY,Wartime necessity,15
 GROUP,Media regulation,WHAT,Media regulation,15
-WHO,Courts and prosecutors,HOW,Intermediate,15
 WHO,Other,HOW,Intermediate,15
+WHO,Courts and prosecutors,HOW,Intermediate,15
 WHO,Pre-platform moderators,WHY,Compliance,15
 WHO,Other,WHY,Other,15
 WHO,Broadcasting regulators,WHAT,Media moderation,15
@@ -2539,8 +2539,8 @@ HOW,Bridging,WHAT,Censorship,15
 WHO,App stores,HOW,Labeling,15
 WHO,App stores,WHY,Brand safety,15
 HOW,Restricting access,WHY,Genocide prevention / dangerous speech,15
-HOW,Obfuscation,WHY,Harm reduction / public health,15
 HOW,Removal from circulation,WHY,Harm reduction / public health,15
+HOW,Obfuscation,WHY,Harm reduction / public health,15
 GROUP,Content moderation,WHY,Religious moral authority,15
 GROUP,AI alignment,WHY,Misinformation or disinformation as harm,15
 WHAT,AI alignment,WHY,Misinformation or disinformation as harm,15
@@ -2549,20 +2549,20 @@ WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Licensing,15
 WHO,Pre-platform moderators,HOW,Metamoderation,15
 WHO,"Schools, curricula, librarians, academia",HOW,Intelligibility,15
 WHO,Journalists,HOW,Prompting,15
-WHO,Public-health bodies (NGOs / WHO),HOW,Profiling,15
 WHO,Public-health bodies (NGOs / WHO),HOW,Economic,15
+WHO,Public-health bodies (NGOs / WHO),HOW,Profiling,15
 WHO,Editors,HOW,Scheduling,14
-WHO,Military censors,HOW,Deplatforming,14
 WHO,Military censors,HOW,Coersive,14
+WHO,Military censors,HOW,Deplatforming,14
 WHO,News agencies / wire services,WHAT,Censorship,14
 WHO,Editors,WHAT,Media regulation,14
 WHO,Police / intelligence services,WHAT,Media regulation,14
 HOW,Enframing,WHY,State secrets,14
 HOW,Modification,WHY,State secrets,14
-WHO,Self-censorship (analytical),HOW,Obfuscation,14
 WHO,Translators / localisers,HOW,Interiorisation,14
-WHO,Censorship boards or agencies,WHY,State secrets,14
+WHO,Self-censorship (analytical),HOW,Obfuscation,14
 WHO,Translators / localisers,WHY,Professional / industry self-governance,14
+WHO,Censorship boards or agencies,WHY,State secrets,14
 HOW,Licensing,WHAT,Other,14
 GROUP,Media moderation,WHO,Government agencies,14
 GROUP,Media moderation,WHY,Professional / industry self-governance,14
@@ -2570,8 +2570,8 @@ WHO,Religious organisations,WHY,News values / editorial judgment,14
 WHO,Journalists,HOW,Obfuscation,14
 HOW,Correcting,WHY,Consumer protection / fair competition,14
 WHO,Private firms,HOW,Interiorisation,14
-WHO,Content moderators / BPO workforces,HOW,Intelligibility,14
 WHO,Platforms,HOW,Fairness,14
+WHO,Content moderators / BPO workforces,HOW,Intelligibility,14
 HOW,Fairness,WHY,Professional / industry self-governance,14
 WHO,Online mobs / pile-ons,WHY,Protection of children,14
 WHO,Legislators,WHY,Wartime necessity,14
@@ -2582,8 +2582,8 @@ WHAT,Media regulation,WHY,Economic pressure,14
 WHO,Political groups,HOW,Metamoderation,14
 WHO,Political groups,WHY,Democratic self-defence,14
 WHO,Distributors & booksellers,WHY,Harm principles and hate speech regulation,14
-WHO,Cloud / infrastructure providers,WHY,Professional / industry self-governance,14
 WHO,Religious organisations,WHY,Compliance,14
+WHO,Cloud / infrastructure providers,WHY,Professional / industry self-governance,14
 WHO,Advertisers,WHY,Coherence,14
 WHO,App stores,WHAT,Censorship,14
 HOW,Redirection,WHY,Ideological consolidation,14
@@ -2601,9 +2601,9 @@ WHO,Platform oversight bodies,WHAT,Debate management,14
 WHO,Algorithmic moderation systems,WHY,Religious moral authority,14
 WHO,Platform oversight bodies,WHY,Alignment with human values,14
 HOW,Inclusion,WHAT,Censorship,14
-HOW,Economic,WHY,Clear and present danger,14
 HOW,Inclusion,WHY,Professional / industry self-governance,14
 HOW,Inclusion,WHY,Compliance,14
+HOW,Economic,WHY,Clear and present danger,14
 WHAT,Debate management,WHY,Democratic self-defence,14
 WHO,Editors,WHY,Democratic self-defence,14
 HOW,Marginalisation,WHAT,Media regulation,14
@@ -2655,8 +2655,8 @@ WHO,Political groups,WHY,Wartime necessity,13
 WHAT,Media moderation,WHY,Wartime necessity,13
 WHO,App stores,WHY,Harm principles and hate speech regulation,13
 WHO,Broadcasting regulators,HOW,Modification,13
-WHO,Editors,WHY,Other,13
 WHO,Self-censorship (analytical),WHY,Harm principles and hate speech regulation,13
+WHO,Editors,WHY,Other,13
 HOW,Coersive,WHY,Other,13
 WHO,Public-health bodies (NGOs / WHO),HOW,Blocking,13
 WHO,Censorship boards or agencies,HOW,Marginalisation,13
@@ -2665,9 +2665,9 @@ WHO,Military censors,WHY,Economic pressure,13
 HOW,Confiscation,WHY,Wartime necessity,13
 WHO,Debate moderators,HOW,Intermediate,13
 GROUP,Censorship,HOW,Prompting,13
-WHO,Other,HOW,Balancing,13
 WHO,Political groups,HOW,Balancing,13
 WHO,Political groups,HOW,Prompting,13
+WHO,Other,HOW,Balancing,13
 HOW,Redirection,WHAT,Other,13
 HOW,Metamoderation,WHY,Other,13
 WHO,Public-health bodies (NGOs / WHO),WHY,"Privacy, reputation & dignity",13
@@ -2675,21 +2675,21 @@ WHO,Distributors & booksellers,WHAT,Media moderation,13
 WHO,Debate moderators,HOW,Labeling,13
 GROUP,Content moderation,WHO,AI labs as moderators,13
 WHO,RLHF annotators,WHAT,Content moderation,13
-WHO,RLHF annotators,WHY,Alignment with human values,13
 WHO,AI labs as moderators,WHY,Alignment with human values,13
+WHO,RLHF annotators,WHY,Alignment with human values,13
 HOW,Redirection,WHY,Religious moral authority,13
 WHO,Legislators,WHY,Clear and present danger,13
 HOW,Restricting access,WHY,Clear and present danger,13
 HOW,Scheduling,WHY,Economic pressure,13
 WHO,Cloud / infrastructure providers,WHY,Coherence,13
-WHO,Private firms,HOW,Licensing,13
 WHO,Online mobs / pile-ons,HOW,Modification,13
+WHO,Private firms,HOW,Licensing,13
 WHO,Translators / localisers,WHY,Economic pressure,13
 HOW,Interiorisation,WHAT,Media regulation,13
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Modification,13
+WHO,"Schools, curricula, librarians, academia",HOW,Redirection,13
 WHO,Fact-checkers and verification units,HOW,Modification,13
 WHO,Editors,HOW,Redirection,13
-WHO,"Schools, curricula, librarians, academia",HOW,Redirection,13
 WHO,"Schools, curricula, librarians, academia",HOW,Coherence,13
 HOW,Interiorisation,WHAT,Debate management,13
 WHAT,Debate management,WHY,Ideological consolidation,13
@@ -2699,10 +2699,10 @@ WHO,App stores,HOW,Monitoring,13
 WHAT,Media moderation,WHY,Clear and present danger,13
 GROUP,Content moderation,HOW,Inclusion,13
 HOW,Interiorisation,WHY,Alignment with human values,13
-GROUP,Media moderation,WHY,"Privacy, reputation & dignity",13
 GROUP,Media moderation,WHY,Compliance,13
-WHO,Press councils & ombudsmen,HOW,Filtering,13
+GROUP,Media moderation,WHY,"Privacy, reputation & dignity",13
 WHO,Press councils & ombudsmen,HOW,Review,13
+WHO,Press councils & ombudsmen,HOW,Filtering,13
 HOW,Coherence,WHY,News values / editorial judgment,13
 WHO,Algorithmic moderation systems,WHY,Conflict transformation,13
 WHO,AI labs as moderators,WHY,Harm principles and hate speech regulation,13
@@ -2711,10 +2711,10 @@ GROUP,Media moderation,WHY,Protection of children,13
 WHO,Mediators,HOW,Labeling,13
 WHO,Debate moderators,HOW,Inclusion,13
 WHO,Political groups,HOW,Intermediate,13
+HOW,Fairness,WHY,Brand safety,13
+HOW,Fairness,WHY,News values / editorial judgment,13
 HOW,Fairness,WHY,Protection of children,13
 HOW,Fairness,WHY,Compliance,13
-HOW,Fairness,WHY,News values / editorial judgment,13
-HOW,Fairness,WHY,Brand safety,13
 WHO,Fact-checkers and verification units,WHY,Alignment with human values,13
 HOW,Bridging,WHY,Conflict transformation,13
 GROUP,Debate management,HOW,Modification,13
@@ -2745,23 +2745,23 @@ WHO,Religious organisations,WHY,"Privacy, reputation & dignity",12
 HOW,Balancing,WHY,Economic pressure,12
 HOW,Agenda setting,WHY,Wartime necessity,12
 WHO,Political groups,HOW,Agenda setting,12
-HOW,Deplatforming,WHY,State secrets,12
 HOW,Interiorisation,WHY,Wartime necessity,12
+HOW,Deplatforming,WHY,State secrets,12
 WHO,Civic advocacy & moral-pressure groups,HOW,Agenda setting,12
 WHO,App stores,HOW,Profiling,12
 WHO,Broadcasting regulators,HOW,Coersive,12
 WHO,Broadcasting regulators,WHY,Economic pressure,12
-HOW,Deplatforming,WHY,Other,12
 HOW,Interiorisation,WHY,Other,12
+HOW,Deplatforming,WHY,Other,12
 WHO,Legislators,HOW,Scheduling,12
 WHO,Religious organisations,WHAT,Media regulation,12
-WHO,Pre-platform moderators,HOW,Self-censorship,12
 WHO,Pre-platform moderators,HOW,Restricting access,12
+WHO,Pre-platform moderators,HOW,Self-censorship,12
 HOW,Balancing,WHY,Ideological consolidation,12
 WHO,Police / intelligence services,HOW,Redirection,12
 WHO,Distributors & booksellers,WHY,"Privacy, reputation & dignity",12
-WHO,Other,WHY,Alignment with human values,12
 WHO,Other,WHY,Consumer protection / fair competition,12
+WHO,Other,WHY,Alignment with human values,12
 HOW,Agenda setting,WHAT,Other,12
 HOW,Coersive,WHY,Consumer protection / fair competition,12
 WHAT,Media regulation,WHY,Consumer protection / fair competition,12
@@ -2774,15 +2774,15 @@ WHO,Police / intelligence services,WHY,Democratic self-defence,12
 WHAT,Content moderation,WHY,Fairness,12
 HOW,Bridging,WHY,Professional / industry self-governance,12
 WHO,Online mobs / pile-ons,HOW,Metamoderation,12
-WHO,Translators / localisers,WHY,News values / editorial judgment,12
 WHO,Online mobs / pile-ons,WHY,Professional / industry self-governance,12
 WHO,Broadcasting regulators,WHY,Religious moral authority,12
+WHO,Translators / localisers,WHY,News values / editorial judgment,12
 WHO,Users,WHY,Consumer protection / fair competition,12
 WHO,Political groups,WHAT,Media regulation,12
 WHO,Private firms,WHY,Coherence,12
 HOW,Coersive,WHY,Conflict transformation,12
-WHO,Fact-checkers and verification units,HOW,Removal from circulation,12
 WHO,Legislators,HOW,Redirection,12
+WHO,Fact-checkers and verification units,HOW,Removal from circulation,12
 HOW,Coherence,WHY,Harm principles and hate speech regulation,12
 WHAT,Debate management,WHY,Obscenity and decency,12
 GROUP,AI alignment,WHY,Protection of children,12
@@ -2790,8 +2790,8 @@ WHAT,AI alignment,WHY,Protection of children,12
 HOW,Prompting,WHY,Democratic self-defence,12
 WHO,App stores,WHY,Social cohesion,12
 HOW,Intelligibility,WHY,Economic pressure,12
-HOW,Self-censorship,WHY,Clear and present danger,12
 HOW,Disclosure,WHY,Clear and present danger,12
+HOW,Self-censorship,WHY,Clear and present danger,12
 HOW,Removal,WHY,Fair trial / administration of justice,12
 GROUP,Media moderation,HOW,Modification,12
 WHO,"Public-private partnerships (""free-speech triangle"")",WHAT,Debate management,12
@@ -2816,10 +2816,10 @@ GROUP,Media moderation,HOW,Rating,12
 GROUP,Media moderation,WHY,Coherence,12
 WHO,AI labs as moderators,WHY,Misinformation or disinformation as harm,12
 GROUP,Censorship,WHO,News agencies / wire services,11
-WHO,News agencies / wire services,HOW,Removal,11
 WHO,News agencies / wire services,HOW,Enframing,11
-WHO,Police / intelligence services,HOW,Scheduling,11
+WHO,News agencies / wire services,HOW,Removal,11
 WHO,Religious authorities,HOW,Scheduling,11
+WHO,Police / intelligence services,HOW,Scheduling,11
 HOW,Scheduling,WHAT,Media moderation,11
 WHO,"Schools, curricula, librarians, academia",WHY,State secrets,11
 HOW,Interiorisation,WHY,Harm reduction / public health,11
@@ -2840,10 +2840,10 @@ HOW,Deplatforming,WHY,Conflict transformation,11
 HOW,Confiscation,WHAT,Media regulation,11
 WHO,Religious organisations,HOW,Labeling,11
 WHO,Content moderators / BPO workforces,WHY,Other,11
-HOW,Licensing,WHY,Other,11
 HOW,Correcting,WHY,Other,11
-WHAT,Debate management,WHY,Alignment with human values,11
+HOW,Licensing,WHY,Other,11
 WHAT,Debate management,WHY,Other,11
+WHAT,Debate management,WHY,Alignment with human values,11
 HOW,Marginalisation,WHY,Wartime necessity,11
 HOW,Obfuscation,WHY,Wartime necessity,11
 WHO,Fact-checkers and verification units,HOW,Self-censorship,11
@@ -2851,27 +2851,27 @@ HOW,Balancing,WHY,Obscenity and decency,11
 WHO,Broadcasting regulators,HOW,Interiorisation,11
 WHO,Public-health bodies (NGOs / WHO),HOW,Deplatforming,11
 WHO,Public-health bodies (NGOs / WHO),WHY,Social cohesion,11
-WHO,Religious authorities,HOW,Marginalisation,11
 WHO,Military censors,HOW,Confiscation,11
+WHO,Religious authorities,HOW,Marginalisation,11
 GROUP,Media regulation,HOW,Review,11
 GROUP,Media regulation,WHAT,Censorship,11
 WHO,"Schools, curricula, librarians, academia",HOW,Scheduling,11
 WHO,Debate moderators,WHY,Professional / industry self-governance,11
 WHO,Pre-platform moderators,WHAT,Censorship,11
 WHO,Private firms,HOW,Obfuscation,11
-HOW,Coherence,WHY,Protection of children,11
 HOW,Coherence,WHY,Political control,11
+HOW,Coherence,WHY,Protection of children,11
 WHO,Other,HOW,Inclusion,11
 WHO,Content moderators / BPO workforces,HOW,Intermediate,11
 HOW,Bridging,WHY,State security,11
 WHO,Platforms,HOW,Confiscation,11
-WHO,Religious authorities,WHAT,Content moderation,11
 WHO,Distributors & booksellers,WHAT,Content moderation,11
+WHO,Religious authorities,WHAT,Content moderation,11
 WHO,"Schools, curricula, librarians, academia",WHY,Alignment with human values,11
 HOW,Correcting,WHAT,Media regulation,11
-WHO,RLHF annotators,HOW,Review,11
 WHO,AI labs as moderators,HOW,Blocking,11
 WHO,AI labs as moderators,HOW,Profiling,11
+WHO,RLHF annotators,HOW,Review,11
 WHO,Platforms,HOW,Inclusion,11
 WHO,Users,HOW,Confiscation,11
 WHO,Religious authorities,WHAT,Other,11
@@ -2888,12 +2888,12 @@ GROUP,AI alignment,WHY,Professional / industry self-governance,11
 HOW,Labeling,WHAT,AI alignment,11
 WHAT,AI alignment,WHY,Professional / industry self-governance,11
 WHO,App stores,HOW,Economic,11
-HOW,Blocking,WHY,Genocide prevention / dangerous speech,11
 HOW,Economic,WHY,Genocide prevention / dangerous speech,11
+HOW,Blocking,WHY,Genocide prevention / dangerous speech,11
 HOW,Licensing,WHY,Democratic self-defence,11
 WHAT,Media moderation,WHY,Other,11
-WHO,Civic advocacy & moral-pressure groups,WHY,Wartime necessity,11
 WHO,Legislators,WHY,Fair trial / administration of justice,11
+WHO,Civic advocacy & moral-pressure groups,WHY,Wartime necessity,11
 HOW,Monitoring,WHY,Fair trial / administration of justice,11
 WHO,Regulators,HOW,Intermediate,11
 GROUP,AI alignment,HOW,Modification,11
@@ -2912,8 +2912,8 @@ WHO,Press councils & ombudsmen,WHY,Misinformation or disinformation as harm,11
 GROUP,Media moderation,WHY,State security,11
 WHO,Fact-checkers and verification units,WHAT,Debate management,11
 WHO,Debate moderators,WHY,Brand safety,11
-WHO,Courts and prosecutors,HOW,Intelligibility,11
 WHO,Public-health bodies (NGOs / WHO),HOW,Restricting access,11
+WHO,Courts and prosecutors,HOW,Intelligibility,11
 HOW,Intelligibility,WHY,Democratic self-defence,11
 WHO,Courts and prosecutors,HOW,Prompting,11
 HOW,Correcting,WHY,Genocide prevention / dangerous speech,11
@@ -2924,19 +2924,19 @@ WHO,News agencies / wire services,HOW,Filtering,10
 WHO,News agencies / wire services,WHY,Ideological consolidation,10
 HOW,Scheduling,WHAT,Media regulation,10
 WHO,Journalists,WHY,Harm reduction / public health,10
-WHO,Other,WHY,Harm reduction / public health,10
 WHO,Advertisers,WHY,Harm reduction / public health,10
+WHO,Other,WHY,Harm reduction / public health,10
 WHO,Editors,HOW,Fairness,10
 HOW,Fairness,WHY,Misinformation or disinformation as harm,10
 WHO,Content moderators / BPO workforces,HOW,Agenda setting,10
 WHO,Media owners,WHAT,Media regulation,10
 WHO,Civic advocacy & moral-pressure groups,HOW,Scheduling,10
 HOW,Profiling,WHY,State secrets,10
-WHO,Cloud / infrastructure providers,HOW,Modification,10
 WHO,Religious organisations,HOW,Disclosure,10
+WHO,Cloud / infrastructure providers,HOW,Modification,10
 WHO,Cloud / infrastructure providers,WHAT,Debate management,10
-WHO,Courts and prosecutors,WHY,Other,10
 WHO,Legislators,WHY,Other,10
+WHO,Courts and prosecutors,WHY,Other,10
 HOW,Balancing,WHAT,Other,10
 HOW,Removal from circulation,WHY,Alignment with human values,10
 WHAT,Debate management,WHY,Consumer protection / fair competition,10
@@ -2949,8 +2949,8 @@ WHO,App stores,WHY,Political control,10
 WHO,Public-health bodies (NGOs / WHO),HOW,Redirection,10
 WHO,Regulators,HOW,Agenda setting,10
 WHO,Media owners,HOW,Confiscation,10
-WHO,Religious authorities,HOW,Disclosure,10
 WHO,Distributors & booksellers,HOW,Agenda setting,10
+WHO,Religious authorities,HOW,Disclosure,10
 WHO,Military censors,WHY,Protection of children,10
 WHO,Debate moderators,HOW,Modification,10
 WHO,Civic advocacy & moral-pressure groups,HOW,Balancing,10
@@ -2968,26 +2968,26 @@ WHO,Regulators,HOW,Interiorisation,10
 HOW,Inclusion,WHY,Harm principles and hate speech regulation,10
 WHO,Translators / localisers,HOW,Rating,10
 GROUP,Debate management,HOW,Redirection,10
-WHO,Translators / localisers,HOW,Economic,10
 WHO,Broadcasting regulators,HOW,Confiscation,10
-WHO,Translators / localisers,WHY,Brand safety,10
+WHO,Translators / localisers,HOW,Economic,10
 WHO,Online mobs / pile-ons,WHY,Ideological consolidation,10
 WHO,Broadcasting regulators,WHY,Ideological consolidation,10
+WHO,Translators / localisers,WHY,Brand safety,10
 WHO,Editors,WHY,Conflict transformation,10
 HOW,Modification,WHY,Conflict transformation,10
 WHO,Fact-checkers and verification units,HOW,Coersive,10
 WHO,Censorship boards or agencies,HOW,Redirection,10
 HOW,Marginalisation,WHY,Conflict transformation,10
 GROUP,AI alignment,WHAT,Censorship,10
-WHO,Platform oversight bodies,WHY,Genocide prevention / dangerous speech,10
 WHO,App stores,WHY,Protection of children,10
+WHO,Platform oversight bodies,WHY,Genocide prevention / dangerous speech,10
 WHO,Platforms,WHY,Wartime necessity,10
 HOW,Licensing,WHY,Coherence,10
 WHAT,Content moderation,WHY,Wartime necessity,10
 WHO,"Schools, curricula, librarians, academia",WHY,Fair trial / administration of justice,10
 HOW,Removal from circulation,WHY,Fair trial / administration of justice,10
-HOW,Licensing,WHY,Harm reduction / public health,10
 HOW,Licensing,WHY,Fair trial / administration of justice,10
+HOW,Licensing,WHY,Harm reduction / public health,10
 HOW,Labeling,WHY,Fair trial / administration of justice,10
 HOW,Profiling,WHY,Fair trial / administration of justice,10
 HOW,Inclusion,WHY,Protection of children,10
@@ -3044,27 +3044,27 @@ WHO,Media owners,HOW,Correcting,9
 GROUP,Media regulation,WHO,Government agencies,9
 GROUP,Media regulation,WHY,Professional / industry self-governance,9
 WHO,Debate moderators,WHY,Political control,9
-WHO,Pre-platform moderators,HOW,Modification,9
 WHO,Pre-platform moderators,HOW,Prompting,9
+WHO,Pre-platform moderators,HOW,Modification,9
 WHO,Civic advocacy & moral-pressure groups,HOW,Prompting,9
 HOW,Balancing,WHY,Religious moral authority,9
 WHO,Private firms,HOW,Redirection,9
 HOW,Coherence,WHY,Misinformation or disinformation as harm,9
 HOW,Coherence,WHY,State security,9
 WHO,Legislators,HOW,Intelligibility,9
-HOW,Bridging,WHY,Protection of children,9
 HOW,Bridging,WHY,"Privacy, reputation & dignity",9
+HOW,Bridging,WHY,Protection of children,9
 WHO,Debate moderators,WHY,Harm principles and hate speech regulation,9
 WHO,RLHF annotators,HOW,Monitoring,9
 WHO,RLHF annotators,HOW,Profiling,9
 WHO,AI labs as moderators,WHY,Brand safety,9
 WHO,Political groups,HOW,Scheduling,9
 GROUP,Censorship,WHO,Platform oversight bodies,9
-HOW,Confiscation,WHY,Democratic self-defence,9
 HOW,Inclusion,WHY,News values / editorial judgment,9
+HOW,Confiscation,WHY,Democratic self-defence,9
 WHO,Self-censorship (analytical),WHAT,Media moderation,9
-HOW,Removal,WHY,Fairness,9
 HOW,Review,WHY,Fairness,9
+HOW,Removal,WHY,Fairness,9
 GROUP,Debate management,HOW,Correcting,9
 HOW,Redirection,WHY,Conflict transformation,9
 WHO,Online mobs / pile-ons,WHY,Obscenity and decency,9
@@ -3075,13 +3075,13 @@ WHO,Censorship boards or agencies,WHY,Democratic self-defence,9
 HOW,Intermediate,WHY,Democratic self-defence,9
 HOW,Prompting,WHY,Alignment with human values,9
 HOW,Balancing,WHY,Democratic self-defence,9
-WHO,Payment processors / financial infrastructure,HOW,Economic,9
 WHO,Platform oversight bodies,HOW,Intelligibility,9
+WHO,Payment processors / financial infrastructure,HOW,Economic,9
 HOW,Rating,WHY,Clear and present danger,9
 WHO,Editors,WHY,Fair trial / administration of justice,9
+HOW,Self-censorship,WHY,Fair trial / administration of justice,9
 HOW,Economic,WHY,Fair trial / administration of justice,9
 HOW,Modification,WHY,Fair trial / administration of justice,9
-HOW,Self-censorship,WHY,Fair trial / administration of justice,9
 WHAT,Media moderation,WHY,Fair trial / administration of justice,9
 GROUP,AI alignment,WHO,Users,9
 WHO,Users,WHAT,AI alignment,9
@@ -3100,23 +3100,23 @@ GROUP,Media moderation,WHO,Content moderators / BPO workforces,9
 GROUP,Media moderation,WHO,Algorithmic moderation systems,9
 GROUP,Media moderation,WHY,Obscenity and decency,9
 WHO,Journalists,WHAT,Media regulation,9
-WHO,Platform oversight bodies,HOW,Interiorisation,9
 WHO,Platform oversight bodies,HOW,Balancing,9
+WHO,Platform oversight bodies,HOW,Interiorisation,9
 WHO,Mediators,WHAT,Media moderation,9
-WHO,Mediators,WHY,"Privacy, reputation & dignity",9
 WHO,Government agencies,WHY,Fair trial / administration of justice,9
+WHO,Mediators,WHY,"Privacy, reputation & dignity",9
 HOW,Coersive,WHY,Fair trial / administration of justice,9
 WHO,Pre-platform moderators,WHY,Misinformation or disinformation as harm,9
 GROUP,Debate management,HOW,Rating,9
 WHO,Mediators,HOW,Metamoderation,9
-WHO,Mediators,WHY,Compliance,9
 WHO,Political groups,WHY,Conflict transformation,9
+WHO,Mediators,WHY,Compliance,9
 HOW,Intermediate,WHAT,Other,9
 HOW,Disclosure,WHY,Conflict transformation,9
 WHO,Private firms,HOW,Correcting,9
+WHO,Press councils & ombudsmen,WHY,Brand safety,9
 WHO,Press councils & ombudsmen,WHY,State security,9
 WHO,Press councils & ombudsmen,WHY,Compliance,9
-WHO,Press councils & ombudsmen,WHY,Brand safety,9
 WHO,Fact-checkers and verification units,HOW,Balancing,9
 WHO,Distributors & booksellers,WHAT,Media regulation,9
 WHO,Cloud / infrastructure providers,HOW,Self-censorship,9
@@ -3134,8 +3134,8 @@ HOW,Labeling,WHY,State secrets,8
 WHO,Self-censorship (analytical),WHAT,Other,8
 HOW,Restricting access,WHY,State secrets,8
 WHO,Religious organisations,WHAT,Media moderation,8
-WHO,Cloud / infrastructure providers,WHY,Obscenity and decency,8
 WHO,Advertisers,WHY,Obscenity and decency,8
+WHO,Cloud / infrastructure providers,WHY,Obscenity and decency,8
 HOW,Fairness,WHY,Harm principles and hate speech regulation,8
 WHO,Advertisers,HOW,Interiorisation,8
 WHO,Advertisers,WHY,Ideological consolidation,8
@@ -3185,8 +3185,8 @@ HOW,Blocking,WHY,Fairness,8
 HOW,Profiling,WHY,Fairness,8
 WHAT,Debate management,WHY,Fairness,8
 WHO,Translators / localisers,HOW,Deplatforming,8
-WHO,Translators / localisers,HOW,Coersive,8
 WHO,Online mobs / pile-ons,HOW,Interiorisation,8
+WHO,Translators / localisers,HOW,Coersive,8
 WHO,Self-censorship (analytical),HOW,Redirection,8
 WHO,Content moderators / BPO workforces,WHAT,Media regulation,8
 WHO,Content moderators / BPO workforces,WHY,Religious moral authority,8
@@ -3198,11 +3198,11 @@ GROUP,AI alignment,WHO,Government agencies,8
 GROUP,AI alignment,WHY,"Privacy, reputation & dignity",8
 WHO,Government agencies,WHAT,AI alignment,8
 WHAT,AI alignment,WHY,"Privacy, reputation & dignity",8
-WHO,RLHF annotators,HOW,Removal,8
 WHO,AI labs as moderators,HOW,Restricting access,8
+WHO,RLHF annotators,HOW,Removal,8
 WHO,AI labs as moderators,WHY,Protection of children,8
-WHO,App stores,HOW,Disclosure,8
 WHO,App stores,HOW,Self-censorship,8
+WHO,App stores,HOW,Disclosure,8
 WHO,Payment processors / financial infrastructure,WHAT,Content moderation,8
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Genocide prevention / dangerous speech,8
 WHO,Payment processors / financial infrastructure,WHY,Compliance,8
@@ -3219,17 +3219,17 @@ WHO,Broadcasting regulators,WHY,Consumer protection / fair competition,8
 WHO,Platform oversight bodies,WHY,Ideological consolidation,8
 GROUP,AI alignment,WHY,Social cohesion,8
 WHAT,AI alignment,WHY,Social cohesion,8
-WHO,Mediators,WHY,Harm principles and hate speech regulation,8
-WHO,Mediators,WHY,News values / editorial judgment,8
-WHO,Mediators,WHY,Brand safety,8
-WHO,Political groups,WHY,Fair trial / administration of justice,8
 WHO,Platform oversight bodies,WHY,Other,8
+WHO,Political groups,WHY,Fair trial / administration of justice,8
+WHO,Mediators,WHY,Harm principles and hate speech regulation,8
+WHO,Mediators,WHY,Brand safety,8
+WHO,Mediators,WHY,News values / editorial judgment,8
 WHO,Cloud / infrastructure providers,HOW,Metamoderation,8
 HOW,Rating,WHY,Conflict transformation,8
 GROUP,Debate management,HOW,Fairness,8
-WHO,Courts and prosecutors,HOW,Fairness,8
-WHO,Journalists,HOW,Fairness,8
 WHO,"Schools, curricula, librarians, academia",HOW,Inclusion,8
+WHO,Journalists,HOW,Fairness,8
+WHO,Courts and prosecutors,HOW,Fairness,8
 HOW,Coherence,WHAT,Media moderation,8
 WHO,Regulators,HOW,Balancing,8
 WHO,Mediators,HOW,Profiling,8
@@ -3253,24 +3253,24 @@ WHO,Military censors,WHAT,Media moderation,7
 WHO,Journalists,WHY,State secrets,7
 WHO,Translators / localisers,HOW,Obfuscation,7
 WHAT,Other,WHY,Consumer protection / fair competition,7
-WHO,Censorship boards or agencies,HOW,Intermediate,7
 WHO,Censorship boards or agencies,HOW,Metamoderation,7
-HOW,Intermediate,WHY,Religious moral authority,7
+WHO,Censorship boards or agencies,HOW,Intermediate,7
 HOW,Rating,WHY,Wartime necessity,7
+HOW,Intermediate,WHY,Religious moral authority,7
 WHAT,Media regulation,WHY,Wartime necessity,7
 WHO,Legislators,WHY,Conflict transformation,7
 WHO,Civic advocacy & moral-pressure groups,WHY,Other,7
 WHO,Censorship boards or agencies,WHY,Other,7
 WHO,Private firms,HOW,Confiscation,7
 WHO,Religious organisations,WHAT,Other,7
-WHO,Cloud / infrastructure providers,WHY,Alignment with human values,7
 WHO,Religious organisations,WHY,Misinformation or disinformation as harm,7
+WHO,Cloud / infrastructure providers,WHY,Alignment with human values,7
 HOW,Balancing,WHY,Other,7
 HOW,Balancing,WHY,Consumer protection / fair competition,7
 WHO,Private firms,WHY,Wartime necessity,7
 HOW,Agenda setting,WHY,Consumer protection / fair competition,7
-WHO,News agencies / wire services,HOW,Marginalisation,7
 WHO,News agencies / wire services,HOW,Economic,7
+WHO,News agencies / wire services,HOW,Marginalisation,7
 WHO,Legislators,WHY,State secrets,7
 WHO,Fact-checkers and verification units,WHY,Ideological consolidation,7
 WHO,App stores,HOW,Restricting access,7
@@ -3279,15 +3279,15 @@ WHO,News agencies / wire services,HOW,Profiling,7
 WHO,Military censors,HOW,Rating,7
 GROUP,Media regulation,WHY,Obscenity and decency,7
 GROUP,Media regulation,WHY,Social cohesion,7
-WHO,Debate moderators,HOW,Deplatforming,7
 WHO,Debate moderators,HOW,Rating,7
+WHO,Debate moderators,HOW,Deplatforming,7
 WHO,Police / intelligence services,HOW,Intermediate,7
 WHO,Pre-platform moderators,HOW,Correcting,7
 WHO,Pre-platform moderators,HOW,Interiorisation,7
 WHO,Self-censorship (analytical),HOW,Balancing,7
 WHO,Police / intelligence services,HOW,Prompting,7
-WHO,Pre-platform moderators,WHY,Protection of children,7
 WHO,Pre-platform moderators,WHY,Professional / industry self-governance,7
+WHO,Pre-platform moderators,WHY,Protection of children,7
 HOW,Prompting,WHY,Obscenity and decency,7
 GROUP,Debate management,WHY,Compliance,7
 WHO,Debate moderators,WHY,Compliance,7
@@ -3314,25 +3314,25 @@ WHO,Translators / localisers,WHAT,Media moderation,7
 WHO,Translators / localisers,WHY,"Privacy, reputation & dignity",7
 GROUP,AI alignment,WHY,Harm reduction / public health,7
 WHAT,AI alignment,WHY,Harm reduction / public health,7
-WHO,Payment processors / financial infrastructure,HOW,Blocking,7
+WHO,App stores,HOW,Metamoderation,7
+WHO,Payment processors / financial infrastructure,HOW,Enframing,7
 WHO,Payment processors / financial infrastructure,HOW,Removal,7
 WHO,Payment processors / financial infrastructure,HOW,Monitoring,7
-WHO,Payment processors / financial infrastructure,HOW,Enframing,7
+WHO,Payment processors / financial infrastructure,HOW,Blocking,7
 WHO,Payment processors / financial infrastructure,HOW,Labeling,7
-WHO,App stores,HOW,Metamoderation,7
 WHO,Payment processors / financial infrastructure,WHAT,Censorship,7
-WHO,Payment processors / financial infrastructure,WHY,Misinformation or disinformation as harm,7
 WHO,App stores,WHY,Economic pressure,7
+WHO,Payment processors / financial infrastructure,WHY,Misinformation or disinformation as harm,7
 HOW,Disclosure,WHY,Genocide prevention / dangerous speech,7
 WHO,Media owners,WHY,Democratic self-defence,7
-WHO,Platforms,WHY,State secrets,7
 WHO,Pre-platform moderators,WHY,State security,7
+WHO,Platforms,WHY,State secrets,7
 WHO,Self-censorship (analytical),WHY,Wartime necessity,7
 WHO,Religious organisations,WHY,Wartime necessity,7
 HOW,Modification,WHY,Clear and present danger,7
 WHO,Civic advocacy & moral-pressure groups,WHY,Fair trial / administration of justice,7
-WHO,Police / intelligence services,WHY,Harm reduction / public health,7
 WHO,Police / intelligence services,WHY,Fair trial / administration of justice,7
+WHO,Police / intelligence services,WHY,Harm reduction / public health,7
 HOW,Intermediate,WHY,Economic pressure,7
 HOW,Intelligibility,WHY,Alignment with human values,7
 WHO,Press councils & ombudsmen,WHY,Political control,7
@@ -3355,8 +3355,8 @@ GROUP,AI alignment,WHY,Brand safety,7
 WHAT,AI alignment,WHY,Brand safety,7
 HOW,Agenda setting,WHY,Other,7
 HOW,Obfuscation,WHAT,Media regulation,7
-WHO,Courts and prosecutors,HOW,Coherence,7
 WHO,Other,HOW,Fairness,7
+WHO,Courts and prosecutors,HOW,Coherence,7
 WHO,Media owners,WHAT,Debate management,7
 HOW,Fairness,WHY,Democratic self-defence,7
 WHAT,Other,WHY,Conflict transformation,7
@@ -3386,22 +3386,22 @@ GROUP,Debate management,WHO,Algorithmic moderation systems,7
 WHO,Content moderators / BPO workforces,HOW,Coherence,7
 WHO,Debate moderators,HOW,Redirection,7
 GROUP,Media moderation,WHO,Regulators,7
-WHO,News agencies / wire services,HOW,Deplatforming,6
 WHO,News agencies / wire services,HOW,Coersive,6
+WHO,News agencies / wire services,HOW,Deplatforming,6
 WHO,News agencies / wire services,HOW,Licensing,6
 WHO,News agencies / wire services,WHY,Social cohesion,6
 WHO,Self-censorship (analytical),WHY,State secrets,6
 GROUP,Media moderation,WHO,Police / intelligence services,6
 WHO,Police / intelligence services,WHAT,Debate management,6
-WHO,Cloud / infrastructure providers,WHY,News values / editorial judgment,6
 WHO,Private firms,WHY,Harm reduction / public health,6
+WHO,Cloud / infrastructure providers,WHY,News values / editorial judgment,6
 WHO,Content moderators / BPO workforces,HOW,Fairness,6
 GROUP,Censorship,WHY,Conflict transformation,6
 HOW,Removal from circulation,WHY,Conflict transformation,6
 WHO,Platforms,WHAT,Algorithmic sorting,6
+WHO,Religious organisations,HOW,Balancing,6
 WHO,Cloud / infrastructure providers,HOW,Removal from circulation,6
 WHO,Cloud / infrastructure providers,HOW,Licensing,6
-WHO,Religious organisations,HOW,Balancing,6
 WHO,Cloud / infrastructure providers,WHAT,Other,6
 HOW,Balancing,WHY,Alignment with human values,6
 WHO,Private firms,WHY,Consumer protection / fair competition,6
@@ -3415,24 +3415,24 @@ WHO,App stores,HOW,Modification,6
 WHO,Platforms,WHY,Coersive,6
 WHO,Military censors,HOW,Disclosure,6
 GROUP,Media regulation,WHO,Courts and prosecutors,6
-GROUP,Media regulation,HOW,Blocking,6
 GROUP,Media regulation,HOW,Enframing,6
-GROUP,Media regulation,WHY,Protection of children,6
+GROUP,Media regulation,HOW,Blocking,6
 GROUP,Media regulation,WHY,Political control,6
+GROUP,Media regulation,WHY,Protection of children,6
 WHO,Pre-platform moderators,HOW,Removal from circulation,6
-WHO,Police / intelligence services,HOW,Balancing,6
 WHO,Censorship boards or agencies,HOW,Balancing,6
+WHO,Police / intelligence services,HOW,Balancing,6
 WHO,Pre-platform moderators,WHY,Economic pressure,6
 HOW,Prompting,WHY,Religious moral authority,6
 GROUP,Censorship,HOW,Coherence,6
 WHO,Regulators,WHY,Other,6
 WHO,Religious authorities,HOW,Correcting,6
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Intermediate,6
-WHO,Fact-checkers and verification units,HOW,Bridging,6
 WHO,Government agencies,HOW,Bridging,6
+WHO,Fact-checkers and verification units,HOW,Bridging,6
 GROUP,Censorship,WHO,Debate moderators,6
-WHO,Debate moderators,HOW,Restricting access,6
 WHO,Debate moderators,HOW,Correcting,6
+WHO,Debate moderators,HOW,Restricting access,6
 WHO,Debate moderators,WHY,"Privacy, reputation & dignity",6
 HOW,Agenda setting,WHAT,Media regulation,6
 HOW,Coersive,WHY,Alignment with human values,6
@@ -3441,8 +3441,8 @@ WHO,Regulators,HOW,Obfuscation,6
 WHO,Platform oversight bodies,HOW,Scheduling,6
 WHO,Platform oversight bodies,WHY,Religious moral authority,6
 HOW,Scheduling,WHAT,Other,6
-HOW,Scheduling,WHY,Democratic self-defence,6
 HOW,Inclusion,WHY,Economic pressure,6
+HOW,Scheduling,WHY,Democratic self-defence,6
 WHAT,Debate management,WHY,Clear and present danger,6
 WHO,Self-censorship (analytical),HOW,Rating,6
 WHO,Translators / localisers,HOW,Scheduling,6
@@ -3452,8 +3452,8 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHAT,Media regulati
 HOW,Redirection,WHY,Consumer protection / fair competition,6
 WHO,Media owners,WHY,Coherence,6
 WHO,Religious authorities,WHY,Coherence,6
-WHO,Fact-checkers and verification units,HOW,Licensing,6
 WHO,Fact-checkers and verification units,HOW,Agenda setting,6
+WHO,Fact-checkers and verification units,HOW,Licensing,6
 WHO,Self-censorship (analytical),WHAT,Debate management,6
 WHO,Distributors & booksellers,WHY,Democratic self-defence,6
 HOW,Obfuscation,WHAT,Debate management,6
@@ -3461,27 +3461,27 @@ HOW,Coherence,WHY,Democratic self-defence,6
 HOW,Redirection,WHY,Democratic self-defence,6
 WHO,AI labs as moderators,HOW,Marginalisation,6
 GROUP,Content moderation,WHO,Payment processors / financial infrastructure,6
-WHO,Payment processors / financial infrastructure,HOW,Marginalisation,6
 WHO,Payment processors / financial infrastructure,HOW,Filtering,6
+WHO,Payment processors / financial infrastructure,HOW,Marginalisation,6
 WHO,Payment processors / financial infrastructure,HOW,Profiling,6
 WHO,Payment processors / financial infrastructure,WHY,Brand safety,6
 WHO,Pre-platform moderators,WHAT,Media moderation,6
-WHO,Journalists,WHY,Other,6
-WHO,Political groups,WHY,Clear and present danger,6
 WHO,Users,WHY,Wartime necessity,6
+WHO,Political groups,WHY,Clear and present danger,6
+WHO,Journalists,WHY,Other,6
 HOW,Disclosure,WHY,State secrets,6
 WHAT,Content moderation,WHY,State secrets,6
 WHO,Media owners,WHY,Fair trial / administration of justice,6
-WHO,Religious authorities,WHY,Fair trial / administration of justice,6
 WHO,Military censors,WHY,Harm principles and hate speech regulation,6
+WHO,Religious authorities,WHY,Fair trial / administration of justice,6
 HOW,Agenda setting,WHY,Fair trial / administration of justice,6
 WHO,Content moderators / BPO workforces,HOW,Inclusion,6
 WHO,Platform oversight bodies,HOW,Intermediate,6
 WHO,Fact-checkers and verification units,WHY,Obscenity and decency,6
 HOW,Inclusion,WHY,Misinformation or disinformation as harm,6
 HOW,Self-censorship,WHY,Alignment with human values,6
-WHO,Other,WHY,Fair trial / administration of justice,6
 WHO,Algorithmic moderation systems,WHY,Fair trial / administration of justice,6
+WHO,Other,WHY,Fair trial / administration of justice,6
 HOW,Disclosure,WHY,Fair trial / administration of justice,6
 WHAT,Debate management,WHY,Fair trial / administration of justice,6
 HOW,Intermediate,WHY,Consumer protection / fair competition,6
@@ -3489,11 +3489,11 @@ WHO,Online mobs / pile-ons,HOW,Prompting,6
 WHO,Platforms,HOW,Other,6
 HOW,Other,WHAT,Content moderation,6
 WHAT,Debate management,WHY,Genocide prevention / dangerous speech,6
-WHO,Payment processors / financial infrastructure,HOW,Deplatforming,6
 WHO,App stores,HOW,Removal from circulation,6
-WHO,Mediators,HOW,Disclosure,6
+WHO,Payment processors / financial infrastructure,HOW,Deplatforming,6
 WHO,Mediators,HOW,Self-censorship,6
 WHO,Mediators,HOW,Economic,6
+WHO,Mediators,HOW,Disclosure,6
 WHO,Mediators,HOW,Modification,6
 WHO,Mediators,WHAT,Other,6
 HOW,Rating,WHY,Genocide prevention / dangerous speech,6
@@ -3503,10 +3503,10 @@ GROUP,Debate management,WHO,Courts and prosecutors,6
 GROUP,Debate management,HOW,Economic,6
 GROUP,Debate management,WHAT,Media moderation,6
 WHO,Media owners,HOW,Fairness,6
-WHO,Journalists,HOW,Coherence,6
-WHO,Mediators,HOW,Fairness,6
 WHO,Political groups,HOW,Coherence,6
 WHO,Political groups,HOW,Inclusion,6
+WHO,Journalists,HOW,Coherence,6
+WHO,Mediators,HOW,Fairness,6
 WHO,Mediators,HOW,Marginalisation,6
 WHO,RLHF annotators,HOW,Enframing,6
 WHO,Civic advocacy & moral-pressure groups,WHY,Clear and present danger,6
@@ -3516,21 +3516,21 @@ HOW,Balancing,WHAT,Media regulation,6
 WHO,Civic advocacy & moral-pressure groups,HOW,Intelligibility,6
 GROUP,Content moderation,WHO,Self-censorship (analytical),6
 WHO,Online mobs / pile-ons,HOW,Scheduling,6
-WHO,Mediators,HOW,Redirection,6
 WHO,Political groups,HOW,Intelligibility,6
+WHO,Mediators,HOW,Redirection,6
 WHO,App stores,HOW,Correcting,6
 WHO,App stores,WHAT,Media moderation,6
 WHO,Police / intelligence services,WHY,Alignment with human values,6
 GROUP,Censorship,WHY,Genocide prevention / dangerous speech,6
-WHO,Public-health bodies (NGOs / WHO),WHY,Democratic self-defence,6
 WHO,"Schools, curricula, librarians, academia",WHY,Clear and present danger,6
+WHO,Public-health bodies (NGOs / WHO),WHY,Democratic self-defence,6
 WHAT,Media moderation,WHY,Genocide prevention / dangerous speech,6
 WHO,Platform oversight bodies,HOW,Prompting,6
 WHO,Legislators,HOW,Fairness,6
 WHO,Broadcasting regulators,WHY,Wartime necessity,6
 WHO,Algorithmic moderation systems,WHY,Wartime necessity,6
-GROUP,Media moderation,HOW,Disclosure,6
 GROUP,Media moderation,HOW,Correcting,6
+GROUP,Media moderation,HOW,Disclosure,6
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Religious moral authority,6
 GROUP,Content moderation,WHY,Wartime necessity,6
 WHO,Regulators,HOW,Intelligibility,6
@@ -3548,15 +3548,15 @@ HOW,Confiscation,WHAT,Debate management,5
 WHO,Political groups,WHY,Consumer protection / fair competition,5
 WHO,Private firms,WHY,Genocide prevention / dangerous speech,5
 HOW,Self-censorship,WHY,Genocide prevention / dangerous speech,5
-WHO,Religious authorities,HOW,Intermediate,5
 WHO,Religious authorities,HOW,Metamoderation,5
+WHO,Religious authorities,HOW,Intermediate,5
 WHO,Advertisers,HOW,Scheduling,5
 WHO,Algorithmic moderation systems,WHAT,Algorithmic sorting,5
-HOW,Filtering,WHAT,Algorithmic sorting,5
 HOW,Review,WHAT,Algorithmic sorting,5
+HOW,Filtering,WHAT,Algorithmic sorting,5
 HOW,Profiling,WHAT,Algorithmic sorting,5
-WHAT,Algorithmic sorting,WHY,Brand safety,5
 WHAT,Algorithmic sorting,WHY,Protection of children,5
+WHAT,Algorithmic sorting,WHY,Brand safety,5
 WHO,Debate moderators,WHY,State security,5
 HOW,Confiscation,WHY,Other,5
 WHO,Editors,WHY,Clear and present danger,5
@@ -3565,14 +3565,14 @@ WHO,Media owners,WHY,State secrets,5
 HOW,Enframing,WHY,Coersive,5
 WHO,News agencies / wire services,WHY,State security,5
 WHO,Debate moderators,HOW,Removal from circulation,5
-WHO,Religious organisations,HOW,Scheduling,5
 WHO,Religious organisations,HOW,Metamoderation,5
+WHO,Religious organisations,HOW,Scheduling,5
 WHO,Legislators,HOW,Inclusion,5
-WHO,Courts and prosecutors,HOW,Bridging,5
 WHO,Advertisers,HOW,Bridging,5
 WHO,Legislators,HOW,Bridging,5
-WHO,Religious authorities,HOW,Balancing,5
+WHO,Courts and prosecutors,HOW,Bridging,5
 WHO,Distributors & booksellers,HOW,Balancing,5
+WHO,Religious authorities,HOW,Balancing,5
 WHO,Debate moderators,HOW,Disclosure,5
 WHO,Censorship boards or agencies,WHY,Consumer protection / fair competition,5
 WHO,RLHF annotators,HOW,Blocking,5
@@ -3586,9 +3586,9 @@ WHO,Self-censorship (analytical),WHY,Democratic self-defence,5
 WHO,Users,WHY,Fairness,5
 WHO,Translators / localisers,HOW,Intermediate,5
 GROUP,Media regulation,HOW,Removal,5
-HOW,Other,WHY,Compliance,5
 HOW,Other,WHY,Political control,5
 HOW,Other,WHY,Social cohesion,5
+HOW,Other,WHY,Compliance,5
 WHO,Distributors & booksellers,WHAT,Other,5
 WHO,Online mobs / pile-ons,WHY,News values / editorial judgment,5
 WHO,Regulators,HOW,Bridging,5
@@ -3602,10 +3602,10 @@ HOW,Interiorisation,WHY,Conflict transformation,5
 GROUP,AI alignment,WHO,"Schools, curricula, librarians, academia",5
 WHO,"Schools, curricula, librarians, academia",WHAT,AI alignment,5
 WHO,RLHF annotators,WHY,Protection of children,5
-WHO,Payment processors / financial infrastructure,HOW,Restricting access,5
 WHO,Payment processors / financial infrastructure,HOW,Review,5
-WHO,Payment processors / financial infrastructure,WHY,Protection of children,5
+WHO,Payment processors / financial infrastructure,HOW,Restricting access,5
 WHO,Payment processors / financial infrastructure,WHY,Political control,5
+WHO,Payment processors / financial infrastructure,WHY,Protection of children,5
 HOW,Intelligibility,WHY,Genocide prevention / dangerous speech,5
 WHO,Self-censorship (analytical),WHY,Coherence,5
 WHO,Distributors & booksellers,WHY,Coherence,5
@@ -3638,17 +3638,17 @@ HOW,Intelligibility,WHY,Obscenity and decency,5
 HOW,Intelligibility,WHY,Other,5
 WHO,"Schools, curricula, librarians, academia",HOW,Bridging,5
 GROUP,AI alignment,WHAT,Other,5
-GROUP,Debate management,HOW,Disclosure,5
 GROUP,Debate management,HOW,Self-censorship,5
+GROUP,Debate management,HOW,Disclosure,5
 WHO,Broadcasting regulators,HOW,Balancing,5
 WHO,Broadcasting regulators,HOW,Agenda setting,5
-WHO,Editors,HOW,Inclusion,5
-WHO,Journalists,HOW,Inclusion,5
 WHO,"Schools, curricula, librarians, academia",HOW,Fairness,5
+WHO,Journalists,HOW,Inclusion,5
+WHO,Editors,HOW,Inclusion,5
 WHO,Broadcasting regulators,WHAT,Debate management,5
 WHO,Journalists,WHY,Fair trial / administration of justice,5
-HOW,Fairness,WHAT,Other,5
 HOW,Inclusion,WHAT,Media moderation,5
+HOW,Fairness,WHAT,Other,5
 HOW,Fairness,WHY,"Privacy, reputation & dignity",5
 WHO,Police / intelligence services,WHY,Consumer protection / fair competition,5
 HOW,Confiscation,WHY,Consumer protection / fair competition,5
@@ -3656,8 +3656,8 @@ WHO,Mediators,WHY,Misinformation or disinformation as harm,5
 WHO,Fact-checkers and verification units,HOW,Obfuscation,5
 WHO,RLHF annotators,HOW,Labeling,5
 WHO,RLHF annotators,WHY,Social cohesion,5
-GROUP,Media moderation,WHO,Censorship boards or agencies,5
 GROUP,Media moderation,WHO,Legislators,5
+GROUP,Media moderation,WHO,Censorship boards or agencies,5
 WHO,Press councils & ombudsmen,WHY,Economic pressure,5
 WHO,Press councils & ombudsmen,WHY,News values / editorial judgment,5
 GROUP,Censorship,WHO,Public-health bodies (NGOs / WHO),5
@@ -3671,8 +3671,8 @@ WHO,Media owners,HOW,Scheduling,5
 WHO,Journalists,WHY,Fairness,5
 WHO,Civic advocacy & moral-pressure groups,WHY,Alignment with human values,5
 WHO,Press councils & ombudsmen,HOW,Profiling,5
-WHO,Public-health bodies (NGOs / WHO),WHY,Economic pressure,5
 WHO,Political groups,WHY,Harm reduction / public health,5
+WHO,Public-health bodies (NGOs / WHO),WHY,Economic pressure,5
 HOW,Prompting,WHY,Consumer protection / fair competition,5
 WHO,Fact-checkers and verification units,WHY,Consumer protection / fair competition,5
 HOW,Redirection,WHY,Wartime necessity,5
@@ -3689,8 +3689,8 @@ GROUP,Debate management,WHO,Content moderators / BPO workforces,5
 GROUP,Media moderation,WHO,Debate moderators,5
 WHO,RLHF annotators,WHY,Compliance,5
 GROUP,Content moderation,WHY,Freedom of speech or information,5
-HOW,Removal,WHY,Freedom of speech or information,5
 HOW,Review,WHY,Freedom of speech or information,5
+HOW,Removal,WHY,Freedom of speech or information,5
 WHAT,Content moderation,WHY,Freedom of speech or information,5
 GROUP,Debate management,HOW,Deplatforming,5
 WHO,Fact-checkers and verification units,WHY,Other,5
@@ -3730,21 +3730,21 @@ WHAT,Algorithmic sorting,WHY,Compliance,4
 WHO,Religious organisations,WHY,Other,4
 WHO,Religious organisations,WHY,Consumer protection / fair competition,4
 WHAT,Other,WHY,Other,4
-WHO,Media owners,WHY,Clear and present danger,4
 WHO,Private firms,WHY,Clear and present danger,4
+WHO,Media owners,WHY,Clear and present danger,4
 WHO,News agencies / wire services,HOW,Agenda setting,4
 WHO,News agencies / wire services,WHY,Wartime necessity,4
 WHO,Military censors,WHY,State secrets,4
 HOW,Agenda setting,WHY,State secrets,4
 GROUP,Censorship,WHY,Coersive,4
 WHO,Algorithmic moderation systems,WHY,Coersive,4
+HOW,Self-censorship,WHY,Coersive,4
 HOW,Filtering,WHY,Coersive,4
 HOW,Monitoring,WHY,Coersive,4
-HOW,Self-censorship,WHY,Coersive,4
 GROUP,Content moderation,WHY,Coersive,4
 WHO,App stores,HOW,Rating,4
-HOW,Marginalisation,WHY,Coersive,4
 HOW,Blocking,WHY,Coersive,4
+HOW,Marginalisation,WHY,Coersive,4
 WHAT,Content moderation,WHY,Coersive,4
 WHO,Broadcasting regulators,HOW,Obfuscation,4
 WHO,Broadcasting regulators,WHY,Other,4
@@ -3759,29 +3759,29 @@ WHO,Debate moderators,WHAT,Media regulation,4
 GROUP,Censorship,WHO,Pre-platform moderators,4
 WHO,Pre-platform moderators,HOW,Balancing,4
 WHO,Self-censorship (analytical),HOW,Prompting,4
-WHO,Pre-platform moderators,WHY,Obscenity and decency,4
 WHO,Pre-platform moderators,WHY,Other,4
+WHO,Pre-platform moderators,WHY,Obscenity and decency,4
 HOW,Prompting,WHY,Other,4
 HOW,Monitoring,WHAT,Algorithmic sorting,4
 GROUP,Debate management,WHO,Civic advocacy & moral-pressure groups,4
 WHO,Distributors & booksellers,WHY,Other,4
-WHO,Civic advocacy & moral-pressure groups,HOW,Bridging,4
 WHO,Advertisers,HOW,Intermediate,4
+WHO,Civic advocacy & moral-pressure groups,HOW,Bridging,4
 WHO,RLHF annotators,WHY,Brand safety,4
+HOW,Inclusion,WHY,Religious moral authority,4
 HOW,Scheduling,WHY,Clear and present danger,4
 HOW,Confiscation,WHY,Clear and present danger,4
-HOW,Inclusion,WHY,Religious moral authority,4
-WHO,Content moderators / BPO workforces,WHY,Fairness,4
 WHO,Government agencies,WHY,Fairness,4
+WHO,Content moderators / BPO workforces,WHY,Fairness,4
 HOW,Restricting access,WHY,Fairness,4
 GROUP,Media regulation,HOW,Labeling,4
 GROUP,Media regulation,WHY,Misinformation or disinformation as harm,4
 GROUP,Media regulation,WHY,Compliance,4
 GROUP,Censorship,HOW,Other,4
 HOW,Other,WHY,Obscenity and decency,4
-WHO,Self-censorship (analytical),HOW,Disclosure,4
-WHO,Online mobs / pile-ons,HOW,Confiscation,4
 WHO,Online mobs / pile-ons,HOW,Obfuscation,4
+WHO,Online mobs / pile-ons,HOW,Confiscation,4
+WHO,Self-censorship (analytical),HOW,Disclosure,4
 WHO,Broadcasting regulators,WHAT,Other,4
 WHO,Translators / localisers,WHY,Conflict transformation,4
 WHO,Fact-checkers and verification units,HOW,Interiorisation,4
@@ -3794,18 +3794,18 @@ GROUP,AI alignment,HOW,Correcting,4
 HOW,Correcting,WHAT,AI alignment,4
 GROUP,AI alignment,HOW,Rating,4
 HOW,Rating,WHAT,AI alignment,4
-WHO,RLHF annotators,HOW,Marginalisation,4
 WHO,RLHF annotators,HOW,Restricting access,4
-WHO,Payment processors / financial infrastructure,HOW,Disclosure,4
+WHO,RLHF annotators,HOW,Marginalisation,4
 WHO,Payment processors / financial infrastructure,HOW,Self-censorship,4
-WHO,Payment processors / financial infrastructure,WHY,State security,4
+WHO,Payment processors / financial infrastructure,HOW,Disclosure,4
 WHO,Payment processors / financial infrastructure,WHY,Harm principles and hate speech regulation,4
 WHO,Payment processors / financial infrastructure,WHY,Economic pressure,4
-WHO,Other,WHY,Clear and present danger,4
+WHO,Payment processors / financial infrastructure,WHY,State security,4
 WHO,Journalists,WHY,Clear and present danger,4
+WHO,Other,WHY,Clear and present danger,4
 WHO,Censorship boards or agencies,WHY,Clear and present danger,4
-WHO,Religious organisations,WHY,Democratic self-defence,4
 WHO,Religious organisations,WHY,Clear and present danger,4
+WHO,Religious organisations,WHY,Democratic self-defence,4
 HOW,Licensing,WHY,Clear and present danger,4
 WHO,Private firms,WHY,Fair trial / administration of justice,4
 WHO,Distributors & booksellers,WHY,Fair trial / administration of justice,4
@@ -3819,8 +3819,8 @@ WHO,Payment processors / financial infrastructure,HOW,Removal from circulation,4
 WHO,Self-censorship (analytical),HOW,Agenda setting,4
 GROUP,Content moderation,HOW,Other,4
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Other,4
-HOW,Other,WHY,Protection of children,4
 HOW,Other,WHY,News values / editorial judgment,4
+HOW,Other,WHY,Protection of children,4
 GROUP,AI alignment,WHY,Ideological consolidation,4
 WHAT,AI alignment,WHY,Ideological consolidation,4
 GROUP,AI alignment,WHO,Fact-checkers and verification units,4
@@ -3828,11 +3828,11 @@ WHO,Fact-checkers and verification units,WHAT,AI alignment,4
 WHO,Cloud / infrastructure providers,HOW,Prompting,4
 WHO,App stores,HOW,Coersive,4
 WHO,App stores,WHAT,Other,4
-WHO,Payment processors / financial infrastructure,WHY,"Privacy, reputation & dignity",4
 WHO,App stores,WHY,Ideological consolidation,4
+WHO,Payment processors / financial infrastructure,WHY,"Privacy, reputation & dignity",4
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Agenda setting,4
-WHO,Mediators,HOW,Interiorisation,4
 WHO,Mediators,HOW,Removal from circulation,4
+WHO,Mediators,HOW,Interiorisation,4
 WHO,Mediators,WHY,Fair trial / administration of justice,4
 HOW,Balancing,WHY,Fair trial / administration of justice,4
 WHO,Pre-platform moderators,HOW,Redirection,4
@@ -3848,15 +3848,15 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Wartime necessi
 GROUP,Content moderation,WHO,Distributors & booksellers,4
 WHO,Mediators,HOW,Restricting access,4
 WHO,Mediators,WHY,Economic pressure,4
-WHO,RLHF annotators,HOW,Interiorisation,4
 WHO,RLHF annotators,HOW,Rating,4
+WHO,RLHF annotators,HOW,Interiorisation,4
 WHO,RLHF annotators,WHY,Coherence,4
 WHO,RLHF annotators,WHY,"Privacy, reputation & dignity",4
 WHO,Distributors & booksellers,HOW,Scheduling,4
 WHO,Religious authorities,HOW,Redirection,4
 HOW,Bridging,WHAT,Other,4
-WHO,Press councils & ombudsmen,HOW,Disclosure,4
 WHO,Press councils & ombudsmen,HOW,Metamoderation,4
+WHO,Press councils & ombudsmen,HOW,Disclosure,4
 GROUP,Media moderation,HOW,Interiorisation,4
 GROUP,Media moderation,WHAT,Media regulation,4
 GROUP,Media moderation,WHY,Economic pressure,4
@@ -3887,11 +3887,11 @@ HOW,Confiscation,WHY,Harm reduction / public health,4
 WHAT,Media regulation,WHY,Clear and present danger,4
 WHO,Private firms,WHY,Alignment with human values,4
 WHO,Cloud / infrastructure providers,HOW,Coersive,4
-WHO,Police / intelligence services,WHY,Genocide prevention / dangerous speech,4
 WHO,Advertisers,WHY,Genocide prevention / dangerous speech,4
-WHO,Regulators,HOW,Fairness,4
-WHO,Civic advocacy & moral-pressure groups,HOW,Fairness,4
+WHO,Police / intelligence services,WHY,Genocide prevention / dangerous speech,4
 WHO,Online mobs / pile-ons,HOW,Fairness,4
+WHO,Civic advocacy & moral-pressure groups,HOW,Fairness,4
+WHO,Regulators,HOW,Fairness,4
 GROUP,Media moderation,WHO,Media owners,4
 GROUP,Media moderation,HOW,Fairness,4
 GROUP,Media moderation,HOW,Coersive,4
@@ -3903,8 +3903,8 @@ WHO,RLHF annotators,HOW,Modification,4
 HOW,Inclusion,WHY,Other,4
 HOW,Correcting,WHY,Wartime necessity,4
 WHO,Platform oversight bodies,HOW,Coherence,4
-WHO,Platforms,WHY,Freedom of speech or information,4
 WHO,Algorithmic moderation systems,WHY,Freedom of speech or information,4
+WHO,Platforms,WHY,Freedom of speech or information,4
 HOW,Filtering,WHY,Freedom of speech or information,4
 WHO,Journalists,HOW,Bridging,4
 HOW,Bridging,WHY,Democratic self-defence,4
@@ -3915,11 +3915,11 @@ GROUP,AI alignment,HOW,Marginalisation,4
 HOW,Marginalisation,WHAT,AI alignment,4
 GROUP,Content moderation,WHO,Religious organisations,4
 WHO,Advertisers,WHY,Clear and present danger,4
-HOW,Balancing,WHY,Genocide prevention / dangerous speech,4
-HOW,Coherence,WHY,Harm reduction / public health,4
 HOW,Bridging,WHY,Harm reduction / public health,4
-HOW,Filtering,WHY,Inclusion,4
+HOW,Coherence,WHY,Harm reduction / public health,4
+HOW,Balancing,WHY,Genocide prevention / dangerous speech,4
 HOW,Review,WHY,Inclusion,4
+HOW,Filtering,WHY,Inclusion,4
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Other,4
 WHO,Fact-checkers and verification units,WHY,Genocide prevention / dangerous speech,4
 WHO,Military censors,WHAT,Content moderation,4
@@ -3949,22 +3949,22 @@ GROUP,Debate management,HOW,Interiorisation,4
 WHO,Platform oversight bodies,HOW,Licensing,4
 HOW,Intelligibility,WHY,Consumer protection / fair competition,4
 WHO,Religious organisations,WHAT,Debate management,3
-WHO,Police / intelligence services,WHY,Conflict transformation,3
 WHO,Religious organisations,WHY,Conflict transformation,3
+WHO,Police / intelligence services,WHY,Conflict transformation,3
 HOW,Licensing,WHY,Conflict transformation,3
 WHO,Journalists,WHY,Consumer protection / fair competition,3
 HOW,Interiorisation,WHY,Genocide prevention / dangerous speech,3
-HOW,Intermediate,WHY,Wartime necessity,3
 HOW,Metamoderation,WHY,Wartime necessity,3
-HOW,Deplatforming,WHAT,Algorithmic sorting,3
+HOW,Intermediate,WHY,Wartime necessity,3
 HOW,Blocking,WHAT,Algorithmic sorting,3
+HOW,Deplatforming,WHAT,Algorithmic sorting,3
 WHO,Cloud / infrastructure providers,WHY,Other,3
 WHO,Cloud / infrastructure providers,WHY,Consumer protection / fair competition,3
 HOW,Licensing,WHY,Alignment with human values,3
 WHO,Media owners,WHY,Consumer protection / fair competition,3
-WHO,News agencies / wire services,WHY,Compliance,3
 WHO,News agencies / wire services,WHY,State secrets,3
 WHO,News agencies / wire services,WHY,News values / editorial judgment,3
+WHO,News agencies / wire services,WHY,Compliance,3
 WHO,Military censors,WHY,News values / editorial judgment,3
 WHO,Content moderators / BPO workforces,WHY,Coersive,3
 HOW,Deplatforming,WHY,Coersive,3
@@ -3974,29 +3974,29 @@ WHO,Public-health bodies (NGOs / WHO),HOW,Agenda setting,3
 WHO,News agencies / wire services,HOW,Disclosure,3
 WHO,News agencies / wire services,HOW,Confiscation,3
 WHO,News agencies / wire services,WHY,Protection of children,3
+GROUP,Media regulation,WHO,"Schools, curricula, librarians, academia",3
 GROUP,Media regulation,WHO,Other,3
 GROUP,Media regulation,WHO,Censorship boards or agencies,3
 GROUP,Media regulation,WHO,Religious organisations,3
 GROUP,Media regulation,WHO,Religious authorities,3
-GROUP,Media regulation,WHO,"Schools, curricula, librarians, academia",3
-GROUP,Media regulation,HOW,Scheduling,3
-GROUP,Media regulation,HOW,Monitoring,3
-GROUP,Media regulation,HOW,Modification,3
 GROUP,Media regulation,HOW,Self-censorship,3
-GROUP,Media regulation,WHY,State security,3
+GROUP,Media regulation,HOW,Monitoring,3
+GROUP,Media regulation,HOW,Scheduling,3
+GROUP,Media regulation,HOW,Modification,3
 GROUP,Media regulation,WHY,Ideological consolidation,3
+GROUP,Media regulation,WHY,State security,3
 WHO,Debate moderators,HOW,Licensing,3
 WHO,Debate moderators,WHY,Obscenity and decency,3
-WHO,Debate moderators,WHY,Protection of children,3
 WHO,Debate moderators,WHY,Ideological consolidation,3
+WHO,Debate moderators,WHY,Protection of children,3
 WHO,Pre-platform moderators,HOW,Licensing,3
 WHO,Religious organisations,HOW,Prompting,3
 WHO,Pre-platform moderators,WHY,News values / editorial judgment,3
 WHO,Pre-platform moderators,WHY,Ideological consolidation,3
-HOW,Removal,WHAT,Algorithmic sorting,3
 HOW,Enframing,WHAT,Algorithmic sorting,3
-HOW,Labeling,WHAT,Algorithmic sorting,3
 HOW,Obfuscation,WHAT,Algorithmic sorting,3
+HOW,Removal,WHAT,Algorithmic sorting,3
+HOW,Labeling,WHAT,Algorithmic sorting,3
 WHAT,Algorithmic sorting,WHY,Political control,3
 WHAT,Algorithmic sorting,WHY,Social cohesion,3
 GROUP,Debate management,WHO,Legislators,3
@@ -4004,22 +4004,22 @@ WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Bridging,3
 WHO,Censorship boards or agencies,WHAT,Debate management,3
 WHO,Platform oversight bodies,HOW,Confiscation,3
 WHO,Religious authorities,WHAT,Debate management,3
-HOW,Inclusion,WHY,Alignment with human values,3
 HOW,Inclusion,WHY,Clear and present danger,3
+HOW,Inclusion,WHY,Alignment with human values,3
 HOW,Marginalisation,WHY,Fairness,3
 GROUP,Media regulation,WHO,Platforms,3
 GROUP,Media regulation,WHAT,Content moderation,3
 GROUP,Media regulation,WHY,Brand safety,3
 HOW,Other,WHY,Economic pressure,3
-WHO,Military censors,HOW,Metamoderation,3
 WHO,Distributors & booksellers,HOW,Metamoderation,3
+WHO,Military censors,HOW,Metamoderation,3
 WHO,Military censors,WHAT,Other,3
 WHO,Online mobs / pile-ons,HOW,Agenda setting,3
 WHO,Content moderators / BPO workforces,HOW,Confiscation,3
 WHO,Other,WHY,State secrets,3
 WHO,Users,WHY,State secrets,3
-WHO,Self-censorship (analytical),HOW,Coherence,3
 WHO,Translators / localisers,HOW,Coherence,3
+WHO,Self-censorship (analytical),HOW,Coherence,3
 WHO,Translators / localisers,WHAT,Debate management,3
 WHO,Censorship boards or agencies,WHY,Conflict transformation,3
 HOW,Coherence,WHY,Obscenity and decency,3
@@ -4056,20 +4056,20 @@ WHO,AI labs as moderators,HOW,Deplatforming,3
 WHO,App stores,HOW,Interiorisation,3
 WHO,Payment processors / financial infrastructure,WHY,Professional / industry self-governance,3
 WHO,Payment processors / financial infrastructure,WHY,Ideological consolidation,3
-HOW,Marginalisation,WHAT,Algorithmic sorting,3
 HOW,Self-censorship,WHAT,Algorithmic sorting,3
+HOW,Marginalisation,WHAT,Algorithmic sorting,3
 GROUP,Media moderation,HOW,Obfuscation,3
 HOW,Obfuscation,WHY,Alignment with human values,3
 WHO,Mediators,WHY,Obscenity and decency,3
 WHO,Cloud / infrastructure providers,WHY,Genocide prevention / dangerous speech,3
-GROUP,Debate management,WHY,Protection of children,3
-GROUP,Debate management,WHY,Democratic self-defence,3
 GROUP,Debate management,WHY,Fair trial / administration of justice,3
+GROUP,Debate management,WHY,Democratic self-defence,3
+GROUP,Debate management,WHY,Protection of children,3
 WHO,Media owners,HOW,Balancing,3
 WHO,Political groups,HOW,Fairness,3
 WHO,Mediators,WHY,Democratic self-defence,3
-HOW,Intermediate,WHY,Fair trial / administration of justice,3
 HOW,Metamoderation,WHY,Fair trial / administration of justice,3
+HOW,Intermediate,WHY,Fair trial / administration of justice,3
 WHO,Translators / localisers,WHY,Misinformation or disinformation as harm,3
 HOW,Restriction access,WHY,Coherence,3
 GROUP,Media moderation,WHO,Press councils & ombudsmen,3
@@ -4081,8 +4081,8 @@ WHO,Public-health bodies (NGOs / WHO),HOW,Intelligibility,3
 WHO,Distributors & booksellers,HOW,Prompting,3
 WHO,Debate moderators,HOW,Marginalisation,3
 HOW,Scheduling,WHY,State secrets,3
-WHO,Fact-checkers and verification units,HOW,Coherence,3
 WHO,Civic advocacy & moral-pressure groups,HOW,Coherence,3
+WHO,Fact-checkers and verification units,HOW,Coherence,3
 WHO,Military censors,HOW,Redirection,3
 WHO,Courts and prosecutors,WHY,Fairness,3
 HOW,Removal from circulation,WHY,Fairness,3
@@ -4090,32 +4090,32 @@ WHAT,Censorship,WHY,Fairness,3
 WHO,Platform oversight bodies,HOW,Bridging,3
 WHO,Cloud / infrastructure providers,WHY,Democratic self-defence,3
 WHO,Broadcasting regulators,HOW,Intelligibility,3
-WHO,Public-health bodies (NGOs / WHO),HOW,Self-censorship,3
 WHO,Public-health bodies (NGOs / WHO),HOW,Interiorisation,3
-WHO,Other,WHY,Genocide prevention / dangerous speech,3
+WHO,Public-health bodies (NGOs / WHO),HOW,Self-censorship,3
 WHO,Private firms,WHY,Democratic self-defence,3
 WHO,Political groups,WHY,Genocide prevention / dangerous speech,3
+WHO,Other,WHY,Genocide prevention / dangerous speech,3
 HOW,Intelligibility,WHAT,Media regulation,3
 HOW,Intelligibility,WHY,Clear and present danger,3
 HOW,Removal from circulation,WHY,Genocide prevention / dangerous speech,3
 HOW,Licensing,WHY,Genocide prevention / dangerous speech,3
-WHAT,Media regulation,WHY,Genocide prevention / dangerous speech,3
 WHAT,Media regulation,WHY,Fair trial / administration of justice,3
-WHO,Online mobs / pile-ons,WHY,Democratic self-defence,3
+WHAT,Media regulation,WHY,Genocide prevention / dangerous speech,3
 WHO,Online mobs / pile-ons,WHY,Consumer protection / fair competition,3
+WHO,Online mobs / pile-ons,WHY,Democratic self-defence,3
 WHO,Online mobs / pile-ons,WHY,Wartime necessity,3
 HOW,Prompting,WHY,Wartime necessity,3
 GROUP,Content moderation,WHY,State secrets,3
-WHO,Courts and prosecutors,WHY,Coersive,3
 WHO,"Schools, curricula, librarians, academia",WHY,Coersive,3
+WHO,Courts and prosecutors,WHY,Coersive,3
 HOW,Disclosure,WHY,Coersive,3
 WHO,Platform oversight bodies,HOW,Other,3
 HOW,Other,WHY,"Privacy, reputation & dignity",3
 WHO,Advertisers,WHY,Alignment with human values,3
-HOW,Deplatforming,WHY,Fairness,3
 HOW,Coersive,WHY,Fairness,3
 HOW,Fairness,WHY,Fairness,3
 HOW,Fairness,WHY,Ideological consolidation,3
+HOW,Deplatforming,WHY,Fairness,3
 WHO,Self-censorship (analytical),WHY,Harm reduction / public health,3
 WHO,Debate moderators,WHY,Economic pressure,3
 WHO,App stores,WHY,Coherence,3
@@ -4139,13 +4139,13 @@ GROUP,Media regulation,WHO,Broadcasting regulators,3
 GROUP,Media regulation,HOW,Economic,3
 GROUP,Media regulation,WHY,Harm principles and hate speech regulation,3
 HOW,Fairness,WHY,Alignment with human values,3
-WHO,Religious organisations,HOW,Bridging,3
 WHO,Advertisers,HOW,Intelligibility,3
 WHO,Advertisers,HOW,Balancing,3
-HOW,Bridging,WHY,Clear and present danger,3
+WHO,Religious organisations,HOW,Bridging,3
 HOW,Intermediate,WHY,Clear and present danger,3
-HOW,Prompting,WHY,Genocide prevention / dangerous speech,3
+HOW,Bridging,WHY,Clear and present danger,3
 HOW,Prompting,WHY,Clear and present danger,3
+HOW,Prompting,WHY,Genocide prevention / dangerous speech,3
 WHO,Platforms,WHY,Inclusion,3
 WHO,Algorithmic moderation systems,WHY,Inclusion,3
 WHO,Public-health bodies (NGOs / WHO),WHAT,Other,3
@@ -4155,11 +4155,11 @@ WHO,Journalists,WHY,Genocide prevention / dangerous speech,3
 GROUP,Content moderation,WHO,Military censors,3
 WHO,AI labs as moderators,HOW,Economic,3
 GROUP,Content moderation,WHY,Public interest,3
+WHO,Online mobs / pile-ons,WHY,Clear and present danger,3
 WHO,Platforms,WHY,Public interest,3
 WHO,Users,WHY,Public interest,3
-WHO,Online mobs / pile-ons,WHY,Clear and present danger,3
-HOW,Deplatforming,WHY,Public interest,3
 HOW,Removal,WHY,Public interest,3
+HOW,Deplatforming,WHY,Public interest,3
 HOW,Metamoderation,WHY,Public interest,3
 WHAT,Content moderation,WHY,Public interest,3
 WHO,Pre-platform moderators,WHY,Conflict transformation,3
@@ -4216,18 +4216,18 @@ WHO,News agencies / wire services,HOW,Rating,2
 WHO,Military censors,WHY,Coherence,2
 GROUP,Media regulation,WHO,Debate moderators,2
 GROUP,Media regulation,WHO,Police / intelligence services,2
-GROUP,Media regulation,HOW,Deplatforming,2
 GROUP,Media regulation,HOW,Metamoderation,2
+GROUP,Media regulation,HOW,Deplatforming,2
 WHO,Pre-platform moderators,HOW,Coersive,2
 WHO,Censorship boards or agencies,HOW,Prompting,2
 WHO,Pre-platform moderators,WHY,Religious moral authority,2
 WHO,Police / intelligence services,HOW,Coherence,2
 WHO,Private firms,WHAT,Algorithmic sorting,2
 WHO,Government agencies,WHAT,Algorithmic sorting,2
-HOW,Disclosure,WHAT,Algorithmic sorting,2
 HOW,Restricting access,WHAT,Algorithmic sorting,2
-WHAT,Algorithmic sorting,WHY,Misinformation or disinformation as harm,2
+HOW,Disclosure,WHAT,Algorithmic sorting,2
 WHAT,Algorithmic sorting,WHY,"Privacy, reputation & dignity",2
+WHAT,Algorithmic sorting,WHY,Misinformation or disinformation as harm,2
 WHO,Mediators,HOW,Confiscation,2
 WHO,Mediators,WHY,Religious moral authority,2
 WHO,Debate moderators,HOW,Economic,2
@@ -4235,8 +4235,8 @@ WHO,Debate moderators,WHAT,Other,2
 WHO,Debate moderators,WHY,Consumer protection / fair competition,2
 WHAT,Media regulation,WHY,Alignment with human values,2
 GROUP,Censorship,WHO,ISPs,2
-WHO,ISPs,HOW,Filtering,2
 WHO,ISPs,HOW,Restricting access,2
+WHO,ISPs,HOW,Filtering,2
 WHO,ISPs,HOW,Profiling,2
 WHO,ISPs,WHAT,Censorship,2
 WHO,Religious authorities,HOW,Inclusion,2
@@ -4252,14 +4252,14 @@ WHO,Courts and prosecutors,HOW,Other,2
 WHO,Police / intelligence services,HOW,Other,2
 HOW,Other,WHY,Ideological consolidation,2
 WHO,Translators / localisers,HOW,Metamoderation,2
+WHO,Online mobs / pile-ons,WHY,Conflict transformation,2
 WHO,Media owners,WHY,Conflict transformation,2
 WHO,Religious authorities,WHY,Conflict transformation,2
-WHO,Online mobs / pile-ons,WHY,Conflict transformation,2
 WHO,Translators / localisers,HOW,Correcting,2
 WHO,Distributors & booksellers,HOW,Redirection,2
 HOW,Correcting,WHY,State secrets,2
-WHO,Self-censorship (analytical),HOW,Intermediate,2
 WHO,Translators / localisers,HOW,Marginalisation,2
+WHO,Self-censorship (analytical),HOW,Intermediate,2
 WHO,Distributors & booksellers,HOW,Coherence,2
 WHO,Translators / localisers,WHAT,Content moderation,2
 WHO,Translators / localisers,WHY,Democratic self-defence,2
@@ -4272,10 +4272,10 @@ WHO,Payment processors / financial infrastructure,HOW,Intelligibility,2
 WHO,Payment processors / financial infrastructure,WHY,Genocide prevention / dangerous speech,2
 WHO,Pre-platform moderators,WHY,State secrets,2
 WHO,Religious organisations,WHY,State secrets,2
-WHO,Censorship boards or agencies,WHY,Harm reduction / public health,2
 WHO,Advertisers,WHY,Wartime necessity,2
-WHO,Military censors,WHY,Fair trial / administration of justice,2
+WHO,Censorship boards or agencies,WHY,Harm reduction / public health,2
 WHO,Distributors & booksellers,WHY,Harm reduction / public health,2
+WHO,Military censors,WHY,Fair trial / administration of justice,2
 GROUP,Content moderation,WHO,Religious authorities,2
 WHO,Fact-checkers and verification units,HOW,Inclusion,2
 WHO,Press councils & ombudsmen,WHY,Coherence,2
@@ -4285,19 +4285,19 @@ WHO,App stores,WHY,Harm reduction / public health,2
 HOW,Modification,WHY,Genocide prevention / dangerous speech,2
 WHO,Payment processors / financial infrastructure,HOW,Coersive,2
 WHO,Payment processors / financial infrastructure,HOW,Modification,2
-WHO,Payment processors / financial infrastructure,WHAT,Other,2
-WHO,Courts and prosecutors,WHAT,Algorithmic sorting,2
 WHO,Content moderators / BPO workforces,WHAT,Algorithmic sorting,2
 WHO,Legislators,WHAT,Algorithmic sorting,2
+WHO,Payment processors / financial infrastructure,WHAT,Other,2
+WHO,Courts and prosecutors,WHAT,Algorithmic sorting,2
 WHO,Payment processors / financial infrastructure,WHY,Obscenity and decency,2
-HOW,Coersive,WHAT,Algorithmic sorting,2
 HOW,Removal from circulation,WHAT,Algorithmic sorting,2
+HOW,Coersive,WHAT,Algorithmic sorting,2
 WHAT,Algorithmic sorting,WHY,Obscenity and decency,2
 GROUP,Media moderation,WHO,"Public-private partnerships (""free-speech triangle"")",2
 GROUP,Media moderation,WHY,Alignment with human values,2
+WHO,Platform oversight bodies,WHY,Fair trial / administration of justice,2
 WHO,Self-censorship (analytical),WHY,Fair trial / administration of justice,2
 WHO,Mediators,WHY,Ideological consolidation,2
-WHO,Platform oversight bodies,WHY,Fair trial / administration of justice,2
 WHO,Pre-platform moderators,WHY,Genocide prevention / dangerous speech,2
 WHO,Cloud / infrastructure providers,WHAT,Media regulation,2
 GROUP,AI alignment,WHO,Platform oversight bodies,2
@@ -4308,16 +4308,16 @@ WHO,Editors,HOW,Debate management,2
 HOW,Debate management,WHAT,Censorship,2
 GROUP,Debate management,WHO,Translators / localisers,2
 GROUP,Debate management,HOW,Licensing,2
-WHO,Media owners,HOW,Coherence,2
-WHO,Media owners,HOW,Inclusion,2
 WHO,Translators / localisers,HOW,Balancing,2
 WHO,Translators / localisers,HOW,Inclusion,2
+WHO,Media owners,HOW,Coherence,2
+WHO,Media owners,HOW,Inclusion,2
 WHO,Media owners,WHAT,Other,2
-WHO,Broadcasting regulators,WHY,Conflict transformation,2
 WHO,Translators / localisers,WHY,Fair trial / administration of justice,2
+WHO,Broadcasting regulators,WHY,Conflict transformation,2
 HOW,Coherence,WHY,Fair trial / administration of justice,2
-HOW,Fairness,WHY,Fair trial / administration of justice,2
 HOW,Inclusion,WHY,Fair trial / administration of justice,2
+HOW,Fairness,WHY,Fair trial / administration of justice,2
 WHO,Religious organisations,HOW,Inclusion,2
 WHO,RLHF annotators,HOW,Obfuscation,2
 WHO,Pre-platform moderators,WHY,Alignment with human values,2
@@ -4325,24 +4325,24 @@ GROUP,Censorship,HOW,Bridging,2
 GROUP,Content moderation,HOW,Restriction access,2
 WHO,Users,HOW,Restriction access,2
 HOW,Restriction access,WHAT,Content moderation,2
-HOW,Restriction access,WHY,"Privacy, reputation & dignity",2
 HOW,Restriction access,WHY,Brand safety,2
 HOW,Restriction access,WHY,Professional / industry self-governance,2
+HOW,Restriction access,WHY,"Privacy, reputation & dignity",2
 WHO,Press councils & ombudsmen,WHAT,Media regulation,2
 WHO,Press councils & ombudsmen,WHY,Wartime necessity,2
 WHO,Press councils & ombudsmen,WHY,Ideological consolidation,2
-WHO,Media owners,HOW,Prompting,2
 WHO,Advertisers,HOW,Coherence,2
+WHO,Media owners,HOW,Prompting,2
 WHO,Online mobs / pile-ons,HOW,Balancing,2
 WHO,Private firms,HOW,Scheduling,2
 WHO,Debate moderators,HOW,Obfuscation,2
 HOW,Mediators,WHAT,Content moderation,2
 HOW,Mediators,WHY,Coherence,2
 HOW,Mediators,WHY,Political control,2
-HOW,Mediators,WHY,Compliance,2
-HOW,Mediators,WHY,State security,2
 HOW,Mediators,WHY,Economic pressure,2
 HOW,Mediators,WHY,Brand safety,2
+HOW,Mediators,WHY,State security,2
+HOW,Mediators,WHY,Compliance,2
 WHO,Translators / localisers,WHAT,Media regulation,2
 GROUP,Debate management,WHY,Economic pressure,2
 WHO,Private firms,WHY,State secrets,2
@@ -4352,12 +4352,12 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Fairness,2
 HOW,Bridging,WHY,Alignment with human values,2
 WHO,Press councils & ombudsmen,HOW,Scheduling,2
 WHO,App stores,WHY,Democratic self-defence,2
-WHO,Public-health bodies (NGOs / WHO),HOW,Removal from circulation,2
 WHO,Private firms,HOW,Intelligibility,2
-WHO,Payment processors / financial infrastructure,WHAT,Debate management,2
+WHO,Public-health bodies (NGOs / WHO),HOW,Removal from circulation,2
 WHO,Payment processors / financial infrastructure,WHAT,Media moderation,2
-WHO,Payment processors / financial infrastructure,WHY,Harm reduction / public health,2
+WHO,Payment processors / financial infrastructure,WHAT,Debate management,2
 WHO,Public-health bodies (NGOs / WHO),WHY,News values / editorial judgment,2
+WHO,Payment processors / financial infrastructure,WHY,Harm reduction / public health,2
 HOW,Intelligibility,WHY,Fair trial / administration of justice,2
 HOW,Intelligibility,WHY,Ideological consolidation,2
 HOW,Confiscation,WHY,Genocide prevention / dangerous speech,2
@@ -4366,12 +4366,12 @@ WHO,App stores,HOW,Licensing,2
 WHO,Online mobs / pile-ons,HOW,Intermediate,2
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Confiscation,2
 WHO,Military censors,HOW,Prompting,2
-WHO,Civic advocacy & moral-pressure groups,WHY,Coersive,2
 WHO,Legislators,WHY,Coersive,2
+WHO,Civic advocacy & moral-pressure groups,WHY,Coersive,2
 WHAT,Other,WHY,Coersive,2
 WHO,Regulators,HOW,Other,2
-WHO,Editors,WHY,Genocide prevention / dangerous speech,2
 WHO,Online mobs / pile-ons,WHY,Genocide prevention / dangerous speech,2
+WHO,Editors,WHY,Genocide prevention / dangerous speech,2
 WHO,Distributors & booksellers,WHY,Genocide prevention / dangerous speech,2
 WHO,Online mobs / pile-ons,WHY,Fairness,2
 WHO,Press councils & ombudsmen,HOW,Redirection,2
@@ -4406,44 +4406,44 @@ GROUP,Media regulation,WHY,Harm reduction / public health,2
 GROUP,Media regulation,WHY,Consumer protection / fair competition,2
 GROUP,Media regulation,WHY,State secrets,2
 WHO,Pre-platform moderators,HOW,Fairness,2
-GROUP,Media regulation,WHO,Journalists,2
-GROUP,Media regulation,WHO,Civic advocacy & moral-pressure groups,2
 GROUP,Media regulation,WHO,Political groups,2
+GROUP,Media regulation,WHO,Civic advocacy & moral-pressure groups,2
+GROUP,Media regulation,WHO,Journalists,2
 GROUP,Media regulation,WHAT,Other,2
-WHO,Religious organisations,HOW,Intelligibility,2
-WHO,Religious organisations,HOW,Coherence,2
 WHO,Legislators,HOW,Coherence,2
-HOW,Balancing,WHY,Clear and present danger,2
-HOW,Bridging,WHY,Genocide prevention / dangerous speech,2
+WHO,Religious organisations,HOW,Coherence,2
+WHO,Religious organisations,HOW,Intelligibility,2
 HOW,Intermediate,WHY,Genocide prevention / dangerous speech,2
+HOW,Bridging,WHY,Genocide prevention / dangerous speech,2
+HOW,Balancing,WHY,Clear and present danger,2
 HOW,Scheduling,WHY,Harm reduction / public health,2
 HOW,Intelligibility,WHY,Religious moral authority,2
 HOW,Restriction access,WHAT,Debate management,2
-HOW,Blocking,WHY,Inclusion,2
 HOW,Restriction access,WHY,Social cohesion,2
-WHO,Cloud / infrastructure providers,HOW,Agenda setting,2
+HOW,Blocking,WHY,Inclusion,2
 WHO,App stores,HOW,Scheduling,2
-WHO,App stores,WHY,Consumer protection / fair competition,2
+WHO,Cloud / infrastructure providers,HOW,Agenda setting,2
 WHO,App stores,WHY,Clear and present danger,2
+WHO,App stores,WHY,Consumer protection / fair competition,2
 WHO,Users,WHY,Freedom of speech or information,2
 WHO,RLHF annotators,WHAT,Other,2
 WHO,AI labs as moderators,HOW,Removal from circulation,2
-GROUP,Media regulation,HOW,Disclosure,2
 GROUP,Media regulation,HOW,Restricting access,2
+GROUP,Media regulation,HOW,Disclosure,2
 GROUP,Media regulation,HOW,Confiscation,2
 WHO,Content moderators / BPO workforces,WHY,Public interest,2
 WHO,Algorithmic moderation systems,WHY,Public interest,2
 WHO,Platform oversight bodies,WHY,Public interest,2
-HOW,Disclosure,WHY,Public interest,2
-HOW,Marginalisation,WHY,Public interest,2
-HOW,Blocking,WHY,Public interest,2
-HOW,Filtering,WHY,Public interest,2
-HOW,Restricting access,WHY,Public interest,2
-HOW,Review,WHY,Public interest,2
-HOW,Economic,WHY,Public interest,2
-HOW,Monitoring,WHY,Public interest,2
-HOW,Labeling,WHY,Public interest,2
 HOW,Enframing,WHY,Public interest,2
+HOW,Review,WHY,Public interest,2
+HOW,Restricting access,WHY,Public interest,2
+HOW,Filtering,WHY,Public interest,2
+HOW,Monitoring,WHY,Public interest,2
+HOW,Economic,WHY,Public interest,2
+HOW,Blocking,WHY,Public interest,2
+HOW,Marginalisation,WHY,Public interest,2
+HOW,Labeling,WHY,Public interest,2
+HOW,Disclosure,WHY,Public interest,2
 HOW,Profiling,WHY,Public interest,2
 GROUP,Media regulation,HOW,Interiorisation,2
 WHO,RLHF annotators,HOW,Redirection,2
@@ -4452,18 +4452,18 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Conflict transf
 WHO,Public-health bodies (NGOs / WHO),WHY,Alignment with human values,2
 GROUP,Media moderation,WHY,Other,2
 GROUP,Media moderation,WHY,Fairness,2
-HOW,Fairness,WHY,Other,2
 HOW,Agenda setting,WHY,Fairness,2
+HOW,Fairness,WHY,Other,2
 WHO,Distributors & booksellers,HOW,Fairness,2
 HOW,Fairness,WHY,Religious moral authority,2
 WHO,Regulators,WHY,Wartime necessity,2
-WHO,Online mobs / pile-ons,HOW,Inclusion,2
 WHO,Online mobs / pile-ons,HOW,Redirection,2
+WHO,Online mobs / pile-ons,HOW,Inclusion,2
 GROUP,Content moderation,WHY,Censorship,2
+WHO,Legislators,WHY,Censorship,2
+WHO,Other,WHY,Censorship,2
 WHO,Platforms,WHY,Censorship,2
 WHO,Regulators,WHY,Censorship,2
-WHO,Other,WHY,Censorship,2
-WHO,Legislators,WHY,Censorship,2
 HOW,Filtering,WHY,Censorship,2
 HOW,Removal,WHY,Censorship,2
 HOW,Metamoderation,WHY,Censorship,2
@@ -4479,17 +4479,17 @@ HOW,Balancing,WHY,Inclusion,2
 WHO,Debate moderators,WHY,Fair trial / administration of justice,2
 WHO,AI labs as moderators,WHY,Economic pressure,2
 GROUP,Content moderation,HOW,Transparency,2
-WHO,Platforms,HOW,Transparency,2
 WHO,Legislators,HOW,Transparency,2
+WHO,Platforms,HOW,Transparency,2
 HOW,Transparency,WHAT,Content moderation,2
 HOW,Transparency,WHY,Misinformation or disinformation as harm,2
-HOW,Intelligibility,WHY,Fairness,2
 HOW,Inclusion,WHY,Fairness,2
+HOW,Intelligibility,WHY,Fairness,2
 WHO,Regulators,WHY,Public interest,2
 GROUP,Media regulation,HOW,Balancing,2
-HOW,Intermediate,WHY,Inclusion,2
-HOW,Prompting,WHY,Inclusion,2
 HOW,Coherence,WHY,Inclusion,2
+HOW,Prompting,WHY,Inclusion,2
+HOW,Intermediate,WHY,Inclusion,2
 WHO,Public-health bodies (NGOs / WHO),HOW,Fairness,2
 GROUP,Debate management,HOW,Removal from circulation,2
 GROUP,Media moderation,WHO,Broadcasting regulators,2
@@ -4503,26 +4503,26 @@ WHO,Religious organisations,HOW,Redirection,2
 GROUP,Media moderation,WHO,Mediators,2
 WHO,Debate moderators,HOW,Interiorisation,2
 WHO,Debate moderators,HOW,Bridging,2
-WHO,Public-health bodies (NGOs / WHO),HOW,Rating,2
+WHO,AI labs as moderators,HOW,Coherence,2
 WHO,AI labs as moderators,HOW,Correcting,2
 WHO,AI labs as moderators,HOW,Disclosure,2
-WHO,AI labs as moderators,HOW,Coherence,2
-WHO,Public-health bodies (NGOs / WHO),WHY,Freedom of speech or information,2
-WHO,AI labs as moderators,WHY,Obscenity and decency,2
+WHO,Public-health bodies (NGOs / WHO),HOW,Rating,2
 WHO,AI labs as moderators,WHY,Other,2
-HOW,Disclosure,WHY,Freedom of speech or information,2
-HOW,Deplatforming,WHY,Freedom of speech or information,2
-HOW,Metamoderation,WHY,Freedom of speech or information,2
+WHO,AI labs as moderators,WHY,Obscenity and decency,2
+WHO,Public-health bodies (NGOs / WHO),WHY,Freedom of speech or information,2
 HOW,Economic,WHY,Freedom of speech or information,2
+HOW,Metamoderation,WHY,Freedom of speech or information,2
+HOW,Deplatforming,WHY,Freedom of speech or information,2
+HOW,Disclosure,WHY,Freedom of speech or information,2
 HOW,Enframing,WHY,Freedom of speech or information,2
 WHAT,Censorship,WHY,Freedom of speech or information,2
 GROUP,Media moderation,WHO,Private firms,2
 WHO,Algorithmic moderation systems,WHY,State secrets,2
 GROUP,Media moderation,WHY,Democratic self-defence,2
 WHO,Courts and prosecutors,WHY,Moderating extremism,2
-HOW,Blocking,WHY,Moderating extremism,2
-HOW,Review,WHY,Moderating extremism,2
 HOW,Correcting,WHY,Moderating extremism,2
+HOW,Review,WHY,Moderating extremism,2
+HOW,Blocking,WHY,Moderating extremism,2
 WHAT,Censorship,WHY,Moderating extremism,2
 GROUP,Content moderation,HOW,Interoperability,2
 WHO,Legislators,HOW,Interoperability,2
@@ -4541,8 +4541,8 @@ WHO,App stores,WHAT,Media regulation,2
 GROUP,AI alignment,HOW,Redirection,2
 HOW,Redirection,WHAT,AI alignment,2
 WHO,Courts and prosecutors,WHY,Freedom of expression,2
-HOW,Deplatforming,WHY,Freedom of expression,2
 HOW,Removal,WHY,Freedom of expression,2
+HOW,Deplatforming,WHY,Freedom of expression,2
 WHO,RLHF annotators,WHAT,Censorship,2
 WHO,RLHF annotators,WHY,Ideological consolidation,2
 WHO,AI labs as moderators,HOW,Interiorisation,2
@@ -4555,29 +4555,29 @@ HOW,Rating,WHY,Coersive,1
 GROUP,Content moderation,WHAT,Professional / industry self-governance,1
 WHO,Platforms,WHAT,Professional / industry self-governance,1
 HOW,Enframing,WHAT,Professional / industry self-governance,1
-HOW,Removal,WHAT,Professional / industry self-governance,1
 HOW,Filtering,WHAT,Professional / industry self-governance,1
+HOW,Removal,WHAT,Professional / industry self-governance,1
 WHAT,Professional / industry self-governance,WHY,Brand safety,1
-WHAT,Professional / industry self-governance,WHY,Misinformation or disinformation as harm,1
 WHAT,Professional / industry self-governance,WHY,Protection of children,1
 WHAT,Professional / industry self-governance,WHY,Compliance,1
+WHAT,Professional / industry self-governance,WHY,Misinformation or disinformation as harm,1
 GROUP,Media regulation,HOW,Intermediate,1
 GROUP,Censorship,WHAT,Algorithmic sorting,1
 WHO,Private firms,HOW,Coherence,1
 WHO,Police / intelligence services,WHAT,Algorithmic sorting,1
+HOW,Coherence,WHAT,Algorithmic sorting,1
 HOW,Redirection,WHAT,Algorithmic sorting,1
 HOW,Prompting,WHAT,Algorithmic sorting,1
-HOW,Coherence,WHAT,Algorithmic sorting,1
 WHAT,Algorithmic sorting,WHY,State security,1
 WHO,Debate moderators,WHY,Religious moral authority,1
 WHO,Debate moderators,WHY,Alignment with human values,1
 WHO,Censorship boards or agencies,WHY,Alignment with human values,1
-WHO,ISPs,HOW,Blocking,1
 WHO,ISPs,HOW,Redirection,1
-WHO,ISPs,WHY,Obscenity and decency,1
-WHO,ISPs,WHY,State security,1
-WHO,ISPs,WHY,Ideological consolidation,1
+WHO,ISPs,HOW,Blocking,1
 WHO,ISPs,WHY,Religious moral authority,1
+WHO,ISPs,WHY,Obscenity and decency,1
+WHO,ISPs,WHY,Ideological consolidation,1
+WHO,ISPs,WHY,State security,1
 WHO,Religious authorities,WHY,Alignment with human values,1
 HOW,Scheduling,WHY,Alignment with human values,1
 WHO,Cloud / infrastructure providers,WHY,Fairness,1
@@ -4592,180 +4592,180 @@ WHO,Religious organisations,HOW,Other,1
 HOW,Other,WHAT,Media regulation,1
 HOW,Other,WHY,Religious moral authority,1
 WHO,Censorship boards or agencies,HOW,Coherence,1
-WHO,Religious authorities,HOW,Coherence,1
 WHO,Distributors & booksellers,HOW,Intermediate,1
+WHO,Religious authorities,HOW,Coherence,1
 WHO,Distributors & booksellers,WHY,Conflict transformation,1
-HOW,Balancing,WHY,Coersive,1
 HOW,Redirection,WHY,Coersive,1
-HOW,Prompting,WHY,Coersive,1
+HOW,Balancing,WHY,Coersive,1
 HOW,Obfuscation,WHY,Coersive,1
+HOW,Prompting,WHY,Coersive,1
 GROUP,Content moderation,HOW,Documenting,1
-WHO,Users,HOW,Documenting,1
 WHO,Platforms,HOW,Documenting,1
+WHO,Users,HOW,Documenting,1
 WHO,Algorithmic moderation systems,HOW,Documenting,1
 HOW,Documenting,WHAT,Content moderation,1
 HOW,Documenting,WHY,Social cohesion,1
-WHO,Payment processors / financial infrastructure,HOW,Metamoderation,1
 WHO,App stores,HOW,Intelligibility,1
+WHO,Payment processors / financial infrastructure,HOW,Metamoderation,1
 WHO,App stores,WHY,Genocide prevention / dangerous speech,1
+WHO,Pre-platform moderators,WHY,Clear and present danger,1
 WHO,Pre-platform moderators,WHY,Wartime necessity,1
 WHO,Pre-platform moderators,WHY,Democratic self-defence,1
-WHO,Pre-platform moderators,WHY,Clear and present danger,1
 WHO,Advertisers,WHY,Fair trial / administration of justice,1
 WHO,Military censors,WHY,Harm reduction / public health,1
 WHO,App stores,HOW,Redirection,1
 WHO,Cloud / infrastructure providers,WHY,Fair trial / administration of justice,1
 WHO,Payment processors / financial infrastructure,HOW,Prompting,1
 WHO,Legislators,HOW,Other,1
-HOW,Other,WHAT,Media moderation,1
 HOW,Other,WHAT,Debate management,1
+HOW,Other,WHAT,Media moderation,1
 WHO,AI labs as moderators,HOW,Agenda setting,1
-WHO,Payment processors / financial infrastructure,WHAT,Algorithmic sorting,1
-WHO,Journalists,WHAT,Algorithmic sorting,1
-WHO,Civic advocacy & moral-pressure groups,WHAT,Algorithmic sorting,1
-WHO,Political groups,WHAT,Algorithmic sorting,1
 WHO,App stores,WHAT,Algorithmic sorting,1
+WHO,Political groups,WHAT,Algorithmic sorting,1
+WHO,Civic advocacy & moral-pressure groups,WHAT,Algorithmic sorting,1
+WHO,Journalists,WHAT,Algorithmic sorting,1
+WHO,Payment processors / financial infrastructure,WHAT,Algorithmic sorting,1
 HOW,Interiorisation,WHAT,Algorithmic sorting,1
 WHAT,Algorithmic sorting,WHY,Professional / industry self-governance,1
 WHAT,Algorithmic sorting,WHY,Economic pressure,1
 WHAT,Algorithmic sorting,WHY,Ideological consolidation,1
 WHO,Mediators,HOW,Obfuscation,1
 WHO,Mediators,WHY,Other,1
-WHO,Cloud / infrastructure providers,HOW,Intelligibility,1
 WHO,Cloud / infrastructure providers,HOW,Obfuscation,1
+WHO,Cloud / infrastructure providers,HOW,Intelligibility,1
 WHO,Military censors,WHY,Other,1
 GROUP,Debate management,WHO,Media owners,1
 GROUP,Debate management,WHO,Broadcasting regulators,1
-WHO,Broadcasting regulators,HOW,Intermediate,1
+WHO,Translators / localisers,HOW,Fairness,1
 WHO,Broadcasting regulators,HOW,Coherence,1
 WHO,Broadcasting regulators,HOW,Inclusion,1
+WHO,Broadcasting regulators,HOW,Intermediate,1
 WHO,Mediators,HOW,Licensing,1
-WHO,Translators / localisers,HOW,Fairness,1
 WHO,Translators / localisers,WHY,Coherence,1
 GROUP,Censorship,WHY,Obscenity and decença,1
 WHO,Censorship boards or agencies,WHY,Obscenity and decença,1
-WHO,Religious organisations,WHY,Obscenity and decença,1
 WHO,Courts and prosecutors,WHY,Obscenity and decença,1
 WHO,Civic advocacy & moral-pressure groups,WHY,Obscenity and decença,1
+WHO,Religious organisations,WHY,Obscenity and decença,1
+HOW,Rating,WHY,Obscenity and decença,1
 HOW,Modification,WHY,Obscenity and decença,1
 HOW,Coersive,WHY,Obscenity and decença,1
-HOW,Rating,WHY,Obscenity and decença,1
 WHAT,Censorship,WHY,Obscenity and decença,1
 GROUP,Debate management,WHY,Alignment with human values,1
 GROUP,Content moderation,WHY,Community norms and identity,1
-WHO,Users,WHY,Community norms and identity,1
 WHO,Platforms,WHY,Community norms and identity,1
 WHO,Algorithmic moderation systems,WHY,Community norms and identity,1
-HOW,Marginalisation,WHY,Community norms and identity,1
-HOW,Blocking,WHY,Community norms and identity,1
-HOW,Filtering,WHY,Community norms and identity,1
-HOW,Removal,WHY,Community norms and identity,1
-HOW,Intelligibility,WHY,Community norms and identity,1
+WHO,Users,WHY,Community norms and identity,1
+HOW,Enframing,WHY,Community norms and identity,1
 HOW,Prompting,WHY,Community norms and identity,1
 HOW,Review,WHY,Community norms and identity,1
-HOW,Scheduling,WHY,Community norms and identity,1
+HOW,Filtering,WHY,Community norms and identity,1
+HOW,Removal,WHY,Community norms and identity,1
 HOW,Monitoring,WHY,Community norms and identity,1
-HOW,Enframing,WHY,Community norms and identity,1
+HOW,Intelligibility,WHY,Community norms and identity,1
+HOW,Blocking,WHY,Community norms and identity,1
+HOW,Marginalisation,WHY,Community norms and identity,1
+HOW,Scheduling,WHY,Community norms and identity,1
 HOW,Profiling,WHY,Community norms and identity,1
 WHAT,Content moderation,WHY,Community norms and identity,1
 GROUP,Censorship,HOW,Flooding,1
-WHO,Platforms,HOW,Flooding,1
+WHO,Private firms,HOW,Flooding,1
+WHO,Government agencies,HOW,Flooding,1
 WHO,News agencies / wire services,HOW,Redirection,1
 WHO,News agencies / wire services,HOW,Flooding,1
-WHO,Editors,HOW,Flooding,1
-WHO,Other,HOW,Flooding,1
-WHO,Private firms,HOW,Flooding,1
 WHO,Political groups,HOW,Flooding,1
+WHO,Platforms,HOW,Flooding,1
+WHO,Other,HOW,Flooding,1
+WHO,Editors,HOW,Flooding,1
 WHO,Users,HOW,Flooding,1
-WHO,Government agencies,HOW,Flooding,1
 WHO,News agencies / wire services,WHAT,Other,1
 HOW,Flooding,WHAT,Other,1
 HOW,Flooding,WHAT,Censorship,1
+HOW,Flooding,WHY,Political control,1
+HOW,Flooding,WHY,Ideological consolidation,1
 HOW,Flooding,WHY,Compliance,1
 HOW,Flooding,WHY,State security,1
-HOW,Flooding,WHY,Ideological consolidation,1
-HOW,Flooding,WHY,Political control,1
 WHO,Media owners,HOW,Other,1
 HOW,Bridging,WHY,Obscenity and decency,1
 GROUP,Censorship,HOW,Mediators,1
-WHO,Users,HOW,Mediators,1
 WHO,Government agencies,HOW,Mediators,1
+WHO,Users,HOW,Mediators,1
 WHO,Mediators,HOW,Mediators,1
-HOW,Mediators,WHAT,Other,1
 HOW,Mediators,WHAT,Debate management,1
+HOW,Mediators,WHAT,Other,1
 HOW,Mediators,WHAT,Censorship,1
-HOW,Mediators,WHY,Misinformation or disinformation as harm,1
-HOW,Mediators,WHY,Conflict transformation,1
-HOW,Mediators,WHY,Harm principles and hate speech regulation,1
 HOW,Mediators,WHY,Professional / industry self-governance,1
-HOW,Mediators,WHY,News values / editorial judgment,1
+HOW,Mediators,WHY,Harm principles and hate speech regulation,1
 HOW,Mediators,WHY,"Privacy, reputation & dignity",1
+HOW,Mediators,WHY,Misinformation or disinformation as harm,1
+HOW,Mediators,WHY,News values / editorial judgment,1
+HOW,Mediators,WHY,Conflict transformation,1
 HOW,Mediators,WHY,Social cohesion,1
 WHO,Advertisers,WHY,State secrets,1
 GROUP,Debate management,WHO,Self-censorship (analytical),1
 WHO,Self-censorship (analytical),HOW,Intelligibility,1
-WHO,Cloud / infrastructure providers,HOW,Intermediate,1
 WHO,Payment processors / financial infrastructure,HOW,Scheduling,1
+WHO,Cloud / infrastructure providers,HOW,Intermediate,1
 HOW,Redirection,WHAT,Media regulation,1
-WHO,ISPs,HOW,Deplatforming,1
 WHO,ISPs,HOW,Monitoring,1
+WHO,ISPs,HOW,Deplatforming,1
 WHO,ISPs,WHY,Political control,1
 WHO,App stores,WHY,Alignment with human values,1
+WHO,Public-health bodies (NGOs / WHO),HOW,Confiscation,1
+WHO,Payment processors / financial infrastructure,HOW,Agenda setting,1
 WHO,Payment processors / financial infrastructure,HOW,Confiscation,1
 WHO,Payment processors / financial infrastructure,HOW,Licensing,1
-WHO,Payment processors / financial infrastructure,HOW,Agenda setting,1
-WHO,Public-health bodies (NGOs / WHO),HOW,Confiscation,1
-WHO,Payment processors / financial infrastructure,WHAT,Media regulation,1
 WHO,Public-health bodies (NGOs / WHO),WHAT,Media regulation,1
+WHO,Payment processors / financial infrastructure,WHAT,Media regulation,1
 WHO,Media owners,WHY,Genocide prevention / dangerous speech,1
-WHO,Payment processors / financial infrastructure,WHY,Democratic self-defence,1
-WHO,Payment processors / financial infrastructure,WHY,Fair trial / administration of justice,1
-WHO,Payment processors / financial infrastructure,WHY,News values / editorial judgment,1
-WHO,Payment processors / financial infrastructure,WHY,Clear and present danger,1
 WHO,Broadcasting regulators,WHY,Genocide prevention / dangerous speech,1
-WHO,Public-health bodies (NGOs / WHO),WHY,Genocide prevention / dangerous speech,1
 WHO,Public-health bodies (NGOs / WHO),WHY,Fair trial / administration of justice,1
 WHO,Public-health bodies (NGOs / WHO),WHY,Clear and present danger,1
+WHO,Public-health bodies (NGOs / WHO),WHY,Genocide prevention / dangerous speech,1
+WHO,Payment processors / financial infrastructure,WHY,Fair trial / administration of justice,1
+WHO,Payment processors / financial infrastructure,WHY,Clear and present danger,1
+WHO,Payment processors / financial infrastructure,WHY,News values / editorial judgment,1
+WHO,Payment processors / financial infrastructure,WHY,Democratic self-defence,1
 HOW,Agenda setting,WHY,Genocide prevention / dangerous speech,1
 GROUP,Censorship,HOW,Restrictiong access,1
 WHO,Other,HOW,Restrictiong access,1
 HOW,Restrictiong access,WHAT,Censorship,1
-HOW,Restrictiong access,WHY,Economic pressure,1
 HOW,Restrictiong access,WHY,Political control,1
+HOW,Restrictiong access,WHY,Economic pressure,1
 WHO,Military censors,WHY,Democratic self-defence,1
 WHO,Online mobs / pile-ons,WHY,Alignment with human values,1
 WHO,Distributors & booksellers,WHY,Alignment with human values,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Fairness,1
-WHO,Regulators,WHY,Fairness,1
-WHO,Other,WHY,Fairness,1
 WHO,"Schools, curricula, librarians, academia",WHY,Fairness,1
 WHO,Legislators,WHY,Fairness,1
-HOW,Disclosure,WHY,Fairness,1
+WHO,Other,WHY,Fairness,1
+WHO,Regulators,WHY,Fairness,1
 HOW,Self-censorship,WHY,Fairness,1
+HOW,Disclosure,WHY,Fairness,1
 WHAT,Other,WHY,Fairness,1
 GROUP,Censorship,WHO,Publishers,1
-WHO,Publishers,HOW,Deplatforming,1
-WHO,Publishers,HOW,Labeling,1
-WHO,Publishers,HOW,Filtering,1
-WHO,Publishers,HOW,Self-censorship,1
-WHO,Publishers,HOW,Restricting access,1
-WHO,Publishers,HOW,Review,1
 WHO,Publishers,HOW,Removal from circulation,1
-WHO,Publishers,HOW,Confiscation,1
-WHO,Publishers,HOW,Licensing,1
-WHO,Publishers,HOW,Monitoring,1
-WHO,Publishers,HOW,Modification,1
 WHO,Publishers,HOW,Obfuscation,1
+WHO,Publishers,HOW,Self-censorship,1
+WHO,Publishers,HOW,Review,1
+WHO,Publishers,HOW,Restricting access,1
+WHO,Publishers,HOW,Filtering,1
+WHO,Publishers,HOW,Monitoring,1
 WHO,Publishers,HOW,Agenda setting,1
+WHO,Publishers,HOW,Deplatforming,1
+WHO,Publishers,HOW,Licensing,1
+WHO,Publishers,HOW,Labeling,1
+WHO,Publishers,HOW,Modification,1
+WHO,Publishers,HOW,Confiscation,1
 WHO,Publishers,WHAT,Censorship,1
-WHO,Publishers,WHY,Obscenity and decency,1
-WHO,Publishers,WHY,Religious moral authority,1
-WHO,Publishers,WHY,State security,1
-WHO,Publishers,WHY,Economic pressure,1
 WHO,Publishers,WHY,Fair trial / administration of justice,1
+WHO,Publishers,WHY,Religious moral authority,1
 WHO,Publishers,WHY,Political control,1
-WHO,Publishers,WHY,Social cohesion,1
+WHO,Publishers,WHY,Obscenity and decency,1
+WHO,Publishers,WHY,Economic pressure,1
 WHO,Publishers,WHY,Ideological consolidation,1
+WHO,Publishers,WHY,State security,1
+WHO,Publishers,WHY,Social cohesion,1
 GROUP,AI alignment,WHO,Courts and prosecutors,1
 WHO,Courts and prosecutors,WHAT,AI alignment,1
 WHO,Religious organisations,WHY,Fair trial / administration of justice,1
@@ -4774,9 +4774,9 @@ GROUP,Media regulation,HOW,Marginalisation,1
 WHO,Religious authorities,HOW,Fairness,1
 GROUP,AI alignment,WHY,Wartime necessity,1
 WHAT,AI alignment,WHY,Wartime necessity,1
-GROUP,Media moderation,WHO,Fact-checkers and verification units,1
-GROUP,Media moderation,WHO,Payment processors / financial infrastructure,1
 GROUP,Media moderation,WHO,App stores,1
+GROUP,Media moderation,WHO,Payment processors / financial infrastructure,1
+GROUP,Media moderation,WHO,Fact-checkers and verification units,1
 GROUP,Media moderation,WHY,Harm reduction / public health,1
 HOW,Bridging,WHY,Economic pressure,1
 WHO,App stores,HOW,Intermediate,1
@@ -4786,38 +4786,38 @@ WHO,App stores,WHAT,Debate management,1
 GROUP,AI alignment,HOW,Inclusion,1
 GROUP,AI alignment,WHY,Other,1
 GROUP,AI alignment,WHY,Conflict transformation,1
-WHO,RLHF annotators,HOW,Intelligibility,1
 WHO,RLHF annotators,HOW,Inclusion,1
-WHO,RLHF annotators,WHY,Democratic self-defence,1
+WHO,RLHF annotators,HOW,Intelligibility,1
 WHO,RLHF annotators,WHY,Other,1
+WHO,RLHF annotators,WHY,Democratic self-defence,1
 WHO,RLHF annotators,WHY,Conflict transformation,1
 HOW,Inclusion,WHAT,AI alignment,1
 WHAT,AI alignment,WHY,Other,1
 WHAT,AI alignment,WHY,Conflict transformation,1
 HOW,Bridging,WHY,Wartime necessity,1
 GROUP,Content moderation,WHY,Free expression,1
-WHO,Platforms,WHY,Free expression,1
-WHO,Courts and prosecutors,WHY,Free expression,1
-WHO,Regulators,WHY,Free expression,1
-WHO,Platform oversight bodies,WHY,Free expression,1
 WHO,Government agencies,WHY,Free expression,1
-HOW,Marginalisation,WHY,Free expression,1
-HOW,Deplatforming,WHY,Free expression,1
-HOW,Disclosure,WHY,Free expression,1
-HOW,Blocking,WHY,Free expression,1
-HOW,Intelligibility,WHY,Free expression,1
-HOW,Removal,WHY,Free expression,1
-HOW,Restricting access,WHY,Free expression,1
-HOW,Other,WHY,Free expression,1
-HOW,Redirection,WHY,Free expression,1
-HOW,Filtering,WHY,Free expression,1
+WHO,Platform oversight bodies,WHY,Free expression,1
+WHO,Platforms,WHY,Free expression,1
+WHO,Regulators,WHY,Free expression,1
+WHO,Courts and prosecutors,WHY,Free expression,1
 HOW,Coherence,WHY,Free expression,1
-HOW,Economic,WHY,Free expression,1
 HOW,Removal from circulation,WHY,Free expression,1
-HOW,Labeling,WHY,Free expression,1
-HOW,Scheduling,WHY,Free expression,1
-HOW,Modification,WHY,Free expression,1
+HOW,Redirection,WHY,Free expression,1
 HOW,Correcting,WHY,Free expression,1
+HOW,Other,WHY,Free expression,1
+HOW,Restricting access,WHY,Free expression,1
+HOW,Economic,WHY,Free expression,1
+HOW,Removal,WHY,Free expression,1
+HOW,Intelligibility,WHY,Free expression,1
+HOW,Filtering,WHY,Free expression,1
+HOW,Blocking,WHY,Free expression,1
+HOW,Deplatforming,WHY,Free expression,1
+HOW,Marginalisation,WHY,Free expression,1
+HOW,Scheduling,WHY,Free expression,1
+HOW,Labeling,WHY,Free expression,1
+HOW,Disclosure,WHY,Free expression,1
+HOW,Modification,WHY,Free expression,1
 HOW,Profiling,WHY,Free expression,1
 WHAT,Other,WHY,Free expression,1
 WHAT,Content moderation,WHY,Free expression,1
@@ -4825,30 +4825,30 @@ WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Freedom of spee
 GROUP,Media regulation,WHO,Private firms,1
 WHO,Private firms,HOW,Fairness,1
 GROUP,Media regulation,WHO,"Public-private partnerships (""free-speech triangle"")",1
-GROUP,Media regulation,WHY,Economic pressure,1
 GROUP,Media regulation,WHY,Coherence,1
+GROUP,Media regulation,WHY,Economic pressure,1
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,State secrets,1
 GROUP,Media regulation,WHO,Distributors & booksellers,1
 GROUP,Media regulation,WHY,Clear and present danger,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Coherence,1
 WHO,Religious organisations,WHY,Genocide prevention / dangerous speech,1
-HOW,Coherence,WHY,Genocide prevention / dangerous speech,1
 HOW,Coherence,WHY,Clear and present danger,1
+HOW,Coherence,WHY,Genocide prevention / dangerous speech,1
 HOW,Scheduling,WHY,Genocide prevention / dangerous speech,1
 GROUP,Content moderation,WHY,Intelligibility,1
 WHO,Government agencies,WHY,Intelligibility,1
-WHO,Users,WHY,Intelligibility,1
 WHO,Platforms,WHY,Intelligibility,1
 WHO,Algorithmic moderation systems,WHY,Intelligibility,1
+WHO,Users,WHY,Intelligibility,1
+HOW,Enframing,WHY,Intelligibility,1
+HOW,Review,WHY,Intelligibility,1
+HOW,Restricting access,WHY,Intelligibility,1
+HOW,Monitoring,WHY,Intelligibility,1
+HOW,Agenda setting,WHY,Intelligibility,1
 HOW,Blocking,WHY,Intelligibility,1
 HOW,Intermediate,WHY,Intelligibility,1
-HOW,Restricting access,WHY,Intelligibility,1
-HOW,Review,WHY,Intelligibility,1
-HOW,Monitoring,WHY,Intelligibility,1
-HOW,Enframing,WHY,Intelligibility,1
-HOW,Agenda setting,WHY,Intelligibility,1
-WHAT,Content moderation,WHY,Intelligibility,1
 WHAT,Censorship,WHY,Intelligibility,1
+WHAT,Content moderation,WHY,Intelligibility,1
 GROUP,Debate management,WHAT,Media regulation,1
 WHO,Mediators,WHAT,Media regulation,1
 WHAT,Media regulation,WHY,Conflict transformation,1
@@ -4858,87 +4858,87 @@ HOW,Restriction access,WHY,Conflict transformation,1
 HOW,Restriction access,WHY,Inclusion,1
 WHO,App stores,HOW,Balancing,1
 GROUP,Content moderation,HOW,Algorithmic moderation systems,1
+WHO,Algorithmic moderation systems,HOW,Algorithmic moderation systems,1
+WHO,Legislators,HOW,Algorithmic moderation systems,1
+WHO,Pre-platform moderators,HOW,Algorithmic moderation systems,1
 WHO,Platforms,HOW,Algorithmic moderation systems,1
 WHO,Courts and prosecutors,HOW,Algorithmic moderation systems,1
-WHO,Pre-platform moderators,HOW,Algorithmic moderation systems,1
-WHO,Algorithmic moderation systems,HOW,Algorithmic moderation systems,1
 WHO,Users,HOW,Algorithmic moderation systems,1
-WHO,Legislators,HOW,Algorithmic moderation systems,1
-HOW,Algorithmic moderation systems,WHAT,Content moderation,1
 HOW,Algorithmic moderation systems,WHAT,Debate management,1
-HOW,Algorithmic moderation systems,WHY,"Privacy, reputation & dignity",1
+HOW,Algorithmic moderation systems,WHAT,Content moderation,1
 HOW,Algorithmic moderation systems,WHY,Harm principles and hate speech regulation,1
 HOW,Algorithmic moderation systems,WHY,Protection of children,1
 HOW,Algorithmic moderation systems,WHY,Compliance,1
-WHO,Press councils & ombudsmen,HOW,Intermediate,1
+HOW,Algorithmic moderation systems,WHY,"Privacy, reputation & dignity",1
 WHO,Press councils & ombudsmen,HOW,Prompting,1
 WHO,Press councils & ombudsmen,HOW,Agenda setting,1
+WHO,Press councils & ombudsmen,HOW,Intermediate,1
 WHO,Press councils & ombudsmen,WHAT,Other,1
 GROUP,Censorship,HOW,Protection of children,1
-WHO,Courts and prosecutors,HOW,Protection of children,1
 WHO,Government agencies,HOW,Protection of children,1
+WHO,Courts and prosecutors,HOW,Protection of children,1
 WHO,Legislators,HOW,Protection of children,1
 HOW,Protection of children,WHAT,Censorship,1
 HOW,Protection of children,WHY,Obscenity and decency,1
 GROUP,AI alignment,WHY,State security,1
 WHAT,AI alignment,WHY,State security,1
 WHO,AI labs as moderators,WHY,State security,1
-GROUP,Media regulation,WHO,Media owners,1
 GROUP,Media regulation,WHO,Online mobs / pile-ons,1
+GROUP,Media regulation,WHO,Media owners,1
 GROUP,Media regulation,WHY,Wartime necessity,1
 WHO,Online mobs / pile-ons,WHAT,Media regulation,1
-WHO,Cloud / infrastructure providers,WHY,Public interest,1
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Public interest,1
-WHO,Journalists,WHY,Public interest,1
-WHO,"Schools, curricula, librarians, academia",WHY,Public interest,1
-WHO,Government agencies,WHY,Public interest,1
 WHO,Online mobs / pile-ons,WHY,Public interest,1
+WHO,Government agencies,WHY,Public interest,1
+WHO,"Schools, curricula, librarians, academia",WHY,Public interest,1
+WHO,Journalists,WHY,Public interest,1
+WHO,Cloud / infrastructure providers,WHY,Public interest,1
 HOW,Rating,WHY,Public interest,1
 HOW,Self-censorship,WHY,Public interest,1
 WHAT,Media moderation,WHY,Public interest,1
 WHAT,Censorship,WHY,Public interest,1
 GROUP,Media regulation,WHO,Military censors,1
 WHO,Regulators,WHY,State secrets,1
-WHO,RLHF annotators,WHY,Genocide prevention / dangerous speech,1
 WHO,AI labs as moderators,WHY,Genocide prevention / dangerous speech,1
+WHO,RLHF annotators,WHY,Genocide prevention / dangerous speech,1
 HOW,Bridging,WHY,Ideological consolidation,1
 GROUP,Content moderation,HOW,Escalation,1
-WHO,Cloud / infrastructure providers,HOW,Escalation,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Escalation,1
-WHO,Platforms,HOW,Escalation,1
+WHO,Government agencies,HOW,Escalation,1
 WHO,Content moderators / BPO workforces,HOW,Escalation,1
 WHO,Algorithmic moderation systems,HOW,Escalation,1
+WHO,Platforms,HOW,Escalation,1
 WHO,Users,HOW,Escalation,1
-WHO,Government agencies,HOW,Escalation,1
+WHO,Cloud / infrastructure providers,HOW,Escalation,1
 HOW,Escalation,WHAT,Content moderation,1
-HOW,Escalation,WHY,Misinformation or disinformation as harm,1
-HOW,Escalation,WHY,State security,1
 HOW,Escalation,WHY,Harm principles and hate speech regulation,1
-HOW,Escalation,WHY,Economic pressure,1
-HOW,Escalation,WHY,Conflict transformation,1
-HOW,Escalation,WHY,Compliance,1
-HOW,Escalation,WHY,Brand safety,1
 HOW,Escalation,WHY,"Privacy, reputation & dignity",1
+HOW,Escalation,WHY,Economic pressure,1
+HOW,Escalation,WHY,Misinformation or disinformation as harm,1
+HOW,Escalation,WHY,Brand safety,1
+HOW,Escalation,WHY,State security,1
+HOW,Escalation,WHY,Conflict transformation,1
 HOW,Escalation,WHY,Social cohesion,1
+HOW,Escalation,WHY,Compliance,1
 HOW,Inclusion,WHY,Ideological consolidation,1
 WHO,Self-censorship (analytical),HOW,Fairness,1
+WHO,Advertisers,HOW,Inclusion,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Inclusion,1
 WHO,Press councils & ombudsmen,HOW,Inclusion,1
-WHO,Advertisers,HOW,Inclusion,1
+WHO,Online mobs / pile-ons,WHY,Other,1
 WHO,Press councils & ombudsmen,WHY,Harm reduction / public health,1
 WHO,Press councils & ombudsmen,WHY,Other,1
-WHO,Online mobs / pile-ons,WHY,Other,1
 WHO,Mediators,WHY,Fairness,1
-WHO,Courts and prosecutors,WHY,Censorship,1
 WHO,Content moderators / BPO workforces,WHY,Censorship,1
 WHO,Algorithmic moderation systems,WHY,Censorship,1
-WHO,Platform oversight bodies,WHY,Censorship,1
 WHO,"Schools, curricula, librarians, academia",WHY,Censorship,1
-HOW,Marginalisation,WHY,Censorship,1
-HOW,Blocking,WHY,Censorship,1
-HOW,Review,WHY,Censorship,1
-HOW,Labeling,WHY,Censorship,1
+WHO,Platform oversight bodies,WHY,Censorship,1
+WHO,Courts and prosecutors,WHY,Censorship,1
 HOW,Enframing,WHY,Censorship,1
+HOW,Review,WHY,Censorship,1
+HOW,Blocking,WHY,Censorship,1
+HOW,Marginalisation,WHY,Censorship,1
+HOW,Labeling,WHY,Censorship,1
 WHAT,Censorship,WHY,Censorship,1
 GROUP,AI alignment,WHO,Civic advocacy & moral-pressure groups,1
 GROUP,AI alignment,WHY,Genocide prevention / dangerous speech,1
@@ -4949,116 +4949,116 @@ WHO,AI labs as moderators,HOW,Obfuscation,1
 WHO,RLHF annotators,WHY,Harm reduction / public health,1
 GROUP,Debate management,WHO,Pre-platform moderators,1
 GROUP,Content moderation,WHO,Employers,1
-WHO,Media owners,HOW,Restriction access,1
-WHO,Platforms,HOW,Restriction access,1
-WHO,Courts and prosecutors,HOW,Restriction access,1
-WHO,Regulators,HOW,Restriction access,1
-WHO,Civic advocacy & moral-pressure groups,HOW,Restriction access,1
-WHO,Police / intelligence services,HOW,Restriction access,1
-WHO,Algorithmic moderation systems,HOW,Restriction access,1
 WHO,Advertisers,HOW,Restriction access,1
-WHO,Employers,HOW,Marginalisation,1
+WHO,Online mobs / pile-ons,HOW,Intelligibility,1
+WHO,Online mobs / pile-ons,HOW,Restriction access,1
+WHO,Media owners,HOW,Restriction access,1
+WHO,"Schools, curricula, librarians, academia",HOW,Restriction access,1
+WHO,Legislators,HOW,Restriction access,1
+WHO,Algorithmic moderation systems,HOW,Restriction access,1
 WHO,Employers,HOW,Coersive,1
-WHO,Employers,HOW,Removal,1
-WHO,Employers,HOW,Restriction access,1
-WHO,Employers,HOW,Correcting,1
-WHO,Employers,HOW,Self-censorship,1
-WHO,Employers,HOW,Disclosure,1
-WHO,Employers,HOW,Deplatforming,1
-WHO,Employers,HOW,Intelligibility,1
-WHO,Employers,HOW,Modification,1
-WHO,Employers,HOW,Profiling,1
-WHO,Employers,HOW,Blocking,1
 WHO,Employers,HOW,Filtering,1
+WHO,Employers,HOW,Monitoring,1
+WHO,Employers,HOW,Correcting,1
+WHO,Employers,HOW,Review,1
 WHO,Employers,HOW,Restricting access,1
 WHO,Employers,HOW,Economic,1
-WHO,Employers,HOW,Removal from circulation,1
+WHO,Employers,HOW,Intelligibility,1
+WHO,Employers,HOW,Blocking,1
 WHO,Employers,HOW,Metamoderation,1
-WHO,Employers,HOW,Monitoring,1
+WHO,Employers,HOW,Marginalisation,1
 WHO,Employers,HOW,Labeling,1
-WHO,Employers,HOW,Review,1
-WHO,Employers,HOW,Prompting,1
 WHO,Employers,HOW,Rating,1
+WHO,Employers,HOW,Prompting,1
+WHO,Employers,HOW,Removal,1
+WHO,Employers,HOW,Deplatforming,1
+WHO,Employers,HOW,Disclosure,1
+WHO,Employers,HOW,Profiling,1
+WHO,Employers,HOW,Removal from circulation,1
 WHO,Employers,HOW,Enframing,1
-WHO,"Schools, curricula, librarians, academia",HOW,Restriction access,1
-WHO,Online mobs / pile-ons,HOW,Restriction access,1
-WHO,Online mobs / pile-ons,HOW,Intelligibility,1
-WHO,Legislators,HOW,Restriction access,1
-WHO,Employers,WHAT,Content moderation,1
-WHO,Employers,WHAT,Media moderation,1
+WHO,Employers,HOW,Self-censorship,1
+WHO,Employers,HOW,Restriction access,1
+WHO,Employers,HOW,Modification,1
+WHO,Platforms,HOW,Restriction access,1
+WHO,Civic advocacy & moral-pressure groups,HOW,Restriction access,1
+WHO,Regulators,HOW,Restriction access,1
+WHO,Courts and prosecutors,HOW,Restriction access,1
+WHO,Police / intelligence services,HOW,Restriction access,1
 WHO,Employers,WHAT,Debate management,1
+WHO,Employers,WHAT,Media moderation,1
 WHO,Employers,WHAT,Censorship,1
-WHO,Employers,WHY,Protection of children,1
+WHO,Employers,WHAT,Content moderation,1
 WHO,Employers,WHY,Harm principles and hate speech regulation,1
-WHO,Employers,WHY,Professional / industry self-governance,1
 WHO,Employers,WHY,Coherence,1
-WHO,Employers,WHY,Compliance,1
+WHO,Employers,WHY,Professional / industry self-governance,1
+WHO,Employers,WHY,"Privacy, reputation & dignity",1
 WHO,Employers,WHY,Political control,1
 WHO,Employers,WHY,Clear and present danger,1
-WHO,Employers,WHY,"Privacy, reputation & dignity",1
 WHO,Employers,WHY,Brand safety,1
 WHO,Employers,WHY,Social cohesion,1
+WHO,Employers,WHY,Protection of children,1
+WHO,Employers,WHY,Compliance,1
 HOW,Restriction access,WHAT,Media moderation,1
 HOW,Restriction access,WHAT,Censorship,1
-HOW,Restriction access,WHY,Protection of children,1
 HOW,Restriction access,WHY,Harm principles and hate speech regulation,1
-HOW,Restriction access,WHY,Compliance,1
 HOW,Restriction access,WHY,Political control,1
 HOW,Restriction access,WHY,Clear and present danger,1
+HOW,Restriction access,WHY,Protection of children,1
+HOW,Restriction access,WHY,Compliance,1
 WHO,Platform oversight bodies,WHY,Wartime necessity,1
-WHO,Religious authorities,WHY,Genocide prevention / dangerous speech,1
 WHO,Translators / localisers,WHY,Genocide prevention / dangerous speech,1
+WHO,Religious authorities,WHY,Genocide prevention / dangerous speech,1
 GROUP,Content moderation,WHY,Inclusion,1
+HOW,Rating,WHY,Inclusion,1
+HOW,Correcting,WHY,Inclusion,1
 HOW,Restricting access,WHY,Inclusion,1
 HOW,Metamoderation,WHY,Inclusion,1
-HOW,Rating,WHY,Inclusion,1
 HOW,Labeling,WHY,Inclusion,1
-HOW,Correcting,WHY,Inclusion,1
 GROUP,Content moderation,WHY,Moderating extremism (rationale),1
 WHO,Other,WHAT,Algorithmic sorting,1
-WHO,Platforms,WHY,Moderating extremism (rationale),1
-WHO,Other,WHY,Moderating extremism (rationale),1
-WHO,Content moderators / BPO workforces,WHY,Moderating extremism (rationale),1
 WHO,Private firms,WHY,Moderating extremism (rationale),1
-WHO,Algorithmic moderation systems,WHY,Moderating extremism (rationale),1
-WHO,Users,WHY,Moderating extremism (rationale),1
 WHO,Government agencies,WHY,Moderating extremism (rationale),1
+WHO,Content moderators / BPO workforces,WHY,Moderating extremism (rationale),1
+WHO,Algorithmic moderation systems,WHY,Moderating extremism (rationale),1
 WHO,Legislators,WHY,Moderating extremism (rationale),1
-HOW,Marginalisation,WHY,Moderating extremism (rationale),1
+WHO,Other,WHY,Moderating extremism (rationale),1
+WHO,Platforms,WHY,Moderating extremism (rationale),1
+WHO,Users,WHY,Moderating extremism (rationale),1
+HOW,Removal from circulation,WHY,Moderating extremism (rationale),1
+HOW,Enframing,WHY,Moderating extremism (rationale),1
 HOW,Coersive,WHY,Moderating extremism (rationale),1
+HOW,Obfuscation,WHY,Moderating extremism (rationale),1
+HOW,Self-censorship,WHY,Moderating extremism (rationale),1
+HOW,Review,WHY,Moderating extremism (rationale),1
+HOW,Restricting access,WHY,Moderating extremism (rationale),1
 HOW,Filtering,WHY,Moderating extremism (rationale),1
 HOW,Removal,WHY,Moderating extremism (rationale),1
-HOW,Restricting access,WHY,Moderating extremism (rationale),1
-HOW,Review,WHY,Moderating extremism (rationale),1
-HOW,Obfuscation,WHY,Moderating extremism (rationale),1
-HOW,Removal from circulation,WHY,Moderating extremism (rationale),1
 HOW,Monitoring,WHY,Moderating extremism (rationale),1
+HOW,Marginalisation,WHY,Moderating extremism (rationale),1
 HOW,Labeling,WHY,Moderating extremism (rationale),1
-HOW,Enframing,WHY,Moderating extremism (rationale),1
-HOW,Self-censorship,WHY,Moderating extremism (rationale),1
 HOW,Profiling,WHY,Moderating extremism (rationale),1
-WHAT,Content moderation,WHY,Moderating extremism (rationale),1
 WHAT,Algorithmic sorting,WHY,Wartime necessity,1
 WHAT,Algorithmic sorting,WHY,Moderating extremism (rationale),1
 WHAT,Censorship,WHY,Moderating extremism (rationale),1
+WHAT,Content moderation,WHY,Moderating extremism (rationale),1
 GROUP,Content moderation,HOW,Debate moderators,1
-WHO,Fact-checkers and verification units,HOW,Debate moderators,1
+WHO,Algorithmic moderation systems,HOW,Debate moderators,1
+WHO,Legislators,HOW,Debate moderators,1
+WHO,Platform oversight bodies,HOW,Debate moderators,1
 WHO,Platforms,HOW,Debate moderators,1
 WHO,Regulators,HOW,Debate moderators,1
-WHO,Algorithmic moderation systems,HOW,Debate moderators,1
-WHO,Platform oversight bodies,HOW,Debate moderators,1
-WHO,Legislators,HOW,Debate moderators,1
+WHO,Fact-checkers and verification units,HOW,Debate moderators,1
 HOW,Debate moderators,WHAT,Content moderation,1
-HOW,Debate moderators,WHY,Protection of children,1
-HOW,Debate moderators,WHY,Misinformation or disinformation as harm,1
 HOW,Debate moderators,WHY,Harm principles and hate speech regulation,1
 HOW,Debate moderators,WHY,Coherence,1
-HOW,Debate moderators,WHY,Compliance,1
 HOW,Debate moderators,WHY,"Privacy, reputation & dignity",1
+HOW,Debate moderators,WHY,Misinformation or disinformation as harm,1
 HOW,Debate moderators,WHY,Social cohesion,1
+HOW,Debate moderators,WHY,Protection of children,1
+HOW,Debate moderators,WHY,Compliance,1
+WHO,Translators / localisers,WHY,Coersive,1
 WHO,Media owners,WHY,Coersive,1
 WHO,Censorship boards or agencies,WHY,Coersive,1
-WHO,Translators / localisers,WHY,Coersive,1
 HOW,Removal from circulation,WHY,Coersive,1
 HOW,Confiscation,WHY,Coersive,1
 HOW,Modification,WHY,Inclusion,1
@@ -5067,73 +5067,73 @@ GROUP,Debate management,WHY,Wartime necessity,1
 WHO,Debate moderators,WHY,Wartime necessity,1
 WHO,Mediators,WHY,Harm reduction / public health,1
 WHO,Mediators,WHY,Wartime necessity,1
+HOW,Coherence,WHY,Wartime necessity,1
 HOW,Redirection,WHY,Fair trial / administration of justice,1
 HOW,Prompting,WHY,Fair trial / administration of justice,1
-HOW,Coherence,WHY,Wartime necessity,1
 WHAT,Debate management,WHY,Wartime necessity,1
 GROUP,Content moderation,WHY,Debate management,1
-WHO,Public-health bodies (NGOs / WHO),WHY,Debate management,1
-WHO,Public-health bodies (NGOs / WHO),WHY,Conflict transformation,1
 WHO,Platforms,WHY,Debate management,1
-HOW,Marginalisation,WHY,Debate management,1
-HOW,Removal,WHY,Debate management,1
-HOW,Restricting access,WHY,Debate management,1
+WHO,Public-health bodies (NGOs / WHO),WHY,Conflict transformation,1
+WHO,Public-health bodies (NGOs / WHO),WHY,Debate management,1
 HOW,Redirection,WHY,Debate management,1
-HOW,Review,WHY,Debate management,1
-HOW,Labeling,WHY,Debate management,1
 HOW,Obfuscation,WHY,Debate management,1
+HOW,Review,WHY,Debate management,1
+HOW,Restricting access,WHY,Debate management,1
+HOW,Removal,WHY,Debate management,1
 HOW,Agenda setting,WHY,Debate management,1
+HOW,Marginalisation,WHY,Debate management,1
+HOW,Labeling,WHY,Debate management,1
 HOW,Profiling,WHY,Debate management,1
-WHAT,Content moderation,WHY,Debate management,1
 WHAT,Censorship,WHY,Debate management,1
+WHAT,Content moderation,WHY,Debate management,1
 WHO,News agencies / wire services,WHAT,Debate management,1
 WHO,News agencies / wire services,WHY,Coherence,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Transparency,1
-WHO,Courts and prosecutors,HOW,Transparency,1
 WHO,Algorithmic moderation systems,HOW,Transparency,1
 WHO,Platform oversight bodies,HOW,Transparency,1
+WHO,Courts and prosecutors,HOW,Transparency,1
 HOW,Transparency,WHAT,Media moderation,1
 HOW,Transparency,WHAT,Censorship,1
-HOW,Transparency,WHY,"Privacy, reputation & dignity",1
 HOW,Transparency,WHY,Harm principles and hate speech regulation,1
 HOW,Transparency,WHY,Professional / industry self-governance,1
+HOW,Transparency,WHY,"Privacy, reputation & dignity",1
 GROUP,Censorship,WHY,Fairness,1
 HOW,Correcting,WHY,Fairness,1
+WHO,Advertisers,WHY,Public interest,1
+WHO,Advertisers,WHY,Censorship,1
+WHO,Legislators,WHY,Public interest,1
 WHO,Other,WHY,Public interest,1
 WHO,Civic advocacy & moral-pressure groups,WHY,Public interest,1
 WHO,Civic advocacy & moral-pressure groups,WHY,Censorship,1
-WHO,Advertisers,WHY,Public interest,1
-WHO,Advertisers,WHY,Censorship,1
 WHO,Users,WHY,Censorship,1
-WHO,Legislators,WHY,Public interest,1
-HOW,Deplatforming,WHY,Censorship,1
-HOW,Economic,WHY,Censorship,1
-HOW,Monitoring,WHY,Censorship,1
 HOW,Correcting,WHY,Public interest,1
 HOW,Correcting,WHY,Censorship,1
+HOW,Economic,WHY,Censorship,1
+HOW,Monitoring,WHY,Censorship,1
+HOW,Deplatforming,WHY,Censorship,1
 GROUP,Content moderation,WHY,Transparency,1
 WHO,Platforms,WHY,Transparency,1
-HOW,Marginalisation,WHY,Transparency,1
-HOW,Deplatforming,WHY,Transparency,1
-HOW,Blocking,WHY,Transparency,1
+HOW,Restricting access,WHY,Transparency,1
 HOW,Filtering,WHY,Transparency,1
 HOW,Removal,WHY,Transparency,1
-HOW,Restricting access,WHY,Transparency,1
 HOW,Economic,WHY,Transparency,1
+HOW,Blocking,WHY,Transparency,1
+HOW,Deplatforming,WHY,Transparency,1
+HOW,Marginalisation,WHY,Transparency,1
 HOW,Labeling,WHY,Transparency,1
 HOW,Profiling,WHY,Transparency,1
 WHAT,Content moderation,WHY,Transparency,1
-WHO,Translators / localisers,HOW,Intelligibility,1
 WHO,Translators / localisers,HOW,Prompting,1
-WHO,Courts and prosecutors,WHY,Inclusion,1
-WHO,Editors,WHY,Inclusion,1
-WHO,Civic advocacy & moral-pressure groups,WHY,Inclusion,1
-WHO,Mediators,WHY,Inclusion,1
-WHO,Political groups,WHY,Inclusion,1
+WHO,Translators / localisers,HOW,Intelligibility,1
 WHO,Translators / localisers,WHY,Inclusion,1
+WHO,Political groups,WHY,Inclusion,1
+WHO,Civic advocacy & moral-pressure groups,WHY,Inclusion,1
+WHO,Editors,WHY,Inclusion,1
+WHO,Mediators,WHY,Inclusion,1
+WHO,Courts and prosecutors,WHY,Inclusion,1
 HOW,Coersive,WHY,Inclusion,1
-HOW,Intelligibility,WHY,Inclusion,1
 HOW,Interiorisation,WHY,Inclusion,1
+HOW,Intelligibility,WHY,Inclusion,1
 WHAT,Other,WHY,Inclusion,1
 WHAT,Media moderation,WHY,Inclusion,1
 WHO,Fact-checkers and verification units,HOW,Fairness,1
@@ -5144,92 +5144,92 @@ GROUP,Media moderation,WHY,State secrets,1
 WHO,Press councils & ombudsmen,HOW,Confiscation,1
 WHO,Broadcasting regulators,WHY,State secrets,1
 WHO,Press councils & ombudsmen,WHY,State secrets,1
-WHO,Religious authorities,WHY,Consumer protection / fair competition,1
 WHO,Translators / localisers,WHY,Consumer protection / fair competition,1
+WHO,Religious authorities,WHY,Consumer protection / fair competition,1
 GROUP,Content moderation,HOW,Common carriage / neutral conduit,1
+WHO,Government agencies,HOW,Common carriage / neutral conduit,1
+WHO,Algorithmic moderation systems,HOW,Common carriage / neutral conduit,1
+WHO,Political groups,HOW,Common carriage / neutral conduit,1
 WHO,Platforms,HOW,Common carriage / neutral conduit,1
 WHO,Regulators,HOW,Common carriage / neutral conduit,1
-WHO,Political groups,HOW,Common carriage / neutral conduit,1
-WHO,Algorithmic moderation systems,HOW,Common carriage / neutral conduit,1
 WHO,Users,HOW,Common carriage / neutral conduit,1
-WHO,Government agencies,HOW,Common carriage / neutral conduit,1
-HOW,Common carriage / neutral conduit,WHAT,Content moderation,1
 HOW,Common carriage / neutral conduit,WHAT,Media moderation,1
 HOW,Common carriage / neutral conduit,WHAT,Censorship,1
-HOW,Common carriage / neutral conduit,WHY,Obscenity and decency,1
-HOW,Common carriage / neutral conduit,WHY,Democratic self-defence,1
-HOW,Common carriage / neutral conduit,WHY,Harm principles and hate speech regulation,1
+HOW,Common carriage / neutral conduit,WHAT,Content moderation,1
 HOW,Common carriage / neutral conduit,WHY,Professional / industry self-governance,1
-HOW,Common carriage / neutral conduit,WHY,Political control,1
-HOW,Common carriage / neutral conduit,WHY,Compliance,1
-HOW,Common carriage / neutral conduit,WHY,News values / editorial judgment,1
-HOW,Common carriage / neutral conduit,WHY,Brand safety,1
+HOW,Common carriage / neutral conduit,WHY,Harm principles and hate speech regulation,1
 HOW,Common carriage / neutral conduit,WHY,"Privacy, reputation & dignity",1
+HOW,Common carriage / neutral conduit,WHY,Political control,1
+HOW,Common carriage / neutral conduit,WHY,Obscenity and decency,1
+HOW,Common carriage / neutral conduit,WHY,Brand safety,1
+HOW,Common carriage / neutral conduit,WHY,News values / editorial judgment,1
+HOW,Common carriage / neutral conduit,WHY,Democratic self-defence,1
 HOW,Common carriage / neutral conduit,WHY,Social cohesion,1
+HOW,Common carriage / neutral conduit,WHY,Compliance,1
 HOW,Coherence,WHY,Alignment with human values,1
 WHO,Pre-platform moderators,WHY,Consumer protection / fair competition,1
-WHO,Fact-checkers and verification units,WHY,Coersive,1
 WHO,"Public-private partnerships (""free-speech triangle"")",WHY,Coersive,1
-WHO,Press councils & ombudsmen,WHY,Coersive,1
 WHO,Platform oversight bodies,WHY,Coersive,1
+WHO,Press councils & ombudsmen,WHY,Coersive,1
+WHO,Fact-checkers and verification units,WHY,Coersive,1
 HOW,Correcting,WHY,Coersive,1
 GROUP,Debate management,WHO,Private firms,1
 WHO,Broadcasting regulators,WHY,Alignment with human values,1
 WHO,Military censors,WHY,Alignment with human values,1
 WHO,News agencies / wire services,HOW,Metamoderation,1
-WHO,Fact-checkers and verification units,HOW,Other,1
-WHO,Public-health bodies (NGOs / WHO),HOW,Coherence,1
-WHO,Public-health bodies (NGOs / WHO),HOW,Other,1
 WHO,AI labs as moderators,HOW,Other,1
-WHO,Fact-checkers and verification units,WHY,Freedom of speech or information,1
-WHO,Public-health bodies (NGOs / WHO),WHY,Obscenity and decency,1
-WHO,Public-health bodies (NGOs / WHO),WHY,Other,1
-WHO,Platform oversight bodies,WHY,Freedom of speech or information,1
+WHO,Public-health bodies (NGOs / WHO),HOW,Other,1
+WHO,Public-health bodies (NGOs / WHO),HOW,Coherence,1
+WHO,Fact-checkers and verification units,HOW,Other,1
 WHO,AI labs as moderators,WHY,Freedom of speech or information,1
-HOW,Marginalisation,WHY,Freedom of speech or information,1
+WHO,Platform oversight bodies,WHY,Freedom of speech or information,1
+WHO,Public-health bodies (NGOs / WHO),WHY,Other,1
+WHO,Public-health bodies (NGOs / WHO),WHY,Obscenity and decency,1
+WHO,Fact-checkers and verification units,WHY,Freedom of speech or information,1
+HOW,Redirection,WHY,Freedom of speech or information,1
+HOW,Other,WHY,Harm principles and hate speech regulation,1
+HOW,Other,WHY,Other,1
+HOW,Other,WHY,Democratic self-defence,1
+HOW,Other,WHY,Freedom of speech or information,1
+HOW,Coherence,WHY,Freedom of speech or information,1
 HOW,Correcting,WHY,Freedom of speech or information,1
 HOW,Intelligibility,WHY,Freedom of speech or information,1
-HOW,Coherence,WHY,Freedom of speech or information,1
-HOW,Modification,WHY,Freedom of speech or information,1
 HOW,Blocking,WHY,Freedom of speech or information,1
-HOW,Redirection,WHY,Freedom of speech or information,1
-HOW,Removal from circulation,WHY,Freedom of speech or information,1
-HOW,Other,WHY,Democratic self-defence,1
-HOW,Other,WHY,Other,1
-HOW,Other,WHY,Freedom of speech or information,1
-HOW,Other,WHY,Harm principles and hate speech regulation,1
+HOW,Marginalisation,WHY,Freedom of speech or information,1
 HOW,Rating,WHY,Freedom of speech or information,1
+HOW,Removal from circulation,WHY,Freedom of speech or information,1
+HOW,Modification,WHY,Freedom of speech or information,1
 WHAT,Other,WHY,Freedom of speech or information,1
 GROUP,Content moderation,HOW,Moderation as industrial labour,1
-WHO,Fact-checkers and verification units,HOW,Moderation as industrial labour,1
-WHO,Platforms,HOW,Moderation as industrial labour,1
-WHO,Courts and prosecutors,HOW,Moderation as industrial labour,1
-WHO,Regulators,HOW,Moderation as industrial labour,1
 WHO,Content moderators / BPO workforces,HOW,Moderation as industrial labour,1
-WHO,Press councils & ombudsmen,HOW,Moderation as industrial labour,1
-WHO,Press councils & ombudsmen,HOW,Bridging,1
 WHO,Algorithmic moderation systems,HOW,Moderation as industrial labour,1
 WHO,Users,HOW,Moderation as industrial labour,1
 WHO,Legislators,HOW,Moderation as industrial labour,1
-HOW,Moderation as industrial labour,WHAT,Content moderation,1
+WHO,Platforms,HOW,Moderation as industrial labour,1
+WHO,Press councils & ombudsmen,HOW,Moderation as industrial labour,1
+WHO,Press councils & ombudsmen,HOW,Bridging,1
+WHO,Regulators,HOW,Moderation as industrial labour,1
+WHO,Courts and prosecutors,HOW,Moderation as industrial labour,1
+WHO,Fact-checkers and verification units,HOW,Moderation as industrial labour,1
 HOW,Moderation as industrial labour,WHAT,Censorship,1
-HOW,Moderation as industrial labour,WHY,Social cohesion,1
+HOW,Moderation as industrial labour,WHAT,Content moderation,1
 HOW,Moderation as industrial labour,WHY,Harm principles and hate speech regulation,1
-HOW,Moderation as industrial labour,WHY,Misinformation or disinformation as harm,1
+HOW,Moderation as industrial labour,WHY,Social cohesion,1
 HOW,Moderation as industrial labour,WHY,Compliance,1
+HOW,Moderation as industrial labour,WHY,Misinformation or disinformation as harm,1
 WHO,RLHF annotators,HOW,Fairness,1
 WHO,RLHF annotators,WHAT,Debate management,1
-WHO,App stores,WHY,Wartime necessity,1
-WHO,App stores,WHY,Fair trial / administration of justice,1
-WHO,App stores,WHY,State secrets,1
 WHO,Content moderators / BPO workforces,WHY,State secrets,1
+WHO,App stores,WHY,Fair trial / administration of justice,1
+WHO,App stores,WHY,Wartime necessity,1
+WHO,App stores,WHY,State secrets,1
 WHO,Censorship boards or agencies,WHY,Genocide prevention / dangerous speech,1
-WHO,Military censors,WHY,Genocide prevention / dangerous speech,1
 WHO,Military censors,WHY,Clear and present danger,1
-WHO,Fact-checkers and verification units,HOW,Transparency,1
-WHO,Journalists,HOW,Transparency,1
-WHO,"Schools, curricula, librarians, academia",HOW,Transparency,1
+WHO,Military censors,WHY,Genocide prevention / dangerous speech,1
 WHO,Government agencies,HOW,Transparency,1
+WHO,"Schools, curricula, librarians, academia",HOW,Transparency,1
+WHO,Journalists,HOW,Transparency,1
+WHO,Fact-checkers and verification units,HOW,Transparency,1
 GROUP,AI alignment,WHO,Pre-platform moderators,1
 WHO,Pre-platform moderators,WHAT,AI alignment,1
 GROUP,Algorithmic sorting,WHO,Platforms,1
@@ -5239,55 +5239,55 @@ GROUP,Algorithmic sorting,HOW,Marginalisation,1
 GROUP,Algorithmic sorting,HOW,Profiling,1
 GROUP,Algorithmic sorting,HOW,Monitoring,1
 GROUP,Algorithmic sorting,WHAT,Algorithmic sorting,1
-GROUP,Algorithmic sorting,WHY,Other,1
-GROUP,Algorithmic sorting,WHY,Social cohesion,1
 GROUP,Algorithmic sorting,WHY,Brand safety,1
+GROUP,Algorithmic sorting,WHY,Social cohesion,1
+GROUP,Algorithmic sorting,WHY,Other,1
 WHAT,Algorithmic sorting,WHY,Other,1
 GROUP,Media regulation,HOW,Obfuscation,1
 GROUP,Media regulation,HOW,Agenda setting,1
 GROUP,Media regulation,WHAT,Debate management,1
 WHO,Cloud / infrastructure providers,HOW,Fairness,1
 GROUP,Content moderation,HOW,Task delegation,1
-WHO,Users,HOW,Task delegation,1
 WHO,Platforms,HOW,Task delegation,1
+WHO,Users,HOW,Task delegation,1
 HOW,Task delegation,WHAT,Content moderation,1
-HOW,Task delegation,WHY,Protection of children,1
-HOW,Task delegation,WHY,Economic pressure,1
 HOW,Task delegation,WHY,Coherence,1
+HOW,Task delegation,WHY,Economic pressure,1
 HOW,Task delegation,WHY,Brand safety,1
 HOW,Task delegation,WHY,Social cohesion,1
+HOW,Task delegation,WHY,Protection of children,1
 WHO,Regulators,WHY,Fair trial / administration of justice,1
 GROUP,Content moderation,WHY,Moderating extremism,1
-WHO,Platforms,WHY,Moderating extremism,1
-WHO,Regulators,WHY,Moderating extremism,1
-WHO,Other,WHY,Moderating extremism,1
-WHO,Editors,WHY,Moderating extremism,1
-WHO,Police / intelligence services,WHY,Moderating extremism,1
+WHO,Advertisers,WHY,Moderating extremism,1
+WHO,Government agencies,WHY,Moderating extremism,1
 WHO,Algorithmic moderation systems,WHY,Moderating extremism,1
 WHO,Platform oversight bodies,WHY,Moderating extremism,1
-WHO,Advertisers,WHY,Moderating extremism,1
+WHO,Other,WHY,Moderating extremism,1
+WHO,Platforms,WHY,Moderating extremism,1
+WHO,Editors,WHY,Moderating extremism,1
+WHO,Regulators,WHY,Moderating extremism,1
 WHO,Users,WHY,Moderating extremism,1
-WHO,Government agencies,WHY,Moderating extremism,1
-HOW,Marginalisation,WHY,Moderating extremism,1
-HOW,Deplatforming,WHY,Moderating extremism,1
+WHO,Police / intelligence services,WHY,Moderating extremism,1
+HOW,Rating,WHY,Moderating extremism,1
+HOW,Enframing,WHY,Moderating extremism,1
+HOW,Restricting access,WHY,Moderating extremism,1
 HOW,Filtering,WHY,Moderating extremism,1
 HOW,Removal,WHY,Moderating extremism,1
-HOW,Restricting access,WHY,Moderating extremism,1
-HOW,Metamoderation,WHY,Moderating extremism,1
-HOW,Rating,WHY,Moderating extremism,1
 HOW,Monitoring,WHY,Moderating extremism,1
-HOW,Enframing,WHY,Moderating extremism,1
+HOW,Deplatforming,WHY,Moderating extremism,1
+HOW,Marginalisation,WHY,Moderating extremism,1
 HOW,Labeling,WHY,Moderating extremism,1
-WHAT,Content moderation,WHY,Moderating extremism,1
+HOW,Metamoderation,WHY,Moderating extremism,1
 WHAT,Debate management,WHY,Moderating extremism,1
+WHAT,Content moderation,WHY,Moderating extremism,1
 WHO,Fact-checkers and verification units,WHY,Clear and present danger,1
 GROUP,Content moderation,HOW,Restrictiong access,1
+WHO,Platform oversight bodies,HOW,Restrictiong access,1
 WHO,Platforms,HOW,Restrictiong access,1
 WHO,Algorithmic moderation systems,HOW,Restrictiong access,1
-WHO,Platform oversight bodies,HOW,Restrictiong access,1
 HOW,Restrictiong access,WHAT,Content moderation,1
-WHO,Users,HOW,Interoperability,1
 WHO,Government agencies,HOW,Interoperability,1
+WHO,Users,HOW,Interoperability,1
 HOW,Interoperability,WHY,Coherence,1
 HOW,Interoperability,WHY,Brand safety,1
 HOW,Interoperability,WHY,Social cohesion,1
@@ -5296,121 +5296,121 @@ WHO,Advertisers,WHY,Consumer protection / fair competition,1
 GROUP,Media moderation,WHY,Consumer protection / fair competition,1
 WHO,Pre-platform moderators,WHY,Coersive,1
 GROUP,Censorship,WHY,Moderating extremism,1
-WHO,Political groups,WHY,Moderating extremism,1
 WHO,Censorship boards or agencies,WHY,Moderating extremism,1
+WHO,Political groups,WHY,Moderating extremism,1
 WHO,Religious authorities,WHY,Moderating extremism,1
 HOW,Removal from circulation,WHY,Moderating extremism,1
 HOW,Confiscation,WHY,Moderating extremism,1
 WHO,Private firms,WHY,Conflict transformation,1
 GROUP,Censorship,HOW,Replacement,1
-WHO,Media owners,HOW,Replacement,1
-WHO,Courts and prosecutors,HOW,Replacement,1
-WHO,Regulators,HOW,Replacement,1
-WHO,Editors,HOW,Replacement,1
-WHO,Journalists,HOW,Replacement,1
-WHO,Private firms,HOW,Replacement,1
-WHO,Private firms,HOW,Balancing,1
-WHO,Self-censorship (analytical),HOW,Replacement,1
-WHO,Police / intelligence services,HOW,Replacement,1
 WHO,Advertisers,HOW,Replacement,1
+WHO,Private firms,HOW,Balancing,1
+WHO,Private firms,HOW,Replacement,1
 WHO,Government agencies,HOW,Replacement,1
-WHO,Distributors & booksellers,HOW,Replacement,1
+WHO,Media owners,HOW,Replacement,1
 WHO,Legislators,HOW,Replacement,1
-HOW,Replacement,WHAT,Content moderation,1
+WHO,Self-censorship (analytical),HOW,Replacement,1
+WHO,Journalists,HOW,Replacement,1
+WHO,Editors,HOW,Replacement,1
+WHO,Distributors & booksellers,HOW,Replacement,1
+WHO,Regulators,HOW,Replacement,1
+WHO,Courts and prosecutors,HOW,Replacement,1
+WHO,Police / intelligence services,HOW,Replacement,1
 HOW,Replacement,WHAT,Media regulation,1
 HOW,Replacement,WHAT,Censorship,1
-HOW,Replacement,WHY,State security,1
-HOW,Replacement,WHY,Economic pressure,1
-HOW,Replacement,WHY,Political control,1
-HOW,Replacement,WHY,News values / editorial judgment,1
+HOW,Replacement,WHAT,Content moderation,1
 HOW,Replacement,WHY,"Privacy, reputation & dignity",1
+HOW,Replacement,WHY,Political control,1
+HOW,Replacement,WHY,Economic pressure,1
 HOW,Replacement,WHY,Brand safety,1
+HOW,Replacement,WHY,News values / editorial judgment,1
 HOW,Replacement,WHY,Ideological consolidation,1
+HOW,Replacement,WHY,State security,1
 GROUP,Media moderation,WHO,News agencies / wire services,1
 GROUP,AI alignment,HOW,Intermediate,1
 HOW,Intermediate,WHAT,AI alignment,1
 GROUP,Debate management,WHO,Regulators,1
 GROUP,Content moderation,HOW,Transparencyreport.google.com सरकार-278? nope,1
-WHO,Platforms,HOW,Transparencyreport.google.com सरकार-278? nope,1
 WHO,Content moderators / BPO workforces,HOW,Transparencyreport.google.com सरकार-278? nope,1
 WHO,Algorithmic moderation systems,HOW,Transparencyreport.google.com सरकार-278? nope,1
-WHO,Platform oversight bodies,HOW,Transparencyreport.google.com सरकार-278? nope,1
 WHO,Legislators,HOW,Transparencyreport.google.com सरकार-278? nope,1
+WHO,Platform oversight bodies,HOW,Transparencyreport.google.com सरकार-278? nope,1
+WHO,Platforms,HOW,Transparencyreport.google.com सरकार-278? nope,1
 HOW,Transparencyreport.google.com सरकार-278? nope,WHAT,Other,1
-HOW,Transparencyreport.google.com सरकार-278? nope,WHAT,Content moderation,1
 HOW,Transparencyreport.google.com सरकार-278? nope,WHAT,Media moderation,1
 HOW,Transparencyreport.google.com सरकार-278? nope,WHAT,Censorship,1
+HOW,Transparencyreport.google.com सरकार-278? nope,WHAT,Content moderation,1
+HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Professional / industry self-governance,1
+HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Harm principles and hate speech regulation,1
+HOW,Transparencyreport.google.com सरकार-278? nope,WHY,"Privacy, reputation & dignity",1
+HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Political control,1
 HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Misinformation or disinformation as harm,1
 HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Democratic self-defence,1
-HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Harm principles and hate speech regulation,1
-HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Professional / industry self-governance,1
 HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Compliance,1
-HOW,Transparencyreport.google.com सरकार-278? nope,WHY,Political control,1
-HOW,Transparencyreport.google.com सरकार-278? nope,WHY,"Privacy, reputation & dignity",1
 GROUP,Content moderation,WHO,Ethical investors / shareholders,1
 GROUP,Content moderation,HOW,Reporting,1
-WHO,Cloud / infrastructure providers,HOW,Reporting,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Reporting,1
-WHO,Ethical investors / shareholders,HOW,Marginalisation,1
-WHO,Ethical investors / shareholders,HOW,Deplatforming,1
-WHO,Ethical investors / shareholders,HOW,Disclosure,1
-WHO,Ethical investors / shareholders,HOW,Reporting,1
-WHO,Ethical investors / shareholders,HOW,Blocking,1
-WHO,Ethical investors / shareholders,HOW,Filtering,1
-WHO,Ethical investors / shareholders,HOW,Removal,1
-WHO,Ethical investors / shareholders,HOW,Restricting access,1
-WHO,Ethical investors / shareholders,HOW,Redirection,1
-WHO,Ethical investors / shareholders,HOW,Review,1
-WHO,Ethical investors / shareholders,HOW,Economic,1
-WHO,Ethical investors / shareholders,HOW,Monitoring,1
+WHO,Advertisers,HOW,Reporting,1
+WHO,Government agencies,HOW,Reporting,1
+WHO,Broadcasting regulators,HOW,Reporting,1
+WHO,Content moderators / BPO workforces,HOW,Reporting,1
+WHO,Algorithmic moderation systems,HOW,Reporting,1
+WHO,Legislators,HOW,Reporting,1
+WHO,Cloud / infrastructure providers,HOW,Reporting,1
+WHO,"Schools, curricula, librarians, academia",HOW,Reporting,1
+WHO,Platforms,HOW,Reporting,1
+WHO,Civic advocacy & moral-pressure groups,HOW,Reporting,1
+WHO,Journalists,HOW,Reporting,1
+WHO,Censorship boards or agencies,HOW,Reporting,1
 WHO,Ethical investors / shareholders,HOW,Rating,1
-WHO,Ethical investors / shareholders,HOW,Labeling,1
 WHO,Ethical investors / shareholders,HOW,Enframing,1
-WHO,Ethical investors / shareholders,HOW,Modification,1
+WHO,Ethical investors / shareholders,HOW,Redirection,1
 WHO,Ethical investors / shareholders,HOW,Correcting,1
 WHO,Ethical investors / shareholders,HOW,Self-censorship,1
-WHO,Platforms,HOW,Reporting,1
-WHO,Courts and prosecutors,HOW,Reporting,1
-WHO,Broadcasting regulators,HOW,Reporting,1
+WHO,Ethical investors / shareholders,HOW,Reporting,1
+WHO,Ethical investors / shareholders,HOW,Review,1
+WHO,Ethical investors / shareholders,HOW,Restricting access,1
+WHO,Ethical investors / shareholders,HOW,Economic,1
+WHO,Ethical investors / shareholders,HOW,Removal,1
+WHO,Ethical investors / shareholders,HOW,Monitoring,1
+WHO,Ethical investors / shareholders,HOW,Filtering,1
+WHO,Ethical investors / shareholders,HOW,Blocking,1
+WHO,Ethical investors / shareholders,HOW,Deplatforming,1
+WHO,Ethical investors / shareholders,HOW,Marginalisation,1
+WHO,Ethical investors / shareholders,HOW,Labeling,1
+WHO,Ethical investors / shareholders,HOW,Disclosure,1
+WHO,Ethical investors / shareholders,HOW,Modification,1
 WHO,Regulators,HOW,Reporting,1
-WHO,Journalists,HOW,Reporting,1
-WHO,Content moderators / BPO workforces,HOW,Reporting,1
-WHO,Civic advocacy & moral-pressure groups,HOW,Reporting,1
-WHO,Police / intelligence services,HOW,Reporting,1
-WHO,Censorship boards or agencies,HOW,Reporting,1
-WHO,Algorithmic moderation systems,HOW,Reporting,1
-WHO,Advertisers,HOW,Reporting,1
-WHO,"Schools, curricula, librarians, academia",HOW,Reporting,1
+WHO,Courts and prosecutors,HOW,Reporting,1
 WHO,Users,HOW,Reporting,1
-WHO,Government agencies,HOW,Reporting,1
-WHO,Legislators,HOW,Reporting,1
-WHO,Ethical investors / shareholders,WHAT,Content moderation,1
+WHO,Police / intelligence services,HOW,Reporting,1
 WHO,Ethical investors / shareholders,WHAT,Media moderation,1
 WHO,Ethical investors / shareholders,WHAT,Censorship,1
-WHO,Ethical investors / shareholders,WHY,Misinformation or disinformation as harm,1
-WHO,Ethical investors / shareholders,WHY,Democratic self-defence,1
-WHO,Ethical investors / shareholders,WHY,Conflict transformation,1
-WHO,Ethical investors / shareholders,WHY,State security,1
+WHO,Ethical investors / shareholders,WHAT,Content moderation,1
 WHO,Ethical investors / shareholders,WHY,Harm principles and hate speech regulation,1
 WHO,Ethical investors / shareholders,WHY,Coherence,1
+WHO,Ethical investors / shareholders,WHY,"Privacy, reputation & dignity",1
 WHO,Ethical investors / shareholders,WHY,Political control,1
 WHO,Ethical investors / shareholders,WHY,Clear and present danger,1
+WHO,Ethical investors / shareholders,WHY,Misinformation or disinformation as harm,1
 WHO,Ethical investors / shareholders,WHY,Brand safety,1
-WHO,Ethical investors / shareholders,WHY,"Privacy, reputation & dignity",1
+WHO,Ethical investors / shareholders,WHY,Democratic self-defence,1
+WHO,Ethical investors / shareholders,WHY,State security,1
+WHO,Ethical investors / shareholders,WHY,Conflict transformation,1
 WHO,Ethical investors / shareholders,WHY,Social cohesion,1
-HOW,Reporting,WHAT,Content moderation,1
 HOW,Reporting,WHAT,Media moderation,1
 HOW,Reporting,WHAT,Censorship,1
-HOW,Reporting,WHY,Misinformation or disinformation as harm,1
-HOW,Reporting,WHY,Democratic self-defence,1
-HOW,Reporting,WHY,Conflict transformation,1
-HOW,Reporting,WHY,State security,1
+HOW,Reporting,WHAT,Content moderation,1
 HOW,Reporting,WHY,Harm principles and hate speech regulation,1
 HOW,Reporting,WHY,Coherence,1
+HOW,Reporting,WHY,"Privacy, reputation & dignity",1
 HOW,Reporting,WHY,Political control,1
 HOW,Reporting,WHY,Clear and present danger,1
+HOW,Reporting,WHY,Misinformation or disinformation as harm,1
 HOW,Reporting,WHY,Brand safety,1
-HOW,Reporting,WHY,"Privacy, reputation & dignity",1
+HOW,Reporting,WHY,Democratic self-defence,1
+HOW,Reporting,WHY,State security,1
+HOW,Reporting,WHY,Conflict transformation,1
 HOW,Reporting,WHY,Social cohesion,1
 WHO,Political groups,WHY,Alignment with human values,1
 WHO,AI labs as moderators,WHAT,Debate management,1
@@ -5424,12 +5424,12 @@ WHO,Human rights bodies (NGOs / WHO),HOW,Self-censorship,1
 WHO,Human rights bodies (NGOs / WHO),HOW,Monitoring,1
 WHO,Human rights bodies (NGOs / WHO),WHAT,Other,1
 WHO,Human rights bodies (NGOs / WHO),WHAT,Censorship,1
-WHO,Human rights bodies (NGOs / WHO),WHY,Alignment with human values,1
 WHO,Human rights bodies (NGOs / WHO),WHY,Coersive,1
-WHO,Human rights bodies (NGOs / WHO),WHY,State security,1
-WHO,Human rights bodies (NGOs / WHO),WHY,Compliance,1
 WHO,Human rights bodies (NGOs / WHO),WHY,"Privacy, reputation & dignity",1
+WHO,Human rights bodies (NGOs / WHO),WHY,Alignment with human values,1
+WHO,Human rights bodies (NGOs / WHO),WHY,State security,1
 WHO,Human rights bodies (NGOs / WHO),WHY,Social cohesion,1
+WHO,Human rights bodies (NGOs / WHO),WHY,Compliance,1
 WHO,Editors,HOW,Other,1
 GROUP,AI alignment,WHO,Private firms,1
 GROUP,AI alignment,HOW,Agenda setting,1
@@ -5447,80 +5447,80 @@ WHO,News agencies / wire services,HOW,Prompting,1
 GROUP,Debate management,WHO,Religious organisations,1
 GROUP,Censorship,HOW,Political censorship,1
 WHO,"Public-private partnerships (""free-speech triangle"")",HOW,Political censorship,1
-WHO,Platforms,HOW,Political censorship,1
-WHO,Police / intelligence services,HOW,Political censorship,1
+WHO,Government agencies,HOW,Political censorship,1
 WHO,Algorithmic moderation systems,HOW,Political censorship,1
 WHO,"Schools, curricula, librarians, academia",HOW,Political censorship,1
-WHO,Government agencies,HOW,Political censorship,1
-HOW,Political censorship,WHAT,Content moderation,1
+WHO,Platforms,HOW,Political censorship,1
+WHO,Police / intelligence services,HOW,Political censorship,1
 HOW,Political censorship,WHAT,Censorship,1
-HOW,Political censorship,WHY,State security,1
+HOW,Political censorship,WHAT,Content moderation,1
 HOW,Political censorship,WHY,Ideological consolidation,1
+HOW,Political censorship,WHY,State security,1
 GROUP,Censorship,WHY,Freedom of expression,1
+WHO,Online mobs / pile-ons,WHY,Fair trial / administration of justice,1
+WHO,Online mobs / pile-ons,WHY,Freedom of expression,1
+WHO,Government agencies,WHY,Freedom of expression,1
+WHO,Political groups,WHY,Freedom of expression,1
 WHO,Platforms,WHY,Freedom of expression,1
 WHO,Editors,WHY,Freedom of expression,1
-WHO,Police / intelligence services,WHY,Freedom of expression,1
-WHO,Political groups,WHY,Freedom of expression,1
 WHO,Religious authorities,WHY,Freedom of expression,1
-WHO,Government agencies,WHY,Freedom of expression,1
-WHO,Online mobs / pile-ons,WHY,Freedom of expression,1
-WHO,Online mobs / pile-ons,WHY,Fair trial / administration of justice,1
+WHO,Police / intelligence services,WHY,Freedom of expression,1
 HOW,Coersive,WHY,Freedom of expression,1
-HOW,Labeling,WHY,Freedom of expression,1
-HOW,Blocking,WHY,Freedom of expression,1
-HOW,Restricting access,WHY,Freedom of expression,1
-HOW,Review,WHY,Freedom of expression,1
-HOW,Monitoring,WHY,Freedom of expression,1
-HOW,Modification,WHY,Freedom of expression,1
 HOW,Obfuscation,WHY,Freedom of expression,1
+HOW,Review,WHY,Freedom of expression,1
+HOW,Restricting access,WHY,Freedom of expression,1
+HOW,Monitoring,WHY,Freedom of expression,1
+HOW,Blocking,WHY,Freedom of expression,1
+HOW,Labeling,WHY,Freedom of expression,1
+HOW,Modification,WHY,Freedom of expression,1
 WHAT,Other,WHY,Freedom of expression,1
 WHAT,Censorship,WHY,Freedom of expression,1
 WHO,RLHF annotators,HOW,Coersive,1
 WHO,RLHF annotators,HOW,Economic,1
 WHO,RLHF annotators,WHY,State security,1
 GROUP,Content moderation,HOW,Transparency in moderation/reporting,1
-WHO,Platforms,HOW,Transparency in moderation/reporting,1
-WHO,Regulators,HOW,Transparency in moderation/reporting,1
-WHO,Content moderators / BPO workforces,HOW,Transparency in moderation/reporting,1
-WHO,Mediators,HOW,Transparency in moderation/reporting,1
-WHO,Censorship boards or agencies,HOW,Transparency in moderation/reporting,1
-WHO,Algorithmic moderation systems,HOW,Transparency in moderation/reporting,1
-WHO,Users,HOW,Transparency in moderation/reporting,1
 WHO,Government agencies,HOW,Transparency in moderation/reporting,1
-HOW,Transparency in moderation/reporting,WHAT,Content moderation,1
+WHO,Mediators,HOW,Transparency in moderation/reporting,1
+WHO,Content moderators / BPO workforces,HOW,Transparency in moderation/reporting,1
+WHO,Algorithmic moderation systems,HOW,Transparency in moderation/reporting,1
+WHO,Platforms,HOW,Transparency in moderation/reporting,1
+WHO,Censorship boards or agencies,HOW,Transparency in moderation/reporting,1
+WHO,Regulators,HOW,Transparency in moderation/reporting,1
+WHO,Users,HOW,Transparency in moderation/reporting,1
 HOW,Transparency in moderation/reporting,WHAT,Media moderation,1
 HOW,Transparency in moderation/reporting,WHAT,Censorship,1
-HOW,Transparency in moderation/reporting,WHY,Obscenity and decency,1
-HOW,Transparency in moderation/reporting,WHY,Protection of children,1
-HOW,Transparency in moderation/reporting,WHY,Misinformation or disinformation as harm,1
-HOW,Transparency in moderation/reporting,WHY,Democratic self-defence,1
-HOW,Transparency in moderation/reporting,WHY,State security,1
+HOW,Transparency in moderation/reporting,WHAT,Content moderation,1
 HOW,Transparency in moderation/reporting,WHY,Harm principles and hate speech regulation,1
 HOW,Transparency in moderation/reporting,WHY,Coherence,1
-HOW,Transparency in moderation/reporting,WHY,Political control,1
-HOW,Transparency in moderation/reporting,WHY,Compliance,1
 HOW,Transparency in moderation/reporting,WHY,"Privacy, reputation & dignity",1
+HOW,Transparency in moderation/reporting,WHY,Political control,1
+HOW,Transparency in moderation/reporting,WHY,Obscenity and decency,1
+HOW,Transparency in moderation/reporting,WHY,Misinformation or disinformation as harm,1
 HOW,Transparency in moderation/reporting,WHY,Brand safety,1
+HOW,Transparency in moderation/reporting,WHY,Democratic self-defence,1
+HOW,Transparency in moderation/reporting,WHY,State security,1
+HOW,Transparency in moderation/reporting,WHY,Protection of children,1
+HOW,Transparency in moderation/reporting,WHY,Compliance,1
 WHO,Advertisers,HOW,Fairness,1
 WHO,Mediators,WHY,Clear and present danger,1
 HOW,Inclusion,WHY,Genocide prevention / dangerous speech,1
-WHO,"Schools, curricula, librarians, academia",HOW,Debate management,1
-WHO,Platforms,HOW,Debate management,1
 WHO,Courts and prosecutors,HOW,Debate management,1
+WHO,Platforms,HOW,Debate management,1
+WHO,"Schools, curricula, librarians, academia",HOW,Debate management,1
 HOW,Debate management,WHAT,Other,1
 HOW,Debate management,WHAT,Media moderation,1
-HOW,Debate management,WHY,Obscenity and decency,1
-HOW,Debate management,WHY,Protection of children,1
-HOW,Debate management,WHY,State security,1
-HOW,Debate management,WHY,Economic pressure,1
-HOW,Debate management,WHY,Fair trial / administration of justice,1
 HOW,Debate management,WHY,Coherence,1
-HOW,Debate management,WHY,Compliance,1
 HOW,Debate management,WHY,Professional / industry self-governance,1
-HOW,Debate management,WHY,Political control,1
-HOW,Debate management,WHY,Consumer protection / fair competition,1
-HOW,Debate management,WHY,News values / editorial judgment,1
+HOW,Debate management,WHY,Fair trial / administration of justice,1
 HOW,Debate management,WHY,"Privacy, reputation & dignity",1
+HOW,Debate management,WHY,Obscenity and decency,1
+HOW,Debate management,WHY,Political control,1
+HOW,Debate management,WHY,Economic pressure,1
+HOW,Debate management,WHY,News values / editorial judgment,1
+HOW,Debate management,WHY,Consumer protection / fair competition,1
+HOW,Debate management,WHY,State security,1
+HOW,Debate management,WHY,Protection of children,1
+HOW,Debate management,WHY,Compliance,1
 WHO,Public-health bodies (NGOs / WHO),HOW,Intermediate,1
 WHO,Cloud / infrastructure providers,HOW,Interiorisation,1
 WHO,Private firms,HOW,Intermediate,1
@@ -5534,46 +5534,46 @@ WHO,News agencies / wire services,WHY,Harm principles and hate speech regulation
 WHO,AI labs as moderators,WHY,Ideological consolidation,1
 WHO,Fact-checkers and verification units,WHY,Wartime necessity,1
 GROUP,Content moderation,HOW,Warning,1
+WHO,Platforms,HOW,Warning,1
 WHO,Users,HOW,Warning,1
 WHO,Content moderators / BPO workforces,HOW,Warning,1
 WHO,Algorithmic moderation systems,HOW,Warning,1
-WHO,Platforms,HOW,Warning,1
 HOW,Warning,WHAT,Content moderation,1
-HOW,Warning,WHY,Protection of children,1
-HOW,Warning,WHY,Misinformation or disinformation as harm,1
-HOW,Warning,WHY,State security,1
 HOW,Warning,WHY,Harm principles and hate speech regulation,1
 HOW,Warning,WHY,Coherence,1
-HOW,Warning,WHY,Brand safety,1
 HOW,Warning,WHY,"Privacy, reputation & dignity",1
+HOW,Warning,WHY,Misinformation or disinformation as harm,1
+HOW,Warning,WHY,Brand safety,1
+HOW,Warning,WHY,State security,1
 HOW,Warning,WHY,Social cohesion,1
+HOW,Warning,WHY,Protection of children,1
 GROUP,Media moderation,WHO,Pre-platform moderators,1
 GROUP,Media moderation,HOW,Redirection,1
 GROUP,Content moderation,WHY,Freedom of expression,1
-WHO,Cloud / infrastructure providers,WHY,Freedom of expression,1
 WHO,Users,WHY,Freedom of expression,1
+WHO,Cloud / infrastructure providers,WHY,Freedom of expression,1
 HOW,Filtering,WHY,Freedom of expression,1
 HOW,Economic,WHY,Freedom of expression,1
 HOW,Metamoderation,WHY,Freedom of expression,1
 WHAT,Content moderation,WHY,Freedom of expression,1
-WHO,RLHF annotators,HOW,Prompting,1
 WHO,AI labs as moderators,HOW,Prompting,1
+WHO,RLHF annotators,HOW,Prompting,1
 WHO,Courts and prosecutors,WHY,Public interest,1
 GROUP,Media moderation,HOW,Intermediate,1
 GROUP,Content moderation,HOW,Mediators,1
+WHO,Platform oversight bodies,HOW,Mediators,1
 WHO,Platforms,HOW,Mediators,1
 WHO,Algorithmic moderation systems,HOW,Mediators,1
-WHO,Platform oversight bodies,HOW,Mediators,1
-HOW,Mediators,WHY,Protection of children,1
-HOW,Mediators,WHY,Alignment with human values,1
 HOW,Mediators,WHY,Consumer protection / fair competition,1
-WHO,Cloud / infrastructure providers,HOW,Interoperability,1
-WHO,Platforms,HOW,Interoperability,1
-WHO,Regulators,HOW,Interoperability,1
+HOW,Mediators,WHY,Alignment with human values,1
+HOW,Mediators,WHY,Protection of children,1
 WHO,Content moderators / BPO workforces,HOW,Interoperability,1
 WHO,Platform oversight bodies,HOW,Interoperability,1
-HOW,Interoperability,WHY,Protection of children,1
-HOW,Interoperability,WHY,State security,1
-HOW,Interoperability,WHY,Harm principles and hate speech regulation,1
+WHO,Platforms,HOW,Interoperability,1
+WHO,Regulators,HOW,Interoperability,1
+WHO,Cloud / infrastructure providers,HOW,Interoperability,1
 HOW,Interoperability,WHY,Professional / industry self-governance,1
+HOW,Interoperability,WHY,Harm principles and hate speech regulation,1
+HOW,Interoperability,WHY,State security,1
+HOW,Interoperability,WHY,Protection of children,1
 WHO,Pre-platform moderators,WHY,Harm reduction / public health,1

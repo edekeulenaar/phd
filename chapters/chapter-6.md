@@ -64,7 +64,7 @@ Third, we observe an acceleration of historical projects of cultural reform with
 
 Fourth, “context collapse” impairs mutual understanding. We only understand a speech act if we have access to the utterer’s reason for saying that. I.e., “We understand a speech-act when we know what makes it acceptable” (Habermas 1984), i.e., justifiable, reasonable. With collapsed contexts, it is difficult to see the background, context and reason behind someone else’s utterance. The challenge is, thus, to _not_ understand the very norms of language that renders communication impossible, because it removes necessary context for communication and eventual understanding — we no longer “know what makes it acceptable” normatively.
 
-Fifth, the application of moderation decisions is partial. Studies that look into the relationship between users and platforms have focused on how users experience [@myerswestCensoredSuspendedShadowbanned2018; @maHowUsersExperience2023] and interpret moderation [@maywormContentModerationFolk2024]. Others ask users about the legitimacy and fairness of moderation decisions [@panComparingPerceivedLegitimacy2022; @maImNotSure2022; @caiContentModerationJustice2024], examining experiences and perspectives as misunderstandings, miscalculations, or flawed “imaginaries”. In the absence of clear (and trusted) justifications for moderation, users effectively draw “connections between related phenomena, developing non-authoritative conceptions of why and how their content was removed” (Myers West, 2018, 8). This raises the question of whether moderation “works” if users do not consent to it in the long term, and how it transforms the content that was originally sanctioned (see e.g., [Chapter 11. Deplatforming, demotion and folk theories of Big Tech persecution](#/chapter-11)).
+Fifth, the application of moderation decisions is partial. Studies that look into the relationship between users and platforms have focused on how users experience [@myerswestCensoredSuspendedShadowbanned2018; @maHowUsersExperience2023] and interpret moderation [@maywormContentModerationFolk2024]. Others ask users about the legitimacy and fairness of moderation decisions [@panComparingPerceivedLegitimacy2022; @maImNotSure2022; @caiContentModerationJustice2024], examining experiences and perspectives as misunderstandings, miscalculations, or flawed “imaginaries”. In the absence of clear (and trusted) justifications for moderation, users effectively draw “connections between related phenomena, developing non-authoritative conceptions of why and how their content was removed” (Myers West, 2018, 8). This raises the question of whether moderation “works” if users do not consent to it in the long term, and how it transforms the content that was originally sanctioned (see e.g., [Chapter 12. Deplatforming, demotion and folk theories of Big Tech persecution](#/chapter-12)).
 
 These studies, however, cannot highlight the overall _deliberation_ that undergirds experiences or perceptions of moderation — namely, _what_ users themselves may consider as objectionable information and how they think such information should be moderated in relation to their environment, i.e., how the platform does moderation. This is the reason why we ought to look at the _process of deliberation_ of these standards, especially when it is centralised by platform moderation. Accordingly, we follow the _flow_ of speech norms in acknowledgment of discursive spaces as “open-ended” [@hauserFeaturesPublicSphere1987, 439] and variable, dynamic, and in constant negotiation. This larger process of public deliberation about speech norms is of historical weight: they are, as Fraser would put it, processes that come to delineate public spheres and their “counter” parts.
 
@@ -94,7 +94,7 @@ For comparison, all of YouTube's policies were collected using the Wayback Machi
 
 The YouTube dataset was filtered to only contain references to debates about what constitutes acceptable language ("you can't say *"; "* is unacceptable", "* should be suspended OR removed OR banned OR cancelled", etc.); moderation ("suspended", "demoted", "shadowbanned"...); discrimination ("hate", "harassment", "discrimination", "antisemitism"...); and fakeness ("fake news", "misinformation", "disinformation", and so on) (see [CH4 CS1 Table 1](CH4%20CS1%20Table%201.png)).
 
-![CH4 CS1 Table 1](CH4%20CS1%20Table%201.png)
+![CH4 CS1 Table 1](images/CH4%20CS1%20Table%201.png)
 **Table 1**. *Terms used to filter Dimitri Tokmetzis' YouTube dataset (2006-2022).*
 
 ## Analysis
@@ -111,7 +111,7 @@ It is important to highlight what is meant by "distant reading", here. In one se
 
 Next, we looked at how commenters discussed YouTube's content moderation, or moderation in general. This implied filtering commenters with sentences containing the expression "YouTube should"; "YouTube should remove" or "YouTube should allow", and then finding prominent themes or topics in the ending of each sentence [see Figures x and y]. We used word trees [@wattenbergWordTreeInteractive2008] for this task. This technique finds sentence completions for common prefixes (i.e., those just specified). As we found diverging ideas of what and how YouTube ought to moderate, we also examined how users conceptualised YouTube as a space, comparing sentences that mentioned "YouTube is" over time [Figure x and y]. 
 
-![Figure 1](Emillie%20AoIR%20method%202022.png)
+![Figure 1](images/Emillie%20AoIR%20method%202022.png)
 **Figure 1.** Method diagram. 
 
 # Findings
@@ -122,14 +122,14 @@ Looking at YouTube, we see that its policies, like Twitter's (see [Part V. Modul
 
 Then, from 2014 onwards, policies undergo a period of conceptual refinement, or complexification [@passmannHealthyCommunitiesToxic2023]. Technically, the Community Guidelines page fragments into pages dedicated to each type of sanctioned object: hate speech, spam, violent or graphic content, harmful or dangerous content, and content deriving from salient events, such as the COVID-19 crisis and elections. In this context, enforcement techniques begin to move from a plethora of deletion methods to dynamic demotion. This technique is explicitly applied to what the platfrom calls "borderline content" [@youtubeFourRsResponsibility2021], which denotes conspiratorial, hateful or other content with varying levels of objectionability, depending on context, public or regulatory opinion. 
 
-![Figure 2](Figure%202%205.png)
+![Figure 2](images/Figure%202%205.png)
 **Figure 2.** *Number of YouTube policy edits (2006-2022) and mentions of enforcement options (2007-2021).*
 
 ## Comments: from unacceptable speech to unacceptable speech moderation
 
 How do these policies compare to users’ discussions about problematic speech? In [Figure 2](Figure%202%205.png), we see that different issues are given slightly different levels of attention. The most discussed type of objectionable content is racism (or racists, depending on the term ending), followed by abuse / abusive, bigot / bigoted, discrimination / discriminate, sexist / sexism and offensive / offensiveness. The persistence of racism as the most mentioned term among filter keywords reveals, at least partly, its importance in wider (English-speaking) debates on speech norms. One could see it as a sort of "anchoring issue" that uphold both *debate* about speech norms and the normative imperatives that derive from it. 
 
-![Figure 3](Figure%203.1.png)
+![Figure 3](images/Figure%203.1.png)
 
 Indeed, looking closer at discussions about *racism* over time, we see that the definitions commenters have attributed to the term have shifted considerably, to the point of obtaining an essentially contested meaning. [Description]  
 

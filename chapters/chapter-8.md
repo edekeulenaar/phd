@@ -56,38 +56,38 @@ Twitter's moderation of existing authorities speaks to a number of foundational 
 
 As may be expected, audiences and authoritative sources diverge most around unconfirmed information. There were no single, confirmed treatments for COVID-19 until the announcement of the Pfizer vaccine in August of 2020. Despite declaring that “no treatment” and “vaccines” were available by January, authoritative sources like the World Health Organisation and the CDC fail to prevent their audiences from contemplating a plethora of treatments ranging from house-grown remedies and specialised medicines (see [Figure 1](#^figure-1)), be it vitamin C, ethanol, zinc or remdesivir.
 
-![Figure 1](Figure%201%202.png)
+![Figure 1](images/Figure%201%202.png)
 **Figure 1**. *Heatmap of forms of COVID-19 treatment mentioned by authoritative sources (Tweets and website data) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., "[whitehouse.gov](https://www.google.com/url?q=http://whitehouse.gov&sa=D&source=editors&ust=1707917247170095&usg=AOvVaw1LG7sOXKiEbm_cTjbzwoF9)")).* ^figure-1
 
 In this context, authoritative sources act primarily as debunkers of unconfirmed or false information. The World Health Organisation opens a page dedicated to debunking false ingredients reported on social media. From January, it debunks nearly half of the ingredients discussed by their audiences: ethanol, honey, lemon, cannabis, cocaine, colloidal silver, lopinavir and others (see [[#^figure-2|Figure 2]]).
 
 Elsewhere, authoritative claims also express uncertainty on transmission, treatments and prevention, stressing the uncertain nature of research on COVID-19 [@bostromMethodsCommunicatingComplexity2015, 633]. This can be said about chloroquine, hydroxychloroquine, remdesivir, dexamethasone, prednisolone and tamiflu, about which authoritative sources mention ongoing research and testing. This does not prevent audiences from continuing to engage with these ingredients.
 
-![Figure 2](Figure%202%203.png)
+![Figure 2](images/Figure%202%203.png)
 **Figure 2**. *Heatmap of authoritative clams on COVID-19 treatments. Purple values count as authoritative debunks of audience claims; blue values indicate instances in which authoritative have framed a given treatment as disputed. Visualisation by Carlo Gaetano.* ^figure-2
 
 ## Audiences are divided around contradicting claims by authoritative sources
 
 Zooming into authoritative and audience claims on the efficacy of hydroxychloroquine, we see that audiences (below, "users") appear to polarise around diverging authoritative statements. While some echo Donald Trump's claims that the ingredient is effective (including in combination with azythromycin), others relay the World Health Organisation's claim that it is not. A small majority state the same claim as the CDC and the NIH who rule the matter as still "uncertain".
 
-![Figure 3](Figure%203%201.png)
+![Figure 3](images/Figure%203%201.png)
 **Figure 3**. *Beeswarm of authoritative and audience claims on whether hydroxychloroquine is or is not effective against COVID-19 infections. Visualisation by Carlo de Gaetano.* ^figure-3
 
 The same can be said about modes of transmission. In the early months of the pandemic, authoritative sources and their audiences usually referred to different modes of COVID-19 transmission. Audiences do focus on modes of transmission mentioned by authoritative sources: (respiratory) droplets, close contact, community spread, coughing, sneezing and touch. Here, too, authoritative sources act as debunkers: 5G is dismissed at least twice after gaining considerable traction among audiences in March.
 
-![Figure 4](Figure%204.png)
+![Figure 4](images/Figure%204.png)
 **Figure 4**. *Heatmap of modes of transmission mentioned by authoritative sources (Tweets and websites) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., "[whitehouse.gov](https://www.google.com/url?q=http://whitehouse.gov&sa=D&source=editors&ust=1707917247172585&usg=AOvVaw2twpeykb3L3eXYIxsZcUYh)")). ^figure-4
 
 The caveat, here, is that audiences continue to focus on modes of transmission disputed among authoritative sources (see [[#^figure-4|Figure 4]]). With little scientific consensus on the minutiae of droplet transmissions, there is notable public confusion on the airborne nature of the virus [@achenbachStudiesLeaveQuestion2020; @lewisCoronavirusAirborneExperts2020; @mandavilli239ExpertsOne2020]. The World Health Organisation expresses uncertainty about airborne transmission throughout February, then later joins the U.S. Centers for Disease Control and Prevention in March to affirm that it spreads mainly via droplets. Only in April 2020 does the CDC offer a verdict: "according to experts", it says, "the virus can be transmitted by both droplets and smaller, 'aerosol' types of particles" [@centersfordiseasecontrolandpreventionHealthcareProfessionalsFrequently2020]. While the World Health Organisation rejects this claim, a slight majority of users echo the CDC's statement well until October.
 
-![Figure 5](Figure%205.png)
+![Figure 5](images/Figure%205.png)
 **Figure 5**. *Line graph of audience and authoritative statements about whether COVID-19 is airborne or not. ^figure-5
 
 In this context, audiences express a relatively constant amount of uncertainty throughout, as well as conspiratorial suspicions in early March. While this is especially applicable to the months of February and March, audiences appear to express a relatively constant amount of claims aligned with the majority of authoritative sources. This may suggest that more consensus between authoritative sources could foster consensus among their publics.
 
 There is further disagreement on whether COVID-19 is transmitted through droplets or smaller aerosol particles (see [[#^figure-5|Figure 5]]). While virtually all sources agree that the virus is transmitted by the former, some specify that aerosols may remain in the air for longer periods of time. The World Health Organization’s expressions of doubt regarding the latter claim is quickly contradicted by the White House. Audiences express an equally distributed amount of agreement with each claim, seemingly partitioned into groups that either rely on the word of the World Health Organisation or that of the White House.
 
-![Figure 6](Figure%206%201.png)
+![Figure 6](images/Figure%206%201.png)
 **Figure 6**. *Line graph of claims on droplet or aerosol transmission by authoritative sources (web domains) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., "[whitehouse.gov](https://www.google.com/url?q=http://whitehouse.gov&sa=D&source=editors&ust=1707917247174745&usg=AOvVaw2FE3br_mRZBrDNZjLc90O1)")). ^figure-6
 
 The debate on whether the virus is droplet or aerosol airborne shows how popular understandings of viral transmission appear to have evolved through discussions between authoritative sources and audiences. Early public doubts about whether the virus was airborne have prompted authorities to define and measure airborne transmission in increasingly concrete terms ([Figure 6](#^figure-6)). While the World Health Organisation had stated earlier that airborne transmission is an exchange of infected droplets, recent findings on aerosol transmission substantiate earlier public conceptions of airborne transmission as a somewhat ubiquitous form of “air infection” [@mandavilli239ExpertsOne2020].
@@ -102,26 +102,26 @@ The fact that authoritative sources occasionally disagree with each other poses 
 
 Later, on December 16, 2020, Twitter goes as far as to specify the type of rhetoric that infringes upon its COVID-19 misinformation policy. It targets Tweets that “advance a claim of fact, expressed in definite terms”, and later “Tweets that are an assertion of fact (not an opinion), expressed definitely, and intended to influence others’ behaviour” (Twitter, 2020d). Misleading statements on “vaccines” consist in spreading “preventative measures that are not approved by health authorities, or that are approved by health authorities but not safe to administer from home”; “the sale or facilitation of medicines or drugs that require a prescription or physician consultation”; or information on “adverse impacts or effects of receiving vaccinations, where these claims have been widely debunked” (Twitter, 2020d). It targets conspiratorial language, labelling Tweets “which suggest that COVID-19 vaccinations are part of a deliberate or intentional attempt to cause harm or control populations” (Twitter, 2020d). It reinforces consent to local authoritative guidelines by targeting Tweets that dispute “local or national advisories or mandates pertaining to curfews, lockdowns, travel restrictions, quarantine protocols, inoculations [...]”, and even targets Tweets about “research findings (such as misrepresentations of or unsubstantiated conclusions about statistical data) used to advance a specific narrative that diminishes the significance of the disease". Once again, all of the above is first labelled, and then removed (Twitter, 2020d).
 
-![Figure 7](Figure%207%201.png)
+![Figure 7](images/Figure%207%201.png)
 **Figure 7**. *Timeline of Twitter's "COVID-19 misleading information policy". Source in image. Visualisation by Emillie de Keulenaar, with previous contributions by Guilherme Appolinário.* ^figure-7
 
 ## Twitter acts as a debunking system
 
 In practice, this means labelling almost every Tweet that mentions a COVID-19 treatment ingredient disputed by authoritative sources (see [[#^figure-8|Figure 8]]). Though some are deleted, most are simply flagged and redirected to a centralised reference page on local COVID-19 guidelines and information. This also applies to claims disputed amongst authoritative sources, such as whether hydroxychloroquine is or is not a safe drug.
 
-![Figure 8](Figure%208.png)
+![Figure 8](images/Figure%208.png)
 **Figure 8**. *Heatmap of audience Tweets that mention a list of treatments for COVID-19. In green are numbers of unmoderated Tweets; in red, moderated Tweets. Visualisation by Carlo Gaetano.* ^figure-8
 
 It also means supporting authoritative sources in their continuous debunking of user claims ([[#^figure-9|Figure 9]]). Authoritative sources — the World Health Organisation, in particular — repeatedly deny claims made on social media.
 
-![Figure 9](Figure%209.png)
+![Figure 9](images/Figure%209.png)
 **Figure 9**. *Beeswarm of Twitter labels for Tweets mentioning COVID transmission, prevention and treatment.* ^figure-9
 
 ## In the absence of consensus between authoritative sources, Twitter intervenes as an authority in its own right
 
 At issue is that disagreements amongst authoritative sources create a crisis of authority on the platform. Twitter can no longer redirect users to one specific source. In the absence of consensus among authorities, Twitter begins to highlight the disputed nature of even authoritative claims (see Figure 10). This applies particularly to U.S. President Donald Trump's private account. While audience Tweets are more severely moderated (suspended, deleted), Trump's Tweets initially obtain the "#KnowTheFacts" prompt the platform introduced in January 29th (see Figure 7). Reuniting several other authoritative sources, this prompt is intended to display current consensus among a majority of authoritative sources, including "trusted news sources" (Twitter, 2020c). As Trump alleges that "sometimes over 100,000" people "die from the Flu" in October, Twitter flags it for violating "the Twitter Rules about spreading misleading and potentially harmful information related to COVID-19." The same happens to a later Tweet claiming immunity from COVID-19.
 
-![](meta%20trump%20[Recovered]-02.png)
+![](images/meta%20trump%20%5BRecovered%5D-02.png)
 **Figure 10**. *Beeswarm of moderated audience and Trump Tweets mentioning words related to COVID-19 treatments, transmission and prevention. Every dot is one or many Tweets posted in a given day. Visualisation by Emillie de Keulenaar.*
 
 Both of them do stay up, in accordance with Twitter's "World leaders" and "Public-interest exceptions" policies (Twitter, 2019), until Trump's account is permanently suspended for violating a separate policy designed to prevent ‘glorification of violence’ (Twitter, 2021).
@@ -130,7 +130,7 @@ Both of them do stay up, in accordance with Twitter's "World leaders" and "Publi
 
 The methodology of this study is two-fold. Based on a collection of millions of Tweets, we first parse, analyse and visualise diverging claims on COVID-19 transmission, prevention and treatments between U.S. authoritative sources and their respective audiences. We then look at how Twitter moderated disputed claims by first consulting content moderation policies designed for COVID-19 misinformation, and then obtaining moderation metadata from Tweets containing disputed contents.
 
-![Figure 10](Figure%2010.png)
+![Figure 10](images/Figure%2010.png)
 **Figure 10**. *Method diagram.* 
 ## Definitions
 
