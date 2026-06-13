@@ -1,0 +1,4 @@
+{
+  "thesis": "",
+  "_note": "Map a section slug to the URL where its PDF is hosted (any external host). 'thesis' is the full-thesis PDF. Add per-section keys when you have them, e.g. \"chapter-1\": \"https://…/chapter-1.pdf\". Leave a value empty (\"\") for sections without a PDF. Re-run build_site_data.py after editing."
+}

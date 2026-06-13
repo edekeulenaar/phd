@@ -338,23 +338,43 @@ def sync_thesis() -> None:
                 print(f"  · missing source: {src}")
         entries.append(rec)
 
-    # Detect author-supplied Obsidian PDF exports in site/pdf/<slug>.pdf.
-    # The reader's "Download PDF" panel offers only sections that have one;
-    # a full-thesis pdf/thesis.pdf is offered as a single download.
+    # PDF downloads. Large exports are hosted externally — site/pdf/pdf-urls.json
+    # maps each slug (and "thesis") to its hosted URL. Small per-section PDFs
+    # MAY instead be committed as site/pdf/<slug>.pdf and are linked directly;
+    # a configured URL takes precedence over a local file.
     pdf_dir = Path(__file__).resolve().parent.parent / "pdf"
-    have_pdf = {p.stem for p in pdf_dir.glob("*.pdf")} if pdf_dir.exists() else set()
+    local_pdf = {p.stem for p in pdf_dir.glob("*.pdf")} if pdf_dir.exists() else set()
+    url_map = {}
+    url_cfg = pdf_dir / "pdf-urls.json"
+    if url_cfg.exists():
+        try:
+            raw = _json.loads(url_cfg.read_text(encoding="utf-8"))
+            url_map = {k: v.strip() for k, v in raw.items()
+                       if isinstance(v, str) and v.strip()
+                       and not k.startswith("_")}
+        except Exception as _e:
+            print(f"  (pdf-urls.json unreadable: {_e})")
+
+    def pdf_href(slug):
+        if slug in url_map:
+            return url_map[slug]
+        if slug in local_pdf:
+            return f"pdf/{slug}.pdf"
+        return ""
+
     n_pdf = 0
     for rec in entries:
-        if rec["slug"] in have_pdf:
-            rec["pdf"] = True
+        href = pdf_href(rec["slug"])
+        if href:
+            rec["pdfUrl"] = href
             n_pdf += 1
-    full_pdf = "thesis" in have_pdf
-    print(f"  PDFs available: {n_pdf} section(s)"
-          f"{' + full thesis.pdf' if full_pdf else ''}")
+    full_pdf_url = pdf_href("thesis")
+    print(f"  PDF downloads: {n_pdf} section(s)"
+          f"{' + full thesis' if full_pdf_url else ''}")
 
     # TOC tree: front matter, then part→children groups, then back matter.
     toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
-           "author": THESIS_AUTHOR, "fullPdf": full_pdf,
+           "author": THESIS_AUTHOR, "fullPdfUrl": full_pdf_url,
            "entries": entries,
            "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}
     SITE_TOC.write_text(_json.dumps(toc, ensure_ascii=False, indent=0),

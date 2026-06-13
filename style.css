@@ -273,26 +273,22 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   display: flex; align-items: flex-start; gap: 0.55em;
   padding: 0.18em 0; font-size: 0.92rem; cursor: pointer;
 }
-#pdf-panel .pdf-check input { margin-top: 0.25em; }
-#pdf-panel .pdf-check-part span { font-weight: 700; }
-#pdf-panel .pdf-check-chapter { padding-left: 0.8rem; }
-#pdf-panel .pdf-panel-actions {
-  display: flex; align-items: center; gap: 0.5rem;
-  margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+/* Download links list. */
+#pdf-panel .pdf-downloads { display: flex; flex-direction: column; gap: 0.1rem; }
+#pdf-panel .pdf-dl {
+  display: block; padding: 0.4em 0.2em;
+  font-size: 0.95rem; color: var(--ink);
+  border-bottom: 1px solid var(--rule); text-decoration: none;
 }
-#pdf-panel .pdf-panel-actions .spacer { flex: 1; }
-#pdf-panel .pdf-mini {
-  font-family: var(--sans); font-size: 11px; padding: 0.35em 0.7em;
-  background: var(--paper); border: 1px solid var(--border); border-radius: 3px;
-  color: var(--muted); cursor: pointer;
+#pdf-panel .pdf-dl:last-child { border-bottom: none; }
+#pdf-panel .pdf-dl:hover { color: var(--accent); }
+#pdf-panel .pdf-dl-full {
+  font-family: var(--sans); font-weight: 700; color: var(--ink);
+  margin-bottom: 0.4rem;
 }
-#pdf-panel .pdf-mini:hover { color: var(--ink); }
-#pdf-panel .pdf-go {
-  font-family: var(--sans); font-size: 12.5px; font-weight: 600;
-  padding: 0.45em 1em; background: var(--ink); color: var(--paper);
-  border: 1px solid var(--ink); border-radius: 3px; cursor: pointer;
-}
-#pdf-panel .pdf-go:hover { background: var(--accent); border-color: var(--accent); }
+#pdf-panel .pdf-dl-part { font-family: var(--sans); font-weight: 700; font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.03em; }
+#pdf-panel .pdf-dl-chapter { padding-left: 0.9rem; }
 #pdf-panel .pdf-close {
   position: absolute; top: 0.6rem; right: 0.7rem;
   width: 1.6rem; height: 1.6rem; border: none; background: none;

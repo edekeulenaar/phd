@@ -3160,19 +3160,25 @@ async function renderLanding() {
 /* ── PDF export: pick chapters on the cover, assemble + print (ssrn CSS) ── */
 
 // One <label><input> per section that has an author-supplied PDF export.
-function pdfChapterChecklist() {
-  const avail = (TOC?.entries || []).filter(e => e.pdf);
-  if (!avail.length) {
-    const full = TOC?.fullPdf
-      ? `<p class="pdf-help">A full-thesis PDF is available below.</p>`
-      : `<p class="pdf-help">No section PDFs have been added yet. Export them
-         from Obsidian into <code>site/pdf/&lt;slug&gt;.pdf</code>.</p>`;
-    return full;
+// A list of direct download links — the full-thesis PDF plus any per-section
+// PDFs, each pointing at its externally-hosted URL (configured in
+// site/pdf/pdf-urls.json). Large files live off-repo, so no merging.
+function pdfDownloadList() {
+  const rows = [];
+  if (TOC?.fullPdfUrl) {
+    rows.push(
+      `<a class="pdf-dl pdf-dl-full" href="${escapeHtml(TOC.fullPdfUrl)}" ` +
+      `target="_blank" rel="noopener" download>⬇ Full thesis (PDF)</a>`);
   }
-  return avail.map(e =>
-    `<label class="pdf-check pdf-check-${e.kind}">` +
-    `<input type="checkbox" value="${e.slug}" checked>` +
-    `<span>${escapeHtml(e.title)}</span></label>`).join("");
+  (TOC?.entries || []).filter(e => e.pdfUrl).forEach(e =>
+    rows.push(
+      `<a class="pdf-dl pdf-dl-${e.kind}" href="${escapeHtml(e.pdfUrl)}" ` +
+      `target="_blank" rel="noopener" download>${escapeHtml(e.title)}</a>`));
+  if (!rows.length) {
+    return `<p class="pdf-help">No PDFs are available yet. Add their hosted
+      URLs to <code>site/pdf/pdf-urls.json</code> and rebuild.</p>`;
+  }
+  return rows.join("");
 }
 
 function openPdfPanel() {
@@ -3184,82 +3190,19 @@ function openPdfPanel() {
       <div class="pdf-panel-inner" role="dialog" aria-label="Download PDF">
         <button class="pdf-close" data-pdf-close aria-label="Close">×</button>
         <h2>Download PDF</h2>
-        <p class="pdf-help">Select the sections to include. Each is the
-          original typeset PDF; multiple selections merge into one file.</p>
-        <div class="pdf-checks">${pdfChapterChecklist()}</div>
-        <div class="pdf-panel-actions">
-          <button type="button" class="pdf-mini" data-pdf-all>All</button>
-          <button type="button" class="pdf-mini" data-pdf-none>None</button>
-          <span class="spacer"></span>
-          ${TOC?.fullPdf ? `<button type="button" class="pdf-mini" data-pdf-full>Full thesis</button>` : ``}
-          <button type="button" class="pdf-go" data-pdf-go>⬇ Download</button>
-        </div>
-        <p class="pdf-status" data-pdf-status hidden></p>
+        <p class="pdf-help">Each link is the original typeset PDF.</p>
+        <div class="pdf-downloads">${pdfDownloadList()}</div>
       </div>`;
     document.body.appendChild(panel);
     panel.addEventListener("click", e => {
       if (e.target === panel || e.target.closest("[data-pdf-close]")) {
-        panel.hidden = true; return;
-      }
-      if (e.target.closest("[data-pdf-all]"))
-        panel.querySelectorAll("input").forEach(c => (c.checked = true));
-      if (e.target.closest("[data-pdf-none]"))
-        panel.querySelectorAll("input").forEach(c => (c.checked = false));
-      if (e.target.closest("[data-pdf-full]"))
-        downloadFile("pdf/thesis.pdf", "thesis.pdf");
-      if (e.target.closest("[data-pdf-go]")) {
-        const slugs = [...panel.querySelectorAll("input:checked")].map(c => c.value);
-        mergeAndDownloadPDF(slugs, panel);
+        panel.hidden = true;
       }
     });
   } else {
-    panel.querySelector(".pdf-checks").innerHTML = pdfChapterChecklist();
+    panel.querySelector(".pdf-downloads").innerHTML = pdfDownloadList();
   }
   panel.hidden = false;
-}
-
-function downloadFile(href, name) {
-  const a = document.createElement("a");
-  a.href = href; a.download = name;
-  document.body.appendChild(a); a.click(); a.remove();
-}
-
-// Fetch the author's per-section Obsidian PDFs and merge the selected ones
-// into a single download (links, page numbers, fonts all preserved). A single
-// selection downloads directly; nothing to merge.
-let _pdfBusy = false;
-async function mergeAndDownloadPDF(slugs, panel) {
-  if (_pdfBusy) return;
-  const status = panel?.querySelector("[data-pdf-status]");
-  const setStatus = t => { if (status) { status.hidden = !t; status.textContent = t || ""; } };
-  if (!slugs.length) { setStatus("Select at least one section."); return; }
-  if (slugs.length === 1) {
-    downloadFile(`pdf/${slugs[0]}.pdf`, `${slugs[0]}.pdf`);
-    panel.hidden = true; return;
-  }
-  if (!window.PDFLib) { setStatus("PDF library still loading — try again."); return; }
-  _pdfBusy = true;
-  try {
-    setStatus("Building your PDF…");
-    const out = await window.PDFLib.PDFDocument.create();
-    for (const slug of slugs) {
-      const resp = await fetch(`pdf/${slug}.pdf`, { cache: "no-store" });
-      if (!resp.ok) throw new Error(`${slug}.pdf HTTP ${resp.status}`);
-      const src = await window.PDFLib.PDFDocument.load(await resp.arrayBuffer());
-      const pages = await out.copyPages(src, src.getPageIndices());
-      pages.forEach(p => out.addPage(p));
-    }
-    const blob = new Blob([await out.save()], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
-    downloadFile(url, "thesis-selection.pdf");
-    setTimeout(() => URL.revokeObjectURL(url), 4000);
-    panel.hidden = true;
-  } catch (err) {
-    console.error("PDF merge:", err);
-    setStatus("Could not build the PDF — see the console.");
-  } finally {
-    _pdfBusy = false;
-  }
 }
 
 // Render the global References list from the built bibliography.

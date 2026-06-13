@@ -503,6 +503,13 @@
     "harvard": "Feng, S., Sorensen, T., Liu, Y., Fisher, J., Park, C. Y., Choi, Y. and Tsvetkov, Y. (2024) *Modular Pluralism: Pluralistic Alignment via Multi-LLM Collaboration*. arXiv. doi:10.48550/arXiv.2406.15951",
     "link": "https://doi.org/10.48550/arXiv.2406.15951"
   },
+  "fogelinLogicDeepDisagreements1985": {
+    "author": "Fogelin",
+    "year": "1985",
+    "inline": "(Fogelin, 1985)",
+    "harvard": "Fogelin, R. J. (1985) ‘The Logic of Deep Disagreements’, *Informal Logic*, pp. 3–11.",
+    "link": ""
+  },
   "fraserRethinkingPublicSphere1990": {
     "author": "Fraser",
     "year": "1990",
@@ -760,6 +767,13 @@
     "year": "2001",
     "inline": "(Jones, 2001)",
     "harvard": "Jones, D. (2001) *Censorship: A World Encyclopedia*. Routledge.",
+    "link": ""
+  },
+  "kakutaniDeathTruthHow2018": {
+    "author": "Kakutani",
+    "year": "2018",
+    "inline": "(Kakutani, 2018)",
+    "harvard": "Kakutani, M. (2018) ‘The Death of Truth: How We Gave up on Facts and Ended up with Trump’, *The Guardian*.",
     "link": ""
   },
   "kalevleetaruSocialMediaContent2018": {

@@ -1,14 +1,18 @@
-# Thesis PDF exports
+# Thesis PDF links
 
-Drop your Obsidian "Better Export PDF" files here, named by slug so the
-site's Download panel can offer them:
+The PDFs are too large to live in this repo, so they're hosted externally.
+Edit **pdf-urls.json** to point each section at its hosted URL:
 
-  intro.pdf, abstract.pdf, acknowledgments.pdf, conclusion.pdf, references.pdf
-  part-1.pdf … part-5.pdf
-  chapter-1.pdf … chapter-14.pdf
-  thesis.pdf   (optional — the whole thesis as one file)
+  {
+    "thesis": "https://your-host/thesis.pdf",
+    "chapter-1": "https://your-host/chapter-1.pdf"
+  }
 
-The slug for each section is shown in the URL when you open it
-(e.g. .../#/chapter-7 → chapter-7.pdf). Re-run build_site_data.py after
-adding files so the site detects them. Selecting several sections in the
-panel merges them into one download (links and page numbers preserved).
+- "thesis" is the full-thesis PDF (shown as "Download full thesis").
+- Per-section keys use the slug shown in the URL (#/chapter-7 → "chapter-7").
+- Leave a value as "" if that section has no PDF yet.
+
+Re-run site/scripts/build_site_data.py after editing so the site picks up
+the links. (Small per-section PDFs may alternatively be committed here as
+<slug>.pdf and they'll be linked directly — but anything near GitHub's
+100 MB file limit must be hosted externally.)
