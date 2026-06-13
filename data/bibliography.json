@@ -55,13 +55,6 @@
     "harvard": "Andioc, R. (1975) ‘La Raquel de Huerta y la censura’, *Hispanic Review*, 43(2), pp. 115. doi:10.2307/472548",
     "link": "https://doi.org/10.2307/472548"
   },
-  "andreessenWhySoftwareEating2011": {
-    "author": "Andreessen",
-    "year": "2011",
-    "inline": "(Andreessen, 2011)",
-    "harvard": "Andreessen, M. (2011) ‘Why Software Is Eating The World’, *Wall Street Journal*.",
-    "link": ""
-  },
   "anthropicAPIReference2025": {
     "author": "Anthropic",
     "year": "2025",
@@ -503,13 +496,6 @@
     "harvard": "Feng, S., Sorensen, T., Liu, Y., Fisher, J., Park, C. Y., Choi, Y. and Tsvetkov, Y. (2024) *Modular Pluralism: Pluralistic Alignment via Multi-LLM Collaboration*. arXiv. doi:10.48550/arXiv.2406.15951",
     "link": "https://doi.org/10.48550/arXiv.2406.15951"
   },
-  "fogelinLogicDeepDisagreements1985": {
-    "author": "Fogelin",
-    "year": "1985",
-    "inline": "(Fogelin, 1985)",
-    "harvard": "Fogelin, R. J. (1985) ‘The Logic of Deep Disagreements’, *Informal Logic*, pp. 3–11.",
-    "link": ""
-  },
   "fraserRethinkingPublicSphere1990": {
     "author": "Fraser",
     "year": "1990",
@@ -579,13 +565,6 @@
     "inline": "(Gillespie, 2022)",
     "harvard": "Gillespie, T. (2022) ‘Do Not Recommend? Reduction as a Form of Content Moderation’, *Social Media + Society*, 8(3), pp. 20563051221117552. doi:10.1177/20563051221117552",
     "link": "https://doi.org/10.1177/20563051221117552"
-  },
-  "gillespiePoliticsPlatforms2010": {
-    "author": "Gillespie",
-    "year": "2010",
-    "inline": "(Gillespie, 2010)",
-    "harvard": "Gillespie, T. (2010) ‘The Politics of `Platforms'’, *New Media & Society*, 12(3), pp. 347–364. doi:10.1177/1461444809342738",
-    "link": "https://doi.org/10.1177/1461444809342738"
   },
   "goldbergWord2vecExplainedDeriving2014": {
     "author": "Goldberg and Levy",
@@ -893,6 +872,13 @@
     "year": "2020",
     "inline": "(Lyons, 2020)",
     "harvard": "Lyons, K. (2020) *Twitter Flags, Limits Sharing on Trump Tweet about Being `Immune' to Coronavirus*.",
+    "link": ""
+  },
+  "lyotardConditionPostmoderneRapport2009": {
+    "author": "Lyotard",
+    "year": "2009",
+    "inline": "(Lyotard, 2009)",
+    "harvard": "Lyotard, J. F. (2009) *La condition postmoderne: rapport sur le savoir*. Paris: Editions de Minuit.",
     "link": ""
   },
   "maImNotSure2022": {

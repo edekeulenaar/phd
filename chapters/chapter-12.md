@@ -1,4 +1,4 @@
-# **Chapter 11**
+# **Chapter 12**
 # Deplatforming, demotion and folk theories of Big Tech persecution
 
 
