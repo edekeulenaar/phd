@@ -3159,11 +3159,12 @@ async function renderLanding() {
 
 /* ── PDF export: pick chapters on the cover, assemble + print (ssrn CSS) ── */
 
-// One <label><input> per includable section (parts + chapters + front/back).
+// One <label><input> per includable section — front matter, every Part
+// divider, all chapters, and back matter.
 function pdfChapterChecklist() {
-  const items = (TOC?.entries || []).filter(e => e.kind !== "part");
-  return items.map(e =>
-    `<label class="pdf-check"><input type="checkbox" value="${e.slug}" checked>` +
+  return (TOC?.entries || []).map(e =>
+    `<label class="pdf-check pdf-check-${e.kind}">` +
+    `<input type="checkbox" value="${e.slug}" checked>` +
     `<span>${escapeHtml(e.title)}</span></label>`).join("");
 }
 

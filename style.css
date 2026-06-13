@@ -207,8 +207,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 
 /* ── Cover / landing view ─────────────────────────────────────────────── */
 #landing .cover {
-  margin: 2rem 0 3rem; padding-bottom: 2rem;
-  border-bottom: 1px solid var(--rule);
+  margin: 2rem 0 2.6rem; padding-bottom: 0;   /* no rule under the author */
 }
 #landing .cover-title {
   font-family: var(--sans); font-weight: 700;
@@ -224,18 +223,16 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   font-family: var(--sans); font-size: 0.95rem;
   letter-spacing: 0.04em; color: var(--muted); margin: 0;
 }
+/* Section headers (Abstract / Contents) — big, bold, black; no rule. */
 #landing .cover-abstract h2,
 #landing .cover-ack h2,
 #landing .cover-toc h2 {
   font-family: var(--sans);
-  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
-  text-transform: uppercase; color: var(--muted);
-  margin: 2.4rem 0 1rem; padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--rule);
+  font-size: 1.5rem; font-weight: 700; letter-spacing: 0;
+  text-transform: none; color: var(--ink);
+  margin: 2.4rem 0 1rem; padding-bottom: 0; border-bottom: none;
 }
-/* Cover abstract reads as a continuous block — no paragraph-gap "line
-   breaks" between the run of short Chapter-N lines. */
-#landing .cover-abstract p { text-align: left; margin: 0; }
+#landing .cover-abstract p { text-align: left; }   /* normal paragraph spacing */
 
 /* PDF download button — sits at the far right of the cover title row. */
 .pdf-btn {
@@ -277,6 +274,8 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   padding: 0.18em 0; font-size: 0.92rem; cursor: pointer;
 }
 #pdf-panel .pdf-check input { margin-top: 0.25em; }
+#pdf-panel .pdf-check-part span { font-weight: 700; }
+#pdf-panel .pdf-check-chapter { padding-left: 0.8rem; }
 #pdf-panel .pdf-panel-actions {
   display: flex; align-items: center; gap: 0.5rem;
   margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--rule);
