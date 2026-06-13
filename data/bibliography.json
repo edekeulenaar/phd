@@ -370,12 +370,33 @@
     "harvard": "Deibert, R. J. (2008) ‘The Geopolitics of Internet Control: Censorship, Sovereignty, and Cyberspace’ *Routledge Handbook of Internet Politics*. London: Routledge, pp. 14.",
     "link": ""
   },
+  "dekeulenaarAffordancesExtremeSpeech2023": {
+    "author": "De Keulenaar",
+    "year": "2023",
+    "inline": "(De Keulenaar, 2023)",
+    "harvard": "De Keulenaar, E. (2023) ‘The Affordances of Extreme Speech’, *Big Data & Society*, 10(2), pp. 20539517231206810. doi:10.1177/20539517231206810",
+    "link": "https://doi.org/10.1177/20539517231206810"
+  },
+  "dekeulenaarAffordancesReplacementNarratives2023": {
+    "author": "de Keulenaar and Tuters",
+    "year": "2023",
+    "inline": "(de Keulenaar and Tuters, 2023)",
+    "harvard": "de Keulenaar, E. and Tuters, M. (2023) ‘The Affordances of Replacement Narratives: How the White Genocide and Great Replacement Theories Converge in Poorly Moderated Online Milieus’ *The Politics of Replacement: Demographic Fears, Conspiracy Theories, and Race Wars*. London: Routledge, pp. 23.",
+    "link": ""
+  },
   "dekeulenaarAlgorithmicDiplomacyIntegrating2018": {
     "author": "de Keulenaar",
     "year": "2018",
     "inline": "(de Keulenaar, 2018)",
     "harvard": "de Keulenaar, E. (2018) *Algorithmic Diplomacy: Integrating Mediation Techniques into YouTube's Recommender System*. Amsterdam.",
     "link": ""
+  },
+  "dekeulenaarAltpediasPartisanEpistemics2019": {
+    "author": "de Keulenaar et al.",
+    "year": "2019",
+    "inline": "(de Keulenaar et al., 2019)",
+    "harvard": "de Keulenaar, E. V., Tuters, M., Kisjes, I. and Beelen, K. (2019) ‘On Altpedias: Partisan Epistemics in the Encyclopaedias of Alternative Facts’, *Artnodes*, pp. 83–90. doi:10.7238/a.v0i24.3300",
+    "link": "https://doi.org/10.7238/a.v0i24.3300"
   },
   "dekeulenaarFieldGuideUsing2023": {
     "author": "de Keulenaar et al.",
@@ -636,6 +657,13 @@
     "harvard": "Gyetván, D. (2025) ‘Censorship and Freedom of Expression in the Age of Social Media’, *ELTE Law Journal*, pp. 27–40. doi:10.54148/eltelj.2024.2.27",
     "link": "https://doi.org/10.54148/eltelj.2024.2.27"
   },
+  "habermasContributionsDiscourseTheory2020": {
+    "author": "Habermas",
+    "year": "2020",
+    "inline": "(Habermas, 2020)",
+    "harvard": "Habermas, J. (2020) ‘Contributions to a Discourse Theory of Law and Democracy’, in S. Seidman and J. C. Alexander (eds.) *The New Social Theory Reader*. Routledge, pp. 34–42. doi:10.4324/9781003060963-4",
+    "link": "https://doi.org/10.4324/9781003060963-4"
+  },
   "habermasNewStructuralTransformation2023": {
     "author": "Habermas",
     "year": "2023",
@@ -732,13 +760,6 @@
     "year": "2021",
     "inline": "(Archive, 2021)",
     "harvard": "Archive, I. (2021) *Internet Archive: Digital Library of Free & Borrowable Books, Movies, Music & Wayback Machine*.",
-    "link": ""
-  },
-  "jansenCensorshipKnotThat1988": {
-    "author": "Jansen",
-    "year": "1988",
-    "inline": "(Jansen, 1988)",
-    "harvard": "Jansen, S. C. (1988) *Censorship: The Knot That Binds Power and Knowledge*. New York: Oxford University Press.",
     "link": ""
   },
   "jiAIAlignmentComprehensive2024": {
@@ -1021,6 +1042,13 @@
     "harvard": "Mouffe, C. (1999) ‘Deliberative Democracy or Agonistic Pluralism?’, *Social Research*, 66(3), pp. 745–758.",
     "link": ""
   },
+  "mouffePolitical2005": {
+    "author": "Mouffe",
+    "year": "2005",
+    "inline": "(Mouffe, 2005)",
+    "harvard": "Mouffe, C. (2005) *On the Political*. New York: Routledge.",
+    "link": ""
+  },
   "mullerCensorshipCulturalRegulation2004": {
     "author": "Müller",
     "year": "2004",
@@ -1132,13 +1160,6 @@
     "inline": "(Pa et al., 2023)",
     "harvard": "Pa, J., Helmond, A. and Jansma, R. (2023) ‘From Healthy Communities to Toxic Debates: Disqus' Changing Ideas about Comment Moderation’, *Internet Histories*, 7(1), pp. 6–26. doi:10.1080/24701475.2022.2105123",
     "link": "https://doi.org/10.1080/24701475.2022.2105123"
-  },
-  "pedrettiGRAMATICAVIOLENCIAPOLITICA2023": {
-    "author": "Pedretti",
-    "year": "2023",
-    "inline": "(Pedretti, 2023)",
-    "harvard": "Pedretti, L. (2023) ‘A GRAM\\'ATICA DA VIOL\\^ENCIA POL\\'ITICA: Representa c\\ oes críticas sobre a ditadura militar na década de 1970’, *Novos estudos CEBRAP*, 42, pp. 163–180. doi:10.25091/S01013300202300010009",
-    "link": "https://doi.org/10.25091/S01013300202300010009"
   },
   "pedrettiTransicaoInacabadaViolencia2024": {
     "author": "Pedretti",
