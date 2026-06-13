@@ -3085,7 +3085,7 @@ async function renderLanding() {
     <header class="cover">
       <h1 class="cover-title">${escapeHtml(TOC?.title || "")}</h1>
       <p class="cover-sub">${escapeHtml(TOC?.subtitle || "")}</p>
-      <p class="cover-author">Emillie de Keulenaar · PhD thesis</p>
+      <p class="cover-author">${escapeHtml(TOC?.author || "")}</p>
     </header>
     ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
     ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}

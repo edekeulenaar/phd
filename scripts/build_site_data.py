@@ -108,8 +108,12 @@ THESIS_MANIFEST = [
 # author wrote as `[Chapter 8. …](Chapter%208.%20….md)`.
 SRC_TO_SLUG = {src: slug for slug, _k, src, _t in THESIS_MANIFEST if src}
 
-THESIS_TITLE = "Censorship and moderation"
-THESIS_SUBTITLE = "the oscillations of a contested practice"
+# NOTE: "Censorship and moderation: the oscillations of a contested practice"
+# is CHAPTER 1's title, not the thesis title. The thesis title is TBD — keep
+# this a clear placeholder until the author settles it.
+THESIS_TITLE = "PhD thesis"
+THESIS_SUBTITLE = "working title — to be confirmed"
+THESIS_AUTHOR = "Emillie de Keulenaar"
 
 
 def _is_other(v: str) -> bool:
@@ -250,6 +254,7 @@ def sync_thesis() -> None:
 
     # TOC tree: front matter, then part→children groups, then back matter.
     toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
+           "author": THESIS_AUTHOR,
            "entries": entries,
            "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}
     SITE_TOC.write_text(_json.dumps(toc, ensure_ascii=False, indent=0),
