@@ -1462,77 +1462,25 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
   #right-rail { display: none; }
 }
 
-/* ─── Print / "Download PDF" — EXACTLY mirrors ssrn-paper.css ─────────────
-   Only #print-root (the assembled selection) prints; everything else is
-   hidden. Values copied verbatim from .obsidian/snippets/ssrn-paper.css so
-   the output matches the Obsidian Better-Export-PDF render. */
+/* PDF download status line in the panel. */
+#pdf-panel .pdf-status {
+  margin: 0.9rem 0 0; font-family: var(--sans); font-size: 12px;
+  color: var(--muted);
+}
+#pdf-panel .pdf-status[hidden] { display: none; }
+
+/* ─── Print fallback (accidental Ctrl+P) ──────────────────────────────────
+   Downloads use the author's Obsidian-exported PDFs (merged client-side), so
+   browser printing is no longer the export path. If the reader prints anyway,
+   hide the chrome and print just the open chapter, sensibly. */
 @media print {
-  @page { size: A4; margin: 3cm 2.5cm; }
-  html, body { background: #fff !important; }
-  body > *:not(#print-root) { display: none !important; }
-  #print-root { display: block !important; }
-
-  #print-root, #print-root.prose, #print-root .prose,
-  #print-root p, #print-root li {
-    font-family: "Adobe Caslon Pro", "EB Garamond", Garamond, serif !important;
-    color: #1c1a18 !important;
+  @page { size: A4; margin: 2.5cm; }
+  #sidebar, #right-rail, #analysis, #cite-card, #data-card,
+  .pdf-btn, #pdf-panel, .fig-foot, .fig-controls { display: none !important; }
+  #content { margin: 0 !important; padding: 0 !important; max-width: none !important; }
+  .prose { max-width: none !important; }
+  .prose a { color: #1c1a18 !important; text-decoration: none !important; }
+  .prose figure, .prose table, .prose img {
+    break-inside: avoid; page-break-inside: avoid;
   }
-  #print-root p {
-    font-size: 12.5pt !important;
-    line-height: 1.55 !important;
-    margin: 0 0 0.95em !important;
-    text-align: left !important;
-    orphans: 2; widows: 2;
-  }
-  #print-root li { text-align: left !important; }
-
-  /* Headings — Test National Semibold, ssrn sizes. */
-  #print-root h1, #print-root h2, #print-root h3,
-  #print-root h4, #print-root h5, #print-root h6 {
-    font-family: "Test National Semibold", "Helvetica Neue", sans-serif !important;
-    font-weight: 600 !important; color: #1c1a18 !important;
-    line-height: 1.2 !important;
-    break-after: avoid; page-break-after: avoid;
-  }
-  #print-root h1 { font-size: 24pt !important;  margin: 0 0 0.6cm !important; }
-  #print-root h2 { font-size: 17pt !important;  margin: 0.8cm 0 0.35cm !important; }
-  #print-root h3 { font-size: 14pt !important;  margin: 0.6cm 0 0.3cm !important; }
-  #print-root h4 { font-size: 12.5pt !important; margin: 0.5cm 0 0.25cm !important; }
-
-  /* Links: terracotta like ssrn-paper.css. */
-  #print-root a, #print-root .cite-grp, #print-root .cite-link {
-    color: #c0431f !important; text-decoration: none !important; border: none !important;
-  }
-
-  /* Tables: ssrn — Test National, uppercase header on warm grey, zebra rows. */
-  #print-root table { border-collapse: collapse !important; width: 100% !important;
-    font-family: "Test National", sans-serif !important; font-size: 11pt !important; }
-  #print-root th { background: #EFEDE6 !important; text-transform: uppercase !important;
-    letter-spacing: 0.02em !important; border: 0.5px solid #B0B0B0 !important;
-    padding: 0.4em !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  #print-root td { border: 0.5px solid #B0B0B0 !important; padding: 0.4em !important; }
-  #print-root tbody tr:nth-child(even) td { background: #FAF9F6 !important;
-    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-
-  /* Keep blocks whole; one page break per included section. */
-  #print-root figure, #print-root table, #print-root img,
-  #print-root pre, #print-root .embed-video {
-    break-inside: avoid; page-break-inside: avoid; max-width: 100% !important;
-  }
-  #print-root .print-chapter { break-before: page; page-break-before: always; }
-  #print-root .print-titlepage {
-    break-after: page; page-break-after: always;
-    text-align: center; padding-top: 7cm;
-  }
-  #print-root .print-titlepage h1 {
-    font-size: 30pt !important; margin: 0 0 0.6cm !important;
-  }
-  #print-root .print-titlepage .pt-sub { font-size: 15pt !important; color: #3c3934 !important; }
-  #print-root .print-titlepage .pt-author {
-    margin-top: 2cm !important; font-family: "Test National", sans-serif !important;
-    letter-spacing: 0.04em !important;
-  }
-  /* Foldable wrappers print as plain content; live-fig break-out undone. */
-  #print-root details.foldable > summary { display: none !important; }
-  #print-root details.foldable { border: none !important; background: none !important; }
 }

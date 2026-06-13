@@ -3159,10 +3159,17 @@ async function renderLanding() {
 
 /* ── PDF export: pick chapters on the cover, assemble + print (ssrn CSS) ── */
 
-// One <label><input> per includable section — front matter, every Part
-// divider, all chapters, and back matter.
+// One <label><input> per section that has an author-supplied PDF export.
 function pdfChapterChecklist() {
-  return (TOC?.entries || []).map(e =>
+  const avail = (TOC?.entries || []).filter(e => e.pdf);
+  if (!avail.length) {
+    const full = TOC?.fullPdf
+      ? `<p class="pdf-help">A full-thesis PDF is available below.</p>`
+      : `<p class="pdf-help">No section PDFs have been added yet. Export them
+         from Obsidian into <code>site/pdf/&lt;slug&gt;.pdf</code>.</p>`;
+    return full;
+  }
+  return avail.map(e =>
     `<label class="pdf-check pdf-check-${e.kind}">` +
     `<input type="checkbox" value="${e.slug}" checked>` +
     `<span>${escapeHtml(e.title)}</span></label>`).join("");
@@ -3177,15 +3184,17 @@ function openPdfPanel() {
       <div class="pdf-panel-inner" role="dialog" aria-label="Download PDF">
         <button class="pdf-close" data-pdf-close aria-label="Close">×</button>
         <h2>Download PDF</h2>
-        <p class="pdf-help">Select the chapters to include. The PDF is
-          typeset exactly like the manuscript.</p>
+        <p class="pdf-help">Select the sections to include. Each is the
+          original typeset PDF; multiple selections merge into one file.</p>
         <div class="pdf-checks">${pdfChapterChecklist()}</div>
         <div class="pdf-panel-actions">
           <button type="button" class="pdf-mini" data-pdf-all>All</button>
           <button type="button" class="pdf-mini" data-pdf-none>None</button>
           <span class="spacer"></span>
+          ${TOC?.fullPdf ? `<button type="button" class="pdf-mini" data-pdf-full>Full thesis</button>` : ``}
           <button type="button" class="pdf-go" data-pdf-go>⬇ Download</button>
         </div>
+        <p class="pdf-status" data-pdf-status hidden></p>
       </div>`;
     document.body.appendChild(panel);
     panel.addEventListener("click", e => {
@@ -3196,9 +3205,11 @@ function openPdfPanel() {
         panel.querySelectorAll("input").forEach(c => (c.checked = true));
       if (e.target.closest("[data-pdf-none]"))
         panel.querySelectorAll("input").forEach(c => (c.checked = false));
+      if (e.target.closest("[data-pdf-full]"))
+        downloadFile("pdf/thesis.pdf", "thesis.pdf");
       if (e.target.closest("[data-pdf-go]")) {
         const slugs = [...panel.querySelectorAll("input:checked")].map(c => c.value);
-        if (slugs.length) { panel.hidden = true; assembleThesisPDF(slugs); }
+        mergeAndDownloadPDF(slugs, panel);
       }
     });
   } else {
@@ -3207,55 +3218,49 @@ function openPdfPanel() {
   panel.hidden = false;
 }
 
-// Render the bibliography into a given element (shared by the route + PDF).
-function renderBibInto(el, bib) {
-  const entries = Object.values(bib || {})
-    .map(v => v.harvard || v.inline || "")
-    .filter(Boolean).sort((a, b) => a.localeCompare(b));
-  el.innerHTML = `<h1>References</h1>` +
-    entries.map(h => `<p class="ref-entry">${h}</p>`).join("");
+function downloadFile(href, name) {
+  const a = document.createElement("a");
+  a.href = href; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
 }
 
-// Assemble the chosen sections off-screen, then print (the @media print rules
-// mirror ssrn-paper.css, so the browser's "Save as PDF" matches the export).
+// Fetch the author's per-section Obsidian PDFs and merge the selected ones
+// into a single download (links, page numbers, fonts all preserved). A single
+// selection downloads directly; nothing to merge.
 let _pdfBusy = false;
-async function assembleThesisPDF(slugs) {
+async function mergeAndDownloadPDF(slugs, panel) {
   if (_pdfBusy) return;
-  _pdfBusy = true;
-  let root = document.getElementById("print-root");
-  if (!root) { root = document.createElement("div"); root.id = "print-root";
-               document.body.appendChild(root); }
-  root.innerHTML = `<section class="print-titlepage">
-      <h1>${escapeHtml(TOC?.title || "")}</h1>
-      <p class="pt-sub">${escapeHtml(TOC?.subtitle || "")}</p>
-      <p class="pt-author">${escapeHtml(TOC?.author || "")}</p>
-    </section>`;
-  let bib = null;
-  for (const slug of slugs) {
-    const sec = document.createElement("section");
-    sec.className = "print-chapter prose";
-    root.appendChild(sec);
-    if (slug === "references") {
-      if (!bib) {
-        try { bib = await (await fetch(`data/bibliography.json?t=${CSV_BUST}`,
-              { cache: "no-store" })).json(); } catch { bib = {}; }
-      }
-      renderBibInto(sec, bib);
-    } else {
-      try { await renderManuscript(slug, { host: sec, forPrint: true }); }
-      catch (e) { console.error("pdf chapter", slug, e); }
-    }
+  const status = panel?.querySelector("[data-pdf-status]");
+  const setStatus = t => { if (status) { status.hidden = !t; status.textContent = t || ""; } };
+  if (!slugs.length) { setStatus("Select at least one section."); return; }
+  if (slugs.length === 1) {
+    downloadFile(`pdf/${slugs[0]}.pdf`, `${slugs[0]}.pdf`);
+    panel.hidden = true; return;
   }
-  // setTimeout (not rAF — rAF is paused in background tabs) lets the DOM
-  // paint, then opens the print dialog. window.print() blocks until the
-  // dialog closes, so we can release the guard right after.
-  setTimeout(() => { try { window.print(); } finally { _pdfBusy = false; } }, 80);
+  if (!window.PDFLib) { setStatus("PDF library still loading — try again."); return; }
+  _pdfBusy = true;
+  try {
+    setStatus("Building your PDF…");
+    const out = await window.PDFLib.PDFDocument.create();
+    for (const slug of slugs) {
+      const resp = await fetch(`pdf/${slug}.pdf`, { cache: "no-store" });
+      if (!resp.ok) throw new Error(`${slug}.pdf HTTP ${resp.status}`);
+      const src = await window.PDFLib.PDFDocument.load(await resp.arrayBuffer());
+      const pages = await out.copyPages(src, src.getPageIndices());
+      pages.forEach(p => out.addPage(p));
+    }
+    const blob = new Blob([await out.save()], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+    downloadFile(url, "thesis-selection.pdf");
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    panel.hidden = true;
+  } catch (err) {
+    console.error("PDF merge:", err);
+    setStatus("Could not build the PDF — see the console.");
+  } finally {
+    _pdfBusy = false;
+  }
 }
-window.addEventListener("afterprint", () => {
-  _pdfBusy = false;
-  const root = document.getElementById("print-root");
-  if (root) root.innerHTML = "";
-});
 
 // Render the global References list from the built bibliography.
 async function renderReferences() {

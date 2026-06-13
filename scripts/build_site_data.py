@@ -338,9 +338,23 @@ def sync_thesis() -> None:
                 print(f"  · missing source: {src}")
         entries.append(rec)
 
+    # Detect author-supplied Obsidian PDF exports in site/pdf/<slug>.pdf.
+    # The reader's "Download PDF" panel offers only sections that have one;
+    # a full-thesis pdf/thesis.pdf is offered as a single download.
+    pdf_dir = Path(__file__).resolve().parent.parent / "pdf"
+    have_pdf = {p.stem for p in pdf_dir.glob("*.pdf")} if pdf_dir.exists() else set()
+    n_pdf = 0
+    for rec in entries:
+        if rec["slug"] in have_pdf:
+            rec["pdf"] = True
+            n_pdf += 1
+    full_pdf = "thesis" in have_pdf
+    print(f"  PDFs available: {n_pdf} section(s)"
+          f"{' + full thesis.pdf' if full_pdf else ''}")
+
     # TOC tree: front matter, then part→children groups, then back matter.
     toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
-           "author": THESIS_AUTHOR,
+           "author": THESIS_AUTHOR, "fullPdf": full_pdf,
            "entries": entries,
            "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}
     SITE_TOC.write_text(_json.dumps(toc, ensure_ascii=False, indent=0),
