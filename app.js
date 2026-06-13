@@ -14,7 +14,7 @@ const slug = s => String(s).toLowerCase()
    1. Manuscript: fetch markdown → render → build TOC → wire citations
    ─────────────────────────────────────────────────────────────────────── */
 
-async function renderManuscript() {
+async function renderManuscript(chapterSlug) {
   const host = document.getElementById("manuscript");
   if (!host) { console.error("renderManuscript: #manuscript host missing"); return; }
 
@@ -27,11 +27,13 @@ async function renderManuscript() {
       );
     }
 
-    // 2) Fetch the manuscript — timestamp-busted so we always get the latest
-    //    version that `build_site_data.py` mirrored from the master .md file.
-    const resp = await fetch(`manuscript.md?t=${Date.now()}`,
+    // 2) Fetch the chapter markdown that build_site_data.py mirrored into
+    //    site/chapters/<slug>.md (timestamp-busted). Falls back to the
+    //    legacy single-doc manuscript.md when no slug is given.
+    const mdPath = chapterSlug ? `chapters/${chapterSlug}.md` : "manuscript.md";
+    const resp = await fetch(`${mdPath}?t=${Date.now()}`,
                              { cache: "no-store" });
-    if (!resp.ok) throw new Error(`manuscript.md HTTP ${resp.status}`);
+    if (!resp.ok) throw new Error(`${mdPath} HTTP ${resp.status}`);
     let md = await resp.text();
 
     // 3) Pre-process Pandoc cite keys [@key1; @key2]. Each group becomes a
@@ -545,8 +547,9 @@ async function renderManuscript() {
         id
       });
     });
-    buildToc(toc);
-    trackActiveSection();
+    // Per-chapter heading nav lives in the sidebar UNDER the active chapter;
+    // the global thesis TOC (parts → chapters) is built once from toc.json.
+    buildChapterNav(chapterSlug, toc);
 
     // 6) Wire citation hover-cards.
     host.querySelectorAll(".cite").forEach(c => {
@@ -2721,9 +2724,11 @@ if (document.readyState !== "loading") snapshotFigureTemplates();
 else document.addEventListener("DOMContentLoaded", snapshotFigureTemplates,
                                { once: true });
 
-window.addEventListener("DOMContentLoaded", async () => {
+// Chapter-1 analysis: builds every interactive figure into the (hidden)
+// #analysis templates, then promoteInlineFigures() swaps them into the
+// manuscript flow at their placeholders. Run ONLY when chapter-1 is shown.
+async function mountChapter1Analysis() {
   snapshotFigureTemplates();          // safety: ensure captured before render
-  try { await renderManuscript(); } catch (e) { console.error(e); }
 
   await safe("summary",  "#summary-table")(() => renderSummary());
   await safe("sankey D→T→S", "#sankey-discipline-topic")(() => renderSankeyDTS());
@@ -2973,6 +2978,175 @@ window.addEventListener("DOMContentLoaded", async () => {
   setupFigureDownloads();   // ⬇ PNG / ⬇ SVG buttons on every chart
   promoteInlineFigures();   // swap manuscript placeholders for live figures
   setTimeout(applyHashFiltersAndScroll, 60); // honour any `?key=val` in #hash
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   SPA router — `#/<slug>` selects the view; bare `#anchor` / `#fig-…`
+   hashes stay in-page (handled by the figure/anchor logic). The thesis
+   structure comes from data/toc.json (built by build_site_data.py).
+   ─────────────────────────────────────────────────────────────────────── */
+
+let TOC = null;
+let _routeSlug = undefined;
+
+async function loadToc() {
+  try {
+    const r = await fetch(`data/toc.json?t=${CSV_BUST}`, { cache: "no-store" });
+    TOC = await r.json();
+  } catch (e) { console.error("toc.json:", e); TOC = { entries: [] }; }
+}
+
+// Returns the routed slug, "home" for the landing view, or null when the
+// hash is an in-page reference (anchor / figure filter) rather than a route.
+function routeSlug() {
+  const h = location.hash || "";
+  if (h === "" || h === "#" || h === "#/") return "home";
+  if (h.startsWith("#/")) return h.slice(2).split(/[?#]/)[0] || "home";
+  return null;
+}
+
+function tocEntry(slug) {
+  return (TOC?.entries || []).find(e => e.slug === slug) || null;
+}
+
+// Build the global sidebar TOC (front matter, parts → chapters, back matter).
+function buildGlobalToc() {
+  const ol = document.getElementById("toc");
+  if (!ol || !TOC) return;
+  const li = [];
+  li.push(`<li class="toc-home"><a href="#/">Cover</a></li>`);
+  for (const e of TOC.entries) {
+    if (e.kind === "part") {
+      li.push(`<li class="toc-part"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
+    } else {
+      const cls = e.kind === "chapter" ? "toc-ch" : "toc-front";
+      li.push(`<li class="${cls}"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
+    }
+  }
+  ol.innerHTML = li.join("");
+  highlightToc();
+}
+
+function highlightToc() {
+  const slug = routeSlug();
+  document.querySelectorAll("#toc a").forEach(a => {
+    const href = a.getAttribute("href") || "";
+    a.classList.toggle("is-active",
+      href === `#/${slug}` || (slug === "home" && href === "#/"));
+  });
+}
+
+// Per-chapter heading nav: a nested list injected right after the active
+// chapter's sidebar entry, so readers can jump within the open chapter.
+function buildChapterNav(slug, headings) {
+  document.querySelectorAll("#toc .chapter-subnav").forEach(n => n.remove());
+  if (!slug || !headings || !headings.length) return;
+  const active = [...document.querySelectorAll("#toc a")]
+    .find(a => a.getAttribute("href") === `#/${slug}`);
+  if (!active) return;
+  const sub = document.createElement("ul");
+  sub.className = "chapter-subnav";
+  sub.innerHTML = headings.map(h =>
+    `<li class="sub-lvl-${h.level}"><a href="#${h.id}">${escapeHtml(h.text)}</a></li>`
+  ).join("");
+  active.parentElement.appendChild(sub);
+}
+
+function showView(which) {
+  const landing = document.getElementById("landing");
+  const article = document.getElementById("manuscript");
+  if (landing) landing.hidden = (which !== "landing");
+  if (article) article.hidden = (which === "landing");
+}
+
+// Render the cover / landing view: title, abstract, acknowledgments, TOC.
+async function renderLanding() {
+  showView("landing");
+  const el = document.getElementById("landing");
+  if (!el) return;
+  async function md(slug) {
+    try {
+      const r = await fetch(`chapters/${slug}.md?t=${CSV_BUST}`, { cache: "no-store" });
+      if (!r.ok) return "";
+      let t = await r.text();
+      // strip the leading "# Heading" (we render our own section headers)
+      t = t.replace(/^\s*#\s+.*\n/, "");
+      return window.marked ? window.marked.parse(t) : t;
+    } catch { return ""; }
+  }
+  const [abstract, ack] = await Promise.all([md("abstract"), md("acknowledgments")]);
+  const toc = (TOC?.entries || []).map(e => {
+    if (e.slug === "references") return "";
+    const cls = e.kind === "part" ? "land-part"
+              : e.kind === "chapter" ? "land-ch" : "land-front";
+    return `<li class="${cls}"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`;
+  }).join("");
+  el.innerHTML = `
+    <header class="cover">
+      <h1 class="cover-title">${escapeHtml(TOC?.title || "")}</h1>
+      <p class="cover-sub">${escapeHtml(TOC?.subtitle || "")}</p>
+      <p class="cover-author">Emillie de Keulenaar · PhD thesis</p>
+    </header>
+    ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
+    ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}
+    <nav class="cover-toc"><h2>Contents</h2><ol class="land-toc">${toc}</ol></nav>`;
+  highlightToc();
+  window.scrollTo(0, 0);
+}
+
+// Render the global References list from the built bibliography.
+async function renderReferences() {
+  showView("manuscript");
+  const host = document.getElementById("manuscript");
+  let bib = {};
+  try {
+    const r = await fetch(`data/bibliography.json?t=${CSV_BUST}`, { cache: "no-store" });
+    bib = await r.json();
+  } catch (e) { console.warn("bibliography.json:", e); }
+  const entries = Object.values(bib)
+    .map(v => v.harvard || v.inline || "")
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b));
+  host.className = "prose";
+  host.innerHTML =
+    `<h1>References</h1>` +
+    `<p class="ref-count">${entries.length} works cited across the thesis.</p>` +
+    entries.map(h => `<p class="ref-entry">${h}</p>`).join("");
+  buildChapterNav(null, null);
+  highlightToc();
+  window.scrollTo(0, 0);
+}
+
+let _chapter1Token = 0;
+async function renderChapter(slug) {
+  showView("manuscript");
+  try { await renderManuscript(slug); } catch (e) { console.error(e); }
+  highlightToc();
+  if (slug === "chapter-1") {
+    const token = ++_chapter1Token;
+    try { await mountChapter1Analysis(); } catch (e) { console.error(e); }
+    if (token !== _chapter1Token) return;   // superseded by a newer navigation
+  }
+  window.scrollTo(0, 0);
+}
+
+async function route() {
+  const slug = routeSlug();
+  if (slug === null) return;            // in-page hash: leave to anchor/figure logic
+  if (slug === _routeSlug) return;      // already showing this view
+  _routeSlug = slug;
+  if (slug === "home")        return renderLanding();
+  if (slug === "references")  return renderReferences();
+  if (!tocEntry(slug))        return renderLanding();   // unknown → cover
+  return renderChapter(slug);
+}
+
+window.addEventListener("DOMContentLoaded", async () => {
+  snapshotFigureTemplates();
+  await loadToc();
+  buildGlobalToc();
+  window.addEventListener("hashchange", route);
+  await route();
 });
 
 /* If `manuscript.md` embeds a screenshot called `fig-<slug>.png`, we treat

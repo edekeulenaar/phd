@@ -122,6 +122,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   line-height: 1.5;
 }
 .sb-title {
+  display: block;
   font-family: var(--sans);
   font-size: 1.05rem;
   font-weight: 600;
@@ -129,7 +130,10 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   letter-spacing: 0.01em;
   line-height: 1.2;
   margin: 0 0 0.35em 0;
+  border-bottom: none;
+  text-decoration: none;
 }
+.sb-title:hover { color: var(--accent); }
 .sb-sub {
   font-family: var(--sans);
   font-style: normal;          /* no italic on sidebar headings */
@@ -165,6 +169,79 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 .toc .lvl-1 a { font-size: 13px; }
 .toc .lvl-2 a { font-size: 12px; padding-left: 1.4rem; margin-left: -0.6rem; }
 .toc .lvl-3 a { font-size: 11.5px; padding-left: 2.2rem; margin-left: -0.6rem; }
+
+/* ── Global thesis TOC (parts → chapters) in the sidebar ──────────────── */
+.toc .toc-home a {
+  font-family: var(--sans);
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--muted);
+}
+.toc .toc-part a {
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink);
+  margin-top: 0.9rem;
+}
+.toc .toc-front a { font-size: 12.5px; color: var(--muted); font-style: italic; }
+.toc .toc-ch a    { font-size: 12.5px; padding-left: 0.9rem; }
+/* Per-chapter heading nav injected under the active chapter. */
+.toc .chapter-subnav {
+  list-style: none; margin: 0.1rem 0 0.3rem; padding: 0;
+}
+.toc .chapter-subnav a {
+  font-size: 11.5px; color: var(--muted);
+  padding: 0.12em 0 0.12em 1.4rem; margin-left: -0.6rem;
+  border-left: 2px solid transparent;
+}
+.toc .chapter-subnav .sub-lvl-3 a { padding-left: 2.1rem; font-size: 11px; }
+.toc .chapter-subnav a:hover { color: var(--ink); }
+
+/* ── Cover / landing view ─────────────────────────────────────────────── */
+#landing .cover {
+  margin: 2rem 0 3rem; padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+#landing .cover-title {
+  font-family: var(--sans); font-weight: 700;
+  font-size: 2.6rem; line-height: 1.12; letter-spacing: -0.01em;
+  margin: 0 0 0.5rem; color: var(--ink);
+}
+#landing .cover-sub {
+  font-family: var(--sans); font-weight: 300;
+  font-size: 1.4rem; line-height: 1.25; color: var(--ink-soft);
+  margin: 0 0 1.4rem;
+}
+#landing .cover-author {
+  font-family: var(--sans); font-size: 0.95rem;
+  letter-spacing: 0.04em; color: var(--muted); margin: 0;
+}
+#landing .cover-abstract h2,
+#landing .cover-ack h2,
+#landing .cover-toc h2 {
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted);
+  margin: 2.4rem 0 1rem; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+#landing .cover-abstract p { text-align: justify; }
+#landing .land-toc {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.1rem;
+}
+#landing .land-toc a {
+  border-bottom: none; color: var(--ink); display: inline-block;
+  padding: 0.18em 0;
+}
+#landing .land-toc a:hover { color: var(--accent); }
+#landing .land-part a {
+  font-family: var(--sans); font-weight: 700; font-size: 0.92rem;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  margin-top: 1.1rem; color: var(--ink);
+}
+#landing .land-front a { font-style: italic; color: var(--muted); }
+#landing .land-ch a { padding-left: 1.1rem; }
+.ref-count { color: var(--muted); font-style: italic; margin-bottom: 1.4rem; }
 
 /* Lives at the END of the sidebar's scroll flow — only visible when the
    reader has scrolled past every TOC entry + the figure-key. Never sticky,

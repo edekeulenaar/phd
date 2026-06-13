@@ -64,10 +64,52 @@ OUT.mkdir(parents=True, exist_ok=True)
 TOPICS: list[str] = []
 SUBTOPIC_PARENT = "Content moderation"
 
-# Source markdown we mirror into site/manuscript.md on every build.
-MANUSCRIPT_SRC = Path("/Users/edekeulenaar/Projects/Master_vault/Manuscript/"
-                      "Chapter 1. Censorship and moderation.md")
+# ── Thesis manuscript: the full set of source markdown files ─────────────
+# The vault holds one file per front-matter section, part divider and
+# chapter. We mirror them all into site/chapters/<slug>.md and emit a
+# site/data/toc.json the SPA router + sidebar consume. Chapter 1 is ALSO
+# mirrored to site/manuscript.md for the legacy single-doc path and the
+# Chapter-1 figure templates.
+MANUSCRIPT_DIR = Path("/Users/edekeulenaar/Projects/Master_vault/Manuscript")
+SITE_CHAPTERS  = Path(__file__).resolve().parent.parent / "chapters"
 SITE_MANUSCRIPT = Path(__file__).resolve().parent.parent / "manuscript.md"
+SITE_TOC = Path(__file__).resolve().parent.parent / "data" / "toc.json"
+
+# Ordered manifest — the single source of truth for the thesis structure.
+# Each entry: (slug, kind, source-filename | None, display-title).
+# kind ∈ {front, part, chapter, back}. `part` rows have no source body of
+# their own beyond a short framing note; they group the chapters that follow.
+THESIS_MANIFEST = [
+    ("acknowledgments", "front", "Acknowledgments.md", "Acknowledgments"),
+    ("abstract",        "front", "Abstract.md",        "Abstract"),
+    ("intro",           "front", "Introduction.md",    "Introduction"),
+    ("part-1", "part", "Part I. What is moderation?.md", "Part I · What is moderation?"),
+    ("chapter-1",  "chapter", "Chapter 1. Censorship and moderation.md", "1 · Censorship and moderation"),
+    ("chapter-2",  "chapter", "Chapter 2. After deplatforming.md", "2 · After deplatforming"),
+    ("part-2", "part", "Part II. Speech affordances.md", "Part II · Speech affordances"),
+    ("chapter-3",  "chapter", "Chapter 3. The affordances of extreme speech.md", "3 · The affordances of extreme speech"),
+    ("chapter-4",  "chapter", "Chapter 4. The affordances of replacement narratives.md", "4 · The affordances of replacement narratives"),
+    ("chapter-5",  "chapter", "Chapter 5. LLMs and the generation of moderate speech.md", "5 · LLMs and the generation of moderate speech"),
+    ("part-3", "part", "Part III. Moderation crises.md", "Part III · Moderation crises"),
+    ("chapter-6",  "chapter", "Chapter 6. Moderation in crisis.md", "6 · Moderation in crisis"),
+    ("chapter-7",  "chapter", "Chapter 7. Of migrants and strangers.md", "7 · Of migrants and strangers"),
+    ("chapter-8",  "chapter", "Chapter 8. Twitter as an accidental authority.md", "8 · Twitter as an accidental authority"),
+    ("chapter-9",  "chapter", "Chapter 9. Normative dislocation.md", "9 · Normative dislocation"),
+    ("part-4", "part", "Part IV. Ruptures.md", "Part IV · Ruptures"),
+    ("chapter-10", "chapter", "Chapter 10. Platform ruptures and the formation of online counter spheres.md", "10 · Platform ruptures and online counter-spheres"),
+    ("chapter-11", "chapter", "Chapter 11. Deplatforming, demotion and folk theories of Big Tech persecution.md", "11 · Deplatforming, demotion and folk theories"),
+    ("part-5", "part", "Part V. Modulation and consensus.md", "Part V · Modulation and consensus"),
+    ("chapter-12", "chapter", "Chapter 12.  Modulating moderation.md", "12 · Modulating moderation"),
+    ("chapter-13", "chapter", "Chapter 13. From Twitter to X.md", "13 · From Twitter to X"),
+    ("conclusion", "back", "Conclusion.md", "Conclusion"),
+    ("references",  "back", None, "References"),
+]
+# Decoded source-filename → slug, for rewriting cross-chapter links the
+# author wrote as `[Chapter 8. …](Chapter%208.%20….md)`.
+SRC_TO_SLUG = {src: slug for slug, _k, src, _t in THESIS_MANIFEST if src}
+
+THESIS_TITLE = "Censorship and moderation"
+THESIS_SUBTITLE = "the oscillations of a contested practice"
 
 
 def _is_other(v: str) -> bool:
@@ -153,6 +195,69 @@ def write_csv(path: Path, header: list[str], rows: list[list]) -> None:
     print(f"  ✓ data/{path.name:<46}  {len(rows):>6,} rows")
 
 
+# ─── Thesis sync ──────────────────────────────────────────────────────────────
+
+from urllib.parse import unquote as _unquote
+
+_ABS_SITE_RE = re.compile(r"https?://[\w.-]*github\.io/[\w.-]+/(#)")
+_MD_LINK_RE  = re.compile(r"\]\(([^)]+?\.md)((?:#[^)]*)?)\)")
+
+
+def rewrite_links(text: str) -> str:
+    """Make a chapter's markdown path-agnostic and SPA-routable:
+      • absolute GitHub-Pages URLs → relative fragments, so a repo rename
+        never breaks the embedded figure links;
+      • cross-chapter `](Chapter%20N…md)` links → `](#/<slug>)` hash routes.
+    """
+    text = _ABS_SITE_RE.sub(r"\1", text)
+
+    def _md(m):
+        target, anchor = m.group(1), m.group(2)
+        name = _unquote(target).split("/")[-1]
+        slug = SRC_TO_SLUG.get(name)
+        return f"](#/{slug}{anchor})" if slug else m.group(0)
+
+    return _MD_LINK_RE.sub(_md, text)
+
+
+def sync_thesis() -> None:
+    """Copy every manifest source file → site/chapters/<slug>.md (with links
+    rewritten for the SPA), mirror Chapter 1 to the legacy site/manuscript.md,
+    and write site/data/toc.json (parts → chapters tree)."""
+    import json as _json
+    import shutil as _sh
+    SITE_CHAPTERS.mkdir(parents=True, exist_ok=True)
+    SITE_TOC.parent.mkdir(parents=True, exist_ok=True)
+
+    entries = []          # flat, ordered list for the router
+    n_copied = n_missing = 0
+    for slug, kind, src, title in THESIS_MANIFEST:
+        rec = {"slug": slug, "kind": kind, "title": title,
+               "src": src or ""}
+        if src:
+            p = MANUSCRIPT_DIR / src
+            if p.exists():
+                body = rewrite_links(p.read_text(encoding="utf-8"))
+                (SITE_CHAPTERS / f"{slug}.md").write_text(body, encoding="utf-8")
+                n_copied += 1
+                if slug == "chapter-1":
+                    SITE_MANUSCRIPT.write_text(body, encoding="utf-8")
+            else:
+                rec["missing"] = True
+                n_missing += 1
+                print(f"  · missing source: {src}")
+        entries.append(rec)
+
+    # TOC tree: front matter, then part→children groups, then back matter.
+    toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
+           "entries": entries,
+           "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}
+    SITE_TOC.write_text(_json.dumps(toc, ensure_ascii=False, indent=0),
+                        encoding="utf-8")
+    print(f"Synced thesis: {n_copied} files → {SITE_CHAPTERS.name}/ "
+          f"({n_missing} missing) · wrote {SITE_TOC.name}")
+
+
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -163,15 +268,8 @@ def main() -> None:
     F = load_csv(SRC)
     print(f"  findings: {len(F):,} rows")
 
-    # Always re-sync the manuscript from the source-of-truth file.
-    if MANUSCRIPT_SRC.exists():
-        import shutil as _sh
-        _sh.copy2(MANUSCRIPT_SRC, SITE_MANUSCRIPT)
-        with open(SITE_MANUSCRIPT, encoding="utf-8") as _f:
-            print(f"Synced manuscript ({sum(1 for _ in _f):,} lines) → "
-                  f"{SITE_MANUSCRIPT.name}")
-    else:
-        print(f"  (manuscript source not found: {MANUSCRIPT_SRC})")
+    # Sync every thesis source file → site/chapters/<slug>.md and emit toc.json.
+    sync_thesis()
 
     # Rebuild Harvard bibliography for cite keys in the manuscript.
     try:

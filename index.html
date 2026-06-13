@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorship and moderation — the oscillations of a contested practice</title>
-<link rel="stylesheet" href="style.css?v=p6-99">
+<link rel="stylesheet" href="style.css?v=p7-00">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -12,8 +12,8 @@
 <body>
 
 <nav id="sidebar" aria-label="Table of contents">
-  <div class="sb-title">Censorship &amp; moderation</div>
-  <div class="sb-sub">PhD Chapter 1 · interactive</div>
+  <a class="sb-title" href="#/">Censorship &amp; moderation</a>
+  <div class="sb-sub">PhD thesis · interactive</div>
   <ol id="toc" class="toc"></ol>
   <!-- Figure-key panel: contents swap as you scroll between figures. -->
   <aside id="fig-key" hidden>
@@ -29,10 +29,15 @@
 
 <main id="content">
 
-  <!-- ─── MANUSCRIPT (rendered read-only from manuscript.md) ────────────── -->
-  <article id="manuscript" class="prose">
-    <!-- rendered from manuscript.md by app.js -->
-    <p class="loading">Loading manuscript…</p>
+  <!-- ─── LANDING / COVER (title · abstract · acknowledgments · contents) ─ -->
+  <div id="landing" class="prose" hidden>
+    <!-- composed by app.js renderLanding() from toc.json + abstract/ack -->
+  </div>
+
+  <!-- ─── MANUSCRIPT (one chapter at a time, from site/chapters/<slug>.md) ─ -->
+  <article id="manuscript" class="prose" hidden>
+    <!-- rendered by app.js renderManuscript(slug) -->
+    <p class="loading">Loading…</p>
   </article>
 
   <!-- ─── ANALYSIS ───────────────────────────────────────────────────── -->
@@ -567,7 +572,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
-<script src="app.js?v=p6-99" defer></script>
+<script src="app.js?v=p7-00" defer></script>
 
 </body>
 </html>

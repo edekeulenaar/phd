@@ -33,6 +33,7 @@ ROOT       = Path(__file__).resolve().parent.parent.parent
 BIB_PATH   = Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/"
                   "Master vault/My_Library.bib")
 MANUSCRIPT = ROOT / "site" / "manuscript.md"
+CHAPTERS   = ROOT / "site" / "chapters"
 OUT        = ROOT / "site" / "data" / "bibliography.json"
 
 # ─── Pull the cite keys we need ───────────────────────────────────────────
@@ -40,8 +41,15 @@ OUT        = ROOT / "site" / "data" / "bibliography.json"
 CITE_RE = re.compile(r"@([A-Za-z0-9_:.\-]+)")
 
 def manuscript_keys() -> set[str]:
-    txt = MANUSCRIPT.read_text(encoding="utf-8")
-    return set(CITE_RE.findall(txt))
+    """Union of cite keys across EVERY thesis chapter (global bibliography),
+    falling back to the single manuscript.md if site/chapters/ is empty."""
+    keys: set[str] = set()
+    md_files = sorted(CHAPTERS.glob("*.md")) if CHAPTERS.exists() else []
+    if not md_files and MANUSCRIPT.exists():
+        md_files = [MANUSCRIPT]
+    for p in md_files:
+        keys |= set(CITE_RE.findall(p.read_text(encoding="utf-8")))
+    return keys
 
 # ─── Tiny bibtex parser ────────────────────────────────────────────────────
 

@@ -6,6 +6,41 @@
     "harvard": "Aceto, G. and Pescapé, A. (2015) ‘Internet Censorship Detection: A Survey’, *Computer Networks*, 83, pp. 381–421. doi:10.1016/j.comnet.2015.03.008",
     "link": "https://doi.org/10.1016/j.comnet.2015.03.008"
   },
+  "achenbachStudiesLeaveQuestion2020": {
+    "author": "Achenbach and Johnson",
+    "year": "2020",
+    "inline": "(Achenbach and Johnson, 2020)",
+    "harvard": "Achenbach, J. and Johnson, C. Y. (2020) ‘Studies Leave Question of `Airborne' Coronavirus Transmission Unanswered’, *Washington Post*.",
+    "link": ""
+  },
+  "adornoEducationAuschwitz2020": {
+    "author": "Adorno",
+    "year": "2020",
+    "inline": "(Adorno, 2020)",
+    "harvard": "Adorno, T. W. (2020) ‘Education After Auschwitz’, *Filosofiya osvity. Philosophy of Education*, 25(2), pp. 82–99. doi:10.31874/2309-1606-2019-25-2-4",
+    "link": "https://doi.org/10.31874/2309-1606-2019-25-2-4"
+  },
+  "aljazeeraTwitterPermanentlyBan2021": {
+    "author": "Jazeera",
+    "year": "2021",
+    "inline": "(Jazeera, 2021)",
+    "harvard": "Jazeera, A. (2021) ‘Twitter to Permanently Ban Users Who Spread COVID Misinformation’.",
+    "link": ""
+  },
+  "allanForbiddenWordsTaboo2006": {
+    "author": "Allan and Burridge",
+    "year": "2006",
+    "inline": "(Allan and Burridge, 2006)",
+    "harvard": "Allan, K. and Burridge, K. (2006) *Forbidden Words: Taboo and the Censoring of Language*. Cambridge University Press.",
+    "link": ""
+  },
+  "AlttechWillDiffuse2020": {
+    "author": "",
+    "year": "2020",
+    "inline": "(2020)",
+    "harvard": "Anon. (2020) ‘`Alt-tech' Will Diffuse Online Extremist Presence’, *Emerald Expert Briefings*, oxan-db(oxan-db). doi:10.1108/OXAN-DB250866",
+    "link": "https://doi.org/10.1108/OXAN-DB250866"
+  },
   "amadieuFormesContemporainesCensure2020": {
     "author": "Amadieu and Talon-Hugon",
     "year": "2020",
@@ -19,6 +54,48 @@
     "inline": "(Andioc, 1975)",
     "harvard": "Andioc, R. (1975) ‘La Raquel de Huerta y la censura’, *Hispanic Review*, 43(2), pp. 115. doi:10.2307/472548",
     "link": "https://doi.org/10.2307/472548"
+  },
+  "andreessenWhySoftwareEating2011": {
+    "author": "Andreessen",
+    "year": "2011",
+    "inline": "(Andreessen, 2011)",
+    "harvard": "Andreessen, M. (2011) ‘Why Software Is Eating The World’, *Wall Street Journal*.",
+    "link": ""
+  },
+  "anthropicAPIReference2025": {
+    "author": "Anthropic",
+    "year": "2025",
+    "inline": "(Anthropic, 2025)",
+    "harvard": "Anthropic (2025) *API Reference*.",
+    "link": ""
+  },
+  "anthropicClaudesConstitution2023": {
+    "author": "Anthropic",
+    "year": "2023",
+    "inline": "(Anthropic, 2023)",
+    "harvard": "Anthropic (2023) *Claude's Constitution*.",
+    "link": ""
+  },
+  "anthropicContentModeration2025": {
+    "author": "Anthropic",
+    "year": "2025",
+    "inline": "(Anthropic, 2025)",
+    "harvard": "Anthropic (2025) *Content Moderation*.",
+    "link": ""
+  },
+  "anthropicModelCardEvaluations2023": {
+    "author": "Anthropic",
+    "year": "2023",
+    "inline": "(Anthropic, 2023)",
+    "harvard": "Anthropic (2023) *Model Card and Evaluations for Claude Models*.",
+    "link": ""
+  },
+  "aroraUsingWaybackMachine2016": {
+    "author": "Arora et al.",
+    "year": "2016",
+    "inline": "(Arora et al., 2016)",
+    "harvard": "Arora, S. K., Li, Y., Youtie, J. and Shapira, P. (2016) ‘Using the Wayback Machine to Mine Websites in the Social Sciences: A Methodological Resource’, *Journal of the Association for Information Science and Technology*, 67(8), pp. 1904–1915. doi:10.1002/asi.23503",
+    "link": "https://doi.org/10.1002/asi.23503"
   },
   "aryanInternetCensorshipIran": {
     "author": "Aryan et al.",
@@ -34,12 +111,40 @@
     "harvard": "Audran, J. (2005) ‘Un forum, à quoi bon?’.",
     "link": ""
   },
+  "axelrodEvolutionaryApproachNorms1986": {
+    "author": "Axelrod",
+    "year": "1986",
+    "inline": "(Axelrod, 1986)",
+    "harvard": "Axelrod, R. (1986) ‘An Evolutionary Approach to Norms’, *American Political Science Review*, 80(4), pp. 1095–1111. doi:10.2307/1960858",
+    "link": "https://doi.org/10.2307/1960858"
+  },
+  "ayalaSpeechAffordancesStructural2016": {
+    "author": "Ayala",
+    "year": "2016",
+    "inline": "(Ayala, 2016)",
+    "harvard": "Ayala, S. (2016) ‘Speech Affordances: A Structural Take on How Much We Can Do with Our Words’, *European Journal of Philosophy*, 24(4), pp. 879–891. doi:10.1111/ejop.12186",
+    "link": "https://doi.org/10.1111/ejop.12186"
+  },
   "badouardRegulationContenusInternet2020": {
     "author": "Badouard",
     "year": "2020",
     "inline": "(Badouard, 2020)",
     "harvard": "Badouard, R. (2020) ‘La régulation des contenus sur Internet à l'heure des << fake news >> et des discours de haine’, *Communications*, n° 106(1), pp. 161–173. doi:10.3917/commu.106.0161",
     "link": "https://doi.org/10.3917/commu.106.0161"
+  },
+  "baiConstitutionalAIHarmlessness2022": {
+    "author": "Bai et al.",
+    "year": "2022",
+    "inline": "(Bai et al., 2022)",
+    "harvard": "Bai, Y., Kadavath, S., Kundu, S., Askell, A., Kernion, J., Jones, A., Chen, A., Goldie, A., Mirhoseini, A., McKinnon, C., Chen, C., Olsson, C., Olah, C., Hernandez, D., Drain, D., Ganguli, D., Li, D., Tran-Johnson, E., Perez, E., Kerr, J., Mueller, J., Ladish, J., Landau, J., Ndousse, K., Lukosuite, K., Lovitt, L., Sellitto, M., Elhage, N., Schiefer, N., Mercado, N., DasSarma, N., Lasenby, R., Larson, R., Ringer, S., Johnston, S., Kravec, S., Showk, S. E., Fort, S., Lanham, T., Telleen-Lawton, T., Conerly, T., Henighan, T., Hume, T., Bowman, S. R., Hatfield-Dodds, Z., Mann, B., Amodei, D., Joseph, N., McCandlish, S., Brown, T. and Kaplan, J. (2022) *Constitutional AI: Harmlessness from AI Feedback*. arXiv.",
+    "link": ""
+  },
+  "bajohrWhoeverControlsLanguage2024": {
+    "author": "Bajohr",
+    "year": "2024",
+    "inline": "(Bajohr, 2024)",
+    "harvard": "Bajohr, H. (2024) ‘Whoever Controls Language Models Controls Politics’, pp. 189–195.",
+    "link": ""
   },
   "bammanCensorshipDeletionPractices2012": {
     "author": "Bamman et al.",
@@ -48,12 +153,47 @@
     "harvard": "Bamman, D., O'Connor, B. and Smith, N. (2012) ‘Censorship and Deletion Practices in Chinese Social Media’, *First Monday*. doi:10.5210/fm.v17i3.3943",
     "link": "https://doi.org/10.5210/fm.v17i3.3943"
   },
+  "benderDangersStochasticParrots2021": {
+    "author": "Bender et al.",
+    "year": "2021",
+    "inline": "(Bender et al., 2021)",
+    "harvard": "Bender, E. M., Gebru, T., McMillan-Major, A. and Shmitchell, S. (2021) ‘On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜’, in *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*. New York, NY, USA: Association for Computing Machinery, pp. 610–623. doi:10.1145/3442188.3445922",
+    "link": "https://doi.org/10.1145/3442188.3445922"
+  },
+  "betliiIdentityPoliticsHeritage2022": {
+    "author": "Betlii",
+    "year": "2022",
+    "inline": "(Betlii, 2022)",
+    "harvard": "Betlii, O. (2022) ‘The Identity Politics of Heritage: Decommunization, Decolonization, and Derussification of Kyiv Monuments after Russia's Full-Scale Invasion of Ukraine’, *Journal of Applied History*, 4(1-2), pp. 149–169. doi:10.1163/25895893-bja10031",
+    "link": "https://doi.org/10.1163/25895893-bja10031"
+  },
   "binnsTrainerBotInheritance2017": {
     "author": "Binns et al.",
     "year": "2017",
     "inline": "(Binns et al., 2017)",
     "harvard": "Binns, R., Veale, M., Van Kleek, M. and Shadbolt, N. (2017) ‘Like Trainer, Like Bot? Inheritance of Bias in Algorithmic Content Moderation’, in *Social Informatics*. Cham: Springer International Publishing, pp. 405–415. doi:10.1007/978-3-319-67256-4_32",
     "link": "https://doi.org/10.1007/978-3-319-67256-4_32"
+  },
+  "bordiaProblemSolvingSocial2004": {
+    "author": "Bordia and Difonzo",
+    "year": "2004",
+    "inline": "(Bordia and Difonzo, 2004)",
+    "harvard": "Bordia, P. and Difonzo, N. (2004) ‘Problem Solving in Social Interactions on the Internet: Rumor As Social Cognition’, *Social Psychology Quarterly*, 67(1), pp. 33–49. doi:10.1177/019027250406700105",
+    "link": "https://doi.org/10.1177/019027250406700105"
+  },
+  "borraProgrammedMethodDeveloping2014": {
+    "author": "Borra and Rieder",
+    "year": "2014",
+    "inline": "(Borra and Rieder, 2014)",
+    "harvard": "Borra, E. and Rieder, B. (2014) ‘Programmed Method: Developing a Toolset for Capturing and Analyzing Tweets’, *Aslib Journal of Information Management*, 66(3), pp. 262–278. doi:10.1108/AJIM-09-2013-0094",
+    "link": "https://doi.org/10.1108/AJIM-09-2013-0094"
+  },
+  "bostromMethodsCommunicatingComplexity2015": {
+    "author": "Bostrom et al.",
+    "year": "2015",
+    "inline": "(Bostrom et al., 2015)",
+    "harvard": "Bostrom, A., Joslyn, S., Pavia, R., Walker, A. H., Starbird, K. and Leschine, T. M. (2015) ‘Methods for Communicating the Complexity and Uncertainty of Oil Spill Response Actions and Tradeoffs’, *Human and Ecological Risk Assessment: An International Journal*, 21(3), pp. 631–645. doi:10.1080/10807039.2014.947867",
+    "link": "https://doi.org/10.1080/10807039.2014.947867"
   },
   "bourdieuLangagePouvoirSymbolique2001": {
     "author": "Bourdieu",
@@ -62,11 +202,123 @@
     "harvard": "Bourdieu, P. (2001) *Langage et pouvoir symbolique*. Seuil.",
     "link": ""
   },
+  "bruno78BasicTwitterApi2016": {
+    "author": "bruno78",
+    "year": "2016",
+    "inline": "(bruno78, 2016)",
+    "harvard": "bruno78 (2016) *A Basic Twitter Api to Print User Statuses*.",
+    "link": ""
+  },
+  "bucherAffordancesSocialMedia2018": {
+    "author": "Bucher and Helmond",
+    "year": "2018",
+    "inline": "(Bucher and Helmond, 2018)",
+    "harvard": "Bucher, T. and Helmond, A. (2018) ‘The Affordances of Social Media Platforms’ *The SAGE Handbook of Social Media*. 1 Oliver's Yard, 55 City Road London EC1Y 1SP: SAGE Publications Ltd, pp. 233–253. doi:10.4135/9781473984066.n14",
+    "link": "https://doi.org/10.4135/9781473984066.n14"
+  },
+  "burtAdministrationAestheticsCensorship1994": {
+    "author": "Burt",
+    "year": "1994",
+    "inline": "(Burt, 1994)",
+    "harvard": "Burt, R. (1994) *The Administration of Aesthetics: Censorship, Political Criticism, and the Public Sphere*. U of Minnesota Press.",
+    "link": ""
+  },
+  "butlerRuledOutVocabularies1998": {
+    "author": "Butler",
+    "year": "1998",
+    "inline": "(Butler, 1998)",
+    "harvard": "Butler, J. (1998) ‘Ruled out: Vocabularies of the Censor’ *Censorship and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Publications, pp. 247–259.",
+    "link": ""
+  },
+  "cameronAttackBrazilsSeat2023": {
+    "author": "Cameron",
+    "year": "2023",
+    "inline": "(Cameron, 2023)",
+    "harvard": "Cameron, C. (2023) ‘The Attack on Brazil's Seat of Government Resembles the Storming of the U.S. Capitol on Jan. 6, 2021’, *The New York Times*.",
+    "link": ""
+  },
+  "campbellInternalizationMoralNorms1964": {
+    "author": "Campbell",
+    "year": "1964",
+    "inline": "(Campbell, 1964)",
+    "harvard": "Campbell, E. Q. (1964) ‘The Internalization of Moral Norms’, *Sociometry*, 27(4), pp. 391. doi:10.2307/2785655",
+    "link": "https://doi.org/10.2307/2785655"
+  },
+  "caplanContentContextModeration2018": {
+    "author": "Caplan",
+    "year": "2018",
+    "inline": "(Caplan, 2018)",
+    "harvard": "Caplan, R. (2018) *Content or Context Moderation? Artisanal, Community-Reliant, and Industrial Approaches*.",
+    "link": ""
+  },
+  "caplowRumorsWarDepartmental1946": {
+    "author": "Caplow",
+    "year": "1946-1947",
+    "inline": "(Caplow, 1946-1947)",
+    "harvard": "Caplow, T. (1946-1947) ‘Rumors in War Departmental Contributions: Teaching and Research in the Social Sciences’, *Social Forces*, 25(3), pp. 298–302.",
+    "link": ""
+  },
   "carmiHiddenListenersRegulatingb": {
     "author": "Carmi",
     "year": "n.d.",
     "inline": "(Carmi, n.d.)",
     "harvard": "Carmi, E. (n.d.) ‘The Hidden Listeners: Regulating the Line from Telephone Operators to Content Moderators’.",
+    "link": ""
+  },
+  "centersfordiseasecontrolandpreventionHealthcareProfessionalsFrequently2020": {
+    "author": "Control and Prevention",
+    "year": "2020",
+    "inline": "(Control and Prevention, 2020)",
+    "harvard": "Control, C. D. and Prevention (2020) *Healthcare Professionals: Frequently Asked Questions and Answers CDC*.",
+    "link": ""
+  },
+  "chandrasekharanQuarantinedExaminingEffects2021a": {
+    "author": "Chandrasekharan et al.",
+    "year": "2021",
+    "inline": "(Chandrasekharan et al., 2021)",
+    "harvard": "Chandrasekharan, E., Jhaver, S., Bruckman, A. and Gilbert, E. (2021) *Quarantined! Examining the Effects of a Community-Wide Moderation Intervention on Reddit*. arXiv. doi:10.48550/arXiv.2009.11483",
+    "link": "https://doi.org/10.48550/arXiv.2009.11483"
+  },
+  "chaoJailbreakingBlackBox2023": {
+    "author": "Chao et al.",
+    "year": "2023",
+    "inline": "(Chao et al., 2023)",
+    "harvard": "Chao, P., Robey, A., Dobriban, E., Hassani, H., Pappas, G. J. and Wong, E. (2023) *Jailbreaking Black Box Large Language Models in Twenty Queries*. arXiv. doi:10.48550/arXiv.2310.08419",
+    "link": "https://doi.org/10.48550/arXiv.2310.08419"
+  },
+  "christianAlignmentProblemMachine2021": {
+    "author": "Christian",
+    "year": "2021",
+    "inline": "(Christian, 2021)",
+    "harvard": "Christian, B. (2021) *The Alignment Problem: Machine Learning and Human Values*. Ebook: W. W. Norton & Company.",
+    "link": ""
+  },
+  "chuHelpingWorldFind2020": {
+    "author": "Chu and McDonald",
+    "year": "2020",
+    "inline": "(Chu and McDonald, 2020)",
+    "harvard": "Chu, J. and McDonald, J. (2020) *Helping the World Find Credible Information about Novel #coronavirus*.",
+    "link": ""
+  },
+  "chunDiscriminatingDataCorrelation2021": {
+    "author": "Chun",
+    "year": "2021",
+    "inline": "(Chun, 2021)",
+    "harvard": "Chun, W. H. K. (2021) *Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition*. Cambridge, MA, USA: MIT Press.",
+    "link": ""
+  },
+  "cohenCensuresControlesRegulation2016": {
+    "author": "Cohen",
+    "year": "2016",
+    "inline": "(Cohen, 2016)",
+    "harvard": "Cohen, E. (2016) ‘Censures, Contr\\^oles, Régulation Dans Les Télévisions Européennes Des Années 1970 Aux Annéees 1980’, in L. Martin (ed.) *Les Censures Dans Le Monde: XIXè-XXIè Siècle*. Rennes, France: Presses Universitaires de Rennes, pp. 135–148.",
+    "link": ""
+  },
+  "constineFacebookWillChange2018": {
+    "author": "Constine",
+    "year": "2018",
+    "inline": "(Constine, 2018)",
+    "harvard": "Constine, J. (2018) *Facebook Will Change Algorithm to Demote ``Borderline Content'' That Almost Violates Policies*.",
     "link": ""
   },
   "cookTwoTypesSelfCensorship2013a": {
@@ -90,6 +342,20 @@
     "harvard": "Davidson, J., Liebald, B., Liu, J., Nandy, P., Van Vleet, T., Gargi, U., Gupta, S., He, Y., Lambert, M., Livingston, B. and others (2010) ‘The YouTube Video Recommendation System’, in *Proceedings of the Fourth ACM Conference on Recommender Systems*: ACM, pp. 293–296.",
     "link": ""
   },
+  "decookSafeHarmGovernance2022": {
+    "author": "DeCook et al.",
+    "year": "2022",
+    "inline": "(DeCook et al., 2022)",
+    "harvard": "DeCook, J. R., Cotter, K., Kanthawala, S. and Foyle, K. (2022) ‘Safe from ``Harm'': The Governance of Violence by Platforms’, *Policy & Internet*, 14(1), pp. 63–78. doi:10.1002/poi3.290",
+    "link": "https://doi.org/10.1002/poi3.290"
+  },
+  "decookSafeHarmGovernance2022b": {
+    "author": "DeCook et al.",
+    "year": "2022",
+    "inline": "(DeCook et al., 2022)",
+    "harvard": "DeCook, J. R., Cotter, K., Kanthawala, S. and Foyle, K. (2022) ‘Safe from ``Harm'': The Governance of Violence by Platforms’, *Policy & Internet*, 14(1), pp. 63–78. doi:10.1002/poi3.290",
+    "link": "https://doi.org/10.1002/poi3.290"
+  },
   "degandModerationFilsDiscussion2011": {
     "author": "Degand and Simonson",
     "year": "2011",
@@ -111,6 +377,41 @@
     "harvard": "Deibert, R. J. (2008) ‘The Geopolitics of Internet Control: Censorship, Sovereignty, and Cyberspace’ *Routledge Handbook of Internet Politics*. London: Routledge, pp. 14.",
     "link": ""
   },
+  "dekeulenaarAlgorithmicDiplomacyIntegrating2018": {
+    "author": "de Keulenaar",
+    "year": "2018",
+    "inline": "(de Keulenaar, 2018)",
+    "harvard": "de Keulenaar, E. (2018) *Algorithmic Diplomacy: Integrating Mediation Techniques into YouTube's Recommender System*. Amsterdam.",
+    "link": ""
+  },
+  "dekeulenaarFieldGuideUsing2023": {
+    "author": "de Keulenaar et al.",
+    "year": "2023",
+    "inline": "(de Keulenaar et al., 2023)",
+    "harvard": "de Keulenaar, E., Borra, E., Bollini, P., Caroleo, L., Cerigo, B., Rubèl, R., Gaw, F., Gobbo, B., Janezashvili, D., Kisjes, I., Moret i Soler, D., Ruijgrok, K. and Sombatpoonsiri, J. (2023) *A Field Guide to Using LLMs for Online Conflict Analysis*.",
+    "link": ""
+  },
+  "dekeulenaarMCATModerationCapture2024": {
+    "author": "de Keulenaar et al.",
+    "year": "2024",
+    "inline": "(de Keulenaar et al., 2024)",
+    "harvard": "de Keulenaar, E., Kisjes, I. and Anemaet, F. (2024) *MCAT: Moderation Capture and Analysis Toolkit*.",
+    "link": ""
+  },
+  "dekeulenaarModulatingModerationHistory2023": {
+    "author": "de Keulenaar et al.",
+    "year": "2023",
+    "inline": "(de Keulenaar et al., 2023)",
+    "harvard": "de Keulenaar, E., Magalh\\ aes, J. C. and Ganesh, B. (2023) ‘Modulating Moderation: A History of Objectionability in Twitter Moderation Practices’, *Journal of Communication*, 73(3), pp. 273–287. doi:10.1093/joc/jqad015",
+    "link": "https://doi.org/10.1093/joc/jqad015"
+  },
+  "dekeulenaarTwitterAccidentalAuthority2023": {
+    "author": "de Keulenaar et al.",
+    "year": "2023",
+    "inline": "(de Keulenaar et al., 2023)",
+    "harvard": "de Keulenaar, E., Kisjes, I., Smith, R., Albrecht, C. and Cappuccio, E. (2023) ‘Twitter as Accidental Authority: How a Platform Assumed an Adjucative Role during the COVID-19 Pandemic’, in R. Rogers (ed.) *The Propagation of Misinformation in Social Media: A Cross-Platform Analysis*. Amsterdam: Amsterdam University Press, pp. 109–138.",
+    "link": ""
+  },
   "delaatCoercionEmpowermentModeration2012": {
     "author": "de Laat",
     "year": "2012",
@@ -118,12 +419,33 @@
     "harvard": "de Laat, P. B. (2012) ‘Coercion or Empowerment? Moderation of Content in Wikipedia as `Essentially Contested' Bureaucratic Rules’, *Ethics and Information Technology*, 14(2), pp. 123–135. doi:10.1007/s10676-012-9289-7",
     "link": "https://doi.org/10.1007/s10676-012-9289-7"
   },
+  "diakopoulosProspectiveAlgorithmicAccountability2024": {
+    "author": "Diakopoulos",
+    "year": "2024",
+    "inline": "(Diakopoulos, 2024)",
+    "harvard": "Diakopoulos, N. (2024) ‘Prospective Algorithmic Accountability and the Role of the News Media’, *SSRN Electronic Journal*. doi:10.2139/ssrn.5022167",
+    "link": "https://doi.org/10.2139/ssrn.5022167"
+  },
   "diasolivaFightingHateSpeech2021a": {
     "author": "Dias Oliva et al.",
     "year": "2021",
     "inline": "(Dias Oliva et al., 2021)",
     "harvard": "Dias Oliva, T., Antonialli, D. M. and Gomes, A. (2021) ‘Fighting Hate Speech, Silencing Drag Queens? Artificial Intelligence in Content Moderation and Risks to LGBTQ Voices Online’, *Sexuality & Culture*, 25(2), pp. 700–732. doi:10.1007/s12119-020-09790-w",
     "link": "https://doi.org/10.1007/s12119-020-09790-w"
+  },
+  "digitalmethodsinitiativeInternetArchiveWayback2022": {
+    "author": "Initiative",
+    "year": "2022",
+    "inline": "(Initiative, 2022)",
+    "harvard": "Initiative, D. M. (2022) *Internet Archive Wayback Machine Link Ripper*.",
+    "link": ""
+  },
+  "donovanNavigatingTechStack2019": {
+    "author": "Donovan",
+    "year": "2019",
+    "inline": "(Donovan, 2019)",
+    "harvard": "Donovan, J. (2019) *Navigating the Tech Stack: When, Where and How Should We Moderate Content?*.",
+    "link": ""
   },
   "douekGoverningOnlineSpeech2021": {
     "author": "Douek",
@@ -139,6 +461,27 @@
     "harvard": "Downs, W. M. (2012) ‘Is the Cordon Sanitaire Effective?’, in W. M. Downs (ed.) *Political Extremism in Democracies: Combating Intolerance*. New York: Palgrave Macmillan US, pp. 81–109. doi:10.1057/9781137052834_4",
     "link": "https://doi.org/10.1057/9781137052834_4"
   },
+  "dvoskinIllusionInclusionFalse2024": {
+    "author": "Dvoskin",
+    "year": "2024",
+    "inline": "(Dvoskin, 2024)",
+    "harvard": "Dvoskin, B. (2024) ‘The Illusion of Inclusion: The False Promise of the New Governance Project for Content Moderation’, *SSRN Electronic Journal*. doi:10.2139/ssrn.4785833",
+    "link": "https://doi.org/10.2139/ssrn.4785833"
+  },
+  "dwoskinMisinformationCoronavirusFinds2020": {
+    "author": "Dwoskin",
+    "year": "2020",
+    "inline": "(Dwoskin, 2020)",
+    "harvard": "Dwoskin, E. (2020) ‘Misinformation about Coronavirus Finds New Avenues on Unexpected Sites’, *Washington Post*.",
+    "link": ""
+  },
+  "eatwellNationalPopulismRevolt2018": {
+    "author": "Eatwell and Goodwin",
+    "year": "2018",
+    "inline": "(Eatwell and Goodwin, 2018)",
+    "harvard": "Eatwell, R. and Goodwin, M. (2018) *National Populism: The Revolt Against Liberal Democracy*. London UK: Pelican.",
+    "link": ""
+  },
   "edwardsModeratorEmergingDemocratic2002": {
     "author": "Edwards",
     "year": "2002",
@@ -152,6 +495,55 @@
     "inline": "(Faugere et al., 2023)",
     "harvard": "Faugere, C., Mugnier, V. and Sylvos, F. (2023) *Censure et tabou*. Classiques Garnier.",
     "link": ""
+  },
+  "fengModularPluralismPluralistic2024": {
+    "author": "Feng et al.",
+    "year": "2024",
+    "inline": "(Feng et al., 2024)",
+    "harvard": "Feng, S., Sorensen, T., Liu, Y., Fisher, J., Park, C. Y., Choi, Y. and Tsvetkov, Y. (2024) *Modular Pluralism: Pluralistic Alignment via Multi-LLM Collaboration*. arXiv. doi:10.48550/arXiv.2406.15951",
+    "link": "https://doi.org/10.48550/arXiv.2406.15951"
+  },
+  "fogelinLogicDeepDisagreements1985": {
+    "author": "Fogelin",
+    "year": "1985",
+    "inline": "(Fogelin, 1985)",
+    "harvard": "Fogelin, R. J. (1985) ‘The Logic of Deep Disagreements’, *Informal Logic*, pp. 3–11.",
+    "link": ""
+  },
+  "fraserRethinkingPublicSphere1990": {
+    "author": "Fraser",
+    "year": "1990",
+    "inline": "(Fraser, 1990)",
+    "harvard": "Fraser, N. (1990) ‘Rethinking the Public Sphere: A Contribution to the Critique of Actually Existing Democracy’, *Social Text*, pp. 58–80.",
+    "link": ""
+  },
+  "fuchsGermanysConstitutionProtects2015": {
+    "author": "Fuchs",
+    "year": "2015",
+    "inline": "(Fuchs, 2015)",
+    "harvard": "Fuchs, R. (2015) *Germany's Constitution Protects against Dictatorships – DW – 09/22/2015*.",
+    "link": ""
+  },
+  "gabrielArtificialIntelligenceValues2020": {
+    "author": "Gabriel",
+    "year": "2020",
+    "inline": "(Gabriel, 2020)",
+    "harvard": "Gabriel, I. (2020) ‘Artificial Intelligence, Values, and Alignment’, *Minds and Machines*, 30(3), pp. 411–437. doi:10.1007/s11023-020-09539-2",
+    "link": "https://doi.org/10.1007/s11023-020-09539-2"
+  },
+  "garciagonzalezYoutubedl2022": {
+    "author": "Garcia Gonzalez et al.",
+    "year": "2022",
+    "inline": "(Garcia Gonzalez et al., 2022)",
+    "harvard": "Garcia Gonzalez, R., Amine, R. and M., S. (2022) *Youtube-Dl*.",
+    "link": ""
+  },
+  "gibbsFuneralInstagramDeath2015": {
+    "author": "Gibbs et al.",
+    "year": "2015",
+    "inline": "(Gibbs et al., 2015)",
+    "harvard": "Gibbs, M., Meese, J., Arnold, M., Nansen, B. and Carter, M. (2015) ‘#Funeral and Instagram: Death, Social Media, and Platform Vernacular’, *Information, Communication & Society*, 18(3), pp. 255–268. doi:10.1080/1369118X.2014.987152",
+    "link": "https://doi.org/10.1080/1369118X.2014.987152"
   },
   "gibsonFreeSpeechSafe2019": {
     "author": "Gibson",
@@ -174,6 +566,34 @@
     "harvard": "Gillespie, T. (2018) *Custodians of the Internet*. Cambridge, Massachussets: MIT Press.",
     "link": ""
   },
+  "gillespieExpandingDebateContent2020": {
+    "author": "Gillespie et al.",
+    "year": "2020",
+    "inline": "(Gillespie et al., 2020)",
+    "harvard": "Gillespie, T., Aufderheide, P., Carmi, E., Gerrard, Y., Gorwa, R., Matamoros-Fernandez, A., Roberts, S. T., Sinnreich, A. and West, S. M. (2020) ‘Expanding the Debate about Content Moderation: Scholarly Research Agendas for the Coming Policy Debates’, *Internet Policy Review*, 9(4), pp. Article number: 4 1-29.",
+    "link": ""
+  },
+  "gillespieNotRecommendReduction2022": {
+    "author": "Gillespie",
+    "year": "2022",
+    "inline": "(Gillespie, 2022)",
+    "harvard": "Gillespie, T. (2022) ‘Do Not Recommend? Reduction as a Form of Content Moderation’, *Social Media + Society*, 8(3), pp. 20563051221117552. doi:10.1177/20563051221117552",
+    "link": "https://doi.org/10.1177/20563051221117552"
+  },
+  "gillespiePoliticsPlatforms2010": {
+    "author": "Gillespie",
+    "year": "2010",
+    "inline": "(Gillespie, 2010)",
+    "harvard": "Gillespie, T. (2010) ‘The Politics of `Platforms'’, *New Media & Society*, 12(3), pp. 347–364. doi:10.1177/1461444809342738",
+    "link": "https://doi.org/10.1177/1461444809342738"
+  },
+  "goldbergWord2vecExplainedDeriving2014": {
+    "author": "Goldberg and Levy",
+    "year": "2014",
+    "inline": "(Goldberg and Levy, 2014)",
+    "harvard": "Goldberg, Y. and Levy, O. (2014) ‘Word2vec Explained: Deriving Mikolov et al.'s Negative-Sampling Word-Embedding Method’, *arXiv:1402.3722 [cs, stat]*.",
+    "link": ""
+  },
   "gorwaAlgorithmicContentModeration2020": {
     "author": "Gorwa et al.",
     "year": "2020",
@@ -181,12 +601,40 @@
     "harvard": "Gorwa, R., Binns, R. and Katzenbach, C. (2020) ‘Algorithmic Content Moderation: Technical and Political Challenges in the Automation of Platform Governance’, *Big Data & Society*, 7(1), pp. 2053951719897945. doi:10.1177/2053951719897945",
     "link": "https://doi.org/10.1177/2053951719897945"
   },
+  "gorwaModeratingModelMarketplaces2024": {
+    "author": "Gorwa and and Veale",
+    "year": "2024",
+    "inline": "(Gorwa and and Veale, 2024)",
+    "harvard": "Gorwa, R. and and Veale, M. (2024) ‘Moderating Model Marketplaces: Platform Governance Puzzles for AI Intermediaries’, *Law, Innovation and Technology*, 16(2), pp. 341–391. doi:10.1080/17579961.2024.2388914",
+    "link": "https://doi.org/10.1080/17579961.2024.2388914"
+  },
+  "gorwaModeratingModelMarketplaces2024b": {
+    "author": "Gorwa and Veale",
+    "year": "2024",
+    "inline": "(Gorwa and Veale, 2024)",
+    "harvard": "Gorwa, R. and Veale, M. (2024) ‘Moderating Model Marketplaces: Platform Governance Puzzles for AI Intermediaries’, *Law, Innovation and Technology*, 16(2), pp. 341–391. doi:10.1080/17579961.2024.2388914",
+    "link": "https://doi.org/10.1080/17579961.2024.2388914"
+  },
+  "gorwaPlatformGovernanceTriangle2019a": {
+    "author": "Gorwa",
+    "year": "2019",
+    "inline": "(Gorwa, 2019)",
+    "harvard": "Gorwa, R. (2019) ‘The Platform Governance Triangle: Conceptualising the Informal Regulation of Online Content’, *Internet Policy Review*, 8(2), pp. 1–22. doi:10.14763/2019.2.1407",
+    "link": "https://doi.org/10.14763/2019.2.1407"
+  },
   "gorwaWhatPlatformGovernance2019b": {
     "author": "Gorwa",
     "year": "2019",
     "inline": "(Gorwa, 2019)",
     "harvard": "Gorwa, R. (2019) ‘What Is Platform Governance?’, *Information, Communication & Society*, 22(6), pp. 854–871. doi:10.1080/1369118x.2019.1573914",
     "link": "https://doi.org/10.1080/1369118x.2019.1573914"
+  },
+  "grimmelmannVirtuesModeration2017": {
+    "author": "Grimmelmann",
+    "year": "2017",
+    "inline": "(Grimmelmann, 2017)",
+    "harvard": "Grimmelmann, J. (2017) *The Virtues of Moderation*. Center for Open Science. doi:10.31228/osf.io/qwxf5",
+    "link": "https://doi.org/10.31228/osf.io/qwxf5"
   },
   "gyetvanCensorshipFreedomExpression2025": {
     "author": "Gyetván",
@@ -202,12 +650,61 @@
     "harvard": "Habermas, J. (2023) *A New Structural Transformation of the Public Sphere and Deliberative Politics*.",
     "link": ""
   },
+  "hardforkInterviewSamAltman2023": {
+    "author": "Fork",
+    "year": "2023",
+    "inline": "(Fork, 2023)",
+    "harvard": "Fork, H. (2023) *Interview with Sam Altman Two Days before He Was Fired Ep 58*. New York Times.",
+    "link": ""
+  },
+  "hartmannPoliticalIdeologyConversational2023": {
+    "author": "Hartmann et al.",
+    "year": "2023",
+    "inline": "(Hartmann et al., 2023)",
+    "harvard": "Hartmann, J., Schwenzow, J. and Witte, M. (2023) *The Political Ideology of Conversational AI: Converging Evidence on ChatGPT's pro-Environmental, Left-Libertarian Orientation*. doi:10.2139/ssrn.4316084",
+    "link": "https://doi.org/10.2139/ssrn.4316084"
+  },
+  "haslangerWhatSocialStructural2016": {
+    "author": "Haslanger",
+    "year": "2016",
+    "inline": "(Haslanger, 2016)",
+    "harvard": "Haslanger, S. (2016) ‘What Is a (Social) Structural Explanation?’, *Philosophical Studies*, 173(1), pp. 113–130. doi:10.1007/s11098-014-0434-5",
+    "link": "https://doi.org/10.1007/s11098-014-0434-5"
+  },
+  "hatebaseHatebase2022": {
+    "author": "Hatebase",
+    "year": "2022",
+    "inline": "(Hatebase, 2022)",
+    "harvard": "Hatebase (2022) *Hatebase*.",
+    "link": ""
+  },
+  "helmondPlatformizationWebMaking2015": {
+    "author": "Helmond",
+    "year": "2015",
+    "inline": "(Helmond, 2015)",
+    "harvard": "Helmond, A. (2015) ‘The Platformization of the Web: Making Web Data Platform Ready’, *Social Media + Society*, 1(2), pp. 1–11. doi:10.1177/2056305115603080",
+    "link": "https://doi.org/10.1177/2056305115603080"
+  },
   "hendrixTranscriptMarkZuckerberg2025": {
     "author": "Hendrix",
     "year": "2025",
     "inline": "(Hendrix, 2025)",
     "harvard": "Hendrix, J. (2025) *Transcript: Mark Zuckerberg Announces Major Changes to Meta's Content Moderation Policies and Operations TechPolicy.Press*.",
     "link": ""
+  },
+  "hillDefinitelyNotBusiness2023": {
+    "author": "Hill",
+    "year": "2023",
+    "inline": "(Hill, 2023)",
+    "harvard": "Hill, S. (2023) ‘`Definitely Not in the Business of Wanting to Be Associated': Examining Public Relations in a Deplatformization Controversy’, *Convergence*, pp. 13548565231203981. doi:10.1177/13548565231203981",
+    "link": "https://doi.org/10.1177/13548565231203981"
+  },
+  "hillDefinitelyNotBusiness2024": {
+    "author": "Hill",
+    "year": "2024",
+    "inline": "(Hill, 2024)",
+    "harvard": "Hill, S. (2024) ‘`Definitely Not in the Business of Wanting to Be Associated': Examining Public Relations in a Deplatformization Controversy’, *Convergence: The International Journal of Research into New Media Technologies*, 30(6), pp. 2131–2151. doi:10.1177/13548565231203981",
+    "link": "https://doi.org/10.1177/13548565231203981"
   },
   "holquistIntroductionCorruptOriginals1994": {
     "author": "Holquist",
@@ -216,6 +713,20 @@
     "harvard": "Holquist, M. (1994) ‘Introduction: Corrupt Originals: The Paradox of Censorship’, *PMLA*, 109(1), pp. 14–25. doi:10.1632/S0030812900058363",
     "link": "https://doi.org/10.1632/S0030812900058363"
   },
+  "howardHowShouldWe2023": {
+    "author": "Howard and Kira",
+    "year": "2023",
+    "inline": "(Howard and Kira, 2023)",
+    "harvard": "Howard, J. and Kira, B. (2023) *How Should We Regulate LLM Chatbots? Lessons from Content Moderation*.",
+    "link": ""
+  },
+  "inanLlamaGuardLLMbased": {
+    "author": "Inan et al.",
+    "year": "n.d.",
+    "inline": "(Inan et al., n.d.)",
+    "harvard": "Inan, H., Upasani, K., Chi, J., Rungta, R., Iyer, K., Mao, Y., Hu, Q., Fuller, B., Testuggine, D. and Khabsa, M. (n.d.) ‘Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations’.",
+    "link": ""
+  },
   "institutfuerzeitgeschichteHitlerMeinKampf2015": {
     "author": "Zeitgeschichte",
     "year": "2015",
@@ -223,11 +734,102 @@
     "harvard": "Zeitgeschichte, I. (2015) *Hitler, Mein Kampf. A critical edition*.",
     "link": ""
   },
+  "internetarchiveInternetArchiveDigital2021": {
+    "author": "Archive",
+    "year": "2021",
+    "inline": "(Archive, 2021)",
+    "harvard": "Archive, I. (2021) *Internet Archive: Digital Library of Free & Borrowable Books, Movies, Music & Wayback Machine*.",
+    "link": ""
+  },
+  "jansenCensorshipKnotThat1988": {
+    "author": "Jansen",
+    "year": "1988",
+    "inline": "(Jansen, 1988)",
+    "harvard": "Jansen, S. C. (1988) *Censorship: The Knot That Binds Power and Knowledge*. New York: Oxford University Press.",
+    "link": ""
+  },
+  "jiAIAlignmentComprehensive2024": {
+    "author": "Ji et al.",
+    "year": "2024",
+    "inline": "(Ji et al., 2024)",
+    "harvard": "Ji, J., Qiu, T., Chen, B., Zhang, B., Lou, H., Wang, K., Duan, Y., He, Z., Zhou, J., Zhang, Z., Zeng, F., Ng, K. Y., Dai, J., Pan, X., O'Gara, A., Lei, Y., Xu, H., Tse, B., Fu, J., McAleer, S., Yang, Y., Wang, Y., Zhu, S. C., Guo, Y. and Gao, W. (2024) *AI Alignment: A Comprehensive Survey*. arXiv. doi:10.48550/arXiv.2310.19852",
+    "link": "https://doi.org/10.48550/arXiv.2310.19852"
+  },
+  "jiangCharacterizingCommunityGuidelines2020": {
+    "author": "Jiang et al.",
+    "year": "2020",
+    "inline": "(Jiang et al., 2020)",
+    "harvard": "Jiang, J. A., Middler, S., Brubaker, J. R. and Fiesler, C. (2020) ‘Characterizing Community Guidelines on Social Media Platforms’, in *Conference Companion Publication of the 2020 on Computer Supported Cooperative Work and Social Computing*. New York, NY, USA: Association for Computing Machinery, pp. 287–291. doi:10.1145/3406865.3418312",
+    "link": "https://doi.org/10.1145/3406865.3418312"
+  },
+  "jinJailbreakingLargeLanguage2024": {
+    "author": "Jin et al.",
+    "year": "2024",
+    "inline": "(Jin et al., 2024)",
+    "harvard": "Jin, H., Zhou, A., Menke, J. D. and Wang, H. (2024) ‘Jailbreaking Large Language Models Against Moderation Guardrails via Cipher Characters’, *Advances in Neural Information Processing Systems*, 37, pp. 59408–59435.",
+    "link": ""
+  },
+  "jonesCensorshipWorldEncyclopedia2001": {
+    "author": "Jones",
+    "year": "2001",
+    "inline": "(Jones, 2001)",
+    "harvard": "Jones, D. (2001) *Censorship: A World Encyclopedia*. Routledge.",
+    "link": ""
+  },
+  "kalevleetaruSocialMediaContent2018": {
+    "author": "Leetaru",
+    "year": "2018",
+    "inline": "(Leetaru, 2018)",
+    "harvard": "Leetaru, K. (2018) *Is Social Media Content Moderation An Impossible Task?*.",
+    "link": ""
+  },
+  "katzenbachPlatformGovernanceArchive2023a": {
+    "author": "Katzenbach et al.",
+    "year": "2023",
+    "inline": "(Katzenbach et al., 2023)",
+    "harvard": "Katzenbach, C., Dergacheva, D., Fischer, A., Kopps, A., Kolesnikov, S., Redeker, D. and Viejo Otero, P. (2023) *Platform Governance Archive (PGA): Dataset PGA v2 [Data Paper]*. Universität Bremen. doi:10.26092/ELIB/2373",
+    "link": "https://doi.org/10.26092/ELIB/2373"
+  },
+  "katzenbachPlatformGovernanceArchives2023": {
+    "author": "Katzenbach et al.",
+    "year": "2023",
+    "inline": "(Katzenbach et al., 2023)",
+    "harvard": "Katzenbach, C., Magalh\\ aes, J. C., Kopps, Sühr, T. and Wunderlich, L. (2023) *Platform Governance Archives*.",
+    "link": ""
+  },
+  "kleisnielsenDealingDigitalIntermediaries2018": {
+    "author": "Kleis Nielsen and Ganter",
+    "year": "2018",
+    "inline": "(Kleis Nielsen and Ganter, 2018)",
+    "harvard": "Kleis Nielsen, R. and Ganter, S. A. (2018) ‘Dealing with Digital Intermediaries: A Case Study of the Relations between Publishers and Platforms’, *New Media & Society*, 20(4), pp. 1600–1617. doi:10.1177/1461444817701318",
+    "link": "https://doi.org/10.1177/1461444817701318"
+  },
   "klonickNewGovernorsPeople2017": {
     "author": "Klonick",
     "year": "2017-2018",
     "inline": "(Klonick, 2017-2018)",
     "harvard": "Klonick, K. (2017-2018) ‘The New Governors: The People, Rules, and Processes Governing Online Speech’, *Harvard Law Review*, 131, pp. 1598.",
+    "link": ""
+  },
+  "kouConspiracyTalkSocial2017": {
+    "author": "Kou et al.",
+    "year": "2017",
+    "inline": "(Kou et al., 2017)",
+    "harvard": "Kou, Y., Gui, X., Chen, Y. and Pine, K. (2017) ‘Conspiracy talk on social media: Collective sensemaking during a public health crisis’, *Proceedings of the ACM on Human-Computer Interaction*, 1(CSCW), pp. 61. doi:10.1145/3134696",
+    "link": "https://doi.org/10.1145/3134696"
+  },
+  "krafftCentralizedParallelDistributed2017": {
+    "author": "Krafft et al.",
+    "year": "2017",
+    "inline": "(Krafft et al., 2017)",
+    "harvard": "Krafft, P., Zhou, K., Edwards, I., Starbird, K. and Spiro, E. S. (2017) ‘Centralized, Parallel, and Distributed Information Processing during Collective Sensemaking’, in *Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems*. Denver, Colorado, USA: Association for Computing Machinery, pp. 2976–2987. doi:10.1145/3025453.3026012",
+    "link": "https://doi.org/10.1145/3025453.3026012"
+  },
+  "L14197": {
+    "author": "",
+    "year": "n.d.",
+    "inline": "(n.d.)",
+    "harvard": "Anon. (n.d.) *L14197*.",
     "link": ""
   },
   "langvardtRegulatingOnlineContent2017": {
@@ -237,12 +839,117 @@
     "harvard": "Langvardt, K. (2017-2018) ‘Regulating Online Content Moderation’, *Georgetown Law Journal*, 106, pp. 1353.",
     "link": ""
   },
+  "lazerComputationalSocialScience2020": {
+    "author": "Lazer et al.",
+    "year": "2020",
+    "inline": "(Lazer et al., 2020)",
+    "harvard": "Lazer, D. M. J., Pentland, A., Watts, D. J., Aral, S., Athey, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Margetts, H., Nelson, A., Salganik, M. J., Strohmaier, M., Vespignani, A. and Wagner, C. (2020) ‘Computational Social Science: Obstacles and Opportunities’, *Science*, 369(6507), pp. 1060–1062. doi:10.1126/science.aaz8170",
+    "link": "https://doi.org/10.1126/science.aaz8170"
+  },
+  "lazerNetworksPoliticalAttitudes2008": {
+    "author": "Lazer et al.",
+    "year": "2008",
+    "inline": "(Lazer et al., 2008)",
+    "harvard": "Lazer, D., Rubineau, B., Chetkovich, C., Katz, N. and Neblo, M. A. (2008) *Networks and Political Attitudes: Structure, Influence, and Co-Evolution*. doi:10.2139/ssrn.1280328",
+    "link": "https://doi.org/10.2139/ssrn.1280328"
+  },
+  "leeAddingMoreContext2020": {
+    "author": "Lee and Oppong",
+    "year": "2020",
+    "inline": "(Lee and Oppong, 2020)",
+    "harvard": "Lee, L. and Oppong, F. (2020) *Adding More Context to Trends*.",
+    "link": ""
+  },
+  "lewisAlternativeInfluenceBroadcasting2018": {
+    "author": "Lewis",
+    "year": "2018",
+    "inline": "(Lewis, 2018)",
+    "harvard": "Lewis, R. (2018) *Alternative Influence: Broadcasting the Reactionary Right on YouTube*.",
+    "link": ""
+  },
+  "lewisCoronavirusAirborneExperts2020": {
+    "author": "Lewis",
+    "year": "2020",
+    "inline": "(Lewis, 2020)",
+    "harvard": "Lewis, D. (2020) ‘Is the Coronavirus Airborne? Experts Can't Agree’, *Nature*, 580(7802), pp. 175–175. doi:10.1038/d41586-020-00974-w",
+    "link": "https://doi.org/10.1038/d41586-020-00974-w"
+  },
+  "loewensteinLegislativeControlPolitical1938": {
+    "author": "Loewenstein",
+    "year": "1938",
+    "inline": "(Loewenstein, 1938)",
+    "harvard": "Loewenstein, K. (1938) ‘Legislative Control of Political Extremism in European Democracies I’, *Columbia Law Review*, 38(4), pp. 591. doi:10.2307/1116432",
+    "link": "https://doi.org/10.2307/1116432"
+  },
+  "loewensteinMilitantDemocracyFundamental1937": {
+    "author": "Loewenstein",
+    "year": "1937",
+    "inline": "(Loewenstein, 1937)",
+    "harvard": "Loewenstein, K. (1937) ‘Militant Democracy and Fundamental Rights, I’, *The American Political Science Review*, 31(3), pp. 417–432. doi:10.2307/1948164",
+    "link": "https://doi.org/10.2307/1948164"
+  },
+  "lyonsTwitterFlagsLimits2020": {
+    "author": "Lyons",
+    "year": "2020",
+    "inline": "(Lyons, 2020)",
+    "harvard": "Lyons, K. (2020) *Twitter Flags, Limits Sharing on Trump Tweet about Being `Immune' to Coronavirus*.",
+    "link": ""
+  },
+  "maImNotSure2022": {
+    "author": "Ma and Kou",
+    "year": "2022",
+    "inline": "(Ma and Kou, 2022)",
+    "harvard": "Ma, R. and Kou, Y. (2022) ‘\"I'm Not Sure What Difference Is between Their Content and Mine, Other than the Person Itself\": A Study of Fairness Perception of Content Moderation on YouTube’, *Proceedings of the ACM on Human-Computer Interaction*, 6(CSCW2), pp. 1–28. doi:10.1145/3555150",
+    "link": "https://doi.org/10.1145/3555150"
+  },
+  "mandavilli239ExpertsOne2020": {
+    "author": "Mandavilli",
+    "year": "2020",
+    "inline": "(Mandavilli, 2020)",
+    "harvard": "Mandavilli, A. (2020) ‘239 Experts With One Big Claim: The Coronavirus Is Airborne’, *The New York Times*.",
+    "link": ""
+  },
+  "martinCensuresDansMonde2016": {
+    "author": "Martin",
+    "year": "2016",
+    "inline": "(Martin, 2016)",
+    "harvard": "L. Martin (ed.) (2016) *Les censures dans le monde : xixe- xxie siècle*. Rennes: Presses universitaires de Rennes.",
+    "link": ""
+  },
+  "matsudaWordsThatWound2018": {
+    "author": "Matsuda",
+    "year": "2018",
+    "inline": "(Matsuda, 2018)",
+    "harvard": "Matsuda, M. J. (2018) *Words That Wound: Critical Race Theory, Assaultive Speech, And The First Amendment*. New York: Routledge.",
+    "link": ""
+  },
+  "mcintoshLanguageTrumpEra2020": {
+    "author": "McIntosh and Mendoza-Denton",
+    "year": "2020",
+    "inline": "(McIntosh and Mendoza-Denton, 2020)",
+    "harvard": "McIntosh, J. and Mendoza-Denton, N. (2020) *Language in the Trump Era: Scandals and Emergencies*. Cambridge University Press.",
+    "link": ""
+  },
   "mcintoshMaledictiveLanguageObscenity2020": {
     "author": "McIntosh",
     "year": "2020",
     "inline": "(McIntosh, 2020)",
     "harvard": "McIntosh, J. (2020) ‘Maledictive Language: Obscenity and Taboo Words’, in J. Stanlaw (ed.) *The International Encyclopedia of Linguistic Anthropology*. Wiley, pp. 1–9. doi:10.1002/9781118786093.iela0248",
     "link": "https://doi.org/10.1002/9781118786093.iela0248"
+  },
+  "mehtaTwitterBansPosting2022": {
+    "author": "Mehta",
+    "year": "2022",
+    "inline": "(Mehta, 2022)",
+    "harvard": "Mehta, I. (2022) *Twitter Bans Posting of Handles and Links to Facebook, Instagram, Mastodon and More (Updated)*.",
+    "link": ""
+  },
+  "mellotCounterfeitPrintingAgent2007": {
+    "author": "Mellot",
+    "year": "2007",
+    "inline": "(Mellot, 2007)",
+    "harvard": "Mellot, J. D. (2007) ‘Counterfeit Printing as an Agent of Diffusion and Change: The French Book-Privilege System and Its Contradictions (1498–1790)’, in S. Alcorn Bacon, E. N. Lindquist and E. F. Shevlin (eds.) *Agent of Change: Print Culture Studies After Elizabeth L. Eisenstein*. University of Massachusetts Press, pp. 42–66.",
+    "link": ""
   },
   "merkleEmileZolaDevant2007": {
     "author": "Merkle",
@@ -251,12 +958,68 @@
     "harvard": "Merkle, D. (2007) ‘\\'Emile Zola devant la censure victorienne’, *TTR : traduction, terminologie, rédaction*, 7(1), pp. 77–91. doi:10.7202/037169ar",
     "link": "https://doi.org/10.7202/037169ar"
   },
+  "messenbergCosmovisaoNovaDireita2019": {
+    "author": "Messenberg",
+    "year": "2019",
+    "inline": "(Messenberg, 2019)",
+    "harvard": "Messenberg, D. (2019) ‘A Cosmovis\\ ao Da \"Nova\" Direita Brasileira’, in R. Menezes (ed.) *Brasil Em Transe: Bolsonarismo, Nova Direita e Desdemocratiza c\\ ao*. Rio de Janeiro: Oficina Raquel, pp. eBook.",
+    "link": ""
+  },
+  "metaLLamaAPIQuickstart2025": {
+    "author": "Meta",
+    "year": "2025",
+    "inline": "(Meta, 2025)",
+    "harvard": "Meta (2025) *LLama API Quickstart*.",
+    "link": ""
+  },
+  "milajevsIRMeetsNLP2015": {
+    "author": "Milajevs et al.",
+    "year": "2015",
+    "inline": "(Milajevs et al., 2015)",
+    "harvard": "Milajevs, D., Sadrzadeh, M. and Roelleke, T. (2015) ‘IR Meets NLP: On the Semantic Similarity between Subject-Verb-Object Phrases’, in *Proceedings of the 2015 International Conference on The Theory of Information Retrieval*. New York, NY, USA: Association for Computing Machinery, pp. 231–240. doi:10.1145/2808194.2809448",
+    "link": "https://doi.org/10.1145/2808194.2809448"
+  },
+  "mistralaiModerationMistralAI2025": {
+    "author": "AI",
+    "year": "2025",
+    "inline": "(AI, 2025)",
+    "harvard": "AI, M. (2025) *Moderation Mistral AI Large Language Models*.",
+    "link": ""
+  },
+  "mistralMistralAIAPI2025": {
+    "author": "Mistral",
+    "year": "2025",
+    "inline": "(Mistral, 2025)",
+    "harvard": "Mistral (2025) *Mistral AI API*.",
+    "link": ""
+  },
+  "mooreCensorship2016": {
+    "author": "Moore",
+    "year": "2016",
+    "inline": "(Moore, 2016)",
+    "harvard": "Moore, N. (2016) ‘Censorship’ *Oxford Research Encyclopedia of Literature*. doi:10.1093/acrefore/9780190201098.013.71",
+    "link": "https://doi.org/10.1093/acrefore/9780190201098.013.71"
+  },
   "morettiDistantReading2013": {
     "author": "Moretti",
     "year": "2013",
     "inline": "(Moretti, 2013)",
     "harvard": "Moretti, F. (2013) *Distant Reading*. London ; New York: Verso.",
     "link": ""
+  },
+  "mouffeDeliberativeDemocracyAgonistic1999": {
+    "author": "Mouffe",
+    "year": "1999",
+    "inline": "(Mouffe, 1999)",
+    "harvard": "Mouffe, C. (1999) ‘Deliberative Democracy or Agonistic Pluralism?’, *Social Research*, 66(3), pp. 745–758.",
+    "link": ""
+  },
+  "mullerCensorshipCulturalRegulation2004": {
+    "author": "Müller",
+    "year": "2004",
+    "inline": "(Müller, 2004)",
+    "harvard": "Müller, B. (2004) *Censorship & Cultural Regulation in the Modern Age*. BRILL. doi:10.1163/9789401200950",
+    "link": "https://doi.org/10.1163/9789401200950"
   },
   "mullerCensorshipCulturalRegulation2004b": {
     "author": "Müller",
@@ -265,12 +1028,152 @@
     "harvard": "Müller, B. (2004) *Censorship and Cultural Regulation in the Modern Age*. Boston: BRILL.",
     "link": ""
   },
+  "mungerRightWingYouTubeSupply2020": {
+    "author": "Munger and Phillips",
+    "year": "2020",
+    "inline": "(Munger and Phillips, 2020)",
+    "harvard": "Munger, K. and Phillips, J. (2020) ‘Right-Wing YouTube: A Supply and Demand Perspective’, *The International Journal of Press/Politics*, 27(1), pp. 186–219. doi:10.1177/1940161220964767",
+    "link": "https://doi.org/10.1177/1940161220964767"
+  },
+  "munnAngryDesignToxic2020": {
+    "author": "Munn",
+    "year": "2020",
+    "inline": "(Munn, 2020)",
+    "harvard": "Munn, L. (2020) ‘Angry by Design: Toxic Communication and Technical Architectures’, *Humanities and Social Sciences Communications*, 7(1), pp. 1–11. doi:10.1057/s41599-020-00550-7",
+    "link": "https://doi.org/10.1057/s41599-020-00550-7"
+  },
+  "myerswestCensoredSuspendedShadowbanned2018": {
+    "author": "Myers West",
+    "year": "2018",
+    "inline": "(Myers West, 2018)",
+    "harvard": "Myers West, S. (2018) ‘Censored, Suspended, Shadowbanned: User Interpretations of Content Moderation on Social Media Platforms’, *New Media & Society*, 20(11), pp. 4366–4383. doi:10.1177/1461444818773059",
+    "link": "https://doi.org/10.1177/1461444818773059"
+  },
+  "nicasTwoCapitolRiots2024": {
+    "author": "Nicas",
+    "year": "2024",
+    "inline": "(Nicas, 2024)",
+    "harvard": "Nicas, J. (2024) ‘Two Capitol Riots. Two Very Different Results’, *The New York Times*.",
+    "link": ""
+  },
+  "olearyHowDutchFalse2020": {
+    "author": "O'Leary",
+    "year": "2020",
+    "inline": "(O'Leary, 2020)",
+    "harvard": "O'Leary, N. (2020) ‘How Dutch False Sense of Security Helped Coronavirus Spread’, *The Irish Times*.",
+    "link": ""
+  },
+  "openaiGPT4SystemCard2023": {
+    "author": "AI",
+    "year": "2023",
+    "inline": "(AI, 2023)",
+    "harvard": "AI, O. (2023) *GPT-4 System Card*.",
+    "link": ""
+  },
+  "openaiGPT4TechnicalReport2023": {
+    "author": "AI",
+    "year": "2023",
+    "inline": "(AI, 2023)",
+    "harvard": "AI, O. (2023) *GPT-4 Technical Report*.",
+    "link": ""
+  },
+  "openaiHowShouldAI2023": {
+    "author": "AI",
+    "year": "2023",
+    "inline": "(AI, 2023)",
+    "harvard": "AI, O. (2023) *How Should AI Systems Behave, and Who Should Decide?*.",
+    "link": ""
+  },
+  "openaiModeration2024": {
+    "author": "OpenAI",
+    "year": "2024",
+    "inline": "(OpenAI, 2024)",
+    "harvard": "OpenAI (2024) *Moderation*.",
+    "link": ""
+  },
+  "OpenAIPlatform": {
+    "author": "",
+    "year": "n.d.",
+    "inline": "(n.d.)",
+    "harvard": "Anon. (n.d.) *OpenAI Platform*.",
+    "link": ""
+  },
   "ovadyaBridgingSystemsOpen2023": {
     "author": "Ovadya and Thorburn",
     "year": "2023",
     "inline": "(Ovadya and Thorburn, 2023)",
     "harvard": "Ovadya, A. and Thorburn, L. (2023) ‘Bridging Systems: Open Problems for Countering Destructive Divisiveness Across Ranking, Recommenders, and Governance’, *Knight First Amendment Institute*, pp. Online.",
     "link": ""
+  },
+  "ovadyaDemocracyLevelsAI2024": {
+    "author": "Ovadya et al.",
+    "year": "2024",
+    "inline": "(Ovadya et al., 2024)",
+    "harvard": "Ovadya, A., Thorburn, L., Redman, K., Devine, F., Milli, S., Revel, M., Konya, A. and Kasirzadeh, A. (2024) *Toward Democracy Levels for AI*. arXiv. doi:10.48550/arXiv.2411.09222",
+    "link": "https://doi.org/10.48550/arXiv.2411.09222"
+  },
+  "passmannHealthyCommunitiesToxic2023": {
+    "author": "Pa et al.",
+    "year": "2023",
+    "inline": "(Pa et al., 2023)",
+    "harvard": "Pa, J., Helmond, A. and Jansma, R. (2023) ‘From Healthy Communities to Toxic Debates: Disqus' Changing Ideas about Comment Moderation’, *Internet Histories*, 7(1), pp. 1–21. doi:10.1080/24701475.2022.2105123",
+    "link": "https://doi.org/10.1080/24701475.2022.2105123"
+  },
+  "passmannHealthyCommunitiesToxic2023b": {
+    "author": "Pa et al.",
+    "year": "2023",
+    "inline": "(Pa et al., 2023)",
+    "harvard": "Pa, J., Helmond, A. and Jansma, R. (2023) ‘From Healthy Communities to Toxic Debates: Disqus' Changing Ideas about Comment Moderation’, *Internet Histories*, 7(1), pp. 6–26. doi:10.1080/24701475.2022.2105123",
+    "link": "https://doi.org/10.1080/24701475.2022.2105123"
+  },
+  "pedrettiGRAMATICAVIOLENCIAPOLITICA2023": {
+    "author": "Pedretti",
+    "year": "2023",
+    "inline": "(Pedretti, 2023)",
+    "harvard": "Pedretti, L. (2023) ‘A GRAM\\'ATICA DA VIOL\\^ENCIA POL\\'ITICA: Representa c\\ oes críticas sobre a ditadura militar na década de 1970’, *Novos estudos CEBRAP*, 42, pp. 163–180. doi:10.25091/S01013300202300010009",
+    "link": "https://doi.org/10.25091/S01013300202300010009"
+  },
+  "pedrettiTransicaoInacabadaViolencia2024": {
+    "author": "Pedretti",
+    "year": "2024",
+    "inline": "(Pedretti, 2024)",
+    "harvard": "Pedretti, L. (2024) *A transi c\\ ao inacabada: Viol\\^encia de Estado e direitos humanos na redemocratiza c\\ ao*. Companhia das Letras.",
+    "link": ""
+  },
+  "peeters4CATCaptureAnalysis2018": {
+    "author": "Peeters and Hagen",
+    "year": "2018",
+    "inline": "(Peeters and Hagen, 2018)",
+    "harvard": "Peeters, S. and Hagen, S. (2018) *4CAT: Capture and Analysis Toolkit*.",
+    "link": ""
+  },
+  "peetersSalvagingInternetHate2020": {
+    "author": "Peeters et al.",
+    "year": "2020",
+    "inline": "(Peeters et al., 2020)",
+    "harvard": "Peeters, S., Hagen, S. and Das, P. (2020) *Salvaging the Internet Hate Machine: Using the Discourse of Extremist Online Subcultures to Identify Emergent Extreme Speech*. Zenodo. doi:10.5281/zenodo.3676483",
+    "link": "https://doi.org/10.5281/zenodo.3676483"
+  },
+  "perriamDigitalMethodsPostAPI2020": {
+    "author": "Perriam et al.",
+    "year": "2020",
+    "inline": "(Perriam et al., 2020)",
+    "harvard": "Perriam, J., Birkbak, A. and Freeman, A. (2020) ‘Digital Methods in a Post-API Environment’, *International Journal of Social Research Methodology*, 23(3), pp. 277–290. doi:10.1080/13645579.2019.1682840",
+    "link": "https://doi.org/10.1080/13645579.2019.1682840"
+  },
+  "pohjonenExtremeSpeechOnline2017": {
+    "author": "Pohjonen and Udupa",
+    "year": "2017",
+    "inline": "(Pohjonen and Udupa, 2017)",
+    "harvard": "Pohjonen, M. and Udupa, S. (2017) ‘Extreme Speech Online: An Anthropological Critique of Hate Speech Debates’, *International Journal of Communication*, 11(0), pp. 19.",
+    "link": ""
+  },
+  "postCensorshipSilencing1998": {
+    "author": "Post",
+    "year": "1998",
+    "inline": "(Post, 1998)",
+    "harvard": "Post, R. C. (1998) ‘Censorship and Silencing’, *Bulletin of the American Academy of Arts and Sciences*, 51(5), pp. 32. doi:10.2307/3824670",
+    "link": "https://doi.org/10.2307/3824670"
   },
   "postCensorshipSilencingPractices1998": {
     "author": "Post",
@@ -286,6 +1189,83 @@
     "harvard": "Procházka, O. (2019) ‘Making Sense of Facebook's Content Moderation: A Posthumanist Perspective on Communicative Competence and Internet Memes’, *Signs and Society*, 7(3), pp. 362–397. doi:10.1086/704763",
     "link": "https://doi.org/10.1086/704763"
   },
+  "qinUserBehaviorRetrieval2020": {
+    "author": "Qin et al.",
+    "year": "2020",
+    "inline": "(Qin et al., 2020)",
+    "harvard": "Qin, J., Zhang, W., Wu, X., Jin, J., Fang, Y. and Yu, Y. (2020) ‘User Behavior Retrieval for Click-Through Rate Prediction’, in *Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval*. New York, NY, USA: Association for Computing Machinery, pp. 2347–2356. doi:10.1145/3397271.3401440",
+    "link": "https://doi.org/10.1145/3397271.3401440"
+  },
+  "reddit_sortspyx2017": {
+    "author": "Reddit",
+    "year": "2017",
+    "inline": "(Reddit, 2017)",
+    "harvard": "Reddit (2017) *_sorts.Pyx*.",
+    "link": ""
+  },
+  "redditBuilderpy2017": {
+    "author": "Reddit",
+    "year": "2017",
+    "inline": "(Reddit, 2017)",
+    "harvard": "Reddit (2017) *Builder.Py*.",
+    "link": ""
+  },
+  "redditExampleini2017": {
+    "author": "Reddit",
+    "year": "2017",
+    "inline": "(Reddit, 2017)",
+    "harvard": "Reddit (2017) *Example.Ini*.",
+    "link": ""
+  },
+  "richardburtUncensoringDetailFetish1998": {
+    "author": "Burt",
+    "year": "1998",
+    "inline": "(Burt, 1998)",
+    "harvard": "Burt, R. (1998) ‘(Un)Censoring in Detail: The Fetish of Censorship in the Early Modern Past and the Postmodern Present’, in R. C. Post (ed.) *Censoring and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Research Institute for the History of Art and the Humanities, pp. 17–42.",
+    "link": ""
+  },
+  "ricoeurMemoireHistoireOubli2006": {
+    "author": "Ric",
+    "year": "2006",
+    "inline": "(Ric, 2006)",
+    "harvard": "Ric, P. (2006) ‘Mémoire, Histoire, Oubli’, *Esprit*, Mars/avril(3), pp. 20–29.",
+    "link": ""
+  },
+  "riederFabricsMachineModeration2021": {
+    "author": "Rieder and Skop",
+    "year": "2021",
+    "inline": "(Rieder and Skop, 2021)",
+    "harvard": "Rieder, B. and Skop, Y. (2021) ‘The Fabrics of Machine Moderation: Studying the Technical, Normative, and Organizational Structure of Perspective API’, *Big Data & Society*, 8(2), pp. 20539517211046181. doi:10.1177/20539517211046181",
+    "link": "https://doi.org/10.1177/20539517211046181"
+  },
+  "riederRankFlow2019": {
+    "author": "Rieder",
+    "year": "2019",
+    "inline": "(Rieder, 2019)",
+    "harvard": "Rieder, B. (2019) *RankFlow*.",
+    "link": ""
+  },
+  "riederScrutinizingAlgorithmicTechnique2017": {
+    "author": "Rieder",
+    "year": "2017",
+    "inline": "(Rieder, 2017)",
+    "harvard": "Rieder, B. (2017) ‘Scrutinizing an Algorithmic Technique: The Bayes Classifier as Interested Reading of Reality’, *Information, Communication & Society*, 20(1), pp. 100–117. doi:10.1080/1369118X.2016.1181195",
+    "link": "https://doi.org/10.1080/1369118X.2016.1181195"
+  },
+  "riederYouTubeDataTools2019": {
+    "author": "Rieder",
+    "year": "2019",
+    "inline": "(Rieder, 2019)",
+    "harvard": "Rieder, B. (2019) *YouTube Data Tools*.",
+    "link": ""
+  },
+  "robertc.postCensorshipSilencing1998": {
+    "author": "Post",
+    "year": "1998",
+    "inline": "(Post, 1998)",
+    "harvard": "Post, R. C. (1998) ‘Censorship and Silencing’, in R. C. Post (ed.) *Censorship and Silencing: Practices of Cultural Regulation*. Los Angeles, CA: Getty Research Institute for the History of Art and the Humanities, pp. 1–12.",
+    "link": ""
+  },
   "robertsCommercialContentModeration": {
     "author": "Roberts",
     "year": "n.d.",
@@ -300,6 +1280,13 @@
     "harvard": "Roberts, S. T. (2019) *Behind the Screen: Content Moderation in the Shadows of Social Media*. New Haven and London: Yale University Press.",
     "link": ""
   },
+  "rogersAfterwordMisinformationProblem2023": {
+    "author": "Rogers",
+    "year": "2023",
+    "inline": "(Rogers, 2023)",
+    "harvard": "Rogers, R. (2023) ‘Afterword: The Misinformation Problem and the Deplatforming Debates’ *The Propagation of Misinformation in Social Media: A Cross-Platform Analysis*. Amsterdam: Amsterdam University Press, pp. 207–212.",
+    "link": ""
+  },
   "rogersDeplatformingFollowingExtreme2020": {
     "author": "Rogers",
     "year": "2020",
@@ -307,12 +1294,47 @@
     "harvard": "Rogers, R. (2020) ‘Deplatforming: Following Extreme Internet Celebrities to Telegram and Alternative Social Media’, *European Journal of Communication*, pp. 0267323120922066. doi:10.1177/0267323120922066",
     "link": "https://doi.org/10.1177/0267323120922066"
   },
+  "rogersDigitalMethods2013": {
+    "author": "Rogers",
+    "year": "2013",
+    "inline": "(Rogers, 2013)",
+    "harvard": "Rogers, R. (2013) *Digital Methods*. Cambridge, Massachusetts: The MIT Press.",
+    "link": ""
+  },
+  "ronigerCaciquismoCoronelismoContextual1987": {
+    "author": "Roniger",
+    "year": "1987",
+    "inline": "(Roniger, 1987)",
+    "harvard": "Roniger, L. (1987) ‘Caciquismo and Coronelismo: Contextual Dimensions of Patron Brokerage in Mexico and Brazil’, *Latin American Research Review*, 22(2), pp. 71–99. doi:10.1017/S0023879100022056",
+    "link": "https://doi.org/10.1017/S0023879100022056"
+  },
+  "rosenbergOvercomingLegaciesDictatorship1995": {
+    "author": "Rosenberg",
+    "year": "1995",
+    "inline": "(Rosenberg, 1995)",
+    "harvard": "Rosenberg, T. (1995) ‘Overcoming the Legacies of Dictatorship’, *Foreign Affairs*, 74, pp. 134.",
+    "link": ""
+  },
+  "rothUpdatingOurApproach2020": {
+    "author": "Roth and Pickels",
+    "year": "2020",
+    "inline": "(Roth and Pickels, 2020)",
+    "harvard": "Roth, Y. and Pickels, N. (2020) *Updating Our Approach to Misleading Information*.",
+    "link": ""
+  },
   "roussinLiberteDexpressionNouvelles2020": {
     "author": "Roussin",
     "year": "2020",
     "inline": "(Roussin, 2020)",
     "harvard": "Roussin, P. (2020) ‘Liberté d'expression et nouvelles théories de la censure’, *Communications*, n° 106(1), pp. 17–32. doi:10.3917/commu.106.0017",
     "link": "https://doi.org/10.3917/commu.106.0017"
+  },
+  "rozadoPoliticalPreferencesLLMs2024": {
+    "author": "Rozado",
+    "year": "2024",
+    "inline": "(Rozado, 2024)",
+    "harvard": "Rozado, D. (2024) ‘The Political Preferences of LLMs’, *PLOS ONE*, 19(7), pp. e0306621. doi:10.1371/journal.pone.0306621",
+    "link": "https://doi.org/10.1371/journal.pone.0306621"
   },
   "ruckensteinRehumanizingPlatformContent2020": {
     "author": "Ruckenstein and Turunen",
@@ -326,6 +1348,34 @@
     "year": "2019-2020",
     "inline": "(Sander, 2019-2020)",
     "harvard": "Sander, B. (2019-2020) ‘Freedom of Expression in the Age of Online Platforms: The Promise and Pitfalls of a Human Rights-Based Approach to Content Moderation’, *Fordham International Law Journal*, 43, pp. 939.",
+    "link": ""
+  },
+  "sarahstackeSeeBizarrePlaces2017": {
+    "author": "Stacke",
+    "year": "2017",
+    "inline": "(Stacke, 2017)",
+    "harvard": "Stacke, S. (2017) ‘See the Bizarre Places People Stash Old Lenin Statues’, *Photography*.",
+    "link": ""
+  },
+  "saulWhatHappeningOur2019": {
+    "author": "Saul",
+    "year": "2019",
+    "inline": "(Saul, 2019)",
+    "harvard": "Saul, J. (2019) ‘What Is Happening to Our Norms Against Racist Speech?’, *Aristotelian Society Supplementary Volume*, 93(1), pp. 1–23. doi:10.1093/arisup/akz001",
+    "link": "https://doi.org/10.1093/arisup/akz001"
+  },
+  "scheufeleScienceAudiencesMisinformation2019": {
+    "author": "Scheufele and Krause",
+    "year": "2019",
+    "inline": "(Scheufele and Krause, 2019)",
+    "harvard": "Scheufele, D. A. and Krause, N. M. (2019) ‘Science Audiences, Misinformation, and Fake News’, *Proceedings of the National Academy of Sciences*, 116(16), pp. 7662–7669. doi:10.1073/pnas.1805871115",
+    "link": "https://doi.org/10.1073/pnas.1805871115"
+  },
+  "schmittPoliticalTheologyFour2005": {
+    "author": "Schmitt",
+    "year": "2005",
+    "inline": "(Schmitt, 2005)",
+    "harvard": "Schmitt, C. (2005) *Political Theology: Four Chapters on the Concept of Sovereignty*. Chicago: University of Chicago Press.",
     "link": ""
   },
   "seeringMetaphorsModeration2022": {
@@ -342,11 +1392,109 @@
     "harvard": "Seering, J., Wang, T., Yoon, J. and Kaufman, G. (2019) ‘Moderator Engagement and Community Development in the Age of Algorithms’, *New Media & Society*, 21(7), pp. 1417–1443. doi:10.1177/1461444818821316",
     "link": "https://doi.org/10.1177/1461444818821316"
   },
+  "sharonTheoryJusticeDigital2023": {
+    "author": "Sharon",
+    "year": "2023",
+    "inline": "(Sharon, 2023)",
+    "harvard": "Sharon, T. (2023) *Towards a Theory of Justice for the Digital Age. In Defence of Sphere and Value-Pluralism*.",
+    "link": ""
+  },
+  "shibutaniImprovisedNewsSociological1966": {
+    "author": "Shibutani",
+    "year": "1966",
+    "inline": "(Shibutani, 1966)",
+    "harvard": "Shibutani, T. (1966) *Improvised News: A Sociological Study of Rumor*. Ardent Media.",
+    "link": ""
+  },
+  "skopelitiCoronavirusHowAre2020": {
+    "author": "Skopeliti and John",
+    "year": "2020",
+    "inline": "(Skopeliti and John, 2020)",
+    "harvard": "Skopeliti, C. and John, B. (2020) *Coronavirus: How Are the Social Media Platforms Responding to the 'Infodemic'?*.",
+    "link": ""
+  },
+  "smithSociologiesModeration2013": {
+    "author": "Smith and Holmwood",
+    "year": "2013",
+    "inline": "(Smith and Holmwood, 2013)",
+    "harvard": "Smith, A. T. T. and Holmwood, J. (2013) ‘Sociologies of Moderation’, *The Sociological Review*, 61(2_suppl), pp. 6–17. doi:10.1111/1467-954x.12097",
+    "link": "https://doi.org/10.1111/1467-954x.12097"
+  },
+  "socialscienceresearchcouncilHateSpeechInformation2020": {
+    "author": "Council et al.",
+    "year": "2020",
+    "inline": "(Council et al., 2020)",
+    "harvard": "Council, S. S. R., Udupa, S., Gagliardone, I., Deem, A. and Csuka, L. (2020) *Hate Speech, Information Disorder, and Conflict*. doi:10.35650/md.2033.d.2020",
+    "link": "https://doi.org/10.35650/md.2033.d.2020"
+  },
+  "solimanoPoliticalViolenceEconomic2004": {
+    "author": "Solimano",
+    "year": "2004",
+    "inline": "(Solimano, 2004)",
+    "harvard": "Solimano, A. (2004) ‘Political Violence and Economic Development in Latin America: Issues and Evidence’, *United Nations ECLAC*.",
+    "link": ""
+  },
+  "starbirdCouldThisBe2016": {
+    "author": "Starbird et al.",
+    "year": "2016",
+    "inline": "(Starbird et al., 2016)",
+    "harvard": "Starbird, K., Spiro, E., Edwards, I., Zhou, K., Maddock, J. and Narasimhan, S. (2016) ‘Could This Be True? I Think So! Expressed Uncertainty in Online Rumoring’, in *Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems*. San Jose, California, USA: Association for Computing Machinery, pp. 360–371. doi:10.1145/2858036.2858551",
+    "link": "https://doi.org/10.1145/2858036.2858551"
+  },
+  "starbirdHowCopeInfodemic2020": {
+    "author": "Starbird",
+    "year": "2020",
+    "inline": "(Starbird, 2020)",
+    "harvard": "Starbird, K. (2020) *How to Cope with an Infodemic*.",
+    "link": ""
+  },
+  "staschKnowingMindsMatter2008": {
+    "author": "Stasch",
+    "year": "2008",
+    "inline": "(Stasch, 2008)",
+    "harvard": "Stasch, R. (2008) ‘Knowing Minds Is a Matter of Authority: Political Dimensions of Opacity Statements in Korowai Moral Psychology’, *Anthropological Quarterly*, 81(2), pp. 443–453.",
+    "link": ""
+  },
+  "strayPracticalDefinitionPolitical2025": {
+    "author": "Stray",
+    "year": "2025",
+    "inline": "(Stray, 2025)",
+    "harvard": "Stray, J. (2025) *A Practical Definition of Political Neutrality for AI – Center for Human-Compatible Artificial Intelligence*.",
+    "link": ""
+  },
+  "sunsteinRepublicCom2002": {
+    "author": "Sunstein",
+    "year": "2002",
+    "inline": "(Sunstein, 2002)",
+    "harvard": "Sunstein, C. R. (2002) *Republic.Com*. Princeton University Press.",
+    "link": ""
+  },
   "templetonTopicModelingHumanities2011": {
     "author": "Templeton",
     "year": "2011",
     "inline": "(Templeton, 2011)",
     "harvard": "Templeton, C. (2011) *Topic Modeling in the Humanities: An Overview*.",
+    "link": ""
+  },
+  "theeconomistGoogleRewardsReputable2019": {
+    "author": "Economist",
+    "year": "2019",
+    "inline": "(Economist, 2019)",
+    "harvard": "Economist, T. (2019) ‘Google Rewards Reputable Reporting, Not Left-Wing Politics’, *The Economist*.",
+    "link": ""
+  },
+  "theeconomistTechlashAmazonFacebook2018": {
+    "author": "Economist",
+    "year": "2018",
+    "inline": "(Economist, 2018)",
+    "harvard": "Economist, T. (2018) *The Techlash against Amazon, Facebook and Google–-and What They Can Do*.",
+    "link": ""
+  },
+  "thefreepressSamAltmanHis2024": {
+    "author": "Press",
+    "year": "2024",
+    "inline": "(Press, 2024)",
+    "harvard": "Press, T. F. (2024) *Sam Altman on His Feud with Elon Musk–-and the Battle for AI's Future*.",
     "link": ""
   },
   "theredirectmethodRedirectMethod2016": {
@@ -356,11 +1504,116 @@
     "harvard": "Method, T. R. (2016) *The Redirect Method*.",
     "link": ""
   },
+  "tutersLARPingLiberalTears2019": {
+    "author": "Tuters",
+    "year": "2019",
+    "inline": "(Tuters, 2019)",
+    "harvard": "Tuters, M. (2019) ‘LARPing & Liberal Tears: Irony, Belief and Idiocy in the Deep Vernacular Web’, in F. Maik and N. Thurston (eds.) *Post-Digital Cultures of the Far Right: Online Actions and Offline Consequences in Europe and the US*. London: Transcript Verlag, pp. 37–48.",
+    "link": ""
+  },
+  "twitterhelpCommunityNotesTwitter2023": {
+    "author": "Help",
+    "year": "2023",
+    "inline": "(Help, 2023)",
+    "harvard": "Help, T. (2023) *About Community Notes on Twitter*.",
+    "link": ""
+  },
+  "twitterTwitterHealthMetrics2018": {
+    "author": "Twitter",
+    "year": "2018",
+    "inline": "(Twitter, 2018)",
+    "harvard": "Twitter (2018) *Twitter Health Metrics Proposal Submission*.",
+    "link": ""
+  },
   "underwoodDistantReadingRecent2016": {
     "author": "Underwood",
     "year": "2016",
     "inline": "(Underwood, 2016)",
     "harvard": "Underwood, T. (2016) ‘Distant Reading and Recent Intellectual History’, *Debates in the Digital Humanities 2016*, pp. 530–533.",
+    "link": ""
+  },
+  "vandijckPlatformMechanisms2018": {
+    "author": "Van Dijck et al.",
+    "year": "2018",
+    "inline": "(Van Dijck et al., 2018)",
+    "harvard": "Van Dijck, J., Poell, T. and de Waal, M. (2018) ‘Platform Mechanisms’ *The Platform Society*. New York: Oxford University Press, pp. ebook.",
+    "link": ""
+  },
+  "vanraemdonckConceptualFrameworkMutual2022": {
+    "author": "Van Raemdonck and Pierson",
+    "year": "2022",
+    "inline": "(Van Raemdonck and Pierson, 2022)",
+    "harvard": "Van Raemdonck, N. and Pierson, J. (2022) ‘A Conceptual Framework for the Mutual Shaping of Platform Features, Affordances and Norms on Social Media’, *Tijdschrift voor Communicatiewetenschap*, 50(4), pp. 358–383.",
+    "link": ""
+  },
+  "vanraemdonckConceptueelKaderVoor2022": {
+    "author": "Van Raemdonck and Pierson",
+    "year": "2022",
+    "inline": "(Van Raemdonck and Pierson, 2022)",
+    "harvard": "Van Raemdonck, N. and Pierson, J. (2022) ‘Conceptueel Kader Voor Wisselwerking van Platformkenmerken, Affordances En Normen Op Sociale Media’, *Tijdschrift voor Communicatiewetenschap*, 50(4), pp. 358–383. doi:10.5117/TCW2022.4.005.RAEM",
+    "link": "https://doi.org/10.5117/TCW2022.4.005.RAEM"
+  },
+  "venturiniDivingMagmaHow2010": {
+    "author": "Venturini",
+    "year": "2010",
+    "inline": "(Venturini, 2010)",
+    "harvard": "Venturini, T. (2010) ‘Diving in Magma: How to Explore Controversies with Actor-Network Theory’, *Public Understanding of Science*, 19(3), pp. 258–273. doi:10.1177/0963662509102694",
+    "link": "https://doi.org/10.1177/0963662509102694"
+  },
+  "vincentPunirReeduquerProcess2008": {
+    "author": "Vincent",
+    "year": "2008",
+    "inline": "(Vincent, 2008)",
+    "harvard": "Vincent, M. B. (2008) ‘Punir et Réeduquer: Le Process de Dénazification (1945-1949)’, in M. B. Vincent (ed.) *La Dénazification*. Paris: Perrin, pp. 9–88.",
+    "link": ""
+  },
+  "vizquadratHistoriaMemoriaPolitica2016": {
+    "author": "Viz Quadrat",
+    "year": "2016",
+    "inline": "(Viz Quadrat, 2016)",
+    "harvard": "Viz Quadrat, S. (2016) ‘Historia y memoria política del Brasil dictatorial’, in E. Allier Montaño and E. Crenzel (eds.) *Las luchas por la memoria en América Latina: historia reciente y violencia política*. México Coyoacán Madrid: Bonilla Artigas Editores Universidad Nacional Autónoma de México, Instituto de Investigaciones Sociales Iberoamericana Vervuert.",
+    "link": ""
+  },
+  "wattenbergWordTreeInteractive2008": {
+    "author": "Wattenberg and Viegas",
+    "year": "2008",
+    "inline": "(Wattenberg and Viegas, 2008)",
+    "harvard": "Wattenberg, M. and Viegas, F. B. (2008) ‘The Word Tree, an Interactive Visual Concordance’, *IEEE Transactions on Visualization and Computer Graphics*, 14(6), pp. 1221–1228. doi:10.1109/TVCG.2008.172",
+    "link": "https://doi.org/10.1109/TVCG.2008.172"
+  },
+  "wattsInfluentialsNetworksPublic2007": {
+    "author": "Watts and Dodds",
+    "year": "2007",
+    "inline": "(Watts and Dodds, 2007)",
+    "harvard": "Watts, D. J. and Dodds, P. S. (2007) ‘Influentials, Networks, and Public Opinion Formation’, *Journal of Consumer Research*, 34(4), pp. 441–458. doi:10.1086/518527",
+    "link": "https://doi.org/10.1086/518527"
+  },
+  "weatherbedInstagramThreadsWill2024": {
+    "author": "Weatherbed",
+    "year": "2024",
+    "inline": "(Weatherbed, 2024)",
+    "harvard": "Weatherbed, J. (2024) *Instagram and Threads Will Stop Recommending Political Content*.",
+    "link": ""
+  },
+  "webbUnobtrusiveMeasuresNonreactive1966": {
+    "author": "Webb et al.",
+    "year": "1966",
+    "inline": "(Webb et al., 1966)",
+    "harvard": "Webb, E. J., Campbell, D. T., Schwartz, R. D. and Sechrest, L. (1966) *Unobtrusive Measures: Nonreactive Research in the Social Sciences*. Oxford, England: Rand Mcnally.",
+    "link": ""
+  },
+  "wilsonHateSpeechSocial2020": {
+    "author": "Wilson and Land",
+    "year": "2020",
+    "inline": "(Wilson and Land, 2020)",
+    "harvard": "Wilson, R. A. and Land, M. K. (2020) *Hate Speech on Social Media: Towards a Context-Specific Content Moderation Policy*.",
+    "link": ""
+  },
+  "wilsonIncitementEraPopulism2020": {
+    "author": "Wilson and Kiper",
+    "year": "2020",
+    "inline": "(Wilson and Kiper, 2020)",
+    "harvard": "Wilson, R. A. and Kiper, J. (2020) ‘Incitement in an Era of Populism: Updating Brandenburg After Charlottesville’, *Public Affairs*, 5, pp. 66.",
     "link": ""
   },
   "wohnVolunteerModeratorsTwitch2019a": {
@@ -405,11 +1658,53 @@
     "harvard": "Notes, X. C. (2025) *Diversity of Perspectives*.",
     "link": ""
   },
+  "yongWhyCoronavirusConfusing2020": {
+    "author": "Yong",
+    "year": "2020",
+    "inline": "(Yong, 2020)",
+    "harvard": "Yong, E. (2020) ‘Why the Coronavirus Is So Confusing’, *The Atlantic*.",
+    "link": ""
+  },
+  "yourishTheseWordsAre2025": {
+    "author": "Yourish et al.",
+    "year": "2025",
+    "inline": "(Yourish et al., 2025)",
+    "harvard": "Yourish, K., Daniel, A., Datar, S., White, I. and Gamio, L. (2025) ‘These Words Are Disappearing in the New Trump Administration’, *The New York Times*.",
+    "link": ""
+  },
+  "youtubeContinuingOurWork2019": {
+    "author": "YouTube",
+    "year": "2019",
+    "inline": "(YouTube, 2019)",
+    "harvard": "YouTube (2019) *Continuing Our Work to Improve Recommendations on YouTube*.",
+    "link": ""
+  },
+  "youtubeCOVID19MedicalMisinformation2020": {
+    "author": "YouTube",
+    "year": "2020",
+    "inline": "(YouTube, 2020)",
+    "harvard": "YouTube (2020) *COVID-19 Medical Misinformation Policy - YouTube Help*.",
+    "link": ""
+  },
+  "youtubeFourRsResponsibility2021": {
+    "author": "YouTube",
+    "year": "2021",
+    "inline": "(YouTube, 2021)",
+    "harvard": "YouTube (2021) *The Four Rs of Responsibility, Part 2: Raising Authoritative Content and Reducing Borderline Content and Harmful Misinformation*.",
+    "link": ""
+  },
   "youtubeYouTubeMisinformationHow2021": {
     "author": "YouTube",
     "year": "2021",
     "inline": "(YouTube, 2021)",
     "harvard": "YouTube (2021) *YouTube Misinformation - How YouTube Works*.",
+    "link": ""
+  },
+  "zuckermanDeplatformingOurWay2021": {
+    "author": "Zuckerman and Rajendra-Nicolucci",
+    "year": "2021",
+    "inline": "(Zuckerman and Rajendra-Nicolucci, 2021)",
+    "harvard": "Zuckerman, E. and Rajendra-Nicolucci, C. (2021) *Deplatforming Our Way to the Alt-Tech Ecosystem*.",
     "link": ""
   }
 }

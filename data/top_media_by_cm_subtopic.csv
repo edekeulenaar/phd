@@ -1,9 +1,9 @@
 Sub-topic,Media category,Quantity
-Advisory classification / audience segmentation,Video sharing platform,1
-Advisory classification / audience segmentation,Wikis,1
+Advisory classification / audience segmentation,Social media platform,1
 Advisory classification / audience segmentation,ISP,1
 Advisory classification / audience segmentation,Blog,1
-Advisory classification / audience segmentation,Social media platform,1
+Advisory classification / audience segmentation,Video sharing platform,1
+Advisory classification / audience segmentation,Wikis,1
 Brand safety,Social media platform,22
 Brand safety,Video sharing platform,15
 Brand safety,Search engine,5
@@ -12,8 +12,8 @@ Brand safety,Alt-tech,3
 Brand safety,Platforms,2
 Brand safety,Imageboard,2
 Brand safety,E-commerce,1
-Brand safety,News media,1
 Brand safety,Print media,1
+Brand safety,News media,1
 Censorship,Social media platform,167
 Censorship,Video sharing platform,80
 Censorship,Search engine,37
@@ -26,9 +26,9 @@ Censorship,E-commerce,7
 Censorship,Print media,6
 Common carriage / neutral conduit,Social media platform,6
 Common carriage / neutral conduit,Video sharing platform,4
-Common carriage / neutral conduit,Alt-tech,1
 Common carriage / neutral conduit,ISP,1
 Common carriage / neutral conduit,App store,1
+Common carriage / neutral conduit,Alt-tech,1
 Community norms and identity,Social media platform,94
 Community norms and identity,Video sharing platform,23
 Community norms and identity,Messaging platform,19
@@ -52,30 +52,30 @@ Compliance,Marketplace,5
 Constitutive,Social media platform,5
 Constitutive,AI,2
 Constitutive,Video sharing platform,1
-Content moderation as industrial labour,Dating app,1
 Content moderation as industrial labour,Social media platform,1
 Content moderation as industrial labour,Messaging platform,1
+Content moderation as industrial labour,Dating app,1
 Debate management,Social media platform,10
 Debate management,Online fora,6
-Debate management,News media,4
 Debate management,Print media,4
+Debate management,News media,4
 Debate management,Online learning platform,3
 Debate management,Video sharing platform,2
-Debate management,Wikis,1
 Debate management,Blog,1
+Debate management,Wikis,1
 Debate management,Messaging platform,1
 Debate management,Deliberation platform,1
 Gatekeeping (selection theory),Video sharing platform,1
 Infrastructural,Search engine,2
-Infrastructural,Video sharing platform,2
 Infrastructural,Social media platform,2
+Infrastructural,Video sharing platform,2
 Infrastructural,Fanfiction platform,1
 Infrastructural,ISP,1
-Infrastructural,Infrastructure,1
 Infrastructural,Payment platform,1
-Infrastructural,Messaging platform,1
-Infrastructural,Alt-tech,1
 Infrastructural,App store,1
+Infrastructural,Alt-tech,1
+Infrastructural,Messaging platform,1
+Infrastructural,Infrastructure,1
 Moderating extremism,Social media platform,12
 Moderating extremism,Video sharing platform,11
 Moderating extremism,Imageboard,4

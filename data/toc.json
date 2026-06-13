@@ -1,0 +1,168 @@
+{
+"title": "Censorship and moderation",
+"subtitle": "the oscillations of a contested practice",
+"entries": [
+{
+"slug": "acknowledgments",
+"kind": "front",
+"title": "Acknowledgments",
+"src": "Acknowledgments.md"
+},
+{
+"slug": "abstract",
+"kind": "front",
+"title": "Abstract",
+"src": "Abstract.md"
+},
+{
+"slug": "intro",
+"kind": "front",
+"title": "Introduction",
+"src": "Introduction.md"
+},
+{
+"slug": "part-1",
+"kind": "part",
+"title": "Part I · What is moderation?",
+"src": "Part I. What is moderation?.md"
+},
+{
+"slug": "chapter-1",
+"kind": "chapter",
+"title": "1 · Censorship and moderation",
+"src": "Chapter 1. Censorship and moderation.md"
+},
+{
+"slug": "chapter-2",
+"kind": "chapter",
+"title": "2 · After deplatforming",
+"src": "Chapter 2. After deplatforming.md"
+},
+{
+"slug": "part-2",
+"kind": "part",
+"title": "Part II · Speech affordances",
+"src": "Part II. Speech affordances.md"
+},
+{
+"slug": "chapter-3",
+"kind": "chapter",
+"title": "3 · The affordances of extreme speech",
+"src": "Chapter 3. The affordances of extreme speech.md"
+},
+{
+"slug": "chapter-4",
+"kind": "chapter",
+"title": "4 · The affordances of replacement narratives",
+"src": "Chapter 4. The affordances of replacement narratives.md"
+},
+{
+"slug": "chapter-5",
+"kind": "chapter",
+"title": "5 · LLMs and the generation of moderate speech",
+"src": "Chapter 5. LLMs and the generation of moderate speech.md"
+},
+{
+"slug": "part-3",
+"kind": "part",
+"title": "Part III · Moderation crises",
+"src": "Part III. Moderation crises.md"
+},
+{
+"slug": "chapter-6",
+"kind": "chapter",
+"title": "6 · Moderation in crisis",
+"src": "Chapter 6. Moderation in crisis.md"
+},
+{
+"slug": "chapter-7",
+"kind": "chapter",
+"title": "7 · Of migrants and strangers",
+"src": "Chapter 7. Of migrants and strangers.md"
+},
+{
+"slug": "chapter-8",
+"kind": "chapter",
+"title": "8 · Twitter as an accidental authority",
+"src": "Chapter 8. Twitter as an accidental authority.md"
+},
+{
+"slug": "chapter-9",
+"kind": "chapter",
+"title": "9 · Normative dislocation",
+"src": "Chapter 9. Normative dislocation.md"
+},
+{
+"slug": "part-4",
+"kind": "part",
+"title": "Part IV · Ruptures",
+"src": "Part IV. Ruptures.md"
+},
+{
+"slug": "chapter-10",
+"kind": "chapter",
+"title": "10 · Platform ruptures and online counter-spheres",
+"src": "Chapter 10. Platform ruptures and the formation of online counter spheres.md"
+},
+{
+"slug": "chapter-11",
+"kind": "chapter",
+"title": "11 · Deplatforming, demotion and folk theories",
+"src": "Chapter 11. Deplatforming, demotion and folk theories of Big Tech persecution.md"
+},
+{
+"slug": "part-5",
+"kind": "part",
+"title": "Part V · Modulation and consensus",
+"src": "Part V. Modulation and consensus.md"
+},
+{
+"slug": "chapter-12",
+"kind": "chapter",
+"title": "12 · Modulating moderation",
+"src": "Chapter 12.  Modulating moderation.md"
+},
+{
+"slug": "chapter-13",
+"kind": "chapter",
+"title": "13 · From Twitter to X",
+"src": "Chapter 13. From Twitter to X.md"
+},
+{
+"slug": "conclusion",
+"kind": "back",
+"title": "Conclusion",
+"src": "Conclusion.md"
+},
+{
+"slug": "references",
+"kind": "back",
+"title": "References",
+"src": ""
+}
+],
+"srcToSlug": {
+"Acknowledgments.md": "acknowledgments",
+"Abstract.md": "abstract",
+"Introduction.md": "intro",
+"Part I. What is moderation?.md": "part-1",
+"Chapter 1. Censorship and moderation.md": "chapter-1",
+"Chapter 2. After deplatforming.md": "chapter-2",
+"Part II. Speech affordances.md": "part-2",
+"Chapter 3. The affordances of extreme speech.md": "chapter-3",
+"Chapter 4. The affordances of replacement narratives.md": "chapter-4",
+"Chapter 5. LLMs and the generation of moderate speech.md": "chapter-5",
+"Part III. Moderation crises.md": "part-3",
+"Chapter 6. Moderation in crisis.md": "chapter-6",
+"Chapter 7. Of migrants and strangers.md": "chapter-7",
+"Chapter 8. Twitter as an accidental authority.md": "chapter-8",
+"Chapter 9. Normative dislocation.md": "chapter-9",
+"Part IV. Ruptures.md": "part-4",
+"Chapter 10. Platform ruptures and the formation of online counter spheres.md": "chapter-10",
+"Chapter 11. Deplatforming, demotion and folk theories of Big Tech persecution.md": "chapter-11",
+"Part V. Modulation and consensus.md": "part-5",
+"Chapter 12.  Modulating moderation.md": "chapter-12",
+"Chapter 13. From Twitter to X.md": "chapter-13",
+"Conclusion.md": "conclusion"
+}
+}
