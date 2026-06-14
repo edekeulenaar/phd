@@ -347,8 +347,8 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 .rr-h {
   font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
   text-transform: uppercase; color: var(--muted);
-  margin: 0 0 0.55rem 0; padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--rule);
+  margin: 0 0 0.55rem 0; padding-bottom: 0;
+  border-bottom: none;
 }
 #right-rail > nav + #fig-key,
 #right-rail > #fig-key + nav,
@@ -360,6 +360,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 #chapter-nav-list a {
   display: block; font-size: 12px; line-height: 1.35; color: var(--muted);
   padding: 0.18em 0; border-left: 2px solid transparent;
+  border-bottom: none;            /* no rules between items */
   text-decoration: none;
 }
 #chapter-nav-list .cn-lvl-2 a { padding-left: 0.8rem; }
