@@ -687,9 +687,9 @@ In the earliest studies the techniques associated with moderation are divided fa
 
 This leaves some scholars to associate platforms to, indeed, a censor in its own right. Reading the corpus for who is named as the agent of the practice bears this out: within the "moderation and censorship" sub-topic, a large set of publications identifies the platforms themselves as the censor, rather than the state, the courts or any older authority. Most of these findings fall after 2020 and rise year on year through 2021–2025, and tracks the moderation controversies of that period. Platforms are described less as hosts than as a privatised censorial power: the decisions about what may and may not be posted are taken at the platform level (Haimson et al., 2021), by the companies that own the networks (Trottier & Fuchs, 2014). Several push the analogy further, treating platforms as de facto content editors or regulators (Grison, 2024), as "a privatized power of censorship without constitutional safeguards" (Moya & Rodríguez, 2025).
 
-# Conclusions
-
 [![Figure 14. Keyword Venn — coded keywords exclusive to, paired between, and shared across the WHAT categories, with Content moderation as the central set.](images/fig-terms-venn.png)](#fig-terms-venn) ^figure-14
+
+# Conclusions
 
 This chapter began from a confusion its own object has come to embody: that "moderation" and "censorship" are now spoken of almost interchangeably by platforms and their critics alike. Reading the literature at a distance [@morettiDistantReading2013], I have tried to show that this equivalence is made rather than given. Before the mid-2010s, scholarship treated moderation chiefly as the management of debate — a craft of steering plurivocal exchange toward coherence and, at its most ambitious, of upscaling democratic deliberation online [@grimmelmannVirtuesModeration2015]. Only later did the term gravitate toward enforcement: the policing of speech by private infrastructures bearing powers once reserved to states and broadcasters, and the accountability problems that follow. The proximity of moderation to censorship is thus the trace of a historical shift, not a permanent feature of the concept.
 

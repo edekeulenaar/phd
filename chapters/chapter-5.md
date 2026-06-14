@@ -1,12 +1,6 @@
 # **Chapter 5** 
 # LLMs and the generation of moderate speech
 
-+ procedural legitimacy: SAGE, proportional representation 
-+ update from current model cards
-+ Jonathan's study
-+ neutrality as a precondition for trust, not epistemic rigour
-+ how do you build a model that people who disagree will trust? 
-
 
 <div style="text-align: right;">Every polite tongue has its own rules.</div>
 <div style="text-align: right;">Lindley Murray (1824)</div>
