@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emillie de Keulenaar — PhD thesis (working title)</title>
-<link rel="stylesheet" href="style.css?v=p7-09">
+<link rel="stylesheet" href="style.css?v=p7-10">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -21,14 +21,22 @@
   </div>
 </nav>
 
-<!-- Right rail: figure key (swaps as you scroll) + room for per-chapter
-     resources (links to the published article, annexes, data) added later. -->
-<aside id="right-rail" aria-label="Figure key and resources">
+<!-- Right rail: per-chapter context — section nav, figure key, and room
+     for resource links (published article, annexes, data) added later. -->
+<aside id="right-rail" aria-label="Chapter sections, figure key and resources">
+  <nav id="chapter-nav" hidden aria-label="Sections in this chapter">
+    <div class="rr-h">On this page</div>
+    <ul id="chapter-nav-list"></ul>
+  </nav>
   <div id="fig-key" hidden>
     <div class="fk-h" id="fig-key-h">Key</div>
     <div class="fk-body" id="fig-key-body"></div>
     <div class="fk-clear" id="fig-key-clear" hidden>Clear highlight</div>
   </div>
+  <nav id="chapter-resources" hidden aria-label="Resources">
+    <div class="rr-h">Resources</div>
+    <ul id="chapter-resources-list"></ul>
+  </nav>
 </aside>
 
 <main id="content">
@@ -576,7 +584,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
-<script src="app.js?v=p7-09" defer></script>
+<script src="app.js?v=p7-10" defer></script>
 
 </body>
 </html>

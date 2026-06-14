@@ -187,23 +187,7 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
 .toc .toc-front a,
 .toc .toc-ch a    { font-size: 12.5px; padding-left: 0.9rem; color: var(--muted); }
 .toc .chapter-subnav.folded { display: none; }   /* second click folds */
-/* Per-chapter heading nav injected under the active chapter, indented by
-   heading level so sub- and sub-sub-sections nest visibly. */
-.toc .chapter-subnav {
-  list-style: none; margin: 0.1rem 0 0.3rem; padding: 0;
-}
-.toc .chapter-subnav a {
-  display: block;
-  font-size: 11.5px; color: var(--muted); font-style: normal;
-  text-transform: none; letter-spacing: 0; font-weight: 400;
-  padding: 0.12em 0 0.12em 0.9rem; margin-left: -0.6rem;
-  border-left: 2px solid transparent;
-}
-.toc .chapter-subnav .sub-lvl-2 a { padding-left: 1.7rem; }
-.toc .chapter-subnav .sub-lvl-3 a { padding-left: 2.5rem; font-size: 11px; }
-.toc .chapter-subnav .sub-lvl-4 a { padding-left: 3.3rem; font-size: 11px; font-style: italic; }
-.toc .chapter-subnav a:hover { color: var(--ink); }
-.toc .chapter-subnav a.is-active { color: var(--ink); border-left-color: var(--accent); }
+/* (Per-chapter section nav moved to the right rail — see #chapter-nav.) */
 
 /* ── Cover / landing view ─────────────────────────────────────────────── */
 #landing .cover {
@@ -357,7 +341,37 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   overflow-y: auto;
   border-left: 1px solid var(--border);
   background: var(--paper);
+  font-family: var(--sans);
 }
+/* Right-rail section headers (On this page / Key / Resources). */
+.rr-h {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted);
+  margin: 0 0 0.55rem 0; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+#right-rail > nav + #fig-key,
+#right-rail > #fig-key + nav,
+#right-rail > nav + nav { margin-top: 1.6rem; }
+
+/* "On this page" — chapter section nav, indented by heading level. */
+#chapter-nav[hidden], #chapter-resources[hidden] { display: none; }
+#chapter-nav-list, #chapter-resources-list { list-style: none; margin: 0; padding: 0; }
+#chapter-nav-list a {
+  display: block; font-size: 12px; line-height: 1.35; color: var(--muted);
+  padding: 0.18em 0; border-left: 2px solid transparent;
+  text-decoration: none;
+}
+#chapter-nav-list .cn-lvl-2 a { padding-left: 0.8rem; }
+#chapter-nav-list .cn-lvl-3 a { padding-left: 1.6rem; font-size: 11.5px; }
+#chapter-nav-list .cn-lvl-4 a { padding-left: 2.4rem; font-size: 11.5px; font-style: italic; }
+#chapter-nav-list a:hover { color: var(--ink); }
+#chapter-nav-list a.is-active { color: var(--ink); border-left-color: var(--accent); }
+#chapter-resources-list a {
+  display: block; font-size: 12px; padding: 0.2em 0; color: var(--ink);
+  border-bottom: 1px dotted rgba(28,26,24,0.18);
+}
+#chapter-resources-list a:hover { color: var(--accent); }
 /* Hidden analysis templates (Chapter 1 figure sources) never show in flow;
    mountChapter1Analysis() toggles display while figures render. */
 #analysis { display: none; }

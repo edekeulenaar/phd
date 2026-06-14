@@ -3053,18 +3053,6 @@ function buildGlobalToc() {
     li.push(`<li class="${cls}"><a href="#/${e.slug}">${escapeHtml(e.title)}</a></li>`);
   }
   ol.innerHTML = li.join("");
-  // Click the already-open chapter again → fold/unfold its heading nav.
-  if (!ol.dataset.foldBound) {
-    ol.dataset.foldBound = "1";
-    ol.addEventListener("click", e => {
-      const a = e.target.closest("a");
-      if (!a) return;
-      if (a.getAttribute("href") === `#/${routeSlug()}`) {
-        const sub = a.parentElement.querySelector(".chapter-subnav");
-        if (sub) { e.preventDefault(); sub.classList.toggle("folded"); }
-      }
-    });
-  }
   highlightToc();
 }
 
@@ -3098,18 +3086,19 @@ function collapseBlankRuns(host) {
   });
 }
 
+// Per-chapter section nav lives in the RIGHT rail ("On this page"), indented
+// by heading level. Cleared on the cover / references views.
 function buildChapterNav(slug, headings) {
-  document.querySelectorAll("#toc .chapter-subnav").forEach(n => n.remove());
-  if (!slug || !headings || !headings.length) return;
-  const active = [...document.querySelectorAll("#toc a")]
-    .find(a => a.getAttribute("href") === `#/${slug}`);
-  if (!active) return;
-  const sub = document.createElement("ul");
-  sub.className = "chapter-subnav";
-  sub.innerHTML = headings.map(h =>
-    `<li class="sub-lvl-${h.level}"><a href="#${h.id}">${escapeHtml(h.text)}</a></li>`
+  const nav  = document.getElementById("chapter-nav");
+  const list = document.getElementById("chapter-nav-list");
+  if (!nav || !list) return;
+  if (!slug || !headings || !headings.length) {
+    nav.hidden = true; list.innerHTML = ""; return;
+  }
+  list.innerHTML = headings.map(h =>
+    `<li class="cn-lvl-${h.level}"><a href="#${h.id}">${escapeHtml(h.text)}</a></li>`
   ).join("");
-  active.parentElement.appendChild(sub);
+  nav.hidden = false;
 }
 
 function showView(which) {
