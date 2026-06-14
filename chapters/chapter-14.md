@@ -1,5 +1,4 @@
 # **Chapter 14**
-
 # From Twitter to X: Demotion, community notes and the apparent shift from adjudication to consensus-building
 
 When X was Twitter, the company’s content moderation evolved into an ever-complex trust and safety apparatus benefiting from strong legal and technical investments. At times, thousands of tweets and users were deplatformed indefinitely for violating hate speech, electoral or COVID medical policies. But incoherent decision-making around what kind of speech was or was not acceptable (and to whom), decided in a somewhat vertical fashion, has gathered criticism from all sides of global political debate, making the company and other “mainstream” platforms liable to various crises of legitimacy.

@@ -1,5 +1,4 @@
 # **Chapter 9**
-
 # Normative dislocation: when platforms moderate without memory
 
 In the first hours after the depredation of Brasília’s national congress on 8 January 2023, it was widely assumed by news media worldwide that the riots were a tropical simulacrum of the January 6 riots in Capitol Hill (see e.g. [@cameronAttackBrazilsSeat2023; @nicasTwoCapitolRiots2024]. Social media platforms themselves had perceived this event in similar terms [@oversightboardBrazilianGeneralsSpeech2023]. Content related to the riots had, throughout the 2022 Brazilian election year, been moderated as a byproduct of “electoral misinformation” similar in nature to what had spread online in the lead up to the Capitol Hill riots of 2021.

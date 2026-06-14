@@ -68,7 +68,7 @@ These studies, however, cannot highlight the overall _deliberation_ that undergi
 
 # **Research questions**
 
-So, what can we do? First, analysis: what is the state of public norm deliberation on main platforms, and to what extent do users and platforms agree on _what_ ought to be unacceptable and what that means; what are the effects of disagreements. Second, recommendations: what can be done on the level of policy and platform design. I propose that both of these ought to focus on enforcing public consensus rather than focusing on moderation enforcement. How have YouTube, Twitter and Facebook publics defined acceptable speech in relation to truth and discrimination between 2006 and 2022; to what extent have these platforms’ content moderation policies (and techniques) converged with users’ definitions; what is the impact of any eventual divergence amidst users and platforms; and what are the role of speech norms in the formation of public spheres.
+How have YouTube, Twitter and Facebook publics defined acceptable speech in relation to truth and discrimination between 2006 and 2022; to what extent have these platforms’ content moderation policies (and techniques) converged with users’ definitions; what is the impact of any eventual divergence amidst users and platforms; and what are the role of speech norms in the formation of public spheres.
 
 # Method
 
@@ -150,58 +150,81 @@ From 2011, we see evidence of users discussing not how others ought or ought not
 ![](images/Figure%206.png)
 **Figure 6**. Frequently mentioned phrases in YouTube comments mentioning the term "unacceptable", 2004-2022. Speech moderation highlighted. ^figure-6
 
-Progressively, we see a shift in discussions about *unacceptable issues*, to *unacceptable speech*, to *unacceptable ways of moderating speech*; or, at which what is unacceptable is each other’s speech moderation. This can be seen in discussions about how to deal with hate speech [Figure x]. Naturally, the age-old US debate on where to delineate the boundaries of hate and free speech is evident, here, too. While some consider hate speech to be a "free" or "protected" speech, others express concern about its presence in the platform ("hate speech is a real thing") or illegality ("hate speech is illegal for services in the us"). 
+Progressively, we see a shift in discussions about *unacceptable issues*, to *unacceptable speech*, to *unacceptable ways of moderating speech*; or, at which what is unacceptable is each other’s speech moderation. This can be seen in discussions about how to deal with hate speech (**Figure 7**). Naturally, the age-old US debate on where to delineate the boundaries of hate and free speech is evident, here, too. While some consider hate speech to be a "free" or "protected" speech, others express concern about its presence in the platform ("hate speech is a real thing") or illegality ("hate speech is illegal for services in the us"). 
 
+![](images/Pasted%20image%2020260614201809.png)
+**Figure 7**. Word tree of YouTube comments mentioning "hate speech", 2004-2022. ^figure-7
 
+As speech moderation becomes more explicit — from both other users or by the platform — the vision of YouTube that commenters expression also begins to change. In 2011 (**Figure 8**), YouTube was described as a "great place" or "forum" to "meet awesome people", "share different views", "blurt out any shit that comes to your mind", "share different views", "sharing ideas", "spreading a message"; or a "great source for intellectual debate" and "learning"; and in other ways, still, a place "to be reminded that there are still a lot of dumbfucks" or "ignorants to gather in groups and support one another's ignorance". 
 
-As speech moderation becomes more explicit — from both other users or by the platform — the vision of YouTube that commenters expression also begins to change. In 2011 [Figure x], YouTube was described as a "great place" or "forum" to "meet awesome people", "share different views", "blurt out any shit that comes to your mind", "share different views", "sharing ideas", "spreading a message"; or a "great source for intellectual debate" and "learning"; and in other ways, still, a place "to be reminded that there are still a lot of dumbfucks" or "ignorants to gather in groups and support one another's ignorance". 
+![](images/Pasted%20image%2020260614201817.png)
+**Figure 8**. Word tree of YouTube comments mentioning "YouTube is a", 2004-2011. ^figure-8
 
+By 2021 (**Figure 9**), as the platform's active role in organising and moderating content becomes more apparent, the artificiality of the platform becomes more apparent. YouTube is seen as a "private company", "business" with "rules and regulations", which that "may remove videos that violate their terms of service" or "ban whoever it wants and pretty much arbitrarily". 
 
-
-By 2021 [Figure x], as the platform's active role in organising and moderating content becomes more apparent, the artificiality of the platform becomes more apparent. YouTube is seen as a "private company", "business" with "rules and regulations", which that "may remove videos that violate their terms of service" or "ban whoever it wants and pretty much arbitrarily". 
+![](images/Pasted%20image%2020260614201825.png)
+**Figure 9**. Word tree of YouTube comments mentioning "YouTube is a", 2011-2021. ^figure-8
 
 # Discussion
 
-## 1. The rhythm of speech norms
+The findings presented in this chapter suggest that moderation crises emerge less from disagreement over individual moderation decisions than from disagreement over the norms through which such decisions are made. While contemporary debates about content moderation often focus on questions of enforcement — whether content should be removed, labelled, demoted, or left untouched — the empirical material examined here points to a more fundamental process. Over time, YouTube commenters increasingly shift their attention away from unacceptable behaviour, then towards unacceptable speech, and finally towards unacceptable ways of governing speech itself. What becomes contested is not merely language, but the authority to determine which language ought to be sanctioned and why.
 
-The speed and relative ephemerality (though with accumulated results / memory) with which issues and speech are evaluated as acceptable or unacceptable is punctuated by a few rhythms. 
+## The rhythm of speech norms
 
-- Processes of reiteration: reiterate that which is and has always been unacceptable, like murder, crime, rape and certain unacceptable crimes. This is in a sense something that has already been solidified in public memory.
-- Processes of deliberation. Certain norms are actively debated and pushed for, illustrating how they are not (yet) entirely internalised. 
-- What users and platforms consider unacceptable speech is dynamic, and therefore often contradictory.
+One way to understand this process is through the different rhythms by which speech norms evolve. Not all norms are contested to the same degree, nor do they move through public debate in the same way. Throughout the entire period examined here, certain forms of behaviour remain remarkably stable markers of unacceptability. Murder, rape, terrorism, violence against civilians, child abuse, and other severe forms of harm repeatedly appear in comments as self-evidently objectionable. Their legitimacy as objects of condemnation is rarely questioned. Instead, they are reiterated. These are what might be called sedimented speech norms: prohibitions that have become sufficiently internalised that their justification no longer requires extensive public defence. They function as a kind of historical memory of unacceptable conduct.
 
-## 2. Platforms, from frontiers to borders
+Other norms follow a different trajectory. Categories such as racism, antisemitism, sexism, discrimination, hate speech, misinformation, and harmful speech appear throughout the dataset not as settled prohibitions but as objects of continuous deliberation. Their meanings remain open to negotiation. Commenters disagree over where these categories begin and end, what kinds of expression they encompass, whether they are applied consistently, and even whether they are useful categories at all. Their persistence within public debate suggests not the absence of norms but their incomplete stabilisation. Unlike murder or terrorism, these categories continue to require justification, interpretation, and defence.
 
-- By taking unilateral content moderation decisions, users portray platforms from open spheres to private actors with arbitrary decision-making.
-- As speech by users or platforms moderation becomes a subject to debate, the contours of YouTube as a platform become more explicit and thus contested.
-- We move from "frontiers" (something at the frontier) to "borders" (something politically recognised, officialized).
-- "Frontiers" as a state in which the contours of platforms as a space for debate and not yet entirely demarcated and remain malleable. 
-- "Borders" as a state in which the contours of platforms are declared and marked by either groups of users or the platform itself (in this case, YouTube). 
+This distinction matters because it reveals moderation as a historical process rather than a merely technical one. Speech norms do not simply emerge and become enforced. They move through periods of contestation during which their meaning, legitimacy, and applicability remain uncertain. Moderation therefore follows public deliberation as much as it shapes it. Platforms do not merely enforce norms; they intervene in ongoing struggles over what those norms mean. The increasing complexity of YouTube’s policy architecture after 2014 reflects precisely this process. As categories such as hate speech, misinformation, harmful content, and election integrity become objects of greater public concern, platform policies become correspondingly more detailed. The conceptual refinement of moderation categories mirrors the conceptual refinement of public disputes surrounding them.
 
-## 3. From unacceptable speech to unacceptable ways of moderating speech 
+At the same time, the findings suggest that platforms and users do not necessarily move through these debates in synchrony. YouTube’s policies progressively complexify, developing increasingly detailed definitions of objectionable content and increasingly differentiated enforcement mechanisms. Yet commenters continue debating many of the categories that the platform increasingly treats as settled. This divergence is significant because it reveals that moderation systems are not merely responding to public consensus. In some cases, they are acting in anticipation of consensus, formalising categories that remain actively disputed within public deliberation. The result is a widening gap between institutional definitions of objectionability and the ongoing social processes through which those definitions acquire legitimacy.
 
-- As a results, users move from discussing *unacceptable speech* to _unacceptable ways of moderating speech_.
+This gap becomes particularly visible in the transition from discussions about unacceptable speech to discussions about unacceptable moderation. Early in the dataset, references to unacceptability predominantly concern actions, events, or forms of expression. Users discuss crime, violence, terrorism, racism, discrimination, insults, and slurs. By the late 2010s, however, a growing proportion of discussions concern censorship, free speech, deplatforming, safe spaces, media suppression, political correctness, and platform intervention. In other words, users increasingly begin debating not simply what ought to be moderated, but how moderation itself should occur.
 
-## 4. Ruptures
+The significance of this shift should not be underestimated. It marks a movement from first-order disputes about speech to second-order disputes about the governance of speech. Commenters are no longer only judging whether particular statements are racist, hateful, discriminatory, or misleading. They are judging whether the standards used to make such determinations are themselves legitimate. Moderation becomes the object of moderation.
 
-- When there is no consensus on *how to moderate speech*, there is either entrenchment or migration towards other platforms.
-- This is a worthwhile moment in this process because it marks a situation in which both the border of YouTube or user clusters are actively questioned, and a dynamic of in and outgroup demarcation (or entrenchment) arises around groups of users that identify with one or another way of moderating language (or speech norm values, i.e., values by which to decide how to moderate language). 
-- This is what Ahn et al. identify this as a form of partisan group norms, in the sense that "sanctioning someone allows them to signal their partisanship by adhering to that norm" [@ahnSanctioningPoliticalSpeech2024]. 
+This observation helps explain why contemporary content moderation debates often appear irresolvable. The disagreement no longer concerns a particular speech act alone. Instead, participants disagree about the frameworks through which that speech act should be interpreted. They disagree about definitions, authorities, procedures, and enforcement mechanisms. They disagree about what constitutes evidence, what constitutes harm, and what constitutes legitimate intervention. The conflict therefore operates at the level of metamoderation: the norms through which speech norms themselves are governed.
 
-## 5. A democratisation of censorship and multiplication of public spheres
+Seen from this perspective, the moderation crisis identified throughout this chapter is also a crisis of consensus regarding the institutions, procedures, and normative vocabularies through which disagreement can be managed. This observation resonates strongly with Fraser’s understanding of public spheres as sites of continuous contestation over the very terms through which social reality is interpreted. The question is therefore not whether disagreement exists, but how disagreement is organised.
 
-## 6. The need for common spaces of speech norm deliberation
+## Platforms, from frontiers to borders
 
-- In this sense, there is a fundamental need to open intermediary spaces where users and platform content moderators can deliberate and form a consensus around _what is objectionable language_ and _how (or whether) it ought to be_ _moderated_. A need for content moderation as a “social contract”: consensus as the basis for speech moderation.
+The transformation of YouTube’s public image throughout the period examined provides further evidence of this process. Early comments frequently portray YouTube as a communicative environment: a place to encounter different viewpoints, exchange ideas, learn from others, and participate in public debate. Users describe it as a forum, a meeting place, a repository of information, or simply a space in which different perspectives coexist. While conflict is certainly present, the platform itself largely remains in the background. Attention is directed towards the content circulating within the space rather than towards the structure of the space itself.
 
-%% notes
+Over time, however, YouTube increasingly becomes visible as an actor in its own right. Commenters begin describing it as a corporation, a private company, a business with rules, interests, responsibilities, and powers. References to censorship, terms of service, arbitrary enforcement, political bias, and moderation decisions become more prominent. The platform acquires political contours. It becomes an object of scrutiny rather than a neutral backdrop for interaction.
+
+The distinction between frontiers and borders offers a useful way of understanding this transformation. Frontiers are spaces whose boundaries remain fluid, negotiable, and only partially defined. Borders, by contrast, are formalised limits backed by recognised authority. Early YouTube resembles the former. Its role in public communication remains relatively open-ended, and users appear primarily concerned with what can be done within the space. By the late 2010s and early 2020s, however, YouTube increasingly resembles the latter. The platform publicly articulates rules, develops increasingly elaborate enforcement systems, and positions itself as an active participant in the governance of public communication.
+
+As these borders become more visible, they also become more contestable. Users cease discussing only the content being moderated and begin questioning the legitimacy of moderation itself. The authority of the platform becomes a subject of political debate. In this sense, moderation contributes to making the platform legible as a political institution. It reveals the boundaries, assumptions, and normative commitments that structure participation within the platform. What was previously experienced as an environment increasingly appears as a system of governance.
+
+One consequence of this process is the emergence of what might be called a democratisation of censorship. This does not mean that censorship becomes equally distributed, nor that all users acquire identical powers of exclusion. Rather, the proliferation of communicative infrastructures allows a growing number of actors to participate in defining what may or may not be said within particular spaces. Platforms moderate users. Communities moderate members. Users moderate one another. Recommendation systems regulate visibility. Blocking, reporting, muting, downranking, demonetisation, and exclusion become distributed across multiple layers of platformed communication.
+
+The result is a multiplication of speech norm communities. Different groups increasingly maintain different understandings of acceptable language, acceptable conduct, acceptable knowledge, and acceptable moderation. What one community regards as harmful speech another may regard as political dissent. What one community regards as misinformation another may regard as legitimate scepticism. What one community experiences as protection another may experience as censorship. The consequence is not the disappearance of public spheres but their proliferation.
+
+This proliferation has important implications for understanding the relationship between moderation and platform fragmentation. If moderation becomes an object of sustained disagreement, then users who reject prevailing speech norms may increasingly seek alternative environments organised around different normative assumptions. Migration towards alternative platforms is therefore not merely a reaction to specific moderation decisions. It can also be understood as a search for communicative environments governed by different understandings of legitimacy.
+
+The findings presented here suggest that this process begins long before users actually leave a platform. Before migration occurs, there is often a period of entrenchment during which users increasingly identify with particular understandings of moderation and oppose competing ones. Debates over censorship, free speech, hate speech, misinformation, and platform governance become markers of group identity. As Ahn et al. observe, sanctioning itself can become a form of partisan signalling. Endorsing or rejecting moderation decisions communicates affiliation with broader normative communities. Moderation disputes therefore contribute not only to regulating speech but also to producing political and cultural identities.
+
+## From unacceptable speech to unacceptable ways of moderating speech 
+
+This dynamic anticipates the platform ruptures explored in subsequent chapters. When disagreement over moderation becomes sufficiently entrenched, the conflict ceases to concern individual decisions and instead concerns the legitimacy of the communicative environment itself. At that point, alternative infrastructures become attractive not simply because they allow different speech, but because they embody different assumptions about how speech should be governed. The crisis of moderation thus becomes a crisis of platform legitimacy.
+
+The findings also point towards a limitation in contemporary approaches to content governance. Much regulatory and platform attention remains focused on enforcement: identifying harmful content, improving detection systems, increasing moderation capacity, and refining policy categories. These efforts are undoubtedly important. Yet they often presume that the underlying norms being enforced already enjoy sufficient legitimacy. The evidence presented here suggests otherwise. Many contemporary disputes concern not enforcement alone but the absence of consensus regarding the norms enforcement seeks to uphold.
+
+## The need for common spaces of speech norm deliberation
+
+For this reason, moderation cannot be reduced to a question of enforcement. It must also be understood as a question of consensus-building. If speech norms are essentially contested and continuously negotiated, then the legitimacy of moderation depends partly on the existence of spaces in which those negotiations can occur. What appears largely absent from contemporary platform governance is precisely this intermediary layer between users and enforcement systems: spaces where disagreement about speech norms themselves can be articulated, debated, justified, and revised.
+
+In this sense, the challenge facing platforms is not only how to moderate speech, but how to facilitate deliberation about moderation. The findings of this chapter suggest that users are already engaged in such deliberation, often extensively. The question is whether platforms can create mechanisms capable of incorporating these processes into governance itself. If moderation is ultimately a means of maintaining the conditions under which public communication remains possible, then its long-term legitimacy may depend less on the precision of enforcement than on the extent to which those subjected to moderation can participate in defining its terms.
+
+# Annex
 ## Phrasings
 
-1. **Extract entities, words or phrasings that follow the keywords below (results per platform, rankflow format)**
+**Extracting entities, words or phrasings that follow the keywords below (results per platform, rankflow format)**
 
 - From posts that mention (“unacceptable” OR “unforgivable” AND “behaviour” OR “speech” OR “language”) or (“false” OR “misinformative” OR “deceptive” OR “disinformative” OR “fake”)
 
-1. **Get sentences that mention specific things (results per platform, platform | date | sentence format)**
+**Geting sentences that mention specific things (results per platform, platform | date | sentence format)**
 
 - “speech should be” and “behaviour should be” and “video should be” and “post should be” and “comment should be”
 - “is unacceptable” and “is unforgivable”
@@ -254,6 +277,8 @@ keywords = [
         "fake", "propaganda", "untrue","(content|speech|behaviour|behavior|video|link|post.*should|shouldn't)"
 ```
 
+
+```
 - bigot*
 - *phobic
 - intoleran*
@@ -280,15 +305,16 @@ keywords = [
 - woke
 - "social justice warrior"
 - SJW
-
+```
  
-### 2. What is considered unacceptable to say for users
+### 2. Examining what is considered unacceptable to say for users
 #### a) Queries 
-- combined from YouTube project: "is unacceptable"|"unacceptable behaviour"|"unacceptable language"|"should be suspended"|"should be removed"|"should be banned"|"should be cancelled"|"should be taken down"|hateful|racist|abusive|bigoted|* phobic|"toxic behaviour"|"toxic language"|"toxic person"|offensive|discriminatory|antisemitic|misogynistic|"fake news"|misinformative|disinformative
+
+Combined from Tokmetzis' YouTube dataset: "is unacceptable"|"unacceptable behaviour"|"unacceptable language"|"should be suspended"|"should be removed"|"should be banned"|"should be cancelled"|"should be taken down"|hateful|racist|abusive|bigoted|* phobic|"toxic behaviour"|"toxic language"|"toxic person"|offensive|discriminatory|antisemitic|misogynistic|"fake news"|misinformative|disinformative
+
 #### b) What is unacceptable and how is it defined? 
+
 - Filter posts by query words if it's pre-made dataset. Add: “can’t say*“, “cannot say*“.
 - Then, **prompt**: “List of kinds of behaviour or speech that this social media post finds unacceptable. If this post does not make any such claim, say “N.A.“” **File format: platform | date | post ID | prompt | prompt response.**
 - *Viz*: rankflow per platform? 
 - Then, count the nr of times each type of unacceptable content is mentioned over time. Include mentions of: hateful, racis*, abus*, bigot*, * phobic, intolerant, prejudice, censorship, toxic, offensive, discriminatory, antisemitic, misogynistic, “is fake”, misinformative, disinformative, propaganda. **File format: platform | date | post ID/URL | unacceptable thing | nr of times mentioned in date.**
-
-%%

@@ -1,5 +1,4 @@
 # **Chapter 8**
-
 # Twitter as an accidental authority: How a platform assumes an adjudicative role during the COVID-19 pandemic
 
 As new information on the epidemiological nature of COVID-19 infections and its impact on public safety evolves, so do claims on which objective facts constitute it [@yongWhyCoronavirusConfusing2020]. Twitter has been tasked with ensuring that their users maintain a basic level of consensus around public safety guidelines and other information relative to personal and public health by, for example, centralizing access to local health organisations and representatives, flagging and at times deleting "misleading" Tweets that contradict such sources [@skopelitiCoronavirusHowAre2020]. But with diverging guidelines and facts occasionally opposing even authorities — notably ex-U.S. President Trump, the American Centre for Disease Control, the National Institutes of Health and the World Health Organisation — the platform has struggled to determine whom to attribute ultimate authority for reliable information about COVID-19 transmission, treatment and protection.

@@ -1,5 +1,4 @@
 # **Chapter 3** 
-
 # The affordances of extreme speech
 
 In the fields of linguistics and censorship studies, it is understood that speech moderation "materializes everywhere" as a practice that constitutes and defines the boundaries of (publicly) permissible language [@postCensorshipSilencingPractices1998, 2]. Societies that opt not to rely solely on regulatory means, such as state censorship, seek to maintain or restore public order by modulating the circulation of "extreme speech" in the public sphere, i.e., speech that transgresses "the boundaries of acceptable norms of public culture" [@pohjonenExtremeSpeechOnline2017, 1174]. Examples include hate speech and memory laws, interpersonal speech norms or more complex historical processes (denazification, decommunization, decolonisation), which, amongst other objectives, seek to drive historical change by re-educating, marginalising or eradicating the language through which undesired behaviour, ideas or beliefs — past or present — may subsist.
