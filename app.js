@@ -2696,36 +2696,46 @@ function bindBubbleBump(opts) {
  *  key always matches what's on screen — including the inline-spawned figure
  *  cards in the manuscript flow (Figures 5, 7–12) that may share an id-stem
  *  with the analysis-section template but render with a different scope. */
+let _figCleanup = null;
+// Swap the right-rail figure key to whichever mounted figure is nearest the
+// viewport centre. Plain scroll/resize + rAF — NO MutationObserver (the key
+// itself lives in the DOM, so watching the body subtree re-fires on every key
+// render and storms). Call AFTER promoteInlineFigures(); the live figures are
+// in #manuscript by then (the hidden #analysis templates score 0 via getBBox).
 function observeActiveFigure() {
-  let raf = 0;
+  if (_figCleanup) { _figCleanup(); _figCleanup = null; }
+  if (!document.querySelectorAll("#manuscript figure.fig").length) {
+    figKey.setActive(null); return;
+  }
+  // Timestamp throttle (not rAF — rAF is paused in background tabs, which
+  // also broke testability). Scroll events still fire; update is cheap.
+  let last = 0, trailing = 0;
   function update() {
-    raf = 0;
-    const figs = document.querySelectorAll("figure.fig");
-    if (!figs.length) return;
+    last = Date.now();
     const vh = window.innerHeight || document.documentElement.clientHeight;
     const centre = vh / 2;
-    let best = null, bestScore = Infinity;
-    figs.forEach(f => {
+    let best = null, bestD = Infinity;
+    document.querySelectorAll("#manuscript figure.fig").forEach(f => {
       const r = f.getBoundingClientRect();
-      if (r.bottom <= 0 || r.top >= vh) return;        // fully off-screen
-      // distance from the figure's vertical midpoint to the viewport centre
-      const mid = (r.top + r.bottom) / 2;
-      const score = Math.abs(mid - centre);
-      if (score < bestScore) { bestScore = score; best = f; }
+      if (r.height === 0 || r.bottom <= 0 || r.top >= vh) return;  // off-screen / hidden
+      const d = Math.abs((r.top + r.bottom) / 2 - centre);
+      if (d < bestD) { bestD = d; best = f; }
     });
-    if (best) figKey.setActive(best.id);
+    figKey.setActive(best ? best.id : null);
   }
   function schedule() {
-    if (raf) return;
-    raf = requestAnimationFrame(update);
+    const wait = 80 - (Date.now() - last);
+    clearTimeout(trailing);
+    if (wait <= 0) update();
+    else trailing = setTimeout(update, wait);
   }
   window.addEventListener("scroll", schedule, { passive: true });
   window.addEventListener("resize", schedule);
-  // Re-pick when new figures land (inline spawns, late-mounted live figures).
-  if (typeof MutationObserver === "function") {
-    const mo = new MutationObserver(schedule);
-    mo.observe(document.body, { childList: true, subtree: true });
-  }
+  _figCleanup = () => {
+    window.removeEventListener("scroll", schedule);
+    window.removeEventListener("resize", schedule);
+    clearTimeout(trailing);
+  };
   update();
 }
 
@@ -3001,9 +3011,9 @@ async function mountChapter1Analysis() {
   // textareas were removed from index.html; nothing to bundle or wire up.
   // setupCaptionEdits() disabled — manuscript editing happens in the source
   //                      manuscript.md file, not in the page.
-  observeActiveFigure();    // swap the sidebar fig-key as you scroll
   setupFigureDownloads();   // ⬇ PNG / ⬇ SVG buttons on every chart
   promoteInlineFigures();   // swap manuscript placeholders for live figures
+  observeActiveFigure();    // NOW the figures are in #manuscript — watch them
   setTimeout(applyHashFiltersAndScroll, 60); // honour any `?key=val` in #hash
   // Templates are cloned into the chapter now — hide the source section so
   // it doesn't render a second, empty copy at the foot of the chapter.
@@ -3235,6 +3245,10 @@ async function route() {
   if (slug === null) return;            // in-page hash: leave to anchor/figure logic
   if (slug === _routeSlug) return;      // already showing this view
   _routeSlug = slug;
+  // Leaving the previous view: stop watching its figures and clear the key
+  // (Chapter 1 re-establishes both when it mounts its analysis).
+  if (_figCleanup) { _figCleanup(); _figCleanup = null; }
+  figKey.setActive(null);
   if (slug === "home")        return renderLanding();
   if (slug === "references")  return renderReferences();
   if (!tocEntry(slug))        return renderLanding();   // unknown → cover
