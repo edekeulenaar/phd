@@ -147,10 +147,10 @@ def build_manifest() -> None:
     SRC_TO_SLUG = {src: slug for slug, _k, src, _t in manifest if src}
 
 # NOTE: "Censorship and moderation: the oscillations of a contested practice"
-# is CHAPTER 1's title, not the thesis title. The thesis title is TBD — keep
-# this a clear placeholder until the author settles it.
-THESIS_TITLE = "PhD thesis"
-THESIS_SUBTITLE = "working title — to be confirmed"
+# is CHAPTER 1's title, not the thesis title. The full thesis title below is
+# provisional — keep the "(provisional title)" marker until the author settles it.
+THESIS_TITLE = "The way speech functions: content moderation across contested public spheres"
+THESIS_SUBTITLE = "(provisional title)"
 THESIS_AUTHOR = "Emillie de Keulenaar"
 
 
