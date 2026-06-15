@@ -3163,7 +3163,9 @@ async function renderLanding() {
   }).join("");
   el.innerHTML = `
     <header class="cover">
-      <button type="button" class="pdf-btn cover-pdf-btn" data-pdf-open>⬇ Download PDF</button>
+      ${TOC?.fullPdfUrl
+        ? `<a class="pdf-btn cover-pdf-btn" href="${escapeHtml(TOC.fullPdfUrl)}" target="_blank" rel="noopener" download>⬇ Download PDF</a>`
+        : `<button type="button" class="pdf-btn cover-pdf-btn" data-pdf-open>⬇ Download PDF</button>`}
       <h1 class="cover-title">${escapeHtml(TOC?.title || "")}</h1>
       <p class="cover-sub">${escapeHtml(TOC?.subtitle || "")}</p>
       <p class="cover-author">${escapeHtml(TOC?.author || "")}</p>
