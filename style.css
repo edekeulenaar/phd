@@ -924,6 +924,8 @@ mark.cmt.flash { animation: cmt-flash 1.6s ease-out 1; }
   white-space: normal;
   color: var(--ink-soft);
 }
+/* "[cit]" = author's not-yet-done citation reminder: muted, but still visible. */
+#manuscript .cit-todo { color: var(--muted); opacity: 0.65; }
 .cite-link {
   color: var(--accent);
   cursor: help;

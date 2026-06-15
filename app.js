@@ -555,6 +555,31 @@ async function renderManuscript(chapterSlug, opts = {}) {
       }
     });
 
+    // Grey out "[cit]" placeholders (the author's reminder that a sentence
+    // still needs a citation) — visible but muted, never hidden.
+    {
+      const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, {
+        acceptNode: n => (n.nodeValue.includes("[cit]") &&
+                          !n.parentElement.closest("a, code, pre, .cit-todo"))
+          ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
+      });
+      const targets = [];
+      for (let n = walker.nextNode(); n; n = walker.nextNode()) targets.push(n);
+      targets.forEach(node => {
+        const frag = document.createDocumentFragment();
+        node.nodeValue.split(/(\[cit\])/g).forEach(p => {
+          if (p === "[cit]") {
+            const s = document.createElement("span");
+            s.className = "cit-todo"; s.textContent = "[cit]";
+            frag.appendChild(s);
+          } else if (p) {
+            frag.appendChild(document.createTextNode(p));
+          }
+        });
+        node.replaceWith(frag);
+      });
+    }
+
     // Video embeds: the source uses `![](clip.mp4)`, which marked renders as
     // an <img>. Swap those for a real <video controls> element.
     host.querySelectorAll('img[src$=".mp4"], img[src$=".webm"], img[src$=".mov"], img[src$=".m4v"]')
@@ -676,7 +701,7 @@ function escapeHtml(s) {
 const CSV_BUST = String(Date.now());
 // Bump when the downloadable thesis.pdf is replaced, so readers never get a
 // stale cached copy from the browser / GitHub CDN.
-const PDF_VER = "20260615b";
+const PDF_VER = "20260615c";
 
 async function loadCSV(path) {
   const sep = path.includes("?") ? "&" : "?";
