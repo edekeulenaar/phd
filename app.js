@@ -10,6 +10,34 @@
 const slug = s => String(s).toLowerCase()
   .replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") || "section";
 
+/* Rewrite inline cross-chapter links inside a rendered root to in-app
+   `#/<slug>` routes. The manuscript sources link to one another by source
+   filename — e.g. [Part I…](Part%20I.%20What%20is%20moderation?.md) or
+   [Chapter 1](Manuscript/Chapter%201…md) — which would resolve to a bare `.md`
+   URL and 404 in the SPA. We map each known chapter source file (from
+   toc.json's srcToSlug) to its route, preserving any trailing #heading
+   fragment. Unknown targets (external links, images, etc.) are left untouched.
+   Used by BOTH the manuscript view and the cover-page abstract/acknowledgments. */
+function rewriteChapterLinks(root) {
+  if (!root) return;
+  const srcToSlug = (TOC && TOC.srcToSlug) || {};
+  root.querySelectorAll("a[href]").forEach(a => {
+    const raw = a.getAttribute("href") || "";
+    // Skip absolute URLs, mail/tel, and in-page anchors.
+    if (/^(?:https?:|mailto:|tel:|#|\/)/i.test(raw)) return;
+    const m = raw.match(/^(.*?\.md)(#.*)?$/i);
+    if (!m) return;
+    let file = m[1];
+    const frag = m[2] || "";
+    try { file = decodeURIComponent(file); } catch { /* keep as-is */ }
+    file = file.replace(/^\.?\//, "").split("/").pop();   // strip any path
+    const slug = srcToSlug[file];
+    if (!slug) return;
+    a.setAttribute("href", `#/${slug}${frag}`);
+    a.classList.add("xref");
+  });
+}
+
 /* ────────────────────────────────────────────────────────────────────────
    1. Manuscript: fetch markdown → render → build TOC → wire citations
    ─────────────────────────────────────────────────────────────────────── */
@@ -152,6 +180,9 @@ async function renderManuscript(chapterSlug, opts = {}) {
         el.innerHTML = el.innerHTML.replace(/\s*\^[\w.\-]+\s*$/, "");
       }
     });
+    // 4a-ii) Rewrite inline cross-chapter `.md` links → in-app `#/<slug>`
+    //        routes (see rewriteChapterLinks). Without this they 404 in the SPA.
+    rewriteChapterLinks(host);
     // 4a-bis) Syntax-highlight every <pre><code class="language-X"> block
     //         using highlight.js (loaded from CDN). Falls back gracefully
     //         when the library is missing. Then wrap every <pre> in a
@@ -438,6 +469,22 @@ async function renderManuscript(chapterSlug, opts = {}) {
       REF_HEAD.remove();
     }
 
+    // Also strip "Primary references" / "Secondary references|sources" callout
+    // lists (e.g. Chapter 3) — these are consolidated into the global
+    // References page alongside everything else.
+    const EXTRA_REF_RE = /^(primary|secondary)\s+(references?|sources)$/i;
+    [...host.querySelectorAll("h1, h2, h3, h4")]
+      .filter(h => EXTRA_REF_RE.test(h.textContent.trim()))
+      .forEach(head => {
+        const lvl = +head.tagName[1];
+        const rm = [];
+        for (let r = head.nextElementSibling;
+             r && !(/^H[1-6]$/.test(r.tagName) && +r.tagName[1] <= lvl);
+             r = r.nextElementSibling) rm.push(r);
+        rm.forEach(n => n.remove());
+        head.remove();
+      });
+
     function lookupRef(key) {
       const d = deriveFromKey(key);
       const lk = d.author.toLowerCase().replace(/[^a-z]/g, "");
@@ -709,7 +756,7 @@ function escapeHtml(s) {
 const CSV_BUST = String(Date.now());
 // Bump when the downloadable thesis.pdf is replaced, so readers never get a
 // stale cached copy from the browser / GitHub CDN.
-const PDF_VER = "20260615d";
+const PDF_VER = "20260615e";
 
 async function loadCSV(path) {
   const sep = path.includes("?") ? "&" : "?";
@@ -3216,6 +3263,9 @@ async function renderLanding() {
     ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
     ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}
     <nav class="cover-toc"><h2>Contents</h2><ol class="land-toc">${toc}</ol></nav>`;
+  // The abstract/ack are rendered straight from markdown here (not via
+  // renderManuscript), so rewrite their cross-chapter `.md` links too.
+  rewriteChapterLinks(el);
   el.querySelectorAll(".cover-abstract, .cover-ack").forEach(collapseBlankRuns);
   buildChapterNav(null, null);   // clear any prior chapter's heading nav
   highlightToc();
