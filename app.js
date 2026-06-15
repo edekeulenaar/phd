@@ -3252,6 +3252,7 @@ async function renderChapter(slug) {
   try { await renderManuscript(slug); } catch (e) { console.error(e); }
   highlightToc();
   applyComments(slug);      // re-anchor saved reader comments into the prose
+  if (SB) cmtHydrate();     // refresh from the shared store (re-applies if changed)
   if (slug === "chapter-1") {
     const token = ++_chapter1Token;
     try { await mountChapter1Analysis(); } catch (e) { console.error(e); }
@@ -3295,6 +3296,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   setupFigureZoom();        // click a static figure to enlarge it
   setupCommenting();        // highlight prose → add a reader comment
   window.addEventListener("hashchange", route);
+  if (SB) await cmtHydrate();   // pull the shared comment set before first paint
   await route();
 });
 
@@ -3336,8 +3338,67 @@ function setupFigureZoom() {
 const CMT_KEY = "thesis-comments-v1";
 const CTX = 48;                                  // chars of prefix/suffix context
 
-function cmtAll() { try { return JSON.parse(localStorage.getItem(CMT_KEY)) || {}; } catch { return {}; } }
-function cmtSave(all) { try { localStorage.setItem(CMT_KEY, JSON.stringify(all)); } catch {} }
+// Shared backend (Supabase). When site/comments-config.js sets a url + anon key,
+// comments are stored in a hosted database so every reader sees the same set and
+// they persist forever. Without config we fall back to per-browser localStorage.
+const SB = (window.SUPABASE_CFG && window.SUPABASE_CFG.url && window.SUPABASE_CFG.anonKey)
+  ? { url: window.SUPABASE_CFG.url.replace(/\/$/, ""), key: window.SUPABASE_CFG.anonKey,
+      table: window.SUPABASE_CFG.table || "comments" }
+  : null;
+function sbHeaders(extra) {
+  return Object.assign({ apikey: SB.key, Authorization: `Bearer ${SB.key}` }, extra || {});
+}
+async function sbFetchAll() {
+  const r = await fetch(`${SB.url}/rest/v1/${SB.table}?select=*`, { headers: sbHeaders() });
+  if (!r.ok) throw new Error("supabase select " + r.status);
+  const grouped = {};
+  for (const row of await r.json()) {
+    (grouped[row.chapter] = grouped[row.chapter] || []).push({
+      id: row.id, name: row.name, body: row.body,
+      quote: row.quote, prefix: row.prefix, suffix: row.suffix, ts: row.ts,
+    });
+  }
+  return grouped;
+}
+async function sbInsert(chapter, c) {
+  const r = await fetch(`${SB.url}/rest/v1/${SB.table}`, {
+    method: "POST",
+    headers: sbHeaders({ "Content-Type": "application/json", Prefer: "return=minimal" }),
+    body: JSON.stringify({ id: c.id, chapter, name: c.name, body: c.body,
+      quote: c.quote, prefix: c.prefix, suffix: c.suffix, ts: c.ts }),
+  });
+  if (!r.ok) throw new Error("supabase insert " + r.status);
+}
+async function sbDelete(id) {
+  const r = await fetch(`${SB.url}/rest/v1/${SB.table}?id=eq.${encodeURIComponent(id)}`,
+    { method: "DELETE", headers: sbHeaders({ Prefer: "return=minimal" }) });
+  if (!r.ok) throw new Error("supabase delete " + r.status);
+}
+// Pull the shared set into the in-memory cache; re-render comments if it changed.
+async function cmtHydrate() {
+  if (!SB) return;
+  try {
+    const grouped = await sbFetchAll();
+    const before = JSON.stringify(_cmtCache);
+    _cmtCache = grouped;
+    try { localStorage.setItem(CMT_KEY, JSON.stringify(grouped)); } catch {}
+    if (JSON.stringify(grouped) !== before) {
+      const s = routeSlug();
+      applyComments(s); updateCommentsRail(s);
+    }
+  } catch (e) { console.warn("comments backend unreachable, using local cache:", e); }
+}
+
+let _cmtCache = null;                             // hydrated from backend / localStorage
+function cmtAll() {
+  if (_cmtCache) return _cmtCache;
+  try { _cmtCache = JSON.parse(localStorage.getItem(CMT_KEY)) || {}; } catch { _cmtCache = {}; }
+  return _cmtCache;
+}
+function cmtSave(all) {
+  _cmtCache = all;
+  try { localStorage.setItem(CMT_KEY, JSON.stringify(all)); } catch {}
+}
 function cmtFor(slug) { return cmtAll()[slug] || []; }
 function cmtId() { return "c" + Math.abs(Date.now() ^ (Math.floor(performance.now() * 1000))).toString(36); }
 
@@ -3503,14 +3564,17 @@ function openCommentForm(anchor, near) {
     rememberName(name);
     const all = cmtAll();
     const slug = anchor.slug || routeSlug();
-    (all[slug] = all[slug] || []).push({
+    const entry = {
       id: cmtId(), quote: anchor.quote, prefix: anchor.prefix,
       suffix: anchor.suffix, name, body, ts: new Date().toISOString(),
-    });
+    };
+    (all[slug] = all[slug] || []).push(entry);
     cmtSave(all);
+    if (SB) sbInsert(slug, entry).catch(e => { console.warn(e); alert("Your comment was saved locally but could not be sent to the shared store — check your connection."); });
     closePop();
     window.getSelection().removeAllRanges();
     applyComments(slug);
+    updateCommentsRail(slug);
   };
 }
 
@@ -3536,7 +3600,11 @@ function openCommentView(mark) {
   pop.querySelectorAll(".cmt-del").forEach(b => b.onclick = () => {
     const all = cmtAll();
     all[slug] = (all[slug] || []).filter(c => c.id !== b.dataset.id);
-    cmtSave(all); closePop();
+    if (!all[slug].length) delete all[slug];
+    cmtSave(all);
+    if (SB) sbDelete(b.dataset.id).catch(e => console.warn(e));
+    updateCommentsRail(slug);
+    closePop();
     // unwrap the marks for this id
     document.querySelectorAll(`mark.cmt[data-cmt-id="${b.dataset.id}"]`).forEach(m => {
       const t = document.createTextNode(m.textContent); m.replaceWith(t);
@@ -3593,11 +3661,12 @@ function updateCommentsRail(slug) {
 // After a chapter renders we may owe a deferred jump (cross-chapter click).
 let _pendingJump = null;
 
-// Delete one comment from storage and refresh the prose + rail.
+// Delete one comment from storage (and the shared backend) and refresh.
 function deleteComment(id, ch) {
   const all = cmtAll();
   if (all[ch]) { all[ch] = all[ch].filter(x => x.id !== id); if (!all[ch].length) delete all[ch]; }
   cmtSave(all);
+  if (SB) sbDelete(id).catch(e => console.warn(e));
   applyComments(routeSlug());
   updateCommentsRail(routeSlug());
 }
