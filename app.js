@@ -223,6 +223,13 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //          first segment is surfaced in the <summary>.
     const FOLD_OPEN_MAX = 12;
     host.querySelectorAll("table").forEach(tbl => {
+      const oneCell = tbl.querySelectorAll("th, td").length === 1;
+      const isPart = tocEntry(chapterSlug)?.kind === "part";
+      // Part-section single-cell boxes hold a reference and must render as a
+      // plain box, NOT a collapsible — leave the bare table (styled by
+      // `.single-cell` below) and skip the <details> wrapper entirely.
+      if (oneCell && isPart) { tbl.classList.add("single-cell"); return; }
+
       const rows = tbl.querySelectorAll("tbody tr").length;
       // Pull in a sibling "Table N. …" caption paragraph, if any.
       let cap = tbl.nextElementSibling;
@@ -239,13 +246,10 @@ async function renderManuscript(chapterSlug, opts = {}) {
       if (tbl.id) { wrap.id = tbl.id; tbl.removeAttribute("id"); }
       else if (cap && cap.id) { wrap.id = cap.id; cap.removeAttribute("id"); }
 
-      // Single-cell tables are callout boxes — in Part framing pages they hold
-      // a bibliographic citation; in chapters they hold a prompt. No row count.
-      const oneCell = tbl.querySelectorAll("th, td").length === 1;
-      const isPart = tocEntry(chapterSlug)?.kind === "part";
+      // Single-cell tables in chapters are prompt callout boxes (kept foldable).
       const sum = document.createElement("summary");
       const lbl = cap ? cap.textContent.trim().split(".")[0]   // "Table 5"
-                      : (oneCell ? (isPart ? "Reference" : "Prompt") : "Table");
+                      : (oneCell ? "Prompt" : "Table");
       const after = cap ? cap.textContent.trim().slice(lbl.length + 1).trim()
                         : (oneCell ? "" : `${rows} rows`);
       sum.innerHTML = `<span class="lbl">${lbl}</span>` +
