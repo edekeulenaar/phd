@@ -3232,6 +3232,7 @@ async function renderChapter(slug) {
   showView("manuscript");
   try { await renderManuscript(slug); } catch (e) { console.error(e); }
   highlightToc();
+  applyComments(slug);      // re-anchor saved reader comments into the prose
   if (slug === "chapter-1") {
     const token = ++_chapter1Token;
     try { await mountChapter1Analysis(); } catch (e) { console.error(e); }
@@ -3267,8 +3268,296 @@ window.addEventListener("DOMContentLoaded", async () => {
   snapshotFigureTemplates();
   await loadToc();
   buildGlobalToc();
+  setupFigureZoom();        // click a static figure to enlarge it
+  setupCommenting();        // highlight prose → add a reader comment
   window.addEventListener("hashchange", route);
   await route();
+});
+
+/* ────────────────────────────────────────────────────────────────────────
+   Click-to-enlarge static figures (lightbox).
+   ─────────────────────────────────────────────────────────────────────── */
+function setupFigureZoom() {
+  let box = document.getElementById("img-lightbox");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "img-lightbox"; box.hidden = true;
+    box.innerHTML = `<button class="lb-close" aria-label="Close">×</button>` +
+                    `<img alt="">`;
+    document.body.appendChild(box);
+    const close = () => { box.hidden = true; box.querySelector("img").removeAttribute("src"); };
+    box.addEventListener("click", close);
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && !box.hidden) close();
+    });
+  }
+  // Delegated: any non-linked image in the open chapter zooms.
+  document.addEventListener("click", e => {
+    const img = e.target.closest("#manuscript img");
+    if (!img || img.closest("a") || !box.hidden) return;
+    const full = img.currentSrc || img.getAttribute("src");
+    if (!full) return;
+    const big = box.querySelector("img");
+    big.src = full; big.alt = img.alt || "";
+    box.hidden = false;
+  });
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   Reader comments — highlight a passage, click "+", write name + comment.
+   Stored in localStorage (per browser); a reader can Export them to send to
+   the author. Each comment anchors to its quote + surrounding context so it
+   re-attaches on reload even if the text shifts slightly.
+   ─────────────────────────────────────────────────────────────────────── */
+const CMT_KEY = "thesis-comments-v1";
+const CTX = 48;                                  // chars of prefix/suffix context
+
+function cmtAll() { try { return JSON.parse(localStorage.getItem(CMT_KEY)) || {}; } catch { return {}; } }
+function cmtSave(all) { try { localStorage.setItem(CMT_KEY, JSON.stringify(all)); } catch {} }
+function cmtFor(slug) { return cmtAll()[slug] || []; }
+function cmtId() { return "c" + Math.abs(Date.now() ^ (Math.floor(performance.now() * 1000))).toString(36); }
+
+// Flatten the open chapter's prose into a string + a text-node offset map.
+function manuscriptFlat() {
+  const host = document.getElementById("manuscript");
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, {
+    acceptNode(n) {
+      if (!n.nodeValue) return NodeFilter.FILTER_REJECT;
+      if (n.parentElement && n.parentElement.closest(
+          ".cmt-plus, .cmt-pop, .fig-foot, .fig-controls, figure.fig, sup a"))
+        return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  let text = ""; const map = []; let n;
+  while ((n = walker.nextNode())) {
+    map.push({ node: n, start: text.length, end: text.length + n.nodeValue.length });
+    text += n.nodeValue;
+  }
+  return { text, map };
+}
+
+// (container, offset) → flat index. Text nodes are exact; elements map to the
+// start of their first contained text node (good enough for selections).
+function flatIndex(map, container, offset) {
+  if (container.nodeType === 3) {
+    const m = map.find(x => x.node === container);
+    return m ? m.start + offset : null;
+  }
+  const ref = container.childNodes ? container.childNodes[offset] : null;
+  if (ref) {
+    const m = map.find(x => ref === x.node || (ref.contains && ref.contains(x.node)));
+    if (m) return m.start;
+  }
+  const inside = map.filter(x => container.contains(x.node));
+  if (inside.length) return offset === 0 ? inside[0].start : inside[inside.length - 1].end;
+  return null;
+}
+
+// Wrap a flat [start,end) range with <mark> per text-node segment.
+function wrapFlat(map, start, end, id) {
+  map.forEach(m => {
+    if (m.end <= start || m.start >= end) return;
+    const s = Math.max(start, m.start) - m.start;
+    const e = Math.min(end, m.end) - m.start;
+    if (e <= s) return;
+    const range = document.createRange();
+    try { range.setStart(m.node, s); range.setEnd(m.node, e); } catch { return; }
+    const mark = document.createElement("mark");
+    mark.className = "cmt"; mark.dataset.cmtId = id;
+    try { range.surroundContents(mark); } catch { /* crosses a boundary — skip seg */ }
+  });
+}
+
+// Best occurrence of `quote` in `text`, disambiguated by prefix/suffix.
+function locateQuote(text, c) {
+  if (!c.quote) return -1;
+  const hits = [];
+  let i = text.indexOf(c.quote);
+  while (i !== -1) { hits.push(i); i = text.indexOf(c.quote, i + 1); }
+  if (!hits.length) return -1;
+  if (hits.length === 1) return hits[0];
+  let best = hits[0], bestScore = -1;
+  for (const h of hits) {
+    const pre = text.slice(Math.max(0, h - CTX), h);
+    const suf = text.slice(h + c.quote.length, h + c.quote.length + CTX);
+    let score = 0;
+    for (let k = 1; k <= Math.min(pre.length, (c.prefix || "").length); k++)
+      if (pre[pre.length - k] === c.prefix[c.prefix.length - k]) score++; else break;
+    for (let k = 0; k < Math.min(suf.length, (c.suffix || "").length); k++)
+      if (suf[k] === c.suffix[k]) score++; else break;
+    if (score > bestScore) { bestScore = score; best = h; }
+  }
+  return best;
+}
+
+// Re-attach every saved comment for the chapter as a <mark>.
+function applyComments(slug) {
+  const list = cmtFor(slug);
+  if (!list.length) { updateCommentsRail(slug); return; }
+  const { text, map } = manuscriptFlat();
+  list.forEach(c => {
+    const at = locateQuote(text, c);
+    if (at < 0) return;                 // text changed — comment can't anchor
+    wrapFlat(map, at, at + c.quote.length, c.id);
+  });
+  updateCommentsRail(slug);
+}
+
+let _cmtPending = null;   // {slug, quote, prefix, suffix} captured at "+" time
+
+function setupCommenting() {
+  // floating "+" button
+  const plus = document.createElement("button");
+  plus.className = "cmt-plus"; plus.type = "button";
+  plus.title = "Add a comment"; plus.textContent = "+";
+  plus.hidden = true; document.body.appendChild(plus);
+  const hidePlus = () => { plus.hidden = true; };
+
+  document.addEventListener("mouseup", () => setTimeout(() => {
+    const host = document.getElementById("manuscript");
+    const sel = window.getSelection();
+    if (!host || host.hidden || !sel || sel.isCollapsed || !sel.rangeCount) return hidePlus();
+    const range = sel.getRangeAt(0);
+    if (!host.contains(range.commonAncestorContainer)) return hidePlus();
+    const quote = sel.toString().trim();
+    if (quote.length < 2) return hidePlus();
+    const { text, map } = manuscriptFlat();
+    let s = flatIndex(map, range.startContainer, range.startOffset);
+    let e = flatIndex(map, range.endContainer, range.endOffset);
+    if (s == null || e == null) return hidePlus();
+    if (s > e) [s, e] = [e, s];
+    _cmtPending = {
+      slug: routeSlug(), quote: text.slice(s, e),
+      prefix: text.slice(Math.max(0, s - CTX), s),
+      suffix: text.slice(e, e + CTX),
+    };
+    const r = range.getBoundingClientRect();
+    plus.style.left = `${window.scrollX + r.right + 6}px`;
+    plus.style.top  = `${window.scrollY + r.top - 6}px`;
+    plus.hidden = false;
+  }, 10));
+
+  plus.addEventListener("mousedown", e => e.preventDefault());  // keep selection
+  plus.addEventListener("click", e => {
+    e.stopPropagation();
+    if (_cmtPending) openCommentForm(_cmtPending, plus);
+    hidePlus();
+  });
+
+  // hide the "+" when clicking elsewhere; open a saved comment when its mark is clicked
+  document.addEventListener("mousedown", e => {
+    if (!e.target.closest(".cmt-plus")) hidePlus();
+    const mark = e.target.closest("mark.cmt");
+    if (mark) openCommentView(mark);
+  });
+}
+
+function rememberName(n) { try { localStorage.setItem("thesis-cmt-name", n); } catch {} }
+function lastName() { try { return localStorage.getItem("thesis-cmt-name") || ""; } catch { return ""; } }
+
+function openCommentForm(anchor, near) {
+  closePop();
+  const pop = document.createElement("div");
+  pop.className = "cmt-pop"; pop.id = "cmt-pop";
+  pop.innerHTML = `
+    <div class="cmt-quote">“${escapeHtml(anchor.quote.slice(0, 140))}${anchor.quote.length > 140 ? "…" : ""}”</div>
+    <input class="cmt-name" type="text" placeholder="Your name" value="${escapeHtml(lastName())}">
+    <textarea class="cmt-text" rows="3" placeholder="Your comment…"></textarea>
+    <div class="cmt-actions">
+      <button type="button" class="cmt-cancel">Cancel</button>
+      <button type="button" class="cmt-save">Add comment</button>
+    </div>`;
+  document.body.appendChild(pop);
+  positionPop(pop, near.getBoundingClientRect());
+  pop.querySelector(".cmt-text").focus();
+  pop.querySelector(".cmt-cancel").onclick = closePop;
+  pop.querySelector(".cmt-save").onclick = () => {
+    const name = pop.querySelector(".cmt-name").value.trim() || "Anonymous";
+    const body = pop.querySelector(".cmt-text").value.trim();
+    if (!body) { pop.querySelector(".cmt-text").focus(); return; }
+    rememberName(name);
+    const all = cmtAll();
+    const slug = anchor.slug || routeSlug();
+    (all[slug] = all[slug] || []).push({
+      id: cmtId(), quote: anchor.quote, prefix: anchor.prefix,
+      suffix: anchor.suffix, name, body, ts: new Date().toISOString(),
+    });
+    cmtSave(all);
+    closePop();
+    window.getSelection().removeAllRanges();
+    applyComments(slug);
+  };
+}
+
+function openCommentView(mark) {
+  const slug = routeSlug();
+  const id = mark.dataset.cmtId;
+  const items = cmtFor(slug).filter(c => c.id === id);
+  if (!items.length) return;
+  closePop();
+  const pop = document.createElement("div");
+  pop.className = "cmt-pop cmt-view"; pop.id = "cmt-pop";
+  pop.innerHTML = items.map(c => `
+    <div class="cmt-entry">
+      <div class="cmt-meta"><span class="cmt-who">${escapeHtml(c.name)}</span>
+        <span class="cmt-when">${new Date(c.ts).toLocaleDateString()}</span></div>
+      <div class="cmt-body">${escapeHtml(c.body)}</div>
+      <button type="button" class="cmt-del" data-id="${c.id}">Delete</button>
+    </div>`).join("") +
+    `<div class="cmt-actions"><button type="button" class="cmt-cancel">Close</button></div>`;
+  document.body.appendChild(pop);
+  positionPop(pop, mark.getBoundingClientRect());
+  pop.querySelector(".cmt-cancel").onclick = closePop;
+  pop.querySelectorAll(".cmt-del").forEach(b => b.onclick = () => {
+    const all = cmtAll();
+    all[slug] = (all[slug] || []).filter(c => c.id !== b.dataset.id);
+    cmtSave(all); closePop();
+    // unwrap the marks for this id
+    document.querySelectorAll(`mark.cmt[data-cmt-id="${b.dataset.id}"]`).forEach(m => {
+      const t = document.createTextNode(m.textContent); m.replaceWith(t);
+    });
+    updateCommentsRail(slug);
+  });
+}
+
+function positionPop(pop, anchorRect) {
+  const w = pop.offsetWidth, vw = window.innerWidth;
+  let left = window.scrollX + anchorRect.left;
+  if (left + w > window.scrollX + vw - 12) left = window.scrollX + vw - w - 12;
+  pop.style.left = `${Math.max(window.scrollX + 8, left)}px`;
+  pop.style.top  = `${window.scrollY + anchorRect.bottom + 8}px`;
+}
+function closePop() { const p = document.getElementById("cmt-pop"); if (p) p.remove(); }
+document.addEventListener("mousedown", e => {
+  if (!e.target.closest(".cmt-pop, .cmt-plus, mark.cmt")) closePop();
+});
+
+// Right-rail "Comments" section: count for the open chapter + export all.
+function updateCommentsRail(slug) {
+  const nav = document.getElementById("chapter-comments");
+  const list = document.getElementById("chapter-comments-list");
+  if (!nav || !list) return;
+  const mine = cmtFor(slug);
+  const total = Object.values(cmtAll()).reduce((a, v) => a + v.length, 0);
+  if (!mine.length && !total) { nav.hidden = true; return; }
+  nav.hidden = false;
+  list.innerHTML =
+    `<li class="cmt-rail-count">${mine.length} on this chapter · ${total} total</li>` +
+    mine.slice(0, 8).map(c =>
+      `<li class="cmt-rail-item"><span class="cmt-rail-who">${escapeHtml(c.name)}</span>: ` +
+      `${escapeHtml(c.body.slice(0, 60))}${c.body.length > 60 ? "…" : ""}</li>`).join("") +
+    `<li><button type="button" class="cmt-export" data-cmt-export>⤓ Export all comments</button></li>`;
+}
+document.addEventListener("click", e => {
+  if (!e.target.closest("[data-cmt-export]")) return;
+  const data = JSON.stringify(cmtAll(), null, 2);
+  const blob = new Blob([data], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "thesis-comments.json";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
 });
 
 /* If `manuscript.md` embeds a screenshot called `fig-<slug>.png`, we treat
