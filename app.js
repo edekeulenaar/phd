@@ -384,7 +384,7 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //    the rendered HTML and a stable anchor id so clicks can jump.
     const refIndex = new Map();             // "lastnamelower|year" → { id, html, link }
     const REF_HEAD = [...host.querySelectorAll("h1, h2")]
-                       .find(h => /^references$/i.test(h.textContent.trim()));
+                       .find(h => /^(references?|bibliography|works\s+cited)$/i.test(h.textContent.trim()));
     if (REF_HEAD) {
       let n = 0;
       let el = REF_HEAD.nextElementSibling;
@@ -418,6 +418,13 @@ async function renderManuscript(chapterSlug, opts = {}) {
         el = el.nextElementSibling;
       }
       console.info(`References indexed: ${refIndex.size} entries`);
+      // Consolidate references into the global References section only:
+      // strip the per-chapter list from the chapter display. Its data is
+      // already captured in refIndex above, so hover cards keep working.
+      const drop = [];
+      for (let r = REF_HEAD.nextElementSibling; r && !/^H[12]$/.test(r.tagName); r = r.nextElementSibling) drop.push(r);
+      drop.forEach(n => n.remove());
+      REF_HEAD.remove();
     }
 
     function lookupRef(key) {
@@ -477,8 +484,8 @@ async function renderManuscript(chapterSlug, opts = {}) {
         const txt = escapeHtml(inlineFor(k));
         const ref = anchorFor(k);
         _filledCites++;
-        if (ref) { _linkedCites++;
-          return `<a class="cite-link" href="#${ref}" data-key="${escapeHtml(k)}">${txt}</a>`;
+        if (ref) { _linkedCites++;   // refs live only in the global References page now
+          return `<a class="cite-link" href="#/references" data-key="${escapeHtml(k)}">${txt}</a>`;
         }
         return `<span class="cite-link" data-key="${escapeHtml(k)}">${txt}</span>`;
       });
@@ -498,7 +505,7 @@ async function renderManuscript(chapterSlug, opts = {}) {
           ? ` <a class="ext" href="${escapeHtml(link)}" target="_blank" rel="noopener">Open ↗</a>`
           : "";
         const jump = ref
-          ? ` <a class="ext" href="#${ref}">Jump to ref ↓</a>` : "";
+          ? ` <a class="ext" href="#/references">See in References ↓</a>` : "";
         return `<div class="dc-cite" data-key="${escapeHtml(k)}">${body}${tail}${jump}</div>`;
       }).join("");
     }
@@ -3586,6 +3593,15 @@ function updateCommentsRail(slug) {
 // After a chapter renders we may owe a deferred jump (cross-chapter click).
 let _pendingJump = null;
 
+// Delete one comment from storage and refresh the prose + rail.
+function deleteComment(id, ch) {
+  const all = cmtAll();
+  if (all[ch]) { all[ch] = all[ch].filter(x => x.id !== id); if (!all[ch].length) delete all[ch]; }
+  cmtSave(all);
+  applyComments(routeSlug());
+  updateCommentsRail(routeSlug());
+}
+
 // Scroll to a comment's highlight in the currently-rendered chapter and flash it.
 function scrollToCommentMark(id, slug) {
   let mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
@@ -3594,8 +3610,11 @@ function scrollToCommentMark(id, slug) {
     mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
   }
   if (!mark) {                          // passage genuinely can't be located
-    const c = (cmtAll()[slug || routeSlug()] || []).find(x => x.id === id);
-    if (c) alert(`Comment by ${c.name || "Anon"}:\n\n${c.body}\n\n(The highlighted passage could not be located in the current text — it may have been edited since the comment was left.)`);
+    const ch = slug || routeSlug();
+    const c = (cmtAll()[ch] || []).find(x => x.id === id);
+    if (c && confirm(`Comment by ${c.name || "Anon"}:\n\n“${c.body}”\n\nThe highlighted passage could not be located in the current text — it may have been edited since the comment was left.\n\nClick OK to delete this comment, or Cancel to keep it.`)) {
+      deleteComment(id, ch);
+    }
     return;
   }
   mark.scrollIntoView({ block: "center", behavior: "smooth" });
@@ -3611,7 +3630,9 @@ function jumpToComment(id, chapter) {
   const target = chapter || routeSlug();
   if (chapter && !tocEntry(chapter) && chapter !== "home" && chapter !== "references") {
     const c = (cmtAll()[chapter] || []).find(x => x.id === id);
-    alert(`This comment was left on a chapter ("${chapter}") that no longer exists in the current version of the thesis, so its passage can't be located.\n\n${c ? `Comment by ${c.name || "Anon"}:\n\n${c.body}` : ""}\n\nUse the × button to remove it.`);
+    if (confirm(`This comment was left on a chapter ("${chapter}") that no longer exists in the current version of the thesis, so its passage can't be located.\n\n${c ? `Comment by ${c.name || "Anon"}:\n\n“${c.body}”\n\n` : ""}Click OK to delete this comment, or Cancel to keep it.`)) {
+      deleteComment(id, chapter);
+    }
     return;                             // never silently dump the reader on the Cover
   }
   if (target !== routeSlug()) {         // comment lives on another chapter
@@ -3625,12 +3646,7 @@ document.addEventListener("click", e => {
   const del = e.target.closest("#chapter-comments-list [data-cmt-del]");
   if (del) {
     e.stopPropagation();
-    const id = del.dataset.cmtDel, ch = del.dataset.cmtDelCh;
-    const all = cmtAll();
-    if (all[ch]) { all[ch] = all[ch].filter(x => x.id !== id); if (!all[ch].length) delete all[ch]; }
-    cmtSave(all);
-    applyComments(routeSlug());
-    updateCommentsRail(routeSlug());
+    deleteComment(del.dataset.cmtDel, del.dataset.cmtDelCh);
     return;
   }
   const item = e.target.closest("#chapter-comments-list [data-jump]");
