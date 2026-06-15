@@ -239,13 +239,15 @@ async function renderManuscript(chapterSlug, opts = {}) {
       if (tbl.id) { wrap.id = tbl.id; tbl.removeAttribute("id"); }
       else if (cap && cap.id) { wrap.id = cap.id; cap.removeAttribute("id"); }
 
+      // Single-cell tables are callout/prompt boxes — no row count.
+      const oneCell = tbl.querySelectorAll("th, td").length === 1;
       const sum = document.createElement("summary");
       const lbl = cap ? cap.textContent.trim().split(".")[0]   // "Table 5"
-                      : "Table";
+                      : (oneCell ? "Prompt" : "Table");
       const after = cap ? cap.textContent.trim().slice(lbl.length + 1).trim()
-                        : `${rows} rows`;
+                        : (oneCell ? "" : `${rows} rows`);
       sum.innerHTML = `<span class="lbl">${lbl}</span>` +
-                      `<span class="meta">· ${after} · ${rows} rows</span>`;
+                      `<span class="meta">${after ? "· " + after : ""}${oneCell ? "" : " · " + rows + " rows"}</span>`;
 
       const inner = document.createElement("div");
       inner.className = "table-wrap";
@@ -533,6 +535,16 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //    The very first H1 is the chapter title — keep its id (so the
     //    sidebar title still anchors there) but DROP it from the sidebar TOC.
     collapseBlankRuns(host);
+
+    // Single-cell tables (`| text |` / `| --- |`) are callout/prompt boxes,
+    // not data tables — flag them so they render as flowing text, not an
+    // uppercase table header.
+    host.querySelectorAll("table").forEach(t => {
+      if (t.querySelectorAll("th, td").length === 1) {
+        t.classList.add("single-cell");
+        (t.closest("details.foldable") || t).classList.add("has-single-cell");
+      }
+    });
 
     // Video embeds: the source uses `![](clip.mp4)`, which marked renders as
     // an <img>. Swap those for a real <video controls> element.
@@ -3544,11 +3556,31 @@ function updateCommentsRail(slug) {
   nav.hidden = false;
   list.innerHTML =
     `<li class="cmt-rail-count">${mine.length} on this chapter · ${total} total</li>` +
-    mine.slice(0, 8).map(c =>
-      `<li class="cmt-rail-item"><span class="cmt-rail-who">${escapeHtml(c.name)}</span>: ` +
+    mine.slice(0, 12).map(c =>
+      `<li class="cmt-rail-item" data-jump="${c.id}" tabindex="0" role="button">` +
+      `<span class="cmt-rail-who">${escapeHtml(c.name)}</span>: ` +
       `${escapeHtml(c.body.slice(0, 60))}${c.body.length > 60 ? "…" : ""}</li>`).join("") +
     `<li><button type="button" class="cmt-export" data-cmt-export>⤓ Export all comments</button></li>`;
 }
+
+// Click a rail comment → scroll to its highlight in the text and flash it.
+function jumpToComment(id) {
+  const mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
+  if (!mark) return;
+  mark.scrollIntoView({ behavior: "smooth", block: "center" });
+  document.querySelectorAll("mark.cmt.flash").forEach(m => m.classList.remove("flash"));
+  mark.classList.add("flash");
+  setTimeout(() => mark.classList.remove("flash"), 1600);
+}
+document.addEventListener("click", e => {
+  const item = e.target.closest("#chapter-comments-list [data-jump]");
+  if (item) jumpToComment(item.dataset.jump);
+});
+document.addEventListener("keydown", e => {
+  if (e.key !== "Enter") return;
+  const item = e.target.closest("#chapter-comments-list [data-jump]");
+  if (item) jumpToComment(item.dataset.jump);
+});
 document.addEventListener("click", e => {
   if (!e.target.closest("[data-cmt-export]")) return;
   const data = JSON.stringify(cmtAll(), null, 2);
