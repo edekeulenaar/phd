@@ -3225,24 +3225,40 @@ function openPdfPanel() {
   panel.hidden = false;
 }
 
-// Render the global References list from the built bibliography.
+// Convert one markdown reference line to HTML: render [text](url) links and
+// _italics_/*italics* without mangling underscores that live inside URLs.
+function refMdToHtml(s) {
+  const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const links = [];
+  // Protect links first so their URLs are untouched by the italic pass.
+  s = s.replace(/\[([^\]]*)\]\((https?:\/\/[^)\s]+)\)/g, (_, t, u) => {
+    links.push({ t, u }); return ` L${links.length - 1} `;
+  });
+  s = esc(s)
+    .replace(/_([^_]+)_/g, "<em>$1</em>")
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  s = s.replace(/ L(\d+) /g, (_, i) => {
+    const { t, u } = links[+i];
+    return `<a href="${esc(u).replace(/"/g, "&quot;")}" target="_blank" rel="noopener">${esc(t)}</a>`;
+  });
+  return s;
+}
+
+// Render the global References list — the complete, alphabetised bibliography
+// extracted from the merged manuscript's "# References" section.
 async function renderReferences() {
   showView("manuscript");
   const host = document.getElementById("manuscript");
-  let bib = {};
+  let entries = [];
   try {
-    const r = await fetch(`data/bibliography.json?t=${CSV_BUST}`, { cache: "no-store" });
-    bib = await r.json();
-  } catch (e) { console.warn("bibliography.json:", e); }
-  const entries = Object.values(bib)
-    .map(v => v.harvard || v.inline || "")
-    .filter(Boolean)
-    .sort((a, b) => a.localeCompare(b));
+    const r = await fetch(`data/references.json?t=${CSV_BUST}`, { cache: "no-store" });
+    entries = (await r.json()).entries || [];
+  } catch (e) { console.warn("references.json:", e); }
   host.className = "prose";
   host.innerHTML =
     `<h1>References</h1>` +
     `<p class="ref-count">${entries.length} works cited across the thesis.</p>` +
-    entries.map(h => `<p class="ref-entry">${h}</p>`).join("");
+    entries.map(s => `<p class="ref-entry">${refMdToHtml(s)}</p>`).join("");
   buildChapterNav(null, null);
   highlightToc();
   window.scrollTo(0, 0);
