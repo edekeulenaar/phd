@@ -3565,9 +3565,19 @@ function updateCommentsRail(slug) {
 
 // Click a rail comment → scroll to its highlight in the text and flash it.
 function jumpToComment(id) {
-  const mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
-  if (!mark) return;
-  mark.scrollIntoView({ behavior: "smooth", block: "center" });
+  let mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
+  if (!mark) {                       // not anchored yet — re-apply and retry
+    applyComments(routeSlug());
+    mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
+  }
+  if (!mark) {                       // passage genuinely can't be located
+    const c = cmtFor(routeSlug()).find(x => x.id === id);
+    if (c) alert(`Comment by ${c.name}:\n\n${c.body}\n\n(The highlighted passage could not be located in the current text — it may have been edited.)`);
+    return;
+  }
+  // Scroll with an explicit top (works regardless of scrollIntoView quirks).
+  const y = mark.getBoundingClientRect().top + window.scrollY - window.innerHeight / 2;
+  window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
   document.querySelectorAll("mark.cmt.flash").forEach(m => m.classList.remove("flash"));
   mark.classList.add("flash");
   setTimeout(() => mark.classList.remove("flash"), 1600);
