@@ -379,6 +379,11 @@ async function renderManuscript(chapterSlug, opts = {}) {
                      (raw.charAt(0).toUpperCase() + raw.slice(1));
       return { author, year };
     }
+    // Resolve a cite key to its entry id on the global References page.
+    function refIdFor(key) {
+      const d = deriveFromKey(key);
+      return globalRefId(d.author.toLowerCase().replace(/[^a-z]/g, ""), d.year, inlineFor(key));
+    }
 
     // ── Build an index of in-manuscript References: each <p> after the
     //    "# References" heading is one entry. We extract a (lastname, year)
@@ -484,12 +489,11 @@ async function renderManuscript(chapterSlug, opts = {}) {
       // group and jump straight to that reference.
       const parts = keys.map(k => {
         const txt = escapeHtml(inlineFor(k));
-        const ref = anchorFor(k);
+        const rid = refIdFor(k);     // matching entry on the global References page
         _filledCites++;
-        if (ref) { _linkedCites++;   // refs live only in the global References page now
-          return `<a class="cite-link" href="#/references" data-key="${escapeHtml(k)}">${txt}</a>`;
-        }
-        return `<span class="cite-link" data-key="${escapeHtml(k)}">${txt}</span>`;
+        if (rid) _linkedCites++;
+        return `<a class="cite-link" href="#/references" data-key="${escapeHtml(k)}"` +
+               `${rid ? ` data-refid="${rid}"` : ""}>${txt}</a>`;
       });
       g.innerHTML = "(" + parts.join("; ") + ")";
     });
@@ -500,14 +504,14 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //     reference; falls back to the bibliography.json Harvard text.
     function citeCardHtml(keys) {
       return keys.map(k => {
-        const ref = anchorFor(k);
+        const rid = refIdFor(k);
         const body = harvardFor(k);
         const link = linkFor(k);
         const tail = link
           ? ` <a class="ext" href="${escapeHtml(link)}" target="_blank" rel="noopener">Open ↗</a>`
           : "";
-        const jump = ref
-          ? ` <a class="ext" href="#/references">See in References ↓</a>` : "";
+        const jump = rid
+          ? ` <a class="ext" href="#/references" data-refid="${rid}">See in References ↓</a>` : "";
         return `<div class="dc-cite" data-key="${escapeHtml(k)}">${body}${tail}${jump}</div>`;
       }).join("");
     }
@@ -3281,25 +3285,97 @@ function refMdToHtml(s) {
   return s;
 }
 
+// The complete bibliography (markdown strings, source order) + a lookup from a
+// citation's "lastname|year" signature to its rendered entry id (gref-N), so an
+// in-text citation can scroll to its exact entry on the References page.
+let GLOBAL_REFS = null;
+let GLOBAL_REF_SIG = null;
+async function loadGlobalRefs() {
+  if (GLOBAL_REFS) return;
+  try {
+    const r = await fetch(`data/references.json?t=${CSV_BUST}`, { cache: "no-store" });
+    GLOBAL_REFS = (await r.json()).entries || [];
+  } catch (e) { console.warn("references.json:", e); GLOBAL_REFS = []; }
+  GLOBAL_REF_SIG = new Map();          // "lastname|year" → [{ id, text }, …]
+  GLOBAL_REFS.forEach((txt, i) => {
+    const last = txt.match(/^([A-Z][^,\.\(]{0,40}?)(?=[,\.\(])/);
+    const lk = ((last?.[1] || "").trim().split(/\s+/)[0] || "")
+                 .toLowerCase().replace(/[^a-z]/g, "");
+    const y = txt.match(/\((\d{4})/);
+    if (lk && y) {
+      const sig = `${lk}|${y[1]}`;
+      (GLOBAL_REF_SIG.get(sig) || GLOBAL_REF_SIG.set(sig, []).get(sig)).push({ id: `gref-${i}`, text: txt });
+    }
+  });
+}
+// Resolve a "lastnamelower" stub + year to a reference entry id. When several
+// works share the first author + year (e.g. solo vs co-authored), disambiguate
+// by word overlap with `hint` (the full inline cite, which names co-authors).
+function globalRefId(lkLower, year, hint) {
+  if (!GLOBAL_REF_SIG) return "";
+  let cands = null;
+  for (let len = lkLower.length; len >= 3 && !cands; len--)
+    cands = GLOBAL_REF_SIG.get(`${lkLower.slice(0, len)}|${year}`);
+  if (!cands) {
+    const stub = lkLower.slice(0, 4);
+    for (const [k, v] of GLOBAL_REF_SIG) if (k.endsWith(`|${year}`) && k.startsWith(stub)) { cands = v; break; }
+  }
+  if (!cands || !cands.length) return "";
+  if (cands.length === 1 || !hint) return cands[0].id;
+  const hw = new Set((hint.toLowerCase().match(/[a-z]{3,}/g) || []));
+  let best = cands[0], bestScore = -1;
+  for (const c of cands) {
+    let s = 0;
+    for (const w of (c.text.toLowerCase().match(/[a-z]{3,}/g) || [])) if (hw.has(w)) s++;
+    if (s > bestScore) { bestScore = s; best = c; }
+  }
+  return best.id;
+}
+
 // Render the global References list — the complete, alphabetised bibliography
 // extracted from the merged manuscript's "# References" section.
+let _pendingRefScroll = null;
 async function renderReferences() {
   showView("manuscript");
   const host = document.getElementById("manuscript");
-  let entries = [];
-  try {
-    const r = await fetch(`data/references.json?t=${CSV_BUST}`, { cache: "no-store" });
-    entries = (await r.json()).entries || [];
-  } catch (e) { console.warn("references.json:", e); }
+  await loadGlobalRefs();
+  const entries = GLOBAL_REFS || [];
   host.className = "prose";
   host.innerHTML =
     `<h1>References</h1>` +
     `<p class="ref-count">${entries.length} works cited across the thesis.</p>` +
-    entries.map(s => `<p class="ref-entry">${refMdToHtml(s)}</p>`).join("");
+    entries.map((s, i) => `<p class="ref-entry" id="gref-${i}">${refMdToHtml(s)}</p>`).join("");
   buildChapterNav(null, null);
   highlightToc();
-  window.scrollTo(0, 0);
+  if (_pendingRefScroll) {
+    const id = _pendingRefScroll; _pendingRefScroll = null;
+    setTimeout(() => scrollToRef(id), 100);
+  } else {
+    window.scrollTo(0, 0);
+  }
 }
+
+// Scroll the References page to one entry and flash it.
+function scrollToRef(id) {
+  const el = document.getElementById(id);
+  if (!el) { window.scrollTo(0, 0); return; }
+  const y = el.getBoundingClientRect().top + window.scrollY - 80;
+  window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+  document.querySelectorAll(".ref-entry.flash").forEach(n => n.classList.remove("flash"));
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 1700);
+}
+// Click any in-text citation (or its hover-card "See in References") → go to the
+// References page and scroll to that exact entry.
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-refid]");
+  if (!a) return;
+  e.preventDefault();
+  const id = a.dataset.refid;
+  if (routeSlug() === "references") { scrollToRef(id); return; }
+  _pendingRefScroll = id;
+  location.hash = "#/references";
+});
 
 let _chapter1Token = 0;
 async function renderChapter(slug) {
@@ -3350,6 +3426,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   buildGlobalToc();
   setupFigureZoom();        // click a static figure to enlarge it
   setupCommenting();        // highlight prose → add a reader comment
+  await loadGlobalRefs();   // so in-text citations can resolve to References entries
   window.addEventListener("hashchange", route);
   if (SB) await cmtHydrate();   // pull the shared comment set before first paint
   await route();
