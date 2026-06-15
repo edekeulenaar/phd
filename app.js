@@ -3250,6 +3250,11 @@ async function renderChapter(slug) {
     try { await mountChapter1Analysis(); } catch (e) { console.error(e); }
     if (token !== _chapter1Token) return;   // superseded by a newer navigation
   }
+  if (_pendingJump) {                       // arrived here from a cross-chapter comment click
+    const id = _pendingJump; _pendingJump = null;
+    setTimeout(() => jumpToComment(id, slug), 120);
+    return;                                 // keep position; jump scrolls us to the passage
+  }
   window.scrollTo(0, 0);
 }
 
@@ -3545,37 +3550,58 @@ document.addEventListener("mousedown", e => {
   if (!e.target.closest(".cmt-pop, .cmt-plus, mark.cmt")) closePop();
 });
 
-// Right-rail "Comments" section: count for the open chapter + export all.
+// Right-rail "Comments" section: every comment across the whole thesis,
+// this chapter first, then the rest grouped by chapter. All are clickable.
+function cmtRailRow(c, slug, showChapter) {
+  const who = `<span class="cmt-rail-who">${escapeHtml(c.name || "Anon")}</span>`;
+  const ch = showChapter
+    ? `<span class="cmt-rail-ch">${escapeHtml(tocEntry(slug)?.title || slug)}</span>`
+    : "";
+  return `<li class="cmt-rail-item" data-jump="${c.id}" data-chapter="${slug}" ` +
+    `tabindex="0" role="button">${ch}${who}: ` +
+    `${escapeHtml((c.body || "").slice(0, 60))}${(c.body || "").length > 60 ? "…" : ""}</li>`;
+}
 function updateCommentsRail(slug) {
   const nav = document.getElementById("chapter-comments");
   const list = document.getElementById("chapter-comments-list");
   if (!nav || !list) return;
-  const mine = cmtFor(slug);
-  const total = Object.values(cmtAll()).reduce((a, v) => a + v.length, 0);
-  if (!mine.length && !total) { nav.hidden = true; return; }
+  const all = cmtAll();
+  const mine = all[slug] || [];
+  const total = Object.values(all).reduce((a, v) => a + v.length, 0);
+  if (!total) { nav.hidden = true; return; }
   nav.hidden = false;
-  list.innerHTML =
-    `<li class="cmt-rail-count">${mine.length} on this chapter · ${total} total</li>` +
-    mine.slice(0, 12).map(c =>
-      `<li class="cmt-rail-item" data-jump="${c.id}" tabindex="0" role="button">` +
-      `<span class="cmt-rail-who">${escapeHtml(c.name)}</span>: ` +
-      `${escapeHtml(c.body.slice(0, 60))}${c.body.length > 60 ? "…" : ""}</li>`).join("") +
-    `<li><button type="button" class="cmt-export" data-cmt-export>⤓ Export all comments</button></li>`;
+  let html = `<li class="cmt-rail-count">${mine.length} on this chapter · ${total} total</li>`;
+  html += mine.map(c => cmtRailRow(c, slug, false)).join("");
+  const others = Object.keys(all).filter(s => s !== slug && all[s].length);
+  if (others.length) {
+    html += `<li class="cmt-rail-sub">Elsewhere in the thesis</li>`;
+    others.forEach(s => { html += all[s].map(c => cmtRailRow(c, s, true)).join(""); });
+  }
+  html += `<li><button type="button" class="cmt-export" data-cmt-export>⤓ Export all comments</button></li>`;
+  list.innerHTML = html;
 }
 
-// Click a rail comment → scroll to its highlight in the text and flash it.
-function jumpToComment(id) {
+// After a chapter renders we may owe a deferred jump (cross-chapter click).
+let _pendingJump = null;
+
+// Click a rail comment → scroll to its highlight and flash it. If the comment
+// lives on another chapter, navigate there first and finish after it renders.
+function jumpToComment(id, chapter) {
+  if (chapter && chapter !== routeSlug()) {
+    _pendingJump = id;
+    location.hash = `#/${chapter}`;     // route() → renderChapter → finishes the jump
+    return;
+  }
   let mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
-  if (!mark) {                       // not anchored yet — re-apply and retry
+  if (!mark) {                          // not anchored yet — re-apply and retry
     applyComments(routeSlug());
     mark = document.querySelector(`#manuscript mark.cmt[data-cmt-id="${id}"]`);
   }
-  if (!mark) {                       // passage genuinely can't be located
-    const c = cmtFor(routeSlug()).find(x => x.id === id);
+  if (!mark) {                          // passage genuinely can't be located
+    const c = (cmtAll()[chapter || routeSlug()] || []).find(x => x.id === id);
     if (c) alert(`Comment by ${c.name}:\n\n${c.body}\n\n(The highlighted passage could not be located in the current text — it may have been edited.)`);
     return;
   }
-  // Scroll with an explicit top (works regardless of scrollIntoView quirks).
   const y = mark.getBoundingClientRect().top + window.scrollY - window.innerHeight / 2;
   window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
   document.querySelectorAll("mark.cmt.flash").forEach(m => m.classList.remove("flash"));
@@ -3584,12 +3610,12 @@ function jumpToComment(id) {
 }
 document.addEventListener("click", e => {
   const item = e.target.closest("#chapter-comments-list [data-jump]");
-  if (item) jumpToComment(item.dataset.jump);
+  if (item) jumpToComment(item.dataset.jump, item.dataset.chapter);
 });
 document.addEventListener("keydown", e => {
   if (e.key !== "Enter") return;
   const item = e.target.closest("#chapter-comments-list [data-jump]");
-  if (item) jumpToComment(item.dataset.jump);
+  if (item) jumpToComment(item.dataset.jump, item.dataset.chapter);
 });
 document.addEventListener("click", e => {
   if (!e.target.closest("[data-cmt-export]")) return;

@@ -388,6 +388,13 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   padding: 0.2em 0; border-top: 1px solid var(--rule);
 }
 #chapter-comments-list .cmt-rail-who { font-weight: 700; color: var(--ink); }
+#chapter-comments-list .cmt-rail-sub {
+  font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); margin: 0.7rem 0 0.1rem;
+}
+#chapter-comments-list .cmt-rail-ch {
+  display: block; font-size: 10px; color: var(--accent); font-style: italic;
+}
 .cmt-export {
   margin-top: 0.6rem; font-family: var(--sans); font-size: 11px;
   padding: 0.35em 0.6em; background: var(--paper);
