@@ -674,6 +674,9 @@ function escapeHtml(s) {
 // Per-session cache buster: appended to every CSV fetch so the browser can't
 // hold onto a stale copy after `build_site_data.py` regenerates `data/*.csv`.
 const CSV_BUST = String(Date.now());
+// Bump when the downloadable thesis.pdf is replaced, so readers never get a
+// stale cached copy from the browser / GitHub CDN.
+const PDF_VER = "20260615b";
 
 async function loadCSV(path) {
   const sep = path.includes("?") ? "&" : "?";
@@ -3169,7 +3172,7 @@ async function renderLanding() {
   el.innerHTML = `
     <header class="cover">
       ${TOC?.fullPdfUrl
-        ? `<a class="pdf-btn cover-pdf-btn" href="${escapeHtml(TOC.fullPdfUrl)}" target="_blank" rel="noopener" download>⬇ Download PDF</a>`
+        ? `<a class="pdf-btn cover-pdf-btn" href="${escapeHtml(TOC.fullPdfUrl)}?v=${PDF_VER}" target="_blank" rel="noopener" download>⬇ Download PDF</a>`
         : `<button type="button" class="pdf-btn cover-pdf-btn" data-pdf-open>⬇ Download PDF</button>`}
       <h1 class="cover-title">
         <span class="ct-main">${escapeHtml(tMain)}</span>${tDesc ? `<span class="ct-desc">${escapeHtml(tDesc)}</span>` : ""}
