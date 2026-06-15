@@ -3155,6 +3155,11 @@ async function renderLanding() {
     } catch { return ""; }
   }
   const [abstract, ack] = await Promise.all([md("abstract"), md("acknowledgments")]);
+  // Split the title at its colon: a serif main line + a Test-National descriptor.
+  const tParts = (TOC?.title || "").split(/:\s*/);
+  const tMain = tParts[0] || "";
+  let tDesc = tParts.slice(1).join(": ");
+  if (tDesc) tDesc = tDesc.charAt(0).toUpperCase() + tDesc.slice(1);
   const toc = (TOC?.entries || []).map(e => {
     if (e.slug === "references") return "";
     const cls = e.kind === "part" ? "land-part"
@@ -3166,7 +3171,9 @@ async function renderLanding() {
       ${TOC?.fullPdfUrl
         ? `<a class="pdf-btn cover-pdf-btn" href="${escapeHtml(TOC.fullPdfUrl)}" target="_blank" rel="noopener" download>⬇ Download PDF</a>`
         : `<button type="button" class="pdf-btn cover-pdf-btn" data-pdf-open>⬇ Download PDF</button>`}
-      <h1 class="cover-title">${escapeHtml(TOC?.title || "")}</h1>
+      <h1 class="cover-title">
+        <span class="ct-main">${escapeHtml(tMain)}</span>${tDesc ? `<span class="ct-desc">${escapeHtml(tDesc)}</span>` : ""}
+      </h1>
       <p class="cover-sub">${escapeHtml(TOC?.subtitle || "")}</p>
       <p class="cover-author">${escapeHtml(TOC?.author || "")}</p>
     </header>

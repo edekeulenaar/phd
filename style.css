@@ -199,14 +199,23 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   margin: 2rem 0 2.6rem; padding-bottom: 0;   /* no rule under the author */
 }
 #landing .cover-title {
-  font-family: var(--sans); font-weight: 700;
-  font-size: 2.6rem; line-height: 1.12; letter-spacing: -0.01em;
   margin: 0 0 0.5rem; color: var(--ink);
 }
+#landing .cover-title .ct-main {
+  display: block;
+  font-family: var(--serif); font-weight: 700;
+  font-size: 2.7rem; line-height: 1.1; letter-spacing: -0.01em;
+}
+#landing .cover-title .ct-desc {
+  display: block;
+  font-family: "Test National Book", var(--sans); font-weight: 400;
+  font-size: 1.65rem; line-height: 1.18; letter-spacing: 0;
+  color: var(--ink-soft); margin-top: 0.3rem;
+}
 #landing .cover-sub {
-  font-family: var(--sans); font-weight: 300;
-  font-size: 1.4rem; line-height: 1.25; color: var(--ink-soft);
-  margin: 0 0 1.4rem;
+  font-family: var(--sans); font-weight: 400;
+  font-size: 1rem; line-height: 1.25; color: var(--muted);
+  margin: 0.5rem 0 1.4rem;
 }
 #landing .cover-author {
   font-family: var(--sans); font-size: 0.95rem;
