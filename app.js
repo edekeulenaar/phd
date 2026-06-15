@@ -239,11 +239,13 @@ async function renderManuscript(chapterSlug, opts = {}) {
       if (tbl.id) { wrap.id = tbl.id; tbl.removeAttribute("id"); }
       else if (cap && cap.id) { wrap.id = cap.id; cap.removeAttribute("id"); }
 
-      // Single-cell tables are callout/prompt boxes — no row count.
+      // Single-cell tables are callout boxes — in Part framing pages they hold
+      // a bibliographic citation; in chapters they hold a prompt. No row count.
       const oneCell = tbl.querySelectorAll("th, td").length === 1;
+      const isPart = tocEntry(chapterSlug)?.kind === "part";
       const sum = document.createElement("summary");
       const lbl = cap ? cap.textContent.trim().split(".")[0]   // "Table 5"
-                      : (oneCell ? "Prompt" : "Table");
+                      : (oneCell ? (isPart ? "Reference" : "Prompt") : "Table");
       const after = cap ? cap.textContent.trim().slice(lbl.length + 1).trim()
                         : (oneCell ? "" : `${rows} rows`);
       sum.innerHTML = `<span class="lbl">${lbl}</span>` +
@@ -3478,6 +3480,13 @@ function locateQuote(text, c) {
 
 // Re-attach every saved comment for the chapter as a <mark>.
 function applyComments(slug) {
+  // Clear any existing highlights first so deleted comments don't leave their
+  // <mark> behind, and re-wrap from scratch against the current comment set.
+  const host = document.getElementById("manuscript");
+  if (host) {
+    host.querySelectorAll("mark.cmt").forEach(m => m.replaceWith(document.createTextNode(m.textContent)));
+    host.normalize();                   // merge split text nodes → contiguous offsets
+  }
   const list = cmtFor(slug);
   if (!list.length) { updateCommentsRail(slug); return; }
   const { text, map } = manuscriptFlat();
@@ -3649,7 +3658,7 @@ function updateCommentsRail(slug) {
   if (!nav || !list) return;
   const all = cmtAll();
   const total = Object.values(all).reduce((a, v) => a + v.length, 0);
-  if (!total) { nav.hidden = true; return; }
+  if (!total) { list.innerHTML = ""; nav.hidden = true; return; }
   nav.hidden = false;
   const slugs = [slug, ...Object.keys(all).filter(s => s !== slug)].filter(s => all[s] && all[s].length);
   let html = `<li class="cmt-rail-count">${(all[slug] || []).length} on this chapter · ${total} total</li>`;
