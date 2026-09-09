@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 14 — Annex · Dialogue and restraint</title>
+<style>
+@font-face { font-family:"ACaslon Pro"; src:url("../../fonts/ACaslonPro-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
+@font-face { font-family:"ACaslon Pro"; src:url("../../fonts/ACaslonPro-Italic.otf") format("opentype"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"ACaslon Pro"; src:url("../../fonts/ACaslonPro-Semibold.otf") format("opentype"); font-weight:600; font-display:swap; }
+@font-face { font-family:"Test National"; src:url("../../fonts/TestNational-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
+@font-face { font-family:"Test National"; src:url("../../fonts/TestNational-Semibold.otf") format("opentype"); font-weight:600; font-display:swap; }
+
+:root{
+  --ink:#1c1a18; --ink-soft:#3c3934; --paper:#faf7f2; --paper-alt:#f3efe8;
+  --muted:#6c655c; --border:#ddd6c9; --rule:#c4bcad; --accent:#c0431f; --accent-soft:#f5dccf;
+  --serif:"ACaslon Pro","Adobe Caslon Pro","EB Garamond",Garamond,Georgia,serif;
+  --sans:"Test National","Helvetica Neue",Inter,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.55}
+.wrap{max-width:60rem;margin:0 auto;padding:3rem 1.4rem 5rem}
+
+.crumb{font-family:var(--sans);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
+.crumb a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)}
+.crumb a:hover{color:var(--accent);border-color:var(--accent)}
+
+h1{font-family:var(--sans);font-weight:600;font-size:1.85rem;line-height:1.2;margin:0 0 .3rem}
+.sub{font-style:italic;color:var(--ink-soft);margin:0 0 1.5rem;font-size:1.1rem}
+.lede{max-width:38rem;color:var(--ink-soft);margin:0 0 2rem}
+.lede p{margin:0 0 .8rem}
+
+.tools{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;
+  padding:.75rem 0 .9rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  margin-bottom:2rem;position:sticky;top:0;background:var(--paper);z-index:5}
+#q{font-family:var(--sans);font-size:.9rem;padding:.45rem .7rem;flex:1 1 16rem;min-width:12rem;
+  border:1px solid var(--border);background:#fff;color:var(--ink);border-radius:2px}
+#q:focus{outline:none;border-color:var(--accent)}
+.count{font-family:var(--sans);font-size:.8rem;color:var(--muted);white-space:nowrap}
+
+h2{font-family:var(--sans);font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:2.6rem 0 .2rem;padding-bottom:.4rem;border-bottom:1px solid var(--rule)}
+h2:first-of-type{margin-top:0}
+.note{font-size:.95rem;color:var(--muted);margin:.7rem 0 1rem;max-width:38rem;font-style:italic}
+
+table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.88rem}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:hover{background:var(--paper-alt)}
+td{padding:.6rem .5rem;vertical-align:baseline}
+td:first-child{padding-left:0}
+td.name a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+td.name a:hover{color:var(--accent);border-color:var(--accent)}
+td.desc{color:var(--muted);width:38%}
+td.meta{color:var(--muted);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;width:6.5rem}
+td.dl{text-align:right;width:5.5rem;padding-right:0}
+td.dl a{font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);text-decoration:none;
+  border:1px solid var(--accent-soft);border-radius:2px;padding:.22rem .5rem;background:var(--accent-soft)}
+td.dl a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ext{font-family:var(--sans);font-size:.68rem;letter-spacing:.06em;color:var(--muted);
+  border:1px solid var(--border);border-radius:2px;padding:.05rem .3rem;margin-right:.45rem;vertical-align:.05em}
+.empty{font-family:var(--sans);font-size:.9rem;color:var(--muted);padding:1.5rem 0}
+section[hidden]{display:none}
+footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-family:var(--sans);font-size:.8rem;color:var(--muted)}
+footer a{color:var(--muted)}
+@media (max-width:640px){
+  td.desc{display:none}
+  .wrap{padding:2rem 1rem 4rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="crumb"><a href="../../">Dialogue and restraint</a> &nbsp;·&nbsp; Annex</div>
+
+<h1>Chapter 14. From Twitter to X</h1>
+<p class="sub">Annex: policy corpus, search rankings and moderation outcomes</p>
+
+<div class="lede">
+  <p>Datasets and archived policy documents underlying Chapter 14. Every file is
+  downloadable on its own. Post-level datasets are anonymised: account names are
+  replaced with stable hashes, so posts can still be traced across files without
+  identifying their authors.</p>
+</div>
+
+<div class="tools">
+  <input id="q" type="search" placeholder="Filter by name, query term or description…" aria-label="Filter files">
+  <span class="count" id="count"></span>
+</div>
+
+<section id="s-policy-docs">
+<h2>Archived policy documents</h2>
+<p class="note">Each PDF collects every archived version of one policy across the study period.</p>
+<table><tbody>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-twitter-x-rules.pdf">The Twitter/X Rules</a></td><td class="desc">Umbrella rules document</td><td class="meta">216 KB</td><td class="dl"><a href="policy-twitter-x-rules.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-abuse-and-harassment.pdf">Abuse and harassment</a></td><td class="desc">Abusive behaviour policy</td><td class="meta">284 KB</td><td class="dl"><a href="policy-abuse-and-harassment.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-child-safety.pdf">Child safety</a></td><td class="desc">Child sexual exploitation policy</td><td class="meta">188 KB</td><td class="dl"><a href="policy-child-safety.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-civic-integrity.pdf">Civic integrity</a></td><td class="desc">Elections and civic processes</td><td class="meta">188 KB</td><td class="dl"><a href="policy-civic-integrity.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-enforcement-options.pdf">Enforcement options</a></td><td class="desc">Range of moderation techniques</td><td class="meta">288 KB</td><td class="dl"><a href="policy-enforcement-options.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-hateful-conduct.pdf">Hateful conduct</a></td><td class="desc">Hate speech policy</td><td class="meta">196 KB</td><td class="dl"><a href="policy-hateful-conduct.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-misleading-identities.pdf">Misleading identities</a></td><td class="desc">Impersonation and misleading accounts</td><td class="meta">176 KB</td><td class="dl"><a href="policy-misleading-identities.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-platform-manipulation.pdf">Platform manipulation</a></td><td class="desc">Spam and coordinated inauthentic behaviour</td><td class="meta">224 KB</td><td class="dl"><a href="policy-platform-manipulation.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-sensitive-media-adult-content.pdf">Sensitive media and adult content</a></td><td class="desc">Graphic and adult media policy</td><td class="meta">344 KB</td><td class="dl"><a href="policy-sensitive-media-adult-content.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-synthetic-media.pdf">Synthetic and manipulated media</a></td><td class="desc">Deepfakes and altered media</td><td class="meta">168 KB</td><td class="dl"><a href="policy-synthetic-media.pdf" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">PDF</span><a href="policy-violent-entities.pdf">Violent and hateful entities</a></td><td class="desc">Terrorism and violent extremism</td><td class="meta">140 KB</td><td class="dl"><a href="policy-violent-entities.pdf" download>Get</a></td></tr>
+</tbody></table>
+</section>
+
+<section id="s-policy-corpus">
+<h2>Policy corpus</h2>
+<p class="note">The seed list, the archived captures built from it, and the word-level differences between consecutive versions.</p>
+<table><tbody>
+<tr><td class="name"><span class="ext">CSV</span><a href="policy-seed-list-of-urls.csv">Seed list of policy URLs</a></td><td class="desc">Starting points for the crawl</td><td class="meta">84 rows</td><td class="dl"><a href="policy-seed-list-of-urls.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="policy-files-without-terms-of-service.csv">Policy files, Terms of Service excluded</a></td><td class="desc">Capture-level metadata</td><td class="meta">4,751 rows</td><td class="dl"><a href="policy-files-without-terms-of-service.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="policy-files-without-terms-of-service-full-text.csv">Policy files with full policy text</a></td><td class="desc">Same captures with body text · 70 MB</td><td class="meta">1,364,551 rows</td><td class="dl"><a href="policy-files-without-terms-of-service-full-text.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="policy-files-with-text-differences.csv">Policy files with text differences</a></td><td class="desc">Added and removed words per version</td><td class="meta">5,475 rows</td><td class="dl"><a href="policy-files-with-text-differences.csv" download>Get</a></td></tr>
+</tbody></table>
+</section>
+
+<section id="s-outcomes">
+<h2>Moderation outcomes</h2>
+<p class="note">Community Notes and the fate of high-scoring hateful posts. Both anonymised.</p>
+<table><tbody>
+<tr><td class="name"><span class="ext">CSV</span><a href="community-notes-anonymised.csv">Community Notes dataset</a></td><td class="desc">Notes, ratings, statuses and topics</td><td class="meta">8,380 rows</td><td class="dl"><a href="community-notes-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="online-vs-removed-posts-hate-score-080-anonymised.csv">Online versus removed posts, hate score 0.80 and above</a></td><td class="desc">Status checked November 2024 and February 2025</td><td class="meta">4,569 rows</td><td class="dl"><a href="online-vs-removed-posts-hate-score-080-anonymised.csv" download>Get</a></td></tr>
+</tbody></table>
+</section>
+
+<section id="s-rankings">
+<h2>Search result rankings by query</h2>
+<p class="note">Dutch-language immigration queries, one file per term. All anonymised.</p>
+<table><tbody>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-allochtoon-anonymised.csv">allochtoon</a></td><td class="desc">Person of foreign origin</td><td class="meta">10,639 rows</td><td class="dl"><a href="search-rankings-allochtoon-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-asielzoeker-anonymised.csv">asielzoeker</a></td><td class="desc">Asylum seeker</td><td class="meta">15,076 rows</td><td class="dl"><a href="search-rankings-asielzoeker-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-azielzoeker-anonymised.csv">azielzoeker</a></td><td class="desc">Asylum seeker, common misspelling</td><td class="meta">253 rows</td><td class="dl"><a href="search-rankings-azielzoeker-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-autochton-anonymised.csv">autochton</a></td><td class="desc">Native-born, singular variant</td><td class="meta">215 rows</td><td class="dl"><a href="search-rankings-autochton-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-autochtonen-anonymised.csv">autochtonen</a></td><td class="desc">Native-born, plural</td><td class="meta">7,251 rows</td><td class="dl"><a href="search-rankings-autochtonen-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-buitenlander-anonymised.csv">buitenlander</a></td><td class="desc">Foreigner</td><td class="meta">6,714 rows</td><td class="dl"><a href="search-rankings-buitenlander-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-gastarbeiders-anonymised.csv">gastarbeiders</a></td><td class="desc">Guest workers</td><td class="meta">3,101 rows</td><td class="dl"><a href="search-rankings-gastarbeiders-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-gelukzoekers-anonymised.csv">gelukzoekers</a></td><td class="desc">Fortune seekers, pejorative</td><td class="meta">15,214 rows</td><td class="dl"><a href="search-rankings-gelukzoekers-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-immigrant-anonymised.csv">immigrant</a></td><td class="desc">Immigrant, singular</td><td class="meta">9,514 rows</td><td class="dl"><a href="search-rankings-immigrant-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-immigranten-anonymised.csv">immigranten</a></td><td class="desc">Immigrants, plural</td><td class="meta">18,948 rows</td><td class="dl"><a href="search-rankings-immigranten-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-migrant-anonymised.csv">migrant</a></td><td class="desc">Migrant, singular</td><td class="meta">12,238 rows</td><td class="dl"><a href="search-rankings-migrant-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-migranten-anonymised.csv">migranten</a></td><td class="desc">Migrants, plural</td><td class="meta">26,027 rows</td><td class="dl"><a href="search-rankings-migranten-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-migrantcrisis-anonymised.csv">migrantcrisis</a></td><td class="desc">Migrant crisis</td><td class="meta">2,605 rows</td><td class="dl"><a href="search-rankings-migrantcrisis-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-migratie-anonymised.csv">migratie</a></td><td class="desc">Migration</td><td class="meta">30,903 rows</td><td class="dl"><a href="search-rankings-migratie-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-omvolking-anonymised.csv">omvolking</a></td><td class="desc">Great Replacement, far-right term</td><td class="meta">26,664 rows</td><td class="dl"><a href="search-rankings-omvolking-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-ter-apel-anonymised.csv">ter apel</a></td><td class="desc">Dutch asylum reception centre</td><td class="meta">16,003 rows</td><td class="dl"><a href="search-rankings-ter-apel-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-vluchteling-anonymised.csv">vluchteling</a></td><td class="desc">Refugee, singular</td><td class="meta">17,788 rows</td><td class="dl"><a href="search-rankings-vluchteling-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-vluchtelingen-anonymised.csv">vluchtelingen</a></td><td class="desc">Refugees, plural</td><td class="meta">34,503 rows</td><td class="dl"><a href="search-rankings-vluchtelingen-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-vreemdeling-anonymised.csv">vreemdeling</a></td><td class="desc">Alien or stranger, singular</td><td class="meta">176 rows</td><td class="dl"><a href="search-rankings-vreemdeling-anonymised.csv" download>Get</a></td></tr>
+<tr><td class="name"><span class="ext">CSV</span><a href="search-rankings-vreemdelingen-anonymised.csv">vreemdelingen</a></td><td class="desc">Aliens or strangers, plural</td><td class="meta">8,481 rows</td><td class="dl"><a href="search-rankings-vreemdelingen-anonymised.csv" download>Get</a></td></tr>
+</tbody></table>
+</section>
+
+<p class="empty" id="empty" hidden>No files match that filter.</p>
+
+<footer>
+  Chapter 14 of <a href="../../">Dialogue and restraint</a>.
+  Files also browsable on <a href="https://github.com/edekeulenaar/phd/tree/main/annexes/chapter-14">GitHub</a>.
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('tbody tr'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section'));
+  var count = document.getElementById('count');
+  var empty = document.getElementById('empty');
+  var total = rows.length;
+
+  rows.forEach(function (r) { r.dataset.hay = r.textContent.toLowerCase(); });
+
+  function apply() {
+    var term = q.value.trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function (r) {
+      var hit = !term || r.dataset.hay.indexOf(term) !== -1;
+      r.hidden = !hit;
+      if (hit) shown++;
+    });
+    sections.forEach(function (s) {
+      s.hidden = !s.querySelector('tbody tr:not([hidden])');
+    });
+    empty.hidden = shown !== 0;
+    count.textContent = term ? shown + ' of ' + total + ' files' : total + ' files';
+  }
+
+  q.addEventListener('input', apply);
+  apply();
+})();
+</script>
+</body>
+</html>
