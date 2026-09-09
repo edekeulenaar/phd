@@ -124,8 +124,7 @@ To classify posts into topics, it was necessary to first draw from a representat
 
 Once done, I manually verified each result, grouped similar categories and corrected fuzzy annotations, as this procedure is faster than manually coding posts from scratch. Posts that did not refer or revolve around Dutch issues (e.g., posts about Belgium) were removed. The final number of community notes was 6,430, applied to a total of 4,718 posts. Given their granularity, each topic was given a general category (see Table 1).
 
-![](images/Untitled%20document%20-%20Google%20Docs%20copy.png)
-![](images/Untitled%20document.png)
+![](images/table-topics-by-category.png)
 **Table 1**. Community note post categories and sub-categories. ^table 1
 
 From there, I proceeded to classify post authors (users). Here, too, I used gpt-4o-mini iteratively to assign a category to each user based on their username, description and an example post (namely, the one with most engagement). The prompt used also contained examples for every category. Gpt-4o-mini was run twice; the first time without user descriptions, and the second with. Results were verified manually.
