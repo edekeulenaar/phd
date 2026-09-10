@@ -39,17 +39,17 @@ To examine platform ruptures, we traced the history of one specific article on R
 Through the APIs of Wikipedia and Metapedia, we were able to extract all text from the relevant pages, as well as their revision histories and size. Combined with a manual analysis of the page’s history on other wikis, edit history, size and textual content, we traced page edits and their sizes. We then discovered that Wikipedia was the first to publish a page on the subject, and that, since then, only Metapedia and Infogalactic forked from it at various points until Metapedia’s version was forked to Rightpedia.
 
 ![](images/history-alt-pedias.mp4)
-**Figure 1**. *The history of each wiki and their forks. Animation by Felipe Escobar. The animated version is visible in https://edekeulenaar.github.io/phd/#/chapter-11.* ^figure-1
+**Figure 1**. *The history of each wiki and their forks. Animation by Felipe Escobar. The animated version is visible in https://edekeulenaar.github.io/phd/#/chapter-11.* Full image [here](https://edekeulenaar.github.io/phd/images/history-alt-pedias.mp4). ^figure-1
 
 To best determine the circumstances in which pages were forked from one wiki to another, we then focused on a closer reading of that page on every wiki. We manually tracked important moments in the course of the article’s edit history, noting edit periods when significant amounts of text were deleted or added and taking note of the content of the interactions between editors. Significant editing moments were determined by a combination of edit size and important changes indicated by the history of a page’s table of content.
 
 ![](images/big-table-of-what-and-how-we-did.png)
-**Figure 2**. *Diagram of our first methodological step. Illustration by Tommaso Elli.* ^figure-2
+**Figure 2**. *Diagram of our first methodological step. Illustration by Tommaso Elli.* Full image [here](https://edekeulenaar.github.io/phd/images/big-table-of-what-and-how-we-did.png). ^figure-2
 
 With this information, we manually determined specific ideological changes in edited sentences. We sought to better contextualise these changes by making a comparative text analysis of Wikipedia and Metapedia. Our scatter plot visualisation gave us an idea of how the language used to write each wiki’s page diverged ideologically.
 
 ![](images/big-table-of-what-and-how-we-did2.png)
-**Figure 3**. *Diagram illustrating how we created our scatterplot to close-read changes between Metapedia and Wikipedia’s pages on race and intelligence. Illustration by Tommaso Elli.* 
+**Figure 3**. *Diagram illustrating how we created our scatterplot to close-read changes between Metapedia and Wikipedia’s pages on race and intelligence. Illustration by Tommaso Elli.* Full image [here](https://edekeulenaar.github.io/phd/images/big-table-of-what-and-how-we-did2.png).
 
 Our second step consisted in examining how each altpedia distinguished itself in epistemic terms. To do so, we focussed our analysis on altpedias’ “meta” pages, where they specify their mission statements, their reference page (‘About’), and their content guideline pages. We identified these internal pages by their title, which would usually juxtapose the name of the wiki and the subject of each of these pages (for example, ‘Wikipedia:Manual of Style’). Seeing as these pages were too numerous to be studied through a qualitative close reading, we manually extracted key terms that refer to what content each wiki wants and does not want. Such terms would then range from concepts (‘veracity’, ‘neutrality’, ‘clarity’) to specific forms (‘cited references’, ‘clear sentences’) and conducts (‘good faith editing’, ‘being nice’). To compare these terms across wikis, we made networks formed by connections between wikis having such concepts in common. 
 
@@ -62,27 +62,27 @@ In many respects, Wikipedia responds to the new epistemological parameters Lyota
 Despite its robust affordances, the very existence of altpedias reveal that Wikipedia does not enjoy universal consensus over its epistemological legitimacy and moral authority. The presence of multiple wikis branching off of Wikipedia, each with their different idea as to what true and just knowledge is, reflects how different conceptions of knowledge are operationalised into different spaces. Content guidelines — which for example ban pseudoscientific content, misinformation, conspiracies and caution with fringe theories [@wikipediaWikipediaFringeTheories2018] — as well as its rules of conduct provide the basis for contributions to be rejected and account to be banned. Once banned, contributors fork onto alternative wikis. Edit wars may however continue, leading to further forking (even in altpedias) (**Figure 4**). 
 
 ![](images/all-pedias.png)
-**Figure 4**. *A history of forks from the page on Race and Intelligence from Wikipedia to Metapedia, Rightpedia, Infogalactic and Rational Wiki. Illustration by Tommaso Elli.* ^figure-4
+**Figure 4**. *A history of forks from the page on Race and Intelligence from Wikipedia to Metapedia, Rightpedia, Infogalactic and Rational Wiki. Illustration by Tommaso Elli.* Full image [here](https://edekeulenaar.github.io/phd/images/all-pedias.png). ^figure-4
 
 We call this process a "platform rupture". To illustrate it with a specific example, we briefly describe the case of a banned Wikipedia editor migrating to Infogalactic in 2016 [@wikipediaUserTalkSombe192016]. This particular editor was criticised for publishing perceived findings about the correlation between race and intelligence, which were promptly deleted by editors who qualified their contributions as both objectively questionable and morally unsound, or "pseudoscientific speculations" that subscribed to an "Aryan agenda" [@wikipediaTalkRaceIntelligence2018]. After proposing that his or her contributions be labelled as "alternative opinions" rather than false claims, the editor in question is turned down and goes on to recast his or her preferred version of the Wikipedia article into Infogalactic, where they and other editors rewrite the page overtime. 
 
 ![](images/infogalactic-wiki.mp4)
-**Figure 5**. *[History of the Race and Intelligence page from Wikipedia to Infogalactic](https://drive.google.com/file/d/1G_J3-xO93zcX-Ka9N8Wae570i_UYXWOX/view?usp=sharing). Animation by Felipe Escobar. The animated version is visible in https://edekeulenaar.github.io/phd/#/chapter-11.* ^figure-5
+**Figure 5**. *[History of the Race and Intelligence page from Wikipedia to Infogalactic](https://drive.google.com/file/d/1G_J3-xO93zcX-Ka9N8Wae570i_UYXWOX/view?usp=sharing). Animation by Felipe Escobar. The animated version is visible in https://edekeulenaar.github.io/phd/#/chapter-11.* Full image [here](https://edekeulenaar.github.io/phd/images/infogalactic-wiki.mp4). ^figure-5
 
 As the word embedding model in **Figure 6** illustrates, once the article on “Race and Intelligence” forked from Wikipedia, it then shifts from being a detached historical debates around race, wealth and IQ (related for example to Nazism and the 19th century) into a list of scientific evidence. 
 
 ![](images/polipo.gif)
-**Figure 6**. *Semantic changes between Wikipedia and Metapedia’s pages on race and intelligence. Scatterplot by Felipe Escobar. The animated version is visible in https://edekeulenaar.github.io/phd/#/chapter-11.* ^figure-6
+**Figure 6**. *Semantic changes between Wikipedia and Metapedia’s pages on race and intelligence. Scatterplot by Felipe Escobar. The animated version is visible in https://edekeulenaar.github.io/phd/#/chapter-11.* Full image [here](https://edekeulenaar.github.io/phd/images/polipo.gif). ^figure-6
 
 We come to see that altpedias were frequently engaged in agonistic dialogue with one another and furthermore that they could even be understood as the product of schisms, which we deem specific *epistemic ruptures* that emerge from unresolved ideological disputes, or edit wars. The interactive link below shows how such schisms reveal the motives of contention, and thus of rupture, between each of the altpedias. Such ruptures then mark the boundaries of an altpedia — boundary disputes by which they define themselves and question one another’s veracity. The motive of unresolved conflicts that separate one from another becomes each of their raison d’être. 
 
 ![](images/Pasted%20image%2020260613191353.png)
-**Figure 7**. [Beeswarm plot of adjectives each wiki attributes to one another](http://145.100.59.185/polimatter/faculties.htm)[^7] ^figure-7
+**Figure 7**. [Beeswarm plot of adjectives each wiki attributes to one another](http://145.100.59.185/polimatter/faculties.htm)[^7]. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260613191353.png). ^figure-7
 
 Epistemic ruptures then provide the basis for every Altpedia to redefine itself as a better epistemic version of Wikipedia. As **Figure 8** illustrates, every wiki presents itself as  a fairer, more balanced and more just version of Wikipedia, in that it provides a refuge for knowledge rejected by the latter. Operating on the same underlying software, they do however preserve its same authoritative format in the structure of their content guidelines. 
 
 ![](images/Pasted%20image%2020260613191343.png)
-**Figure 8**. Network comparison of terms from wiki metapages ^figure-8
+**Figure 8**. Network comparison of terms from wiki metapages. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260613191343.png). ^figure-8
 
 While the epistemic language of their metapages may make altpedias appear strikingly similar to Wikipedia, topics worthy of inclusion are generally those that have been explicitly excluded from Wikipedia, for instance Holocaust revisionism, the correlation between race and IQ, or white supremacy, as if by rescuing these from their general classification as objects of poor or gravely immoral knowledge.[^8] This tightly knit relation between knowledge, authority and justice echoes Lyotard’s own description of what he called the ‘delegitimation’ of competing types of knowledge [@lyotardPostmodernConditionReport1984, 37]. At the source of the questioned legitimacy of a type of knowledge is a question of ‘double legitimation’: ‘\[…\] who decides what knowledge is, and who knows what needs to be decided?’ [@lyotardPostmodernConditionReport1984, 8-9]. Both of these questions are answered by each altpedia with knowledge legitimised by alternative norms, each of which begin at the end of post-ideological liberal visions of knowledge. 
 

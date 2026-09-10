@@ -33,7 +33,7 @@ These methods need not change a great deal when applied to online data. Let us r
 Each component of this “moderation stack” will be detailed in what follows.
 
 ![](images/Moderation%20stack-01.png)
-**Figure 1**. *The moderation stack.* ^figure-1
+**Figure 1**. *The moderation stack.* Full image [here](https://edekeulenaar.github.io/phd/images/Moderation%20stack-01.png). ^figure-1
 
 ## Content moderation policy analysis
 
@@ -64,7 +64,7 @@ We can also use the Link Ripper to crawl the internal links of policy-related pa
 In what follows, we can examine platform policies with either a distant or close reading approach. A distant reading is quantitative, consisting in analysing the amount of changes one or several policy documents have undergone by number of edits (per day, month, year) or the length of those edits (in the form of a word, a sentence, parts of the graphical UI, such as a chunk of HTML code, and so on). Number of edits can amount to ‘textdiff’ or ‘difflib’ counts, a built-in Python module that allows users to compare data sets, such as daily instances of archived policies. The results, visualised in the form of a line, Gantt or any other chart, can indicate resource investment per policy or the larger issues a platform has sought to address. One example for YouTube is [Figure 2](#^figure-2). In it, we see significant changes in 2018 (following the introduction of the Santa Clara principles) as well as a ‘complexification’ [@passmannHealthyCommunitiesToxic2023b] of content moderation into a myriad of case-specific policies.
 
 ![](images/Figure%2022.2.png)
-**Figure 2**. *Number of edits in YouTube’s moderation policies and times that enforcement measures were mentioned (2005/6 to 2021/2).* ^figure-2
+**Figure 2**. *Number of edits in YouTube’s moderation policies and times that enforcement measures were mentioned (2005/6 to 2021/2).* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%2022.2.png). ^figure-2
 
 One aim of the close reading is to find what kinds of objectionable information are being moderated by each reinforcement technique. Given their diversity, one way to do so is to use an LLM to perform information extraction on a policy text. Prompt Compass is a research interface for submitting the same prompt to rows of textual data and exporting the responses in a structured table; alternatively, a researcher can use a commercial model API directly. In either case, the model and version, system prompt, temperature, token limits and date of collection should be recorded. The interface makes batch comparison easier but does not validate the model’s interpretation, and identical settings may still yield different answers after an undocumented model update.
 
@@ -79,10 +79,10 @@ A manual and more meticulous way of collecting such information consists in read
 For each policy version – per day, month, year or other timeframe – one retains a policy category (‘Twitter Rules & Policies’); its name (‘Abusive behaviour’), prohibited content(s)(‘Unwanted sexual advances’, etc.); examples, if applicable (‘Solicitation of sexual acts’); and the enforcement techniques assigned to each content. The result can be summarised in a spreadsheet which contains the material needed for a systematic analysis to trace the evolution (conceptual or otherwise) of a given type of objectionable content and moderation technique, as illustrated in [[#^figure-3|Figure 3]] and [4](#^figure-4).
 
 ![](images/Figure%202.png)
-**Figure 3**. *List of accepted and prohibited content in Twitter/X Community Guidelines (2022–2024). Results obtained using GPT-4-1160-Preview with a non-specified number of completion tokens and temperature set to 0.001.* ^figure-3
+**Figure 3**. *List of accepted and prohibited content in Twitter/X Community Guidelines (2022–2024). Results obtained using GPT-4-1160-Preview with a non-specified number of completion tokens and temperature set to 0.001.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%202.png). ^figure-3
 
 ![](images/Figure%2022.4%20new.png)
-**Figure 4**. *List of accepted and prohibited content in Truth Social Community Guidelines (2023). Results obtained using GPT-4-1160-Preview with a non-specified number of completion tokens and temperature set to 0.001.* ^figure-4
+**Figure 4**. *List of accepted and prohibited content in Truth Social Community Guidelines (2023). Results obtained using GPT-4-1160-Preview with a non-specified number of completion tokens and temperature set to 0.001.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%2022.4%20new.png). ^figure-4
 
 ### Query design and dynamic archiving
 
@@ -113,7 +113,7 @@ By ‘deplatforming’, one refers to the temporary or permanent expulsion of co
 The strategy to scrape content or user statuses also can be used to collect content labels. Labels were used especially during the times of the COVID-19 pandemic and Twitter’s World Leaders policies [[#^figure-5|Figure 5]] to add nuance or context to ‘misleading’ information, particularly by users with political mandates (such as ex-US President Donald Trump), or Tweets whose ‘misleading’ statements may become more or less acceptable depending on external circumstances, such as the development of ‘authoritative’ knowledge on the COVID-19 virus. Above, we mentioned that labels may change over time, particularly when the policy instating them is suspended. In this case, one can use an automated scraper to collect post, video or post labels every so often, and then compare them over time. An interesting metric for comparing labels is engagement and rankings, as the late Twitter tended to deactivate sharing and up-ranking some types of labelled content.
 
 ![](images/Figure%2022.5.png)
-**Figure 5.** *Content moderation policy collection, annotation and subsequent query design.* ^figure-5
+**Figure 5.** *Content moderation policy collection, annotation and subsequent query design.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%2022.5.png). ^figure-5
 
 ### Demotion
 
@@ -128,7 +128,7 @@ To examine X demotion (or a consequence of such), one can compare the rankings o
 The final step in this procedure is to contextualise instances of labelling, deplatforming or demotion. The idea is to understand how policy implementations were made in the context of external or online events. The researcher can refer to the information extracted from relevant platform policies and date the implementations of enforcement measures in their case studies. Here, for example, we can keep track of all the updates of YouTube’s hate speech (and related) policies to make sense of which content from a dataset of political videos was targeted, and when ([Figure 6](#^figure-6)).
 
 ![](images/Figure%2022.6.png)
-**Figure 6**. *Reverse-engineering content moderation practices.* ^figure-6
+**Figure 6**. *Reverse-engineering content moderation practices.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%2022.6.png). ^figure-6
 
 ## Capturing user effects
 
@@ -139,7 +139,7 @@ What can one look for when examining moderation-related ‘user effects’? To d
 In datasets containing data susceptible to moderation, one will often find traces of users seeking to guide their audiences toward lesser moderated alternatives like BitChute, Rumble or Telegram. One of the ways to find such traces is to filter URLs from one’s dataset, particularly in locations where they are used as promotional content. On YouTube, these may be a channel’s profile or video descriptions, while on X – until December 2022 [@mehtaTwitterBansPosting2022] – they had been a user’s profile description. One can visualise results in the form of an alluvial diagram, showing the ‘source’ platform – where the user is posting from – to a ‘target’ platform – where the platform is redirecting their audiences. For example, YouTube channels involved in COVID-19 conspiracies between April and October 2020 linked to a variety of alternative platforms [@scottBigTechsTrying2021]. In other cases, users link to alternative platforms to point to content that cannot be hosted in more moderated ones. In [Figure 7](#^figure-7), for example, we see how users involved in the Brazilian Congress riots of 8 January 2023, frequently linked evidence of electoral fraud and strategies to invade Brasilia’s congressional square to Telegram channels and ‘backup’ information hosting sources, including Google Docs.
 
 ![](images/Figure%2022.7.png)
-**Figure 7**. *120 URLs with most engagement in social media posts about the Brazilian elections of 2022–2023.* ^figure-7
+**Figure 7**. *120 URLs with most engagement in social media posts about the Brazilian elections of 2022–2023.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%2022.7.png). ^figure-7
 
 ### Keyword obfuscation
 
