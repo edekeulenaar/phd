@@ -55,16 +55,28 @@ def manuscript_keys() -> set[str]:
 
 ENTRY_RE = re.compile(r"@(\w+)\s*\{\s*([^,\s]+)\s*,", re.M)
 
-def strip_braces(s: str) -> str:
-    """Collapse BibTeX brace-protection and tex commands into plain text."""
+def strip_braces(s: str, keep_braces: bool = False) -> str:
+    """Collapse BibTeX brace-protection and tex commands into plain text.
+
+    `keep_braces` leaves the brace structure in place, which the author and
+    editor fields need: "{{European Union}}" marks one corporate name, and
+    flattening it first made it look like a person called E. Union.
+    """
     s = s.strip()
     # Strip outer wrapper {...} or "..." once
-    while len(s) >= 2 and ((s[0] == "{" and s[-1] == "}") or
-                           (s[0] == '"' and s[-1] == '"')):
-        s = s[1:-1].strip()
-    # Drop remaining brace pairs that just protect casing: {{X}} → X, {X} → X.
-    s = re.sub(r"\{+", "", s)
-    s = re.sub(r"\}+", "", s)
+    if keep_braces:
+        # Only the field's own wrapper, so "{{European Union}}" keeps the inner
+        # pair that marks it as one corporate name.
+        if len(s) >= 2 and ((s[0] == "{" and s[-1] == "}") or
+                            (s[0] == '"' and s[-1] == '"')):
+            s = s[1:-1].strip()
+    else:
+        while len(s) >= 2 and ((s[0] == "{" and s[-1] == "}") or
+                               (s[0] == '"' and s[-1] == '"')):
+            s = s[1:-1].strip()
+        # Drop remaining brace pairs that just protect casing: {{X}} → X, {X} → X.
+        s = re.sub(r"\{+", "", s)
+        s = re.sub(r"\}+", "", s)
     # Common TeX accents → unicode (very partial; good enough for display).
     REPL = {
         r"\\&": "&", r"\\%": "%", r"\\\$": "$", r"\\#": "#", r"\\_": "_",
@@ -123,7 +135,7 @@ def parse_fields(body: str) -> dict[str, str]:
             while j < n and body[j] not in ",\n": j += 1
             val = body[i:j]
             i = j
-        out[key] = strip_braces(val)
+        out[key] = strip_braces(val, keep_braces=key in ("author", "editor"))
         # Skip the trailing comma, if any.
         while i < n and body[i] in ", \n\t": i += 1
     return out
@@ -169,14 +181,34 @@ def _extended_name(p: str) -> tuple[str, str]:
         last = f"{last} {suffix}"
     return last.strip(), given.strip()
 
+def _split_on_and(raw: str) -> list[str]:
+    """Split on " and ", but never inside braces: a corporate name such as
+    "{Centers for Disease Control and Prevention}" is one author."""
+    parts, cur, depth, i = [], [], 0, 0
+    while i < len(raw):
+        c = raw[i]
+        if c == "{": depth += 1
+        elif c == "}": depth -= 1
+        if depth == 0 and raw[i:i + 5].lower() == " and ":
+            parts.append("".join(cur)); cur = []; i += 5; continue
+        cur.append(c); i += 1
+    parts.append("".join(cur))
+    return parts
+
 def split_authors(raw: str) -> list[tuple[str, str]]:
     """Split a bibtex `author = ...` value into [(last, first), …]."""
     if not raw: return []
-    parts = re.split(r"\s+and\s+", raw)
+    parts = _split_on_and(raw)
     out = []
     for p in parts:
         p = p.strip()
         if not p: continue
+        # A brace-protected name is one corporate author, whole and unsplit:
+        # "{{European Union}}" is the European Union, not E. Union.
+        if p.startswith("{") and p.endswith("}"):
+            out.append((strip_braces(p), ""))
+            continue
+        p = strip_braces(p)
         if "family=" in p:
             out.append(_extended_name(p))
         elif "," in p:
