@@ -199,6 +199,7 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //      stylesheet can treat a Part's title page differently from a
     //      chapter's (a Part has a single H1, which is its real title).
     {
+      setTimeout(() => markInlineFormulas(host), 0);
       const kind = tocEntry(chapterSlug)?.kind;
       host.classList.remove("kind-front", "kind-part", "kind-chapter", "kind-back");
       if (kind) host.classList.add("kind-" + kind);
@@ -3824,6 +3825,31 @@ function setupCommenting() {
 
   apply();
 })();
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Tell a formula snippet from a figure.
+   Several chapters paste their equations in as small images, and those must
+   stay inline at text size or the sentence around them breaks into fragments.
+   A real figure must never be shrunk. The two cannot be told apart from the
+   markup — a figure usually shares its paragraph with its caption, which is
+   exactly the shape the old CSS treated as "inline" — so measure instead:
+   only an image whose natural size is smaller than any figure would be gets
+   the inline treatment.
+   ─────────────────────────────────────────────────────────────────────────── */
+function markInlineFormulas(root) {
+  const scope = root || document.getElementById("manuscript");
+  if (!scope) return;
+  scope.querySelectorAll(".prose p > img, #manuscript p > img").forEach(img => {
+    const decide = () => {
+      const h = img.naturalHeight, w = img.naturalWidth;
+      if (!h || !w) return;                      // broken or not yet known
+      const isFormula = h <= 80 && w <= 520;
+      img.classList.toggle("inline-formula", isFormula);
+    };
+    if (img.complete) decide();
+    else img.addEventListener("load", decide, { once: true });
+  });
+}
 
 function rememberName(n) { try { localStorage.setItem("thesis-cmt-name", n); } catch {} }
 function lastName() { try { return localStorage.getItem("thesis-cmt-name") || ""; } catch { return ""; } }
