@@ -26,18 +26,21 @@ I met Marcel when Thomas asked me if I’d be interested in teaching in Groninge
 
 I met Richard as a student, and as the student I was I asked him: “But do you actually participate in data sprints?” — and that became a ruse I’m thankful he forgot (and here I am reminding him). We used to call him the Mick Jagger of the teachers because he was so cool, and though the comment was mostly about aesthetics, it was valid because Richard is also kind of an artist. There are moments where the creativity is his and for me to admire, and others where we share intuitions and a sense of understanding. That sense is a rare find in this road, and one I keep when I think alone.
 
-When I headed to Boston, I met Tarleton. On Mondays he sat in his office for the first few hours of the day, and then he headed off to a café. I thought I had decoded the magic of his writings: it must have been the coffee, or the routine. But when I sat in his office I think I understood: it was an extraordinary willingness to understand others and let himself be understood. Suddenly, my semi-articulated thoughts were welcomed into a conversation of ideas, and ideas from ideas. How lucky I’ve been to meet him. 
+When I headed to Boston, I met Tarleton. On Mondays he sat in his office for the first few hours of the day, and then he headed off to a café. I thought I had decoded the magic of his writings: it must have been the coffee, or the routine. But when I spoke to him I think I understood: it was an extraordinary willingness to understand others and let himself be understood. Suddenly, my semi-articulated thoughts were welcomed into a conversation of ideas, and ideas from ideas. How lucky I’ve been to meet him. 
 
 In Copenhagen, Rasmus and Diyi waited with patience for me to finish this thesis even when I told them I wasn’t working on it any longer. Stine, with her fairy charm, offered a help I didn’t even consider possible given her responsibilities. Friends were there, too, especially when I thought I was alone: Ece, Eva, CJ, Rebecca, Emil, Victoria, Jasper, Kiran, Filippa, Nadja. 
 
-Online, at work, through friends and conferences I’ve met Marcelo, João, Anthony, Stijn, Daniël and Daniel, Thomas, Anne, Clare, Peter, Natalia, Erik, Esther, Marloes, Fernando, Daniël, Dale, Stefania, Lonneke, Janna, Giulia, Thais, Chico, Cass, Guillén, Max, Tom, Sarah, Lisa, Ravi, Luke, Julie, Jonathan Stray, the Council for Tech and Social Cohesion. At Microsoft I’ve met Mary, the Nancies, Zaidat, Emily, Chuncheng, Taj, Parker, Ryland, Tobias and the gang. At the UN I met Daanish, Naoko, Minji, Martin, Oleh, Zurab, Davit, Alex and the UN DPPA Georgia team. 
+Online, at work, through friends and conferences I’ve met Marcelo, João, Anthony, Stijn, Daniël and Daniel, Thomas, Anne, Clare, Peter, Natalia, Erik, Esther, Marloes, Fernando, Dale, Stefania, Lonneke, Janna, Giulia, Thais, Chico, Cass, Guillén, Max, Tom, Sarah, Lisa, Ravi, Luke, Julie, Jonathan Stray, the Council for Tech and Social Cohesion. At Microsoft I’ve met Mary, the Nancies, Zaidat, Emily, Chuncheng, Taj, Parker, Ryland, Tobias and the gang. At the UN I met Daanish, Naoko, Minji, Martin, Oleh, Zurab, Davit, Alex and the UN DPPA Georgia team. 
 
 There were friends from older roads along the way: Louis, Kiki, Lana, Kevin, Chiara, Alex, Anne, Liam, Santi, Alaíde, mãe, Astrid, Cristel, Emeline. 
 
-Along one I thought I wouldn't continue I met Maud, and it continues thanks to her.
+When I thought I didn't have anyone else I meet I met Maud, and the road continues thanks to her.
 
 And I met Ivan. He was sitting at his desk eating his usual Dutch sandwich for a maximum of 15 minutes when I asked him, an archaeologist, if he had ever heard of media archaeology. That conversation turned into a friendship, and that friendship into adventures afar in the world.
 
-Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. The whole is his doing: the method, the code, the time late in the night answering my Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
+Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. It's the method, the code, the time late in the night answering my Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
 
-Ivan left, but this thesis is the road we walked together. It is dedicated to him.
+Ivan left, but this thesis is the road we walked together. It is dedicated to him. 
+
+
+An interactive version of this thesis is available at edekeulenaar.github.io/phd/. Figures in [Chapter 1. Censorship and moderation](#/chapter-1) are best seen there.
