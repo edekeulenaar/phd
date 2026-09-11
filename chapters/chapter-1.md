@@ -190,7 +190,7 @@ While each language will tend to speak about its country of origin, others will 
 
 ![Figure 1](images/fig-lang-country.png)
 
-**Figure 1.** *Where each language looks — alluvial flow from the publication’s detected Language, through every Country it discusses, into the Topic it engages with.* Full image [here](#fig-lang-country). ^figure-1
+**Figure 1.** *Where each language looks — alluvial flow from the publication’s detected Language, through every Country it discusses, into the Topic it engages with.* Full image [here](#/chapter-1?fig=fig-lang-country). ^figure-1
 
 ## Metadata and discipline enrichment
 
@@ -266,7 +266,7 @@ Communication and media studies remain the most field in studying content modera
 
 ![Figure 2](images/fig-sankey-discipline-topic.png)
 
-**Figure 2.** *Unique items flowing from Discipline to Topic, with a third hop to the Sub-topics of Content moderation.* Full image [here](#fig-sankey-discipline-topic). ^figure-2
+**Figure 2.** *Unique items flowing from Discipline to Topic, with a third hop to the Sub-topics of Content moderation.* Full image [here](#/chapter-1?fig=fig-sankey-discipline-topic). ^figure-2
 
 ## Building a taxonomy ^tax-building
 
@@ -590,25 +590,25 @@ To begin, it is the oldest literature to figure in this dataset (**[[#^figure-3|
 
 ![Figure 3](images/fig-year-topic.png)
 
-**Figure 3.** *Items per Discipline, per year, per Topic — Bubble view, node size = Citations.* Full image [here](#fig-year-topic?view=bubble). ^figure-3
+**Figure 3.** *Items per Discipline, per year, per Topic — Bubble view, node size = Citations.* Full image [here](#/chapter-1?fig=fig-year-topic&view=bubble). ^figure-3
 
 Throughout, the most predominant definition of censorship has remained that of a *regulative power*: the idea that, for something to qualify as censorship, it needs to fit within a top-down, intentional suppression of information by a few power-holders (state, church, employer, platforms) that can *define* and *enforce* normative criteria without public consultation, typically through coercive authority (legal, financial, infrastructural, or doctrinal) and a variety of means to information manipulation (**[[#^figure-4|Figure 4]]**). As above, this idea stems from a historical critique of usurpation of power, particularly in a time when private media production and notions of freedom of expression begin to take shape in the market and the law [@holquistIntroductionCorruptOriginals1994; @mooreCensorship2016a]. 
 
 ![Figure 4](images/fig-beeswarm-topics-what.png)
 
-**Figure 4.** *Beeswarm of WHAT findings within Censorship-topic items, by Category — earliest first.* Full image [here](#fig-beeswarm-topics?topic=Censorship&type=WHAT&sort=earliest&view=beeswarm). ^figure-4
+**Figure 4.** *Beeswarm of WHAT findings within Censorship-topic items, by Category — earliest first.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHAT&sort=earliest&view=beeswarm). ^figure-4
 
 In its classic sense, the censor is the one who “administers” public manners and morals [@jansensuecurryCensorshipKnotThat1988, p. 14] — what Moore [-@mooreCensorship2016a] recalls as “custos morum”. In Roman censorial bureaucracy, they were one of two magistrates tasked with supervising public morals by “overseeing”, “appraising”, “valuing” or “judging” individuals in the register or census of citizens [@jansensuecurryCensorshipKnotThat1988, p. 14]. Who these actors have been — and what powers they hold to exert this leverage — has of course changed over time (**[[#^figure-5|Figure 5]]**). Ruling actors remain the most mentioned in the literature as actors detaining coercive leverage over information access, from monarchical forces [@cerfCensureRoyaleFin1967], to authoritarian governments [@dewhirstSovietCensorship1973], municipal [@andiocRaquelHuertaCensura1975] and local authorities [@cioetaOttomanCensorshipLebanon1979a] supported by various forms of law enforcement [@childsBigTroubleDaumier1992]. These are sometimes enforced by censorship boards specialized in different cultural sectors, as was the National Board of Censorship (now National Board of Review) in the United States in film [@lgrievesonPolicingCinemaMovies], the Advertising Standards Council in India [@kaurCensorshipSouthAsia2009], or the Office of Censorship in the wartime United States [@sweeneySecretsVictoryOffice2001]. Courts and prosecutors would be important extensions of censorial laws against obscenity [@marshikBritishModernismCensorship2006] or, more contemporaneously, Supreme Courts exerting anti-hate speech laws [@heinrichsCensorshipFreeSpeech1998]. 
 
 ![Figure 5](images/fig-beeswarm-topics-who.png)
 
-**Figure 5.** *Beeswarm of WHO findings within Censorship-topic items — earliest first.* Full image [here](#fig-beeswarm-topics?topic=Censorship&type=WHO&sort=earliest&view=beeswarm). ^figure-5
+**Figure 5.** *Beeswarm of WHO findings within Censorship-topic items — earliest first.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHO&sort=earliest&view=beeswarm). ^figure-5
 
 Technically, these actors would hold power in decreeing the conditions for information to be accepted, and thus accessed, via sources of information production. In this context, censorship scholarship identifies “pre” and “post” censorship affordances: “pre” in the sense of detecting, filtering, reviewing, and if necessary modifying intercepted information *before* release; and “post” in the sense of monitoring, restricting access, or attempting to remove information sources from circulation via economic, technical or legal means *after* publication. How one or the other is applied depends of course on the media environment. While pre-censorship is especially applicable to centralized information production of print media, television, radio and film, post-censorship applies to environments where information is produced and publicized from within a public sphere (**[[#^figure-6|Figure 6]]**). 
 
 ![Figure 6](images/fig-media.png)
 
-**Figure 6.** *Topic / CM Sub-topic × Media category — Sankey view (ribbons sized by item count). The “by CM Sub-topic” tab restricts to Content-moderation items.* Full image [here](#fig-media?scope=topic&view=sankey). ^figure-6
+**Figure 6.** *Topic / CM Sub-topic × Media category — Sankey view (ribbons sized by item count). The “by CM Sub-topic” tab restricts to Content-moderation items.* Full image [here](#/chapter-1?fig=fig-media&scope=topic&view=sankey). ^figure-6
 
 In the case of “pre” censorship, text corpora could be filtered by certain actors to confirm (or review) that the text conformed to different normative criteria (**[[#^figure-7|Figure 7]]**). Profiles — blacklists, whitelists and other lists of normative criteria — would be used for this reviewing process. These could be indexes [@baiaoCensuraLiterariaInquisitorial1919; @carcelCriteriosInquisitorialesCensura1992] or proscribed publications [@lockhartCensorshipObscenityDeveloping1960, p. 9]. What followed then was a process of modification or “bowdlerism” [@cuilleanainNotFrontServants1999]: striking out or altering words or phrases that seemed objectionable [@ffowellCensorshipEngland, p. 53]; crossing out, amending or cutting out parts of text [@friedeCensuraEspanolaSiglo1959, p. 45]; or doing a more subtle work of substitution, or “redirection”, using, for example, euphemisms as substitutes for a problematic term [@dominguezTabuLenguajePalabras2008, p. 45]. Infringing content would be held from release and in other cases destroyed either partially [@gactofernandezCensuraPoliticaInquisicion1992, p. 29] or as completely as possible, either materially [@bosmajianBurningBooks2006] or symbolically [@gkempCensorshipPress15801720].
 
@@ -618,7 +618,7 @@ But there are also softer techniques that leverage or nudge one’s access to in
 
 ![Figure 7](images/fig-beeswarm-topics-how.png)
 
-**Figure 7.** *Beeswarm of HOW findings within Censorship-topic items — Quantity ↓.* Full image [here](#fig-beeswarm-topics?topic=Censorship&type=HOW&sort=qty-desc&view=beeswarm). ^figure-7
+**Figure 7.** *Beeswarm of HOW findings within Censorship-topic items — Quantity ↓.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=HOW&sort=qty-desc&view=beeswarm). ^figure-7
 
 In environments where information is decentralized — the Web in particular — there is a diversification of both pre- and post-censorial methods. Through nationalized telecom companies, pre-censorial techniques lie at the infrastructural level to restrict access to entire websites altogether via DNS tampering, packet and content filtering [@acetoInternetCensorshipDetection2015], or a more or less selective blocking of IPs [@chaiImportanceEncryptedSNIESNI, p. 1; @ververisCrossCountryComparisonInternet2020, p. 3] and content filtering [@aryanInternetCensorshipIran, p. 1]. Since new web content can sprawl regardless of such restrictions, expansive monitoring is required to capture, review and deplatform objectionable content or entire websites [@mdwyerSocialMediaPolitics]. Communication and media studies will follow a definition of censorship as state-led interference [@deibertBlackCodeCensorship2003] of otherwise free(er) new media that have granted political expression new affordances [@poellSocialMediaActivism2014]. State-led online censorship is described as infrastructural or “intermediary” [@zuckermanIntermediaryCensorship2010], and applicable to regions with peculiar Internet arrangements [@deibertGeopoliticsInternetControl2008], particularly China [@xuInternetCensorshipChina2011a], Iran [@rahimiCensorshipIslamicRepublic2015] and Russia [@xueTSPURussiasDecentralized2022]. 
 
@@ -630,7 +630,7 @@ The legitimating reasons behind different efforts to censor also become more var
 
 ![Figure 8](images/fig-beeswarm-topics-why.png)
 
-**Figure 8.** *Beeswarm of WHY findings within Censorship-topic items — earliest first.* Full image [here](#fig-beeswarm-topics?topic=Censorship&type=WHY&sort=earliest&view=beeswarm). ^figure-8
+**Figure 8.** *Beeswarm of WHY findings within Censorship-topic items — earliest first.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHY&sort=earliest&view=beeswarm). ^figure-8
 
 With that said, it appears that censorship remains *one* theorization of many other forms of speech governance. In the theorizations above, we have seen how many of the actors, techniques and reasons behind censorship are also manifested in moderation. Instinctively, moderation is a set of techniques beyond “only removal of material” [@klonickNewGovernorsPeople2017, p. 1601]. But in platforms, detection, interception, removal, blocking, deplatforming, labeling, marginalizing, rating and monitoring — all of which have been associated with censorship — also apply. We may also argue that platforms wield leverage over the definition and enforcement of censorial norms equivalent to, if not greater than, that of many states and other authorities today. So is moderation only an oxymoron for censorship that dictionaries have yet to clarify? Thus far, the objections are polarized: some may argue that moderation is a fundamental need for keeping information environments inhabitable against inevitable floods of harmful and chaotic content [@direstaContentModerationNot2025]. Likewise, others will point out that moderation is a response to censorship: it comes down to explainable decisions that users voluntarily subscribe to; and if they are unhappy with eventual sanctions, they have other options in the market [@mosesWordCensorshipHas2024]. 
 
@@ -642,7 +642,7 @@ Historically, the earliest literature that speaks of moderation refers to a form
 
 ![Figure 9](images/fig-beeswarm-topics-moderation-what.png)
 
-**Figure 9.** *The “what” of moderation.* Full image [here](#fig-beeswarm-topics?topic=Content%20moderation&type=WHAT&sort=earliest&y0=1980&y1=2026&view=beeswarm).
+**Figure 9.** *The “what” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=WHAT&sort=earliest&y0=1980&y1=2026&view=beeswarm).
 
 ^figure-9
 
@@ -668,7 +668,7 @@ In these capacities, the literature speaks of moderation in the sense specified 
 
 ![Figure 10](images/fig-beeswarm-topics-moderation-who.png)
 
-**Figure 10.** *The “who” of moderation.* Full image [here](#fig-beeswarm-topics?topic=Content%20moderation&type=WHO&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-10
+**Figure 10.** *The “who” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=WHO&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-10
 
 In early online fora, the moderator is thus the central administering force within an exchange of information. They may hold different functions depending on the nature of the exchange and the space where it is held: mediating voices, i.e., complementing a debate where arguments or points of views may not meet each other structurally or on the basis of arguments. That means exposing synergies; facilitating convergences, or complementing information gaps (for example, where one point of view may not know about the historical or other background behind a given premise). One may speak of it as a “discursive intervention” consisting in “resolving a conflict of opinions” between debate participants, meaning to give “a reasonable and acceptable solution” to what is presented as different between one and the other participant [@salavastruArgumentationDebatsPublics2015]. 
 
@@ -680,13 +680,13 @@ A key affordance for maintaining the sustainability of community-driven moderati
 
 ![Figure 11](images/fig-beeswarm-topics-moderation-how.png)
 
-**Figure 11.** *The “how” of moderation.* Full image [here](#fig-beeswarm-topics?topic=Content%20moderation&type=HOW&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-11
+**Figure 11.** *The “how” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=HOW&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-11
 
 At the core of this capacity is a form of communicative action: to arrive at the approximate (but never entirely reachable) point in which interlocutors may “reach understanding” by facilitating access to the reasons that make their respective utterances “acceptable” to themselves and each other [@habermasTheoryCommunicativeAction1984a, p. 230]. This gives epistemic coherence and a continuous course to dialogue in public spheres: the capacity to retain the epistemic and social conditions necessary for dialogue and cooperation to be altogether *possible* in social environments [@grimmelmannVirtuesModeration2015]. This is a constituting feature of what many would connote as a form of “social cohesion”: the conditions of sociability — of trust and “meaning” in communities [@seeringModeratorEngagementCommunity2019, p. 1417] — that render an online space inhabitable. 
 
 ![Figure 12](images/fig-beeswarm-topics-moderation-why.png)
 
-**Figure 12.** *The “why” of moderation.* Full image [here](#fig-beeswarm-topics?topic=Content%20moderation&type=WHY&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-12
+**Figure 12.** *The “why” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=WHY&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-12
 
 # Moderation as a platform control mechanism
 
@@ -694,7 +694,7 @@ In the earliest studies the techniques associated with moderation are divided fa
 
 ![Figure 13](images/fig-cm-who-how.png)
 
-**Figure 13.** *Who does what — actors × techniques in content moderation.* Full image [here](#fig-cm-who-how). ^figure-13
+**Figure 13.** *Who does what — actors × techniques in content moderation.* Full image [here](#/chapter-1?fig=fig-cm-who-how). ^figure-13
 
 This leads some scholars to associate platforms with, indeed, a censor in their own right. Reading the corpus for who is named as the agent of the practice bears this out: within the “moderation and censorship” sub-topic, a large set of publications identifies the platforms themselves as the censor, rather than the state, the courts or any older authority. Most of these findings fall after 2020 and rise year on year through 2021–2025, tracking the moderation controversies of that period. Platforms are described less as hosts than as a privatized censorial power. The decisions about what may and may not be posted are taken at the platform level [@olhaimsonDisproportionateRemovalsDiffering], by the companies that own the networks [@trottierSocialMediaPolitics2014a]. Several push the analogy further, treating platforms as de facto content editors or regulators wielding a privatized power of censorship without constitutional safeguards.
 

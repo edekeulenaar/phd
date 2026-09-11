@@ -3501,10 +3501,73 @@ async function renderChapter(slug) {
   window.scrollTo(0, 0);
 }
 
+/* A deep link of the form "#/chapter-1?fig=fig-lang-country" routes to the
+   chapter and then scrolls to that figure, applying any filter state carried
+   alongside it ("&view=bubble"). Chapter 1's captions link this way, so "Full
+   image here" lands on the live, interactive version of the same figure.
+   A second "#" cannot be used for this: hyperref truncates the URL there, so
+   the link came out of the PDF pointing at the chapter with the figure lost.
+   routeSlug() already stops at "?", so only the jump needs handling. */
+function routeQuery() {
+  const h = location.hash || "";
+  const i = h.indexOf("?");
+  if (!h.startsWith("#/") || i < 0) return null;
+  return new URLSearchParams(h.slice(i + 1));
+}
+
+function routeAnchor() {
+  const q = routeQuery();
+  if (q && q.get("fig")) return q.get("fig");
+  // Still accept the older two-hash form, which works from a browser.
+  const h = location.hash || "";
+  if (!h.startsWith("#/")) return "";
+  const i = h.indexOf("#", 2);
+  return i < 0 ? "" : h.slice(i + 1).split("?")[0];
+}
+
+/* Any parameter other than `fig` is filter state for that figure. */
+function routeFigParams() {
+  const q = routeQuery();
+  if (!q) return {};
+  const out = {};
+  q.forEach((v, k) => { if (k !== "fig") out[k] = v; });
+  return out;
+}
+
+function jumpToAnchor(id, tries) {
+  if (!id) return;
+  // Chapter 1 keeps a hidden template for every figure in #analysis, which
+  // display:none hides but which still answers to getElementById. Scrolling to
+  // that does nothing, so wait for the copy that is actually laid out in the
+  // manuscript: a live figure only mounts once its chapter has rendered.
+  const el = [...document.querySelectorAll("#" + CSS.escape(id))]
+    .find(n => n.getClientRects().length > 0);
+  if (el) {
+    el.classList.add("anchored");
+    // renderChapter() and the figure mounting each scroll the window on their
+    // own schedule, so one jump can be undone a moment later. Re-assert it a
+    // couple of times, and stop as soon as we are actually there.
+    const go = () => {
+      const cur = [...document.querySelectorAll("#" + CSS.escape(id))]
+        .find(n => n.getClientRects().length > 0) || el;
+      cur.scrollIntoView({ block: "start", behavior: "smooth" });
+    };
+    go();
+    [400, 1000, 1800].forEach(ms => setTimeout(go, ms));
+    return;
+  }
+  if ((tries ?? 0) < 60) setTimeout(() => jumpToAnchor(id, (tries ?? 0) + 1), 150);
+}
+
 async function route() {
   const slug = routeSlug();
+  const anchor = routeAnchor();
   if (slug === null) return;            // in-page hash: leave to anchor/figure logic
-  if (slug === _routeSlug) return;      // already showing this view
+  if (slug === _routeSlug) {
+    jumpToAnchor(anchor);
+    if (anchor) applyFigureFilters(anchor, routeFigParams());
+    return;
+  }
   _routeSlug = slug;
   // Leaving the previous view: stop watching its figures and clear the key
   // (Chapter 1 re-establishes both when it mounts its analysis).
@@ -3513,7 +3576,12 @@ async function route() {
   if (slug === "home")        return renderLanding();
   if (slug === "references")  return renderReferences();
   if (!tocEntry(slug))        return renderLanding();   // unknown → cover
-  return renderChapter(slug);
+  const done = renderChapter(slug);
+  if (anchor) Promise.resolve(done).then(() => {
+    jumpToAnchor(anchor);
+    applyFigureFilters(anchor, routeFigParams());
+  });
+  return done;
 }
 
 // Cover "Download PDF" → open the chapter-selection panel.
