@@ -79,6 +79,41 @@ async function renderManuscript(chapterSlug, opts = {}) {
       return `<span class="cite-grp" data-keys="${keys.join(",")}" tabindex="0"></span>`;
     });
 
+    // 3a-i) Pandoc footnotes. marked.js has no footnote support, so
+    //        `[^1]` markers and their `[^1]: …` definitions were being shown
+    //        to the reader verbatim. Pull the definitions out, number the
+    //        notes by order of first reference, turn each marker into a
+    //        superscript link, and append a notes list at the end.
+    {
+      const defs = new Map();
+      // A definition is "[^id]: text", optionally continued on indented lines.
+      md = md.replace(
+        /^\[\^([^\]\s]+)\]:[ \t]*([\s\S]*?)(?=\n(?:\[\^[^\]\s]+\]:|\S)|\n*$)/gm,
+        (_, id, body) => { defs.set(id, body.trim()); return ""; }
+      );
+      if (defs.size) {
+        const order = [];
+        md = md.replace(/\[\^([^\]\s]+)\]/g, (m, id) => {
+          if (!defs.has(id)) return m;          // orphan marker: leave as-is
+          let n = order.indexOf(id);
+          if (n === -1) { order.push(id); n = order.length - 1; }
+          const i = n + 1;
+          return `<sup class="fn-ref" id="fnref-${i}">` +
+                 `<a href="#fn-${i}" aria-label="Footnote ${i}">${i}</a></sup>`;
+        });
+        // Notes never referenced in the prose still belong on the page.
+        for (const id of defs.keys()) if (!order.includes(id)) order.push(id);
+        if (order.length) {
+          md += `\n\n<section class="footnotes"><hr><ol>` +
+            order.map((id, n) =>
+              `<li id="fn-${n + 1}">${marked.parseInline(defs.get(id))} ` +
+              `<a class="fn-back" href="#fnref-${n + 1}" ` +
+              `aria-label="Back to text">\u21A9</a></li>`).join("") +
+            `</ol></section>\n`;
+        }
+      }
+    }
+
     // 3a-ii) Markdown layout rescue: Obsidian is lenient about tables that
     //         have no blank line before a following caption or paragraph.
     //         Marked.js is stricter — without a blank line it slurps the

@@ -1687,3 +1687,14 @@ button.dl:hover { color: var(--accent); border-bottom-color: var(--accent); }
     break-inside: avoid; page-break-inside: avoid;
   }
 }
+
+/* Footnotes (converted from Pandoc `[^n]` syntax in app.js step 3a-i) */
+sup.fn-ref            { line-height: 0; font-size: .72em; }
+sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
+.footnotes            { margin-top: 3rem; font-size: .88em; }
+.footnotes hr         { border: 0; border-top: 1px solid currentColor;
+                        opacity: .2; width: 8rem; margin: 0 0 1rem; }
+.footnotes ol         { padding-left: 1.2rem; }
+.footnotes li         { margin-bottom: .6rem; }
+.footnotes .fn-back   { text-decoration: none; opacity: .55; margin-left: .25rem; }
+.footnotes .fn-back:hover { opacity: 1; }

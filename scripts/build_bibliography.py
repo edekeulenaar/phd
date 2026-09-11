@@ -29,12 +29,12 @@ from __future__ import annotations
 import json, re, sys, unicodedata
 from pathlib import Path
 
-ROOT       = Path(__file__).resolve().parent.parent.parent
+ROOT       = Path(__file__).resolve().parent.parent
 BIB_PATH   = Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/"
-                  "Master vault/My_Library.bib")
-MANUSCRIPT = ROOT / "site" / "manuscript.md"
-CHAPTERS   = ROOT / "site" / "chapters"
-OUT        = ROOT / "site" / "data" / "bibliography.json"
+                  "PhD - Manuscript/My_Library_wayback.bib")
+MANUSCRIPT = ROOT / "manuscript.md"
+CHAPTERS   = ROOT / "chapters"
+OUT        = ROOT / "data" / "bibliography.json"
 
 # ─── Pull the cite keys we need ───────────────────────────────────────────
 

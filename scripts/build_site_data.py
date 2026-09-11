@@ -82,7 +82,7 @@ SITE_TOC = Path(__file__).resolve().parent.parent / "data" / "toc.json"
 #   PART_START    — the first chapter number under each Part (which Part a
 #                   chapter belongs to). Update only when a Part gains/loses
 #                   its opening chapter.
-FRONT_MATTER = ["Abstract.md", "Introduction.md"]   # Acknowledgments: not published
+FRONT_MATTER = ["Abstract.md", "Acknowledgments.md", "Introduction.md"]
 BACK_MATTER  = ["Conclusion.md"]
 PART_START   = {1: 1, 2: 3, 3: 6, 4: 10, 5: 13}   # Part N → its first chapter
 _ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6,
