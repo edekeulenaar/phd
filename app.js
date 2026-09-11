@@ -3940,6 +3940,13 @@ function updateCommentsRail(slug) {
   nav.hidden = false;
   const slugs = [slug, ...Object.keys(all).filter(s => s !== slug)].filter(s => all[s] && all[s].length);
   let html = `<li class="cmt-rail-count">${(all[slug] || []).length} on this chapter · ${total} total</li>`;
+  // Until comments-config.js names a Supabase project there is no shared store,
+  // so a reader's notes live in their own browser and nobody else ever sees
+  // them. Say so rather than letting them assume the author received them.
+  if (!SB) {
+    html += `<li class="cmt-local-warn">Saved in this browser only. Nobody else can see them, ` +
+            `and clearing site data removes them. Use Export below to send them on.</li>`;
+  }
   slugs.forEach(s => { html += all[s].map(c => cmtRailRow(c, s)).join(""); });
   html += `<li><button type="button" class="cmt-export" data-cmt-export>⤓ Export all comments</button></li>`;
   list.innerHTML = html;

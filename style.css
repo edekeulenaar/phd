@@ -1771,3 +1771,16 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 .reader-size .rs-dn { font-size: 0.78rem; }
 .reader-size .rs-up { font-size: 1.02rem; }
 .reader-size .rs-reset { font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* Shown while no shared comments backend is configured. */
+.cmt-local-warn {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  background: rgba(192, 67, 31, 0.07);
+  border-left: 2px solid var(--accent);
+  padding: 0.5em 0.6em;
+  margin: 0.4em 0 0.6em;
+  list-style: none;
+}
