@@ -14,7 +14,7 @@ I met Rhubi and Maria when a five-minute conversation about God knows what class
 
 I met Sal, Emilija and Marc, with whom we created a little lab that kick-started our academic careers. In the fashion of digital methods, we built things we had no idea made sense to journalists, Google and government people. What a crazy idea it was from Marc to invite us, students, into this endeavor; and what a crazy amount of gratitude I have for him to have given us the benefit of the doubt. 
 
-I met Julia, the CLARIAH and CREATE team — Leon, Liliana, Jasmijn, Thomas, MRJ and so many with whom I could mess around in academia even when walking over to the Dean’s office for a presentation on the future of the humanities at UvA. Under Julia’s watchful gaze everything seemed a little kinder and easier, even when I in fact messed up. 
+I met Julia, the CLARIAH and CREATE team — Leon, MRJ, Liliana, Jasmijn, Thomas, Chiara, Christian, Hugo, Claartje and so many with whom I could mess around in academia even when walking over to the Dean’s office for a presentation on the purpose of the humanities at UvA. Under Julia’s watchful gaze everything seemed a little kinder and easier, even when I in fact messed up. 
 
 I met Jonathan and Wendy, the Public Data Lab and Digital Democracy team, who were the first to welcome me into a PhD program (this thing has been going on since 2021!). Someone who, like Wendy, had everything except time and gave it to those who, like me, don’t know what to make of it. A conversation with her was a gift, the same one she gave me even when I decided to return to the Netherlands. 
 
@@ -30,7 +30,7 @@ When I headed to Boston, I met Tarleton. On Mondays he sat in his office for the
 
 In Copenhagen, Rasmus and Diyi waited with patience for me to finish this thesis even when I told them I wasn’t working on it any longer. Stine, with her fairy charm, offered a help I didn’t even consider possible given her responsibilities. Friends were there, too, especially when I thought I was alone: Ece, Eva, CJ, Rebecca, Emil, Victoria, Jasper, Kiran, Filippa, Nadja. 
 
-Online, at work, through friends and conferences I’ve met Marcelo, João, Anthony, Stijn, Daniël and Daniel, Thomas, Anne, Clare, Peter, Natalia, Erik, Esther, Marloes, Fernando, Dale, Stefania, Lonneke, Janna, Giulia, Thais, Chico, Cass, Guillén, Max, Tom, Sarah, Lisa, Ravi, Luke, Julie, Jonathan Stray, the Council for Tech and Social Cohesion. At Microsoft I’ve met Mary, the Nancies, Zaidat, Emily, Chuncheng, Taj, Parker, Ryland, Tobias and the gang. At the UN I met Daanish, Naoko, Minji, Martin, Oleh, Zurab, Davit, Alex and the UN DPPA Georgia team. 
+Online, at work, through friends and conferences I’ve met Marcelo, João, Anthony, Stijn, Daniël and Daniel, Thomas, Anne, Clare, Peter, Natalia, Erik, Esther, Marloes, Fernando, Dale, Stefania, Lonneke, Janna, Giulia, Thais, Chico, Cass, Guillén, Max, Nathalie, Tom, Sarah, Lisa, Ravi, Luke, Julie, Jonathan Stray, the Council for Tech and Social Cohesion. At Microsoft I’ve met Mary, the Nancies, Zaidat, Emily, Chuncheng, Taj, Parker, Ryland, Tobias and the gang. At the UN I met Daanish, Naoko, Minji, Martin, Oleh, Zurab, Davit, Alex and the UN DPPA Georgia team. 
 
 There were friends from older roads along the way: Louis, Kiki, Lana, Kevin, Chiara, Alex, Anne, Liam, Santi, Alaíde, mãe, Astrid, Cristel, Emeline. 
 
@@ -38,7 +38,7 @@ When I thought I didn't have anyone else I meet I met Maud, and the road continu
 
 And I met Ivan. He was sitting at his desk eating his usual Dutch sandwich for a maximum of 15 minutes when I asked him, an archaeologist, if he had ever heard of media archaeology. That conversation turned into a friendship, and that friendship into adventures afar in the world.
 
-Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. It's the method, the code, the time late in the night answering my Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
+Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. He in fact wanted to do a PhD and never formally got to. But here it is: the method, the code, the time late in the night answering Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
 
 Ivan left, but this thesis is the road we walked together. It is dedicated to him. 
 
