@@ -90,13 +90,6 @@
     "harvard": "Alshamrani, S., Abuhamad, M., Abusnaina, A. and Mohaisen, D. (2020) ‘Investigating Online Toxicity in Users Interactions with the Mainstream Media Channels on YouTube’, in *Proceedings of International Workshop on Mining Actionable Insights from Social Networks*, pp. 6.",
     "link": ""
   },
-  "AlttechWillDiffuse2020": {
-    "author": "",
-    "year": "2020",
-    "inline": "(2020)",
-    "harvard": "Anon. (2020) ‘‘Alt-tech’ Will Diffuse Online Extremist Presence’, *Emerald Expert Briefings*, oxan-db(oxan-db). doi:10.1108/OXAN-DB250866",
-    "link": "https://doi.org/10.1108/OXAN-DB250866"
-  },
   "amadieuFormesContemporainesCensure2020": {
     "author": "Amadieu and Talon-Hugon",
     "year": "2020",
@@ -110,13 +103,6 @@
     "inline": "(Ambrosini et al., 2019)",
     "harvard": "Ambrosini, M., Van Hootegem, A., Bevelander, P., Daphi, P., Diels, E., Fouskas, T., Hellström, A., Hinger, S., Hondeghem, A., Kovats, A., Mazzola, A., Mescoli, E., Rea, A., Reidsma, M., Roblain, A. and Stern, V. (2019) *The Refugee Reception Crisis: Polarized Opinions and Mobilizations*. Editions de l'Université de Bruxelles. doi:10.26530/OAPEN_1005529",
     "link": "https://doi.org/10.26530/OAPEN_1005529"
-  },
-  "amparkerPurifyingAmericaWomen": {
-    "author": "Parker",
-    "year": "n.d.",
-    "inline": "(Parker, n.d.)",
-    "harvard": "Parker, A. (n.d.) ‘Purifying America: Women, Cultural Reform, and pro-Censorship Activism, 1873-1933’, *Journal of American History*, 85(2), pp. 698. doi:10.2307/2567836",
-    "link": "https://doi.org/10.2307/2567836"
   },
   "anannyProbablySpeechMaybe2019": {
     "author": "Ananny",
@@ -2673,13 +2659,6 @@
     "harvard": "Maddox, J. and Malson, J. (2020) ‘Guidelines Without Lines, Communities Without Borders: The Marketplace of Ideas and Digital Manifest Destiny in Social Media Platform Policies’, *Social Media + Society*, 6(2), pp. 2056305120926622. doi:10.1177/2056305120926622",
     "link": "https://doi.org/10.1177/2056305120926622"
   },
-  "magalhaesGreatSysopElon": {
-    "author": "Magalhães et al.",
-    "year": "n.d.",
-    "inline": "(Magalhães et al., n.d.)",
-    "harvard": "Magalhães, J. C., Keller, C. I. and Gorwa, R. (n.d.) ‘The Great Sysop: Elon Musk, X, and the Emergence of Platform Illiberalism’.",
-    "link": ""
-  },
   "magalhaesLongitudinalMappingOnline2022": {
     "author": "Magalhães and Katzenbach",
     "year": "2022",
@@ -3295,6 +3274,13 @@
     "inline": "(n.d.)",
     "harvard": "Anon. (n.d.) *OpenAI Platform*. Available at: https://web.archive.org/web/20240825142637/https://platform.openai.com/.",
     "link": "https://web.archive.org/web/20240825142637/https://platform.openai.com/"
+  },
+  "ordelmanSpeechRecognitionScholarly2018": {
+    "author": "Ordelman and Hessen",
+    "year": "2018",
+    "inline": "(Ordelman and Hessen, 2018)",
+    "harvard": "Ordelman, R. J. F. and Hessen, A. J. (2018) ‘Speech Recognition and Scholarly Research: Usability and Sustainability’, in *CLARIN 2018 Annual Conference*, pp. 163–168.",
+    "link": "https://research.utwente.nl/en/publications/speech-recognition-and-scholarly-research-usability-and-sustainab/"
   },
   "oremusAnalysisWhyElon2024": {
     "author": "Oremus and Hunter",

@@ -199,7 +199,7 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //      stylesheet can treat a Part's title page differently from a
     //      chapter's (a Part has a single H1, which is its real title).
     {
-      setTimeout(() => markInlineFormulas(host), 0);
+      setTimeout(() => { markInlineFormulas(host); markCaptions(host); }, 0);
       const kind = tocEntry(chapterSlug)?.kind;
       host.classList.remove("kind-front", "kind-part", "kind-chapter", "kind-back");
       if (kind) host.classList.add("kind-" + kind);
@@ -3836,6 +3836,20 @@ function setupCommenting() {
    only an image whose natural size is smaller than any figure would be gets
    the inline treatment.
    ─────────────────────────────────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────────────────────
+   Mark the paragraphs that are figure, table or prompt descriptions, so the
+   stylesheet can centre them and set the space around them: tight under the
+   thing they describe, clear before the prose that follows.
+   ─────────────────────────────────────────────────────────────────────────── */
+const CAPTION_RE = /^\s*(Figure|Table|Prompt|Listing)\s+[\w.]+\s*[.:]/i;
+function markCaptions(root) {
+  const scope = root || document.getElementById("manuscript");
+  if (!scope) return;
+  scope.querySelectorAll("p").forEach(p => {
+    if (CAPTION_RE.test(p.textContent || "")) p.classList.add("fig-caption");
+  });
+}
+
 function markInlineFormulas(root) {
   const scope = root || document.getElementById("manuscript");
   if (!scope) return;
