@@ -27,14 +27,16 @@ Like its counterparts, then, YouTube has had to find a balance between allowing 
 Aside from deplatforming, demotion has been studied specifically in relation to search ranking and recommendation mechanisms. While deplatforming may strictly delimit the boundaries of acceptable user behavior, demotion works to modulate the prominence of problematic contents in the overall assemblage of the platform. Since at least 2015, YouTube has focused on tweaking its ranking algorithms to control the visibility of “authoritative” and “borderline contents”, namely by down- or up-ranking each of these types of contents dynamically [@youtubeContinuingOurWork2019]. This technique is designed to prevent potentially problematic contents from gathering too much engagement before they infringe YouTube content moderation rules. Describing Facebook’s own demotion techniques, @constineFacebookWillChange2018 notes that this measure gives a certain flexibility to content moderation by supervising contents that approach the “policy line” separating allowed from prohibited contents. 
 
 ![Figure 1](images/figure%201-2.jpg)
-**Figure 1**. *Constine’s representation of the demotion technique in Facebook’s Newsfeed algorithm (in Constine, J. (2018) “Facebook will change algorithm to demote “borderline content” that almost violates policies”, TechCrunch, 15 November. Available at: [](https://social.techcrunch.com/2018/11/15/facebook-borderline-content/)[https://social.techcrunch.com/2018/11/15/facebook-borderline-content/](https://social.techcrunch.com/2018/11/15/facebook-borderline-content/) (Accessed: 20 February 2021).* Full image [here](https://edekeulenaar.github.io/phd/images/figure%201-2.jpg). ^figure-1
+
+**Figure 1.** *Constine’s representation of the demotion technique in Facebook’s Newsfeed algorithm (in Constine, J. (2018) “Facebook will change algorithm to demote “borderline content” that almost violates policies”, TechCrunch, 15 November. Available at: [](https://social.techcrunch.com/2018/11/15/facebook-borderline-content/)[https://social.techcrunch.com/2018/11/15/facebook-borderline-content/](https://social.techcrunch.com/2018/11/15/facebook-borderline-content/) (Accessed: 20 February 2021).* Full image [here](https://edekeulenaar.github.io/phd/images/figure%201-2.jpg). ^figure-1
 
 To understand the motive of demotion techniques, it is useful to look closely at what platforms mean by “borderline content”. On YouTube, “borderline content” is a term that appeared in June of 2019, a moment when the platform was under heavy criticism for allowing the circulation of historical revisionist, scientific racist and conspiratorial contents [@lewisAlternativeInfluence2018; @ekmanDarkSideOnline2014]. At the time, such contents did not immediately infringe upon the platform’s guidelines, but could arguably inform and at times incite violent behavior, as evidenced in the Charlottesville “Unite the Right” rally of August 2017 [@lindUniteRightViolent2017]. YouTube’s solution to closing this gap was to find a concept that could frame inchoate dangers: “borderline content” indeed refers to what “comes close to — but doesn’t quite cross the line of — violating our Community Guidelines” [@youtubeFourRsResponsibility2021; @youtubeContinuingOurWork2019], with examples as varied as “videos promoting a phony miracle cure for a serious illness, claiming the earth is flat, making blatantly false claims about historic events like 9/11” [@youtubeOurOngoingWork2019].
 
 By the beginning of the pandemic, demotion techniques on YouTube had also gained an educational function. While earlier efforts to raise authoritative contents may have been designed to counter-balance misinformation, the gravity and scale of COVID-19 has made it necessary to foster public consensus for local health policies and effectively funnel users toward common sources of information. Besides burying potentially problematic content in search and recommendation results, then, YouTube actively up-ranked what it called “authoritative” or “trusted sources”, which are described as mainstream journalistic outlets like “CNN, Fox News, Jovem Pan, India Today and the Guardian”, experts in given fields, such as “public health institutions” and local authorities [@youtubeFourRsResponsibility2021].
 
 ![Figure 2](images/figure%202-2.png)
-**Figure 2**. *YouTube’s timeline of actions taken to raise authoritative contents and reduce the spread of borderline content since 2015. In YouTube (2021) The Four Rs of Responsibility, Part 2: Raising authoritative content and reducing borderline content and harmful misinformation, blog.youtube.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%202-2.png). ^figure-2
+
+**Figure 2.** *YouTube’s timeline of actions taken to raise authoritative contents and reduce the spread of borderline content since 2015. In YouTube (2021) The Four Rs of Responsibility, Part 2: Raising authoritative content and reducing borderline content and harmful misinformation, blog.youtube.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%202-2.png). ^figure-2
 
 This represents something of a shift for a platform that has long been perceived as running on user-generated content. By observing the top twenty unpersonalized results of four queries over a period of time, Rieder et al. [-@riederRankingAlgorithmsRanking2018] find that YouTube’s role in determining the ranking of search results is typically only partial: it combines user strategies to up-rank competitors, user engagement (views, up- and downvotes, comments, subscriptions) and what the platform classifies as worthy of consumption based on relevance, recency, and user’s affinity with recommended contents [@davidsonYouTubeVideoRecommendation2010; @covingtonDeepNeuralNetworks2016]. Any platform intervention implies a careful “mediation or curation of [user-generated] content and, consequently, of perspectives or viewpoints”, including around different conceptions of “importance” and “authoritativeness” [@riederRankingAlgorithmsRanking2018, p. 52].
 
@@ -51,7 +53,8 @@ In contrast to contemporary YouTube studies [@arthursResearchingYouTube2018], we
 Our queries were designed based on conspiracy theories reported by news media up to late March 2020, and vernaculars proper to messaging boards known to produce such conspiracies [@dezeeuwTracingNormieficationCrossplatform2020], particularly 4chan’s /pol/ board and 8kun (formerly 8chan). Conspiracy theories or claims included the idea that COVID-19 is a Chinese or American bioweapon; that 5G is the cause of COVID-19; that Bill Gates has known about the pandemic beforehand and is profiting from it; or that it is simply a hoax [@knightWhatAreCOVID192020].
 
 ![Table 1](images/table%201.png)
-**Table 1**. *List of queries and their corresponding claims or conspiracy theories.* Full image [here](https://edekeulenaar.github.io/phd/images/table%201.png). ^table-1
+
+**Table 1.** *List of queries and their corresponding claims or conspiracy theories.* Full image [here](https://edekeulenaar.github.io/phd/images/table%201.png). ^table-1
 
 These conspiracies translated into 98 queries in total, though we ultimately narrowed our analysis to four queries: “id2020”, “wwg1wga”, “depopulation” and “5g radiation”. This is because we wanted to test search rankings for different types of moderated misinformation: while terms like “depopulation” and “wwg1wga” may be likely to be classified as “borderline content”, “id2020” and “5g radiation” are listed in YouTube’s COVID-19 Medical Misinformation Policy as contradicting the World Health Organization or public health authorities. Though similar in substance, these two types of misinformation are described and moderated differently according to YouTube policies.
 
@@ -60,7 +63,8 @@ These conspiracies translated into 98 queries in total, though we ultimately nar
 With these queries, we used youtube-dl [@garciagonzalezYoutubedl2022], an open-source command-line program to download videos and audio from YouTube. Youtube-dl allows one to capture metadata including channel names, channel IDs, video IDs, video comments, video transcripts, engagement (views, likes and dislikes), search rankings, and video status (e.g., “This video has been removed due to copyright.”). Due to the propensity of conspiracy videos to be platform-moderated, our youtube-dl script was scheduled to obtain the first three pages of search results for all 98 queries, every 20 minutes of every day, between April and October 2020. Our results, summarized in **[[#^table-2|Table 2]]**, indicate that April was a particularly active month for our queries, while June 2020 saw the explicit deletion of many videos that initially landed in our database.
 
 ![Table 2](images/table%202.png)
-**Table 2**. *Total number of videos and comments per month, including videos deleted by YouTube or users.* Full image [here](https://edekeulenaar.github.io/phd/images/table%202.png). ^table-2
+
+**Table 2.** *Total number of videos and comments per month, including videos deleted by YouTube or users.* Full image [here](https://edekeulenaar.github.io/phd/images/table%202.png). ^table-2
 
 ## Understanding YouTube’s moderation of COVID-19 misinformation
 
@@ -77,7 +81,8 @@ YouTube describes demotion as up-ranking or “raising” authoritative contents
 To complement the restrictions on metadata and API limits, we used youtube-dl to track the status of videos that fell under our query. Between April and June 2020, we were able to track the approximate day that videos previously appearing in query results were no longer available, alongside the message given by YouTube upon visiting a video that was previously captured. We found a total of 4,101 deplatformed videos in June 2020. To determine why these videos were sanctioned, we first examined the status labels of deleted videos, per query. A majority were not assigned a query, as queries were registered only by the time we began collecting search ranking results in April 2020. Before then, videos were assigned all queries indiscriminately. In order to determine their contents, we extracted the most prominent words in their audio transcripts using tf-idf [@ramosUsingTFIDFDetermine].
 
 ![Figure 3](images/figure%203-2.png)
-**Figure 3**. *Analyzing YouTube’s moderation of COVID-19 conspiracies.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%203-2.png). ^figure-3
+
+**Figure 3.** *Analyzing YouTube’s moderation of COVID-19 conspiracies.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%203-2.png). ^figure-3
 
 ## Mining for user comments on moderation
 
@@ -86,7 +91,8 @@ In order to discover how users relate to and discuss the impact of moderation on
 Our method was informed by Tangherlini et al.’s *Automated pipeline for the discovery of conspiracy and conspiracy theory narrative frameworks* [-@tangherliniAutomatedPipelineDiscovery2020], an ensemble of combined natural language processing techniques that consist in extracting syntactic and semantic elements of conspiracy theories from “noisy” social media posts and visualizing them as storytelling networks. We reconstructed subject-verb-object relations by extracting the relations between named entities; filtering relations based on their reference to conspiratorial narratives; and then filtering resulting networks based on their relationship to particular COVID-19 conspiracy themes. We did this by implementing the Python word2vec library [@Word2vecWrapperGoogle], which maps the n-grammatic relations between words through neural networking algorithms. Our basic subjects included “youtube”, “google”, “big tech”, “facebook”, and “twitter”; our verbs were those associated with moderation, such as “cancel”, “remove”, “delete”, “suspend”, “demonetize”; and conspiracy terms included in the query list of **[[#^table-2|Table 2]]**. We then normalized the verbs by lemmatizing them and normalized platform shorthands like “yt” and “fb” into their full referents. The results of this can be seen in **[[#^figure-13|Figure 13]]**.
 
 ![](images/figure%204-2.png)
-**Figure 4**. *Analyzing user reactions to moderation.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%204-2.png). ^figure-4
+
+**Figure 4.** *Analyzing user reactions to moderation.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%204-2.png). ^figure-4
 
 ## Methodological obstacles
 
@@ -103,7 +109,8 @@ Though YouTube’s conception of “misinformation” has changed significantly 
 It was not until later that year that “misinformation” is mentioned specifically in the context of ongoing efforts to contain extreme and conspiratorial contents off the platform [@youtubeContinuingOurWork2019]. In the context of COVID-19, “misinformation” or “misleading videos” are counterweighted by “authoritative sources”, and are described as a series of specific statements that contradict such authorities: as of May 21, 2020, it established a zero-tolerance policy for “content that contradicts the World Health Organization or local health authorities’ guidance on treatment, prevention, diagnostic and transmission.” (**[[#^figure-5|Figure 5]]**). Such contents range from assertions “that COVID-19 doesn’t exist or that people do not die from it”; “that COVID-19 is caused by radiation from 5G networks”; or that “the COVID-19 vaccine will kill people who received it.” [@youtubeCOVID19MedicalMisinformation2020]. YouTube only makes one exception by August 29th, which it later removes: artistic or critical contents that violate this policy, in the condition they also grant equal balance to “countervailing views from local health authorities [...] or to medical or scientific consensus.” This hardline approach is justified by the presence of “content where accuracy and authoritativeness are key”, and that become in this case crucial to users’ health [@youtubeYouTubeMisinformationHow2021].
 
 ![Figure 5](images/figure%205-2.png)
-**Figure 5**. *Overview of YouTube’s Medical Misinformation policy.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%205-2.png). ^figure-5
+
+**Figure 5.** *Overview of YouTube’s Medical Misinformation policy.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%205-2.png). ^figure-5
 
 On the other hand, YouTube also maintains its demotion policy for borderline contents while increasing its efforts to centralize access to authoritative sources on search, recommendation results and homepages [@youtubeYouTubeMisinformationHow2021]. Contrary to hardline policies, demotion grants some exceptions to problematic contents: “recommendations systems do not proactively recommend [borderline] content”, but borderline videos may still “appear in recommendations for channel subscribers and in search results” [@youtubeYouTubeMisinformationHow2021].
 
@@ -112,53 +119,61 @@ On the other hand, YouTube also maintains its demotion policy for borderline con
 The effects of “hard moderation” are especially palpable while examining the quantity of misinformation that appears through YouTube’s discovery mechanisms. We find that, after implementing its COVID-19 Medical Misinformation policy on May 21, 2020, the numbers of videos making conspiratorial claims decreased steadily on the platform. Of all the 108,537 videos we captured, 4,101 were unavailable by June, 2020 (**[[#^figure-6|Figure 6]]**). Most of the moderation prompts that occurred stated simply that videos were removed for violating YouTube’s community guidelines, or were simply shown as unavailable or as belonging to a terminated user account. Only a small number of videos have been removed for inciting hatred, involving violence or harassment, or because of copyright claims (see **[[#^annex|Annex]]**).
 
 ![Figure 6](images/Figure%206%202.png)
-**Figure 6**. *Number of removed videos and comments between April and October of 2020. Striped sections represent periods in which COVID-19 misinformation policies come into force.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%206%202.png). ^figure-6
+
+**Figure 6.** *Number of removed videos and comments between April and October of 2020. Striped sections represent periods in which COVID-19 misinformation policies come into force.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%206%202.png). ^figure-6
 
 Looking at the types of content YouTube deleted (**[[#^figure-7|Figure 7]]**), we find that YouTube targets specific claims listed in YouTube’s COVID-19 Medical Misinformation policy (**[[#^figure-5|Figure 5]]**), namely allegations that COVID-19 is caused by 5G radiation; that vaccination is an operation to implement microchips; that the virus is a (Chinese) bioweapon or a concocted hysteria; and claims that one can use prayers and other spiritual methods to treat the virus. Here, the hardline aspects of deplatforming are especially visible in the absence of tolerance for contents that are usually up to users’ discretion, namely religious beliefs.
 
 ![Figure 7](images/figure%205%201.png)
-**Figure 7**. *Tf-idf network of all 4,101 banned videos, clustered by modularity.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%205%201.png). ^figure-7
+
+**Figure 7.** *Tf-idf network of all 4,101 banned videos, clustered by modularity.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%205%201.png). ^figure-7
 
 ## Soft moderation: demotion
 
 We find three main tendencies within YouTube’s demotion of conspiratorial videos on COVID-19. The first is the effective demotion of videos making claims contrary to the World Health Organization and local health authorities’ guidelines (for example, a video titled “Claims that COVID-19 is caused by radiation from 5G networks”) and “borderline contents” (both in red in **[[#^figure-8|Figure 8]]**), as well as the up-ranking of videos by mainstream news channels or “authoritative sources” (in blue). This is particularly applicable to results for the query “id2020” (**[[#^figure-8|Figure 8]]**). “Id2020” refers to a microchip that users allege will be sold in combination with COVID-19 vaccines promoted by Bill Gates; YouTube refers to variations of this conspiracy theory as “Claims that the COVID-19 vaccine will contain a microchip or tracking device.” [@youtubeCOVID19MedicalMisinformation2020].
 
 ![Figure 8](images/figure%207-2.png)
-**Figure 8**. *Demoted and up-ranked search results for the query “id2020”.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%207-2.png). ^figure-8
+
+**Figure 8.** *Demoted and up-ranked search results for the query “id2020”.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%207-2.png). ^figure-8
 
 The second tendency, which casts doubt on the long-term effectiveness of the first, is the eventual resurfacing of borderline contents on top of search ranking results. We see that few borderline contents surface in search results for the query “COVID depopulation” up until July 2020, which YouTube sanctions as videos that “claim that the COVID-19 vaccine will be used as a means of population reduction” (**[[#^figure-9|Figure 9]]**). In August 2020, the video “IS THERE AN AGENDA BEHIND THIS VIRUS? - COVID-19 Government Agenda” remains on top for over two months, starting in late August 2020.
 
 ![Figure 9](images/figure%208%20%28top%20dots%20used%20to%20be%20red%20-%20changed%29.png)
-**Figure 9**. *Demoted and up-ranked search results for the query “depopulation”.* ^figure-9
+**Figure 9.** *Demoted and up-ranked search results for the query “depopulation”.* ^figure-9
 
 The third tendency is the effect of deplatforming on demoting borderline videos. Queries related to Qanon, such as the Q motto “wwg1wga” (where we go one, we go all), were largely left undetected until YouTube cracked down on the conspiracy around early October [@sandlerYouTubeCracksQAnon2020]. This highlights a symbiotic relationship between the two techniques; as evidenced by Figures **[[#^figure-8|8]]**, **[[#^figure-9|9]]** and **[[#^figure-10|10]]**, in few instances does either work independently of the other.
 
 ![Figure 10](images/figure%209-2.png)
-**Figure 10**. *Demoted and up-ranked search results for the query “wwg1wga”.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%209-2.png). ^figure-10
+
+**Figure 10.** *Demoted and up-ranked search results for the query “wwg1wga”.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%209-2.png). ^figure-10
 
 ## Reactions to hard moderation
 
 How are hard and soft moderation techniques interpreted by affected users? At first glance, we see similarities with Myers West’s findings [-@myerswestCensoredSuspendedShadowbanned2018] on the “stigmatized” status of moderated knowledge [@barkunConspiracyTheoriesStigmatized2016]. In the absence of clear (and trusted) justifications for moderation, users effectively draw “connections between related phenomena, developing non-authoritative conceptions of why and how their content was removed” [@myerswestCensoredSuspendedShadowbanned2018, p. 8]. Users perceive moderation as an activity of YouTube engaging in the censorship and deletion of various undisclosed truths on the virus (**[[#^figure-11|Figure 11]]**). Some complement the absence of clear reasons for deletion (see **[[#^annex|Annex]]**) with more elaborate theorizations of YouTube’s motives for deleting contents, in that some claim that video testimony of doctors and nurses disappear as part of a general cover-up for the spread of crowdsourced information. In the position of the conspirator, YouTube is perceived as operating for political motives, with some users complaining that YouTube acts as “a liberal cesspool of swamp creatures.”
 
 ![Figure 10](images/figure%2013.png)
-**Figure 11**. *Word tree for “youtube is deleting the”. Every line is a comment (n = 19 comments).* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2013.png). ^figure-11
+
+**Figure 11.** *Word tree for “youtube is deleting the”. Every line is a comment (n = 19 comments).* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2013.png). ^figure-11
 
 The relations between a wider swath of conspiratorial narratives about the political affiliations and obscure motives of YouTube are made clearer in **[[#^figure-12|Figure 12]]**, which indicates words that are associated with “YouTube” in user comments. As we move clockwise throughout the months the graph represents, we see a shift in commenters’ interpretations of the motives behind YouTube’s content moderation. While in March, commenters remarked that YouTube kept on “suspending”, “demonetizing” or “manipulating” their contents, in May they accused the platform of “bias” and progressively of suppression, censorship and blacklisting. As critiques become suspicions of persecution, commenters formulate more elaborate explanations of YouTube’s political functions as covering governments, supporting pedophiles, or pushing propaganda and other rhetoric. This final constellation describes the through-lines that build between YouTube’s content moderation and a concern regarding the suppression of stigmatized truths [@krugAlternateAuthenticities92016].
 
 ![Figure 11](images/figure%2011-2.png)
-**Figure 12**. *Subject-verb-object network of sentences mentioning YouTube, moderation and COVID-19 conspiracies. Colors indicate the months in which comments were uploaded. Line thickness indicates the strength of the n-grammatic association between the root word, “YouTube”, and the word at the end of the node.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2011-2.png). ^figure-12
+
+**Figure 12.** *Subject-verb-object network of sentences mentioning YouTube, moderation and COVID-19 conspiracies. Colors indicate the months in which comments were uploaded. Line thickness indicates the strength of the n-grammatic association between the root word, “YouTube”, and the word at the end of the node.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2011-2.png). ^figure-12
 
 ## Reactions to soft moderation
 
 User reactions to demotion are illustrated by comments around “shadowbanning”, a vernacular term that refers to algorithmic interventions to reduce the visibility and spread of user-generated contents. Of note is a certain attunement to potential demotion: remarks that a specific video “does not come up at all in youtube search”, that certain contents “make it through [a] filter”, or that a video that was previously banned is now “coming to the light” (**[[#^figure-13|Figure 13]]**). This supposed demotion is complemented by suspicions that personal characteristics, beliefs or sanctioned knowledge must be the object of persecution. Emerging from this is the suspicion that moderation is biased, which seems to violate YouTube’s claims to provide a platform — in the sense of a democratically accessible venue for speech — for user-generated content (“They pretend to be platforms but they are not”).
 
 ![Figure 12](images/figure%2012-2.png)
-**Figure 13**. *Word tree for “shadowbanned” (n = 16 comments).* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2012-2.png). ^figure-13
+
+**Figure 13.** *Word tree for “shadowbanned” (n = 16 comments).* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2012-2.png). ^figure-13
 
 Still, YouTube’s interventions do not hamper the production of conspiratorial information altogether. “Authoritative” sources, like videos by scientific experts, local health authorities or mainstream news media, are typically the object of conspiratorial suspicions in the comment sections. One top ranking video for the query “depopulation”, “Empty Planet: Preparing for the Global Population Growth” by the Center for International Governance Innovation, shows political scientist Darrell Bricker and journalist John Ibbitson having an armchair discussion around the thesis that, contrary to popular knowledge, the human population is likely to decline dramatically (Center for International Governance Innovation, 2019). Commenters see this discussion as evidence that COVID-19 is part of a covert plan to decrease the world’s human population, and that the speakers and the institutions they mention are enmeshed in an elite that knew of this policy far before the pandemic struck (**[[#^figure-14|Figure 14]]**).
 
 ![Figure 13](images/figure%2013-2.png)
-**Figure 14**. *Screenshot of top-ranking comments for the video “Empty Planet: Preparing for the Global Population Growth”, taken on January 20th, 2021. User names and profile pictures have been anonymized.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2013-2.png). ^figure-14
+
+**Figure 14.** *Screenshot of top-ranking comments for the video “Empty Planet: Preparing for the Global Population Growth”, taken on January 20th, 2021. User names and profile pictures have been anonymized.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2013-2.png). ^figure-14
 
 # Conclusions
 
@@ -179,7 +194,8 @@ What to make of this? While this question certainly cannot be answered with a ca
 # Annex ^annex
 
 ![Figure 14](images/figure%2014-2%201.png)
-**Figure 15**. *Alluvial diagram of deleted videos, sorted by moderation labels. Visualization made by Guilherme Appolinário.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2014-2%201.png). ^figure-15
+
+**Figure 15.** *Alluvial diagram of deleted videos, sorted by moderation labels. Visualization made by Guilherme Appolinário.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2014-2%201.png). ^figure-15
 
 
 <div class="page-break" style="page-break-before: always;"></div>

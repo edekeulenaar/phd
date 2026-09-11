@@ -89,7 +89,8 @@ For comparison, all of YouTube’s policies were collected using the Wayback Mac
 The YouTube dataset was filtered to only contain references to debates about what constitutes acceptable language (“you can’t say *”; “* is unacceptable”, “* should be suspended OR removed OR banned OR canceled”, etc.); moderation (“suspended”, “demoted”, “shadowbanned”...); discrimination (“hate”, “harassment”, “discrimination”, “antisemitism”...); and fakeness (“fake news”, “misinformation”, “disinformation”, and so on) (see **[Table 1](#^table-1)**).
 
 ![CH4 CS1 Table 1](images/CH4%20CS1%20Table%201.png)
-**Table 1**. *Terms used to filter Dimitri Tokmetzis’ YouTube dataset (2006–2022).* Full image [here](https://edekeulenaar.github.io/phd/images/CH4%20CS1%20Table%201.png). ^table-1
+
+**Table 1.** *Terms used to filter Dimitri Tokmetzis’ YouTube dataset (2006–2022).* Full image [here](https://edekeulenaar.github.io/phd/images/CH4%20CS1%20Table%201.png). ^table-1
 
 ## Analysis
 
@@ -106,7 +107,8 @@ It is important to highlight what is meant by “distant reading”, here. In on
 Next, we looked at how commenters discussed YouTube’s content moderation, or moderation in general. This implied filtering comments for sentences containing the expressions “YouTube should”, “YouTube should remove” or “YouTube should allow”, and then finding prominent themes in the ending of each sentence. We used word trees [@wattenbergWordTreeInteractive2008] for this task. The technique finds sentence completions for common prefixes and guided the close reading that follows rather than serving as a standalone result. As we found diverging ideas of what and how YouTube ought to moderate, we also examined how users conceptualized YouTube as a space, comparing sentences that mentioned “YouTube is” over time (Figures **[8](#^figure-8)** and **[9](#^figure-9)**).
 
 ![Figure 1](images/Emillie%20AoIR%20method%202022.png)
-**Figure 1**. *Method diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/Emillie%20AoIR%20method%202022.png). ^figure-1
+
+**Figure 1.** *Method diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/Emillie%20AoIR%20method%202022.png). ^figure-1
 
 # Findings
 
@@ -117,6 +119,7 @@ Looking at YouTube, we see that its policies, like Twitter’s (see [Part V. Mod
 Then, from 2014 onward, policies undergo a period of conceptual refinement, or complexification [@passmannHealthyCommunitiesToxic2023b]. Technically, the Community Guidelines page fragments into pages dedicated to each type of sanctioned object: hate speech, spam, violent or graphic content, harmful or dangerous content, and content deriving from salient events, such as the COVID-19 crisis and elections. In this context, enforcement techniques begin to move from a plethora of deletion methods to dynamic demotion. This technique is explicitly applied to what the platform calls “borderline content” [@youtubeFourRsResponsibility2021], which denotes conspiratorial, hateful or other content with varying levels of objectionability, depending on context, public or regulatory opinion. 
 
 ![Figure 2](images/Figure%202%205.png)
+
 **Figure 2a.** *Number of YouTube policy edits (2006-2022) and mentions of enforcement options (2007-2021).* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%202%205.png). ^figure-2a
 
 ## Comments: from unacceptable speech to unacceptable speech moderation
@@ -124,42 +127,50 @@ Then, from 2014 onward, policies undergo a period of conceptual refinement, or c
 How do these policies compare to users’ discussions about problematic speech? In **[Figure 2b](#^figure-2b)**, we see that different issues are given slightly different levels of attention. The most discussed type of objectionable content is racism (or racists, depending on the term ending), followed by abuse / abusive, bigot / bigoted, discrimination / discriminate, sexist / sexism and offensive / offensiveness. The persistence of racism as the most mentioned term among filter keywords reveals, at least partly, its importance in wider (English-speaking) debates on speech norms. One could see it as a sort of “anchoring issue” that upholds both *debate* about speech norms and the normative imperatives that derive from it. 
 
 ![](images/Figure%203.1.png)
+
 **Figure 2b.** Mention frequencies of different kinds of problematic speech in YouTube comments, 2006-2022. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%203.1.png). ^figure-2b
 
 In **[Figure 3](#^figure-3)**, one can see similar fluctuations in meaning in what commenters associated with “unacceptability” over time. At first, commenters point to *unacceptable issues*, beginning with the same “constant extremes” identified in early YouTube policies: “murder”, killing “innocent lives”, “barbaric” and “cruel” crimes, “violence”, its “viciousness”, violence committed by “islamic” movements, “terrorist groups” or “sponsored terrorists”. 
 
 ![](images/figures-Figure%203.png)
-**Figure 3**. Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. “Constant extremes” highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/figures-Figure%203.png). ^figure-3
+
+**Figure 3.** Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. “Constant extremes” highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/figures-Figure%203.png). ^figure-3
 
 Comments then move from discussing *unacceptable issues* to *unacceptable speech*, beginning with “racism”, “blasphemy”, “abusevely insulting” someone, “anti-gay bigotry”, “discrimination” or “discriminating”, speech referring to “gay” people or “gender”, “racial profiling” (**[Figure 4](#^figure-4)**). 
 
 ![](images/Figure%204.png)
-**Figure 4**. Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. “Violent language” highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%204.png). ^figure-4
+
+**Figure 4.** Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. “Violent language” highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%204.png). ^figure-4
 
 From 2014, commenters refer to speaking about one’s “skin color”, “divison and hate”, “locker room talk” (likely in reference to Trump Access tapes), “anti semitism” and “slurs” (**[Figure 5](#^figure-5)**).
 
 ![](images/Figure%205.png)
-**Figure 5**. Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. Misinformation highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%205.png). ^figure-5
+
+**Figure 5.** Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. Misinformation highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%205.png). ^figure-5
 
 From 2011, we see evidence of users discussing not how others ought or ought not to speak, but unacceptable ways of moderating speech itself. Some refer to “free speech” and “Internet chaos”; free speech becomes a more discussed topic in 2017, and from 2019 some critique the fact of “interrupting” or “shouting at opponents”; the “refusal” and “concealed censorship” of “mainstream” media with regards to opposite points of views; the tendency for debates to be managed by it; the circumstances or plausibility of “safe” or “risk spaces”; “censorship” at “university classroooms”; the “usage of language” and its links with “behavior” (**[Figure 6](#^figure-6)**).  
 
 ![](images/Figure%206.png)
-**Figure 6**. Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. Speech moderation highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%206.png). ^figure-6
+
+**Figure 6.** Frequently mentioned phrases in YouTube comments mentioning the term “unacceptable”, 2004-2022. Speech moderation highlighted. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%206.png). ^figure-6
 
 Progressively, we see a shift in discussions about *unacceptable issues*, to *unacceptable speech*, to *unacceptable ways of moderating speech*; or, at the limit, to a point where what is unacceptable is each other’s speech moderation. This can be seen in discussions about how to deal with hate speech (**[Figure 7](#^figure-7)**). Naturally, the age-old US debate on where to delineate the boundaries of hate and free speech is evident, here, too. While some consider hate speech to be “free” or “protected” speech, others express concern about its presence in the platform (“hate speech is a real thing”) or illegality (“hate speech is illegal for services in the us”). 
 
 ![](images/Pasted%20image%2020260614201809.png)
-**Figure 7**. Word tree of YouTube comments mentioning “hate speech”, 2004-2022. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260614201809.png). ^figure-7
+
+**Figure 7.** Word tree of YouTube comments mentioning “hate speech”, 2004-2022. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260614201809.png). ^figure-7
 
 As speech moderation becomes more explicit — from both other users or by the platform — the vision of YouTube that commenters express also begins to change. In 2011 (**[Figure 8](#^figure-8)**), YouTube was described as a “great place” or “forum” to “meet awesome people”, “share different views”, “blurt out any shit that comes to your mind”, “share different views”, “sharing ideas”, “spreading a message”; or a “great source for intellectual debate” and “learning”; and in other ways, still, a place “to be reminded that there are still a lot of dumbfucks” or “ignorants to gather in groups and support one another’s ignorance”. 
 
 ![](images/Pasted%20image%2020260614201817.png)
-**Figure 8**. Word tree of YouTube comments mentioning “YouTube is a”, 2004-2011. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260614201817.png). ^figure-8
+
+**Figure 8.** Word tree of YouTube comments mentioning “YouTube is a”, 2004-2011. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260614201817.png). ^figure-8
 
 By 2021 (**[Figure 9](#^figure-9)**), as the platform’s active role in organizing and moderating content becomes more apparent, the artificiality of the platform becomes more visible. YouTube is seen as a “private company”, “business” with “rules and regulations”, which “may remove videos that violate their terms of service” or “ban whoever it wants and pretty much arbitrarily”. 
 
 ![](images/Pasted%20image%2020260614201825.png)
-**Figure 9**. Word tree of YouTube comments mentioning “YouTube is a”, 2011-2021. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260614201825.png). ^figure-9
+
+**Figure 9.** Word tree of YouTube comments mentioning “YouTube is a”, 2011-2021. Full image [here](https://edekeulenaar.github.io/phd/images/Pasted%20image%2020260614201825.png). ^figure-9
 
 # Discussion
 

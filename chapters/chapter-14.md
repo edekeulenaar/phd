@@ -27,7 +27,7 @@ In making those decisions, platforms have eventually broken the illusion of bein
 
 ![Figure 1](images/image24.png)
 
-**Figure 1**. *An example of platform normative demarcation, where “problematic content” is placed on a spectrum of more to less severe content moderation measures. Less severe and poorly defined “borderline” content may be demoted, while illegal content (pedophilia, terrorism, etc) will be irredeemably removed.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-01.png). ^figure-1
+**Figure 1.** *An example of platform normative demarcation, where “problematic content” is placed on a spectrum of more to less severe content moderation measures. Less severe and poorly defined “borderline” content may be demoted, while illegal content (pedophilia, terrorism, etc) will be irredeemably removed.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-01.png). ^figure-1
 
 But these norms are “essentially contested” [@gallieIXEssentiallyContestedConcepts1956; @delaatCoercionEmpowermentModeration2012] and have been vulnerable to profoundly contentious debates about what constitutes problematic speech — not least because of the dramatic expansion of political voices once marginalized in legacy media environments [@mungerRightWingYouTubeSupply2022]. It is also evident that definitions of what amounts to discrimination and misinformation have evolved dramatically throughout highly dynamic and often polarized online debates, as well as social movements spearheaded online. Again through a problem of demarcation, platforms have mostly opted to follow the winds of social change and adapt their policies to the norms of their time (see [Chapter 13. Modulating moderation](#/chapter-13)). As is more apparent today, these decisions have put platforms at the center of global “culture wars”, waged in part around competing definitions of hate speech, authenticity and the necessity to moderate public debate to protect individuals from historical “harms” [@sanderFreedomExpressionAge2019].
 
@@ -45,7 +45,7 @@ Though there have been many content moderation changes, in general this shift co
 
 ![Figure 2](images/image15%201.png)
 
-**Figure 2**. *A representation of X’s “freedom of speech but not reach” content moderation spectrum*. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-02.png). ^figure-2
+**Figure 2.** *A representation of X’s “freedom of speech but not reach” content moderation spectrum*. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-02.png). ^figure-2
 
 # X as a competing democracy
 
@@ -67,7 +67,7 @@ Then, there are Community Notes — one of Musk’s “favorite features” [Mus
 
 ![Figure 3](images/image20.png)
 
-**Figure 3**. *A representation of Community Notes sorting mechanisms.* Full image [here](https://edekeulenaar.github.io/phd/images/image20.png). ^figure-3
+**Figure 3.** *A representation of Community Notes sorting mechanisms.* Full image [here](https://edekeulenaar.github.io/phd/images/image20.png). ^figure-3
 
 Community Notes is distinct from other content moderation features because it veers beyond the terminology of consensus-building or “civic dialogue”, borrowed in part from cited works on values in design [@ovadyaBridgingSystemsOpen2023; @strayDesigningRecommenderSystems2022]. The clustering algorithm behind Community Notes, for example, is presented as a “bridging system” [@wojcikBirdwatchCrowdWisdom2022a], i.e., an algorithm designed to calculate and up-scale (up-rank, make more visible, etc.) consensus across users of different “divides” (be these political, cultural, linguistic, or else). Community Notes’ clustering algorithm was initially developed by Polis, a public survey platform where pollsters can invite users to find where and how they agree on issues they propose to discuss – also cited as “bridge-based” [@wojcikBirdwatchCrowdWisdom2022a].
 
@@ -87,7 +87,7 @@ In what follows, I will explain the methodological decisions taken to examine X�
 
 ![Figure 4](images/image14%201.png)
 
-**Figure 4**. *Methodology diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-04.png). ^figure-4
+**Figure 4.** *Methodology diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-04.png). ^figure-4
 
 ## Policies
 
@@ -121,18 +121,19 @@ To classify posts into topics, it was necessary to first draw from a representat
 
 | You are an expert in Dutch public affairs. Categorize Dutch tweets based on the main topic.  <br>  <br>Instructions:  <br>- The first mention after “@” is the tweet author (e.g., in “\@realdonaldtrump something”, the author is “realdonaldtrump”).  <br>- Only return the number of a topic.  <br>- If none fit, return: “0 - [three-word summary]” (e.g., “0 - crocodile shop”).  <br>- No extra text.  <br>  <br>Topics:  <br>(1) Ukraine war, Russia, Putin  <br>(2) Gaza-Israel war  <br>(3) Tensions from the Gaza war (antisemitism, pro-Palestine protests, protest vandalism and police brutality)  <br>(4) The war in Afghanistan or Iraq  <br>(5) Second World War  <br>(6) Colonial history  <br>(7) Other historical events  <br>(8) (Im)migration  <br>(9) Tensions with migrants (incl. Muslims)  <br>(10) Demographic replacement theories (“omvolking”, fall of Western culture/civilization)  <br>(11) Medicine, healthcare, health policies, wellbeing, COVID, alternative treatments, healthy eating tips, safe smoking  <br>(12) Wildlife, environment, natural resources incl. carbon  <br>(13) Climate change, crisis, global warming, carbon emissions, extreme weather, related debates (e.g., Extinction Rebellion)  <br>(14) Dutch or EU energy  <br>(15) European or Dutch farmers, nitrogen crisis  <br>(16) Critique of left-wing identity politics, “wokeness”, gender  <br>(17) Debates about social norms (racism, xenophobia, misogyny, harassment, sexism, homophobia, language in the workplace)  <br>(18) Social, economic and political justice/critique (emancipation, anti-racism, wealth distribution/inequality, fair wages, etc.)  <br>(19) Black Pete (Zwarte Piet)  <br>(20) Censorship, freedom of speech, speech norms  <br>(21) Indoctrinating children with woke ideology  <br>(22) Left-wing bias in academia or schools  <br>(23) Criticism of news media  <br>(24) Support for alternative media or narratives  <br>(25) Manipulated media / fact checking etc  <br>(26) Advertisements or scams (e.g., stylish zip sweaters)  <br>(27) Theories or conspiracies regarding WEF, NWO, depopulation, Agenda 21, “you will own nothing”, deep state, Klaus Schwab, chemtrails, elite pedophiles, etc.  <br>(29) Aliens  <br>(30) Housing, housing crisis, occupying or squatting houses  <br>(31) Amsterdam  <br>(32) Inflation, cost of living or products  <br>(33) Fireworks  <br>(34) Dutch railways, train travel time, infrastructure (cycling, cars, etc)  <br>(35) Dutch government, cabinet, parliament  <br>(36) Dutch elections, voting  <br>(37) left-wing politician/party  <br>(38) right-wing politician/party  <br>(39) Elon Musk, Tesla, SpaceX  <br>(40) anything relating to Twitter or X  <br>(41) Sports (players, teams, tournaments, football teams like Ajax, etc.)  <br>(42) US politics (Trump, US elections, Biden, Harris or other)  <br>(43) anything happening in other EU countries  <br>(44) child sexual abuse  <br>(45) international relations or affairs  <br>(46) military conscriptions and defense  <br>(47) taxes, budget cuts or fiscal policies  <br>(48) crimes, arrests, corruption  <br>(0) Other (return “0 - [three-word summary]”) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-**Prompt 1**. *Prompt used to categorize posts containing community notes.* ^prompt-1
+**Prompt 1.** *Prompt used to categorize posts containing community notes.* ^prompt-1
 
 Once done, I manually verified each result, grouped similar categories and corrected fuzzy annotations, as this procedure is faster than manually coding posts from scratch. Posts that did not refer or revolve around Dutch issues (e.g., posts about Belgium) were removed. The final number of community notes was 6,430, applied to a total of 4,718 posts. Given their granularity, each topic was given a general category (see **[Table 1](#^table-1)**).
 
 ![Table 1](images/Chapter%2014%20-%20Table%201.png)
-**Table 1**. *Community note post categories and sub-categories.* Full image [here](https://edekeulenaar.github.io/phd/images/table-topics-by-category.png). ^table-1
+
+**Table 1.** *Community note post categories and sub-categories.* Full image [here](https://edekeulenaar.github.io/phd/images/table-topics-by-category.png). ^table-1
 
 From there, I proceeded to classify post authors (users). Here, too, I used GPT-4o-mini iteratively to assign a category to each user based on their username, description and an example post (namely, the one with most engagement). The prompt used also contained examples for every category. GPT-4o-mini was run twice; the first time without user descriptions, and the second with. Results were verified manually.
 
 | You are an expert in Dutch public affairs, assisting in identifying Dutch Twitter users. Based on the provided username, user description, and tweet, select the most appropriate category from the list below.  <br>  <br>**Important:**    <br>- Only select **“Other”** if the user does **NOT** fit **any** of the categories listed below.    <br>- Do **NOT** select “Other” if the correct category already exists in the list.    <br>  <br>If none apply, choose **“Other”** and specify who the user is in exactly two words (e.g., Other: tech entrepreneur).  <br>  <br>Categories:  <br>- Academic (docent, researcher, analyst)  <br>- Activist or advocacy  <br>- Alternative influencer (conspiracy theorist, advocate of alternative or transgressive viewpoints)  <br>- Artist or entertainer (musician, visual artist, actor, or anyone in the cultural sector)  <br>- Author, writer  <br>- Center-left politician or party (PvdA, Groen Links, DENK)  <br>- Center-right politician or party (VVD, NSC, CDA)  <br>- Left-wing politician or party (SP, Partij voor de Dieren)  <br>- Centrist politician or party (D66, Christen Unie, Volt, 50PLUS)  <br>- Far-right or right-wing politician or party (PVV, BBB, Forum voor Democratie, SGP, JA21)  <br>- Company, business  <br>- Fact-checker  <br>- Dutch government or cabinet  <br>- Online influencer  <br>- Journalist, columnist, commentator  <br>- Dutch ministry  <br>- Monarch  <br>- News media, broadcaster  <br>- NGO  <br>- Religious figure, organization or account  <br>  <br>**Instructions:**    <br>- Return **only** the category name.    <br>- If you select “Other,” format your response as: **Other: [two-word description]**    <br>- Do **NOT** repeat instructions, add explanations, or include unnecessary text. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-**Prompt 2**. *Prompt used to categorize the authors of posts containing community notes.* ^prompt-2
+**Prompt 2.** *Prompt used to categorize the authors of posts containing community notes.* ^prompt-2
 
 ### Analysis
 
@@ -219,7 +220,8 @@ Here, the analysis consisted in verifying what was removed and what remained onl
 ## Total values
 
 ![Table 2](images/Screenshot%202026-08-28%20at%2015.18.01.png)
-**Table 2**. *Total distributions across community notes and posts obtained via search results.* Full image [here](https://edekeulenaar.github.io/phd/images/Screenshot%202026-08-28%20at%2015.18.01.png). ^table-2
+
+**Table 2.** *Total distributions across community notes and posts obtained via search results.* Full image [here](https://edekeulenaar.github.io/phd/images/Screenshot%202026-08-28%20at%2015.18.01.png). ^table-2
 
 # What Twitter was
 
@@ -230,14 +232,16 @@ In what follows, I look more specifically at how X policies and content moderati
 Before Musk’s takeover, it could be argued that Twitter underwent three major phases. The first spanned from roughly 2010 to 2016 and was initially defined by a relatively lax model of moderation (**[Figure 5](#^figure-5)**). As a self-described “aggressively open company” [@Twitter2010], users “owned” what they “shared” [@Twitter2010]: they bore responsibility for “the content he or she provided” as much as they exercised the knowledge to judge what may be unacceptable to themselves and others. The only exception to the rule was content that could enter the jurisdiction of local law enforcement, which the platform frequently mentioned in its Abusive behavior policy. This included specific statements of violence against others and other content that may lead to physical consequences against users [@twitterTwitterHelpCenter2013]. The level of tolerance for these kinds of content was minimal, though not absolutely so. While most measures were phrased vaguely as internal “investigations for abuse”, they were the only types of content other than “direct, specific threats of violence against others” that deserved a permanent suspension.
 
 ![Figure 5](images/image18.png)
-**Figure 5**. *Twitter’s content moderation regime circa 2010. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-05.png). ^figure-5
+
+**Figure 5.** *Twitter’s content moderation regime circa 2010. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-05.png). ^figure-5
 
 ## 2013–2017: deletions and suspensions
 
 By January 2016, Twitter began to introduce an array of policies to combat a variety of “harms” and “spam content”, including “abusive behavior”, “hateful conduct”, “hateful imagery” and “violence” (see **[Figure 6](#^figure-6)** below). By 2016, the context was of course the “techlash” that ensued after journalistic and academic diagnoses of “fake news” and hate speech scandals during the Brexit referendum and US elections. Mounting pressure from all sides of public debate, in particular state actors and legislators, meant multiplying a taxonomy of “harms” for the platform to moderate and introducing more guardrails in the form of deletions, temporary or permanent suspensions.
 
 ![Figure 6](images/image34.png)
-**Figure 6**. *Twitter’s content moderation regime circa 2013–17. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-06.png). ^figure-6
+
+**Figure 6.** *Twitter’s content moderation regime circa 2013–17. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-06.png). ^figure-6
 
 ## 2017–2022: modularity
 
@@ -246,7 +250,8 @@ In response to the first techlash of 2018, Twitter had, by 2020, developed a num
 At the same time, the dynamic aspects of objectionability — the possibility that some content may become problematic tomorrow, based on the shifting norms of users and institutions — pushed Twitter, Google and Meta to design more granular moderation techniques. These are demotion (downranking tweets in replies and newsfeeds); hiding sensitive or problematic tweets unless a user clicks on them; and a “strike system” that allows users to return after temporary suspension. From 2016, then, moderation techniques shifted from a relatively binary logic of deletion and suspension, to one where Twitter attempted to preemptively moderate potentially and relatively objectionable content. 
 
 ![Figure 7](images/image32.png)
-**Figure 7**. *Twitter’s content moderation regime circa 2019–21. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-07.png). ^figure-7
+
+**Figure 7.** *Twitter’s content moderation regime circa 2019–21. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-07.png). ^figure-7
 
 The end result, in **[Figure 7](#^figure-7)**, was a platform that simultaneously maintained clearly defined boundaries (seen in dark red, indicating permanent suspensions) as well as conditional or modular ones (seen in blue shades, indicating demotion or rendering content invisible). In more or less discrete funding calls, Twitter invited content moderation initiatives more attuned to the “health of public debate” [@twitterTwitterHealthMetrics2018], using a terminology alluding to public or civic dialogue, depolarization and conflict reconciliation. Community Notes emerged in this context as an improved type of “fact checking”, where “truth” would emerge not from authoritative sources but public consensus.
 
@@ -259,7 +264,8 @@ That was the platform that Musk acquired: one that, while complexifying and enfo
 How exactly did this philosophy influence X’s content moderation policies? From **[Figure 8](#^figure-8)**, one can tell that nearly all content moderation policies have undergone some changes in the Summer of 2023 and toward March 2024; I will revisit each in detail below. On a macro level, it is also evident that some policies having to do with COVID have been removed — because “COVID is no longer an issue” [Musk in @claytonElonMuskBBC2023]. Others have been merged and simplified into three policy sectors: (1) “Platform integrity and authenticity” for anything relating to spam, platform manipulation, manipulated media, username squatting and civic integrity; (2) “Safety and Cybercrime” for violent content, child safety, illegal goods, and adult content; and (3) “Platform Use Guidelines” for questions relating to the platform’s general philosophy and usage.
 
 ![Figure 8](images/image28.png)
-**Figure 8**. Beeswarm showing absolute number of word differences per Twitter/X policy, 2010-2025. Blue dots represent changes on Twitter, and yellow dots on X. Red dots represent instances in which a policy has been removed. Policy names and structure are from December 2024. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-08.png). ^figure-8
+
+**Figure 8.** Beeswarm showing absolute number of word differences per Twitter/X policy, 2010-2025. Blue dots represent changes on Twitter, and yellow dots on X. Red dots represent instances in which a policy has been removed. Policy names and structure are from December 2024. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-08.png). ^figure-8
 
 This restructuring is contingent on policies becoming more minimalistic, in the sense that they are simplified into one single, core purpose. This was part of an effort by the X Safety team to “consolidate a number of pages […] and roll out a new, simplified template”, reducing “the overall number of articles and total word count significantly”, in order to make rules “clearer for everyone” [@xsafetyWeWantOur2024]. Previously separate, the Abusive behavior and Hateful conduct policies have been merged into a new Violent content policy that focuses mostly on the physical aspect and potential of online violence, rather than personal offenses or “cultures” of violence (in the sense of beliefs, ideas or attitudes that may legitimize violent dispositions). Likewise, policies under the “Platform integrity and authenticity” section now focus mostly on “artificial” or instrumentalized platform manipulation, such as attempts to boost engagement, trick platform mechanisms, and so on. The terminology of “misinformation” — “misleading” content, “deceptive” behavior — is removed or minimized.
 
@@ -272,7 +278,8 @@ Each of these changes is described in more detail below.
 First, under the directive to facilitate freedom of expression and thereby an open and politically “centrist” platform (see interview in @joeroganJoeRoganExperience2024), policies abandon any semblance of social justice language in the Hateful and Abusive behavior policies. This includes contemporary language about gender, sexuality and race. As shown in **[Figure 9](#^figure-9)**, the Hateful conduct policy tones down any mention of sexual or gender identity or “protected categories” such as “women, people of color, lesbian, gay, bisexual, transgender, queer, intersex, asexual[s]” and other “marginalized and historically underrepresented communities”. Instead, it shifts this language to a question of personal discretion (“those that identify with multiple underrepresented groups”) or to identities with more “universal” political and legal resonance (“race, ethnicity, national origin, caste, sexual orientation, gender, gender identity, religious affiliation, age, disability, or serious disease”). As a result, “stereotyping” and attacking others with “slurs” — the discrimination of one’s personal and “protected” identity — is changed in favor of more universal forms of discrimination: “dehumanization”, “insults” and “profanity”.
 
 ![Figure 9](images/image16%201.png)
-**Figure 9**. *A snapshot of Hateful Conduct policy changes.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-09.png). ^figure-9
+
+**Figure 9.** *A snapshot of Hateful Conduct policy changes.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-09.png). ^figure-9
 
 At the same time, there is also a particularization of hateful (and thereby personal) language on the website. In March 2023, X used a new hate speech detection system called Sprinklr, which the company says “defines hate speech more narrowly” by focusing on “the nuanced context of their use” [@xsafetyWeRecentlyPartnered2023]. Under this logic, it is the number of “impressions” (views) of hateful language, not the sheer quantity, that matters most. When a post is found to have hateful language by Sprinklr’s method, it is downranked and not removed.
 
@@ -281,7 +288,8 @@ At the same time, there is also a particularization of hateful (and thereby pers
 The current Abusive behavior policy (**[Figure 10](#^figure-10)**) takes a few more U-turns. A month after Musk’s takeover, the policy is radically simplified, synthesizing the policy’s relatively complex taxonomy of “abuse” into five main sections: targeted or weaponized harassment; calling for others to harass an individual or group of people; making or sharing unwanted sexual content; insulting others; and denying violent events. One needs to be a direct target or somewhat directly involved in harassment or abuse for the policy to be valid.
 
 ![Figure 10](images/image25.png)
-**Figure 10**. *A snapshot of Abuse and Harassment policy changes.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-10.png). ^figure-10
+
+**Figure 10.** *A snapshot of Abuse and Harassment policy changes.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-10.png). ^figure-10
 
 The following year, the policy added more (con)text to what it initially deleted. It reintroduces the clause to “hear directly from the person being targeted” prior to enforcing the policy. Perhaps surprisingly, it reintroduces a clause against using “prior names and pronouns”, which stipulates that, “when required by local laws”, the platform would “reduce the visibility of posts that purposefully use different pronouns to address someone other than what that person uses for themselves”. As of February 2025, this clause still exists in spite of Trump’s executive orders against transgender terminology.
 
@@ -292,15 +300,18 @@ Likewise, policies relating to the management of “fake”, “manipulated” o
 The Civic Integrity (previously Electoral Integrity) policy, for example, no longer penalizes “misleading information about outcomes” or “information intended to undermine public confidence in an election or other civic process” [@xXsCivicIntegrity2025]. This includes “disputed claims that could undermine faith in the process itself” (such as “unverified information about election rigging, ballot tampering, vote tallying, or certification of election results”); and “misleading claims about the results or outcome of a civic process” (such as “claiming victory before election results have been certified”) [@xXsCivicIntegrity2025]. Potentially problematic statements or “awful content” — however defined — will be subject to soft moderation methods, namely: “excluding the post from search results, trends and recommendations”; removing it from one’s personal newsfeeds; “restricting the post’s discoverability”; “restricting likes, replies, reposts, quotes, bookmarks, share, pin to profile, or edit post”; and “downranking the post in replies”. Previously, tweets would first be labeled and eventually suspended, first temporarily and then permanently, under a strike system.
 
 ![Figure 11](images/image19.png)
-**Figure 11**. *A snapshot of Civil Integrity policy changes. Note how the 2023 version (on the right) is reframed as a means to protect freedom of expression.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-11.png). ^figure-11
+
+**Figure 11.** *A snapshot of Civil Integrity policy changes. Note how the 2023 version (on the right) is reframed as a means to protect freedom of expression.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-11.png). ^figure-11
 
 ![Figure 12](images/image22.png)
-**Figure 12**. *A snapshot of Civil Integrity policy changes. Note how “We will label or remove false or misleading information” becomes “You may not advance verifiably false or misleading information”, and the focus on “Misleading information about outcomes” turns to physical “Intimidation” against others participating in a civic process.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-12.png). ^figure-12
+
+**Figure 12.** *A snapshot of Civil Integrity policy changes. Note how “We will label or remove false or misleading information” becomes “You may not advance verifiably false or misleading information”, and the focus on “Misleading information about outcomes” turns to physical “Intimidation” against others participating in a civic process.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-12.png). ^figure-12
 
 In the former case, Misleading identities relaxes the imperative to be one’s “authentic self”: they are no longer “required to display [one’s] real name or image on [their] profile”. It allows accounts to be inauthentic if they are parodies (as it did before [@twitterParodyNewsfeedCommentary2021]), provided they clearly indicate it — particularly in reaction to Musk abandoning the blue tick as a means to verify a public person’s authenticity. Another form of sanctioned “fakeness” is the misappropriation of another user’s identity, or artificially inflating engagement and using fake profile images. Correspondingly, moderation is relaxed or unclear: one can be “suspended” but it is unclear if the measure is temporary or permanent.
 
 ![Figure 13](images/image23.png)
-**Figure 13**. *A snapshot of Misleading Identity policy changes.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-13.png). ^figure-13
+
+**Figure 13.** *A snapshot of Misleading Identity policy changes.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-13.png). ^figure-13
 
 ### Adult content
 
@@ -309,14 +320,16 @@ Another policy that underwent significant changes was Adult content, previously 
 This move has been reported as an effort to tap into more streams of revenue [@oremusAnalysisWhyElon2024], or Musk wishing X to become a “super app” with multiple capacities beyond pure social media [@heathElonMusksEverything2023]. Philosophically, this change is also concomitant to X wanting to become the platform for free speech, including “sexual expression” as a form of “artistic expression” (see **[Figure 14](#^figure-14)**).
 
 ![Figure 14](images/image17%201.png)
-**Figure 14**. *From Sensitive media policy to Adult content.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-14.png). ^figure-14
+
+**Figure 14.** *From Sensitive media policy to Adult content.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-14.png). ^figure-14
 
 ### The policies that stay the same
 
 The policies that have remained the same tend to be those where objectionable content is defined and sanctioned by the law, or are subjects against which there is already widespread disapproval. This includes, of course, Child sexual exploitation (now Child safety), and Violent and hateful entities. Child safety forbids any and all kinds of harm against children, and requires — unlike most other policies — immediate and permanent suspensions of users, no matter the context.
 
 ![Figure 15](images/Figure%2015.png)
-**Figure 15**. *The Child Safety policy before and after Musk.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-15.png). ^figure-15
+
+**Figure 15.** *The Child Safety policy before and after Musk.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-15.png). ^figure-15
 
 Violent and hateful entities is an interesting case, because it was first designed to prevent the circulation of jihadist content around 2017 [@ViolentExtremistGroups2017]. Over time, it began to target domestic terrorism (as seen in Germany and New Zealand in 2019) enacted by “hateful groups”. Though the Hateful conduct policy may have dropped language seen as left-wing “partisan”, this policy retains sanctions against groups that target or harass a “protected category” [@xOurPolicyViolent2025]. For the rest, it retains its sanctions partly because they are already strongly bound by international law and industry initiatives, such as the Global Internet Forum to Counter Terrorism.
 
@@ -325,7 +338,8 @@ Violent and hateful entities is an interesting case, because it was first design
 On the level of content moderation practices or techniques, I note a similar move toward simplification. For one, there are no clear mentions of measures being executed consequentially; they are all, more or less, imposed in extremis, when absolutely necessary. As shown in **[Figure 16](#^figure-16)**, these are: (1) requesting a user to remove their content; (2) suspending that account in case they do not comply; and (3) reducing the content’s visibility by downranking it, removing it from certain parts of the website, excluding ads from that content, and labeling a demoted tweet. Even then, X only requires a user to remove their post “if the violation is severe enough” (in place of “we require the violator to remove it before they can Tweet again” on Twitter), and permanent suspension is no longer explicitly enforced [@xhelpcenterXsEnforcementPhilosophy2024]. The only exception to these rules is content that is invariably objectionable, such as child abuse, violent entities and non-consensual adult content.
 
 ![Figure 16](images/image31.png)
-**Figure 16**. *X’s content moderation regime in 2024. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application. Note: the cut-out of Community Notes on the left is to make space for legends.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-16.png). ^figure-16
+
+**Figure 16.** *X’s content moderation regime in 2024. White rings represent policies and colored rings their respective enforcement measures, arranged sequentially in the order of their application. Note: the cut-out of Community Notes on the left is to make space for legends.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-16.png). ^figure-16
 
 This is also reflected in X’s Enforcement Options document. By the time of Musk’s takeover, “limiting tweet visibility” was moved front and center. It is no longer just a complementary, interim measure used while waiting for a user to remove a post or return from a period of suspension. It also appears to have become more complex. While they may have been less clear in pre-Musk policies, “demotion” as a general technique previously resorted to making tweets ineligible in search results or timelines; excluding them from email or product recommendations; and burying them down replies and search results (without the possibility to share them). Post-Musk measures now include the temporary loss of X features and exclusion of ads.
 
@@ -338,7 +352,8 @@ Having laid out content moderation changes on paper, I now turn to an analysis o
 Let us first look at demotions for one keyword — “buitenlander” — and then proceed with average demotions for all keywords. In the case of **[Figure 17](#^figure-17)**, representing the search ranking of posts, the posts with the highest “hate scores” tend to have lower impressions (represented by dot size), and be within the 20th and lower search rankings. Removed posts tend to be located on the 40th ranking and lower.
 
 ![Figure 17](images/image29.png)
-**Figure 17**. *Demotion and deletion of posts mentioning “buitenlander” between September and October 2024.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-17.png). ^figure-17
+
+**Figure 17.** *Demotion and deletion of posts mentioning “buitenlander” between September and October 2024.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-17.png). ^figure-17
 
 Taking a step back to look at general averages across 100 ranked posts, we see that posts with a high hate score tend to be in a slightly lower position compared to low hate score posts. Posts with a score of 0.75 tend to be positioned on the 51st rank, while those with a score of 0.25 or lower tend to be on the 49th rank. Impressions also tend to be slightly lower: 4,921 views on average for posts with a score of 0.75 or above versus 14,283 views on average for those with a score of 0.25 or less.
 
@@ -348,12 +363,13 @@ Taking a step back to look at general averages across 100 ranked posts, we see t
 | 0.25-0.50  | 49.17             | 5849               | 5.15                     | 1330               |
 | 0.50-0.75  | 50.45             | 4248               | 5.27                     | 824                |
 | 0.75-1.00  | 51.39             | 4921               | 4.82                     | 693                |
-**Table 3**. Weighted average ranking of posts based on their hate scores
+**Table 3.** Weighted average ranking of posts based on their hate scores
 
 This is also reflected in Pearson’s correlations (**[Figure 18](#^figure-18)**). Posts with higher hate scores are placed in slightly lower ranks compared to those with lower scores. The correlation coefficient of 0.008 suggests this effect is very weak, meaning hate scores only slightly impact ranking. On the other hand, higher hate scores are slightly associated with fewer views (-0.16 correlation), though the effect is once again small. In this sense, neither relationship is strong enough to suggest a platform-wide suppression effect based solely on hate scores — at least not for this dataset (in a minority language), and with hate scores estimated by OpenAI and not Sprinklr. Other factors such as engagement and recency may play a larger role.
 
 ![Figure 18](images/image21.png)
-**Figure 18**. *Pearson’s correlation coefficient measures the strength of the relationship between post rankings, views, and hate score.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-18.png). ^figure-18
+
+**Figure 18.** *Pearson’s correlation coefficient measures the strength of the relationship between post rankings, views, and hate score.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-18.png). ^figure-18
 
 Though correlations are not strong, I find that posts with high hate scores are more transitory, in the sense that they tend to move across slightly more rankings than those with lower hate scores (Table 4). 
 
@@ -363,12 +379,13 @@ Though correlations are not strong, I find that posts with high hate scores are 
 | 0.25-0.50  | 22.39             | 17.0                 | 939                |
 | 0.50-0.75  | 22.01             | 17.0                 | 582                |
 | 0.75-1.00  | 23.01             | 18.0                 | 481                |
-**Table 4**. *Average number of positions that posts with different hate scores have moved across search rankings.*
+**Table 4.** *Average number of positions that posts with different hate scores have moved across search rankings.*
 
 **[Figure 19](#^figure-19)** illustrates this in more context. One can see the average ranking and hate score for a cut-off point of 100 posts over time. Posts with high hate scores tend to be at the bottom of search results (~70 or lower), with the exception of one, in second position and low impressions, whose ranking eventually dropped over time.
 
 ![Figure 19](images/image30.png)
-**Figure 19**. *Average demotion, engagement and position for all posts mentioning any and all queries between September and October 2024.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-19.png). ^figure-19
+
+**Figure 19.** *Average demotion, engagement and position for all posts mentioning any and all queries between September and October 2024.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-19.png). ^figure-19
 
 It must be said, however, that the general sentiment with regards to immigration is largely negative — making the expression of hateful sentiments no surprise, and hate speech detection somewhat redundant. Of 23,073 posts, 14,049 expressed sentiments against immigration, versus 4,442 with neutral sentiments, 2,986 in favor, and 1,257 with other sentiments. In other words, hateful language may be somewhat indistinguishable within largely negative content.
 
@@ -381,12 +398,14 @@ This is the context in which developers have turned to another form of content m
 We begin by looking at the weighted distribution of all community notes across post users and topics. For users, one can see in **[Figure 20](#^figure-20)** that the majority of all notes — regardless of rating — are directed at alternative influencers, who, in turn, post about conspiracy theories, energy and climate change, healthcare and wellbeing and other topics. While the majority of note ratings toward alternative influencers need more ratings, this shows that, in this dataset at least, community notes are primarily used to correct “factualities” or a lack thereof. The second most community noted type of user is political entities: Dutch far-right or right-wing politicians or parties are the authors of 9.02% of community noted posts, versus 3.86% by the Dutch center-left. Journalists, fact-checkers, columnists, commentators, news media, broadcasters and academics account for a similar share.
 
 ![Figure 20](images/image27.png)
-**Figure 20**. *Weighted percentages of community note ratings per user type and the topic they post about. Numbers represent percentages of posts for a given rating, user type or topic.* Full image here. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-20.png). ^figure-20
+
+**Figure 20.** *Weighted percentages of community note ratings per user type and the topic they post about. Numbers represent percentages of posts for a given rating, user type or topic.* Full image here. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-20.png). ^figure-20
 
 **[Figure 21](#^figure-21)** shows that the majority of topics that get community noted include: history and historical conflicts (the war in Ukraine, the war in Gaza, or tensions arising from the war in Gaza); Dutch politics (Dutch government, cabinet or parliament; Dutch right-wing politicians or party); energy and climate (climate change in particular, but also the Dutch farmer crisis); and, finally, migration (in general, and tensions related to it). In a minority of cases, the majority of notes rated helpful are, as indicated in the previous figure, those that attempt to correct or contextualize posts about conspiracy theories. In the large majority of cases, community notes need more ratings — particularly in topics that are deeply contentious, such as the above-mentioned historical conflicts, migration and Dutch politics in general. While community notes may function on a logic of consensus-building, it may not always succeed to reach consensus for notes added to deeply contentious topics.
 
 ![Figure 21](images/image33.png)
-**Figure 21**. *Weighted percentages of community note ratings per topic category and subtopic. Numbers represent percentages of posts for a given rating and topic.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-21.png). ^figure-21
+
+**Figure 21.** *Weighted percentages of community note ratings per topic category and subtopic. Numbers represent percentages of posts for a given rating and topic.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-21.png). ^figure-21
 
 ## Deletion
 
@@ -412,7 +431,8 @@ Still, where there are limitations in content moderation and platform design, th
 6. Algorithmic literacy and public media outreach: Finally, the results from these design and governance initiatives can feed into broader public and media literacy efforts, enhancing public understanding of how civic values can and should be translated into algorithmic systems.
 
 ![Figure 22](images/image26.png)
-**Figure 22**. *Diagram showing multiple points of intervention for promoting alternative platform design mechanisms. See Weyl et al., 2025 for the table shown in the diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-22.png). ^figure-22
+
+**Figure 22.** *Diagram showing multiple points of intervention for promoting alternative platform design mechanisms. See Weyl et al., 2025 for the table shown in the diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-22.png). ^figure-22
 
 Within this configuration, investing in moderation and consensus-building mechanisms can be a point of entry for European influence in a broader marketplace for platform design, and thus a more sustainable model of content moderation development.
 

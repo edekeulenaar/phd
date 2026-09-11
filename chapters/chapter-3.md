@@ -24,7 +24,8 @@ Users may want to enforce their own norms, through community guidelines, mods, a
 Content moderation policies, content moderation techniques and user cultures together enforce the “explicit and implicit” norms [@ayalaSpeechAffordancesStructural2016, p. 3] around what can be said on a given platform. That is, they constitute a “possibility space” for speech agency [@haslangerWhatSocialStructural2016, p. 18]. One implication, which I will highlight in the case study that follows, is that instead of being relegated solely to less moderated platforms, objectionable speech is fragmented into different messages that can still be _sayable_ for a platform or user base’s normative standards (**[Figure 1](#^figure-1)**). We will see how the initial “base meaning” of the Kekistan meme, originally formulated on 4chan/pol, was that it was an online ethno-state for white nationalism, and was progressively fragmented into overt and covert messages tailored to Twitter and YouTube comment section out-groups.
 
 ![Figure 1](images/Figure%201.png)
-**Figure 1**. *Simplified summarization of speech affordances across Twitter, the YouTube comment section and 4chan.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%201.png). ^figure-1
+
+**Figure 1.** *Simplified summarization of speech affordances across Twitter, the YouTube comment section and 4chan.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%201.png). ^figure-1
 
 ## How did speech affordances form the Kekistan meme?
 
@@ -47,7 +48,8 @@ In contrast, the relatively lesser moderated comment sections of YouTube videos 
 But as Benjamin decides to save face and unmask the joke, others on Twitter and YouTube begin to question the genuineness of his disclaimer. Unbeknownst to them, Kekistan _did_ bear white nationalist connotations on 4chan/pol. This makes Benjamin’s followers, and to an extent Benjamin himself, the targets of their own joke. Back on 4chan/pol, anons revel in the possibility that Kekistan acts as a gateway drug – a “redpill” – into serious dedication to white nationalist precepts. Perhaps the most significant sign of approval from 4chan/pol’s far-right segments was from white nationalist Richard Spencer, who in mid-2017 took to Twitter to plead in defense of the “Kekistani people” [@richardspencerSetOurPeople2017]. 
 
 ![Figure 2](images/Figure%202%202.png)
-**Figure 2**. *1/10 sample of 4chan/pol posts, tweets and YouTube comments mentioning “Kekistan”, coded by theme.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%202%202.png). ^figure-2
+
+**Figure 2.** *1/10 sample of 4chan/pol posts, tweets and YouTube comments mentioning “Kekistan”, coded by theme.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%202%202.png). ^figure-2
 
 While 4chan could afford the more extreme versions of the meme as an imaginary (white) ethno-state, this particular connotation was dropped when it arrived in the more policed environments of (then) Twitter. It was transformed from a message that only a few could express among themselves – a _covert_ dog whistle – to one that could only be expressed on the condition that it be misunderstood by out-groups and platforms – an _overt_ dog whistle.
 
@@ -58,6 +60,7 @@ This is to say that Kekistan’s original meaning as a white nationalist meme-fl
 It could be said that the dissemination of Kekistan reflects the volatile ideological cacophony of the online 2016–2018 “culture wars”, waged as caricatural debates on highly controversial topics such as race, identity and nationality. The wave of content moderation that followed, whereby both Twitter and YouTube took stronger measures to identify, delete, demonetize or demote objectionable content — including mentions of Kekistan (**[Figure 3](#^figure-3)**) — may have reassured some that the extreme elements of those debates had been driven outside actively moderated platforms. But such elements may re-emerge today in the same way as they did in 2016, for they continue to be active wherever their expression is best afforded. In this sense, platforms find themselves playing a cat-and-mouse game with content they had once removed.
 
 ![Figure 3](images/Figure%203.png)
-**Figure 3**. *Available and moderated tweets having referred to “kekistan” in 2017.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%203.png). ^figure-3
+
+**Figure 3.** *Available and moderated tweets having referred to “kekistan” in 2017.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%203.png). ^figure-3
 
 As an alternative, one could monitor the extent to which public debate takes place across a fringe-to-mainstream ecology (across which “extreme” speech is increasingly codified as “taboo”), in order to address the more or less inexpressible ideas and sentiments of a given public debate. In doing so, one may also map the very constitution of public speech norms – that is, what different publics consider to be acceptable to say and why – in order to formulate content moderation measures that command consensus across platforms. This exercise may be applied to speech regulation not solely tied to US issues, but to phenomena as widespread as incitement speech, intolerance, revisionism and other expressions of historical violence that may one day return to the public mainstream.
