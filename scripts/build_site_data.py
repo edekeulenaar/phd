@@ -458,9 +458,26 @@ def sync_thesis() -> None:
     print(f"  PDF downloads: {n_pdf} section(s)"
           f"{' + full thesis' if full_pdf_url else ''}")
 
+    # The download link carries a version so a reader never gets a stale copy
+    # from the browser or the GitHub CDN. It used to be a constant in app.js
+    # that had to be bumped by hand, was last bumped in August, and so pinned
+    # every later rebuild to the same cache key: readers kept downloading the
+    # August file. Derive it from the PDF itself instead.
+    pdf_version = ""
+    thesis_pdf = pdf_dir / "thesis.pdf"
+    if thesis_pdf.exists():
+        import hashlib
+        h = hashlib.md5()
+        with thesis_pdf.open("rb") as fh:
+            for chunk in iter(lambda: fh.read(1 << 20), b""):
+                h.update(chunk)
+        pdf_version = h.hexdigest()[:12]
+        print(f"  PDF version: {pdf_version} ({thesis_pdf.stat().st_size/1e6:.0f} MB)")
+
     # TOC tree: front matter, then part→children groups, then back matter.
     toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
            "author": THESIS_AUTHOR, "fullPdfUrl": full_pdf_url,
+           "pdfVersion": pdf_version,
            "entries": entries,
            "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}
     SITE_TOC.write_text(_json.dumps(toc, ensure_ascii=False, indent=0),
