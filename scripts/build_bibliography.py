@@ -141,6 +141,34 @@ def iter_entries(bibtext: str):
 
 # ─── Author parsing & Harvard formatting ──────────────────────────────────
 
+_EXT_KEYS = ("family", "given", "prefix", "suffix", "useprefix")
+
+def _extended_name(p: str) -> tuple[str, str]:
+    """Biber's extended name form, used by 279 entries in the library:
+    `family=Meer, given=Toni, prefix=van der, useprefix=true` → ("van der Meer",
+    "Toni"). Without this the whole string was taken literally and printed as
+    "Kroon and family=Meer, 2021"."""
+    kv = {}
+    for bit in re.split(r",\s*(?=(?:" + "|".join(_EXT_KEYS) + r")=)", p):
+        if "=" in bit:
+            k, v = bit.split("=", 1)
+            kv[k.strip()] = v.strip()
+    family = kv.get("family", "")
+    given  = kv.get("given", "")
+    prefix = kv.get("prefix", "")
+    suffix = kv.get("suffix", "")
+    if prefix and kv.get("useprefix", "").lower() == "true":
+        # "al-" and "d’" join the surname directly; "van der" takes a space.
+        joiner = "" if prefix[-1] in "-'’" else " "
+        last = f"{prefix}{joiner}{family}"
+    elif prefix:
+        last, given = family, f"{given} {prefix}".strip()
+    else:
+        last = family
+    if suffix:
+        last = f"{last} {suffix}"
+    return last.strip(), given.strip()
+
 def split_authors(raw: str) -> list[tuple[str, str]]:
     """Split a bibtex `author = ...` value into [(last, first), …]."""
     if not raw: return []
@@ -149,7 +177,9 @@ def split_authors(raw: str) -> list[tuple[str, str]]:
     for p in parts:
         p = p.strip()
         if not p: continue
-        if "," in p:
+        if "family=" in p:
+            out.append(_extended_name(p))
+        elif "," in p:
             last, first = p.split(",", 1)
             out.append((last.strip(), first.strip()))
         else:

@@ -176,8 +176,6 @@ But the degree to which conspiracy theories are entangled with larger metahistor
 
 What to make of this? While this question certainly cannot be answered with a case study on YouTube alone, our conclusion, for now, is that proactive and more explicit moderation contributes to modifying the relationship between platform and user. We have seen that, post-deplatforming and demotion, YouTube is less a platform for conspiracy-making (i.e., sharing, discussing and amalgamating evidence of conspiracies) than a platform by and for the conspirators. That is to say that YouTube is not altogether abandoned by affected user bases, but is complemented by the usage of platforms that afford conspiracy-making — “alt-tech” sites such as BitChute, Rumble, Parler or Telegram — as an archive of primary sources.
 
-
-***
 # Annex ^annex
 
 ![Figure 14](images/figure%2014-2%201.png)

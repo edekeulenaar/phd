@@ -7,6 +7,28 @@
 /* ── Self-hosted fonts ──────────────────────────────────────────────────
    Body prose (incl. beeswarm hover-card quotations): Adobe Caslon Pro.
    Headings, sidebar, table cells, figure UI: Test National. */
+
+/* Body face: ABC Otto Trial. */
+@font-face {
+  font-family: "ABC Otto Trial";
+  src: url("fonts/ABCOttoTrial-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ABC Otto Trial";
+  src: url("fonts/ABCOttoTrial-RegularItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "ABC Otto Trial";
+  src: url("fonts/ABCOttoTrial-Medium.otf") format("opentype");
+  font-weight: 500 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ABC Otto Trial";
+  src: url("fonts/ABCOttoTrial-MediumItalic.otf") format("opentype");
+  font-weight: 500 700; font-style: italic; font-display: swap;
+}
 @font-face {
   font-family: "ACaslon Pro";
   src: url("fonts/ACaslonPro-Regular.otf") format("opentype");
@@ -91,10 +113,12 @@
   --right-w:    232px;           /* right rail: figure key + resources */
   --content-w:  46rem;
   --prose-w:    65rem;            /* prose + 17rem margin-cites column */
-  --serif:      "ACaslon Pro", "Adobe Caslon Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --serif:      "ABC Otto Trial", "ACaslon Pro", "Adobe Caslon Pro", "EB Garamond", Garamond, Georgia, serif;
   --sans:       "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
   --mono:       ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  --fs:         16.5px;
+  --fs-base:    16.5px;
+  --fs-scale:   1;               /* set by the reader's text-size control */
+  --fs:         calc(var(--fs-base) * var(--fs-scale));
 }
 
 * { box-sizing: border-box; }
@@ -106,7 +130,9 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-size: var(--fs);
-  line-height: 1.55;            /* original web-comfortable line-height */
+  /* 1.55 plus half a millimetre. At 16.5px on a 96dpi reference screen a
+     half-millimetre is 1.89px, taking the 25.58px line box to 27.47px. */
+  line-height: 1.665;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -1698,3 +1724,50 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 .footnotes li         { margin-bottom: .6rem; }
 .footnotes .fn-back   { text-decoration: none; opacity: .55; margin-left: .25rem; }
 .footnotes .fn-back:hover { opacity: 1; }
+
+/* ── Part title pages ──────────────────────────────────────────────────────
+   A Part file holds a single H1, which is its actual title, so the "eyebrow"
+   treatment that suits a chapter's "Chapter N" line undersells it. Give it
+   real title size and open up the gap before the text that follows. */
+#manuscript.kind-part .prose h1:first-child,
+#manuscript.kind-part h1:first-child,
+#manuscript.kind-part h1:first-child strong {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  text-transform: none;
+  color: var(--ink);
+  line-height: 1.15;
+}
+#manuscript.kind-part h1:first-child {
+  margin: 0 0 3.2rem;
+}
+
+/* ── Reader text-size control ──────────────────────────────────────────────
+   Scales --fs, which every prose measurement derives from. The chosen step is
+   remembered per browser. */
+.reader-size {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: var(--sans);
+}
+.reader-size button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: inherit;
+  line-height: 1;
+  padding: 0.38em 0.62em;
+  cursor: pointer;
+}
+.reader-size button + button { border-left: 1px solid var(--rule); }
+.reader-size button:hover:not(:disabled) { background: var(--rule); color: var(--ink); }
+.reader-size button:disabled { opacity: 0.35; cursor: default; }
+.reader-size .rs-dn { font-size: 0.78rem; }
+.reader-size .rs-up { font-size: 1.02rem; }
+.reader-size .rs-reset { font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; }

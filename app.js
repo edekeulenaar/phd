@@ -195,6 +195,15 @@ async function renderManuscript(chapterSlug, opts = {}) {
     //    setOptions accessor is deprecated in v12 and absent in some builds.
     host.innerHTML = marked.parse(md);
 
+    // 4-0) Tag the article with the section kind from toc.json, so the
+    //      stylesheet can treat a Part's title page differently from a
+    //      chapter's (a Part has a single H1, which is its real title).
+    {
+      const kind = tocEntry(chapterSlug)?.kind;
+      host.classList.remove("kind-front", "kind-part", "kind-chapter", "kind-back");
+      if (kind) host.classList.add("kind-" + kind);
+    }
+
     // 4a) Obsidian block-anchors. Markdown ending with " ^slug" at the end of
     //     a paragraph/heading/list-item assigns id="slug" to that block, so
     //     in-text [[#^slug]] links can jump to it.
@@ -3767,6 +3776,54 @@ function setupCommenting() {
     if (mark) openCommentView(mark);
   });
 }
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Reader text-size control.
+   Multiplies --fs-scale, which --fs is computed from, so every prose
+   measurement follows. The step is remembered per browser.
+   ─────────────────────────────────────────────────────────────────────────── */
+(() => {
+  const STEPS = [0.85, 0.925, 1, 1.1, 1.2, 1.35, 1.5];
+  const KEY = "thesis-fs-step";
+  let i = STEPS.indexOf(1);
+  try {
+    const raw = localStorage.getItem(KEY);          // null reads as 0 via Number()
+    if (raw !== null && raw !== "") {
+      const saved = Number(raw);
+      if (Number.isInteger(saved) && saved >= 0 && saved < STEPS.length) i = saved;
+    }
+  } catch {}
+
+  const dn = document.getElementById("rs-dn");
+  const up = document.getElementById("rs-up");
+  const rs = document.getElementById("rs-reset");
+
+  function apply() {
+    document.documentElement.style.setProperty("--fs-scale", String(STEPS[i]));
+    if (dn) dn.disabled = i === 0;
+    if (up) up.disabled = i === STEPS.length - 1;
+    if (rs) rs.disabled = STEPS[i] === 1;
+    try { localStorage.setItem(KEY, String(i)); } catch {}
+  }
+  function step(d) { i = Math.min(STEPS.length - 1, Math.max(0, i + d)); apply(); }
+
+  dn?.addEventListener("click", () => step(-1));
+  up?.addEventListener("click", () => step(+1));
+  rs?.addEventListener("click", () => { i = STEPS.indexOf(1); apply(); });
+
+  // Ctrl/Cmd +, - and 0 while reading, without stealing browser zoom on
+  // anything but our own control: only when no text field has focus.
+  document.addEventListener("keydown", e => {
+    if (!(e.ctrlKey || e.metaKey)) return;
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if (e.key === "=" || e.key === "+") { e.preventDefault(); step(+1); }
+    else if (e.key === "-") { e.preventDefault(); step(-1); }
+    else if (e.key === "0") { e.preventDefault(); i = STEPS.indexOf(1); apply(); }
+  });
+
+  apply();
+})();
 
 function rememberName(n) { try { localStorage.setItem("thesis-cmt-name", n); } catch {} }
 function lastName() { try { return localStorage.getItem("thesis-cmt-name") || ""; } catch { return ""; } }

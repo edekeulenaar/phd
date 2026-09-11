@@ -96,6 +96,7 @@ Lyotard was perceptive in speculating on “\[d\]ata banks \[as\] the encycloped
 
 And so, while they may indeed be used as resources to manufacture all manner of misinformation, it is inaccurate to conceptualize this problematic in terms of post-truth. Altpedias are not so much a sign of the obsolescence of truth, but rather evidence that compendia of knowledge designed to harmonize all knowledge and withstand epistemic ruptures are still delimited in their conceptions as to what acceptable knowledge is. Beyond Wikipedia lie the altpedias, which seek to imbue their partisan politics with the universal tone, format and functions of the utopian project of open source knowledge, and to provide refuge for those forms of knowledge excluded from the epistemic mainstream. The same can be perceived in platform ruptures in social media, video streaming and other sectors, where we find fundamental (but productive) disagreements around competing normative thresholds. 
 
+# Endnotes
 
 [^1]:  This article is the product of a project done in collaboration with Derrek Xavier, Tommaso Elli, Felipe Escobar, Abraham Koshy, Jesper Hinze, Daniël de Zeeuw, Giovanni Profeta, Nina Welt, Aurelio Amaral, Michele Mauri and Richard Rogers. The authors would like to thank their contribution. 
 
