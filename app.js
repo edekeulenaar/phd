@@ -696,6 +696,7 @@ async function renderManuscript(chapterSlug, opts = {}) {
     // Drop the leading title block from the chapter nav: the "Chapter N" /
     // "Part" marker H1 and the chapter-title H1 that immediately follows it.
     let dropLeading = 2;
+    let firstTitleEl = null;
     let lastTitleEl = null;
     headings.forEach((h, i) => {
       const id = "h-" + slug(h.textContent);
@@ -703,6 +704,7 @@ async function renderManuscript(chapterSlug, opts = {}) {
       if (dropLeading > 0 && h.tagName === "H1" &&
           toc.length === 0 && i < 2) {
         dropLeading--;
+        if (!firstTitleEl) firstTitleEl = h;
         lastTitleEl = h;
         return;
       }
@@ -712,12 +714,19 @@ async function renderManuscript(chapterSlug, opts = {}) {
         id
       });
     });
-    void lastTitleEl;   // (per-chapter PDF button removed — cover handles PDF)
+    // The chapter title is kept out of the list above, but the right rail
+    // leads with it so readers can click back to the top of the chapter.
+    // It reads as the title heading but jumps to the "Chapter N" marker
+    // above it, so the click lands on the whole title block.
+    const titleEntry = lastTitleEl
+      ? { text: lastTitleEl.textContent.trim(),
+          id:   (firstTitleEl || lastTitleEl).id }
+      : null;
     // Per-chapter heading nav lives in the sidebar UNDER the active chapter;
     // the global thesis TOC (parts → chapters) is built once from toc.json.
     // Skipped when rendering off-screen for the PDF assembler.
     if (!forPrint) {
-      buildChapterNav(chapterSlug, toc);
+      buildChapterNav(chapterSlug, toc, titleEntry);
       host.querySelectorAll(".cite").forEach(c => {
         c.addEventListener("mouseenter", showCiteCard);
         c.addEventListener("focus",      showCiteCard);
@@ -3250,14 +3259,20 @@ function collapseBlankRuns(host) {
 
 // Per-chapter section nav lives in the RIGHT rail ("On this page"), indented
 // by heading level. Cleared on the cover / references views.
-function buildChapterNav(slug, headings) {
+function buildChapterNav(slug, headings, title) {
   const nav  = document.getElementById("chapter-nav");
   const list = document.getElementById("chapter-nav-list");
   if (!nav || !list) return;
-  if (!slug || !headings || !headings.length) {
+  const items = headings || [];
+  // A part's title page has no sections of its own — leave its rail empty
+  // rather than showing a one-line nav.
+  if (!slug || !items.length) {
     nav.hidden = true; list.innerHTML = ""; return;
   }
-  list.innerHTML = headings.map(h =>
+  const head = title
+    ? `<li class="cn-title"><a href="#${title.id}">${escapeHtml(title.text)}</a></li>`
+    : "";
+  list.innerHTML = head + items.map(h =>
     `<li class="cn-lvl-${h.level}"><a href="#${h.id}">${escapeHtml(h.text)}</a></li>`
   ).join("");
   nav.hidden = false;

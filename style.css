@@ -387,6 +387,15 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   border-bottom: none;            /* no rules between items */
   text-decoration: none;
 }
+/* The chapter's own title leads the rail — a way back to the top. */
+#chapter-nav-list .cn-title a {
+  font-size: 12.5px; font-weight: 600; color: var(--ink);
+  padding: 0 0 0.5rem 0; margin-bottom: 0.5rem;
+  border-left: none; border-bottom: 1px solid var(--border);
+}
+#chapter-nav-list .cn-title a:hover { color: var(--accent); }
+/* Leave a little air above a heading jumped to from the rail. */
+#manuscript h1 { scroll-margin-top: 1.25rem; }
 #chapter-nav-list .cn-lvl-2 a { padding-left: 0.8rem; }
 #chapter-nav-list .cn-lvl-3 a { padding-left: 1.6rem; font-size: 11.5px; }
 #chapter-nav-list .cn-lvl-4 a { padding-left: 2.4rem; font-size: 11.5px; font-style: italic; }
