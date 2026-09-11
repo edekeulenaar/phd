@@ -643,6 +643,7 @@ Historically, the earliest literature that speaks of moderation refers to a form
 ![Figure 9](images/fig-beeswarm-topics-moderation-what.png)
 
 **Figure 9.** *The “what” of moderation.* Full image [here](#fig-beeswarm-topics?topic=Content%20moderation&type=WHAT&sort=earliest&y0=1980&y1=2026&view=beeswarm).
+
 ^figure-9
 
 Given the plurivocal nature of the medium, the main task of moderation is to find a functional balance between enforcing a given norm of debate (epistemic, normative, religious or other) while allowing freedom of expression within *a margin of tolerance*. Thus originates moderation as a form of *restraint* in behavior and in beliefs, reflected in literature about religious [@tharyantoReligiousModerationPoint2025] and political moderation [@craiutuVirtuesPoliticalModeration2001]. From Latin, the term refers to the quality of making something less extreme relative to a contextual norm [@oxfordenglishdictionaryModerationMeaningsEtymology2025]. That capacity relies on modifying and provisioning an object’s shift toward an extremity, by limiting, lessening or restricting it from transgressing this threshold. As an object approaches it, it will be subject to several modifications, or “_moderationem_”, intended to slow, dissuade, obfuscate or correct it. Once it transgresses the threshold, it will be punished through the reinstatement of the transgressed norm. 
