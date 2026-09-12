@@ -52,8 +52,29 @@ csv.field_size_limit(10**7)
 # The script lives at  site/scripts/build_site_data.py
 # Project root is two levels up.
 ROOT   = Path(__file__).resolve().parent.parent.parent
-SRC    = ROOT / "Chapter 1 - Final results - New results.csv"
-MASTER = ROOT / "master_bibliography.csv"   # only for: (a) Fig 1 counts,
+
+# The Chapter 1 source spreadsheets are not in this repo. They normally sit
+# beside it (ROOT), but the working clone is not always checked out there —
+# from a scratch clone every input went missing and the script exited before
+# writing toc.json. Look beside the repo first, then in the vault folder the
+# sheets are actually exported to, then wherever PHD_DATA_DIR points.
+DATA_DIRS = [ROOT]
+if os.environ.get("PHD_DATA_DIR"):
+    DATA_DIRS.insert(0, Path(os.environ["PHD_DATA_DIR"]).expanduser())
+DATA_DIRS.append(Path.home() / "Projects" / "PhDs" / "PhD 2020-2025"
+                 / "Publications 📇" / "Censorship and moderation")
+
+
+def data_path(name: str) -> Path:
+    """First existing copy of `name` across DATA_DIRS; ROOT's path if none."""
+    for d in DATA_DIRS:
+        if (d / name).exists():
+            return d / name
+    return ROOT / name
+
+
+SRC    = data_path("Chapter 1 - Final results - New results.csv")
+MASTER = data_path("master_bibliography.csv")   # only for: (a) Fig 1 counts,
                                             # (b) URL-by-Key (Fig 7 hover-link)
 OUT    = Path(__file__).resolve().parent.parent / "data"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -227,9 +248,23 @@ def item_id(r: dict) -> str:
     return f"title:{nt_}" if nt_ else ""
 
 
+# The coding sheets spell the HOW/WHY category "Coersive". It reaches the
+# reader as an axis label and a node name, so it is corrected on the way in
+# rather than in the emitted CSVs — a hand-fix there is undone by the next
+# rebuild. Whole word only: "coerce", "coerente" and the rest must survive.
+SPELLING = re.compile(r"\bCoersive\b", re.IGNORECASE)
+
+
+def fix_spelling(v: str) -> str:
+    return SPELLING.sub(lambda m: "C" + "oercive" if m.group(0)[0].isupper()
+                        else "coercive", v)
+
+
 def load_csv(path: Path) -> list[dict]:
     with open(path, newline="", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        return [{k: (fix_spelling(v) if isinstance(v, str) and "oersive" in v.lower()
+                     else v) for k, v in r.items()}
+                for r in csv.DictReader(f)]
 
 
 def write_csv(path: Path, header: list[str], rows: list[list]) -> None:
@@ -1159,8 +1194,8 @@ def main() -> None:
     # WHAT category, and emit true set-regions: keywords EXCLUSIVE to one
     # category, keywords in EXACTLY one pair, and keywords spanning ≥5 of
     # the six Venn categories (Algorithmic sorting excluded by request).
-    V1      = ROOT / "Chapter 1 - Censorship and moderation - Final results.csv"
-    GAPFILL = ROOT / "Chapter 1 - Keywords gapfill.csv"
+    V1      = data_path("Chapter 1 - Censorship and moderation - Final results.csv")
+    GAPFILL = data_path("Chapter 1 - Keywords gapfill.csv")
     # Five-set flower Venn — AI alignment dropped per user spec (the WHAT
     # taxonomy treats it as adjacent to the moderation literature but its
     # vocabulary is too distinct to read against the others on the same
@@ -1260,7 +1295,7 @@ def main() -> None:
                     kw[(ty, top)][w] += 1
             matched_pubs.add(key)
 
-        FULLKW = ROOT / "Chapter 1 - Keywords full.csv"
+        FULLKW = data_path("Chapter 1 - Keywords full.csv")
         if FULLKW.exists():
             # One consistent GPT-5.4 extraction convention over the whole
             # corpus (generate_type_keywords.py) — used as the SOLE source.
