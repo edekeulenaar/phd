@@ -3957,6 +3957,182 @@ function markInlineFormulas(root) {
   });
 }
 
+/* ───────────────────────────────────────────────────────────────────────────
+   Full-text search over the manuscript.
+
+   The whole thesis is about a megabyte of markdown, so it is fetched once on
+   the first search and kept in memory; there is no index to build or ship.
+   Each chapter is split into paragraphs, stripped of the markup a reader
+   never sees (cite keys, link targets, anchors, HTML), and matched on every
+   query word. Clicking a result routes to the chapter and scrolls to the
+   passage, highlighting it.
+   ─────────────────────────────────────────────────────────────────────────── */
+let _searchCorpus = null;       // [{slug, title, kind, para}]
+let _searchLoading = null;
+
+function stripMarkup(md) {
+  return md
+    .replace(/```[\s\S]*?```/g, " ")              // fenced code
+    .replace(/`[^`]*`/g, " ")                     // inline code
+    .replace(/<[^>]+>/g, " ")                     // raw HTML
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")        // images
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")      // links → their label
+    .replace(/\[\[[^\]|]*\|([^\]]*)\]\]/g, "$1")  // wikilinks → their label
+    .replace(/\[\[([^\]]*)\]\]/g, "$1")
+    .replace(/\[-?@[^\]]*\]/g, " ")               // citation groups
+    .replace(/(^|\s)\^[\w-]+/g, " ")              // block anchors
+    .replace(/[*_>#|]+/g, " ")                    // emphasis, quotes, headings
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function loadSearchCorpus() {
+  if (_searchCorpus) return _searchCorpus;
+  if (_searchLoading) return _searchLoading;
+  _searchLoading = (async () => {
+    const entries = (TOC?.entries || []).filter(e => e.slug !== "references");
+    const docs = await Promise.all(entries.map(async e => {
+      try {
+        const r = await fetch(`chapters/${e.slug}.md`, { cache: "force-cache" });
+        if (!r.ok) return null;
+        return { entry: e, md: await r.text() };
+      } catch { return null; }
+    }));
+    const corpus = [];
+    for (const d of docs) {
+      if (!d) continue;
+      for (const raw of d.md.split(/\n\s*\n/)) {
+        const para = stripMarkup(raw);
+        if (para.length < 40) continue;           // headings, stray markers
+        corpus.push({ slug: d.entry.slug, title: d.entry.title,
+                      kind: d.entry.kind, para });
+      }
+    }
+    _searchCorpus = corpus;
+    return corpus;
+  })();
+  return _searchLoading;
+}
+
+function searchSnippet(para, words) {
+  const lower = para.toLowerCase();
+  let at = lower.indexOf(words[0]);
+  if (at < 0) at = 0;
+  const from = Math.max(0, at - 70);
+  let snip = para.slice(from, from + 240);
+  if (from > 0) snip = "…" + snip;
+  if (from + 240 < para.length) snip += "…";
+  let html = escapeHtml(snip);
+  for (const w of words) {
+    html = html.replace(new RegExp(`(${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi"),
+                        "<mark>$1</mark>");
+  }
+  return html;
+}
+
+async function runSearch(q) {
+  const box = document.getElementById("ms-search-results");
+  const toc = document.getElementById("toc");
+  const clear = document.getElementById("ms-search-clear");
+  if (!box) return;
+  const words = q.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+  if (clear) clear.hidden = !q;
+  if (!words.length) {
+    box.hidden = true; box.innerHTML = "";
+    if (toc) toc.hidden = false;
+    return;
+  }
+  box.hidden = false;
+  if (toc) toc.hidden = true;
+  box.innerHTML = `<div class="sr-status">Searching…</div>`;
+
+  const corpus = await loadSearchCorpus();
+  if (document.getElementById("ms-search")?.value.trim() !== q) return;  // superseded
+
+  const hits = [];
+  for (const row of corpus) {
+    const lower = row.para.toLowerCase();
+    if (!words.every(w => lower.includes(w))) continue;
+    hits.push(row);
+    if (hits.length >= 120) break;
+  }
+  if (!hits.length) {
+    box.innerHTML = `<div class="sr-status">No matches for “${escapeHtml(q)}”.</div>`;
+    return;
+  }
+  const byChapter = new Map();
+  for (const h of hits) {
+    if (!byChapter.has(h.slug)) byChapter.set(h.slug, { title: h.title, rows: [] });
+    byChapter.get(h.slug).rows.push(h);
+  }
+  let html = `<div class="sr-status">${hits.length} passage${hits.length === 1 ? "" : "s"} ` +
+             `in ${byChapter.size} section${byChapter.size === 1 ? "" : "s"}</div>`;
+  for (const [slug, g] of byChapter) {
+    html += `<div class="sr-group"><div class="sr-chapter">${escapeHtml(g.title)}</div>`;
+    for (const row of g.rows.slice(0, 6)) {
+      html += `<button type="button" class="sr-hit" data-slug="${slug}" ` +
+              `data-q="${escapeHtml(row.para.slice(0, 120))}">` +
+              searchSnippet(row.para, words) + `</button>`;
+    }
+    if (g.rows.length > 6) {
+      html += `<div class="sr-more">+${g.rows.length - 6} more in this section</div>`;
+    }
+    html += `</div>`;
+  }
+  box.innerHTML = html;
+}
+
+/* Scroll to the passage a result came from, once its chapter has rendered. */
+function jumpToPassage(text, tries) {
+  const host = document.getElementById("manuscript");
+  if (!host) return;
+  const needle = text.slice(0, 60).toLowerCase();
+  const el = [...host.querySelectorAll("p, li, td, blockquote")]
+    .find(n => (n.textContent || "").toLowerCase().includes(needle));
+  if (el) {
+    el.scrollIntoView({ block: "center", behavior: "smooth" });
+    el.classList.add("sr-found");
+    setTimeout(() => el.classList.remove("sr-found"), 2600);
+    return;
+  }
+  // A figure-heavy chapter can take several seconds to lay out, so keep
+  // looking for a while rather than giving up on the jump.
+  if ((tries ?? 0) < 80) setTimeout(() => jumpToPassage(text, (tries ?? 0) + 1), 120);
+}
+
+(() => {
+  const input = document.getElementById("ms-search");
+  const clear = document.getElementById("ms-search-clear");
+  if (!input) return;
+  let t = null;
+  input.addEventListener("input", () => {
+    clearTimeout(t);
+    const q = input.value.trim();
+    t = setTimeout(() => runSearch(q), 160);
+  });
+  input.addEventListener("keydown", e => {
+    if (e.key === "Escape") { input.value = ""; runSearch(""); input.blur(); }
+  });
+  clear?.addEventListener("click", () => { input.value = ""; runSearch(""); input.focus(); });
+
+  // "/" focuses the box, the way most readers expect.
+  document.addEventListener("keydown", e => {
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      e.preventDefault(); input.focus(); input.select();
+    }
+  });
+
+  document.addEventListener("click", e => {
+    const hit = e.target.closest(".sr-hit");
+    if (!hit) return;
+    const slug = hit.dataset.slug, passage = hit.dataset.q || "";
+    if (routeSlug() === slug) jumpToPassage(passage);
+    else { location.hash = `#/${slug}`; setTimeout(() => jumpToPassage(passage), 260); }
+  });
+})();
+
 function rememberName(n) { try { localStorage.setItem("thesis-cmt-name", n); } catch {} }
 function lastName() { try { return localStorage.getItem("thesis-cmt-name") || ""; } catch { return ""; } }
 

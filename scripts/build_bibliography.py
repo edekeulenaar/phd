@@ -30,8 +30,14 @@ import json, re, sys, unicodedata
 from pathlib import Path
 
 ROOT       = Path(__file__).resolve().parent.parent
-BIB_PATH   = Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/"
-                  "PhD - Manuscript/My_Library_wayback.bib")
+# The wayback export carries the archived URLs but is a snapshot, and had
+# fallen 14 cited keys behind Zotero. Read the live library too. Order matters:
+# the wayback entries are applied last so their archived URLs win, and the live
+# export only supplies what the snapshot is missing.
+BIB_PATHS  = [Path("/Users/edekeulenaar/My_Library.bib"),
+              Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/"
+                   "PhD - Manuscript/My_Library_wayback.bib")]
+BIB_PATH   = BIB_PATHS[-1]
 MANUSCRIPT = ROOT / "manuscript.md"
 CHAPTERS   = ROOT / "chapters"
 OUT        = ROOT / "data" / "bibliography.json"
@@ -318,15 +324,17 @@ def harvard(entry_type: str, f: dict[str, str]) -> str:
 # ─── Main ────────────────────────────────────────────────────────────────
 
 def main():
-    if not BIB_PATH.exists():
-        sys.exit(f"✗ Bibliography not found: {BIB_PATH}")
+    present = [p for p in BIB_PATHS if p.exists()]
+    if not present:
+        sys.exit(f"✗ No bibliography found: {', '.join(str(p) for p in BIB_PATHS)}")
     if not MANUSCRIPT.exists():
         sys.exit(f"✗ Manuscript not found: {MANUSCRIPT}")
 
     needed = manuscript_keys()
     print(f"Manuscript cites: {len(needed)} unique keys")
-    bibtext = BIB_PATH.read_text(encoding="utf-8", errors="replace")
-    print(f"Reading bibliography: {BIB_PATH.name} ({len(bibtext):,} chars)")
+    bibtext = "\n".join(p.read_text(encoding="utf-8", errors="replace") for p in present)
+    print("Reading bibliographies: "
+          + ", ".join(f"{p.name} ({p.stat().st_size:,} bytes)" for p in present))
 
     found: dict[str, dict[str, str]] = {}
     for et, key, body in iter_entries(bibtext):

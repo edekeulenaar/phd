@@ -1,4 +1,11 @@
 {
+  "252DoubleStandardsSocial2026": {
+    "author": "Díaz and Hecht-Felella",
+    "year": "2021",
+    "inline": "(Díaz and Hecht-Felella, 2021)",
+    "harvard": "Díaz, Ángel and Hecht-Felella, L. (2021) *Double Standards in Social Media Content Moderation*. Available at: https://www.brennancenter.org/our-work/research-reports/double-standards-social-media-content-moderation.",
+    "link": "https://www.brennancenter.org/our-work/research-reports/double-standards-social-media-content-moderation"
+  },
   "4chanRules4chan2022": {
     "author": "4chan",
     "year": "2022",
@@ -89,6 +96,13 @@
     "inline": "(Alshamrani et al., 2020)",
     "harvard": "Alshamrani, S., Abuhamad, M., Abusnaina, A. and Mohaisen, D. (2020) ‘Investigating Online Toxicity in Users Interactions with the Mainstream Media Channels on YouTube’, in *Proceedings of International Workshop on Mining Actionable Insights from Social Networks*, pp. 6.",
     "link": ""
+  },
+  "Alttech2026": {
+    "author": "Wikipedia",
+    "year": "2026",
+    "inline": "(Wikipedia, 2026)",
+    "harvard": "Wikipedia (2026) *Alt-Tech*.",
+    "link": "https://en.wikipedia.org/w/index.php?title=Alt-tech&oldid=1370541520"
   },
   "amadieuFormesContemporainesCensure2020": {
     "author": "Amadieu and Talon-Hugon",
@@ -187,6 +201,13 @@
     "inline": "(Arthur, 2020)",
     "harvard": "Arthur, R. (2020) ‘The Man Who Helped Turn 4chan Into the Internet's Racist Engine’, *Vice*.",
     "link": "https://www.vice.com/en/article/m7aap8/the-man-who-helped-turn-4chan-into-the-internets-racist-engine"
+  },
+  "arthursResearchingYouTube2018": {
+    "author": "Arthurs et al.",
+    "year": "2018",
+    "inline": "(Arthurs et al., 2018)",
+    "harvard": "Arthurs, J., Drakopoulou, S. and Gandini, A. (2018) ‘Researching YouTube’, *Convergence: The International Journal of Research into New Media Technologies*, 24(1), pp. 3–15. doi:10.1177/1354856517737222",
+    "link": "https://doi.org/10.1177/1354856517737222"
   },
   "Artigo_Paulo_Abraoindd": {
     "author": "Abrão",
@@ -405,6 +426,13 @@
     "harvard": "Bordia, P. and Difonzo, N. (2004) ‘Problem Solving in Social Interactions on the Internet: Rumor As Social Cognition’, *Social Psychology Quarterly*, 67(1), pp. 33–49. doi:10.1177/019027250406700105",
     "link": "https://doi.org/10.1177/019027250406700105"
   },
+  "borelliSocialMediaCorporations2021a": {
+    "author": "Borelli",
+    "year": "2021",
+    "inline": "(Borelli, 2021)",
+    "harvard": "Borelli, M. (2021) ‘Social Media Corporations as Actors of Counter-Terrorism’, *New Media & Society*, 25(11), pp. 2877–2897. doi:10.1177/14614448211035121",
+    "link": "https://doi.org/10.1177/14614448211035121"
+  },
   "borraProgrammedMethodDeveloping2014": {
     "author": "Borra and Rieder",
     "year": "2014",
@@ -516,6 +544,13 @@
     "inline": "(Burt, 1994)",
     "harvard": "Burt, R. (1994) *The Administration of Aesthetics: Censorship, Political Criticism, and the Public Sphere*. U of Minnesota Press.",
     "link": ""
+  },
+  "burtonResearchNoteSpread2020": {
+    "author": "Burton and Koehorst",
+    "year": "2020",
+    "inline": "(Burton and Koehorst, 2020)",
+    "harvard": "Burton, A. G. and Koehorst, D. (2020) ‘Research Note: The Spread of Political Misinformation on Online Subcultural Platforms’, *Harvard Kennedy School Misinformation Review*. doi:10.37016/mr-2020-40",
+    "link": "https://doi.org/10.37016/mr-2020-40"
   },
   "butlerExcitableSpeechPolitics2021": {
     "author": "Butler",
@@ -2568,6 +2603,13 @@
     "harvard": "Grieveson, L. (2004) *Policing Cinema: Movies and Censorship in Early-Twentieth-Century America*. University of California Press. doi:10.5860/choice.42-1449",
     "link": "https://doi.org/10.5860/choice.42-1449"
   },
+  "lindUniteRightViolent2017": {
+    "author": "Lind",
+    "year": "2017",
+    "inline": "(Lind, 2017)",
+    "harvard": "Lind, D. (2017) *Unite the Right, the Violent White Supremacist Rally in Charlottesville, Explained*. Available at: https://www.vox.com/2017/8/12/16138246/charlottesville-nazi-rally-right-uva.",
+    "link": "https://www.vox.com/2017/8/12/16138246/charlottesville-nazi-rally-right-uva"
+  },
   "liuSocialMediaContent": {
     "author": "Liu et al.",
     "year": "n.d.",
@@ -2659,12 +2701,26 @@
     "harvard": "Maddox, J. and Malson, J. (2020) ‘Guidelines Without Lines, Communities Without Borders: The Marketplace of Ideas and Digital Manifest Destiny in Social Media Platform Policies’, *Social Media + Society*, 6(2), pp. 2056305120926622. doi:10.1177/2056305120926622",
     "link": "https://doi.org/10.1177/2056305120926622"
   },
+  "magalhaesGreatSysopElon2026": {
+    "author": "Magalhães et al.",
+    "year": "2026",
+    "inline": "(Magalhães et al., 2026)",
+    "harvard": "Magalhães, J. C., Iglesias Keller, C. and Gorwa, R. (2026) ‘The Great Sysop: Elon Musk, X, and the Emergence of Platform Illiberalism’, *New Media & Society*, pp. 14614448261424889. doi:10.1177/14614448261424889",
+    "link": "https://doi.org/10.1177/14614448261424889"
+  },
   "magalhaesLongitudinalMappingOnline2022": {
     "author": "Magalhães and Katzenbach",
     "year": "2022",
     "inline": "(Magalhães and Katzenbach, 2022)",
     "harvard": "Magalhães, J. C. and Katzenbach, C. (2022) ‘Longitudinal Mapping of Online Platforms’ Structures of Copyright Content Moderation’. Zenodo.",
     "link": "https://zenodo.org/record/6361520"
+  },
+  "magalhaesMediatedVisibilityRecognition2022": {
+    "author": "Magalhães and Yu",
+    "year": "2022",
+    "inline": "(Magalhães and Yu, 2022)",
+    "harvard": "Magalhães, J. C. and Yu, J. (2022) ‘Mediated Visibility and Recognition: A Taxonomy’, in A. M. Brighenti (ed.) *The New Politics of Visibility:Spaces, Actors, Practices and Technologies in The Visible*. Bristol, UK: Intellect Press, pp. 72–99.",
+    "link": "https://www.intellectbooks.com/the-new-politics-of-visibility"
   },
   "maHowUsersExperience2023": {
     "author": "Ma et al.",
@@ -2798,6 +2854,13 @@
     "inline": "(Matsuda, 2018)",
     "harvard": "Matsuda, M. J. (2018) *Words That Wound: Critical Race Theory, Assaultive Speech, And The First Amendment*. New York: Routledge.",
     "link": ""
+  },
+  "maxmenCOVIDLableakHypothesis2021": {
+    "author": "Maxmen and Mallapaty",
+    "year": "2021",
+    "inline": "(Maxmen and Mallapaty, 2021)",
+    "harvard": "Maxmen, A. and Mallapaty, S. (2021) ‘The COVID Lab-Leak Hypothesis: What Scientists Do and Don’t Know’, *Nature*, 594(7863), pp. 313–315. doi:10.1038/d41586-021-01529-3",
+    "link": "https://doi.org/10.1038/d41586-021-01529-3"
   },
   "maywormContentModerationFolk2024a": {
     "author": "Mayworm et al.",
@@ -2966,6 +3029,13 @@
     "inline": "(M Horta Ribeiro, 2023)",
     "harvard": "M Horta Ribeiro, R. W. J. C. (2023) ‘Automated Content Moderation Increases Adherence to Community Guidelines’, *Proceedings of the ACM Web Conference 2023*, pp. 2666–2676. doi:10.1145/3543507.3583275",
     "link": "https://doi.org/10.1145/3543507.3583275"
+  },
+  "michaelshellenbergerRothImmediatelyDMs2022": {
+    "author": "Shellenberger",
+    "year": "2022",
+    "inline": "(Shellenberger, 2022)",
+    "harvard": "Shellenberger, M. (2022) *Roth Immediately DMs a Colleague to Ask That They Add \"Stopthesteal\" & [QAnon Conspiracy Term] \"Kraken\" to a Blacklist of Terms to Be Deamplified. Roth's Colleague Objects That Blacklisting \"Stopthesteal\" Risks \"Deamplifying Counterspeech\" That Validates the Election. https://t.co/G02gGeicUW*. Available at: https://mobile.twitter.com/ShellenbergerMD/status/1601749506764046337.",
+    "link": "https://mobile.twitter.com/ShellenbergerMD/status/1601749506764046337"
   },
   "mikolovComputingNumericRepresentations2015": {
     "author": "Mikolov et al.",
@@ -3275,6 +3345,13 @@
     "harvard": "Anon. (n.d.) *OpenAI Platform*. Available at: https://web.archive.org/web/20240825142637/https://platform.openai.com/.",
     "link": "https://web.archive.org/web/20240825142637/https://platform.openai.com/"
   },
+  "OpenTermsArchive": {
+    "author": "Dupont et al.",
+    "year": "2026",
+    "inline": "(Dupont et al., 2026)",
+    "harvard": "Dupont, N., Biron, C. and Schneider, M. (2026) *Open Terms Archive*. Available at: https://opentermsarchive.org/en/.",
+    "link": "https://opentermsarchive.org/en/"
+  },
   "ordelmanSpeechRecognitionScholarly2018": {
     "author": "Ordelman and Hessen",
     "year": "2018",
@@ -3365,6 +3442,13 @@
     "inline": "(Pappas and Vassilakopoulou, 2025)",
     "harvard": "Pappas, I. O. I. and Vassilakopoulou, P. (2025) ‘Human Value Alignment in AI’, in W. Xu (ed.) *Handbook of Human-Centered Artificial Intelligence*. Singapore: Springer Nature Singapore, pp. 1–33. doi:10.1007/978-981-97-8440-0_7-1",
     "link": "https://doi.org/10.1007/978-981-97-8440-0_7-1"
+  },
+  "parkerPurifyingAmericaWomen1997": {
+    "author": "Parker",
+    "year": "1997",
+    "inline": "(Parker, 1997)",
+    "harvard": "Parker, A. (1997) *Purifying America: Women, Cultural Reform, and Pro-Censorship Activism, 1873-1933*. Urbana: University of Illinois Press.",
+    "link": ""
   },
   "passmannHealthyCommunitiesToxic2023b": {
     "author": "Paßmann et al.",
@@ -3835,6 +3919,13 @@
     "harvard": "Roussin, P. (2020) ‘Liberté d’expression et nouvelles théories de la censure:’, *Communications*, n° 106(1), pp. 17–32. doi:10.3917/commu.106.0017",
     "link": "https://doi.org/10.3917/commu.106.0017"
   },
+  "rouveyrolRoleComplexeModerateur2020": {
+    "author": "Rouveyrol",
+    "year": "2020",
+    "inline": "(Rouveyrol, 2020)",
+    "harvard": "Rouveyrol, L. (2020) ‘Le rôle complexe de modérateur dans le débat politique Question Time, vers une logométrie de l’absence ?’, *Linx. Revue des linguistes de l’université Paris X Nanterre*. doi:10.4000/linx.6471",
+    "link": "https://doi.org/10.4000/linx.6471"
+  },
   "rozadoPoliticalPreferencesLLMs2024": {
     "author": "Rozado",
     "year": "2024",
@@ -4282,6 +4373,13 @@
     "inline": "(Takhshid, 2021)",
     "harvard": "Takhshid, Z. (2021) ‘Regulating Social Media in the Global South’, *Vanderbilt Journal of Entertainment & Technology Law*, 24(1), pp. 1–56.",
     "link": ""
+  },
+  "tangEmbraceShiftProsocial2024": {
+    "author": "Tang",
+    "year": "2024",
+    "inline": "(Tang, 2024)",
+    "harvard": "Tang, A. (2024) ‘Embrace the Shift to ‘Prosocial Media’’, *Wired*.",
+    "link": "https://www.wired.com/story/prosocial-media-social-networks-discourse-decentralization/"
   },
   "tangherliniAutomatedPipelineDiscovery2020": {
     "author": "Tangherlini et al.",
@@ -5157,6 +5255,13 @@
     "inline": "(de Keulenaar, 2024)",
     "harvard": "de Keulenaar, E. (2024) ‘Censura e Moderação’, in R. Luís and A. Fernandes (eds.) *Censura: o Que Nos Falta Perguntar?*. Lisbon, Portugal: Imprensa de História Contemporânea, pp. 139–166. doi:10.34619/h0sl-rgww",
     "link": "https://doi.org/10.34619/h0sl-rgww"
+  },
+  "zotero-item-47192": {
+    "author": "GIFCT",
+    "year": "2019",
+    "inline": "(GIFCT, 2019)",
+    "harvard": "GIFCT (2019) *Transparency Report*. Available at: https://gifct.org/wp-content/uploads/2020/10/GIFCT-Transparency-Report-July-2019-Final.pdf.",
+    "link": "https://gifct.org/wp-content/uploads/2020/10/GIFCT-Transparency-Report-July-2019-Final.pdf"
   },
   "zuckermanDeplatformingOurWay2021": {
     "author": "Zuckerman and Rajendra-Nicolucci",

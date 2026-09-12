@@ -43,7 +43,7 @@ Content moderation,Video sharing platform,Restricting access,128
 Censorship,Print media,Licensing,126
 Content moderation,Search engine,Monitoring,126
 Content moderation,Video sharing platform,Economic,125
-Censorship,Print media,Coersive,122
+Censorship,Print media,Coercive,122
 Censorship,Print media,Economic,122
 Content moderation,Messaging platform,Filtering,121
 Content moderation,Social media platform,Rating,116
@@ -121,10 +121,10 @@ Content moderation,Search engine,Metamoderation,56
 Censorship,Television,Enframing,55
 Censorship,Print media,Obfuscation,54
 Censorship,Social media platform,Deplatforming,54
-Censorship,Television,Coersive,54
+Censorship,Television,Coercive,54
 Censorship,Radio,Modification,53
 Content moderation,Messaging platform,Correcting,53
-Censorship,Film,Coersive,52
+Censorship,Film,Coercive,52
 Censorship,Search engine,Filtering,52
 Censorship,ISP,Blocking,51
 Censorship,Performing arts,Modification,51
@@ -135,7 +135,7 @@ Content moderation,Messaging platform,Metamoderation,50
 Content moderation,AI,Enframing,49
 Content moderation,Messaging platform,Restricting access,49
 Content moderation,Social media platform,Obfuscation,49
-Content moderation,Social media platform,Coersive,48
+Content moderation,Social media platform,Coercive,48
 Censorship,Search engine,Removal,47
 Censorship,Search engine,Restricting access,47
 Censorship,Social media platform,Modification,47
@@ -147,11 +147,11 @@ Censorship,Radio,Monitoring,46
 Censorship,Television,Removal from circulation,46
 Content moderation,AI,Profiling,46
 Content moderation,Platforms,Filtering,46
-Censorship,Radio,Coersive,45
+Censorship,Radio,Coercive,45
 Censorship,Radio,Enframing,45
 Censorship,Radio,Removal from circulation,45
 Censorship,Search engine,Monitoring,45
-Censorship,Social media platform,Coersive,45
+Censorship,Social media platform,Coercive,45
 Content moderation,Video sharing platform,Removal from circulation,45
 Censorship,Performing arts,Review,44
 Censorship,Radio,Economic,44
@@ -253,7 +253,7 @@ Content moderation,E-commerce,Filtering,26
 Content moderation,E-commerce,Review,26
 Content moderation,Social media platform,Bridging,26
 Content moderation,Social media platform,Licensing,26
-Content moderation,Video sharing platform,Coersive,26
+Content moderation,Video sharing platform,Coercive,26
 Content moderation,Video sharing platform,Prompting,26
 Censorship,Search engine,Profiling,25
 Content moderation,Alt-tech,Filtering,25
@@ -323,7 +323,7 @@ AI alignment,AI,Profiling,19
 Censorship,ISP,Self-censorship,19
 Censorship,Internet (general),Blocking,19
 Censorship,Internet (general),Review,19
-Censorship,Performing arts,Coersive,19
+Censorship,Performing arts,Coercive,19
 Content moderation,AI,Rating,19
 Content moderation,Decentralized social media,Enframing,19
 Content moderation,Decentralized social media,Removal,19
@@ -361,7 +361,7 @@ Debate management,Social media platform,Prompting,17
 Censorship,Performing arts,Confiscation,16
 Censorship,Search engine,Disclosure,16
 Censorship,Search engine,Modification,16
-Censorship,Video sharing platform,Coersive,16
+Censorship,Video sharing platform,Coercive,16
 Censorship,Video sharing platform,Marginalisation,16
 Content moderation,Alt-tech,Blocking,16
 Content moderation,App store,Removal,16
@@ -395,14 +395,14 @@ Content moderation,Decentralized social media,Review,15
 Content moderation,E-commerce,Profiling,15
 Content moderation,Imageboard,Review,15
 Content moderation,Messaging platform,Modification,15
-Content moderation,Search engine,Coersive,15
+Content moderation,Search engine,Coercive,15
 Content moderation,Video sharing platform,Intelligibility,15
 Debate management,Online fora,Enframing,15
 AI alignment,AI,Blocking,14
 AI alignment,AI,Removal,14
 AI alignment,Social media platform,Profiling,14
 AI alignment,Social media platform,Review,14
-Censorship,Internet (general),Coersive,14
+Censorship,Internet (general),Coercive,14
 Censorship,Internet (general),Modification,14
 Censorship,Messaging platform,Modification,14
 Censorship,Search engine,Correcting,14
@@ -429,7 +429,7 @@ Censorship,ISP,Economic,13
 Censorship,Internet (general),Profiling,13
 Censorship,Performing arts,Restricting access,13
 Censorship,Print media,Redirection,13
-Censorship,Search engine,Coersive,13
+Censorship,Search engine,Coercive,13
 Censorship,Social media platform,Agenda setting,13
 Censorship,Television,Disclosure,13
 Censorship,Wikis,Monitoring,13
@@ -484,7 +484,7 @@ AI alignment,AI,Modification,11
 Censorship,AI,Filtering,11
 Censorship,Blog,Monitoring,11
 Censorship,Blog,Removal,11
-Censorship,ISP,Coersive,11
+Censorship,ISP,Coercive,11
 Censorship,Music,Filtering,11
 Censorship,Music,Modification,11
 Censorship,Music,Removal from circulation,11
@@ -523,7 +523,7 @@ Censorship,Browser,Monitoring,10
 Censorship,Browser,Restricting access,10
 Censorship,ISP,Labeling,10
 Censorship,Internet (general),Rating,10
-Censorship,Music,Coersive,10
+Censorship,Music,Coercive,10
 Censorship,Online fora,Enframing,10
 Censorship,Print media,Metamoderation,10
 Censorship,Protocol,Monitoring,10
@@ -605,7 +605,7 @@ Censorship,Film,Correcting,8
 Censorship,ISP,Rating,8
 Censorship,Internet (general),Confiscation,8
 Censorship,Internet (general),Deplatforming,8
-Censorship,Messaging platform,Coersive,8
+Censorship,Messaging platform,Coercive,8
 Censorship,Messaging platform,Disclosure,8
 Censorship,Messaging platform,Economic,8
 Censorship,Messaging platform,Licensing,8
@@ -632,7 +632,7 @@ Content moderation,Imageboard,Economic,8
 Content moderation,Imageboard,Marginalisation,8
 Content moderation,Internet (general),Enframing,8
 Content moderation,Marketplace,Blocking,8
-Content moderation,Messaging platform,Coersive,8
+Content moderation,Messaging platform,Coercive,8
 Content moderation,Music streaming,Enframing,8
 Content moderation,Music streaming,Review,8
 Content moderation,News media,Blocking,8
@@ -741,7 +741,7 @@ Censorship,Video sharing platform,Removal from circulation,6
 Censorship,Videoconferencing,Monitoring,6
 Censorship,Visual arts,Deplatforming,6
 Censorship,Visual arts,Removal from circulation,6
-Censorship,Wikis,Coersive,6
+Censorship,Wikis,Coercive,6
 Content moderation,AI,Interiorisation,6
 Content moderation,Alt-tech,Metamoderation,6
 Content moderation,Alt-tech,Rating,6
@@ -772,7 +772,7 @@ Content moderation,Television,Blocking,6
 Content moderation,Television,Deplatforming,6
 Content moderation,Television,Economic,6
 Content moderation,Video sharing platform,Coherence,6
-Content moderation,Wikis,Coersive,6
+Content moderation,Wikis,Coercive,6
 Content moderation,Wikis,Removal from circulation,6
 Debate management,Print media,Filtering,6
 Debate management,Print media,Removal,6
@@ -839,7 +839,7 @@ Content moderation,Blog,Profiling,5
 Content moderation,Dating app,Review,5
 Content moderation,Decentralized social media,Disclosure,5
 Content moderation,Decentralized social media,Modification,5
-Content moderation,ISP,Coersive,5
+Content moderation,ISP,Coercive,5
 Content moderation,ISP,Rating,5
 Content moderation,Image sharing platform,Filtering,5
 Content moderation,Image sharing platform,Review,5
@@ -867,7 +867,7 @@ Content moderation,Online learning platform,Coherence,5
 Content moderation,Online learning platform,Intelligibility,5
 Content moderation,Payment platform,Deplatforming,5
 Content moderation,Payment platform,Enframing,5
-Content moderation,Platforms,Coersive,5
+Content moderation,Platforms,Coercive,5
 Content moderation,Platforms,Rating,5
 Content moderation,Portal,Filtering,5
 Content moderation,Portal,Review,5
@@ -969,7 +969,7 @@ Censorship,Music,Labeling,4
 Censorship,Music,Monitoring,4
 Censorship,Music,Obfuscation,4
 Censorship,Music streaming,Monitoring,4
-Censorship,News media,Coersive,4
+Censorship,News media,Coercive,4
 Censorship,News media,Economic,4
 Censorship,News media,Enframing,4
 Censorship,News media,Modification,4
@@ -1063,7 +1063,7 @@ Content moderation,Online learning platform,Review,4
 Content moderation,Platforms,Licensing,4
 Content moderation,Portal,Enframing,4
 Content moderation,Portal,Removal,4
-Content moderation,Print media,Coersive,4
+Content moderation,Print media,Coercive,4
 Content moderation,Print media,Prompting,4
 Content moderation,Q&A platform,Enframing,4
 Content moderation,Q&A platform,Monitoring,4
@@ -1080,7 +1080,7 @@ Content moderation,Ride-sharing platform,Filtering,4
 Content moderation,Russian social media platform,Enframing,4
 Content moderation,Search engine,Bridging,4
 Content moderation,Short video platform,Disclosure,4
-Content moderation,Television,Coersive,4
+Content moderation,Television,Coercive,4
 Content moderation,Television,Disclosure,4
 Content moderation,Television,Marginalisation,4
 Content moderation,Television,Modification,4
@@ -1118,7 +1118,7 @@ Media moderation,Film,Monitoring,4
 Media moderation,Film,Removal from circulation,4
 Media moderation,ISP,Enframing,4
 Media moderation,ISP,Removal,4
-Media moderation,Print media,Coersive,4
+Media moderation,Print media,Coercive,4
 Media moderation,Print media,Deplatforming,4
 Media moderation,Print media,Metamoderation,4
 Media moderation,Search engine,Economic,4
@@ -1159,13 +1159,13 @@ AI alignment,Social media platform,Restricting access,3
 AI alignment,Wikis,Filtering,3
 AI alignment,Wikis,Restricting access,3
 AI alignment,Wikis,Review,3
-Censorship,AI,Coersive,3
+Censorship,AI,Coercive,3
 Censorship,AI,Correcting,3
 Censorship,AI,Labeling,3
 Censorship,AI,Licensing,3
 Censorship,AI,Marginalisation,3
 Censorship,AI,Modification,3
-Censorship,Academic publications,Coersive,3
+Censorship,Academic publications,Coercive,3
 Censorship,Academic publications,Enframing,3
 Censorship,Academic publications,Labeling,3
 Censorship,Academic publications,Licensing,3
@@ -1208,7 +1208,7 @@ Censorship,Library,Modification,3
 Censorship,Library,Profiling,3
 Censorship,Literature,Removal,3
 Censorship,Literature,Removal from circulation,3
-Censorship,Mass media (traditional),Coersive,3
+Censorship,Mass media (traditional),Coercive,3
 Censorship,Mass media (traditional),Deplatforming,3
 Censorship,Mass media (traditional),Enframing,3
 Censorship,Mass media (traditional),Interiorisation,3
@@ -1276,7 +1276,7 @@ Censorship,Video streaming platform,Review,3
 Censorship,Video streaming platform,Self-censorship,3
 Censorship,Videoconferencing,Deplatforming,3
 Censorship,Videoconferencing,Redirection,3
-Censorship,Visual arts,Coersive,3
+Censorship,Visual arts,Coercive,3
 Censorship,Visual arts,Confiscation,3
 Censorship,Visual arts,Interiorisation,3
 Censorship,Visual arts,Marginalisation,3
@@ -1295,10 +1295,10 @@ Content moderation,AI,Self-censorship,3
 Content moderation,Adult content platform,Filtering,3
 Content moderation,Adult content platform,Monitoring,3
 Content moderation,Adult content platform,Removal,3
-Content moderation,Alt-tech,Coersive,3
+Content moderation,Alt-tech,Coercive,3
 Content moderation,Alternative news media,Filtering,3
 Content moderation,App store,Balancing,3
-Content moderation,App store,Coersive,3
+Content moderation,App store,Coercive,3
 Content moderation,App store,Obfuscation,3
 Content moderation,App store,Scheduling,3
 Content moderation,App store,Self-censorship,3
@@ -1475,7 +1475,7 @@ Media moderation,Search engine,Labeling,3
 Media moderation,Social media platform,Disclosure,3
 Media moderation,Social media platform,Restricting access,3
 Media moderation,Television,Blocking,3
-Media moderation,Television,Coersive,3
+Media moderation,Television,Coercive,3
 Media moderation,Television,Disclosure,3
 Media moderation,Television,Modification,3
 Media moderation,Television,Profiling,3
@@ -1490,7 +1490,7 @@ Media moderation,Wikis,Review,3
 Media regulation,Film,Self-censorship,3
 Media regulation,Internet (general),Rating,3
 Media regulation,Internet (general),Review,3
-Media regulation,Print media,Coersive,3
+Media regulation,Print media,Coercive,3
 Media regulation,Print media,Enframing,3
 Media regulation,Print media,Rating,3
 Media regulation,Print media,Removal,3
@@ -1557,18 +1557,18 @@ Censorship,Academic publications,Interiorisation,2
 Censorship,Academic publications,Marginalisation,2
 Censorship,Academic publications,Monitoring,2
 Censorship,Academic publications,Obfuscation,2
-Censorship,Alternative news media,Coersive,2
+Censorship,Alternative news media,Coercive,2
 Censorship,Alternative news media,Filtering,2
 Censorship,Alternative news media,Self-censorship,2
 Censorship,App store,Enframing,2
 Censorship,App store,Removal,2
 Censorship,Audio,Removal,2
 Censorship,Audio,Review,2
-Censorship,Blog,Coersive,2
+Censorship,Blog,Coercive,2
 Censorship,Blog,Disclosure,2
 Censorship,Blog,Economic,2
 Censorship,Blog,Metamoderation,2
-Censorship,Broadcast media,Coersive,2
+Censorship,Broadcast media,Coercive,2
 Censorship,Broadcast media,Enframing,2
 Censorship,Broadcast media,Removal,2
 Censorship,Browser,Deplatforming,2
@@ -1596,7 +1596,7 @@ Censorship,Digital media,Removal,2
 Censorship,Digital media,Self-censorship,2
 Censorship,E-commerce,Monitoring,2
 Censorship,E-commerce,Restricting access,2
-Censorship,Educational material,Coersive,2
+Censorship,Educational material,Coercive,2
 Censorship,Educational material,Filtering,2
 Censorship,Educational material,Removal from circulation,2
 Censorship,Email,Blocking,2
@@ -1622,10 +1622,10 @@ Censorship,Infrastructure,Licensing,2
 Censorship,Infrastructure,Removal from circulation,2
 Censorship,Infrastructure,Scheduling,2
 Censorship,Internet (general),Metamoderation,2
-Censorship,Journalism,Coersive,2
+Censorship,Journalism,Coercive,2
 Censorship,Journalism,Modification,2
 Censorship,Journalism,Self-censorship,2
-Censorship,Library,Coersive,2
+Censorship,Library,Coercive,2
 Censorship,Library,Labeling,2
 Censorship,Library,Monitoring,2
 Censorship,Library,Review,2
@@ -1655,7 +1655,7 @@ Censorship,Music streaming,Filtering,2
 Censorship,Music streaming,Profiling,2
 Censorship,Music streaming,Removal,2
 Censorship,Music streaming,Review,2
-Censorship,News aggregator,Coersive,2
+Censorship,News aggregator,Coercive,2
 Censorship,News aggregator,Enframing,2
 Censorship,News aggregator,Filtering,2
 Censorship,News aggregator,Restricting access,2
@@ -1685,7 +1685,7 @@ Censorship,Payment platform,Restricting access,2
 Censorship,Payment platform,Self-censorship,2
 Censorship,Performing arts,Balancing,2
 Censorship,Performing arts,Metamoderation,2
-Censorship,Photography,Coersive,2
+Censorship,Photography,Coercive,2
 Censorship,Photography,Removal,2
 Censorship,Photography,Removal from circulation,2
 Censorship,Photography,Self-censorship,2
@@ -1714,7 +1714,7 @@ Censorship,Software,Profiling,2
 Censorship,Streaming services,Filtering,2
 Censorship,Streaming services,Removal,2
 Censorship,Streaming services,Restricting access,2
-Censorship,Telephony,Coersive,2
+Censorship,Telephony,Coercive,2
 Censorship,Telephony,Modification,2
 Censorship,Telephony,Profiling,2
 Censorship,Telephony,Redirection,2
@@ -1867,7 +1867,7 @@ Content moderation,Metaverse,Labeling,2
 Content moderation,Metaverse,Marginalisation,2
 Content moderation,Metaverse,Rating,2
 Content moderation,Metaverse,Restricting access,2
-Content moderation,Mobile device,Coersive,2
+Content moderation,Mobile device,Coercive,2
 Content moderation,Mobile device,Economic,2
 Content moderation,Mobile device,Labeling,2
 Content moderation,Mobile device,Metamoderation,2
@@ -1890,7 +1890,7 @@ Content moderation,Online community,Modification,2
 Content moderation,Online community,Review,2
 Content moderation,Online fora,Balancing,2
 Content moderation,Online fora,Bridging,2
-Content moderation,Online fora,Coersive,2
+Content moderation,Online fora,Coercive,2
 Content moderation,Online fora,Inclusion,2
 Content moderation,Online fora,Removal from circulation,2
 Content moderation,Online learning platform,Blocking,2
@@ -1919,7 +1919,7 @@ Content moderation,Print media,Licensing,2
 Content moderation,Q&A platform,Blocking,2
 Content moderation,Q&A platform,Deplatforming,2
 Content moderation,Q&A platform,Modification,2
-Content moderation,Radio,Coersive,2
+Content moderation,Radio,Coercive,2
 Content moderation,Radio,Labeling,2
 Content moderation,Radio,Metamoderation,2
 Content moderation,Radio,Prompting,2
@@ -2039,7 +2039,7 @@ Media moderation,Film,Rating,2
 Media moderation,ISP,Blocking,2
 Media moderation,ISP,Monitoring,2
 Media moderation,Internet (general),Monitoring,2
-Media moderation,Library,Coersive,2
+Media moderation,Library,Coercive,2
 Media moderation,Library,Rating,2
 Media moderation,Library,Removal from circulation,2
 Media moderation,Music streaming,Enframing,2
@@ -2057,7 +2057,7 @@ Media moderation,Print media,Coherence,2
 Media moderation,Print media,Confiscation,2
 Media moderation,Print media,Intelligibility,2
 Media moderation,Print media,Restricting access,2
-Media moderation,Radio,Coersive,2
+Media moderation,Radio,Coercive,2
 Media moderation,Radio,Economic,2
 Media moderation,Radio,Licensing,2
 Media moderation,Radio,Modification,2
@@ -2089,7 +2089,7 @@ Media moderation,Wikis,Monitoring,2
 Media moderation,Wikis,Profiling,2
 Media moderation,Wikis,Removal,2
 Media regulation,Film,Blocking,2
-Media regulation,Film,Coersive,2
+Media regulation,Film,Coercive,2
 Media regulation,Film,Enframing,2
 Media regulation,Film,Interiorisation,2
 Media regulation,Film,Licensing,2
@@ -2102,7 +2102,7 @@ Media regulation,Film,Scheduling,2
 Media regulation,Internet (general),Blocking,2
 Media regulation,Internet (general),Removal,2
 Media regulation,Internet (general),Self-censorship,2
-Media regulation,Music,Coersive,2
+Media regulation,Music,Coercive,2
 Media regulation,Music,Filtering,2
 Media regulation,Music,Licensing,2
 Media regulation,Music,Modification,2
@@ -2120,12 +2120,12 @@ Media regulation,Print media,Licensing,2
 Media regulation,Print media,Profiling,2
 Media regulation,Print media,Self-censorship,2
 Media regulation,Radio,Blocking,2
-Media regulation,Radio,Coersive,2
+Media regulation,Radio,Coercive,2
 Media regulation,Radio,Deplatforming,2
 Media regulation,Radio,Modification,2
 Media regulation,Radio,Scheduling,2
 Media regulation,Social media platform,Filtering,2
-Media regulation,Television,Coersive,2
+Media regulation,Television,Coercive,2
 Media regulation,Television,Enframing,2
 Media regulation,Television,Modification,2
 Media regulation,Television,Removal,2
@@ -2144,7 +2144,7 @@ Other,Internet (general),Labeling,2
 Other,Internet (general),Metamoderation,2
 Other,Internet (general),Modification,2
 Other,Internet (general),Prompting,2
-Other,Messaging platform,Coersive,2
+Other,Messaging platform,Coercive,2
 Other,Messaging platform,Enframing,2
 Other,Messaging platform,Intelligibility,2
 Other,Messaging platform,Monitoring,2
@@ -2163,7 +2163,7 @@ Other,Search engine,Filtering,2
 Other,Search engine,Removal,2
 Other,Search engine,Restricting access,2
 Other,Search engine,Review,2
-Other,Social media platform,Coersive,2
+Other,Social media platform,Coercive,2
 Other,Social media platform,Metamoderation,2
 Other,Social media platform,Rating,2
 Other,Video sharing platform,Disclosure,2
@@ -2394,7 +2394,7 @@ Censorship,Adult content platform,Removal,1
 Censorship,Adult content platform,Restricting access,1
 Censorship,Adult content platform,Review,1
 Censorship,Adult content platform,Self-censorship,1
-Censorship,Advertising,Coersive,1
+Censorship,Advertising,Coercive,1
 Censorship,Advertising,Interiorisation,1
 Censorship,Advertising,Labeling,1
 Censorship,Advertising,Modification,1
@@ -2426,7 +2426,7 @@ Censorship,Archive,Removal from circulation,1
 Censorship,Archive,Review,1
 Censorship,Archive,Self-censorship,1
 Censorship,Audio,Blocking,1
-Censorship,Audio,Coersive,1
+Censorship,Audio,Coercive,1
 Censorship,Audio,Labeling,1
 Censorship,Audio,Rating,1
 Censorship,Audio,Removal from circulation,1
@@ -2447,7 +2447,7 @@ Censorship,Broadcast media,Deplatforming,1
 Censorship,Broadcast media,Economic,1
 Censorship,Broadcast media,Licensing,1
 Censorship,Broadcast media,Monitoring,1
-Censorship,Browser,Coersive,1
+Censorship,Browser,Coercive,1
 Censorship,Browser,Correcting,1
 Censorship,Browser,Economic,1
 Censorship,Browser,Enframing,1
@@ -2465,7 +2465,7 @@ Censorship,Code repository,Profiling,1
 Censorship,Code repository,Removal,1
 Censorship,Code repository,Restricting access,1
 Censorship,Comics,Balancing,1
-Censorship,Comics,Coersive,1
+Censorship,Comics,Coercive,1
 Censorship,Comics,Deplatforming,1
 Censorship,Comics,Labeling,1
 Censorship,Computer network,Blocking,1
@@ -2521,7 +2521,7 @@ Censorship,Deliberation platform,Monitoring,1
 Censorship,Deliberation platform,Rating,1
 Censorship,Deliberation platform,Scheduling,1
 Censorship,Deliberation platform,Self-censorship,1
-Censorship,Digital media,Coersive,1
+Censorship,Digital media,Coercive,1
 Censorship,Digital media,Correcting,1
 Censorship,Digital media,Deplatforming,1
 Censorship,Digital media,Economic,1
@@ -2548,7 +2548,7 @@ Censorship,Educational material,Economic,1
 Censorship,Educational material,Monitoring,1
 Censorship,Educational material,Redirection,1
 Censorship,Educational material,Review,1
-Censorship,Email,Coersive,1
+Censorship,Email,Coercive,1
 Censorship,Email,Deplatforming,1
 Censorship,Email,Disclosure,1
 Censorship,Email,Economic,1
@@ -2562,7 +2562,7 @@ Censorship,Film,Coherence,1
 Censorship,Film,Debate management,1
 Censorship,Film,Inclusion,1
 Censorship,Film,Other,1
-Censorship,Government data,Coersive,1
+Censorship,Government data,Coercive,1
 Censorship,Government data,Modification,1
 Censorship,Government data,Profiling,1
 Censorship,Government website,Bridging,1
@@ -2588,7 +2588,7 @@ Censorship,Image sharing platform,Interiorisation,1
 Censorship,Image sharing platform,Profiling,1
 Censorship,Image sharing platform,Redirection,1
 Censorship,Image sharing platform,Self-censorship,1
-Censorship,Imageboard,Coersive,1
+Censorship,Imageboard,Coercive,1
 Censorship,Imageboard,Deplatforming,1
 Censorship,Imageboard,Disclosure,1
 Censorship,Imageboard,Economic,1
@@ -2616,7 +2616,7 @@ Censorship,Internet (general),Intermediate,1
 Censorship,Internet (general),Protection of children,1
 Censorship,Internet censorship infrastructure,Agenda setting,1
 Censorship,Internet censorship infrastructure,Blocking,1
-Censorship,Internet censorship infrastructure,Coersive,1
+Censorship,Internet censorship infrastructure,Coercive,1
 Censorship,Internet censorship infrastructure,Economic,1
 Censorship,Internet censorship infrastructure,Enframing,1
 Censorship,Internet censorship infrastructure,Filtering,1
@@ -2638,7 +2638,7 @@ Censorship,Library,Agenda setting,1
 Censorship,Library,Disclosure,1
 Censorship,Library,Economic,1
 Censorship,Library,Enframing,1
-Censorship,Literature,Coersive,1
+Censorship,Literature,Coercive,1
 Censorship,Literature,Disclosure,1
 Censorship,Literature,Interiorisation,1
 Censorship,Literature,Labeling,1
@@ -2665,7 +2665,7 @@ Censorship,Media (general),Self-censorship,1
 Censorship,Messaging platform,Coherence,1
 Censorship,Messaging platform,Other,1
 Censorship,Messaging platform,Removal from circulation,1
-Censorship,Mobile device,Coersive,1
+Censorship,Mobile device,Coercive,1
 Censorship,Mobile device,Disclosure,1
 Censorship,Mobile device,Economic,1
 Censorship,Mobile device,Interiorisation,1
@@ -2679,7 +2679,7 @@ Censorship,Music,Prompting,1
 Censorship,Music,Redirection,1
 Censorship,Music,Scheduling,1
 Censorship,Music streaming,Blocking,1
-Censorship,Music streaming,Coersive,1
+Censorship,Music streaming,Coercive,1
 Censorship,Music streaming,Correcting,1
 Censorship,Music streaming,Economic,1
 Censorship,Music streaming,Labeling,1
@@ -2724,7 +2724,7 @@ Censorship,Oral communication,Licensing,1
 Censorship,Oral communication,Monitoring,1
 Censorship,Oral communication,Removal,1
 Censorship,Payment platform,Agenda setting,1
-Censorship,Payment platform,Coersive,1
+Censorship,Payment platform,Coercive,1
 Censorship,Payment platform,Confiscation,1
 Censorship,Payment platform,Deplatforming,1
 Censorship,Payment platform,Intelligibility,1
@@ -2747,7 +2747,7 @@ Censorship,Photography,Obfuscation,1
 Censorship,Photography,Rating,1
 Censorship,Photography,Redirection,1
 Censorship,Photography,Review,1
-Censorship,Platforms,Coersive,1
+Censorship,Platforms,Coercive,1
 Censorship,Platforms,Disclosure,1
 Censorship,Platforms,Intelligibility,1
 Censorship,Platforms,Intermediate,1
@@ -2820,7 +2820,7 @@ Censorship,Search engine,Intermediate,1
 Censorship,Search engine,Other,1
 Censorship,Search engine,Prompting,1
 Censorship,Short video platform,Blocking,1
-Censorship,Short video platform,Coersive,1
+Censorship,Short video platform,Coercive,1
 Censorship,Short video platform,Deplatforming,1
 Censorship,Short video platform,Disclosure,1
 Censorship,Short video platform,Enframing,1
@@ -2843,7 +2843,7 @@ Censorship,Social media platform,Political censorship,1
 Censorship,Software,Deplatforming,1
 Censorship,Software,Modification,1
 Censorship,Streaming services,Blocking,1
-Censorship,Streaming services,Coersive,1
+Censorship,Streaming services,Coercive,1
 Censorship,Streaming services,Correcting,1
 Censorship,Streaming services,Labeling,1
 Censorship,Streaming services,Modification,1
@@ -2852,7 +2852,7 @@ Censorship,Streaming services,Review,1
 Censorship,Streaming services,Self-censorship,1
 Censorship,Telegraph,Agenda setting,1
 Censorship,Telegraph,Blocking,1
-Censorship,Telegraph,Coersive,1
+Censorship,Telegraph,Coercive,1
 Censorship,Telegraph,Modification,1
 Censorship,Telegraph,Monitoring,1
 Censorship,Telegraph,Removal,1
@@ -2867,7 +2867,7 @@ Censorship,Television,Other,1
 Censorship,Television,Protection of children,1
 Censorship,Television,Replacement,1
 Censorship,VPN,Agenda setting,1
-Censorship,VPN,Coersive,1
+Censorship,VPN,Coercive,1
 Censorship,VPN,Labeling,1
 Censorship,VPN,Marginalisation,1
 Censorship,VPN,Rating,1
@@ -2876,7 +2876,7 @@ Censorship,Video,Blocking,1
 Censorship,Video,Modification,1
 Censorship,Video,Scheduling,1
 Censorship,Video,Self-censorship,1
-Censorship,Video game,Coersive,1
+Censorship,Video game,Coercive,1
 Censorship,Video game,Economic,1
 Censorship,Video game,Interiorisation,1
 Censorship,Video game,Intermediate,1
@@ -2888,7 +2888,7 @@ Censorship,Video sharing platform,Inclusion,1
 Censorship,Video sharing platform,Intelligibility,1
 Censorship,Video sharing platform,Intermediate,1
 Censorship,Video sharing platform,Other,1
-Censorship,Video streaming platform,Coersive,1
+Censorship,Video streaming platform,Coercive,1
 Censorship,Video streaming platform,Correcting,1
 Censorship,Video streaming platform,Economic,1
 Censorship,Video streaming platform,Licensing,1
@@ -2896,7 +2896,7 @@ Censorship,Video streaming platform,Modification,1
 Censorship,Video streaming platform,Obfuscation,1
 Censorship,Video streaming platform,Rating,1
 Censorship,Video streaming platform,Redirection,1
-Censorship,Videoconferencing,Coersive,1
+Censorship,Videoconferencing,Coercive,1
 Censorship,Videoconferencing,Economic,1
 Censorship,Videoconferencing,Enframing,1
 Censorship,Videoconferencing,Interiorisation,1
@@ -2907,7 +2907,7 @@ Censorship,Visual arts,Correcting,1
 Censorship,Visual arts,Metamoderation,1
 Censorship,Visual arts,Restricting access,1
 Censorship,Visual arts,Scheduling,1
-Censorship,Web,Coersive,1
+Censorship,Web,Coercive,1
 Censorship,Web,Disclosure,1
 Censorship,Web,Economic,1
 Censorship,Web,Interiorisation,1
@@ -2929,7 +2929,7 @@ Censorship,Wikis,Correcting,1
 Censorship,Wikis,Flooding,1
 Censorship,Wikis,Interiorisation,1
 Censorship,Wikis,Scheduling,1
-Content moderation,AI,Coersive,1
+Content moderation,AI,Coercive,1
 Content moderation,AI,Interoperability,1
 Content moderation,AI,Licensing,1
 Content moderation,AI,Removal from circulation,1
@@ -2955,7 +2955,7 @@ Content moderation,Adult content platform,Redirection,1
 Content moderation,Adult content platform,Removal from circulation,1
 Content moderation,Adult content platform,Self-censorship,1
 Content moderation,Algorithms,Blocking,1
-Content moderation,Algorithms,Coersive,1
+Content moderation,Algorithms,Coercive,1
 Content moderation,Algorithms,Correcting,1
 Content moderation,Algorithms,Economic,1
 Content moderation,Algorithms,Filtering,1
@@ -2989,7 +2989,7 @@ Content moderation,App store,Licensing,1
 Content moderation,App store,Prompting,1
 Content moderation,App store,Transparency in moderation/reporting,1
 Content moderation,Blog,Agenda setting,1
-Content moderation,Blog,Coersive,1
+Content moderation,Blog,Coercive,1
 Content moderation,Blog,Escalation,1
 Content moderation,Blog,Inclusion,1
 Content moderation,Blog,Intelligibility,1
@@ -3092,7 +3092,7 @@ Content moderation,Dark web,Review,1
 Content moderation,Dating app,Correcting,1
 Content moderation,Dating app,Escalation,1
 Content moderation,Dating app,Profiling,1
-Content moderation,Decentralized social media,Coersive,1
+Content moderation,Decentralized social media,Coercive,1
 Content moderation,Decentralized social media,Interiorisation,1
 Content moderation,Decentralized social media,Interoperability,1
 Content moderation,Decentralized social media,Licensing,1
@@ -3109,7 +3109,7 @@ Content moderation,Deliberation platform,Redirection,1
 Content moderation,Deliberation platform,Removal,1
 Content moderation,Deliberation platform,Review,1
 Content moderation,E-commerce,Bridging,1
-Content moderation,E-commerce,Coersive,1
+Content moderation,E-commerce,Coercive,1
 Content moderation,E-commerce,Escalation,1
 Content moderation,E-commerce,Interiorisation,1
 Content moderation,E-commerce,Intermediate,1
@@ -3150,7 +3150,7 @@ Content moderation,Fanfiction platform,Removal,1
 Content moderation,Fanfiction platform,Self-censorship,1
 Content moderation,Film,Balancing,1
 Content moderation,Film,Blocking,1
-Content moderation,Film,Coersive,1
+Content moderation,Film,Coercive,1
 Content moderation,Film,Coherence,1
 Content moderation,Film,Deplatforming,1
 Content moderation,Film,Disclosure,1
@@ -3193,10 +3193,10 @@ Content moderation,Image sharing platform,Modification,1
 Content moderation,Image sharing platform,Redirection,1
 Content moderation,Image sharing platform,Removal from circulation,1
 Content moderation,Imageboard,Agenda setting,1
-Content moderation,Imageboard,Coersive,1
+Content moderation,Imageboard,Coercive,1
 Content moderation,Imageboard,Intermediate,1
 Content moderation,Imageboard,Scheduling,1
-Content moderation,Infrastructure,Coersive,1
+Content moderation,Infrastructure,Coercive,1
 Content moderation,Infrastructure,Escalation,1
 Content moderation,Infrastructure,Licensing,1
 Content moderation,Infrastructure,Metamoderation,1
@@ -3241,7 +3241,7 @@ Content moderation,Map app,Obfuscation,1
 Content moderation,Map app,Rating,1
 Content moderation,Marketplace,Balancing,1
 Content moderation,Marketplace,Bridging,1
-Content moderation,Marketplace,Coersive,1
+Content moderation,Marketplace,Coercive,1
 Content moderation,Marketplace,Confiscation,1
 Content moderation,Marketplace,Interiorisation,1
 Content moderation,Marketplace,Removal from circulation,1
@@ -3267,7 +3267,7 @@ Content moderation,Mobile device,Redirection,1
 Content moderation,Mobile device,Removal from circulation,1
 Content moderation,Mobile device,Scheduling,1
 Content moderation,Music streaming,Balancing,1
-Content moderation,Music streaming,Coersive,1
+Content moderation,Music streaming,Coercive,1
 Content moderation,Music streaming,Modification,1
 Content moderation,Music streaming,Redirection,1
 Content moderation,Music streaming,Removal from circulation,1
@@ -3281,11 +3281,11 @@ Content moderation,News aggregator,Monitoring,1
 Content moderation,News aggregator,Profiling,1
 Content moderation,News media,Agenda setting,1
 Content moderation,News media,Balancing,1
-Content moderation,News media,Coersive,1
+Content moderation,News media,Coercive,1
 Content moderation,News media,Removal from circulation,1
 Content moderation,News media,Self-censorship,1
 Content moderation,Newsletter platform,Blocking,1
-Content moderation,Newsletter platform,Coersive,1
+Content moderation,Newsletter platform,Coercive,1
 Content moderation,Newsletter platform,Correcting,1
 Content moderation,Newsletter platform,Deplatforming,1
 Content moderation,Newsletter platform,Disclosure,1
@@ -3328,7 +3328,7 @@ Content moderation,Pastebin,Removal,1
 Content moderation,Pastebin,Restricting access,1
 Content moderation,Pastebin,Review,1
 Content moderation,Pastebin,Scheduling,1
-Content moderation,Payment platform,Coersive,1
+Content moderation,Payment platform,Coercive,1
 Content moderation,Payment platform,Correcting,1
 Content moderation,Payment platform,Profiling,1
 Content moderation,Payment platform,Rating,1
@@ -3396,7 +3396,7 @@ Content moderation,Radio,Self-censorship,1
 Content moderation,Review platform,Agenda setting,1
 Content moderation,Review platform,Balancing,1
 Content moderation,Review platform,Blocking,1
-Content moderation,Review platform,Coersive,1
+Content moderation,Review platform,Coercive,1
 Content moderation,Review platform,Deplatforming,1
 Content moderation,Review platform,Intermediate,1
 Content moderation,Review platform,Licensing,1
@@ -3498,7 +3498,7 @@ Content moderation,Video sharing platform,Moderation as industrial labour,1
 Content moderation,Video sharing platform,Reporting,1
 Content moderation,Video sharing platform,Transparency in moderation/reporting,1
 Content moderation,Video sharing platform,Transparencyreport.google.com सरकार-278? nope,1
-Content moderation,Video streaming platform,Coersive,1
+Content moderation,Video streaming platform,Coercive,1
 Content moderation,Video streaming platform,Disclosure,1
 Content moderation,Video streaming platform,Economic,1
 Content moderation,Video streaming platform,Licensing,1
@@ -3619,7 +3619,7 @@ Debate management,Online community,Monitoring,1
 Debate management,Online community,Prompting,1
 Debate management,Online community,Review,1
 Debate management,Online fora,Bridging,1
-Debate management,Online fora,Coersive,1
+Debate management,Online fora,Coercive,1
 Debate management,Online fora,Correcting,1
 Debate management,Online fora,Deplatforming,1
 Debate management,Online fora,Fairness,1
@@ -3727,13 +3727,13 @@ Media moderation,E-commerce,Profiling,1
 Media moderation,E-commerce,Removal,1
 Media moderation,E-commerce,Review,1
 Media moderation,Education,Blocking,1
-Media moderation,Education,Coersive,1
+Media moderation,Education,Coercive,1
 Media moderation,Education,Enframing,1
 Media moderation,Education,Filtering,1
 Media moderation,Education,Monitoring,1
 Media moderation,Education,Self-censorship,1
 Media moderation,Film,Agenda setting,1
-Media moderation,Film,Coersive,1
+Media moderation,Film,Coercive,1
 Media moderation,Film,Confiscation,1
 Media moderation,Film,Economic,1
 Media moderation,Film,Marginalisation,1
@@ -3757,7 +3757,7 @@ Media moderation,Image sharing platform,Obfuscation,1
 Media moderation,Image sharing platform,Profiling,1
 Media moderation,Image sharing platform,Rating,1
 Media moderation,Image sharing platform,Review,1
-Media moderation,Internet (general),Coersive,1
+Media moderation,Internet (general),Coercive,1
 Media moderation,Internet (general),Correcting,1
 Media moderation,Internet (general),Intelligibility,1
 Media moderation,Internet (general),Metamoderation,1
@@ -3781,7 +3781,7 @@ Media moderation,Marketplace,Labeling,1
 Media moderation,Marketplace,Monitoring,1
 Media moderation,Marketplace,Rating,1
 Media moderation,Marketplace,Removal,1
-Media moderation,Mass media (traditional),Coersive,1
+Media moderation,Mass media (traditional),Coercive,1
 Media moderation,Mass media (traditional),Disclosure,1
 Media moderation,Mass media (traditional),Economic,1
 Media moderation,Mass media (traditional),Enframing,1
@@ -3803,7 +3803,7 @@ Media moderation,Messaging platform,Intelligibility,1
 Media moderation,Messaging platform,Removal,1
 Media moderation,Messaging platform,Review,1
 Media moderation,Music,Agenda setting,1
-Media moderation,Music,Coersive,1
+Media moderation,Music,Coercive,1
 Media moderation,Music,Deplatforming,1
 Media moderation,Music,Enframing,1
 Media moderation,Music,Filtering,1
@@ -3844,7 +3844,7 @@ Media moderation,Online community,Enframing,1
 Media moderation,Online community,Filtering,1
 Media moderation,Online community,Monitoring,1
 Media moderation,Performing arts,Agenda setting,1
-Media moderation,Performing arts,Coersive,1
+Media moderation,Performing arts,Coercive,1
 Media moderation,Performing arts,Deplatforming,1
 Media moderation,Performing arts,Enframing,1
 Media moderation,Performing arts,Filtering,1
@@ -3878,7 +3878,7 @@ Media moderation,Radio,Removal,1
 Media moderation,Radio,Restricting access,1
 Media moderation,Radio,Review,1
 Media moderation,Search engine,Balancing,1
-Media moderation,Search engine,Coersive,1
+Media moderation,Search engine,Coercive,1
 Media moderation,Search engine,Coherence,1
 Media moderation,Search engine,Correcting,1
 Media moderation,Search engine,Deplatforming,1
@@ -3929,7 +3929,7 @@ Media moderation,Wikis,Redirection,1
 Media moderation,Wikis,Restricting access,1
 Media moderation,Wikis,Scheduling,1
 Media regulation,Academic publications,Blocking,1
-Media regulation,Academic publications,Coersive,1
+Media regulation,Academic publications,Coercive,1
 Media regulation,Academic publications,Confiscation,1
 Media regulation,Academic publications,Disclosure,1
 Media regulation,Academic publications,Economic,1
@@ -3961,7 +3961,7 @@ Media regulation,ISP,Filtering,1
 Media regulation,ISP,Labeling,1
 Media regulation,ISP,Rating,1
 Media regulation,ISP,Review,1
-Media regulation,Internet (general),Coersive,1
+Media regulation,Internet (general),Coercive,1
 Media regulation,Internet (general),Confiscation,1
 Media regulation,Internet (general),Enframing,1
 Media regulation,Internet (general),Interiorisation,1
@@ -3983,7 +3983,7 @@ Media regulation,Music,Monitoring,1
 Media regulation,Music,Self-censorship,1
 Media regulation,Performing arts,Balancing,1
 Media regulation,Performing arts,Blocking,1
-Media regulation,Performing arts,Coersive,1
+Media regulation,Performing arts,Coercive,1
 Media regulation,Performing arts,Deplatforming,1
 Media regulation,Performing arts,Enframing,1
 Media regulation,Performing arts,Filtering,1
@@ -4020,7 +4020,7 @@ Media regulation,Search engine,Labeling,1
 Media regulation,Search engine,Removal,1
 Media regulation,Search engine,Review,1
 Media regulation,Social media platform,Blocking,1
-Media regulation,Social media platform,Coersive,1
+Media regulation,Social media platform,Coercive,1
 Media regulation,Social media platform,Correcting,1
 Media regulation,Social media platform,Deplatforming,1
 Media regulation,Social media platform,Disclosure,1
@@ -4051,7 +4051,7 @@ Media regulation,Video sharing platform,Labeling,1
 Media regulation,Video sharing platform,Removal,1
 Media regulation,Video sharing platform,Review,1
 Media regulation,Web,Blocking,1
-Media regulation,Web,Coersive,1
+Media regulation,Web,Coercive,1
 Media regulation,Web,Enframing,1
 Media regulation,Web,Labeling,1
 Media regulation,Web,Marginalisation,1
@@ -4232,7 +4232,7 @@ Other,Television,Metamoderation,1
 Other,Television,Monitoring,1
 Other,Video sharing platform,Blocking,1
 Other,Video sharing platform,Bridging,1
-Other,Video sharing platform,Coersive,1
+Other,Video sharing platform,Coercive,1
 Other,Video sharing platform,Fairness,1
 Other,Video sharing platform,Inclusion,1
 Other,Video sharing platform,Intermediate,1

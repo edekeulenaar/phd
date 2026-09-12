@@ -1801,3 +1801,65 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 .prose details.foldable + p.fig-caption {
   margin-top: 0.15em;
 }
+
+/* ── Manuscript search ─────────────────────────────────────────────────────
+   Box sits under the author line; results replace the table of contents
+   while a query is active. */
+.sb-search { position: relative; margin: 0.9rem 0 0.4rem; }
+.sb-search input {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.45em 1.7em 0.45em 0.6em;
+  appearance: none;
+}
+.sb-search input::placeholder { color: var(--muted); }
+.sb-search input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--paper);
+}
+#ms-search-clear {
+  position: absolute; right: 0.25em; top: 50%; transform: translateY(-50%);
+  border: 0; background: none; color: var(--muted);
+  font-size: 15px; line-height: 1; cursor: pointer; padding: 0 0.3em;
+}
+#ms-search-clear:hover { color: var(--accent); }
+
+#ms-search-results { margin-bottom: 1rem; font-family: var(--sans); }
+.sr-status {
+  font-size: 11px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin: 0.5rem 0 0.6rem;
+}
+.sr-group { margin-bottom: 0.9rem; }
+.sr-chapter {
+  font-size: 11px; font-weight: 600; color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.sr-hit {
+  display: block; width: 100%; text-align: left;
+  border: 0; border-left: 2px solid var(--rule);
+  background: none; cursor: pointer;
+  font-family: var(--serif); font-size: 11.5px; line-height: 1.45;
+  color: var(--ink-soft);
+  padding: 0.3em 0 0.45em 0.55em;
+  margin-bottom: 0.3rem;
+}
+.sr-hit:hover { border-left-color: var(--accent); color: var(--ink); }
+.sr-hit mark {
+  background: rgba(192, 67, 31, 0.16);
+  color: inherit; padding: 0 0.1em; border-radius: 2px;
+}
+.sr-more { font-size: 10.5px; color: var(--muted); padding-left: 0.55em; }
+
+/* Brief highlight on the passage a result jumps to. */
+.prose .sr-found {
+  background: rgba(192, 67, 31, 0.10);
+  transition: background 1.2s ease;
+  border-radius: 3px;
+}
