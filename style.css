@@ -620,6 +620,10 @@ mark.cmt.flash { animation: cmt-flash 1.6s ease-out 1; }
   color: var(--ink-soft);
   margin: 3rem 0 3.2rem;
   letter-spacing: -0.005em;
+  /* The source divs carry text-align: right, which the renderer drops when it
+     wraps them in this block. Set it here so quote and attribution sit right,
+     as the manuscript asks and as the PDF does. */
+  text-align: right;
 }
 .prose .epigraph > div { margin: 0.15em 0; }
 .prose .epigraph > div + div {
