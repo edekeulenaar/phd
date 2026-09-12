@@ -3272,8 +3272,14 @@ function buildChapterNav(slug, headings, title) {
   const head = title
     ? `<li class="cn-title"><a href="#${title.id}">${escapeHtml(title.text)}</a></li>`
     : "";
+  // Chapters do not all start at the same heading level: the Introduction's
+  // own sections are h3 and h4, so its rail sat a step further in than every
+  // other chapter's and no longer lined up with the title above it. Rebase on
+  // the shallowest level present, keeping the relative depth between entries.
+  const base = Math.min(...items.map(h => h.level));
   list.innerHTML = head + items.map(h =>
-    `<li class="cn-lvl-${h.level}"><a href="#${h.id}">${escapeHtml(h.text)}</a></li>`
+    `<li class="cn-lvl-${Math.min(h.level - base + 2, 4)}">` +
+    `<a href="#${h.id}">${escapeHtml(h.text)}</a></li>`
   ).join("");
   nav.hidden = false;
 }
