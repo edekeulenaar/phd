@@ -34,9 +34,12 @@ ROOT       = Path(__file__).resolve().parent.parent
 # fallen 14 cited keys behind Zotero. Read the live library too. Order matters:
 # the wayback entries are applied last so their archived URLs win, and the live
 # export only supplies what the snapshot is missing.
-BIB_PATHS  = [Path("/Users/edekeulenaar/My_Library.bib"),
-              Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/"
-                   "PhD - Manuscript/My_Library_wayback.bib")]
+# My_Library_merged.bib is built by the PDF pipeline's merge-bib.py: every
+# field from the live Zotero export, with the wayback snapshot supplying only
+# its archived URLs. Reading the two exports whole, in either order, was wrong
+# in one direction or the other.
+BIB_PATHS  = [Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/"
+                   "PhD - Manuscript/My_Library_merged.bib")]
 BIB_PATH   = BIB_PATHS[-1]
 MANUSCRIPT = ROOT / "manuscript.md"
 CHAPTERS   = ROOT / "chapters"

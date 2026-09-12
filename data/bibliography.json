@@ -218,10 +218,10 @@
   },
   "aryanInternetCensorshipIran": {
     "author": "Aryan et al.",
-    "year": "n.d.",
-    "inline": "(Aryan et al., n.d.)",
-    "harvard": "Aryan, S., Aryan, H. and Halderman, J. A. (n.d.) ‘Internet Censorship in Iran: A First Look’.",
-    "link": ""
+    "year": "2013",
+    "inline": "(Aryan et al., 2013)",
+    "harvard": "Aryan, S., Aryan, H. and Halderman, J. A. (2013) ‘Internet Censorship in Iran: A First Look’, in *3rd USENIX Workshop on Free and Open Communications on the Internet*. Washington DC: UNESIX.",
+    "link": "https://www.usenix.org/conference/foci13/workshop-program/presentation/aryan"
   },
   "atrujilloDSATransparencyDatabase2025": {
     "author": "Trujillo et al.",
@@ -696,8 +696,8 @@
     "author": "Chai et al.",
     "year": "n.d.",
     "inline": "(Chai et al., n.d.)",
-    "harvard": "Chai, Z., Ghafari, A. and Houmansadr, A. (n.d.) ‘On the Importance of Encrypted-SNI (ESNI) to Censorship Circumvention’.",
-    "link": ""
+    "harvard": "Chai, Z., Ghafari, A. and Houmansadr, A. (n.d.) *On the Importance of Encrypted-SNI (ESNI) to Censorship Circumvention*. Available at: https://skulddata.cs.umass.edu/traces/network/README-foci.html.",
+    "link": "https://skulddata.cs.umass.edu/traces/network/README-foci.html"
   },
   "chandrasekharanBagCommunitiesIdentifying2017": {
     "author": "Chandrasekharan et al.",
@@ -899,7 +899,7 @@
     "author": "Thuderoz",
     "year": "2025",
     "inline": "(Thuderoz, 2025)",
-    "harvard": "Thuderoz, C. (2025) *De La Modération En Tout*. Paris, France.",
+    "harvard": "Thuderoz, C. (2025) *De La Modération En Tout*. Paris: Presses Universitaires de France.",
     "link": ""
   },
   "cuilleanainNotFrontServants1999": {
@@ -1134,11 +1134,11 @@
     "link": ""
   },
   "DetectLanguage": {
-    "author": "",
-    "year": "n.d.",
-    "inline": "(n.d.)",
-    "harvard": "Anon. (n.d.) *DetectLanguage*. Available at: https://docs.google.com/spreadsheets/u/0/d/1oek9zIlwwbe_5QraD3OWe4st0wPum25IqbZZLtoHnqM/pub?single=true&gid=1&output=html&widget=true&usp=embed_facebook.",
-    "link": "https://docs.google.com/spreadsheets/u/0/d/1oek9zIlwwbe_5QraD3OWe4st0wPum25IqbZZLtoHnqM/pub?single=true&gid=1&output=html&widget=true&usp=embed_facebook"
+    "author": "Google",
+    "year": "2025",
+    "inline": "(Google, 2025)",
+    "harvard": "Google (2025) *DETECTLANGUAGE Function*. Available at: https://support.google.com/docs/answer/3093278.",
+    "link": "https://support.google.com/docs/answer/3093278"
   },
   "dewhirstSovietCensorship1973": {
     "author": "Dewhirst and Farrell",
@@ -1211,10 +1211,10 @@
     "link": "https://lawliberty.org/content-moderation-is-not-censorship/"
   },
   "dliuPerceivedLegitimacyBorderline2024": {
-    "author": "D Liu",
+    "author": "Liu",
     "year": "2024",
-    "inline": "(D Liu, 2024)",
-    "harvard": "D Liu (2024) ‘Perceived Legitimacy of Borderline Content Moderation’, *D Liu - 2024 - osf.io*.",
+    "inline": "(Liu, 2024)",
+    "harvard": "Liu, D. (2024) ‘Perceived Legitimacy of Borderline Content Moderation’, *OSF Preprints*.",
     "link": "https://osf.io/nczuk/resources"
   },
   "dominguezTabuLenguajePalabras2008": {
@@ -1687,10 +1687,10 @@
     "link": "https://doi.org/10.12987/9780300235029"
   },
   "gkempCensorshipPress15801720": {
-    "author": "Cyndia Susan Clegg",
-    "year": "n.d.",
-    "inline": "(Cyndia Susan Clegg, n.d.)",
-    "harvard": "Cyndia Susan Clegg (ed.) (n.d.) *Censorship and the Press, 1580-1720, Volume 1*. Routledge. doi:10.4324/9781003552338",
+    "author": "Clegg",
+    "year": "2009",
+    "inline": "(Clegg, 2009)",
+    "harvard": "C. S. Clegg (ed.) (2009) *Censorship and the Press, 1580-1720, Volume 1*. London: Pickering & Chatto. doi:10.4324/9781003552338",
     "link": "https://doi.org/10.4324/9781003552338"
   },
   "gleasonFightingWordsImperial1983": {
@@ -2024,10 +2024,10 @@
   },
   "hoggShapingFutureSocial": {
     "author": "Hogg et al.",
-    "year": "n.d.",
-    "inline": "(Hogg et al., n.d.)",
-    "harvard": "Hogg, L., Fukuyama, F., Reisman, R., Graves, Z., O’Brien, D., Rajendra-Nicolucci, C., Stoltz, M., Wang, R., Willner, D., Bellafiore, R., Bonneville, R., Cooper, A., Levine, J., Masnick, M. and Whitt, R. (n.d.) ‘Shaping the Future of Social Media with Middleware’.",
-    "link": ""
+    "year": "2024",
+    "inline": "(Hogg et al., 2024)",
+    "harvard": "Hogg, L., Fukuyama, F., Reisman, R., Graves, Z., O’Brien, D., Rajendra-Nicolucci, C., Stoltz, M., Wang, R., Willner, D., Bellafiore, R., Bonneville, R., Cooper, A., Levine, J., Masnick, M. and Whitt, R. (2024) *Shaping the Future of Social Media with Middleware*. Available at: https://arxiv.org/abs/2412.10283.",
+    "link": "https://arxiv.org/abs/2412.10283"
   },
   "holquistIntroductionCorruptOriginals1994": {
     "author": "Holquist",
@@ -2079,10 +2079,10 @@
     "link": "https://books.google.com/books?hl=en&lr=&id=1zoJh8H7uvoC&oi=fnd&pg=PA7&dq=censure&ots=KQV1wPLZL1&sig=8BwhZADJEVdOs347lBKk1k_kAoI"
   },
   "ianroOnlineHateSpeech2023": {
-    "author": "I Anrò",
+    "author": "Anrò",
     "year": "2023",
-    "inline": "(I Anrò, 2023)",
-    "harvard": "I Anrò (2023) ‘Online Hate Speech: La Prospettiva Dell'Unione Europea Tra Regolamentazione Della Condotta Dei Prestatori Di Servizi Intermediari e Ricorso al Diritto Penale’.",
+    "inline": "(Anrò, 2023)",
+    "harvard": "Anrò, I. (2023) ‘Online Hate Speech: La Prospettiva Dell'Unione Europea Tra Regolamentazione Della Condotta Dei Prestatori Di Servizi Intermediari e Ricorso al Diritto Penale’, *Osservatorio Sulle Fonti*.",
     "link": "https://air.unimi.it/handle/2434/967934"
   },
   "iatiTrumpSaysIts2020": {
@@ -2409,9 +2409,9 @@
   },
   "kofferDiscussingValueAutomatic": {
     "author": "Köffer et al.",
-    "year": "n.d.",
-    "inline": "(Köffer et al., n.d.)",
-    "harvard": "Köffer, S., Riehle, D. M., Höhenberger, S. and Becker, J. (n.d.) ‘Discussing the Value of Automatic Hate Speech Detection in Online Debates’.",
+    "year": "2018",
+    "inline": "(Köffer et al., 2018)",
+    "harvard": "Köffer, S., Riehle, D. M., Höhenberger, S. and Becker, J. (2018) ‘Discussing the Value of Automatic Hate Speech Detection in Online Debates’, in *Multikonferenz Wirtschaftsinformatik (MKWI 2018)*. Lüneburg, pp. 83–94.",
     "link": ""
   },
   "kouConspiracyTalkSocial2017": {
@@ -2612,10 +2612,10 @@
   },
   "liuSocialMediaContent": {
     "author": "Liu et al.",
-    "year": "n.d.",
-    "inline": "(Liu et al., n.d.)",
-    "harvard": "Liu, Y., Yildirim, T. P. and Zhang, Z. J. (n.d.) ‘Social Media, Content Moderation, and Technology’.",
-    "link": ""
+    "year": "2021",
+    "inline": "(Liu et al., 2021)",
+    "harvard": "Liu, Y., Yildirim, T. P. and Zhang, Z. J. (2021) ‘Social Media, Content Moderation, and Technology’.",
+    "link": "https://arxiv.org/abs/2101.04618"
   },
   "ljleffDameKimonoHollywood": {
     "author": "Leff and Simmons",
@@ -2646,10 +2646,10 @@
     "link": "https://doi.org/10.3726/b12837"
   },
   "lrabinowitzFindingModerationPlatos2023": {
-    "author": "L Rabinowitz",
+    "author": "Rabinowitz",
     "year": "2023",
-    "inline": "(L Rabinowitz, 2023)",
-    "harvard": "L Rabinowitz (2023) ‘Finding Moderation in Plato's Republic’, *L Rabinowitz - The European Legacy, 2023 - Taylor & Francis*, 28(3–4), pp. 236–254. doi:10.1080/10848770.2023.2175422",
+    "inline": "(Rabinowitz, 2023)",
+    "harvard": "Rabinowitz, L. (2023) ‘Finding Moderation in Plato's Republic’, *The European Legacy*, 28(3-4), pp. 236–254. doi:10.1080/10848770.2023.2175422",
     "link": "https://doi.org/10.1080/10848770.2023.2175422"
   },
   "lucchesiFacebookCommentsRefugee2021": {
@@ -2905,10 +2905,10 @@
     "link": ""
   },
   "mdwyerSocialMediaPolitics": {
-    "author": "M Dwyer",
-    "year": "n.d.",
-    "inline": "(M Dwyer, n.d.)",
-    "harvard": "M Dwyer, T. M. (n.d.) ‘Social Media and Politics in Africa: Democracy, Censorship and Security’, *Figshare*.",
+    "author": "Dwyer and Molony",
+    "year": "2019",
+    "inline": "(Dwyer and Molony, 2019)",
+    "harvard": "M. Dwyer and T. Molony (eds.) (2019) *Social Media and Politics in Africa: Democracy, Censorship and Security*. London: Zed Books.",
     "link": "https://books.google.com/books?hl=en&lr=&id=n_80EAAAQBAJ&oi=fnd&pg=PP1&dq=censorship&ots=G54tADKMwr&sig=oJEzG9FN0imh6HVD-bm6XH9bDjk"
   },
   "mecheverriaArquitecturaDiscursivaPlataformas": {
@@ -3024,10 +3024,10 @@
     "link": "https://repositorio.ufmg.br/handle/1843/57249"
   },
   "mhortaribeiroAutomatedContentModeration2023": {
-    "author": "M Horta Ribeiro",
+    "author": "Horta Ribeiro et al.",
     "year": "2023",
-    "inline": "(M Horta Ribeiro, 2023)",
-    "harvard": "M Horta Ribeiro, R. W. J. C. (2023) ‘Automated Content Moderation Increases Adherence to Community Guidelines’, *Proceedings of the ACM Web Conference 2023*, pp. 2666–2676. doi:10.1145/3543507.3583275",
+    "inline": "(Horta Ribeiro et al., 2023)",
+    "harvard": "Horta Ribeiro, M., Cheng, J. and West, R. (2023) ‘Automated Content Moderation Increases Adherence to Community Guidelines’, *Proceedings of the ACM Web Conference 2023*, pp. 2666–2676. doi:10.1145/3543507.3583275",
     "link": "https://doi.org/10.1145/3543507.3583275"
   },
   "michaelshellenbergerRothImmediatelyDMs2022": {
@@ -3542,10 +3542,10 @@
     "link": "https://doi.org/10.1609/aies.v8i2.36690"
   },
   "philipdisalvoDeplatformingL8217attaccoCapitol2021": {
-    "author": "Philip Di Salvo",
+    "author": "Di Salvo",
     "year": "2021",
-    "inline": "(Philip Di Salvo, 2021)",
-    "harvard": "Philip Di Salvo (2021) ‘«Deplatforming», l&#8217;attacco a Capitol Hill e la nuova sfera pubblica privatizzata’, *Studi culturali*, pp. 449–458. doi:10.1405/102368",
+    "inline": "(Di Salvo, 2021)",
+    "harvard": "Di Salvo, P. (2021) ‘«Deplatforming», l&#8217;attacco a Capitol Hill e la nuova sfera pubblica privatizzata’, *Studi culturali*, pp. 449–458. doi:10.1405/102368",
     "link": "https://doi.org/10.1405/102368"
   },
   "phillipsThisWhyWe2015": {
@@ -3667,12 +3667,12 @@
     "harvard": "Rahimi, B. (2015) ‘Censorship and the Islamic Republic: Two Modes of Regulatory Measures for Media in Iran’, *The Middle East Journal*, 69(3), pp. 358–378. doi:10.3751/69.3.12",
     "link": "https://doi.org/10.3751/69.3.12"
   },
-  "ramosUsingTFIDFDetermine": {
+  "ramosUsingTFIDFDetermine2003": {
     "author": "Ramos",
-    "year": "n.d.",
-    "inline": "(Ramos, n.d.)",
-    "harvard": "Ramos, J. (n.d.) ‘Using TF-IDF to Determine Word Relevance in Document Queries’, pp. 4.",
-    "link": ""
+    "year": "2003",
+    "inline": "(Ramos, 2003)",
+    "harvard": "Ramos, J. E. (2003) ‘Using TF-IDF to Determine Word Relevance in Document Queries’.",
+    "link": "https://www.semanticscholar.org/paper/Using-TF-IDF-to-Determine-Word-Relevance-in-Queries-Ramos/b3bf6373ff41a115197cb5b30e57830c16130c2c"
   },
   "raspailCampSaints1975": {
     "author": "Raspail",
@@ -4214,10 +4214,10 @@
     "link": "https://firstdraftnews.org:443/latest/how-social-media-platforms-are-responding-to-the-coronavirus-infodemic/"
   },
   "smacdonaldModeratingBorderlineContent": {
-    "author": "S Macdonald",
-    "year": "n.d.",
-    "inline": "(S Macdonald, n.d.)",
-    "harvard": "S Macdonald, K. V. (n.d.) ‘Moderating Borderline Content While Respecting Fundamental Values’, *Policy &amp; Internet*, 16(2), pp. 347–361. doi:10.1002/poi3.376",
+    "author": "Macdonald and Vaughan",
+    "year": "2024",
+    "inline": "(Macdonald and Vaughan, 2024)",
+    "harvard": "Macdonald, S. and Vaughan, K. (2024) ‘Moderating Borderline Content While Respecting Fundamental Values’, *Policy & Internet*, 16(2), pp. 347–361. doi:10.1002/poi3.376",
     "link": "https://doi.org/10.1002/poi3.376"
   },
   "smithSociologiesModeration2013": {
@@ -4403,10 +4403,10 @@
     "link": "https://doi.org/10.4135/9781473984066.n15"
   },
   "tharyantoReligiousModerationPoint2025": {
-    "author": "T Haryanto",
+    "author": "Haryanto",
     "year": "2025",
-    "inline": "(T Haryanto, 2025)",
-    "harvard": "T Haryanto (2025) ‘Religious Moderation in the Point of Philosophy: Between Tolerance and Dogma’, *T Haryanto - Jurnal Iman dan Spiritualitas, 2025 - journal.uinsgd.ac.id*, 5(2), pp. 173–182. doi:10.15575/jis.v5i2.43990",
+    "inline": "(Haryanto, 2025)",
+    "harvard": "Haryanto, T. (2025) ‘Religious Moderation in the Point of Philosophy: Between Tolerance and Dogma’, *Jurnal Iman dan Spiritualitas*, 5(2), pp. 173–182. doi:10.15575/jis.v5i2.43990",
     "link": "https://doi.org/10.15575/jis.v5i2.43990"
   },
   "theeconomistGoogleRewardsReputable2019": {
@@ -4536,10 +4536,10 @@
     "link": "https://doi.org/10.1080/01463379609370023"
   },
   "Twitter2010": {
-    "author": "",
+    "author": "Twitter",
     "year": "2010",
-    "inline": "(2010)",
-    "harvard": "Anon. (2010) *Twitter*. Available at: https://web.archive.org/web/20100701014108/http:/twitter.com/about.",
+    "inline": "(Twitter, 2010)",
+    "harvard": "Twitter (2010) *Twitter*. Available at: https://web.archive.org/web/20100701014108/http:/twitter.com/about.",
     "link": "https://web.archive.org/web/20100701014108/http:/twitter.com/about"
   },
   "twitterAbusiveBehaviorPolicy2014": {
@@ -4810,16 +4810,16 @@
   },
   "vinhasWEIRDGovernanceFactchecking": {
     "author": "Vinhas and Bastos",
-    "year": "n.d.",
-    "inline": "(Vinhas and Bastos, n.d.)",
-    "harvard": "Vinhas, O. and Bastos, M. (n.d.) ‘The WEIRD Governance of Fact-Checking and the Politics of Content Moderation’.",
-    "link": ""
+    "year": "2025",
+    "inline": "(Vinhas and Bastos, 2025)",
+    "harvard": "Vinhas, O. and Bastos, M. (2025) ‘The WEIRD Governance of Fact-Checking and the Politics of Content Moderation’, *New Media & Society*, 27(5), pp. 2768–2787. doi:10.1177/14614448231213942",
+    "link": "https://doi.org/10.1177/14614448231213942"
   },
   "ViolentExtremistGroups2017": {
-    "author": "",
+    "author": "Twitter",
     "year": "2017",
-    "inline": "(2017)",
-    "harvard": "Anon. (2017) *Violent Extremist Groups*. Available at: https://web.archive.org/web/20171220212715/https://help.twitter.com/en/rules-and-policies/violent-groups.",
+    "inline": "(Twitter, 2017)",
+    "harvard": "Twitter (2017) *Violent Extremist Groups*. Available at: https://web.archive.org/web/20171220212715/https://help.twitter.com/en/rules-and-policies/violent-groups.",
     "link": "https://web.archive.org/web/20171220212715/https://help.twitter.com/en/rules-and-policies/violent-groups"
   },
   "visserArgumentation2016US2020": {

@@ -432,7 +432,7 @@ Still, where there are limitations in content moderation and platform design, th
 
 ![Figure 22](images/image26.png)
 
-**Figure 22.** *Diagram showing multiple points of intervention for promoting alternative platform design mechanisms. See Weyl et al., 2025 for the table shown in the diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-22.png). ^figure-22
+**Figure 22.** *Diagram showing multiple points of intervention for promoting alternative platform design mechanisms. See @weylCommunityDesign2026a for the table shown in the diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-22.png). ^figure-22
 
 Within this configuration, investing in moderation and consensus-building mechanisms can be a point of entry for European influence in a broader marketplace for platform design, and thus a more sustainable model of content moderation development.
 

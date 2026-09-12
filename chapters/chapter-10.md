@@ -50,13 +50,13 @@ Taking a broader perspective, it becomes clear that alt-tech spaces have arisen 
 
 ![](images/E%20de%20Keulenaar%20-%20Online%20deviance%202024%20timeline%20of%20social%20media%20history-01.png)
 
-**Figure 1.** *A history of platform ruptures across different areas of the Web, from fora to video streaming platforms (1970-2024)*. Sources: Wikipedia [@Alttech2026].
+**Figure 1.** *A history of platform ruptures across different areas of the Web, from fora to video streaming platforms (1970-2024)*. Source: Wikipedia [-@Alttech2026].
 
 Within the video-streaming sphere, BitChute was founded in 2017 during a wave of YouTube deplatforming that affected far-right actors in Europe and the United States [@douekMoreContentModeration2021]. Rumble, established earlier in 2013, also gained new audiences during this period of migration. In the social media sphere, a cascade of alternatives emerged in response to exclusions from Facebook and Twitter. Minds was created in 2015 with an emphasis on privacy [@oharaFourInternetsData2021]. Gab appeared in 2016, partly in reaction to bans of alt-right figures [@balkinFreeSpeechTriangle2018]. Parler launched in 2018, while GETTR and Truth Social were introduced in 2021 following the deplatforming of Donald Trump and other actors implicated in the Stop the Steal campaign and the Capitol Hill riots. X, which replaced Twitter in 2023, absorbed users who had migrated to Gab, Parler, GETTR and Truth Social, while at the same time prompting others to move to Mastodon. These sequences illustrate how platform ruptures generate waves of exit and re-entry, producing a constantly refracted ecosystem.
 
 ![](images/E%20de%20Keulenaar%20-%20Alt%20tech%20timelines%20v.%202.png)
 
-**Figure 2.** *A detailed history of platform ruptures across different areas of the Web, including migrations streams  (1970-2024)*. Sources: Wikipedia [@Alttech2026].
+**Figure 2.** *A detailed history of platform ruptures across different areas of the Web, including migrations streams  (1970-2024)*. Source: Wikipedia [-@Alttech2026].
 
 Sometimes, users migrated away from microblogging services altogether, favoring the private and encrypted affordances of messengers such as Telegram or Signal. In the domain of bulletin boards and registrars, similar cycles can be observed. Even in spaces that prided themselves on minimal moderation, disagreements and migrations occurred. Users left 4chan for 8chan in 2013, only to move again to 8kun in 2019 after further controversies. The latter replatforming was made possible when alternative providers such as Epik and the Russian company DDoS-Guard offered services that Cloudflare refused [@balkinFreeSpeechTriangle2018]. Similarly, Telegram has served as a refuge for numerous deplatformed celebrities [@rogersDeplatformingFollowingExtreme2020]. These infrastructural supports illustrate how moderation ruptures often overlap with geopolitical and economic dimensions, producing synergies that sustain the proliferation of alt-tech counter-spheres.
 
