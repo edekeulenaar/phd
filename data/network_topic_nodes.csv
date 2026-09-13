@@ -1,7 +1,7 @@
 Type,Category,n_items
 GROUP,Content moderation,985
 GROUP,Censorship,691
-GROUP,Debate management,124
+GROUP,Debate management,123
 GROUP,Media moderation,54
 GROUP,AI alignment,42
 GROUP,Media regulation,15
@@ -34,8 +34,8 @@ HOW,Redirection,126
 HOW,Agenda setting,123
 HOW,Intelligibility,111
 HOW,Confiscation,106
-HOW,Balancing,104
-HOW,Coherence,90
+HOW,Balancing,103
+HOW,Coherence,89
 HOW,Scheduling,71
 HOW,Intermediate,70
 HOW,Bridging,44
@@ -66,7 +66,7 @@ HOW,Warning,1
 WHAT,Content moderation,1173
 WHAT,Censorship,1065
 WHAT,Media moderation,273
-WHAT,Debate management,271
+WHAT,Debate management,270
 WHAT,Other,129
 WHAT,Media regulation,79
 WHAT,AI alignment,42
@@ -79,7 +79,7 @@ WHO,Users,591
 WHO,Courts and prosecutors,367
 WHO,Content moderators / BPO workforces,352
 WHO,Legislators,303
-WHO,"Schools, curricula, librarians, academia",264
+WHO,"Schools, curricula, librarians, academia",263
 WHO,Editors,245
 WHO,Other,239
 WHO,Regulators,210
@@ -92,7 +92,7 @@ WHO,Political groups,139
 WHO,"Public-private partnerships (""free-speech triangle"")",136
 WHO,Religious authorities,123
 WHO,Fact-checkers and verification units,115
-WHO,Debate moderators,90
+WHO,Debate moderators,89
 WHO,Media owners,80
 WHO,Private firms,77
 WHO,Religious organisations,70
@@ -137,7 +137,7 @@ WHY,Religious moral authority,159
 WHY,Harm reduction / public health,152
 WHY,Democratic self-defence,112
 WHY,Alignment with human values,91
-WHY,Conflict transformation,83
+WHY,Conflict transformation,82
 WHY,Other,68
 WHY,Consumer protection / fair competition,66
 WHY,Wartime necessity,56
