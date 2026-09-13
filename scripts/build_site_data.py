@@ -180,6 +180,9 @@ def build_manifest() -> None:
 THESIS_TITLE = "Dialogue and restraint: Content moderation across contested public spheres"
 THESIS_SUBTITLE = ""          # title settled 2026-08-24 — no "provisional" marker
 THESIS_AUTHOR = "Emillie de Keulenaar"
+# The full-thesis PDF is published under the name readers should save it as;
+# the download links also carry it in their download attribute.
+THESIS_PDF_NAME = "E de Keulenaar - PhD thesis - Dialogue and restraint.pdf"
 
 
 def _is_other(v: str) -> bool:
@@ -430,6 +433,7 @@ def rewrite_links(text: str) -> str:
 
 
 _PAGE_BREAK_RE = re.compile(r'^\s*<div class="page-break"[^>]*>\s*(?:</div>)?\s*$\n?', re.M)
+_PDF_ONLY_RE = re.compile(r"^An interactive version of this thesis is available at[^\n]*\n?", re.M)
 _WIKI_SECTION_RE = re.compile(r"\[\[#([^\]|#^][^\]|]*?)(?:\|([^\]]*))?\]\]")
 
 
@@ -477,7 +481,10 @@ def merged_sections() -> dict[str, str]:
         rest = re.sub(r"^#(#+) ", r"\1 ", rest, flags=re.M)
         m = re.match(r"^# (Chapter \d+)\.\s*(.+)$", first)
         first = f"# **{m.group(1)}**\n\n# {m.group(2).strip()}" if m else first
-        body = _PAGE_BREAK_RE.sub("", first + "\n" + rest)
+        body = _PAGE_BREAK_RE.sub("\n", first + "\n" + rest)
+        # Notes written for the PDF alone, e.g. pointing print readers to this
+        # site, have no place on the site itself.
+        body = _PDF_ONLY_RE.sub("", body)
         out[src] = _WIKI_SECTION_RE.sub(link, body).strip() + "\n"
     return out
 
@@ -541,6 +548,8 @@ def sync_thesis() -> None:
     def pdf_href(slug):
         if slug in url_map:
             return url_map[slug]
+        if slug == "thesis" and (pdf_dir / THESIS_PDF_NAME).exists():
+            return "pdf/" + _quote(THESIS_PDF_NAME)
         if slug in local_pdf:
             return f"pdf/{slug}.pdf"
         return ""
@@ -561,7 +570,7 @@ def sync_thesis() -> None:
     # every later rebuild to the same cache key: readers kept downloading the
     # August file. Derive it from the PDF itself instead.
     pdf_version = ""
-    thesis_pdf = pdf_dir / "thesis.pdf"
+    thesis_pdf = pdf_dir / THESIS_PDF_NAME
     if thesis_pdf.exists():
         import hashlib
         h = hashlib.md5()
@@ -574,6 +583,7 @@ def sync_thesis() -> None:
     # TOC tree: front matter, then part→children groups, then back matter.
     toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
            "author": THESIS_AUTHOR, "fullPdfUrl": full_pdf_url,
+           "pdfFilename": THESIS_PDF_NAME,
            "pdfVersion": pdf_version,
            "entries": entries,
            "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}

@@ -38,7 +38,6 @@ When I thought I didn't have anyone else to meet I met Maud, and the road contin
 
 And I met Ivan. He was sitting at his desk eating his usual Dutch sandwich for a maximum of 15 minutes when I asked him, an archaeologist, if he had ever heard of media archaeology. That conversation turned into a friendship, and that friendship into adventures afar in the world.
 
-Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. He in fact wanted to do a PhD and never formally got to. But here it is: the method, the code, the time late in the night answering Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
+Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. He wanted to do a PhD and never got to, but here it is: the method, the code, the time late in the night answering Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
 
-Ivan left, but this thesis is the road we walked together. It is dedicated to him. 
-An interactive version of this thesis is available at edekeulenaar.github.io/phd/. Figures in [Chapter 1. Censorship and moderation](#/chapter-1) are best seen there.
+Ivan left, but this thesis is the road we walked together. It is dedicated to him.

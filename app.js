@@ -3323,7 +3323,7 @@ async function renderLanding() {
   el.innerHTML = `
     <header class="cover">
       ${TOC?.fullPdfUrl
-        ? `<a class="pdf-btn cover-pdf-btn" href="${escapeHtml(TOC.fullPdfUrl)}?v=${pdfVer()}" target="_blank" rel="noopener" download>⬇ Download PDF</a>`
+        ? `<a class="pdf-btn cover-pdf-btn" href="${escapeHtml(TOC.fullPdfUrl)}?v=${pdfVer()}" target="_blank" rel="noopener" download="${escapeHtml(TOC.pdfFilename || "")}">⬇ Download PDF</a>`
         : `<button type="button" class="pdf-btn cover-pdf-btn" data-pdf-open>⬇ Download PDF</button>`}
       <h1 class="cover-title">
         <span class="ct-main">${escapeHtml(tMain)}</span>${tDesc ? `<span class="ct-desc">${escapeHtml(tDesc)}</span>` : ""}
@@ -3354,7 +3354,7 @@ function pdfDownloadList() {
   if (TOC?.fullPdfUrl) {
     rows.push(
       `<a class="pdf-dl pdf-dl-full" href="${escapeHtml(TOC.fullPdfUrl)}?v=${pdfVer()}" ` +
-      `target="_blank" rel="noopener" download>⬇ Full thesis (PDF)</a>`);
+      `target="_blank" rel="noopener" download="${escapeHtml(TOC.pdfFilename || "")}">⬇ Full thesis (PDF)</a>`);
   }
   (TOC?.entries || []).filter(e => e.pdfUrl).forEach(e =>
     rows.push(

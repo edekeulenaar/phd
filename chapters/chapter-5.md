@@ -215,6 +215,7 @@ As shown in **[Figure 13](#^figure-13)**, questions with higher moderation (or r
 
 ![](images/ALLUVIAL%20FINAL%20-%20Normalized_Response_Type_Distribution_OpenAI_Modscore_Max.png)
 **Figure 13.** *Distribution of prompt responses per topic, Reddit controversy score and OpenAI moderation score*. Full image [here](https://edekeulenaar.github.io/phd/images/ALLUVIAL%20FINAL%20-%20Normalized_Response_Type_Distribution_OpenAI_Modscore_Max.png). ^figure-13
+
 This tendency is also reflected across LLM response iterations. For the top 10 questions with highest risk scores, all models will consistently answer with a combination of normative, refusal and occasionally diplomatic speech. This is also the case across model iterations. In response to the question about incest and positive discrimination, Llama 3 7B becomes in fact more resolute than Llama 2 7B, which tended to use a more normative and at times diplomatic tone (“*I apologize, but the language and sentiment in your post is not appropriate or respectful [...]*”). Llama 3 7B simply refuses to answer, taking the position that the user “*condones or justifies the sexual abuse of a child.*”
 
 ![](images/Poster%20-%20MSR%202024%20-%20Squares%20top%2010%20all-01.png)
@@ -257,7 +258,6 @@ At the same time, LLMs might also exercise a form of _parrhesia_, in the sense o
 
 I would like to acknowledge the mentorship, feedback and input of Tarleton Gillespie; the conceptual and methodological contributions of Etienne Grenier, Yuhe Ma and Angeles Briones; and the feedback of Mary Gray, Chuncheng Liu, Zaidat Ibrahim, danah boyd, Nancy Baym, Parker Bach, Emily Tseng, Ryland Shaw and the Social Media Collective team of 2024. 
 
-# Endnotes
 
 [^2]: This can be seen with the sudden shift of terms like “Eskimo” — a term widely used until half of the 1960s — to “Inuit” or “First Nations people”; or “African American”, “Black”, “BIPOC” and “person of color” in English; and “White”, “Aryan” and “European” in German. 
 
