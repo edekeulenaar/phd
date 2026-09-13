@@ -190,6 +190,15 @@ async function renderManuscript(chapterSlug, opts = {}) {
       }
     );
 
+    // 3c) The same block-anchor links written as ordinary markdown,
+    //     "[Figure 3](#^figure-3)" (or with the caret escaped), reached the
+    //     browser as href="#^figure-3", which neither the router nor the page
+    //     answers to, so clicking them did nothing. Give them the wikilink form.
+    md = md.replace(
+      /\[([^\]\n]+)\]\(\s*#\\?\^([\w.\-]+)\s*\)/g,
+      (_, label, slug) => `<a class="wiki" href="#${slug}">${label}</a>`
+    );
+
     // 4) Parse markdown. We deliberately do NOT call marked.setOptions() —
     //    `headerIds` and `mangle` were removed in marked v8+, and the static
     //    setOptions accessor is deprecated in v12 and absent in some builds.
@@ -3555,6 +3564,37 @@ function routeFigParams() {
   return out;
 }
 
+// A figure's anchor sits on its caption, which follows the image. Land on the
+// image, so the reader sees the figure rather than the text under it.
+function anchorScrollTarget(el) {
+  const prev = el && el.previousElementSibling;
+  if (el && el.classList.contains("fig-caption") && prev &&
+      prev.querySelector("img, video, iframe, svg, canvas")) return prev;
+  return el;
+}
+
+// In-text links to a figure, table or other block in the same chapter
+// ("#figure-3"). Left to the browser they replaced the route in the address
+// bar with "#figure-3", so the link could not be reloaded or shared, and they
+// scrolled to the caption below the image. Keep the chapter in the address and
+// use the two-hash form routeAnchor() already reads.
+document.addEventListener("click", e => {
+  const a = e.target.closest && e.target.closest('#manuscript a[href^="#"]');
+  if (!a) return;
+  const href = a.getAttribute("href") || "";
+  if (href.startsWith("#/") || href.length < 2 || href.startsWith("#fn")) return;
+  const id = decodeURIComponent(href.slice(1)).replace(/^\^/, "");
+  const el = [...document.querySelectorAll("#" + CSS.escape(id))]
+    .find(n => n.getClientRects().length > 0);
+  if (!el) return;
+  e.preventDefault();
+  el.classList.add("anchored");
+  anchorScrollTarget(el).scrollIntoView({ block: "start", behavior: "smooth" });
+  if (typeof _routeSlug === "string" && _routeSlug) {
+    history.replaceState(null, "", `#/${_routeSlug}#${id}`);
+  }
+});
+
 function jumpToAnchor(id, tries) {
   if (!id) return;
   // Chapter 1 keeps a hidden template for every figure in #analysis, which
@@ -3571,7 +3611,7 @@ function jumpToAnchor(id, tries) {
     const go = () => {
       const cur = [...document.querySelectorAll("#" + CSS.escape(id))]
         .find(n => n.getClientRects().length > 0) || el;
-      cur.scrollIntoView({ block: "start", behavior: "smooth" });
+      anchorScrollTarget(cur).scrollIntoView({ block: "start", behavior: "smooth" });
     };
     go();
     [400, 1000, 1800].forEach(ms => setTimeout(go, ms));
