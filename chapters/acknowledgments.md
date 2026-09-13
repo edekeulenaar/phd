@@ -8,7 +8,7 @@ It started on what must have been a winter evening. I walked into Bernhard Riede
 
 He said: “You’re going to want to do a PhD. You will go on in life wanting to write something.” 
 
-Today he apologizes for encouraging me, but I take no offense. I didn’t start right away, but the desire arose when so much of the world changed that there was a sense of freedom in trying to understand it. And there were so many friends with whom to try.
+Today he apologizes for encouraging me, but I take no offense. I didn’t start right away, but the desire arose when so much of the world changed that there was a sense of freedom in trying to interpret it. And there were so many friends with whom to try.
 
 I met Rhubi and Maria when a five-minute conversation about God knows what class assignment became a debate about the need for diplomacy between India and Pakistan, and how diplomacy should be done online because, by then, social media was already inflaming our feeds. Though we only spent a year together hanging out, it’s been the beginning of a lifetime since those conversations start again.
 
