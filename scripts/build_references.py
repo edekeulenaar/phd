@@ -87,6 +87,20 @@ def main() -> None:
             continue
         seen.add(norm)
         entries.append(e)
+    # Corrections that must survive the Zotero refresh of the References
+    # section: an entry starting with a key is rewritten from that prefix on.
+    ovr = Path("/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/PhD - Manuscript/My_Library_overrides.json")
+    fixes = {}
+    if ovr.exists():
+        fixes = {k: v for k, v in json.loads(ovr.read_text(encoding="utf-8")).get("_site_references", {}).items()
+                 if k != "_about"}
+    n_fixed = 0
+    for i, e in enumerate(entries):
+        for old_prefix, new_prefix in fixes.items():
+            if e.startswith(old_prefix):
+                entries[i] = new_prefix + e[len(old_prefix):]
+                n_fixed += 1
+    print(f"reference corrections applied: {n_fixed} of {len(fixes)}")
     entries.sort(key=_sort_key)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(
