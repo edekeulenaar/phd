@@ -1,4 +1,4 @@
-# **Part V. Modulation and consensus**
+# Part V. Modulation and consensus
 
 [Part IV. Ruptures](#/part-4) showed that deplatforming may reduce the visibility of a claim on one platform while giving its users, contents and grievances a reason to reorganize elsewhere. The question carried into Part V is therefore not how the same boundaries might be enforced more efficiently but how moderation might keep disagreement within a common space long enough for users to contest, revise and perhaps recognize the norm being enforced. If enforcement alone cannot secure cultural change, what other ways have platforms found of governing changing thresholds of tolerance, and can any of them provide a basis for metamoderation?
 

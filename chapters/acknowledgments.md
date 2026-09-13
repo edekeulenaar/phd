@@ -40,4 +40,5 @@ And I met Ivan. He was sitting at his desk eating his usual Dutch sandwich for a
 
 Ivan shows up many times in this thesis because, if I didn’t have to write it, it would be his. He in fact wanted to do a PhD and never formally got to. But here it is: the method, the code, the time late in the night answering Slack messages a day prior to a conference presentation. The presence to listen and respond together. 
 
-Ivan left, but this thesis is the road we walked together. It is dedicated to him.
+Ivan left, but this thesis is the road we walked together. It is dedicated to him. 
+An interactive version of this thesis is available at edekeulenaar.github.io/phd/. Figures in [Chapter 1. Censorship and moderation](#/chapter-1) are best seen there.

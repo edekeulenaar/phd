@@ -1,4 +1,4 @@
-# **Part II. Speech affordances**
+# Part II. Speech affordances
 
 [Part I. What is moderation?](#/part-1) proposed that moderation can be understood as a speech management mechanism designed for plurivocal environments and organized around two core functions. One is *enframing and enforcement*: establishing a threshold of tolerance and using modular, dynamic and minimally interventionist techniques to keep speech compliant with set norms. The other is *facilitation*. Moderation must maintain socio-informational coherence, or the possibility for participants to understand one another, through contextualization, mediation, redirection, fact-checking, balancing and summarization. 
 

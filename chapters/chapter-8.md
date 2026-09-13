@@ -1,5 +1,6 @@
 # **Chapter 8**
-# Twitter as an accidental authority: How a platform assumes an adjudicative role during the COVID-19 pandemic
+
+# Twitter as an accidental authority: how a platform assumes an adjudicative role during the COVID-19 pandemic
 
 As new information on the epidemiological nature of COVID-19 infections and its impact on public safety evolves, so do claims on which objective facts constitute it [@yongWhyCoronavirusConfusing2020]. Twitter has been tasked with ensuring that its users maintain a basic level of consensus around public safety guidelines and other information relative to personal and public health by, for example, centralizing access to local health organizations and representatives, flagging and at times deleting “misleading” Tweets that contradict such sources [@skopelitiCoronavirusHowAre2020]. But with diverging guidelines and facts occasionally opposing even authorities — notably ex-U.S. President Trump, the American Centers for Disease Control and Prevention, the National Institutes of Health and the World Health Organization — the platform has struggled to determine to whom it should attribute ultimate authority for reliable information about COVID-19 transmission, treatment and protection.
 
@@ -54,7 +55,6 @@ Twitter’s moderation of existing authorities speaks to a number of foundationa
 The methodology of this study is two-fold. Based on a collection of millions of Tweets, we first parse, analyze and visualize diverging claims on COVID-19 transmission, prevention and treatments between U.S. authoritative sources and their respective audiences. We then look at how Twitter moderated disputed claims by first consulting content moderation policies designed for COVID-19 misinformation, and then obtaining moderation metadata from Tweets containing disputed contents.
 
 ![Method diagram](images/Figure%2010.png)
-
 **Figure M1.** *Method diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%2010.png). ^figure-m1
 
 ## Definitions
@@ -125,13 +125,13 @@ The same can be said about modes of transmission. In the early months of the pan
 
 ![Figure 4](images/images-Figure%204.png)
 
-**Figure 4.** *Heatmap of modes of transmission mentioned by authoritative sources (Tweets and websites) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., “[whitehouse.gov](http://whitehouse.gov)”))*. Full image [here](https://edekeulenaar.github.io/phd/images/images-Figure%204.png). ^figure-4
+**Figure 4.** *Heatmap of modes of transmission mentioned by authoritative sources (Tweets and websites) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., “[whitehouse.gov](http://whitehouse.gov)”)). Full image [here](https://edekeulenaar.github.io/phd/images/images-Figure%204.png). ^figure-4
 
 The caveat, here, is that audiences continue to focus on modes of transmission disputed among authoritative sources (see **[[#^figure-4|Figure 4]]**). With little scientific consensus on the minutiae of droplet transmissions, there is notable public confusion on the airborne nature of the virus [@achenbachStudiesLeaveQuestion2020; @lewisCoronavirusAirborneExperts2020; @mandavilli239ExpertsOne2020]. The World Health Organization expresses uncertainty about airborne transmission throughout February, then later joins the U.S. Centers for Disease Control and Prevention in March to affirm that it spreads mainly via droplets. Only in April 2020 does the CDC offer a verdict: “according to experts”, it says, “the virus can be transmitted by both droplets and smaller, ‘aerosol’ types of particles” [@centersfordiseasecontrolandpreventionHealthcareProfessionalsFrequently2020]. While the World Health Organization rejects this claim, a slight majority of users echo the CDC’s statement well into October.
 
 ![Figure 5](images/images-Figure%205.png)
 
-**Figure 5.** *Line graph of audience and authoritative statements about whether COVID-19 is airborne or not*. Full image [here](https://edekeulenaar.github.io/phd/images/images-Figure%205.png). ^figure-5
+**Figure 5.** *Line graph of audience and authoritative statements about whether COVID-19 is airborne or not. Full image [here](https://edekeulenaar.github.io/phd/images/images-Figure%205.png). ^figure-5
 
 In this context, audiences express a relatively constant amount of uncertainty throughout, as well as conspiratorial suspicions in early March. While this is especially applicable to the months of February and March, audiences appear to express a relatively constant number of claims aligned with the majority of authoritative sources. This may suggest that more consensus between authoritative sources could foster consensus among their publics.
 
@@ -139,7 +139,7 @@ There is further disagreement on whether COVID-19 is transmitted through droplet
 
 ![Figure 6](images/Figure%206%201.png)
 
-**Figure 6.** *Line graph of claims on droplet or aerosol transmission by authoritative sources (web domains) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., “[whitehouse.gov](http://whitehouse.gov)”))*. Full image [here](https://edekeulenaar.github.io/phd/images/Figure%206%201.png). ^figure-6
+**Figure 6.** *Line graph of claims on droplet or aerosol transmission by authoritative sources (web domains) and their Twitter audiences (Tweet replies and mentions of website domains by authoritative sources (e.g., “[whitehouse.gov](http://whitehouse.gov)”)). Full image [here](https://edekeulenaar.github.io/phd/images/Figure%206%201.png). ^figure-6
 
 The debate on whether the virus is droplet or aerosol airborne shows how popular understandings of viral transmission appear to have evolved through discussions between authoritative sources and audiences. Early public doubts about whether the virus was airborne have prompted authorities to define and measure airborne transmission in increasingly concrete terms (**[Figure 6](#^figure-6)**). While the World Health Organization had stated earlier that airborne transmission is an exchange of infected droplets, recent findings on aerosol transmission substantiate earlier public conceptions of airborne transmission as a somewhat ubiquitous form of “air infection” [@mandavilli239ExpertsOne2020].
 
@@ -176,7 +176,6 @@ It also means supporting authoritative sources in their continuous debunking of 
 At issue is that disagreements among authoritative sources create a crisis of authority on the platform. Twitter can no longer redirect users to one specific source. In the absence of consensus among authorities, Twitter begins to highlight the disputed nature of even authoritative claims (see **[[#^figure-10|Figure 10]]**). This applies particularly to U.S. President Donald Trump’s private account. While audience Tweets are more severely moderated (suspended, deleted), Trump’s Tweets initially obtain the “#KnowTheFacts” prompt the platform introduced on 29 January (see **[[#^figure-7|Figure 7]]**). Bringing together several other authoritative sources, this prompt is intended to display current consensus among a majority of authoritative sources, including “trusted news sources” [@twitterCoronavirusStayingSafe2020]. As Trump alleges that “sometimes over 100,000” people “die from the Flu” in October, Twitter flags it for violating “the Twitter Rules about spreading misleading and potentially harmful information related to COVID-19.” The same happens to a later Tweet claiming immunity from COVID-19.
 
 ![](images/meta%20trump%20%5BRecovered%5D-02.png)
-
 **Figure 10.** *Beeswarm of moderated audience and Trump Tweets mentioning words related to COVID-19 treatments, transmission and prevention. Every dot is one or many Tweets posted in a given day.* Full image [here](https://edekeulenaar.github.io/phd/images/meta%20trump%20%5BRecovered%5D-02.png). ^figure-10
 
 Both of them do stay up, in accordance with Twitter’s “World leaders” and “Public-interest exceptions” policies [@twitterWorldLeadersTwitter2019], until Trump’s account is permanently suspended for violating a separate policy designed to prevent “glorification of violence” [@twitterPermanentSuspensionRealDonaldTrump2021].
@@ -282,5 +281,3 @@ There are limits to what follows from this case. The study concerns English-lang
 ***
 
 The authors would like to acknowledge Jack Wilson and Carlo de Gaetano for their contributions to this research. Emillie de Keulenaar’s participation has been supported by the UKRI-Canada ESRC grant, Responsible AI for Inclusive, Democratic Societies: a Cross-disciplinary approach to detecting and countering abusive language online (ESRC reference: ES/T012714/1).
-
-<div class="page-break" style="page-break-before: always;"></div>

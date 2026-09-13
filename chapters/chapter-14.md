@@ -1,5 +1,6 @@
 # **Chapter 14**
-# From Twitter to X: Demotion, community notes and the apparent shift from adjudication to consensus-building
+
+# From Twitter to X: demotion, community notes and the apparent shift from adjudication to consensus-building
 
 When X was Twitter, the company’s content moderation evolved into an ever more complex trust and safety apparatus benefiting from strong legal and technical investments. At times, thousands of tweets and users were deplatformed indefinitely for violating hate speech, electoral or COVID medical policies. But incoherent decision-making around what kind of speech was or was not acceptable (and to whom), decided in a somewhat vertical fashion, has gathered criticism from all sides of global political debate, making the company and other “mainstream” platforms liable to various crises of legitimacy.
 
@@ -126,7 +127,6 @@ To classify posts into topics, it was necessary to first draw from a representat
 Once done, I manually verified each result, grouped similar categories and corrected fuzzy annotations, as this procedure is faster than manually coding posts from scratch. Posts that did not refer or revolve around Dutch issues (e.g., posts about Belgium) were removed. The final number of community notes was 6,430, applied to a total of 4,718 posts. Given their granularity, each topic was given a general category (see **[Table 1](#^table-1)**).
 
 ![Table 1](images/Chapter%2014%20-%20Table%201.png)
-
 **Table 1.** *Community note post categories and sub-categories.* Full image [here](https://edekeulenaar.github.io/phd/images/table-topics-by-category.png). ^table-1
 
 From there, I proceeded to classify post authors (users). Here, too, I used GPT-4o-mini iteratively to assign a category to each user based on their username, description and an example post (namely, the one with most engagement). The prompt used also contained examples for every category. GPT-4o-mini was run twice; the first time without user descriptions, and the second with. Results were verified manually.
@@ -220,7 +220,6 @@ Here, the analysis consisted in verifying what was removed and what remained onl
 ## Total values
 
 ![Table 2](images/Screenshot%202026-08-28%20at%2015.18.01.png)
-
 **Table 2.** *Total distributions across community notes and posts obtained via search results.* Full image [here](https://edekeulenaar.github.io/phd/images/Screenshot%202026-08-28%20at%2015.18.01.png). ^table-2
 
 # What Twitter was
@@ -265,7 +264,7 @@ How exactly did this philosophy influence X’s content moderation policies? Fro
 
 ![Figure 8](images/image28.png)
 
-**Figure 8.** Beeswarm showing absolute number of word differences per Twitter/X policy, 2010-2025. Blue dots represent changes on Twitter, and yellow dots on X. Red dots represent instances in which a policy has been removed. Policy names and structure are from December 2024. Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-08.png). ^figure-8
+**Figure 8.** *Beeswarm showing absolute number of word differences per Twitter/X policy, 2010-2025. Blue dots represent changes on Twitter, and yellow dots on X. Red dots represent instances in which a policy has been removed. Policy names and structure are from December 2024.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-14-figure-08.png). ^figure-8
 
 This restructuring is contingent on policies becoming more minimalistic, in the sense that they are simplified into one single, core purpose. This was part of an effort by the X Safety team to “consolidate a number of pages […] and roll out a new, simplified template”, reducing “the overall number of articles and total word count significantly”, in order to make rules “clearer for everyone” [@xsafetyWeWantOur2024]. Previously separate, the Abusive behavior and Hateful conduct policies have been merged into a new Violent content policy that focuses mostly on the physical aspect and potential of online violence, rather than personal offenses or “cultures” of violence (in the sense of beliefs, ideas or attitudes that may legitimize violent dispositions). Likewise, policies under the “Platform integrity and authenticity” section now focus mostly on “artificial” or instrumentalized platform manipulation, such as attempts to boost engagement, trick platform mechanisms, and so on. The terminology of “misinformation” — “misleading” content, “deceptive” behavior — is removed or minimized.
 

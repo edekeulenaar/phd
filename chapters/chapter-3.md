@@ -1,4 +1,5 @@
-# **Chapter 3** 
+# **Chapter 3**
+
 # The affordances of extreme speech
 
 In the fields of linguistics and censorship studies, it is understood that speech moderation “materializes everywhere” as a practice that constitutes and defines the boundaries of (publicly) permissible language [@postCensorshipSilencingPractices1998, p. 2]. Societies that opt not to rely solely on regulatory means, such as state censorship, seek to maintain or restore public order by modulating the circulation of “extreme speech” in the public sphere, i.e., speech that transgresses “the boundaries of acceptable norms of public culture” [@pohjonenExtremeSpeechOnline, p. 1174]. Examples include hate speech and memory laws, interpersonal speech norms or more complex historical processes (denazification, decommunization, decolonization), which, among other objectives, seek to drive historical change by re-educating, marginalizing or eradicating the language through which undesired behavior, ideas or beliefs — past or present — may subsist.
@@ -7,13 +8,13 @@ Since the Santa Clara Principles were formalized in 2018, mainstream social medi
 
 In dialogue with research from the philosophy of language [@ayalaSpeechAffordancesStructural2016; @saulWhatHappeningOur2019], affordance theory [@bucherAffordancesSocialMedia2018] and content moderation [@gibsonFreeSpeechSafe2019; @munnAngryDesignToxic2020], this case study proposes a media studies definition of “speech affordances” as platform content moderation policies, techniques, or speech norms practiced within social media. It describes how extreme speech alters and adapts to platforms with distinct speech affordances. As a case study, it describes the formation of an admittedly dank (passé) meme of the 2016–2018 online culture wars: Kekistan. Since 2017, Kekistan has generated popular interest as an example of a meme whose original (though somewhat ironic) message of white nationalism was lost in translation as it circulated from 4chan/pol to Twitter and YouTube, and was consumed in the latter platforms as a symbol of anti-identity politics [@tutersLARPingLiberalTears2019]. Though this meme is not an exhaustive example of the phenomena described above, it is sufficient to illustrate how speech affordances affect the usage of more or less problematic language across (online) public spheres.
 
-## Speech affordances
+# Speech affordances
 
 While much has been said of affordances in general [@bucherAffordancesSocialMedia2018], there has been less focus on content moderation policies, techniques and user speech norms as affordances in their own right. One of the closest references to speech affordances originates from Ayala, who discusses the role of social structures in determining one’s “speech capacity” [@ayalaSpeechAffordancesStructural2016, p. 1]. Their argument is that what one says may have more or less effect depending on the position one speaks _from_, as much as the position of the interlocutor one speaks _to_. Speech relies on “the detection and exploitation” of affordances available within social interaction, which are embedded within a larger social structure and the norms that govern it [@ayalaSpeechAffordancesStructural2016, pp. 1–4].
 
 Arguably, the materiality of online platforms bears a number of additional features that complicate social interaction. Different platforms are understood to shape messages according to different affordances and vernaculars [@gibbsFuneralInstagramDeath2015]. Through their governance policies, techniques and user cultures, every platform may be understood as effectively licensing certain forms of speech, which in turn provide more or less favorable conditions for the expression of certain ideas. For the past ten years, for example, a great deal of research has taken issue with the role of content optimization, one recurrent argument being that more personalized content recommendations contribute to polarized and hateful language [@munnAngryDesignToxic2020, p. 8]. Others have taken interest in the role of content moderation, specifically from users, to describe how subreddit community guidelines enable different speech cultures — “free speech” subreddits being more prone to antagonistic language and “safe spaces” containing “higher rates of self-censorship” [@gibsonFreeSpeechSafe2019, p. 1]. Yet others have looked at identity affordances, such as user (pseudo)anonymity, in facilitating the types of extreme language found in 4chan and similar forums.
 
-### _Three types of speech affordances_
+## Three types of speech affordances
 
 One could place speech affordances into three, broad categories. The first are “high-level” affordances that “enable or constrain [...] communicative habits” [@bucherAffordancesSocialMedia2018, p. 12], namely content moderation policies and the local or international legislation they are modeled after. Though they are dynamic documents whose conceptions of objectionable language vary across time, platforms, local legislation and the general zeitgeist around speech norms, they effectively delimit the boundaries of permissible speech. When crossing its policy lines, suspended users may transit back and forth between actively moderated and alternative platforms, whose content moderation policies and enforcement practices are designed to circumvent the speech jurisdictions of the former. This transit forms a dynamic, fringe-to-mainstream social media ecology, where users invested in objectionable content may create their own clandestine affordances (coded language, private accounts, auto-suspensions, redirects) to keep content circulating between these spheres.
 
@@ -27,21 +28,21 @@ Content moderation policies, content moderation techniques and user cultures tog
 
 **Figure 1.** *Simplified summarization of speech affordances across Twitter, the YouTube comment section and 4chan.* Full image [here](https://edekeulenaar.github.io/phd/images/Figure%201.png). ^figure-1
 
-## How did speech affordances form the Kekistan meme?
+# How did speech affordances form the Kekistan meme?
 
 At the time of Kekistan’s emergence in 2017–2018, Twitter’s and YouTube’s content moderation had poorly enforced policies against hateful language, relying mostly on a relatively diverse user base to report it. I first highlight the role of _public_ speech moderation and then comment on the aftermath of Twitter and YouTube’s updated hate speech policies after 2019.
 
-### _Kekistan as a white ethnostate_
+## Kekistan as a white ethnostate
 
 The “Kekistan” meme emerged around 2017 as a fictional nation-state whose culture, religion and policies were intended to reflect the idiosyncrasies of 4chan/pol’s anonymous subcultures. At the heart of their political identity was an interest in far-right political philosophy, particularly American white nationalism, crystallized in an initiative to have “Kekistan” be the name of a private island for shitposters and eugenic policies [@anonPolPoliticallyIncorrect2017].
 
 At the time, some proponents of the meme were cognizant of active moderation efforts in other platforms, be it by other user bases (the communities of certain subreddits that forbid racism) or by platforms themselves, like Twitter [@anonPolPoliticallyIncorrect2018]. Combined with 4chan’s strong in-group subculture, these factors explain why the meme was not meant to be communicated nor understood by external audiences, and why its original white nationalist connotations were mentioned more often on 4chan than elsewhere across Twitter and YouTube (**[Figure 2](#^figure-2)**).
 
-### _Kekistan as an overt dog whistle_
+## Kekistan as an overt dog whistle
 
 On Twitter in early 2017, British influencer Carl Benjamin notices the meme and turns it into a practical joke against the British census’s definition of “ethnicity”. Externally, the meme comes across as much milder than its original version: it drops its white nationalist subtext, mutating into an initiative to bait left-wing “social justice warriors” into believing that Kekistan was a hate symbol (with the understanding that falling for this joke is as much of a joke as the concept of ethnic identity). One reason for this mutation is the platform Benjamin is posting from, Twitter, which was governed by the moral oversight of a wider and more ideologically diverse user base than the smaller forum of 4chan/pol. There, the meme adapts into an _overt_ dog whistle: it uses “ambiguity, implicature, and other non-semantic means” [@saulWhatHappeningOur2019, p. 4] to impart a coded message (that Kekistan is a joke) to a target audience (Benjamin’s followers), while communicating another meaning (that it is a hate symbol) to Twitter out-groups. This ambiguity creates a vacuum that makes both user- and platform-led moderation reticent, which may explain why most tweets stayed online despite making inconspicuous racist provocations (**[Figure 2](#^figure-2)**).
 
-### _Kekistan as a covert dog whistle_
+## Kekistan as a covert dog whistle
 
 In contrast, the relatively lesser moderated comment sections of YouTube videos contain _both_ references to 4chan’s and Benjamin’s versions of the meme. While some allude to racist and racialist concepts, others speak of the meme in the same terms as Benjamin (**[Figure 2](#^figure-2)**). Such developments begin to cause alarm, as external watchdogs like the Southern Poverty Law Center warn that Kekistan contains racist and antisemitic connotations [@neiwertWhatKekExplaining2017]. Their reports lead to a number of rebuttals by, among others, Benjamin himself, who mocks the watchdog for falling for his joke [@thethinkeryKekistanTerroristGroup2017].
 
@@ -55,7 +56,7 @@ While 4chan could afford the more extreme versions of the meme as an imaginary (
 
 This is to say that Kekistan’s original meaning as a white nationalist meme-flag was not necessarily _rejected_ by users on Twitter or YouTube comment sections or by the platforms themselves, but simply relegated to places that _could afford_ its expression. Thus, the meme’s essential ambiguity was not just the product of rhetorical ruses, but the consequence of a fragmentation of its meanings across platforms with distinct speech affordances. Indeed, its ambiguity facilitated its widespread circulation and usage by users with no direct relation to its primary meaning. It became a message (conveniently) lost in translation.
 
-## After deplatforming
+# After deplatforming
 
 It could be said that the dissemination of Kekistan reflects the volatile ideological cacophony of the online 2016–2018 “culture wars”, waged as caricatural debates on highly controversial topics such as race, identity and nationality. The wave of content moderation that followed, whereby both Twitter and YouTube took stronger measures to identify, delete, demonetize or demote objectionable content — including mentions of Kekistan (**[Figure 3](#^figure-3)**) — may have reassured some that the extreme elements of those debates had been driven outside actively moderated platforms. But such elements may re-emerge today in the same way as they did in 2016, for they continue to be active wherever their expression is best afforded. In this sense, platforms find themselves playing a cat-and-mouse game with content they had once removed.
 

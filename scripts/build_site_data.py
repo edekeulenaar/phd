@@ -92,6 +92,10 @@ SUBTOPIC_PARENT = "Content moderation"
 # mirrored to site/manuscript.md for the legacy single-doc path and the
 # Chapter-1 figure templates.
 MANUSCRIPT_DIR = Path("/Users/edekeulenaar/Projects/Master_vault/Manuscript")
+# The merged manuscript is the version of record: edits land there first and
+# the per-chapter files are not kept in step with it. Chapter text is taken
+# from its sections; the chapter files only name and order the chapters.
+MERGED_MANUSCRIPT = MANUSCRIPT_DIR.parent / "Manuscript-merged.md"
 SITE_CHAPTERS  = Path(__file__).resolve().parent.parent / "chapters"
 SITE_MANUSCRIPT = Path(__file__).resolve().parent.parent / "manuscript.md"
 SITE_TOC = Path(__file__).resolve().parent.parent / "data" / "toc.json"
@@ -425,6 +429,59 @@ def rewrite_links(text: str) -> str:
     return "".join(out)
 
 
+_PAGE_BREAK_RE = re.compile(r'^\s*<div class="page-break"[^>]*>\s*(?:</div>)?\s*$\n?', re.M)
+_WIKI_SECTION_RE = re.compile(r"\[\[#([^\]|#^][^\]|]*?)(?:\|([^\]]*))?\]\]")
+
+
+def merged_sections() -> dict[str, str]:
+    """Map each manifest source filename to its section of the merged
+    manuscript, rewritten into the conventions the site reads from the
+    chapter files:
+
+      - "# Chapter 3. Title" becomes "# **Chapter 3**" over "# Title", and every
+        heading below it moves up one level (the merged file nests chapters
+        one level deeper than their own files do);
+      - [[#Section heading|Label]] links between sections become ordinary links
+        to that section's file, which rewrite_links turns into site routes;
+      - page-break markers, which only mean something to the PDF, are dropped.
+    """
+    if not MERGED_MANUSCRIPT.exists():
+        return {}
+    text = MERGED_MANUSCRIPT.read_text(encoding="utf-8")
+    heads = [(m.start(), m.group(1).strip()) for m in re.finditer(r"^# (.+)$", text, flags=re.M)]
+    srcs = [src for _slug, _k, src, _t in THESIS_MANIFEST if src]
+
+    def src_for(heading: str):
+        h = re.sub(r"\s*\{#.*\}$", "", heading)
+        hits = [s for s in srcs if h == Path(s).stem or h.startswith(Path(s).stem)]
+        return max(hits, key=len) if hits else None
+
+    tops = [(pos, src_for(h)) for pos, h in heads if src_for(h)]
+    by_heading = {}
+    for pos, h in heads:
+        if src_for(h):
+            by_heading[re.sub(r"\s*\{#.*\}$", "", h)] = src_for(h)
+
+    def link(m):
+        target, label = m.group(1).strip(), (m.group(2) or m.group(1)).strip()
+        src = by_heading.get(target) or src_for(target)
+        if not src:
+            return m.group(0)
+        return f"[{label}]({_quote(src)})"
+
+    out = {}
+    for n, (pos, src) in enumerate(tops):
+        end = tops[n + 1][0] if n + 1 < len(tops) else len(text)
+        body = text[pos:end]
+        first, _, rest = body.partition("\n")
+        rest = re.sub(r"^#(#+) ", r"\1 ", rest, flags=re.M)
+        m = re.match(r"^# (Chapter \d+)\.\s*(.+)$", first)
+        first = f"# **{m.group(1)}**\n\n# {m.group(2).strip()}" if m else first
+        body = _PAGE_BREAK_RE.sub("", first + "\n" + rest)
+        out[src] = _WIKI_SECTION_RE.sub(link, body).strip() + "\n"
+    return out
+
+
 def sync_thesis() -> None:
     """Copy every manifest source file → site/chapters/<slug>.md (with links
     rewritten for the SPA), mirror Chapter 1 to the legacy site/manuscript.md,
@@ -439,16 +496,21 @@ def sync_thesis() -> None:
 
     entries = []          # flat, ordered list for the router
     n_copied = n_missing = 0
+    merged = merged_sections()
+    print(f"  chapter text from {MERGED_MANUSCRIPT.name}: {len(merged)} sections")
     for slug, kind, src, title in THESIS_MANIFEST:
         rec = {"slug": slug, "kind": kind, "title": title,
                "src": src or ""}
         if src:
             p = MANUSCRIPT_DIR / src
-            if p.exists():
+            if src in merged or p.exists():
                 global _current_src_file
                 _current_src_file = src
-                body = rewrite_links(
-                    strip_reference_sections(p.read_text(encoding="utf-8")))
+                raw = merged.get(src)
+                if raw is None:
+                    print(f"  · not in the merged manuscript, using its file: {src}")
+                    raw = p.read_text(encoding="utf-8")
+                body = rewrite_links(strip_reference_sections(raw))
                 (SITE_CHAPTERS / f"{slug}.md").write_text(body, encoding="utf-8")
                 n_copied += 1
                 if slug == "chapter-1":

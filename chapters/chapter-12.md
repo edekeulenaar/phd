@@ -1,6 +1,6 @@
 # **Chapter 12**
-# Deplatforming, demotion and folk theories of Big Tech persecution
 
+# Deplatforming, demotion and folk theories of Big Tech persecution
 
 There are many truths stranger than fiction, but none so strange as the emergence of the COVID-19 pandemic at the nadir of a half-decade of expanding fault-lines in the legitimation of public narratives. Compounding this is the fact that even among public health authorities, information about the origin, treatment, and prevention of COVID-19 has not always been certain — from whether the virus has leaked from a lab in Wuhan, to whether asymptomatic people can contaminate others, or if children can be contagious [@iatiTrumpSaysIts2020; @olearyHowDutchFalse2020]. This has driven an imperative for mainstream social media platforms to foster consensus among their user bases, by for example raising “authoritative sources” to the top of search ranking and recommendation results on YouTube and Google Search [@skopelitiCoronavirusHowAre2020], or setting up centralized reference points to the latest local guidelines and information found on the virus on Twitter homepages [@rothUpdatingOurApproach2020].
 
@@ -53,7 +53,6 @@ In contrast to contemporary YouTube studies [@arthursResearchingYouTube2018], we
 Our queries were designed based on conspiracy theories reported by news media up to late March 2020, and vernaculars proper to messaging boards known to produce such conspiracies [@dezeeuwTracingNormieficationCrossplatform2020], particularly 4chan’s /pol/ board and 8kun (formerly 8chan). Conspiracy theories or claims included the idea that COVID-19 is a Chinese or American bioweapon; that 5G is the cause of COVID-19; that Bill Gates has known about the pandemic beforehand and is profiting from it; or that it is simply a hoax [@knightWhatAreCOVID192020].
 
 ![Table 1](images/table%201.png)
-
 **Table 1.** *List of queries and their corresponding claims or conspiracy theories.* Full image [here](https://edekeulenaar.github.io/phd/images/table%201.png). ^table-1
 
 These conspiracies translated into 98 queries in total, though we ultimately narrowed our analysis to four queries: “id2020”, “wwg1wga”, “depopulation” and “5g radiation”. This is because we wanted to test search rankings for different types of moderated misinformation: while terms like “depopulation” and “wwg1wga” may be likely to be classified as “borderline content”, “id2020” and “5g radiation” are listed in YouTube’s COVID-19 Medical Misinformation Policy as contradicting the World Health Organization or public health authorities. Though similar in substance, these two types of misinformation are described and moderated differently according to YouTube policies.
@@ -63,7 +62,6 @@ These conspiracies translated into 98 queries in total, though we ultimately nar
 With these queries, we used youtube-dl [@garciagonzalezYoutubedl2022], an open-source command-line program to download videos and audio from YouTube. Youtube-dl allows one to capture metadata including channel names, channel IDs, video IDs, video comments, video transcripts, engagement (views, likes and dislikes), search rankings, and video status (e.g., “This video has been removed due to copyright.”). Due to the propensity of conspiracy videos to be platform-moderated, our youtube-dl script was scheduled to obtain the first three pages of search results for all 98 queries, every 20 minutes of every day, between April and October 2020. Our results, summarized in **[[#^table-2|Table 2]]**, indicate that April was a particularly active month for our queries, while June 2020 saw the explicit deletion of many videos that initially landed in our database.
 
 ![Table 2](images/table%202.png)
-
 **Table 2.** *Total number of videos and comments per month, including videos deleted by YouTube or users.* Full image [here](https://edekeulenaar.github.io/phd/images/table%202.png). ^table-2
 
 ## Understanding YouTube’s moderation of COVID-19 misinformation
@@ -91,7 +89,6 @@ In order to discover how users relate to and discuss the impact of moderation on
 Our method was informed by Tangherlini et al.’s *Automated pipeline for the discovery of conspiracy and conspiracy theory narrative frameworks* [-@tangherliniAutomatedPipelineDiscovery2020], an ensemble of combined natural language processing techniques that consist in extracting syntactic and semantic elements of conspiracy theories from “noisy” social media posts and visualizing them as storytelling networks. We reconstructed subject-verb-object relations by extracting the relations between named entities; filtering relations based on their reference to conspiratorial narratives; and then filtering resulting networks based on their relationship to particular COVID-19 conspiracy themes. We did this by implementing the Python word2vec library [@Word2vecWrapperGoogle], which maps the n-grammatic relations between words through neural networking algorithms. Our basic subjects included “youtube”, “google”, “big tech”, “facebook”, and “twitter”; our verbs were those associated with moderation, such as “cancel”, “remove”, “delete”, “suspend”, “demonetize”; and conspiracy terms included in the query list of **[[#^table-2|Table 2]]**. We then normalized the verbs by lemmatizing them and normalized platform shorthands like “yt” and “fb” into their full referents. The results of this can be seen in **[[#^figure-13|Figure 13]]**.
 
 ![](images/figure%204-2.png)
-
 **Figure 4.** *Analyzing user reactions to moderation.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%204-2.png). ^figure-4
 
 ## Methodological obstacles
@@ -196,6 +193,3 @@ What to make of this? While this question certainly cannot be answered with a ca
 ![Figure 14](images/figure%2014-2%201.png)
 
 **Figure 15.** *Alluvial diagram of deleted videos, sorted by moderation labels. Visualization made by Guilherme Appolinário.* Full image [here](https://edekeulenaar.github.io/phd/images/figure%2014-2%201.png). ^figure-15
-
-
-<div class="page-break" style="page-break-before: always;"></div>

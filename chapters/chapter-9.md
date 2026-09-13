@@ -1,4 +1,5 @@
 # **Chapter 9**
+
 # Normative dislocation: when platforms moderate without memory
 
 In the first hours after the depredation of Brasília’s national congress on 8 January 2023, it was widely assumed by news media worldwide that the riots were a tropical simulacrum of the January 6 riots in Capitol Hill [see, e.g., @cameronAttackBrazilsSeat2023; @nicasTwoCapitolRiots2024]. Social media platforms themselves had perceived this event in similar terms [@oversightboardBrazilianGeneralsSpeech2023]. Content related to the riots had, throughout the 2022 Brazilian election year, been moderated as a byproduct of “electoral misinformation” similar in nature to what had spread online in the lead up to the Capitol Hill riots of 2021.
@@ -96,7 +97,6 @@ To collect these content moderation practices, we used “dynamic archiving” [
 Our analysis consisted in tracing platform and legal content moderation on the 500 top most engaged posts per platform, per theme. The themes were (a) posts engaged in planning the 8 January attacks and (b) posts by or about military personnel theorizing, planning or supporting the attacks. Moderation derived by law was indicated by statuses such as “[users] account has been withheld in Brazil based on local law(s),” while platform-specific moderation would redirect to platform policies. Samples are visible in Figures 5 to 9 and our interactive visualization ([https://edekeulenaar.github.io/normative_dislocation/](https://edekeulenaar.github.io/normative_dislocation/)), which offers a holistic view of all 500 most engaged-with posts involved in the riots and military attempts at overthrowing the newly elected government.
 
 ![](images/Figure%203%20-%20Method.png)
-
 **Figure 3.** *Method diagram.* Full image [here](https://edekeulenaar.github.io/phd/images/full/chapter-09-figure-03.png). ^figure-3
 
 # Moderation policies
