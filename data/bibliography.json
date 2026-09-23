@@ -3772,6 +3772,13 @@
     "harvard": "Rieder, B. (2019) *Netvizz*.",
     "link": "https://tools.digitalmethods.net/netvizz/facebook/netvizz/"
   },
+  "riederRankFlow2021": {
+    "author": "Rieder",
+    "year": "2021",
+    "inline": "(Rieder, 2021)",
+    "harvard": "Rieder, B. (2021) *RankFlow*.",
+    "link": "http://labs.polsys.net/tools/rankflow/"
+  },
   "riederRankingAlgorithmsRanking2018": {
     "author": "Rieder et al.",
     "year": "2018",

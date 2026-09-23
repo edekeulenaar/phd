@@ -3339,6 +3339,9 @@ async function renderLanding() {
       </h1>
       ${TOC?.subtitle ? `<p class="cover-sub">${escapeHtml(TOC.subtitle)}</p>` : ""}
       <p class="cover-author">${escapeHtml(TOC?.author || "")}</p>
+      ${(TOC?.people || []).length ? `<dl class="cover-people">${TOC.people.map(g =>
+        `<div class="cover-people-group"><dt>${escapeHtml(g.role)}</dt>${g.names.map(n =>
+          `<dd>${escapeHtml(n)}</dd>`).join("")}</div>`).join("")}</dl>` : ""}
     </header>
     ${abstract ? `<section class="cover-abstract"><h2>Abstract</h2>${abstract}</section>` : ""}
     ${ack && ack.trim() ? `<section class="cover-ack"><h2>Acknowledgments</h2>${ack}</section>` : ""}

@@ -4,7 +4,24 @@
 "author": "Emillie de Keulenaar",
 "fullPdfUrl": "pdf/E%20de%20Keulenaar%20-%20PhD%20thesis%20-%20Dialogue%20and%20restraint.pdf",
 "pdfFilename": "E de Keulenaar - PhD thesis - Dialogue and restraint.pdf",
-"pdfVersion": "8cbe7590e410",
+"people": [
+{
+"role": "Supervisors",
+"names": [
+"Prof. Dr. M. J. Broersma",
+"Dr B. Ganesh"
+]
+},
+{
+"role": "Assessment Committee",
+"names": [
+"Prof. Dr. S. I. Aasman",
+"Dr T. Gillespie",
+"Prof. Dr. J. W. Howard"
+]
+}
+],
+"pdfVersion": "7b279c541df7",
 "entries": [
 {
 "slug": "abstract",

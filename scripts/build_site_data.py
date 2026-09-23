@@ -500,6 +500,27 @@ def merged_sections() -> dict[str, str]:
     return out
 
 
+def title_page_people() -> list[dict]:
+    """Supervisors and assessment committee, as listed on the verso of the
+    title page in the vault (Manuscript/Title page.md), which the PDF's
+    titlepage.tex also follows. Each <p> in .title-verso is one group: a bold
+    heading, then one name per <br>."""
+    src = MANUSCRIPT_DIR / "Title page.md"
+    if not src.exists():
+        return []
+    text = src.read_text(encoding="utf-8")
+    m = re.search(r'<div class="title-verso">(.*?)</div>', text, flags=re.S)
+    if not m:
+        return []
+    groups = []
+    for para in re.findall(r"<p[^>]*>(.*?)</p>", m.group(1), flags=re.S):
+        parts = [re.sub(r"<[^>]+>", "", x).strip() for x in re.split(r"<br\s*/?>", para)]
+        parts = [x for x in parts if x]
+        if len(parts) >= 2:
+            groups.append({"role": parts[0], "names": parts[1:]})
+    return groups
+
+
 def sync_thesis() -> None:
     """Copy every manifest source file → site/chapters/<slug>.md (with links
     rewritten for the SPA), mirror Chapter 1 to the legacy site/manuscript.md,
@@ -595,6 +616,7 @@ def sync_thesis() -> None:
     toc = {"title": THESIS_TITLE, "subtitle": THESIS_SUBTITLE,
            "author": THESIS_AUTHOR, "fullPdfUrl": full_pdf_url,
            "pdfFilename": THESIS_PDF_NAME,
+           "people": title_page_people(),
            "pdfVersion": pdf_version,
            "entries": entries,
            "srcToSlug": {Path(s).name: sl for sl, _k, s, _t in THESIS_MANIFEST if s}}

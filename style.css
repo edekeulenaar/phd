@@ -231,6 +231,16 @@ code, pre { font-family: var(--mono); font-size: 0.93em; }
   font-family: var(--sans); font-size: 0.95rem;
   letter-spacing: 0.04em; color: var(--muted); margin: 0;
 }
+/* Supervisors and assessment committee, as on the verso of the PDF's title
+   page: two groups side by side, set like the author line. */
+#landing .cover-people {
+  display: flex; flex-wrap: wrap; gap: 0.6rem 3rem;
+  margin: 1.6rem 0 0; font-family: var(--sans); font-size: 0.9rem;
+}
+#landing .cover-people dt {
+  font-weight: 600; color: var(--ink); letter-spacing: 0.02em; margin-bottom: 0.2rem;
+}
+#landing .cover-people dd { margin: 0; color: var(--muted); line-height: 1.5; }
 /* Section headers (Abstract / Contents) — big, bold, black; no rule. */
 #landing .cover-abstract h2,
 #landing .cover-ack h2,
