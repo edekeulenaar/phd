@@ -1,0 +1,186 @@
+\usepackage{etoolbox}
+% A navigable outline in the reader's sidebar: present, expanded to the chapter
+% level, and shown when the file opens. Deferred to the start of the document:
+% pandoc loads hyperref AFTER this file, so calling \hypersetup here directly
+% left it undefined and LaTeX typeset the options onto the first page.
+\AtBeginDocument{\hypersetup{bookmarks=true, bookmarksopen=true,
+  bookmarksopenlevel=1, bookmarksnumbered=false, pdfpagemode=UseOutlines}}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{needspace}
+% No paragraph leaves its last line alone at the top of a page, or its first
+% line alone at the foot of one.
+\widowpenalty=10000
+\clubpenalty=10000
+\usepackage{newunicodechar}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage[most]{tcolorbox}
+\usepackage{fvextra}
+\usepackage{caption}
+
+% ── Typefaces: the same pair the website uses ────────────────────────────────
+% Body ACaslon Pro, headings Test National.
+\setmainfont[Path=FONTSDIR/,
+  UprightFont=ACaslonPro-Regular.otf,
+  ItalicFont=ACaslonPro-Italic.otf,
+  BoldFont=ACaslonPro-Semibold.otf,
+  BoldItalicFont=ACaslonPro-SemiboldItalic.otf]{ACaslonPro}
+\setsansfont[Path=FONTSDIR/,
+  UprightFont=TestNational-Regular.otf,
+  ItalicFont=TestNational-BookItalic.otf,
+  BoldFont=TestNational-Semibold.otf,
+  BoldItalicFont=TestNational-Semibold.otf]{TestNational}
+
+% ── Glyphs the heading face does not have ────────────────────────────────────
+% The Test National trial carries 68 glyphs: letters, digits and a little
+% punctuation. It has no colon, slash, question mark, en dash or quotation
+% marks, so headings silently lost those characters. The browser hides this by
+% falling back per character to Helvetica Neue, which is what --sans says to do;
+% XeLaTeX has no such fallback, so do it explicitly — and only inside a heading,
+% or every quotation mark in the body would turn into Helvetica too.
+% The seven characters the heading face lacks are wrapped in \headfallback by
+% a pass over the generated LaTeX (step 4 of build.sh). newunicodechar cannot
+% help here: it refuses plain ASCII, and ":", "/" and "?" are the common cases.
+\newfontfamily\headfallback{Helvetica Neue}
+\newfontfamily\monofont{Menlo}
+
+\newfontfamily\cjkfallback{Arial Unicode MS}
+\newunicodechar{質}{{\cjkfallback 質}}
+\newunicodechar{問}{{\cjkfallback 問}}
+\newunicodechar{问}{{\cjkfallback 问}}
+\newunicodechar{̂}{{\cjkfallback ̂}}
+\newunicodechar{κ}{{\cjkfallback κ}}
+\newunicodechar{α}{{\cjkfallback α}}
+\newunicodechar{В}{{\cjkfallback В}}
+\newunicodechar{о}{{\cjkfallback о}}
+\newunicodechar{п}{{\cjkfallback п}}
+\newunicodechar{р}{{\cjkfallback р}}
+\newunicodechar{с}{{\cjkfallback с}}
+\newunicodechar{‐}{{\cjkfallback ‐}}
+\newunicodechar{→}{{\cjkfallback →}}
+\newunicodechar{↓}{{\cjkfallback ↓}}
+\newunicodechar{↑}{{\cjkfallback ↑}}
+% 𝕏 (U+1D54F) appears in a tweet title; only a maths face carries it.
+\newfontfamily\mathletterfallback{STIX Two Math}
+\newunicodechar{𝕏}{{\mathletterfallback 𝕏}}
+
+% ── Headings: larger, sans, and flush to the top of the page ─────────────────
+% titlesec's third argument is the space BEFORE the title; zero puts a chapter
+% on the first line of its page. The fourth is the space after, which is what
+% keeps the title clear of the text.
+% [block], not [display]: the display shape reserves a line for the (empty)
+% chapter label, which left 2cm of white above every chapter title.
+% A chapter opens with its number on its own line, a size down, a clear gap,
+% then the full title. The label is set per chapter by \chapterwithlabel,
+% which headglyphs.py substitutes for \chapter; front matter, Parts and the
+% Conclusion have no label and print the title alone.
+\newcommand{\chapterlabel}{}
+\newcommand{\chapterwithlabel}[3]{%
+  \renewcommand{\chapterlabel}{#1}\chapter[#2]{#3}\renewcommand{\chapterlabel}{}}
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\bfseries\fontsize{27}{29}\selectfont\linespread{0.92}\selectfont\raggedright
+   % pandoc sets secnumdepth to -\maxdimen, and titlesec drops the label slot
+   % of an unnumbered heading entirely, so the "Chapter N" line is typeset here
+   % in the format code instead. \titlespacing pulls every chapter up by 21pt
+   % so an unlabelled title sits on the top margin; a labelled one gives that
+   % back first, or the number line lands above the margin and is clipped.
+   % \endgraf rather than \par: titleformat's arguments are not \long.
+   \ifx\chapterlabel\empty\else
+     \vspace*{21pt}{\fontsize{17}{20}\selectfont\chapterlabel\endgraf}\vspace{30pt}\fi}
+  {}{0pt}{}
+% The negative value cancels the leading that 1.4 line spacing adds to the
+% title's own first line; measured so the cap height lands on the top margin.
+\titlespacing*{\chapter}{0pt}{-21pt}{52pt}
+\titleformat{\section}
+  {\normalfont\sffamily\bfseries\fontsize{19}{21}\selectfont\linespread{0.92}\selectfont\raggedright}{}{0pt}{}
+\titlespacing*{\section}{0pt}{22pt}{10pt}
+\titleformat{\subsection}
+  {\normalfont\sffamily\bfseries\fontsize{15.5}{17.5}\selectfont\linespread{0.92}\selectfont\raggedright}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{18pt}{8pt}
+\titleformat{\subsubsection}
+  {\normalfont\sffamily\bfseries\fontsize{13.5}{15.5}\selectfont\linespread{0.92}\selectfont\raggedright}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{16pt}{7pt}
+
+% Contents entries are set in the heading face too, so they need the flag.
+% tocloft typesets the "Contents" title itself, bypassing \chapter*, so the
+% titlesec format above never reached it and it came out in the serif. Give
+% it the chapter title's face, size and position.
+\renewcommand{\cfttoctitlefont}{\normalfont\sffamily\bfseries\fontsize{27}{29}\selectfont}
+\setlength{\cftbeforetoctitleskip}{-21pt}
+\setlength{\cftaftertoctitleskip}{52pt}
+\renewcommand{\cftchapfont}{\sffamily\bfseries}
+\renewcommand{\cftsecfont}{\sffamily}
+\renewcommand{\cftsubsecfont}{\sffamily}
+
+% ── Tables ───────────────────────────────────────────────────────────────────
+% Ragged right with hyphenation: a narrow column of prose justifies badly and
+% long words were the reason cells collided in the first place.
+\AtBeginEnvironment{longtable}{%
+  \RaggedRight\setlength{\tabcolsep}{5pt}%
+  \hyphenpenalty=10 \exhyphenpenalty=10 \emergencystretch=2em}
+\AtBeginEnvironment{tabular}{%
+  \RaggedRight\setlength{\tabcolsep}{5pt}%
+  \hyphenpenalty=10 \exhyphenpenalty=10 \emergencystretch=2em}
+
+% ── Callout / prompt boxes ───────────────────────────────────────────────────
+% A one-cell table is a callout in this manuscript. The website draws it as a
+% tinted panel; match that rather than setting it as prose between two rules.
+\newtcolorbox{calloutbox}{
+  breakable, enhanced, boxrule=0.4pt, arc=2pt,
+  colback=black!3, colframe=black!18,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  before skip=12pt, after skip=12pt,
+}
+\newenvironment{callout}{\begin{calloutbox}}{\end{calloutbox}}
+
+
+% ── Code blocks: a tinted box in a mono face, as on the website ──────────────
+% Long prompt lines ran off the page, so break them anywhere rather than let
+% them overflow the measure.
+\fvset{breaklines=true, breakanywhere=true, fontsize=\small, commandchars=\\\{\}}
+% Every code block, whatever fence it was written with, is put in this box by
+% the filter, so all the prompts look alike and match the website's panel.
+\newtcolorbox{promptbox}{
+  breakable, enhanced, boxrule=0.4pt,
+  colback=black!3, colframe=black!18, arc=2pt,
+  left=8pt, right=8pt, top=7pt, bottom=7pt,
+  before skip=12pt, after skip=6pt,
+}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{promptbox}}{\end{promptbox}}
+\else\newenvironment{Shaded}{\begin{promptbox}}{\end{promptbox}}\fi
+
+% ── Epigraph at the head of a chapter ───────────────────────────────────────
+% The website sets these in a mono face a little smaller than the body, with
+% generous air above and below; match it.
+\newenvironment{epigraph}
+  {\par\vspace{18pt}\begingroup\monofont\small\color{black!70}\raggedleft}
+  {\endgroup\par\vspace{22pt}}
+
+% ── The "figures are interactive" notice ────────────────────────────────────
+\newenvironment{chapternotice}
+  {\par\vspace{14pt}\begingroup\itshape\small\color{black!65}\raggedright}
+  {\endgroup\par\vspace{20pt}}
+
+% ── Captions ────────────────────────────────────────────────────────────────
+% Always centred, tight under the figure or table they belong to, with clear
+% air before the text that follows.
+\newenvironment{figcaption}
+  {\par\nopagebreak\vspace{4pt}\begingroup\centering\small}
+  {\par\endgroup\vspace{16pt}}
+% Floats: never let a figure occupy a page LaTeX would rather fill with text,
+% and allow a tall one its own page instead of dragging text down after it.
+\setcounter{topnumber}{2}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{3}
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.7}
+\renewcommand{\textfraction}{0.1}\renewcommand{\floatpagefraction}{0.75}
+
+% A display image sits close to its caption, so no trailing space of its own.
+% Inside a float the image must leave room for its caption, or the float
+% overruns the page by the caption's height ("Float too large for page by
+% 52pt"). pandoc bounds images to \textheight; bound them a little tighter.
+\newenvironment{figureblock}
+  {\par\medskip\centering\setlength{\textheight}{0.8\textheight}}
+  {\par\noindent}
+
