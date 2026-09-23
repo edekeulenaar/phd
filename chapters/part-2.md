@@ -15,12 +15,7 @@ Chapter 3 is published as a journal article:
 | De Keulenaar, E. (2023) “The affordances of extreme speech,” Big Data & Society, 10(2), Article 20539517231206810. Available at: https://doi.org/10.1177/20539517231206810. |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Methodology; Validation; Writing – original draft; Writing – review & editing (the conceptualization was heavily informed by my work at OILab).
-- *Marc Tuters*: Conceptualization; Writing – original draft; Writing – review & editing.
-- *Ivan Kisjes*: Methodology; Software; Validation.
-- Feedback: anonymous peer reviewers.
+In CRediT terms, Marc Tuters and I share the conceptualization and writing of this chapter, whose conceptualization was heavily informed by my work at OILab. The methodology is mine, with contributions from Ivan Kisjes, who also contributed to the software, and Ivan and I validated its results. The article benefited from the feedback of anonymous peer reviewers.
 
 Removed speech requires multiple linguistic subterfuges and displacements — a “necessary dissimulation” [@holquistIntroductionCorruptOriginals1994] that does not *say* what made it be silenced but signifies it by means of opacity. What these chapters add is that the displacement is at once linguistic and material: “extreme speech” is dissimulated in its wording and displaced across public spheres, transformed each time it passes from one affordance regime to another. [Chapter 4. The affordances of replacement narratives](#/chapter-4) follows one such displacement, namely how “replacement” narratives — the “great replacement” and “white genocide” codes — converge in the lesser moderated milieux of 4chan/pol and the YouTube comment section, and how they are transcoded into more mainstream political culture as they travel. The point is not that these milieux invent such speech, but that their affordances let it be recombined and disseminated in forms that stay sayable *elsewhere*. 
 
@@ -29,13 +24,7 @@ Chapter 4 is a book section co-authored with Marc Tuters, in a volume edited by 
 | de Keulenaar, E. and Tuters, M. (2023) “The Affordances of Replacement Narratives: How the White Genocide and Great Replacement Theories Converge in Poorly Moderated Online Milieus,” in S. Bracke and L.M. Hernández Aguilar (eds.) The Politics of Replacement: Demographic Fears, Conspiracy Theories, and Race Wars. London: Routledge, pp. 139–161. Available at: https://doi.org/10.4324/9781003305927-12. |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Methodology; Validation; Visualization; Writing – original draft; Writing – review & editing (Marc Tuters wrote the introduction, literature review and conclusion; I designed the empirical research and wrote the main body).
-- *Marc Tuters*: Conceptualization; Writing – original draft; Writing – review & editing.
-- *Ivan Kisjes*: Methodology; Software; Validation (with the 4CAT toolkit).
-- *Sarah Bracke and Luis Manuel Hernández Aguilar*: Writing – review & editing (as the volume’s editors, with feedback).
-- Feedback: participants of the Politics of Replacement conference in Amsterdam on 29 June 2021, organized by Luis Manuel Hernández Aguilar, Aslihan Östürk and Sarah Bracke.
+Marc Tuters and I share the conceptualization and writing of this chapter: Marc wrote the introduction, literature review and conclusion, while I designed the empirical research and wrote the main body. Ivan Kisjes and I developed the methodology; Ivan contributed the software, through the 4CAT toolkit, and validated the results with me. The visualizations are mine. Sarah Bracke and Luis Manuel Hernández Aguilar reviewed and edited the chapter as the volume’s editors, and participants of the Politics of Replacement conference in Amsterdam on 29 June 2021, organized by Luis Manuel Hernández Aguilar, Aslihan Östürk and Sarah Bracke, offered feedback.
 
 [Chapter 5. LLMs and the generation of moderate speech](#/chapter-5) carries the same question into large language models. Comparing eight LLMs across the most controversial questions drawn from 165 subreddits in six languages, it examines the discursive techniques — refusals, defusal, and other rhetorical strategies — through which they answer prompts that sit along the boundaries of acceptability. It finds that models tend to meet high-“risk” prompts with refusals or normative language, but answer the most controversial prompts in more inconsistent tones, shifting between agnostic, diplomatic and academic registers, and at times between iterations of the same prompt. The distinction reflects a deeper tension in value alignment, between anticipation — mitigating a harm estimated in advance — and deliberation — negotiating a controversy that is live precisely because it resists such estimation. Read this way, LLMs become a new participant in the ongoing negotiation of public speech norms.
 
@@ -44,10 +33,6 @@ Chapter 5 is currently a preprint on SSRN and under review at the *Journal of Co
 | de Keulenaar, E. (2025) “LLMs and the generation of moderate speech.” Rochester, NY: Social Science Research Network, pp. 1–40. Available at: https://doi.org/10.2139/ssrn.5250537. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Methodology; Software; Validation; Visualization; Writing – original draft; Writing – review & editing (software and visualizations with some help from GPT-3.5 Turbo).
-- *Tarleton Gillespie*: Conceptualization (with feedback).
-- Feedback: Mary Gray, danah boyd, Emily Tseng, Anna Gibson, Chuncheng Liu, Ryland Shaw, Parker Bach, Zaidat Ibrahim, Rasmus Kleis Nielsen and the Centre for Tracking and Digital Society at the University of Copenhagen.
+Tarleton Gillespie and I share the conceptualization of this chapter. Its methodology, software, validation, visualizations and writing are mine, the software and visualizations with some help from GPT-3.5 Turbo. Tarleton Gillespie, Mary Gray, danah boyd, Emily Tseng, Anna Gibson, Chuncheng Liu, Ryland Shaw, Parker Bach, Zaidat Ibrahim and the Centre for Tracking and Digital Society at the University of Copenhagen offered feedback on its results, and Rasmus Kleis Nielsen and the Centre on its writing.
 
 Given that deplatformed or marginalized speech never entirely goes away — certainly not under the conditions of the current social media landscape — the question that remains is how moderation-specific speech affordances participate in broader cultural and social transformations. The disappearance or “forgetting” [@ricoeurMemoireHistoireOubli2006a] of ideas deemed problematic or unsound is an act upon a collective past through the language available to a collective present. The question that follows, and that returns in [Part V. Modulation and consensus](#/part-5), is therefore not only how far these affordances constrain speech, but how far they may afford dialogue about such constraints and the norms that sustain them. We will explore this question in [Part III. Moderation crises](#/part-3).

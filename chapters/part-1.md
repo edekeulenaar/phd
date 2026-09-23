@@ -17,10 +17,7 @@ Chapter 1 is an updated version of a book chapter published as:
 | de Keulenaar, E. (2024) “Censura e moderação,” in R. Luís and A. Fernandes (eds.) Censura: o que nos falta perguntar? Lisbon, Portugal: Imprensa de História Contemporânea, pp. 139–166. Available at: https://doi.org/10.34619/h0sl-rgww. |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Data curation; Formal analysis; Investigation; Methodology; Visualization; Writing – original draft; Writing – review & editing (visualizations made with the help of Claude Code).
-- Validation and feedback: João C. Magalhães, Rasmus Kleis Nielsen, Maud Borie, and participants of the conference *Censura: o que nos falta perguntar?* in Lisbon.
+In CRediT terms, I carried out the conceptualization, data curation, formal analysis, investigation, methodology, visualization and writing of this chapter, the visualizations with the help of Claude Code. João C. Magalhães, Rasmus Kleis Nielsen, Maud Borie and participants of the conference *Censura: o que nos falta perguntar?* in Lisbon validated its results or offered feedback.
 
 The question applies empirically as much as conceptually. When we study moderation, what objects do we study exactly? Reading the broader literature cited in [Chapter 1](#/chapter-1), one notices that methods drawn from censorship studies and from digital methods invite us to treat moderation as something more than the drafting of platform trust and safety policies, which remain the primary object of study in the field  [@katzenbachPlatformGovernanceArchives2023]. In [Chapter 2. After deplatforming](#/chapter-2), I look instead at an ensemble of moderation mechanisms as a “moderation stack” that interconnects policy drafting to the techniques through which policy is enforced, to how users react to, evade and reinterpret enforcement, and, at the far end, migrate to alternative platforms. We speak of “traces” because this is the nature of the data we capture: moderation is visible primarily through its effects, more so than explicit function (and API-accessible data).
 
@@ -31,13 +28,7 @@ Chapter 2 is a book chapter co-authored with Richard Rogers, in a volume edited 
 | de Keulenaar, E. and Rogers, R. (2025) “After deplatforming: the return of trace research for the study of platform effects,” in T. Venturini et al. (eds.) The SAGE Handbook of Data and Society: An Interdisciplinary Reader in Critical Data Studies. London: SAGE, pp. 392–413. Available at: https://uk.sagepub.com/en-gb/eur/the-sage-handbook-of-data-and-society/book281091. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Formal analysis; Investigation; Methodology; Visualization; Writing – original draft; Writing – review & editing (Richard Rogers and I wrote the introduction together; I wrote the main text and he finalized the conclusion).
-- *Richard Rogers*: Conceptualization; Writing – original draft; Writing – review & editing.
-- *Ivan Kisjes*: Methodology; Software.
-- *Tommaso Venturini*: Validation (as the volume’s co-editor, with feedback).
-- The chapter also draws on the wider methodological work of the Digital Methods Initiative, particularly that of Erik Borra and Bernhard Rieder.
+Richard Rogers and I share the conceptualization and writing of this chapter: we wrote the introduction together, I wrote the main text, and he finalized the conclusion. I carried out the formal analysis, investigation, methodology and visualization, with Ivan Kisjes contributing to the methodology and software. Tommaso Venturini offered feedback and contributed to its validation as the volume’s co-editor. The chapter also draws on the wider methodological work of the Digital Methods Initiative, particularly that of Erik Borra and Bernhard Rieder.
 
 The method described in [Chapter 2](#/chapter-2) has since been operationalized into a research tool, [MCAT](https://amsterdam-humanities-labs.github.io/MCAT/) — the Moderation Capture and Analysis Toolkit — developed with Ivan Kisjes, Frank Anemaet and Matúš Solčány [@dekeulenaarMCATModerationCapture2024]. The idea behind the tool is to afford the modularity with which moderation techniques and data access regimes change. What can be captured on a given platform in a given year is a moving target, and an instrument for studying moderation has to be able to move with it. Given a YouTube, X, Facebook or whatever dataset obtained from most social media platforms, MCAT looks for traces of removal, flagging, demotion and other metadata found through a combination of platform APIs and web scraping. These are clandestine methods for a clandestine object of study, much like the empirical study of censorship has tended to be.
 

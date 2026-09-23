@@ -13,10 +13,7 @@ The chapter is a summary of a presentation given to a symposium organized by the
 | de Keulenaar, E. (2024) “Dissenting speech norms and the evolution of “alt-tech” as counter-spheres.” Crime Refracted? Online Deviance in the New Platform Ecosystem. Available at: https://drive.google.com/file/d/1YpSmsCbTWyvTE4_0_WuBQ3p0joLlfXEI/view?usp=drive_link. |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Visualization; Writing – original draft; Writing – review & editing.
-- Validation and feedback: participants of the symposium organized by Jakob Demant and Alessandro Moretti of the Microsociology of Online Deviance lab at the University of Copenhagen.
+In CRediT terms, the conceptualization, visualizations and writing of this chapter are mine. Participants of the symposium organized by Jakob Demant and Alessandro Moretti of the Microsociology of Online Deviance lab at the University of Copenhagen offered feedback.
 
 [Chapter 11. Epistemic ruptures in the encyclopedias of alternative facts](#/chapter-11) provides an example from the wiki space. Similar to [Chapter 7. Of migrants and strangers](#/chapter-7), this story offers a view into a moderation crisis of *epistemic nature* — that is, what happens when users fundamentally disagree about what constitutes valid knowledge based on normative grounds. It tells the story of how Wikipedia editors were removed from the platform after pushing for edits that alleged correlations between race and intelligence in an article about its historical controversies. These wikis forked a version of the article they preferred into another wiki, which continued to break from each other based on smaller epistemic disagreements. Each of these alternative wikis (or, “altpedias”) became projects born out of unresolved edit wars. What began as a contested entry thus became material for wikis of “alternative facts”, which sought to offer a platform — indeed, platformize — a body of knowledge considered repressed or misunderstood. The method is thus to reproduce Wikipedia’s entries and claims to authoritative knowledge while changing the epistemic norms by which that knowledge was judged. 
 
@@ -25,16 +22,7 @@ Chapter 11 is an early article co-authored with Marc Tuters, Ivan Kisjes and Kas
 | de Keulenaar, E. et al. (2019) “On Altpedias: partisan epistemics in the encyclopedias of alternative facts,” Artnodes, (24), pp. 83–90. Available at: https://doi.org/10.7238/a.v0i24.3300. |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Methodology; Writing – original draft; Writing – review & editing.
-- *Marc Tuters*: Conceptualization; Writing – original draft; Writing – review & editing.
-- *Ivan Kisjes*: Conceptualization; Methodology.
-- *Kaspar Beelen*: Conceptualization.
-- *Tommaso Elli*: Data curation; Formal analysis; Methodology; Visualization.
-- *Richard Rogers*: Methodology.
-- *Derrek Xavier, Felipe Escobar, Abraham Koshy, Jesper Hinze, Daniël de Zeeuw, Giovanni Profeta, Nina Welt, Aurelio Amaral and Michele Mauri*: Data curation; Formal analysis.
-- Validation and feedback: participants of the Interface Politics conference in Barcelona (November 2018); anonymous peer reviewers.
+Marc Tuters, Ivan Kisjes, Kaspar Beelen and I share the conceptualization of this chapter, and Marc and I wrote it. Tommaso Elli, Ivan Kisjes, Richard Rogers and I developed the methodology. Tommaso Elli produced the visualizations, and the data curation and formal analysis were carried out by Tommaso, Derrek Xavier, Felipe Escobar, Abraham Koshy, Jesper Hinze, Daniël de Zeeuw, Giovanni Profeta, Nina Welt, Aurelio Amaral and Michele Mauri. Anonymous peer reviewers and participants of the Interface Politics conference in Barcelona (November 2018) offered feedback.
 
 [Chapter 12. Deplatforming, demotion and folk theories of Big Tech persecution](#/chapter-12) follows the same relation after YouTube’s moderation of COVID-19 conspiracy narratives. Between April and October 2020, YouTube combined “hard” moderation, through video and account removal, with “soft” moderation, through the demotion of borderline content and the promotion of authoritative sources. The chapter reconstructs these interventions and examines how users interpreted them. The policies were effective in a limited but important sense: thousands of videos became unavailable, and search and recommendation systems did reduce the visibility of claims about 5G, microchips, depopulation and other COVID-19 conspiracy narratives. But it did so at the cost of reorganizing YouTube’s role within a broader market of conspiracy theories. Users removed from YouTube would congregate on BitChute to pursue the theorization of various conspiracies, while YouTube, to them, became a source of primary material for such theorizations posted by and for conspirators. Enforcement therefore reorganized the relation between platforms according to opposite but complementary normative criteria. 
 
@@ -43,12 +31,7 @@ Chapter 12 is a journal article co-authored with Anthony Burton and Ivan Kisjes.
 | De Keulenaar, E., Burton, A.G. and Kisjes, I. (2021) “Deplatforming, demotion and folk theories of Big Tech persecution,” Fronteiras - estudos midiáticos, 23(2), pp. 118–139. Available at: https://doi.org/10.4013/fem.2021.232.09. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-**Contributions (CRediT).**
-
-- *Emillie de Keulenaar*: Conceptualization; Formal analysis; Visualization; Writing – original draft; Writing – review & editing.
-- *Anthony Burton*: Conceptualization; Formal analysis; Writing – original draft; Writing – review & editing.
-- *Ivan Kisjes*: Conceptualization; Data curation; Formal analysis; Methodology.
-- Validation and feedback: anonymous peer reviewers (double-blind).
+Anthony Burton, Ivan Kisjes and I share the conceptualization and formal analysis of this chapter, and Anthony and I wrote it. Ivan developed the methodology and carried out the data curation, and the visualizations are mine. The article benefited from double-blind peer review.
 
 Taken together, the chapters show how platforms compete and complement each other through different thresholds of tolerance for speech. What emerges is thus a market of platforms (and now AI models) that offer different speech affordances and possibilities for negotiating moderation norms. From a social and cultural perspective, this may speak to a multiplication of spheres with competing capacities for expression, which in turn produce different ideas. This is problematic from the standpoint of consensus-building on speech norms, which remain fundamental to the constitution of a public sphere. 
 
