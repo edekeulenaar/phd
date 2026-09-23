@@ -10,10 +10,16 @@ The four chapters in this part examine moderation crises across different relati
 
 Each of these definitions encapsulates different historical premises, which in themselves constitute a historical consensus. A divergence of definitions is a divergence over the very premises of what constitutes objectionable language and why. When it occurs, commenters move from discussing unacceptable speech to unacceptable *ways of moderating speech*. Censorship, deplatforming, shadowbanning and platform authority become objects of controversy in their own right.
 
-Chapter 6 began as a study presented at the Association of Internet Researchers conference in 2022 and is a collaboration with Ivan Kisjes. Ivan carried out the data processing and several internal methodological decisions, while I designed and wrote the method and the study overall. The study exists in draft form for this thesis and is not yet published as a journal article. 
+Chapter 6 began as a study presented at the Association of Internet Researchers conference in 2022, in collaboration with Ivan Kisjes. It exists in draft form for this thesis and is not yet published as a journal article:
 
 | de Keulenaar, E. and Kisjes, I. (2022) “A genealogy of “problematic information” in YouTube hate speech and misinformation controversies (2004-2022),” AoIR 2022: Decolonizing the Internet. AoIR, Dublin, Ireland: AoIR, pp. 1–31. Available at: https://drive.google.com/file/d/1tFvSUPYATiW5c0sLx5mFo7koL-QoJ7P5/view?usp=sharing. |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+**Contributions (CRediT).**
+
+- *Emillie de Keulenaar*: Conceptualization; Methodology; Validation; Visualization; Writing – original draft; Writing – review & editing (visualizations made with RankFlow, software by Bernhard Rieder).
+- *Ivan Kisjes*: Methodology; Software.
+- Feedback: the “Moderation” panel of the Association of Internet Researchers conference in Dublin (2022) and the All in Moderation conference (2024).
 
 [Chapter 7. Of migrants and strangers](#/chapter-7) focuses on the material impacts of moderation crises. It asks what happens when journalistic editorial norms — which constitute speech norms in their own right — diverge with those of their social media audiences, particularly how this impacts users’ expectations of what can and cannot be reported as a journalistic fact.  
 
@@ -21,19 +27,38 @@ As a case study, it compares Dutch television coverage of the European refugee c
 
 A clash over speech norms had direct effects in what media users chose to consume. As users found the boundaries of broadcasting norms too limiting to report what they perceived to be valid facts, they then compared or complemented mainstream coverage with that of Breitbart and GeenStijl, both alternative outlets. These, in turn, offered users a form of “transgressive” reporting specifically focused on factualities that mainstream editorial norms would not consider reportable. This crisis was thus *both* normative and epistemic, formed around how competing norms define what is reportable in the first place. 
 
-Chapter 7 is a collaboration with Thomas Poell, Anne Helmond, Bernhard Rieder and Jasmijn van Gorp. Thomas Poell initiated the article with Bernhard Rieder during a DMI Winter School data sprint in 2018. Bernhard and Mari Wigham collected the data from the CLARIAH Media Suite and the Twitter and Facebook APIs. Anne wrote the literature review and Thomas the introduction and conclusion. I designed the empirical study and wrote the main body, while Ivan Kisjes carried out the data analysis. Jasmijn provided feedback and edited the article. The article also benefited from public feedback during several workshops organized by CLARIAH, including from Liliana Melgar Estrada, Roeland Ordelman, Susan Aasman and Julia Noordegraaf.
+Chapter 7 is a journal article co-authored with Thomas Poell, Anne Helmond, Bernhard Rieder and Jasmijn van Gorp, which Thomas Poell initiated with Bernhard Rieder during a Digital Methods Initiative Winter School data sprint in 2018. It is published as:
 
 | de Keulenaar, E. et al. (2025) “Computational cross-media research: tracing divergences between normative Dutch television and social media discourses on the “refugee crisis” (2013-2018),” Convergence, 31(5), pp. 1606–1628. Available at: https://doi.org/10.1177/13548565241258956. |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+**Contributions (CRediT).**
+
+- *Emillie de Keulenaar*: Conceptualization; Methodology; Visualization; Writing – original draft; Writing – review & editing (Anne Helmond wrote the literature review and Thomas Poell the introduction and conclusion; I designed the empirical study and wrote the main body).
+- *Thomas Poell*: Conceptualization; Writing – original draft; Writing – review & editing.
+- *Anne Helmond*: Conceptualization; Writing – original draft; Writing – review & editing.
+- *Bernhard Rieder*: Software; Writing – original draft; Writing – review & editing (data collection with Netvizz and TCAT).
+- *Jasmijn van Gorp*: Writing – original draft; Writing – review & editing.
+- *Ivan Kisjes*: Methodology; Software.
+- Validation and feedback: members of the CLARIAH community at several stages, including Liliana Melgar Estrada, Roeland Ordelman, Susan Aasman and Julia Noordegraaf; anonymous peer reviewers.
 
 [Chapter 8. Twitter as an accidental authority](#/chapter-8) examines a crisis of epistemic authority during the first year of the COVID-19 pandemic. Platforms attempted to contain misinformation by directing users toward “authoritative sources” on transmission, treatment and prevention. Twitter, in particular, centralized access to public-health guidance, raised authoritative information and labeled claims that tended to contradict it. This strategy depended on those authorities providing a sufficiently coherent account of what was known. The WHO, CDC, NIH, PAHO and the White House, however, changed their guidance over time and contradicted one another on masks, hydroxychloroquine and modes of transmission, leaving their audiences divided around those contradictions. 
 
 Twitter’s policy nevertheless required a boundary between trustworthy and misleading information, thus creating a paradox: it had organized moderation around deference to authority, but could no longer defer when authorities contradicted one another. In this situation, it responded by acting upon the degree of consensus among them, flagging or sanctioning outliers rather than establishing the objective truth of each claim (Trump being the case in point). This decision-making placed Twitter in a situation once described by Carl Schmitt in *The Concept of the Political* [@schmittConceptPolitical1996]: that the sovereign is that who takes action in a state of exception — here, where public (health) authorities lack consensus on their governance guidelines. As a result, Twitter steps in as an authority in its own right, even if just an accidental one. 
 
-The chapter is part of a collection of studies edited by Richard Rogers. It is a collaboration with Ivan Kisjes, Rory Smith, Carina Albrecht, Eleonora Cappuccio and Jack Wilson. Jack edited the chapter and contributed to its conceptual focus. Ivan carried out and co-designed the method with me. Rory and Carina contributed to the literature review and data collection, while Eleonora produced the chapter’s visualizations. With their contributions, I designed the study and wrote the chapter.
+Chapter 8 is a co-authored chapter in a collection of studies edited by Richard Rogers. It is published as:
 
 | de Keulenaar, E. et al. (2023) “Twitter as accidental authority: how a platform assumed an adjudicative role during the COVID-19 pandemic,” in R. Rogers (ed.) The Propagation of Misinformation in Social Media: a Cross-Platform Analysis. Amsterdam: Amsterdam University Press, pp. 109–138. Available at: https://www.aup.nl/en/book/9789048554249.<br> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+**Contributions (CRediT).**
+
+- *Emillie de Keulenaar*: Conceptualization; Methodology; Visualization; Writing – original draft; Writing – review & editing.
+- *Jack Wilson, Rory Smith and Carina Albrecht*: Writing – original draft; Writing – review & editing.
+- *Richard Rogers*: Validation; Writing – review & editing (as the volume’s editor, with feedback).
+- *Ivan Kisjes*: Methodology; Software (the data were originally collected with King’s College London’s TCAT instance).
+- *Eleonora Cappuccio and Carlo de Gaetano*: Visualization.
+- Validation and feedback: the Infodemic group (Peter Knight, Clare Birchall, Jonathan Gray, Liliana Bounegru and Marc Tuters); anonymous peer reviewers at the HKS Misinformation Review.
 
 [Chapter 9. Normative dislocation](#/chapter-9) is the culminating case of a crisis between Brazilian institutional actors and the moderation systems of US-based platforms around the 2022 presidential election and the attacks on the Three Powers Plaza on 8 January 2023. At the time, Brazil was undergoing a string of institutional crises when then-President Bolsonaro aligned heavily on the idea of a military intervention in case of supposed electoral fraud. Such propositions were accompanied by a surge and relative normalization of militaristic content online, which consisted in large part of advancing revisionist narratives about the role and actions of the Brazilian army during the military dictatorship of 1964-1980. This form of content — which in the US and Europe would equate in kind to WWII revisionist accounts — was treated by platforms as “electoral misinformation” developed in the context of the 2020 US election. 
 
@@ -41,9 +66,18 @@ This mismatch interrupted a longer historical process of accountability. Since t
 
 Marcelo Alves dos Santos Junior and I call the platform mismatch a *normative dislocation*: a situation whereby moderation system based upon foreign norms ceases to participate in a local process of norm formation. By treating militaristic speech primarily as electoral misinformation, or by failing to recognize it as an object of moderation, platforms contradicted and partially derouted the Brazilian process of accountability.
 
-The chapter is a co-authored journal article. Ivan Kisjes contributed to the data collection and method design. Betsy Grossman and Sara Vrondran contributed to the data analysis during the DMI Winter School data sprint in early 2023. Angeles Briones produced most of the visualizations for this project. Richard Rogers and Sabine Niederer encouraged the focus on normative dislocation. I designed the study and wrote most parts of the introduction, literature review, method, findings and discussion.
+Chapter 9 is a journal article co-authored with Marcelo Alves dos Santos Jr. It is published as:
 
 | de Keulenaar, E. and Alves dos Santos Jr, M. (2026) “Normative dislocation: When platforms moderate without memory,” New Media & Society, 28(4), pp. 1437–1463. Available at: https://doi.org/10.1177/14614448251364814. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+**Contributions (CRediT).**
+
+- *Emillie de Keulenaar*: Conceptualization; Data curation; Formal analysis; Methodology; Visualization; Writing – original draft; Writing – review & editing (I wrote most of the introduction, literature review, method, findings and discussion).
+- *Marcelo Alves dos Santos Jr.*: Conceptualization; Data curation; Formal analysis; Methodology; Writing – original draft; Writing – review & editing.
+- *Ivan Kisjes*: Data curation; Formal analysis; Methodology.
+- *Francisco Kerche, Betsy Grossman and Sarah Vorndran*: Data curation; Formal analysis.
+- *Angeles Briones*: Visualization (the interactive visualizations were rendered with GPT-4o).
+- Validation and feedback: participants of the conference Big Tech as an Actor of Global Security and Geopolitical Conflicts in Paris (May 2024); anonymous peer reviewers.
 
 The cases described by each of these chapters do not necessarily insist that every moderation crisis should be resolved through consensus, but why the absence of metamoderation matters as a space to clarify definitions, the historical premises, the procedures and rules that constitute moderation. Where no such space is viable, the affordances of one medium may become intolerable to some of those who inhabit it. [Part IV. Ruptures](#/part-4) follows this process.

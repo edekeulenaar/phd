@@ -12,18 +12,32 @@ Methodologically, the two chapters make these responses comparable without assum
 
 [Chapter 13. Modulating moderation](#/chapter-13) shows that Twitter increasingly relied on demotion as a comparatively agnostic way of moderating speech. Rather than requiring one fixed definition of objectionability, demotion can be adjusted to what users at different moments perceive as problematic. João Vieira Magalhães, Bharath Ganesh and I call this *modulated moderation*: an (aspiringly) crisis-resistant speech architecture designed to adapt to evolving and contingent demands from users and other stakeholders, particularly through normatively agnostic and dynamic moderation techniques. This “normative plasticity”, as we call it, lies in its capacity to moderate according to evolving public conceptions of objectionability rather than to settle whether a piece of content is acceptable in any final sense. It can manage visibility against a moving threshold of tolerance.
 
-The chapter is a journal article co-authored with João Vieira Magalhães and Bharath Ganesh. While I designed the study, João, Bharath and I shared the writing through several stages of editing.
+Chapter 13 is a journal article co-authored with João C. Magalhães and Bharath Ganesh. It is published as:
 
 | De Keulenaar, E., Magalhães, J.C. and Ganesh, B. (2023) “Modulating moderation: a history of objectionability in Twitter moderation practices,” Journal of Communication, 73(3), pp. 273–287. Available at: https://doi.org/10.1093/joc/jqad015. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+**Contributions (CRediT).**
+
+- *Emillie de Keulenaar*: Conceptualization; Formal analysis; Methodology; Visualization; Writing – original draft; Writing – review & editing.
+- *João C. Magalhães*: Conceptualization; Writing – original draft; Writing – review & editing.
+- *Bharath Ganesh*: Conceptualization; Writing – original draft; Writing – review & editing.
+- *Ivan Kisjes*: Methodology.
+- Validation and feedback: anonymous peer reviewers (double-blind).
 
 The second response is consensus-building. [Chapter 14. From Twitter to X](#/chapter-14) examines how Community Notes makes agreement between raters the engine of a moderation decision. The platform does not have to adjudicate a disputed claim directly but seeks to afford a process through which users who usually disagree might converge around a moderation decision, i.e., a note. This helps displace arbitrary normative decisions to the sum of agreements between users themselves. Though, of course, X has been far from exempt from accusations of partiality, the model of moderation proposed here brings several benefits to platform businesses: it sells itself as functioning on consensus-building as the engine of moderation.
 
 This response resembles moderation’s dialogical function, now delegated to an architecture and to the crowd, but it should not be confused with a return to facilitation as such. Moderation decisions may be organized around the consensus a system affords rather than a judgment made by the platform alone, yet consensus over a decision is not consensus over the terms on which that decision is discussed. The problem of metamoderation remains: if users are to decide together how speech should be moderated, they must also be able to contest and negotiate the terms of their debate.
 
-The chapter is forthcoming in a Routledge volume edited by Richard Rogers and Sabine Niederer; the volume title and final pagination have not yet been assigned. Its current form is a 51-page preprint available through SSRN. Sal Hagen offered generous feedback.
+The chapter is forthcoming in a Routledge volume edited by Richard Rogers and Sabine Niederer; the volume title and final pagination have not yet been assigned. Its current form is a 51-page preprint available through SSRN:
 
 | de Keulenaar, E. (2025) “From Twitter to X: demotion, community notes and the apparent shift from adjudication to consensus-building.” Rochester, NY: Social Science Research Network, pp. 1–51. Available at: https://doi.org/10.2139/ssrn.5165083. |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+**Contributions (CRediT).**
+
+- *Emillie de Keulenaar*: Conceptualization; Data curation; Formal analysis; Methodology; Visualization; Writing – original draft; Writing – review & editing.
+- *Ivan Kisjes*: Data curation; Methodology.
+- Validation and feedback: Sal Hagen, Richard Rogers, and participants of an online PlatGovNet seminar.
 
 Read together, the two chapters identify two distinct platform responses to crises of moderation. Modulated moderation retains enforcement while making it modular, dynamic and relatively agnostic toward changing norms., while Community Notes relocates part of a decision to agreement among raters and thus resembles moderation’s facilitative function, though it does not necessarily restore it. Consensus over a moderation decision is not the same as deliberation over the terms on which its evidence and the underlying norm are judged. The problem of metamoderation therefore remains.
