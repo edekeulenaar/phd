@@ -39,6 +39,17 @@ that item's v2 finding rows. Country / Medium are '; '-split.
 
 from __future__ import annotations
 
+# Tied values (equal counts in the top-N tables, the venn regions, the network
+# edges) were broken by whatever order a set of strings happened to iterate in,
+# which Python randomises per process. Two runs over identical data therefore
+# rewrote eight CSVs with the same rows in a different order, and every rebuild
+# looked like a data change. Fix the seed and re-exec once, so a run is
+# reproducible.
+import os as _os, sys as _sys
+if _os.environ.get("PYTHONHASHSEED") != "0":
+    _os.execve(_sys.executable, [_sys.executable, *_sys.argv],
+               {**_os.environ, "PYTHONHASHSEED": "0"})
+
 import csv
 import os
 import re
