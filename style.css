@@ -950,6 +950,27 @@ mark.cmt.flash { animation: cmt-flash 1.6s ease-out 1; }
   max-width: 100%;
 }
 
+/* Figures use the page's width, not the text column's: like the live
+   figures, a figure image breaks out of the prose column symmetrically, up to
+   the space between the sidebars (minus 3 rem each side) or 1200 px. The
+   source images are large, so they are scaled down, never up. This also frees
+   images that share a paragraph with their caption, which were held to the
+   caption's 52ch line length. Tall figures stop at 90% of the screen height.
+   Screen only: the PDF/print layout keeps its own sizing. */
+@media screen {
+  .prose p > img:not(.inline-formula) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    /* never narrower than the paragraph it sits in (phones: 6 rem is a lot) */
+    max-width: max(min(calc(100vw - var(--side-w) - var(--right-w) - 6rem), 1200px), 100%);
+    max-height: 90vh;
+  }
+}
+
 /* When the live figure is moved INTO the manuscript flow it BREAKS OUT
    of the prose column SYMMETRICALLY around the centred prose, so the
    figure stays aligned with the centre of the page and never spills
