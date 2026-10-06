@@ -638,7 +638,7 @@ But there are also softer techniques that leverage or nudge one’s access to in
 
 ![Figure 7](images/fig-beeswarm-topics-how.png)
 
-**Figure 7.** *Beeswarm of HOW findings within Censorship-topic items — Quantity ↓.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=HOW&sort=qty-desc&view=beeswarm). ^figure-7
+**Figure 7.** *Beeswarm of WHO findings within Censorship-topic items — the three most and three least populated categories.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHO&sort=qty-desc&view=beeswarm&extremes=3). ^figure-7
 
 In environments where information is decentralized — the Web in particular — there is a diversification of both pre- and post-censorial methods. Through nationalized telecom companies, pre-censorial techniques lie at the infrastructural level to restrict access to entire websites altogether via DNS tampering, packet and content filtering [@acetoInternetCensorshipDetection2015], or a more or less selective blocking of IPs [@chaiImportanceEncryptedSNIESNI, p. 1; @ververisCrossCountryComparisonInternet2020, p. 3] and content filtering [@aryanInternetCensorshipIran, p. 1]. Since new web content can sprawl regardless of such restrictions, expansive monitoring is required to capture, review and deplatform objectionable content or entire websites [@mdwyerSocialMediaPolitics]. Communication and media studies will follow a definition of censorship as state-led interference [@deibertBlackCodeCensorship2003] of otherwise free(er) new media that have granted political expression new affordances [@poellSocialMediaActivism2014]. State-led online censorship is described as infrastructural or “intermediary” [@zuckermanIntermediaryCensorship2010], and applicable to regions with peculiar Internet arrangements [@deibertGeopoliticsInternetControl2008], particularly China [@xuInternetCensorshipChina2011a], Iran [@rahimiCensorshipIslamicRepublic2015] and Russia [@xueTSPURussiasDecentralized2022]. 
 
@@ -650,7 +650,7 @@ The legitimating reasons behind different efforts to censor also become more var
 
 ![Figure 8](images/fig-beeswarm-topics-why.png)
 
-**Figure 8.** *Beeswarm of WHY findings within Censorship-topic items — earliest first.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHY&sort=earliest&view=beeswarm). ^figure-8
+**Figure 8.** *Beeswarm of WHY findings within Censorship-topic items — the three most and three least populated categories.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHY&sort=qty-desc&view=beeswarm&extremes=3). ^figure-8
 
 With that said, it appears that censorship remains *one* theorization of many other forms of speech governance. In the theorizations above, we have seen how many of the actors, techniques and reasons behind censorship are also manifested in moderation. Instinctively, moderation is a set of techniques beyond “only removal of material” [@klonickNewGovernorsPeople2017, p. 1601]. But in platforms, detection, interception, removal, blocking, deplatforming, labeling, marginalizing, rating and monitoring — all of which have been associated with censorship — also apply. We may also argue that platforms wield leverage over the definition and enforcement of censorial norms equivalent to, if not greater than, that of many states and other authorities today. So is moderation only an oxymoron for censorship that dictionaries have yet to clarify? Thus far, the objections are polarized: some may argue that moderation is a fundamental need for keeping information environments inhabitable against inevitable floods of harmful and chaotic content [@direstaContentModerationNot2025]. Likewise, others will point out that moderation is a response to censorship: it comes down to explainable decisions that users voluntarily subscribe to; and if they are unhappy with eventual sanctions, they have other options in the market [@mosesWordCensorshipHas2024]. 
 
@@ -662,7 +662,7 @@ Historically, the earliest literature that speaks of moderation refers to a form
 
 ![Figure 9](images/fig-beeswarm-topics-moderation-what.png)
 
-**Figure 9.** *The “what” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=WHAT&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-9
+**Figure 9.** *The “what” of censorship.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Censorship&type=WHAT&sort=qty-desc&view=beeswarm&extremes=3). ^figure-9
 
 Given the plurivocal nature of the medium, the main task of moderation is to find a functional balance between enforcing a given norm of debate (epistemic, normative, religious or other) while allowing freedom of expression within *a margin of tolerance*. Thus originates moderation as a form of *restraint* in behavior and in beliefs, reflected in literature about religious [@tharyantoReligiousModerationPoint2025] and political moderation [@craiutuVirtuesPoliticalModeration2001]. From Latin, the term refers to the quality of making something less extreme relative to a contextual norm [@oxfordenglishdictionaryModerationMeaningsEtymology2025]. That capacity relies on modifying and provisioning an object’s shift toward an extremity, by limiting, lessening or restricting it from transgressing this threshold. As an object approaches it, it will be subject to several modifications, or “_moderationem_”, intended to slow, dissuade, obfuscate or correct it. Once it transgresses the threshold, it will be punished through the reinstatement of the transgressed norm. 
 
@@ -686,7 +686,7 @@ In these capacities, the literature speaks of moderation in the sense specified 
 
 ![Figure 10](images/fig-beeswarm-topics-moderation-who.png)
 
-**Figure 10.** *The “who” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=WHO&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-10
+**Figure 10.** *The “who” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation%7CDebate%20management&type=WHO&sort=qty-desc&y0=1980&y1=2026&view=beeswarm&extremes=3). ^figure-10
 
 In early online fora, the moderator is thus the central administering force within an exchange of information. They may hold different functions depending on the nature of the exchange and the space where it is held: mediating voices, i.e., complementing a debate where arguments or points of views may not meet each other structurally or on the basis of arguments. That means exposing synergies; facilitating convergences, or complementing information gaps (for example, where one point of view may not know about the historical or other background behind a given premise). One may speak of it as a “discursive intervention” consisting in “resolving a conflict of opinions” between debate participants, meaning to give “a reasonable and acceptable solution” to what is presented as different between one and the other participant [@salavastruArgumentationDebatsPublics2015]. 
 
@@ -698,13 +698,13 @@ A key affordance for maintaining the sustainability of community-driven moderati
 
 ![Figure 11](images/fig-beeswarm-topics-moderation-how.png)
 
-**Figure 11.** *The “how” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=HOW&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-11
+**Figure 11.** *The “how” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation%7CDebate%20management&type=HOW&sort=qty-desc&y0=1980&y1=2026&view=beeswarm&extremes=3). ^figure-11
 
 At the core of this capacity is a form of communicative action: to arrive at the approximate (but never entirely reachable) point in which interlocutors may “reach understanding” by facilitating access to the reasons that make their respective utterances “acceptable” to themselves and each other [@habermasTheoryCommunicativeAction1984a, p. 230]. This gives epistemic coherence and a continuous course to dialogue in public spheres: the capacity to retain the epistemic and social conditions necessary for dialogue and cooperation to be altogether *possible* in social environments [@grimmelmannVirtuesModeration2015]. This is a constituting feature of what many would connote as a form of “social cohesion”: the conditions of sociability — of trust and “meaning” in communities [@seeringModeratorEngagementCommunity2019, p. 1417] — that render an online space inhabitable. 
 
 ![Figure 12](images/fig-beeswarm-topics-moderation-why.png)
 
-**Figure 12.** *The “why” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation&type=WHY&sort=earliest&y0=1980&y1=2026&view=beeswarm). ^figure-12
+**Figure 12.** *The “why” of moderation.* Full image [here](#/chapter-1?fig=fig-beeswarm-topics&topic=Content%20moderation%7CDebate%20management&type=WHY&sort=qty-desc&y0=1980&y1=2026&view=beeswarm&extremes=3). ^figure-12
 
 # Moderation as a platform control mechanism
 

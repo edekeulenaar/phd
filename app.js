@@ -1670,6 +1670,9 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   // the Sub-category dropdown narrows the view at the PUBLICATION level —
   // via the 'Item Sub-categories' roll-up of each item's WHAT sub-categories.
   const isTopicFig = controls.primaryField === "Topic";
+  // The primary dropdown may hold a combined value ("Content moderation|Debate
+  // management") set by a figure link, to show several topics in one chart.
+  const primaryValues = () => (sel1 && sel1.value ? sel1.value.split("|") : null);
   const curType    = () => (selT ? selT.value : "ALL");
   const whatView   = () => isTopicFig && curType() === "WHAT";
   const gfield     = () => (whatView() ? "Sub-category" : groupField);
@@ -1684,8 +1687,8 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       selSC.value = "ALL";
       return;
     }
-    const p  = sel1 ? sel1.value : null;
-    const scope = all.filter(r => !p || r[controls.primaryField] === p);
+    const ps = primaryValues();
+    const scope = all.filter(r => !ps || ps.includes(r[controls.primaryField]));
     const vals = [...new Set(scope.flatMap(r =>
         (r["Item Sub-categories"] || "").split("|").map(x => x.trim())
       ).filter(Boolean))].sort();
@@ -1700,7 +1703,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     selSC.addEventListener("change", () => render());
   }
   function subset() {
-    const p  = sel1 ? sel1.value : null;
+    const ps = primaryValues();
     const ty = curType();
     const sc = selSC ? selSC.value : "ALL";
     const lg = selL ? selL.value : "ALL";
@@ -1711,11 +1714,11 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const [lo, hi] = getYears();
     const wv = whatView();
     return all.filter(r =>
-      (!p || r[controls.primaryField] === p) &&
+      (!ps || ps.includes(r[controls.primaryField])) &&
       (ty === "ALL" || (r.Type || "").toUpperCase() === ty) &&
       // WHAT view: only findings whose Category IS the current Topic, and
       // that carry one of its sub-categories.
-      (!wv || (p && (r.Category || "").trim() === p &&
+      (!wv || (ps && ps.includes((r.Category || "").trim()) &&
                (r["Sub-category"] || "").trim() !== "")) &&
       // Other views: publication-level WHAT sub-category filter.
       (wv || sc === "ALL" ||
@@ -1727,7 +1730,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       matchesQuery(r, tokens));
   }
 
-  let mode = "gantt";   // Matrix view first (#2 default).
+  let mode = "beeswarm";   // Beeswarm first; Matrix is the second tab.
 
   /** Sort the Category (or Sub-topic) labels per the dropdown. */
   function sortGroups(groups, data) {
@@ -1938,15 +1941,46 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     });
   }
 
+  const figEl = figId ? document.getElementById(figId) : null;
+
+  // Keep only the N most and N least populated lanes (by number of findings)
+  // when the figure's link asks for it with "&extremes=N". The reader can
+  // switch back to every lane from the note above the chart.
+  function limitToExtremes(data) {
+    const n = figEl ? parseInt(figEl.dataset.extremes || "", 10) : 0;
+    if (!n || figEl.dataset.extremesOff === "1") return { data, note: null, n };
+    const cnt = d3.rollup(data, v => v.length, r => r[gfield()] || "(uncategorized)");
+    const ranked = [...cnt.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    if (ranked.length <= 2 * n) return { data, note: null, n };
+    const keep = new Set([...ranked.slice(0, n), ...ranked.slice(-n)].map(e => e[0]));
+    return {
+      data: data.filter(r => keep.has(r[gfield()] || "(uncategorized)")),
+      note: `Showing the ${n} most and ${n} least populated of ${ranked.length} categories.`,
+      n,
+    };
+  }
+
   function render() {
     host.selectAll("*").remove();
-    const data = subset();
-    if (!data.length) {
+    const full = subset();
+    if (!full.length) {
       host.append("div").attr("class", "placeholder").text("No findings for this selection.");
       return;
     }
+    const { data, note, n } = limitToExtremes(full);
+    if (note || (n && figEl.dataset.extremesOff === "1")) {
+      const bar = host.append("div").attr("class", "bee-extremes-note");
+      bar.append("span").text(note || "Showing all categories.");
+      bar.append("button").attr("type", "button")
+        .text(note ? "Show all categories" : `Show only the ${n} most and ${n} least populated`)
+        .on("click", () => {
+          figEl.dataset.extremesOff = note ? "1" : "0";
+          render();
+        });
+    }
     (mode === "gantt" ? gantt : bee)(data);
   }
+  if (figEl) figEl.addEventListener("fig-refresh", () => render());
 
   if (sel1) sel1.addEventListener("change", () => { repopulateSubcat(); render(); });
   if (selT) selT.addEventListener("change", () => { repopulateSubcat(); render(); });
@@ -3268,7 +3302,68 @@ function collapseBlankRuns(host) {
 
 // Per-chapter section nav lives in the RIGHT rail ("On this page"), indented
 // by heading level. Cleared on the cover / references views.
+// "Figures" in the right rail: one link per figure or table caption in the
+// chapter ("Figure 9. The “what” of moderation"), like a list of figures.
+function buildFigureNav(slug) {
+  const nav  = document.getElementById("chapter-figures");
+  const list = document.getElementById("chapter-figures-list");
+  if (!nav || !list) return;
+  const host = document.getElementById("manuscript");
+  // Figure (and image-table) captions are paragraphs; markdown tables are
+  // folded into <details class="table-fold"> whose summary carries the caption.
+  // "Figure 9", "Figure 2a", and combined labels like "Figure 1a, 1b and 1c".
+  const NUM   = String.raw`\d+[a-z]?(?:\s*(?:,|and|&|–|-)\s*\d*[a-z]?)*`;
+  const LABEL = new RegExp(String.raw`^\s*((?:Figure|Table)\s+${NUM})\s*[.:·]?\s*(.*)$`, "i");
+  const IS_CAP = new RegExp(String.raw`^\s*(?:Figure|Table)\s+${NUM}\s*[.:]`, "i");
+  const caps = slug && host
+    ? [...host.querySelectorAll("p, details.table-fold")].filter(el =>
+        el.tagName === "DETAILS"
+          ? /^\s*Table\s+\d+/i.test(el.querySelector("summary .lbl")?.textContent || "")
+          : IS_CAP.test(el.textContent || ""))
+    : [];
+  if (!caps.length) { nav.hidden = true; list.innerHTML = ""; return; }
+  list.innerHTML = caps.map((p, i) => {
+    if (!p.id) p.id = `rr-fig-${i + 1}`;
+    const isFold = p.tagName === "DETAILS";
+    const text  = (isFold
+      ? `${p.querySelector("summary .lbl")?.textContent || ""} ${p.querySelector("summary .meta")?.textContent || ""}`
+      : p.textContent || "").replace(/\s+/g, " ").trim();
+    const m     = text.match(LABEL);
+    const label = m ? m[1] : text;
+    // The short title is the italic description, cut at its first sentence.
+    const em    = isFold ? null : p.querySelector("em");
+    let title   = (em ? em.textContent : (m ? m[2] : "")).replace(/\s+/g, " ").trim();
+    title = title.replace(/^·\s*/, "").replace(/\s*·\s*\d[\d,]*\s+rows?\s*$/i, "");
+    title = title.replace(/\s+(Full image|Source)\b.*$/i, "")
+                 .split(/(?<=[.?!])\s/)[0].replace(/[.:;,\s]+$/, "");
+    if (title.length > 70) title = title.slice(0, 68).replace(/\s+\S*$/, "") + "…";
+    return `<li><a href="#${p.id}" data-fig-cap="${p.id}">` +
+      `<span class="rf-num">${escapeHtml(label)}.</span> ${escapeHtml(title)}</a></li>`;
+  }).join("");
+  nav.hidden = false;
+}
+
+document.addEventListener("click", e => {
+  const a = e.target.closest && e.target.closest("#chapter-figures-list a[data-fig-cap]");
+  if (!a) return;
+  const id = a.dataset.figCap;
+  const el = [...document.querySelectorAll("#" + CSS.escape(id))]
+    .find(n => n.getClientRects().length > 0);
+  if (!el) return;
+  e.preventDefault();
+  // Land on the figure, which sits just above its caption. Jump rather than
+  // glide: a smooth scroll across a long chapter is cut short as figures
+  // above re-lay out, so re-assert the position once they have settled.
+  const go = () => anchorScrollTarget(el).scrollIntoView({ block: "start" });
+  go();
+  [300, 900].forEach(ms => setTimeout(go, ms));
+  if (typeof _routeSlug === "string" && _routeSlug) {
+    history.replaceState(null, "", `#/${_routeSlug}#${id}`);
+  }
+});
+
 function buildChapterNav(slug, headings, title) {
+  buildFigureNav(slug);
   const nav  = document.getElementById("chapter-nav");
   const list = document.getElementById("chapter-nav-list");
   if (!nav || !list) return;
@@ -4419,6 +4514,7 @@ const FIG_FILTER_MAP = {
     view:        { sel: "#fig-beeswarm-topics .seg", kind: "tab", attr: "data-mode" },
     y0:          { sel: "#bt-y0",              kind: "input" },
     y1:          { sel: "#bt-y1",              kind: "input" },
+    extremes:    { kind: "data", attr: "extremes" },
   },
   "fig-beeswarm-cm": {
     subtopic:    { sel: "#bee-cm-select",         kind: "select" },
@@ -4432,6 +4528,7 @@ const FIG_FILTER_MAP = {
     view:        { sel: "#fig-beeswarm-cm .seg",  kind: "tab", attr: "data-mode" },
     y0:          { sel: "#bc-y0",                 kind: "input" },
     y1:          { sel: "#bc-y1",                 kind: "input" },
+    extremes:    { kind: "data", attr: "extremes" },
   },
   "fig-media": {
     scope: { sel: '#fig-media [aria-label="Universe"]', kind: "tab", attr: "data-scope" },
@@ -4489,6 +4586,19 @@ function _trySetSelect(el, v) {
   if (vD !== v) {
     for (const opt of el.options) if (opt.value === vD) { el.value = vD; return true; }
   }
+  // Several values joined with "|" ("Content moderation|Debate management"):
+  // when each one is an option, add the combination as an option of its own.
+  const parts = String(vD).split("|").map(x => x.trim()).filter(Boolean);
+  if (parts.length > 1) {
+    const vals = parts.map(part => [...el.options].find(o =>
+      o.value === part || o.value.toLowerCase() === part.toLowerCase())?.value);
+    if (vals.every(Boolean)) {
+      const joined = vals.join("|");
+      el.add(new Option(vals.join(" + "), joined));
+      el.value = joined;
+      return true;
+    }
+  }
   return false;
 }
 
@@ -4502,6 +4612,16 @@ function _applyOne(figId, params) {
   const missing = [];
   for (const [k, v] of Object.entries(params)) {
     const cfg = map[k]; if (!cfg) continue;
+    if (cfg.kind === "data") {
+      // A setting held on the figure itself (e.g. extremes=3); the renderer
+      // re-reads it on "fig-refresh".
+      if (!figEl) { missing.push(k); continue; }
+      if (figEl.dataset[cfg.attr] !== v) {
+        figEl.dataset[cfg.attr] = v;
+        figEl.dispatchEvent(new Event("fig-refresh"));
+      }
+      continue;
+    }
     const el = _resolveFilterEl(cfg, sfx, figEl);
     if (!el) { missing.push(k); continue; }
     if (cfg.kind === "tab") {
@@ -4644,6 +4764,35 @@ function buildFigureInstance(slug) {
   return { fig, sfx };
 }
 
+// The caption paragraph that follows a figure placeholder, if any. The
+// placeholder <img> usually sits in its own <p>; the caption is the next one.
+function followingCaption(outer) {
+  const block = (outer.parentElement && outer.parentElement.tagName === "P" &&
+                 outer.parentElement.children.length === 1)
+    ? outer.parentElement : outer;
+  const next = block.nextElementSibling;
+  return next && next.tagName === "P" && CAPTION_RE.test(next.textContent || "")
+    ? next : null;
+}
+
+// A caption link of the form "#/chapter-1?fig=<slug>&key=val…" (relative or
+// absolute) → its route, raw query, and the filter params for <slug>.
+function captionFigLink(capPara, slug) {
+  for (const a of capPara.querySelectorAll("a[href]")) {
+    let hash = "";
+    try { hash = new URL(a.getAttribute("href"), location.href).hash; } catch { continue; }
+    const i = hash.indexOf("?");
+    if (!hash.startsWith("#/") || i < 0) continue;
+    const q = new URLSearchParams(hash.slice(i + 1));
+    const fig = q.get("fig") || "";
+    if (fig !== slug && !fig.startsWith(slug + "-i")) continue;
+    const params = {};
+    q.forEach((v, k) => { if (k !== "fig") params[k] = v; });
+    return { a, route: hash.slice(2, i), query: hash.slice(i + 1), params };
+  }
+  return null;
+}
+
 function promoteInlineFigures() {
   const placeholders = document.querySelectorAll("img.inline-fig-placeholder");
   const seenCount = new Map();        // slug → how many we've placed so far
@@ -4686,6 +4835,14 @@ function promoteInlineFigures() {
       } catch { /* ignore malformed URLs */ }
     }
 
+    // The manuscript's own caption ("**Figure N.** *…* Full image here") is
+    // the paragraph right after the placeholder's. Its "here" link carries
+    // the figure's settings (topic, type, view, …) when the image itself is
+    // not wrapped in a link, which is how every chapter embeds its figures.
+    const capPara = followingCaption(outer);
+    const capLink = capPara ? captionFigLink(capPara, slug) : null;
+    if (!inheritedParams && capLink) inheritedParams = capLink.params;
+
     const n = (seenCount.get(slug) || 0) + 1;
     seenCount.set(slug, n);
     // Capture the caption the author wrote in the embed's alt text so
@@ -4722,7 +4879,21 @@ function promoteInlineFigures() {
         .catch(e => { console.error(e); });
     }
 
-    if (altText) overrideFigCaptionFromAlt(targetEl, altText);
+    if (capPara) {
+      // The caption below already names the figure; the card's own label at
+      // the top would print "Figure N." a second time, above the chart.
+      const cap = targetEl.querySelector(".fig-cap");
+      if (cap) cap.hidden = true;
+      // "Full image here" should land on THIS figure with its own settings,
+      // not on the first instance of the same chart elsewhere in the chapter.
+      if (capLink && targetId !== slug) {
+        const q = new URLSearchParams(capLink.query);
+        q.set("fig", targetId);
+        capLink.a.setAttribute("href", `#/${capLink.route}?${q.toString()}`);
+      }
+    } else if (altText) {
+      overrideFigCaptionFromAlt(targetEl, altText);
+    }
 
     if (inheritedParams && Object.keys(inheritedParams).length) {
       renderReady.then(() => {
