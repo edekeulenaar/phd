@@ -27,7 +27,7 @@ HOW,Blocking,360
 HOW,Deplatforming,334
 HOW,Metamoderation,234
 HOW,Disclosure,232
-HOW,Restricting access,229
+HOW,Restricting access,230
 HOW,Economic,189
 HOW,Correcting,182
 HOW,Rating,144
@@ -47,26 +47,10 @@ HOW,Intermediate,35
 HOW,Scheduling,29
 HOW,Bridging,28
 HOW,Licensing,27
+HOW,Other,20
 HOW,Fairness,15
 HOW,Inclusion,13
-HOW,Other,4
 HOW,Confiscation,3
-HOW,Restriction access,2
-HOW,Transparency,2
-HOW,Interoperability,2
-HOW,Documenting,1
-HOW,Algorithmic moderation systems,1
-HOW,Escalation,1
-HOW,Debate moderators,1
-HOW,Common carriage / neutral conduit,1
-HOW,Moderation as industrial labour,1
-HOW,Task delegation,1
-HOW,Restrictiong access,1
-HOW,Transparencyreport.google.com सरकार-278? nope,1
-HOW,Reporting,1
-HOW,Transparency in moderation/reporting,1
-HOW,Warning,1
-HOW,Mediators,1
 WHAT,Content moderation,985
 WHAT,Censorship,320
 WHAT,Media moderation,148
@@ -86,7 +70,7 @@ WHO,Regulators,164
 WHO,Platform oversight bodies,149
 WHO,"Public-private partnerships (""free-speech triangle"")",110
 WHO,Fact-checkers and verification units,98
-WHO,Other,80
+WHO,Other,82
 WHO,Civic advocacy & moral-pressure groups,66
 WHO,Editors,64
 WHO,Advertisers,55
@@ -115,8 +99,6 @@ WHO,Religious organisations,4
 WHO,News agencies / wire services,4
 WHO,Military censors,3
 WHO,Religious authorities,2
-WHO,Employers,1
-WHO,Ethical investors / shareholders,1
 WHY,Compliance,523
 WHY,Misinformation or disinformation as harm,499
 WHY,Brand safety,460
@@ -136,25 +118,13 @@ WHY,Obscenity and decency,58
 WHY,Alignment with human values,58
 WHY,Consumer protection / fair competition,42
 WHY,Ideological consolidation,41
+WHY,Other,41
 WHY,Clear and present danger,32
 WHY,Conflict transformation,26
-WHY,Other,26
 WHY,Genocide prevention / dangerous speech,20
 WHY,Religious moral authority,15
 WHY,Fairness,8
 WHY,Fair trial / administration of justice,7
 WHY,Wartime necessity,6
-WHY,Freedom of speech or information,5
 WHY,Coercive,4
 WHY,State secrets,3
-WHY,Public interest,3
-WHY,Censorship,2
-WHY,Community norms and identity,1
-WHY,Free expression,1
-WHY,Intelligibility,1
-WHY,Inclusion,1
-WHY,Moderating extremism (rationale),1
-WHY,Debate management,1
-WHY,Transparency,1
-WHY,Moderating extremism,1
-WHY,Freedom of expression,1

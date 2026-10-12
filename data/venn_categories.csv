@@ -1,19 +1,16 @@
 Type,Kind,Topic,Keyword,Count
-ALL,exclusive,Content moderation,Moderation as industrial labour,178
+ALL,exclusive,Content moderation,Moderation as industrial labour,177
 ALL,exclusive,Content moderation,App stores,29
 ALL,exclusive,Content moderation,AI labs as moderators,14
 ALL,exclusive,Content moderation,RLHF annotators,9
-ALL,exclusive,Content moderation,Freedom of speech or information,8
-ALL,exclusive,Content moderation,Transparency in moderation/reporting,5
 ALL,exclusive,Content moderation,Content moderation as industrial labour,4
-ALL,exclusive,Content moderation,Public interest,4
-ALL,exclusive,Content moderation,Transparency,3
 ALL,exclusive,Content moderation,Content moderation as censorship,3
+ALL,exclusive,Content moderation,internet rights constitutionalism,3
 ALL,exclusive,Censorship,Translators / localisers,74
 ALL,exclusive,Censorship,Flooding,10
 ALL,exclusive,Debate management,value jurisprudence critique,3
 ALL,pair,Content moderation + Censorship,Platform regulation,579
-ALL,pair,Content moderation + Censorship,Censorship,579
+ALL,pair,Content moderation + Censorship,Censorship,577
 ALL,pair,Content moderation + Censorship,Platform oversight bodies,209
 ALL,pair,Content moderation + Censorship,"Public-private partnerships (""free-speech triangle"")",162
 ALL,pair,Content moderation + Censorship,Consumer protection / fair competition,100
@@ -29,9 +26,9 @@ ALL,triple,Content moderation + Censorship + Debate management,Harm reduction / 
 ALL,triple,Content moderation + Censorship + Debate management,Redirection,159
 ALL,triple,Content moderation + Censorship + Debate management,Intermediate,157
 ALL,triple,Content moderation + Censorship + Debate management,Fact-checkers and verification units,141
-ALL,triple,Content moderation + Censorship + Debate management,Debate management,115
-ALL,triple,Content moderation + Censorship + Debate management,Mediators,84
-ALL,triple,Content moderation + Censorship + Debate management,Inclusion,60
+ALL,triple,Content moderation + Censorship + Debate management,Debate management,112
+ALL,triple,Content moderation + Censorship + Debate management,Mediators,81
+ALL,triple,Content moderation + Censorship + Debate management,Inclusion,54
 ALL,triple,Content moderation + Censorship + Debate management,Fair trial / administration of justice,40
 ALL,triple,Content moderation + Censorship + Media moderation,Platform governance,1647
 ALL,triple,Content moderation + Censorship + Media moderation,Economic pressure,376
@@ -39,8 +36,8 @@ ALL,triple,Content moderation + Censorship + Media moderation,Regulators,329
 ALL,triple,Content moderation + Censorship + Media moderation,Obfuscation,197
 ALL,triple,Content moderation + Censorship + Media moderation,Confiscation,160
 ALL,triple,Content moderation + Censorship + Media moderation,Wartime necessity,104
-ALL,triple,Content moderation + Censorship + Media moderation,Common carriage / neutral conduit,95
 ALL,triple,Content moderation + Censorship + Media moderation,Media owners,94
+ALL,triple,Content moderation + Censorship + Media moderation,Common carriage / neutral conduit,94
 ALL,triple,Content moderation + Censorship + Media moderation,Social responsibility / self-regulation,79
 ALL,triple,Content moderation + Censorship + Media moderation,Cloud / infrastructure providers,67
 ALL,triple,Content moderation + Censorship + Media regulation,Broadcasting regulators,69
@@ -114,7 +111,6 @@ WHO,center,(≥4 categories),Legislators,424
 WHO,center,(≥4 categories),Content moderators / BPO workforces,423
 WHO,center,(≥4 categories),Editors,392
 WHO,center,(≥4 categories),Censorship boards or agencies,341
-HOW,exclusive,Content moderation,Transparency in moderation/reporting,5
 HOW,exclusive,Censorship,Flooding,10
 HOW,pair,Content moderation + Debate management,Bridging,54
 HOW,triple,Content moderation + Censorship + Debate management,Redirection,159
@@ -132,10 +128,6 @@ HOW,center,(≥5 categories),Modification,953
 HOW,center,(≥5 categories),Profiling,855
 HOW,center,(≥5 categories),Labeling,823
 HOW,center,(≥5 categories),Self-censorship,765
-WHY,exclusive,Content moderation,Freedom of speech or information,8
-WHY,exclusive,Content moderation,Public interest,4
-WHY,exclusive,Content moderation,Free expression,3
-WHY,exclusive,Debate management,Inclusion,5
 WHY,pair,Content moderation + Censorship,Consumer protection / fair competition,100
 WHY,pair,Content moderation + Censorship,Alignment with human values,91
 WHY,pair,Content moderation + Censorship,Clear and present danger,52

@@ -278,6 +278,46 @@ def fix_spelling(v: str) -> str:
                         else "coercive", v)
 
 
+# WHO / HOW / WHY categories form a closed set (the Chapter 1 taxonomy). A few
+# findings came back from the coder with labels outside it: typos of a real
+# category, invented one-offs ("Employers"), and at least one corrupted value
+# ("Transparencyreport.google.com सरकार-278? nope"). Typos go to the category
+# they misspell; any other off-taxonomy label used by fewer than
+# RARE_LABEL_MAX findings becomes "Other", the coding rule's own fallback.
+# Recurring labels outside the file (Coercive, Fairness, Flooding, …) stay.
+# WHAT categories are left alone: they define the Topics.
+TAXONOMY_CSV  = data_path("Chapter 1 - Final results - Taxonomy.csv")
+RARE_LABEL_MAX = 10
+CATEGORY_FIX = {
+    ("HOW", "Restrictiong access"):  "Restricting access",
+    ("HOW", "Restriction access"):   "Restricting access",
+    ("WHY", "Obscenity and decença"): "Obscenity and decency",
+}
+
+
+def canon_categories(rows: list[dict]) -> list[dict]:
+    valid = set()
+    if TAXONOMY_CSV.exists():
+        for t in load_csv(TAXONOMY_CSV):
+            valid.add(((t.get("Type") or "").strip(), (t.get("Category") or "").strip()))
+    for r in rows:
+        k = ((r.get("Type") or "").strip(), (r.get("Category") or "").strip())
+        if k in CATEGORY_FIX:
+            r["Category"] = CATEGORY_FIX[k]
+    n = Counter(((r.get("Type") or "").strip(), (r.get("Category") or "").strip()) for r in rows)
+    changed = Counter()
+    for r in rows:
+        ty, cat = (r.get("Type") or "").strip(), (r.get("Category") or "").strip()
+        if (ty in ("WHO", "HOW", "WHY") and cat and not cat.startswith("Other")
+                and valid and (ty, cat) not in valid and n[(ty, cat)] < RARE_LABEL_MAX):
+            changed[(ty, cat)] += 1
+            r["Category"] = "Other"
+    if changed:
+        print(f"  off-taxonomy labels → Other: {sum(changed.values())} findings, "
+              f"{len(changed)} labels")
+    return rows
+
+
 def load_csv(path: Path) -> list[dict]:
     with open(path, newline="", encoding="utf-8") as f:
         return [{k: (fix_spelling(v) if isinstance(v, str) and "oersive" in v.lower()
@@ -658,7 +698,7 @@ def main() -> None:
         sys.exit(f"✗ {SRC} not found")
 
     print(f"Reading {SRC.name} …")
-    F = load_csv(SRC)
+    F = canon_categories(load_csv(SRC))
     print(f"  findings: {len(F):,} rows")
 
     # Sync every thesis source file → site/chapters/<slug>.md and emit toc.json.

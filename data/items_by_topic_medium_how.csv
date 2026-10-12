@@ -15,7 +15,7 @@ Content moderation,Social media platform,Deplatforming,306
 Content moderation,Video sharing platform,Enframing,276
 Content moderation,Video sharing platform,Monitoring,224
 Content moderation,Social media platform,Disclosure,222
-Content moderation,Social media platform,Restricting access,219
+Content moderation,Social media platform,Restricting access,220
 Censorship,Print media,Self-censorship,217
 Content moderation,Video sharing platform,Marginalisation,213
 Content moderation,Social media platform,Metamoderation,212
@@ -97,11 +97,11 @@ Content moderation,Social media platform,Prompting,65
 Censorship,Radio,Self-censorship,64
 Content moderation,AI,Removal,64
 Content moderation,Social media platform,Redirection,63
+Censorship,ISP,Restricting access,62
 Censorship,Television,Removal,62
 Content moderation,Platforms,Review,62
 Content moderation,Search engine,Economic,62
 Censorship,ISP,Monitoring,61
-Censorship,ISP,Restricting access,61
 Content moderation,Messaging platform,Disclosure,61
 Censorship,Radio,Filtering,60
 Censorship,Film,Economic,59
@@ -357,6 +357,7 @@ Censorship,Radio,Obfuscation,17
 Censorship,Television,Agenda setting,17
 Content moderation,ISP,Profiling,17
 Content moderation,News media,Review,17
+Content moderation,Social media platform,Other,17
 Debate management,Social media platform,Prompting,17
 Censorship,Performing arts,Confiscation,16
 Censorship,Search engine,Disclosure,16
@@ -474,6 +475,7 @@ Content moderation,Print media,Blocking,12
 Content moderation,Print media,Correcting,12
 Content moderation,Print media,Deplatforming,12
 Content moderation,Print media,Monitoring,12
+Content moderation,Video sharing platform,Other,12
 Debate management,Online fora,Prompting,12
 Debate management,Social media platform,Coherence,12
 Media moderation,Print media,Monitoring,12
@@ -690,6 +692,7 @@ Content moderation,Decentralized social media,Rating,7
 Content moderation,ISP,Removal from circulation,7
 Content moderation,Imageboard,Labeling,7
 Content moderation,Infrastructure,Deplatforming,7
+Content moderation,Messaging platform,Other,7
 Content moderation,News media,Modification,7
 Content moderation,News media,Profiling,7
 Content moderation,News media,Rating,7
@@ -697,6 +700,7 @@ Content moderation,Online learning platform,Enframing,7
 Content moderation,Print media,Economic,7
 Content moderation,Russian social media platform,Filtering,7
 Content moderation,Search engine,Agenda setting,7
+Content moderation,Search engine,Other,7
 Content moderation,Short video platform,Monitoring,7
 Content moderation,Television,Correcting,7
 Content moderation,Television,Monitoring,7
@@ -821,6 +825,7 @@ Censorship,Music,Deplatforming,5
 Censorship,Online fora,Deplatforming,5
 Censorship,Performing arts,Correcting,5
 Censorship,Platforms,Profiling,5
+Censorship,Print media,Other,5
 Censorship,Radio,Balancing,5
 Censorship,Radio,Redirection,5
 Censorship,Radio,Scheduling,5
@@ -840,6 +845,7 @@ Content moderation,Dating app,Review,5
 Content moderation,Decentralized social media,Disclosure,5
 Content moderation,Decentralized social media,Modification,5
 Content moderation,ISP,Coercive,5
+Content moderation,ISP,Other,5
 Content moderation,ISP,Rating,5
 Content moderation,Image sharing platform,Filtering,5
 Content moderation,Image sharing platform,Review,5
@@ -1255,6 +1261,7 @@ Censorship,Radio,Fairness,3
 Censorship,Radio,Metamoderation,3
 Censorship,Search engine,Scheduling,3
 Censorship,Social media platform,Balancing,3
+Censorship,Social media platform,Other,3
 Censorship,Social media platform,Prompting,3
 Censorship,Software,Filtering,3
 Censorship,Software,Monitoring,3
@@ -1263,6 +1270,7 @@ Censorship,Telephony,Filtering,3
 Censorship,Telephony,Removal,3
 Censorship,Telephony,Self-censorship,3
 Censorship,Television,Intermediate,3
+Censorship,Television,Other,3
 Censorship,VPN,Deplatforming,3
 Censorship,VPN,Profiling,3
 Censorship,Video game,Enframing,3
@@ -1414,7 +1422,6 @@ Content moderation,Search engine,Fairness,3
 Content moderation,Short video platform,Economic,3
 Content moderation,Short video platform,Self-censorship,3
 Content moderation,Social media platform,Confiscation,3
-Content moderation,Social media platform,Other,3
 Content moderation,Television,Intermediate,3
 Content moderation,Television,Metamoderation,3
 Content moderation,Television,Rating,3
@@ -1422,7 +1429,6 @@ Content moderation,Video game,Deplatforming,3
 Content moderation,Video game,Marginalisation,3
 Content moderation,Video game,Profiling,3
 Content moderation,Video game,Rating,3
-Content moderation,Video sharing platform,Other,3
 Content moderation,Video streaming platform,Monitoring,3
 Content moderation,Videoconferencing,Blocking,3
 Content moderation,Videoconferencing,Economic,3
@@ -1430,6 +1436,7 @@ Content moderation,Videoconferencing,Labeling,3
 Content moderation,Videoconferencing,Monitoring,3
 Content moderation,Videoconferencing,Profiling,3
 Content moderation,Wikis,Interiorisation,3
+Content moderation,Wikis,Other,3
 Content moderation,Wikis,Redirection,3
 Content moderation,Wikis,Scheduling,3
 Debate management,Deliberation platform,Removal,3
@@ -1605,6 +1612,7 @@ Censorship,Email,Redirection,2
 Censorship,File sharing / P2P,Filtering,2
 Censorship,File sharing / P2P,Restricting access,2
 Censorship,File sharing / P2P,Review,2
+Censorship,Film,Other,2
 Censorship,Government website,Enframing,2
 Censorship,Government website,Filtering,2
 Censorship,Government website,Inclusion,2
@@ -1699,7 +1707,6 @@ Censorship,Portal,Monitoring,2
 Censorship,Portal,Restricting access,2
 Censorship,Portal,Self-censorship,2
 Censorship,Postal mail,Review,2
-Censorship,Print media,Other,2
 Censorship,Radio,Intermediate,2
 Censorship,Russian social media platform,Blocking,2
 Censorship,Russian social media platform,Enframing,2
@@ -1709,7 +1716,6 @@ Censorship,Russian social media platform,Review,2
 Censorship,Social media platform,Coherence,2
 Censorship,Social media platform,Inclusion,2
 Censorship,Social media platform,Intelligibility,2
-Censorship,Social media platform,Other,2
 Censorship,Software,Profiling,2
 Censorship,Streaming services,Filtering,2
 Censorship,Streaming services,Removal,2
@@ -1768,6 +1774,7 @@ Content moderation,App store,Intermediate,2
 Content moderation,App store,Modification,2
 Content moderation,Blog,Coherence,2
 Content moderation,Blog,Economic,2
+Content moderation,Blog,Other,2
 Content moderation,Blog,Redirection,2
 Content moderation,Blog,Removal from circulation,2
 Content moderation,Cloud computing,Metamoderation,2
@@ -1806,6 +1813,7 @@ Content moderation,Deliberation platform,Modification,2
 Content moderation,Deliberation platform,Prompting,2
 Content moderation,Deliberation platform,Rating,2
 Content moderation,E-commerce,Fairness,2
+Content moderation,E-commerce,Other,2
 Content moderation,E-commerce,Scheduling,2
 Content moderation,Email,Blocking,2
 Content moderation,Email,Economic,2
@@ -1940,10 +1948,8 @@ Content moderation,Russian social media platform,Redirection,2
 Content moderation,Russian social media platform,Self-censorship,2
 Content moderation,Search engine,Inclusion,2
 Content moderation,Short video platform,Metamoderation,2
+Content moderation,Short video platform,Other,2
 Content moderation,Short video platform,Restricting access,2
-Content moderation,Social media platform,Interoperability,2
-Content moderation,Social media platform,Restriction access,2
-Content moderation,Social media platform,Transparency,2
 Content moderation,Telephony,Filtering,2
 Content moderation,Telephony,Profiling,2
 Content moderation,Telephony,Removal,2
@@ -1956,8 +1962,6 @@ Content moderation,Video game,Metamoderation,2
 Content moderation,Video game,Modification,2
 Content moderation,Video sharing platform,Confiscation,2
 Content moderation,Video sharing platform,Inclusion,2
-Content moderation,Video sharing platform,Interoperability,2
-Content moderation,Video sharing platform,Restriction access,2
 Content moderation,Video streaming platform,Correcting,2
 Content moderation,Video streaming platform,Deplatforming,2
 Content moderation,Video streaming platform,Labeling,2
@@ -1981,8 +1985,6 @@ Content moderation,Wikis,Balancing,2
 Content moderation,Wikis,Bridging,2
 Content moderation,Wikis,Coherence,2
 Content moderation,Wikis,Fairness,2
-Content moderation,Wikis,Other,2
-Content moderation,Wikis,Restriction access,2
 Debate management,AI,Balancing,2
 Debate management,AI,Enframing,2
 Debate management,AI,Prompting,2
@@ -2559,9 +2561,7 @@ Censorship,File sharing / P2P,Blocking,1
 Censorship,File sharing / P2P,Profiling,1
 Censorship,File sharing / P2P,Removal,1
 Censorship,Film,Coherence,1
-Censorship,Film,Debate management,1
 Censorship,Film,Inclusion,1
-Censorship,Film,Other,1
 Censorship,Government data,Coercive,1
 Censorship,Government data,Modification,1
 Censorship,Government data,Profiling,1
@@ -2574,9 +2574,8 @@ Censorship,Government website,Self-censorship,1
 Censorship,ISP,Coherence,1
 Censorship,ISP,Intermediate,1
 Censorship,ISP,Metamoderation,1
-Censorship,ISP,Political censorship,1
+Censorship,ISP,Other,1
 Censorship,ISP,Prompting,1
-Censorship,ISP,Restrictiong access,1
 Censorship,Image,Filtering,1
 Censorship,Image,Monitoring,1
 Censorship,Image,Restricting access,1
@@ -2613,7 +2612,7 @@ Censorship,Internet (general),Balancing,1
 Censorship,Internet (general),Correcting,1
 Censorship,Internet (general),Fairness,1
 Censorship,Internet (general),Intermediate,1
-Censorship,Internet (general),Protection of children,1
+Censorship,Internet (general),Other,1
 Censorship,Internet censorship infrastructure,Agenda setting,1
 Censorship,Internet censorship infrastructure,Blocking,1
 Censorship,Internet censorship infrastructure,Coercive,1
@@ -2785,10 +2784,7 @@ Censorship,Postal mail,Removal from circulation,1
 Censorship,Postal mail,Restricting access,1
 Censorship,Postal mail,Scheduling,1
 Censorship,Postal mail,Self-censorship,1
-Censorship,Print media,Debate management,1
 Censorship,Print media,Flooding,1
-Censorship,Print media,Protection of children,1
-Censorship,Print media,Replacement,1
 Censorship,Protocol,Correcting,1
 Censorship,Protocol,Deplatforming,1
 Censorship,Protocol,Labeling,1
@@ -2808,7 +2804,7 @@ Censorship,Q&A platform,Removal,1
 Censorship,Q&A platform,Review,1
 Censorship,Q&A platform,Self-censorship,1
 Censorship,Radio,Coherence,1
-Censorship,Radio,Replacement,1
+Censorship,Radio,Other,1
 Censorship,Russian social media platform,Profiling,1
 Censorship,Russian social media platform,Redirection,1
 Censorship,Russian social media platform,Removal,1
@@ -2839,7 +2835,6 @@ Censorship,Short video platform,Self-censorship,1
 Censorship,Social media platform,Bridging,1
 Censorship,Social media platform,Flooding,1
 Censorship,Social media platform,Intermediate,1
-Censorship,Social media platform,Political censorship,1
 Censorship,Software,Deplatforming,1
 Censorship,Software,Modification,1
 Censorship,Streaming services,Blocking,1
@@ -2863,9 +2858,6 @@ Censorship,Telephony,Economic,1
 Censorship,Telephony,Interiorisation,1
 Censorship,Telephony,Obfuscation,1
 Censorship,Television,Coherence,1
-Censorship,Television,Other,1
-Censorship,Television,Protection of children,1
-Censorship,Television,Replacement,1
 Censorship,VPN,Agenda setting,1
 Censorship,VPN,Coercive,1
 Censorship,VPN,Labeling,1
@@ -2930,8 +2922,8 @@ Censorship,Wikis,Flooding,1
 Censorship,Wikis,Interiorisation,1
 Censorship,Wikis,Scheduling,1
 Content moderation,AI,Coercive,1
-Content moderation,AI,Interoperability,1
 Content moderation,AI,Licensing,1
+Content moderation,AI,Other,1
 Content moderation,AI,Removal from circulation,1
 Content moderation,AI,Scheduling,1
 Content moderation,Academic publications,Deplatforming,1
@@ -2969,8 +2961,8 @@ Content moderation,Alt-tech,Fairness,1
 Content moderation,Alt-tech,Inclusion,1
 Content moderation,Alt-tech,Intermediate,1
 Content moderation,Alt-tech,Licensing,1
+Content moderation,Alt-tech,Other,1
 Content moderation,Alt-tech,Prompting,1
-Content moderation,Alt-tech,Reporting,1
 Content moderation,Alternative news media,Correcting,1
 Content moderation,Alternative news media,Disclosure,1
 Content moderation,Alternative news media,Enframing,1
@@ -2986,15 +2978,13 @@ Content moderation,App store,Bridging,1
 Content moderation,App store,Coherence,1
 Content moderation,App store,Interiorisation,1
 Content moderation,App store,Licensing,1
+Content moderation,App store,Other,1
 Content moderation,App store,Prompting,1
-Content moderation,App store,Transparency in moderation/reporting,1
 Content moderation,Blog,Agenda setting,1
 Content moderation,Blog,Coercive,1
-Content moderation,Blog,Escalation,1
 Content moderation,Blog,Inclusion,1
 Content moderation,Blog,Intelligibility,1
 Content moderation,Blog,Licensing,1
-Content moderation,Blog,Other,1
 Content moderation,Blog,Prompting,1
 Content moderation,Book social network,Coherence,1
 Content moderation,Book social network,Enframing,1
@@ -3027,11 +3017,11 @@ Content moderation,Code repository,Bridging,1
 Content moderation,Code repository,Deplatforming,1
 Content moderation,Code repository,Disclosure,1
 Content moderation,Code repository,Economic,1
-Content moderation,Code repository,Escalation,1
 Content moderation,Code repository,Labeling,1
 Content moderation,Code repository,Metamoderation,1
 Content moderation,Code repository,Modification,1
 Content moderation,Code repository,Obfuscation,1
+Content moderation,Code repository,Other,1
 Content moderation,Code repository,Profiling,1
 Content moderation,Code repository,Redirection,1
 Content moderation,Code repository,Removal from circulation,1
@@ -3090,13 +3080,13 @@ Content moderation,Dark web,Profiling,1
 Content moderation,Dark web,Removal,1
 Content moderation,Dark web,Review,1
 Content moderation,Dating app,Correcting,1
-Content moderation,Dating app,Escalation,1
+Content moderation,Dating app,Other,1
 Content moderation,Dating app,Profiling,1
 Content moderation,Decentralized social media,Coercive,1
 Content moderation,Decentralized social media,Interiorisation,1
-Content moderation,Decentralized social media,Interoperability,1
 Content moderation,Decentralized social media,Licensing,1
 Content moderation,Decentralized social media,Obfuscation,1
+Content moderation,Decentralized social media,Other,1
 Content moderation,Decentralized social media,Redirection,1
 Content moderation,Decentralized social media,Removal from circulation,1
 Content moderation,Deliberation platform,Balancing,1
@@ -3110,10 +3100,8 @@ Content moderation,Deliberation platform,Removal,1
 Content moderation,Deliberation platform,Review,1
 Content moderation,E-commerce,Bridging,1
 Content moderation,E-commerce,Coercive,1
-Content moderation,E-commerce,Escalation,1
 Content moderation,E-commerce,Interiorisation,1
 Content moderation,E-commerce,Intermediate,1
-Content moderation,E-commerce,Interoperability,1
 Content moderation,E-commerce,Modification,1
 Content moderation,E-commerce,Obfuscation,1
 Content moderation,E-commerce,Prompting,1
@@ -3167,14 +3155,8 @@ Content moderation,Gaming platform,Monitoring,1
 Content moderation,Government website,Marginalisation,1
 Content moderation,Government website,Removal,1
 Content moderation,ISP,Agenda setting,1
-Content moderation,ISP,Escalation,1
 Content moderation,ISP,Intermediate,1
-Content moderation,ISP,Interoperability,1
 Content moderation,ISP,Licensing,1
-Content moderation,ISP,Other,1
-Content moderation,ISP,Reporting,1
-Content moderation,ISP,Restriction access,1
-Content moderation,ISP,Transparency in moderation/reporting,1
 Content moderation,Image,Blocking,1
 Content moderation,Image,Enframing,1
 Content moderation,Image,Filtering,1
@@ -3197,9 +3179,9 @@ Content moderation,Imageboard,Coercive,1
 Content moderation,Imageboard,Intermediate,1
 Content moderation,Imageboard,Scheduling,1
 Content moderation,Infrastructure,Coercive,1
-Content moderation,Infrastructure,Escalation,1
 Content moderation,Infrastructure,Licensing,1
 Content moderation,Infrastructure,Metamoderation,1
+Content moderation,Infrastructure,Other,1
 Content moderation,Infrastructure,Prompting,1
 Content moderation,Infrastructure,Scheduling,1
 Content moderation,Internet (general),Intelligibility,1
@@ -3210,11 +3192,11 @@ Content moderation,Internet (general),Self-censorship,1
 Content moderation,Live streaming,Blocking,1
 Content moderation,Live streaming,Deplatforming,1
 Content moderation,Live streaming,Disclosure,1
-Content moderation,Live streaming,Documenting,1
 Content moderation,Live streaming,Enframing,1
 Content moderation,Live streaming,Labeling,1
 Content moderation,Live streaming,Metamoderation,1
 Content moderation,Live streaming,Monitoring,1
+Content moderation,Live streaming,Other,1
 Content moderation,Live streaming,Profiling,1
 Content moderation,MMoRPG,Agenda setting,1
 Content moderation,MMoRPG,Blocking,1
@@ -3245,14 +3227,6 @@ Content moderation,Marketplace,Coercive,1
 Content moderation,Marketplace,Confiscation,1
 Content moderation,Marketplace,Interiorisation,1
 Content moderation,Marketplace,Removal from circulation,1
-Content moderation,Marketplace,Restriction access,1
-Content moderation,Messaging platform,Algorithmic moderation systems,1
-Content moderation,Messaging platform,Interoperability,1
-Content moderation,Messaging platform,Other,1
-Content moderation,Messaging platform,Reporting,1
-Content moderation,Messaging platform,Task delegation,1
-Content moderation,Messaging platform,Transparency,1
-Content moderation,Messaging platform,Transparency in moderation/reporting,1
 Content moderation,Metaverse,Deplatforming,1
 Content moderation,Metaverse,Interiorisation,1
 Content moderation,Metaverse,Modification,1
@@ -3305,7 +3279,6 @@ Content moderation,Online community,Prompting,1
 Content moderation,Online fora,Agenda setting,1
 Content moderation,Online fora,Correcting,1
 Content moderation,Online fora,Interiorisation,1
-Content moderation,Online fora,Restriction access,1
 Content moderation,Online fora,Scheduling,1
 Content moderation,Online learning platform,Agenda setting,1
 Content moderation,Online learning platform,Balancing,1
@@ -3345,8 +3318,8 @@ Content moderation,Platforms,Agenda setting,1
 Content moderation,Platforms,Fairness,1
 Content moderation,Platforms,Inclusion,1
 Content moderation,Platforms,Intelligibility,1
-Content moderation,Platforms,Mediators,1
 Content moderation,Platforms,Obfuscation,1
+Content moderation,Platforms,Other,1
 Content moderation,Pornography,Deplatforming,1
 Content moderation,Pornography,Labeling,1
 Content moderation,Pornography,Marginalisation,1
@@ -3414,32 +3387,11 @@ Content moderation,Russian social media platform,Intermediate,1
 Content moderation,Russian social media platform,Modification,1
 Content moderation,Russian social media platform,Rating,1
 Content moderation,Russian social media platform,Restricting access,1
-Content moderation,Search engine,Common carriage / neutral conduit,1
-Content moderation,Search engine,Escalation,1
-Content moderation,Search engine,Interoperability,1
-Content moderation,Search engine,Other,1
-Content moderation,Search engine,Reporting,1
-Content moderation,Search engine,Restriction access,1
-Content moderation,Search engine,Transparency,1
-Content moderation,Search engine,Transparency in moderation/reporting,1
-Content moderation,Short video platform,Escalation,1
 Content moderation,Short video platform,Interiorisation,1
 Content moderation,Short video platform,Obfuscation,1
-Content moderation,Short video platform,Other,1
 Content moderation,Short video platform,Prompting,1
 Content moderation,Short video platform,Redirection,1
 Content moderation,Short video platform,Removal from circulation,1
-Content moderation,Social media platform,Common carriage / neutral conduit,1
-Content moderation,Social media platform,Debate moderators,1
-Content moderation,Social media platform,Documenting,1
-Content moderation,Social media platform,Escalation,1
-Content moderation,Social media platform,Mediators,1
-Content moderation,Social media platform,Moderation as industrial labour,1
-Content moderation,Social media platform,Reporting,1
-Content moderation,Social media platform,Restrictiong access,1
-Content moderation,Social media platform,Transparency in moderation/reporting,1
-Content moderation,Social media platform,Transparencyreport.google.com सरकार-278? nope,1
-Content moderation,Social media platform,Warning,1
 Content moderation,Software,Blocking,1
 Content moderation,Software,Correcting,1
 Content moderation,Software,Disclosure,1
@@ -3489,15 +3441,8 @@ Content moderation,Video game,Balancing,1
 Content moderation,Video game,Intelligibility,1
 Content moderation,Video game,Interiorisation,1
 Content moderation,Video game,Intermediate,1
+Content moderation,Video game,Other,1
 Content moderation,Video game,Redirection,1
-Content moderation,Video game,Task delegation,1
-Content moderation,Video sharing platform,Debate moderators,1
-Content moderation,Video sharing platform,Escalation,1
-Content moderation,Video sharing platform,Mediators,1
-Content moderation,Video sharing platform,Moderation as industrial labour,1
-Content moderation,Video sharing platform,Reporting,1
-Content moderation,Video sharing platform,Transparency in moderation/reporting,1
-Content moderation,Video sharing platform,Transparencyreport.google.com सरकार-278? nope,1
 Content moderation,Video streaming platform,Coercive,1
 Content moderation,Video streaming platform,Disclosure,1
 Content moderation,Video streaming platform,Economic,1
@@ -3543,7 +3488,6 @@ Content moderation,Web hosting,Review,1
 Content moderation,Web3,Filtering,1
 Content moderation,Web3,Metamoderation,1
 Content moderation,Wikis,Agenda setting,1
-Content moderation,Wikis,Escalation,1
 Content moderation,Wikis,Inclusion,1
 Debate management,AI,Coherence,1
 Debate management,AI,Filtering,1
@@ -3625,7 +3569,7 @@ Debate management,Online fora,Deplatforming,1
 Debate management,Online fora,Fairness,1
 Debate management,Online fora,Metamoderation,1
 Debate management,Online fora,Modification,1
-Debate management,Online fora,Restriction access,1
+Debate management,Online fora,Restricting access,1
 Debate management,Online learning platform,Agenda setting,1
 Debate management,Online learning platform,Bridging,1
 Debate management,Online learning platform,Correcting,1

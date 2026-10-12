@@ -1943,20 +1943,31 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
 
   const figEl = figId ? document.getElementById(figId) : null;
 
-  // Keep only the N most and N least populated lanes (by number of findings)
-  // when the figure's link asks for it with "&extremes=N". The reader can
-  // switch back to every lane from the note above the chart.
-  function limitToExtremes(data) {
-    const n = figEl ? parseInt(figEl.dataset.extremes || "", 10) : 0;
-    if (!n || figEl.dataset.extremesOff === "1") return { data, note: null, n };
+  // Lanes shown by default: the 10 most populated (by number of findings).
+  // A figure link may ask instead for the N most and N least populated with
+  // "&extremes=N". "Other…" lanes are the coding fallback, not categories, so
+  // they never take a place in either selection. The reader can switch to
+  // every lane from the note above the chart.
+  const TOP_LANES = 10;
+  function limitLanes(data) {
+    const ext = figEl ? parseInt(figEl.dataset.extremes || "", 10) : 0;
     const cnt = d3.rollup(data, v => v.length, r => r[gfield()] || "(uncategorized)");
-    const ranked = [...cnt.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-    if (ranked.length <= 2 * n) return { data, note: null, n };
-    const keep = new Set([...ranked.slice(0, n), ...ranked.slice(-n)].map(e => e[0]));
+    const total = cnt.size;
+    const ranked = [...cnt.entries()]
+      .filter(([g]) => !/^Other\b/i.test(g) && g !== "(uncategorized)")
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const limit = ext ? 2 * ext : TOP_LANES;
+    if (total <= limit || ranked.length <= limit) return { data, note: null, limited: false };
+    const pick = ext ? [...ranked.slice(0, ext), ...ranked.slice(-ext)] : ranked.slice(0, TOP_LANES);
+    const keep = new Set(pick.map(e => e[0]));
+    if (figEl && figEl.dataset.extremesOff === "1") {
+      return { data, note: "Showing all " + total + " categories.", limited: false, ext };
+    }
     return {
       data: data.filter(r => keep.has(r[gfield()] || "(uncategorized)")),
-      note: `Showing the ${n} most and ${n} least populated of ${ranked.length} categories.`,
-      n,
+      note: ext ? `Showing the ${ext} most and ${ext} least populated of ${total} categories.`
+                : `Showing the ${TOP_LANES} most populated of ${total} categories.`,
+      limited: true, ext,
     };
   }
 
@@ -1967,14 +1978,16 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       host.append("div").attr("class", "placeholder").text("No findings for this selection.");
       return;
     }
-    const { data, note, n } = limitToExtremes(full);
-    if (note || (n && figEl.dataset.extremesOff === "1")) {
+    const { data, note, limited, ext } = limitLanes(full);
+    if (note && figEl) {
       const bar = host.append("div").attr("class", "bee-extremes-note");
-      bar.append("span").text(note || "Showing all categories.");
+      bar.append("span").text(note);
       bar.append("button").attr("type", "button")
-        .text(note ? "Show all categories" : `Show only the ${n} most and ${n} least populated`)
+        .text(limited ? "Show all categories"
+                      : ext ? `Show only the ${ext} most and ${ext} least populated`
+                            : `Show only the ${TOP_LANES} most populated`)
         .on("click", () => {
-          figEl.dataset.extremesOff = note ? "1" : "0";
+          figEl.dataset.extremesOff = limited ? "1" : "0";
           render();
         });
     }
@@ -4650,6 +4663,27 @@ function _applyOne(figId, params) {
   return { allOk: missing.length === 0, missing };
 }
 
+// Do a figure's select / input controls still hold the values in `params`?
+function _paramsHold(figId, params) {
+  const m = /-i\d+$/.exec(figId);
+  const baseId = m ? figId.slice(0, m.index) : figId;
+  const sfx    = m ? m[0] : "";
+  const map    = FIG_FILTER_MAP[baseId];
+  if (!map) return true;
+  const figEl = document.getElementById(figId);
+  for (const [k, v] of Object.entries(params)) {
+    const cfg = map[k];
+    if (!cfg || (cfg.kind !== "select" && cfg.kind !== "input")) continue;
+    const el = _resolveFilterEl(cfg, sfx, figEl);
+    if (!el) return false;
+    let want = String(v); try { want = decodeURIComponent(want); } catch {}
+    const have = String(el.value);
+    if (have !== want && have.toLowerCase() !== want.toLowerCase() &&
+        have !== want.split("|").map(x => x.trim()).join("|")) return false;
+  }
+  return true;
+}
+
 async function applyFigureFilters(figId, params) {
   if (!params || !Object.keys(params).length) return;
   // Run several apply passes spread out over ~3 seconds. Each pass tries to
@@ -4660,7 +4694,16 @@ async function applyFigureFilters(figId, params) {
   for (const ms of delays) {
     if (ms) await new Promise(r => setTimeout(r, ms));
     const { allOk, missing } = _applyOne(figId, params);
-    if (allOk) return;
+    if (allOk) {
+      // A figure still finishing its first render can reset a control after
+      // it was set (seen on Chapter 1 when eight beeswarms spawn at once).
+      // Check twice more and re-apply anything that no longer holds.
+      for (const wait of [1200, 3000]) {
+        await new Promise(r => setTimeout(r, wait));
+        if (!_paramsHold(figId, params)) _applyOne(figId, params);
+      }
+      return;
+    }
     // Diagnostic: surface what we couldn't bind so a quick console glance
     // explains a stuck filter. Throttled so it doesn't flood.
     if (ms >= 800) {

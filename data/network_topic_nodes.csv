@@ -16,8 +16,8 @@ HOW,Profiling,629
 HOW,Labeling,529
 HOW,Deplatforming,505
 HOW,Marginalisation,484
+HOW,Restricting access,450
 HOW,Modification,449
-HOW,Restricting access,447
 HOW,Self-censorship,439
 HOW,Economic,386
 HOW,Disclosure,314
@@ -41,28 +41,8 @@ HOW,Intermediate,70
 HOW,Bridging,44
 HOW,Inclusion,43
 HOW,Fairness,36
-HOW,Other,8
-HOW,Restriction access,3
-HOW,Debate management,2
-HOW,Mediators,2
-HOW,Restrictiong access,2
-HOW,Transparency,2
-HOW,Interoperability,2
-HOW,Documenting,1
+HOW,Other,30
 HOW,Flooding,1
-HOW,Algorithmic moderation systems,1
-HOW,Protection of children,1
-HOW,Escalation,1
-HOW,Debate moderators,1
-HOW,Common carriage / neutral conduit,1
-HOW,Moderation as industrial labour,1
-HOW,Task delegation,1
-HOW,Replacement,1
-HOW,Transparencyreport.google.com सरकार-278? nope,1
-HOW,Reporting,1
-HOW,Political censorship,1
-HOW,Transparency in moderation/reporting,1
-HOW,Warning,1
 WHAT,Content moderation,1173
 WHAT,Censorship,1065
 WHAT,Media moderation,273
@@ -81,7 +61,7 @@ WHO,Content moderators / BPO workforces,352
 WHO,Legislators,303
 WHO,"Schools, curricula, librarians, academia",263
 WHO,Editors,245
-WHO,Other,239
+WHO,Other,245
 WHO,Regulators,210
 WHO,Police / intelligence services,190
 WHO,Civic advocacy & moral-pressure groups,178
@@ -113,11 +93,6 @@ WHO,News agencies / wire services,16
 WHO,RLHF annotators,15
 WHO,Press councils & ombudsmen,15
 WHO,Payment processors / financial infrastructure,9
-WHO,ISPs,2
-WHO,Publishers,1
-WHO,Employers,1
-WHO,Ethical investors / shareholders,1
-WHO,Human rights bodies (NGOs / WHO),1
 WHY,Compliance,712
 WHY,Political control,706
 WHY,Social cohesion,668
@@ -137,8 +112,8 @@ WHY,Religious moral authority,159
 WHY,Harm reduction / public health,152
 WHY,Democratic self-defence,112
 WHY,Alignment with human values,91
+WHY,Other,89
 WHY,Conflict transformation,82
-WHY,Other,68
 WHY,Consumer protection / fair competition,66
 WHY,Wartime necessity,56
 WHY,Clear and present danger,43
@@ -147,16 +122,3 @@ WHY,Genocide prevention / dangerous speech,28
 WHY,Fair trial / administration of justice,24
 WHY,Fairness,14
 WHY,Coercive,8
-WHY,Inclusion,6
-WHY,Freedom of speech or information,5
-WHY,Public interest,3
-WHY,Censorship,2
-WHY,Moderating extremism,2
-WHY,Freedom of expression,2
-WHY,Obscenity and decença,1
-WHY,Community norms and identity,1
-WHY,Free expression,1
-WHY,Intelligibility,1
-WHY,Moderating extremism (rationale),1
-WHY,Debate management,1
-WHY,Transparency,1
