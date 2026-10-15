@@ -1726,11 +1726,12 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       (lg === "ALL" || (r.Language || "und") === lg) &&
       (md === "ALL" || inMultiCol(r, "Media categories", md)) &&
       (cn === "ALL" || inMultiCol(r, "Countries", cn)) &&
+      +r["Publication Year"] > 0 &&           // undated items cannot be placed on the time axis
       inRange(r, lo, hi) &&
       matchesQuery(r, tokens));
   }
 
-  let mode = "beeswarm";   // Beeswarm first; Matrix is the second tab.
+  let mode = "beeswarm";   // Beeswarm first; Trend is the second tab.
 
   /** Sort the Category (or Sub-topic) labels per the dropdown. */
   function sortGroups(groups, data) {
@@ -1860,85 +1861,107 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     });
   }
 
-  function gantt(data) {
-    const color  = topDisciplines(data);
+  /** Publications per year in the current selection, before the Type and
+   *  Sub-category filters: the denominator of the Trend view. */
+  function baseKeysByYear() {
+    const ps = primaryValues();
+    const lg = selL ? selL.value : "ALL";
+    const md = selM ? selM.value : "ALL";
+    const cn = selC ? selC.value : "ALL";
+    const [lo, hi] = getYears();
+    const by = new Map();
+    all.forEach(r => {
+      if (ps && !ps.includes(r[controls.primaryField])) return;
+      if (lg !== "ALL" && (r.Language || "und") !== lg) return;
+      if (md !== "ALL" && !inMultiCol(r, "Media categories", md)) return;
+      if (cn !== "ALL" && !inMultiCol(r, "Countries", cn)) return;
+      if (!inRange(r, lo, hi)) return;
+      const y = +r["Publication Year"];
+      if (!y) return;
+      if (!by.has(y)) by.set(y, new Set());
+      by.get(y).add(r.Key);
+    });
+    return by;
+  }
+
+  /** Trend view: one area per lane — the share of the selection's
+   *  publications that mention the category, by year (centred three-year
+   *  window; years whose window holds fewer than TREND_MIN publications are
+   *  left out). Lanes follow the same order as the beeswarm. */
+  const TREND_MIN = 10;
+  function trend(data) {
     const groups = sortGroups([...new Set(data.map(r => r[gfield()] || "(uncategorized)"))], data);
-    const [y0, y1] = d3.extent(data, r => +r["Publication Year"]);
+    const base = baseKeysByYear();
+    const yearsAll = [...base.keys()].sort((a, b) => a - b);
+    if (!yearsAll.length) return;
+    const [y0, y1] = d3.extent(yearsAll);
     const years = d3.range(y0, y1 + 1);
-    const cells = d3.rollups(data,
-      v => {
-        const byD = d3.rollup(v, vv => vv.length, vv => vv.Discipline || "(unspecified)");
-        const dom = [...byD.entries()].sort((a, b) => b[1] - a[1])[0][0];
-        return { n: v.length, disc: dom };
-      },
-      r => r[gfield()] || "(uncategorized)",
-      r => +r["Publication Year"]);
+    const win = y => [y - 1, y, y + 1];
+    const denom = new Map(years.map(y => {
+      const ks = new Set();
+      win(y).forEach(w => (base.get(w) || []).forEach(k => ks.add(k)));
+      return [y, ks.size];
+    }));
+    const keysBy = d3.rollup(data, v => new Set(v.map(r => r.Key)),
+      r => r[gfield()] || "(uncategorized)", r => +r["Publication Year"]);
+    const series = groups.map(g => {
+      const m = keysBy.get(g) || new Map();
+      const pts = years.filter(y => denom.get(y) >= TREND_MIN).map(y => {
+        const ks = new Set();
+        win(y).forEach(w => (m.get(w) || []).forEach(k => ks.add(k)));
+        return { y, n: ks.size, N: denom.get(y), v: ks.size / denom.get(y) };
+      });
+      return { g, pts };
+    });
+    const maxV = d3.max(series, s => d3.max(s.pts, p => p.v)) || 0.01;
 
     const W = Math.max(720, host.node().clientWidth || 880);
-    const ROW_H = 24;
-    const H = Math.max(300, groups.length * ROW_H + 110);
-    const xb = d3.scaleBand().domain(years).range([320, W - 24]).padding(0.08);
-    const yb = d3.scaleBand().domain(groups).range([30, H - 50]).padding(0.08);
-    const maxN = d3.max(cells, c => d3.max(c[1], cc => cc[1].n)) || 1;
-    const rs = d3.scaleSqrt().domain([0, maxN])
-      .range([2, Math.min(xb.bandwidth(), yb.bandwidth()) / 2]);
+    const ROW_H = 60;
+    const H = groups.length * ROW_H + 80;
+    const x = d3.scaleLinear().domain([y0, y1]).range([320, W - 24]);
+    const yb = d3.scaleBand().domain(groups).range([24, H - 50]).paddingInner(0.18);
+    const yv = d3.scaleLinear().domain([0, maxV]).range([yb.bandwidth(), 0]).nice();
 
-    const svg = host.append("svg").attr("class", "chart")
+    const svg = host.append("svg").attr("class", "chart trend")
       .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
       .attr("width", "100%");
-    const xAxis = d3.scaleLinear().domain([y0, y1])
-      .range([xb(y0) + xb.bandwidth() / 2, xb(y1) + xb.bandwidth() / 2]);
     svg.append("g").attr("class", "axis")
       .attr("transform", `translate(0,${H - 30})`)
-      .call(d3.axisBottom(xAxis).tickFormat(d3.format("d")).ticks(10));
-    svg.append("g").attr("class", "y-labels")
-      .selectAll("text").data(groups).join("text")
-        .attr("x", 12).attr("y", g => yb(g) + yb.bandwidth() / 2).attr("dy", "0.32em")
-        .text(g => g.length > 44 ? g.slice(0, 42) + "…" : g)
-      .append("title").text(g => g);
-    const flat = [];
-    cells.forEach(([cat, yrs]) => yrs.forEach(([yr, info]) => flat.push({ cat, yr, ...info })));
-    const cellsSel = svg.append("g").selectAll("circle").data(flat).join("circle")
-      .attr("cx", d => xb(d.yr) + xb.bandwidth() / 2)
-      .attr("cy", d => yb(d.cat) + yb.bandwidth() / 2)
-      .attr("r", d => rs(d.n))
-      .attr("fill", d => color(d.disc))
-      .attr("opacity", 0.86)
-      .on("mouseenter", function (e, d) {
+      .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
+    svg.append("text").attr("class", "trend-note").attr("x", 320).attr("y", 14)
+      .text(`% of publications mentioning each category · 3-year window · ` +
+            `common scale 0–${d3.format(".0%")(yv.domain()[1])}`);
+    const area = d3.area().x(p => x(p.y)).y0(yb.bandwidth()).y1(p => yv(p.v)).curve(d3.curveMonotoneX);
+    const line = d3.line().x(p => x(p.y)).y(p => yv(p.v)).curve(d3.curveMonotoneX);
+    const lanes = svg.append("g").selectAll("g").data(series).join("g")
+      .attr("transform", s => `translate(0,${yb(s.g)})`);
+    lanes.append("line").attr("class", "trend-base")
+      .attr("x1", 320).attr("x2", W - 24).attr("y1", yb.bandwidth()).attr("y2", yb.bandwidth());
+    lanes.append("text").attr("class", "trend-label").attr("x", 12).attr("y", yb.bandwidth() - 4)
+      .text(s => s.g.length > 44 ? s.g.slice(0, 42) + "…" : s.g)
+      .append("title").text(s => s.g);
+    lanes.append("path").attr("class", "trend-area").attr("d", s => area(s.pts));
+    lanes.append("path").attr("class", "trend-line").attr("d", s => line(s.pts));
+    const bisect = d3.bisector(p => p.y).center;
+    const focus = svg.append("line").attr("class", "trend-focus")
+      .attr("y1", 24).attr("y2", H - 50).style("display", "none");
+    svg.append("rect").attr("x", 320).attr("y", 24).attr("width", W - 344).attr("height", H - 74)
+      .attr("fill", "transparent")
+      .on("mousemove", function (e) {
+        const [mx, my] = d3.pointer(e, this);
+        const yr = Math.round(x.invert(mx));
+        const lane = groups.find(g => my >= yb(g) && my <= yb(g) + yb.bandwidth() + yb.step() * 0.18);
+        focus.style("display", null).attr("x1", x(yr)).attr("x2", x(yr));
+        const s = series.find(z => z.g === lane);
+        if (!s || !s.pts.length) { dataCard.hide(); return; }
+        const p = s.pts[bisect(s.pts, yr)];
         dataCard.show(`
-          <div class="dc-t">${escapeHtml(d.cat)} · ${d.yr}</div>
-          <div class="dc-row"><span>Mentions</span>${d.n}</div>
-          <div class="dc-row"><span>Dominant Discipline</span>${escapeHtml(d.disc)}</div>`, e);
+          <div class="dc-t">${escapeHtml(s.g)} · ${p.y - 1}–${p.y + 1}</div>
+          <div class="dc-row"><span>Share</span>${d3.format(".1%")(p.v)}</div>
+          <div class="dc-row"><span>Publications</span>${p.n} of ${p.N}</div>`, e);
       })
-      .on("mousemove", e => dataCard.move(e))
-      .on("mouseleave", () => dataCard.hide());
-
-    figKey.register(figId, {
-      title: "Dominant Discipline (top 10)",
-      legend: color.legend.map(d => ({ label: d, color: color(d), cit: color.cits(d), count: color.itemsOf(d) }))
-                  .concat([{ label: "other", color: GREY_OTHER, cit: color.cits("other"), count: color.itemsOf("other") }]),
-      sizeLegend: (() => {
-        // Matrix view dot scale is "items per cell" rather than per-item
-        // citations — surface the same idea with three round ticks.
-        if (!rs) return null;
-        const maxV = rs.domain()[1] || 1;
-        const ticks = [1, 5, 10, 25, 50, 100, 250, 500, 1000]
-          .filter(v => v <= maxV * 1.1).slice(-3)
-          .map(value => ({ value, radius: rs(value) }));
-        return { title: "Items per cell", unit: "", ticks };
-      })(),
-      onHighlight(name) {
-        cellsSel
-          .classed("dim", d => name && !(
-            name === "other"
-              ? !color.legend.includes(d.disc)
-              : d.disc === name))
-          .classed("hi",  d => name && (
-            name === "other"
-              ? !color.legend.includes(d.disc)
-              : d.disc === name));
-      },
-    });
+      .on("mouseleave", () => { focus.style("display", "none"); dataCard.hide(); });
+    figKey.register(figId, { title: "Trend", legend: [] });
   }
 
   const figEl = figId ? document.getElementById(figId) : null;
@@ -1991,7 +2014,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
           render();
         });
     }
-    (mode === "gantt" ? gantt : bee)(data);
+    (mode === "trend" ? trend : bee)(data);
   }
   if (figEl) figEl.addEventListener("fig-refresh", () => render());
 
@@ -2034,8 +2057,10 @@ async function renderTermsVenn() {
   // Five-set ring (AI alignment dropped per user spec). Order chosen so
   // the historically richest pairs are adjacent — only adjacent circles
   // overlap geometrically in a flower Venn.
-  const CATS = ["Content moderation", "Censorship", "Media moderation",
-                "Media regulation", "Debate management"];
+  // v3: three topics (media moderation and regulation are "Other"
+  // sub-categories). With three circles every pair is adjacent and the
+  // triple region is the core.
+  const CATS = ["Content moderation", "Censorship", "Debate management"];
   const color = makeSubtopicScale(CATS.slice().sort());
   const fmtN = d3.format(",");
 
@@ -2145,7 +2170,8 @@ async function renderTermsVenn() {
 
     // Consecutive triple regions — exactly {i, i+1, i+2}; the band runs
     // along the MIDDLE circle's angle, between the pair lenses and the core.
-    CATS.forEach((c, i) => {
+    // With three circles the triple IS the core, drawn below.
+    if (N > 3) CATS.forEach((c, i) => {
       const idx = [i, (i + 1) % N, (i + 2) % N];
       const names = idx.map(k => CATS[k]);
       const terms = tripleOf(names);
@@ -2166,7 +2192,7 @@ async function renderTermsVenn() {
     }
 
     figKey.register("fig-terms-venn", {
-      title: "WHAT category",
+      title: "Topic",
       legend: CATS.map(c => ({ label: c, color: color(c) })),
       onHighlight(name) {
         svg.selectAll(".tm-card, .vn-circle")
@@ -2628,7 +2654,7 @@ function setupYearRange(idA, idB, rows, onChange) {
   const a = document.getElementById(idA);
   const b = document.getElementById(idB);
   if (!a || !b) return () => [null, null];
-  const years = rows.map(r => +r["Publication Year"]).filter(Number.isFinite);
+  const years = rows.map(r => +r["Publication Year"]).filter(y => Number.isFinite(y) && y > 0);
   if (!years.length) return () => [null, null];
   const y0 = Math.min(...years), y1 = Math.max(...years);
   a.min = b.min = y0; a.max = b.max = y1;

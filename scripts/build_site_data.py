@@ -1387,6 +1387,11 @@ def main() -> None:
     # circle is drawn.
     VENN_CATS = ["Content moderation", "Censorship", "Debate management",
                  "Media moderation", "Media regulation"]
+    # v3: topics are the three practices; media moderation and regulation are
+    # "Other" sub-categories and no longer circles.
+    V3_QUOTES = bool(F) and "Quote" in F[0]
+    if V3_QUOTES:
+        VENN_CATS = ["Content moderation", "Censorship", "Debate management"]
     VENN_TYPES = ["WHAT", "WHO", "HOW", "WHY"]
 
     # ── Keyword denylist (Figure 14) ────────────────────────────────────
@@ -1479,7 +1484,47 @@ def main() -> None:
             matched_pubs.add(key)
 
         FULLKW = data_path("Chapter 1 - Keywords full.csv")
-        if FULLKW.exists():
+        VENN_MIN_PUBS = 3
+        VENN_GENERIC = set("""based specific include including includes various different
+            certain particular general often also however thus therefore example examples
+            first second third new several many much well within without among across
+            even still may might must can could would should one two three time times
+            way ways use used using make makes made like see seen given order case cases
+            number part terms term level levels form forms kind kinds type types new
+            important main major key large small high low long short recent current
+            further following less least more most around rather mean means
+            defined define defines definition refers refer referred operates operate
+            set understood seen regarded considered""".split())
+        if V3_QUOTES:
+            # v3: the vocabulary of the findings themselves — bigrams
+            # of each finding's verbatim quote (terms_of, stopwords removed),
+            # counted once per publication. English-language publications
+            # only, so that a term is not exclusive to a topic merely because
+            # that topic's literature is written in another language. A term
+            # is present in a topic when ≥ VENN_MIN_PUBS publications use it.
+            pubs_kw: dict[tuple[str, str, str], set] = defaultdict(set)
+            for r in F:
+                k = (r.get("Key") or "").strip()
+                top = key_topic.get(k)
+                if top not in VENN_CATS or (r.get("Language") or "").strip().lower() != "en":
+                    continue
+                ty = (r.get("Type") or "").strip().upper()
+                for w in set(terms_of(r.get("Quote") or "")):
+                    # bigrams only: single words were dominated by generic
+                    # vocabulary ("based", "time", "specific")
+                    if " " not in w or not _kw_ok(w) or w.split()[0] in VENN_GENERIC \
+                            or w.split()[1] in VENN_GENERIC or w.split()[0] == w.split()[1]:
+                        continue
+                    pubs_kw[("ALL", top, w)].add(k)
+                    if ty in VENN_TYPES:
+                        pubs_kw[(ty, top, w)].add(k)
+                    matched_pubs.add(k)
+            for (ty, top, w), ks in pubs_kw.items():
+                if len(ks) >= VENN_MIN_PUBS:
+                    kw[(ty, top)][w] = len(ks)
+            print(f"  venn keywords: {len(matched_pubs):,} English-language pubs, "
+                  f"bigrams from v3 quotes (≥{VENN_MIN_PUBS} publications per topic)")
+        elif FULLKW.exists():
             # One consistent GPT-5.4 extraction convention over the whole
             # corpus (generate_type_keywords.py) — used as the SOLE source.
             for r in load_csv(FULLKW):

@@ -1,401 +1,164 @@
 Type,Kind,Topic,Keyword,Count
-ALL,exclusive,Content moderation,volunteer moderators,66
-ALL,exclusive,Content moderation,suspension of accounts,50
-ALL,exclusive,Content moderation,application providers,42
-ALL,exclusive,Content moderation,natural language processing,41
-ALL,exclusive,Content moderation,flagging,38
-ALL,exclusive,Content moderation,digital constitutionalism,38
-ALL,exclusive,Content moderation,recommendation algorithms,34
-ALL,exclusive,Content moderation,very large online platforms,33
-ALL,exclusive,Content moderation,human reviewers,32
-ALL,exclusive,Content moderation,digital public sphere,31
-ALL,exclusive,Censorship,official censorship,27
-ALL,exclusive,Censorship,catholic church,25
-ALL,exclusive,Censorship,good customs,23
-ALL,exclusive,Censorship,church,23
-ALL,exclusive,Censorship,intellectual freedom,21
-ALL,exclusive,Censorship,translators,21
-ALL,exclusive,Censorship,literary censorship,20
-ALL,exclusive,Censorship,religion,20
-ALL,exclusive,Censorship,press censorship,19
-ALL,exclusive,Censorship,cuts,18
-ALL,exclusive,Debate management,significant learning,5
-ALL,exclusive,Debate management,participants in the discussion,3
-ALL,exclusive,Debate management,town hall questions,3
-ALL,exclusive,Debate management,replicas,3
-ALL,exclusive,Debate management,trainer,3
-ALL,exclusive,Debate management,speaking time,3
-ALL,exclusive,Debate management,political conversation,3
-ALL,exclusive,Debate management,undecided voters,3
-ALL,exclusive,Debate management,time monitoring,3
-ALL,exclusive,Debate management,town hall format,3
-ALL,pair,Content moderation + Censorship,facebook,325
-ALL,pair,Content moderation + Censorship,hate speech,246
-ALL,pair,Content moderation + Censorship,social media platforms,219
-ALL,pair,Content moderation + Censorship,national security,197
-ALL,pair,Content moderation + Censorship,human moderators,196
-ALL,pair,Content moderation + Censorship,content removal,196
-ALL,pair,Content moderation + Censorship,self-censorship,190
-ALL,pair,Content moderation + Censorship,twitter,188
-ALL,pair,Content moderation + Censorship,digital platforms,180
-ALL,pair,Content moderation + Censorship,platform governance,152
-ALL,pair,Content moderation + Debate management,terms of use,57
-ALL,pair,Content moderation + Debate management,fairness,32
-ALL,pair,Content moderation + Debate management,legal certainty,31
-ALL,pair,Content moderation + Debate management,post-moderation,28
-ALL,pair,Content moderation + Debate management,community managers,26
-ALL,pair,Content moderation + Debate management,reporting,26
-ALL,pair,Content moderation + Debate management,professional moderators,20
-ALL,pair,Content moderation + Debate management,political participation,20
-ALL,pair,Content moderation + Debate management,knowledge building,18
-ALL,pair,Content moderation + Debate management,public space,17
-ALL,pair,Censorship + Debate management,producers,11
-ALL,pair,Censorship + Debate management,law and order,9
-ALL,pair,Censorship + Debate management,opinions,8
-ALL,pair,Censorship + Debate management,mitigation,7
-ALL,pair,Censorship + Debate management,universities,6
-ALL,pair,Censorship + Debate management,senators,6
-ALL,pair,Censorship + Debate management,amendments,6
-ALL,pair,Censorship + Debate management,adversary,5
-ALL,pair,Censorship + Debate management,politics,5
-ALL,pair,Censorship + Debate management,scientific,5
-ALL,triple,Content moderation + Censorship + Debate management,freedom of expression,627
-ALL,triple,Content moderation + Censorship + Debate management,content moderation,583
-ALL,triple,Content moderation + Censorship + Debate management,journalists,151
-ALL,triple,Content moderation + Censorship + Debate management,transparency,139
-ALL,triple,Content moderation + Censorship + Debate management,prior censorship,129
-ALL,triple,Content moderation + Censorship + Debate management,social networks,121
-ALL,triple,Content moderation + Censorship + Debate management,european commission,110
-ALL,triple,Content moderation + Censorship + Debate management,civil society,109
-ALL,triple,Content moderation + Censorship + Debate management,public interest,106
-ALL,triple,Content moderation + Censorship + Debate management,free speech,102
-ALL,center,(≥3 categories),freedom of expression,627
-ALL,center,(≥3 categories),content moderation,583
-ALL,center,(≥3 categories),journalists,151
-ALL,center,(≥3 categories),transparency,139
-ALL,center,(≥3 categories),prior censorship,129
-ALL,center,(≥3 categories),social networks,121
-ALL,center,(≥3 categories),european commission,110
-ALL,center,(≥3 categories),civil society,109
-ALL,center,(≥3 categories),public interest,106
-ALL,center,(≥3 categories),free speech,102
-WHAT,exclusive,Content moderation,community guidelines,47
-WHAT,exclusive,Content moderation,digital constitutionalism,38
-WHAT,exclusive,Content moderation,commercial content moderation,31
-WHAT,exclusive,Content moderation,digital public sphere,31
-WHAT,exclusive,Content moderation,terms of service,27
-WHAT,exclusive,Content moderation,community moderation,24
-WHAT,exclusive,Content moderation,algorithmic governance,24
-WHAT,exclusive,Content moderation,illegal content,22
-WHAT,exclusive,Content moderation,content moderation systems,18
-WHAT,exclusive,Content moderation,participatory journalism,16
-WHAT,exclusive,Censorship,official censorship,27
-WHAT,exclusive,Censorship,literary censorship,20
-WHAT,exclusive,Censorship,press censorship,18
-WHAT,exclusive,Censorship,structural censorship,18
-WHAT,exclusive,Censorship,institutional censorship,16
-WHAT,exclusive,Censorship,intellectual freedom,16
-WHAT,exclusive,Censorship,francoist censorship,16
-WHAT,exclusive,Censorship,academic freedom,12
-WHAT,exclusive,Censorship,post-publication censorship,12
-WHAT,exclusive,Censorship,social censorship,12
-WHAT,exclusive,Debate management,town hall format,3
-WHAT,exclusive,Debate management,mediatoring politics,3
-WHAT,exclusive,Debate management,political conversation,3
-WHAT,exclusive,Debate management,electoral discussions,3
-WHAT,exclusive,Debate management,online tutor,3
-WHAT,exclusive,Debate management,televised electoral discussions,2
-WHAT,exclusive,Debate management,argumentative sequences,2
-WHAT,exclusive,Debate management,deep pluralism,2
-WHAT,exclusive,Debate management,confrontation between candidates,2
-WHAT,exclusive,Debate management,televised debate,2
-WHAT,pair,Content moderation + Censorship,content moderation,464
-WHAT,pair,Content moderation + Censorship,freedom of expression,242
-WHAT,pair,Content moderation + Censorship,platform governance,151
-WHAT,pair,Content moderation + Censorship,self-censorship,149
-WHAT,pair,Content moderation + Censorship,censorship,136
-WHAT,pair,Content moderation + Censorship,hate speech,131
-WHAT,pair,Content moderation + Censorship,prior censorship,100
-WHAT,pair,Content moderation + Censorship,private censorship,82
-WHAT,pair,Content moderation + Censorship,self-regulation,70
-WHAT,pair,Content moderation + Censorship,internet censorship,60
-WHAT,pair,Content moderation + Debate management,public space,16
-WHAT,pair,Content moderation + Debate management,e-moderation,14
-WHAT,pair,Content moderation + Debate management,online deliberation,13
-WHAT,pair,Content moderation + Debate management,public deliberation,10
-WHAT,pair,Content moderation + Debate management,political debate,9
-WHAT,pair,Content moderation + Debate management,participatory democracy,8
-WHAT,pair,Content moderation + Debate management,political communication,7
-WHAT,pair,Content moderation + Debate management,political participation,6
-WHAT,pair,Content moderation + Debate management,online discussion forums,6
-WHAT,pair,Content moderation + Debate management,virtual public sphere,6
-WHAT,pair,Censorship + Debate management,censorship practices,5
-WHAT,pair,Censorship + Debate management,public opinion control,3
-WHAT,pair,Censorship + Debate management,bayesian persuasion,3
-WHAT,pair,Censorship + Debate management,disciplines,3
-WHAT,pair,Censorship + Debate management,open access,3
-WHAT,pair,Censorship + Debate management,political culture,2
-WHAT,pair,Censorship + Debate management,social reality,2
-WHAT,pair,Censorship + Debate management,digital participation,2
-WHAT,pair,Censorship + Debate management,framing,2
-WHAT,pair,Censorship + Debate management,public consultation,2
-WHAT,triple,Content moderation + Censorship + Debate management,free speech,34
-WHAT,triple,Content moderation + Censorship + Debate management,public sphere,32
-WHAT,triple,Content moderation + Censorship + Debate management,public debate,27
-WHAT,triple,Content moderation + Censorship + Debate management,deliberative democracy,27
-WHAT,triple,Content moderation + Censorship + Debate management,online censorship,19
-WHAT,triple,Content moderation + Censorship + Debate management,moderation,15
-WHAT,triple,Content moderation + Censorship + Debate management,digital democracy,12
-WHAT,triple,Content moderation + Censorship + Debate management,i have cameras,10
-WHAT,triple,Content moderation + Censorship + Debate management,virtual communities,9
-WHAT,triple,Content moderation + Censorship + Debate management,democratic debate,8
-WHAT,center,(≥3 categories),free speech,34
-WHAT,center,(≥3 categories),public sphere,32
-WHAT,center,(≥3 categories),public debate,27
-WHAT,center,(≥3 categories),deliberative democracy,27
-WHAT,center,(≥3 categories),online censorship,19
-WHAT,center,(≥3 categories),moderation,15
-WHAT,center,(≥3 categories),digital democracy,12
-WHAT,center,(≥3 categories),i have cameras,10
-WHAT,center,(≥3 categories),virtual communities,9
-WHAT,center,(≥3 categories),democratic debate,8
-WHO,exclusive,Content moderation,volunteer moderators,65
-WHO,exclusive,Content moderation,application providers,34
-WHO,exclusive,Content moderation,human reviewers,31
-WHO,exclusive,Content moderation,platform owners,29
-WHO,exclusive,Content moderation,very large online platforms,26
-WHO,exclusive,Content moderation,vulnerable groups,26
-WHO,exclusive,Content moderation,internet application providers,24
-WHO,exclusive,Content moderation,community moderators,23
-WHO,exclusive,Content moderation,social care,22
-WHO,exclusive,Content moderation,reddit moderators,20
-WHO,exclusive,Censorship,catholic church,24
-WHO,exclusive,Censorship,church,23
-WHO,exclusive,Censorship,translators,21
-WHO,exclusive,Censorship,writer,12
-WHO,exclusive,Censorship,chinese authorities,11
-WHO,exclusive,Censorship,bishops,10
+ALL,exclusive,Content moderation,moderation decisions,97
+ALL,exclusive,Content moderation,moderation practices,61
+ALL,exclusive,Content moderation,moderation systems,56
+ALL,exclusive,Content moderation,oversight board,56
+ALL,exclusive,Content moderation,online communities,47
+ALL,exclusive,Content moderation,automated moderation,40
+ALL,exclusive,Content moderation,automated content,39
+ALL,exclusive,Content moderation,moderation process,39
+ALL,exclusive,Content moderation,moderation content,38
+ALL,exclusive,Content moderation,commercial content,38
+ALL,exclusive,Censorship,public morality,15
+ALL,exclusive,Censorship,communist party,15
+ALL,exclusive,Censorship,political censorship,15
+ALL,exclusive,Censorship,censorship process,15
+ALL,exclusive,Censorship,practice censorship,15
+ALL,exclusive,Censorship,censorship laws,15
+ALL,exclusive,Censorship,post publication,13
+ALL,exclusive,Censorship,film censorship,13
+ALL,exclusive,Censorship,public censorship,12
+ALL,exclusive,Censorship,publishing houses,12
+ALL,exclusive,Debate management,presidential debates,6
+ALL,exclusive,Debate management,agenda setting,5
+ALL,exclusive,Debate management,news norms,3
+ALL,exclusive,Debate management,commission presidential,3
+ALL,exclusive,Debate management,town hall,3
+ALL,pair,Content moderation + Censorship,content moderation,398
+ALL,pair,Content moderation + Censorship,social media,382
+ALL,pair,Content moderation + Censorship,hate speech,253
+ALL,pair,Content moderation + Censorship,media platforms,196
+ALL,pair,Content moderation + Censorship,community guidelines,118
+ALL,pair,Content moderation + Censorship,user generated,113
+ALL,pair,Content moderation + Censorship,human moderators,111
+ALL,pair,Content moderation + Censorship,generated content,101
+ALL,pair,Content moderation + Censorship,harmful content,100
+ALL,pair,Content moderation + Censorship,community standards,98
+ALL,triple,Content moderation + Censorship + Debate management,public sphere,36
+ALL,center,(≥3 categories),public sphere,36
+WHAT,exclusive,Content moderation,user generated,70
+WHAT,exclusive,Content moderation,generated content,67
+WHAT,exclusive,Content moderation,facilitate cooperation,34
+WHAT,exclusive,Content moderation,governance mechanisms,34
+WHAT,exclusive,Content moderation,prevent abuse,34
+WHAT,exclusive,Content moderation,cooperation prevent,33
+WHAT,exclusive,Content moderation,structure participation,32
+WHAT,exclusive,Content moderation,community facilitate,30
+WHAT,exclusive,Content moderation,participation community,29
+WHAT,exclusive,Content moderation,mechanisms structure,26
+WHAT,exclusive,Censorship,internet censorship,11
+WHAT,exclusive,Censorship,censorship social,9
+WHAT,exclusive,Censorship,overt covert,9
+WHAT,exclusive,Censorship,censorship involves,9
+WHAT,exclusive,Censorship,censorship process,9
+WHAT,exclusive,Censorship,political censorship,9
+WHAT,exclusive,Censorship,public censorship,9
+WHAT,exclusive,Censorship,post publication,8
+WHAT,exclusive,Censorship,censorship suppression,8
+WHAT,exclusive,Censorship,censorship commonly,7
+WHAT,pair,Content moderation + Censorship,content moderation,289
+WHAT,pair,Content moderation + Censorship,social media,159
+WHAT,pair,Content moderation + Censorship,media platforms,66
+WHAT,pair,Content moderation + Censorship,hate speech,44
+WHAT,pair,Content moderation + Censorship,online content,31
+WHAT,pair,Content moderation + Censorship,online platforms,31
+WHAT,pair,Content moderation + Censorship,freedom expression,27
+WHAT,pair,Content moderation + Censorship,community standards,25
+WHAT,pair,Content moderation + Censorship,media companies,22
+WHAT,pair,Content moderation + Censorship,censorship occurs,17
+WHO,exclusive,Content moderation,oversight board,52
+WHO,exclusive,Content moderation,moderation decisions,46
+WHO,exclusive,Content moderation,user generated,45
+WHO,exclusive,Content moderation,generated content,39
+WHO,exclusive,Content moderation,moderate content,38
+WHO,exclusive,Content moderation,community guidelines,38
+WHO,exclusive,Content moderation,volunteer moderators,33
+WHO,exclusive,Content moderation,moderation systems,31
+WHO,exclusive,Content moderation,moderation policies,30
+WHO,exclusive,Content moderation,remove content,27
+WHO,exclusive,Censorship,chinese government,25
+WHO,exclusive,Censorship,internet censorship,11
+WHO,exclusive,Censorship,internet content,11
+WHO,exclusive,Censorship,mass media,11
 WHO,exclusive,Censorship,publishing houses,10
-WHO,exclusive,Censorship,american library association,10
-WHO,exclusive,Censorship,ministry of information and tourism,10
-WHO,exclusive,Censorship,congregation of the index,10
-WHO,exclusive,Debate management,participants in the discussion,3
-WHO,exclusive,Debate management,apprentices,3
-WHO,exclusive,Debate management,opponent,3
-WHO,exclusive,Debate management,undecided voters,3
-WHO,exclusive,Debate management,members of the public,3
-WHO,exclusive,Debate management,trainer,3
-WHO,exclusive,Debate management,commission on presidential debates,3
-WHO,exclusive,Debate management,guests,3
-WHO,exclusive,Debate management,moderator of the forum,2
-WHO,exclusive,Debate management,citizens drawn by lot,2
-WHO,pair,Content moderation + Censorship,facebook,325
-WHO,pair,Content moderation + Censorship,social media platforms,209
-WHO,pair,Content moderation + Censorship,human moderators,195
-WHO,pair,Content moderation + Censorship,twitter,188
-WHO,pair,Content moderation + Censorship,digital platforms,165
-WHO,pair,Content moderation + Censorship,youtube,147
-WHO,pair,Content moderation + Censorship,governments,134
-WHO,pair,Content moderation + Censorship,censors,129
-WHO,pair,Content moderation + Censorship,content moderators,121
-WHO,pair,Content moderation + Censorship,google,119
-WHO,pair,Content moderation + Debate management,community managers,26
-WHO,pair,Content moderation + Debate management,professional moderators,20
-WHO,pair,Content moderation + Debate management,stakeholders,16
-WHO,pair,Content moderation + Debate management,candidates,13
-WHO,pair,Content moderation + Debate management,hearing,12
-WHO,pair,Content moderation + Debate management,registered users,11
-WHO,pair,Content moderation + Debate management,interlocutors,10
-WHO,pair,Content moderation + Debate management,political partners,10
-WHO,pair,Content moderation + Debate management,chamber of members,9
-WHO,pair,Content moderation + Debate management,lurkers,9
-WHO,pair,Censorship + Debate management,producers,11
-WHO,pair,Censorship + Debate management,universities,6
-WHO,pair,Censorship + Debate management,senators,6
-WHO,pair,Censorship + Debate management,adversary,5
-WHO,pair,Censorship + Debate management,professional,4
-WHO,pair,Censorship + Debate management,pairs,4
-WHO,pair,Censorship + Debate management,mediators,4
-WHO,pair,Censorship + Debate management,journalist,4
-WHO,pair,Censorship + Debate management,political elite,4
-WHO,pair,Censorship + Debate management,individual citizens,4
-WHO,triple,Content moderation + Censorship + Debate management,journalists,151
-WHO,triple,Content moderation + Censorship + Debate management,european commission,110
-WHO,triple,Content moderation + Censorship + Debate management,civil society,106
-WHO,triple,Content moderation + Censorship + Debate management,government,87
-WHO,triple,Content moderation + Censorship + Debate management,participants,83
-WHO,triple,Content moderation + Censorship + Debate management,internet users,81
-WHO,triple,Content moderation + Censorship + Debate management,researchers,77
-WHO,triple,Content moderation + Censorship + Debate management,status,73
-WHO,triple,Content moderation + Censorship + Debate management,readers,69
-WHO,triple,Content moderation + Censorship + Debate management,editors,59
-WHO,center,(≥3 categories),journalists,151
-WHO,center,(≥3 categories),european commission,110
-WHO,center,(≥3 categories),civil society,106
-WHO,center,(≥3 categories),government,87
-WHO,center,(≥3 categories),participants,83
-WHO,center,(≥3 categories),internet users,81
-WHO,center,(≥3 categories),researchers,77
-WHO,center,(≥3 categories),status,73
-WHO,center,(≥3 categories),readers,69
-WHO,center,(≥3 categories),editors,59
-HOW,exclusive,Content moderation,suspension of accounts,50
-HOW,exclusive,Content moderation,natural language processing,39
-HOW,exclusive,Content moderation,flagging,38
-HOW,exclusive,Content moderation,recommendation algorithms,30
-HOW,exclusive,Content moderation,downranking,23
-HOW,exclusive,Content moderation,non-judicial notification,22
-HOW,exclusive,Content moderation,suspension of account,20
-HOW,exclusive,Content moderation,independent audits,19
-HOW,exclusive,Content moderation,algorithmic transparency,19
-HOW,exclusive,Content moderation,community notes,18
-HOW,exclusive,Censorship,cuts,18
-HOW,exclusive,Censorship,book burning,15
-HOW,exclusive,Censorship,tachaduras,10
-HOW,exclusive,Censorship,dns tampering,9
-HOW,exclusive,Censorship,prohibition,9
-HOW,exclusive,Censorship,internet filtering,9
-HOW,exclusive,Censorship,voluntary consultation,9
-HOW,exclusive,Censorship,proxy servers,8
-HOW,exclusive,Censorship,dns poisoning,8
-HOW,exclusive,Censorship,omission,8
-HOW,exclusive,Debate management,constructive feedback,3
-HOW,exclusive,Debate management,town hall questions,3
-HOW,exclusive,Debate management,replicas,3
-HOW,exclusive,Debate management,asincronic communication,3
-HOW,exclusive,Debate management,time monitoring,3
-HOW,exclusive,Debate management,speaking time,3
-HOW,exclusive,Debate management,discussion forum,3
-HOW,exclusive,Debate management,argument and counterargument,2
-HOW,exclusive,Debate management,microscopic analysis,2
-HOW,exclusive,Debate management,against arguments,2
-HOW,pair,Content moderation + Censorship,content removal,170
-HOW,pair,Content moderation + Censorship,human review,80
-HOW,pair,Content moderation + Censorship,transparency reports,76
-HOW,pair,Content moderation + Censorship,machine learning,74
-HOW,pair,Content moderation + Censorship,artificial intelligence,72
-HOW,pair,Content moderation + Censorship,notice and takedown,67
-HOW,pair,Content moderation + Censorship,removal of content,63
-HOW,pair,Content moderation + Censorship,community guidelines,60
-HOW,pair,Content moderation + Censorship,account suspension,59
-HOW,pair,Content moderation + Censorship,terms of service,54
-HOW,pair,Content moderation + Debate management,terms of use,46
-HOW,pair,Content moderation + Debate management,post-moderation,18
-HOW,pair,Content moderation + Debate management,moderation,10
-HOW,pair,Content moderation + Debate management,deletion of comments,10
-HOW,pair,Content moderation + Debate management,delete comments,9
-HOW,pair,Content moderation + Debate management,gatekeeping,8
-HOW,pair,Content moderation + Debate management,chat,8
-HOW,pair,Content moderation + Debate management,feedback,8
-HOW,pair,Content moderation + Debate management,anonymity,7
-HOW,pair,Content moderation + Debate management,data processing,7
-HOW,pair,Censorship + Debate management,retirement,6
-HOW,pair,Censorship + Debate management,text,4
-HOW,pair,Censorship + Debate management,agenda-setting,4
-HOW,pair,Censorship + Debate management,negotiation,3
-HOW,pair,Censorship + Debate management,call to order,3
-HOW,pair,Censorship + Debate management,electronic forums,3
-HOW,pair,Censorship + Debate management,random assignment,3
-HOW,pair,Censorship + Debate management,semi-directive interviews,3
-HOW,pair,Censorship + Debate management,evaluation grids,3
-HOW,pair,Censorship + Debate management,agreement,2
-HOW,triple,Content moderation + Censorship + Debate management,content moderation,119
-HOW,triple,Content moderation + Censorship + Debate management,monitoring,32
-HOW,triple,Content moderation + Censorship + Debate management,content analysis,32
-HOW,triple,Content moderation + Censorship + Debate management,prior censorship,29
-HOW,triple,Content moderation + Censorship + Debate management,code of conduct,23
-HOW,triple,Content moderation + Censorship + Debate management,pre-moderation,23
-HOW,triple,Content moderation + Censorship + Debate management,removal of contents,20
-HOW,triple,Content moderation + Censorship + Debate management,semi-structured interviews,17
-HOW,triple,Content moderation + Censorship + Debate management,agenda setting,10
-HOW,triple,Content moderation + Censorship + Debate management,prior approval,9
-HOW,center,(≥3 categories),content moderation,119
-HOW,center,(≥3 categories),monitoring,32
-HOW,center,(≥3 categories),content analysis,32
-HOW,center,(≥3 categories),prior censorship,29
-HOW,center,(≥3 categories),code of conduct,23
-HOW,center,(≥3 categories),pre-moderation,23
-HOW,center,(≥3 categories),removal of contents,20
-HOW,center,(≥3 categories),semi-structured interviews,17
-HOW,center,(≥3 categories),agenda setting,10
-HOW,center,(≥3 categories),prior approval,9
-WHY,exclusive,Content moderation,disinformation,36
-WHY,exclusive,Content moderation,prevent abuse,27
-WHY,exclusive,Content moderation,prevent censorship,27
-WHY,exclusive,Content moderation,terrorist content,25
-WHY,exclusive,Content moderation,consumer protection,25
-WHY,exclusive,Content moderation,electoral integrity,23
-WHY,exclusive,Content moderation,contrast to disinformation,21
-WHY,exclusive,Content moderation,online safety,21
-WHY,exclusive,Content moderation,protection of human rights,18
-WHY,exclusive,Content moderation,legitimacy,18
-WHY,exclusive,Censorship,good customs,21
-WHY,exclusive,Censorship,religion,20
-WHY,exclusive,Censorship,immorality,11
-WHY,exclusive,Censorship,patriotism,10
-WHY,exclusive,Censorship,national unity,10
-WHY,exclusive,Censorship,political reasons,10
-WHY,exclusive,Censorship,heresy,9
-WHY,exclusive,Censorship,regime stability,9
-WHY,exclusive,Censorship,sexual morality,8
-WHY,exclusive,Censorship,state secrets,8
-WHY,exclusive,Debate management,significant learning,5
-WHY,exclusive,Debate management,mass appeal,2
-WHY,exclusive,Debate management,affective safety,2
-WHY,exclusive,Debate management,stability of trade,2
-WHY,exclusive,Debate management,user learning,2
-WHY,exclusive,Debate management,decision to vote,2
-WHY,exclusive,Debate management,regular learning,2
-WHY,exclusive,Debate management,creating an informed electorate,2
-WHY,exclusive,Debate management,ensuring inclusion,2
-WHY,exclusive,Debate management,democratic inclusion,2
-WHY,pair,Content moderation + Censorship,national security,196
-WHY,pair,Content moderation + Censorship,hate speech,115
-WHY,pair,Content moderation + Censorship,public safety,105
-WHY,pair,Content moderation + Censorship,public order,84
-WHY,pair,Content moderation + Censorship,accountability,78
-WHY,pair,Content moderation + Censorship,human rights,69
-WHY,pair,Content moderation + Censorship,human dignity,66
-WHY,pair,Content moderation + Censorship,protection of fundamental rights,61
-WHY,pair,Content moderation + Censorship,protection of minors,59
-WHY,pair,Content moderation + Censorship,public policy,58
-WHY,pair,Content moderation + Debate management,fairness,32
-WHY,pair,Content moderation + Debate management,legal certainty,31
-WHY,pair,Content moderation + Debate management,political participation,14
-WHY,pair,Content moderation + Debate management,authenticity,14
-WHY,pair,Content moderation + Debate management,knowledge building,13
-WHY,pair,Content moderation + Debate management,consistency,12
-WHY,pair,Content moderation + Debate management,participation,11
-WHY,pair,Content moderation + Debate management,community health,11
-WHY,pair,Content moderation + Debate management,reporting,10
-WHY,pair,Content moderation + Debate management,citizen participation,10
-WHY,pair,Censorship + Debate management,law and order,8
-WHY,pair,Censorship + Debate management,maintaining stability,5
-WHY,pair,Censorship + Debate management,democratization,5
-WHY,pair,Censorship + Debate management,politics,5
-WHY,pair,Censorship + Debate management,survival,4
-WHY,pair,Censorship + Debate management,equal participation,4
-WHY,pair,Censorship + Debate management,educational function,3
-WHY,pair,Censorship + Debate management,self-confidence,3
-WHY,pair,Censorship + Debate management,manipulating information,3
-WHY,pair,Censorship + Debate management,policy learning,2
-WHY,triple,Content moderation + Censorship + Debate management,freedom of expression,385
-WHY,triple,Content moderation + Censorship + Debate management,transparency,128
-WHY,triple,Content moderation + Censorship + Debate management,public interest,101
-WHY,triple,Content moderation + Censorship + Debate management,combating misinformation,88
-WHY,triple,Content moderation + Censorship + Debate management,public health,76
-WHY,triple,Content moderation + Censorship + Debate management,freedom of speech,71
-WHY,triple,Content moderation + Censorship + Debate management,free speech,68
-WHY,triple,Content moderation + Censorship + Debate management,privacy,67
-WHY,triple,Content moderation + Censorship + Debate management,free expression,50
-WHY,triple,Content moderation + Censorship + Debate management,safety,38
-WHY,center,(≥3 categories),freedom of expression,385
-WHY,center,(≥3 categories),transparency,128
-WHY,center,(≥3 categories),public interest,101
-WHY,center,(≥3 categories),combating misinformation,88
-WHY,center,(≥3 categories),public health,76
-WHY,center,(≥3 categories),freedom of speech,71
-WHY,center,(≥3 categories),free speech,68
-WHY,center,(≥3 categories),privacy,67
-WHY,center,(≥3 categories),free expression,50
-WHY,center,(≥3 categories),safety,38
+WHO,exclusive,Censorship,board film,10
+WHO,exclusive,Censorship,practice censorship,10
+WHO,exclusive,Censorship,ministry culture,10
+WHO,exclusive,Censorship,film industry,9
+WHO,exclusive,Censorship,film censorship,8
+WHO,exclusive,Debate management,presidential debates,4
+WHO,exclusive,Debate management,commission presidential,3
+WHO,pair,Content moderation + Censorship,content moderation,277
+WHO,pair,Content moderation + Censorship,social media,245
+WHO,pair,Content moderation + Censorship,hate speech,119
+WHO,pair,Content moderation + Censorship,media platforms,117
+WHO,pair,Content moderation + Censorship,human moderators,92
+WHO,pair,Content moderation + Censorship,content moderators,75
+WHO,pair,Content moderation + Censorship,machine learning,69
+WHO,pair,Content moderation + Censorship,civil society,56
+WHO,pair,Content moderation + Censorship,media companies,52
+WHO,pair,Content moderation + Censorship,law enforcement,49
+WHO,triple,Content moderation + Censorship + Debate management,public sphere,10
+WHO,center,(≥3 categories),public sphere,10
+HOW,exclusive,Content moderation,moderation decisions,56
+HOW,exclusive,Content moderation,moderation policies,41
+HOW,exclusive,Content moderation,generated content,41
+HOW,exclusive,Content moderation,content moderators,34
+HOW,exclusive,Content moderation,moderation systems,29
+HOW,exclusive,Content moderation,moderation practices,28
+HOW,exclusive,Content moderation,users content,26
+HOW,exclusive,Content moderation,flagged content,24
+HOW,exclusive,Content moderation,content flagged,24
+HOW,exclusive,Content moderation,content platform,23
+HOW,exclusive,Censorship,chinese government,15
+HOW,exclusive,Censorship,internet censorship,12
+HOW,exclusive,Censorship,censorship mechanisms,10
+HOW,exclusive,Censorship,publishing houses,10
+HOW,exclusive,Censorship,british board,9
+HOW,exclusive,Censorship,board film,9
+HOW,exclusive,Censorship,rst packets,7
+HOW,exclusive,Censorship,publication censorship,7
+HOW,exclusive,Censorship,public libraries,7
+HOW,exclusive,Censorship,film censorship,7
+HOW,exclusive,Debate management,presidential debates,3
+HOW,exclusive,Debate management,town hall,3
+HOW,pair,Content moderation + Censorship,content moderation,225
+HOW,pair,Content moderation + Censorship,social media,224
+HOW,pair,Content moderation + Censorship,hate speech,157
+HOW,pair,Content moderation + Censorship,community guidelines,105
+HOW,pair,Content moderation + Censorship,media platforms,94
+HOW,pair,Content moderation + Censorship,community standards,74
+HOW,pair,Content moderation + Censorship,machine learning,70
+HOW,pair,Content moderation + Censorship,remove content,61
+HOW,pair,Content moderation + Censorship,harmful content,59
+HOW,pair,Content moderation + Censorship,human moderators,57
+WHY,exclusive,Content moderation,child sexual,25
+WHY,exclusive,Content moderation,moderate content,20
+WHY,exclusive,Content moderation,content platforms,19
+WHY,exclusive,Content moderation,sexual abuse,19
+WHY,exclusive,Content moderation,content moderators,16
+WHY,exclusive,Content moderation,community guidelines,16
+WHY,exclusive,Content moderation,inappropriate content,16
+WHY,exclusive,Content moderation,generated content,16
+WHY,exclusive,Content moderation,user engagement,15
+WHY,exclusive,Content moderation,moderation policies,15
+WHY,exclusive,Censorship,internet censorship,17
+WHY,exclusive,Censorship,public morality,14
+WHY,exclusive,Censorship,communist party,11
+WHY,exclusive,Censorship,collective action,10
+WHY,exclusive,Censorship,protect children,8
+WHY,exclusive,Censorship,social stability,7
+WHY,exclusive,Censorship,moral political,7
+WHY,exclusive,Censorship,block access,7
+WHY,exclusive,Censorship,publication censorship,6
+WHY,exclusive,Censorship,political control,6
+WHY,pair,Content moderation + Censorship,content moderation,166
+WHY,pair,Content moderation + Censorship,social media,153
+WHY,pair,Content moderation + Censorship,hate speech,126
+WHY,pair,Content moderation + Censorship,national security,68
+WHY,pair,Content moderation + Censorship,media platforms,62
+WHY,pair,Content moderation + Censorship,harmful content,48
+WHY,pair,Content moderation + Censorship,illegal content,44
+WHY,pair,Content moderation + Censorship,fake news,43
+WHY,pair,Content moderation + Censorship,freedom expression,37
+WHY,pair,Content moderation + Censorship,child pornography,32

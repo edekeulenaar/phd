@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emillie de Keulenaar — Dialogue and restraint</title>
-<link rel="stylesheet" href="style.css?v=p7-52">
+<link rel="stylesheet" href="style.css?v=p7-54">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -315,7 +315,7 @@
           <select id="bee-sort-select">
             <option value="alpha-asc">Alphabetical A→Z</option>
             <option value="alpha-desc">Alphabetical Z→A</option>
-            <option value="earliest">Earliest first</option>
+            <option value="earliest" selected>Earliest first</option>
             <option value="latest">Latest first</option>
             <option value="qty-desc">Quantity ↓</option>
             <option value="qty-asc">Quantity ↑</option>
@@ -340,7 +340,7 @@
         <span class="spacer"></span>
         <div role="tablist" class="seg" aria-label="View mode">
           <button class="tab active" data-mode="beeswarm" aria-selected="true">Beeswarm</button>
-          <button class="tab"        data-mode="gantt"    aria-selected="false">Matrix</button>
+          <button class="tab"        data-mode="trend"    aria-selected="false">Trend</button>
         </div>
       </div>
       <div class="fig-body"><div id="beeswarm-topics"></div></div>
@@ -381,7 +381,7 @@
           <select id="bee-cm-sort-select">
             <option value="alpha-asc">Alphabetical A→Z</option>
             <option value="alpha-desc">Alphabetical Z→A</option>
-            <option value="earliest">Earliest first</option>
+            <option value="earliest" selected>Earliest first</option>
             <option value="latest">Latest first</option>
             <option value="qty-desc">Quantity ↓</option>
             <option value="qty-asc">Quantity ↑</option>
@@ -406,7 +406,7 @@
         <span class="spacer"></span>
         <div role="tablist" class="seg" aria-label="View mode">
           <button class="tab active" data-mode="beeswarm" aria-selected="true">Beeswarm</button>
-          <button class="tab"        data-mode="gantt"    aria-selected="false">Matrix</button>
+          <button class="tab"        data-mode="trend"    aria-selected="false">Trend</button>
         </div>
       </div>
       <div class="fig-body"><div id="beeswarm-cm"></div></div>
@@ -549,9 +549,9 @@
     <figure class="fig" id="fig-terms-venn">
       <figcaption class="fig-cap">
         <span class="fig-num">Figure 14.</span>
-        Keyword Venn — Who, How and Why keywords that are either specific to
-        one WHAT topic or overlap across WHAT topics, linked to the six WHAT
-        categories that organise the corpus.
+        Keyword Venn — two-word terms from the findings that are specific to
+        one topic or shared across topics (censorship, content moderation,
+        debate management).
       </figcaption>
       <div class="fig-controls">
         <div role="tablist" class="seg" aria-label="Finding type">
@@ -565,17 +565,15 @@
       <div class="fig-foot">
         <a class="dl" href="data/venn_keywords.csv" download>⬇ Download CSV</a>
         <span class="alt">
-          Six-set flower Venn over the six WHAT topics (Algorithmic sorting
-          excluded). Set elements are the keyword vocabulary extracted from
-          each publication's full text by GPT-5.4 and normalised to English
-          via Argos Translate. Per Type (Who, How, Why), the diagram shows
-          which keywords appear EXCLUSIVELY under one WHAT topic, which
-          occur in EXACTLY one PAIR of adjacent topics, which span exactly
-          three consecutive topics, and which span the core (≥4 of 6
-          topics). Non-adjacent overlaps are in the CSV. Closed-set
-          taxonomy categories of the same six topics are also available in
-          <code>venn_categories.csv</code>. Source:
-          <code>venn_keywords.csv</code>.
+          Three-set Venn over the publications' topics. Set elements are
+          two-word terms (stopwords and generic words removed) from the
+          verbatim quotes of the findings of the selected type, counted once
+          per publication, in English-language publications only — so that a
+          term is not specific to a topic merely because that literature is
+          written in another language. A term belongs to a topic when at least
+          three of its publications use it. Each region shows the most used
+          terms. Closed-set taxonomy categories of the same topics are in
+          <code>venn_categories.csv</code>. Source: <code>venn_keywords.csv</code>.
         </span>
       </div>
     </figure>
@@ -604,7 +602,7 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/json.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/languages/bash.min.js"></script>
 <script src="comments-config.js?v=p7-32"></script>
-<script src="app.js?v=p7-66" defer></script>
+<script src="app.js?v=p7-70" defer></script>
 
 </body>
 </html>
