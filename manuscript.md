@@ -13,7 +13,7 @@ As is common with controversies, it remains unclear what the concept of moderati
 
 Given the richness of the concept, why has content moderation so often been reduced to its restrictive function? How did this meaning come to contradict that of the facilitation of dialogue? And to what extent is this distinction even necessary in light of increasing calls for “prosocial” algorithms to emerge _against_ moderation as a censorial force [@weylCommunityDesign2026a; @schirchBlueprintProsocialTech2025]? While discerning the practical differences between the two meanings would require a long and winding history of their conceptual, material and institutional evolution, I want to focus here on how each of these two notions has been described as a *speech governance technique*. When one foregoes normative conceptions of moderation or censorship (as censorship scholars have done to their subject since the 1990s [@postCensorshipSilencingPractices1998]), we may view both as speech governance techniques endemic to any and all forms of public expression [@holquistIntroductionCorruptOriginals1994; @bourdieuLangagePouvoirSymbolique2001]; different modalities of the same practice. Instead of antagonizing the two, we consider _what kind_ [@jansensuecurryCensorshipKnotThat1988, p. 25] of technique moderation may be within a long lineage of practices applicable to different media environments based on its applications, actors and the theorizations that ensue. 
 
-Concretely, I propose a distant reading [@morettiDistantReading2013; @underwoodDistantReadingRecent2016] of the notion of moderation in: (a) content moderation literature, primarily but not exclusively from media and communication studies; and (b) literature on neighboring speech governance techniques, particularly censorship, and moderation as a whole. The comparison considers four conceptual components — definitions, actors, justifications and techniques — across 1,960 articles, books, preprints and theses. It combines manual reading with large-language-model-assisted information extraction;[^1] the corpus construction, taxonomy, model selection and validation procedures are detailed in the Method section below.
+Concretely, I propose a distant reading [@morettiDistantReading2013; @underwoodDistantReadingRecent2016] of the notion of moderation in: (a) content moderation literature, primarily but not exclusively from media and communication studies; and (b) literature on neighboring speech governance techniques, particularly censorship, and moderation as a whole. The comparison considers four conceptual components — definitions, actors, justifications and techniques — across 2,003 articles, books, preprints and theses. It combines manual reading with retrieval and large-language-model-assisted coding;[^1] the corpus construction, taxonomy, retrieval, coding and validation procedures are detailed in the Method section below.
 
 I propose that moderation bears traits from both censorial practices (to frame the norms of public debate and delimit the reach and visibility of transgressive speech) and debate management norms (to facilitate the understanding, contextualization and flow of information in plurivocal environments). Moderation “censors” in that it frames and enforces the norms within which information may flow in a public space, but it also prompts, contextualizes, mediates, (re)directs and otherwise modulates exchanged information for the overall sake of *social and informational coherence*. When the balance between these two functions is lost and moderation is reduced to either one or another technique, it risks forfeiting its legitimacy. 
 
@@ -166,31 +166,32 @@ A final temporal-scope filter then restricted the corpus to publications address
 | Relevant (YES / MAYBE) | 4,278 | Relevance classifier (Prompt 1), validated manually |
 | … with a PDF found | 3,444 | PDF on disk and matched to its record |
 | Final corpus | 2,305 | After the full-text relevance pass, de-duplication and the temporal-scope filter |
-| … with a PDF, submitted to the production coder | 1,984 | |
-| … yielding at least one finding | 1,958 | 1,825 coded by GPT-5.4, 133 by Claude Opus 4.7 |
-| Publications in the analysed dataset | 1,960 | 1,958, plus 2 represented by findings from the first coding pass |
+| … converted to a paginated document | 2,196 | 1,998 PDFs on disk, 8 PDFs downloaded from the record URL, 190 web pages printed to PDF |
+| … with extractable text | 2,185 | Indexed for retrieval; 11 image-only or near-empty documents excluded |
+| … coded | 2,184 | One document had no passage left once bibliography pages were excluded |
+| Publications in the analysed dataset | 2,003 | Coded by GPT-6.1-sol from retrieved passages, with at least one finding |
 **Table 2.** *Publications at each stage of collection, validation and coding.* ^table-publications
 
-Several counts of this corpus appear below. Of the 2,305 publications in the corpus, 1,984 had a PDF on disk, and each was submitted to the production coder. Twenty-six returned no findings, almost all because the file carried no readable text: image-only scans, fonts that extract as glyph codes, one- or two-page previews of books, and one corrupt file. The remaining 1,958 documents yielded at least one finding. Two further publications without a PDF are represented by findings carried over from the first coding pass, which brings the analysed dataset to 1,960 publications and 60,758 findings. The 345 publications in the corpus but not in the dataset are therefore absent from the distant reading: 319 because no PDF was found, and 26 because the PDF could not be read. Where a count appears below without qualification, it refers to the 1,960.
+Several counts of this corpus appear below. Of the 2,305 publications in the corpus, 2,196 could be turned into a paginated document: 2,006 PDFs and 190 web pages printed from the URL in their bibliographic record. Eleven of these carried no extractable text (image-only scans and near-empty pages), and one had no passage left once its bibliography pages were excluded, so 2,184 publications were coded. Of these, 181 returned no finding: 87 web pages that carried only a landing page or an abstract, and 94 PDFs whose retrieved passages addressed none of the four dimensions. The analysed dataset therefore comprises 2,003 publications and 39,877 findings. The 302 publications in the corpus but not in the dataset are absent from the distant reading: 109 because no document could be retrieved, 12 because it carried no usable text, and 181 because nothing in it was coded. Where a count appears below without qualification, it refers to the 2,003.
 
 The majority of retained results were in English or in the language of each query (**[[#^table-languages|Table 3]]**). Additional languages were picked up, though in small percentages. 
 
 |   # | Language     |     Items |    Share |
 | --: | ------------ | --------: | -------: |
-|   1 | English      |     1,116 |    56.9% |
-|   2 | Portuguese   |       310 |    15.8% |
-|   3 | French       |       221 |    11.3% |
-|   4 | Italian      |       148 |     7.6% |
-|   5 | Spanish      |       130 |     6.6% |
-|   6 | German       |         3 |     0.2% |
+|   1 | English      |     1,138 |    56.8% |
+|   2 | Portuguese   |       308 |    15.4% |
+|   3 | French       |       241 |    12.0% |
+|   4 | Italian      |       150 |     7.5% |
+|   5 | Spanish      |       134 |     6.7% |
+|   6 | German       |         2 |     0.1% |
 |   7 | Catalan      |         2 |     0.1% |
 |   8 | Somali       |         2 |     0.1% |
-|   9 | Welsh        |         1 |     0.1% |
-|  10 | Hungarian    |         1 |     0.1% |
-|  11 | Vietnamese   |         1 |     0.1% |
-|  12 | undetermined |        25 |     1.3% |
-|     | **Total**    | **1,960** | **100%** |
-**Table 3.** Distribution of the analysed dataset by language, detected with `langdetect` (seeded for reproducibility) over the concatenation of Title + Abstract Note. ^table-languages
+|   9 | Welsh        |         1 |     0.0% |
+|  10 | Hungarian    |         1 |     0.0% |
+|  11 | Vietnamese   |         1 |     0.0% |
+|  12 | undetermined |        23 |     1.1% |
+|     | **Total**    | **2,003** | **100%** |
+**Table 3.** Distribution of the analysed dataset by language, detected with `langdetect` (seeded for reproducibility) over the concatenation of Title + Abstract Note, or, for publications added to the corpus without one, from the document's own text. ^table-languages
 
 While each language will tend to speak about its country of origin, others will echo histories of censorial relations (**[[#^figure-1|Figure 1]]**). English-speaking publications tend to problematize China, Russia and Iran as sources of censorship, while the very few publications in Catalan will critique censorship cases in Spain.  
 
@@ -313,47 +314,8 @@ The “What” categories reflect the broad functions of moderation across colle
 
 ### Extracting and categorizing the who, how and why of moderation
 
-Another purpose of [[#^sampling|sampling]] was to categorize frequent patterns in how publications verbalized the what, how, who and why of moderation and related practices. In the “What” category, Gemini 3 Flash is asked in **[[#^prompt-3|Prompt 3]]** to extract *explicit* definitions of what moderation, censorship and adjacent practices are. In “How”, it looks for how moderation, censorship and adjacent practices are carried out in the form of specific techniques. This may include methods proper to content moderation and censorship (e.g., keyword filtering, shadow-banning, algorithmic detection, content removal, labeling, throttling, demotion, account suspension, beeping, marginalizing, suspensions, obfuscation), but also moderation as the management of public debate (facilitating discussions, recommending information to engaged participants, etc.). In “Who”, I consider who performs moderation and adjacent practices (human moderators, automated systems, platforms, states, communities, hybrid actors, third-party contractors, or other); and in “why”, what function or societal role moderation or censorship serves (e.g., norm enforcement, harm reduction, gatekeeping, legitimization, information control, facilitation of dialogue).
+Another purpose of [[#^sampling|sampling]] was to categorize frequent patterns in how publications verbalized the what, how, who and why of moderation and related practices. These four dimensions organize the whole coding. *What* records how a publication defines the practice it discusses: which practice it is, and how it is conceived. Explicit definitions (“X is…”, “X refers to…”, “by X we mean…”) take precedence; a publication’s framing of the practice is recorded only where it offers no explicit definition. *Who* records an actor the publication presents as performing, or as associated with, censorship, content moderation or debate management — not every actor it names. *How* records a practice, technique or mechanism through which speech is governed: methods proper to content moderation and censorship (keyword filtering, shadow-banning, removal, labeling, demotion, account suspension, obfuscation) as much as those of debate management (prompting, balancing, summarizing, mediating). *Why* records the reason a publication states for why a practice is used.
  
-```python
-EXTRACTION_PROMPT = """\
-In its history, MODERATION has been defined in a number of different ways, from a form of lessening extremes, to the moderation of public debates, to a form of censorship.
-
-You are given a PDF (already uploaded).
-
-Your task is to extract THE MOST SPECIFIC verbatim passages from the document that address the following five dimensions of moderation or censorship:
-
-1. **WHAT** — Explicit definitions of what moderation or censorship are (conceptual definitions, distinguishing features, typologies).
-2. **HOW** — HOW moderation or censorship are carried out in the form of specific TECHNIQUES or methods used (e.g., keyword filtering, shadow-banning, algorithmic detection, content removal, labelling, throttling, demotion, account suspension, beeping, marginalising, suspensions, obfuscation, facilitating discussions, recommending information to engaged participants, etc).
-3. **WHO** — WHO performs moderation or censorship (human moderators, automated systems, platforms, states, communities, hybrid actors, third-party contractors).
-4. **WHY** — What FUNCTION or societal role moderation or censorship serve (e.g., norm enforcement, harm reduction, gatekeeping, legitimisation, information control, facilitation of dialogue).
-
-Rules:
-- Provide the **exact** and **most specific** verbatim quote as it appears in the text. Do NOT paraphrase, summarise, or fabricate.
-- Include the **page number** where the quote appears, as a string (e.g., "3").
-- Do NOT repeat any quote. Each quote must appear only once in the output.
-- If a passage is relevant to multiple dimensions, place it under its **primary** dimension only.
-- If no relevant passage is found for a dimension, leave its list empty ([]).
-
-Return your response as a **single JSON object** wrapped in triple backticks tagged as json:
-
-```json
-{
-  "what": [{"quote": "...", "page": "N"}, ...],
-  "how":  [{"quote": "...", "page": "N"}, ...],
-  "who":  [{"quote": "...", "page": "N"}, ...],
-  "why":  [{"quote": "...", "page": "N"}, ...]
-}
-
-"""
-
-EXTRACT_FIELDS = [
-    'File', 'PDF Path', 'Relevant',
-    'Query', 'Authors', 'Year', 'Title', 'Snippet',
-    'What', 'How', 'Who', 'Why', 'Raw JSON',
-]
-```
-**Prompt 3.** Prompt used to extract the what, how, why, who, when of moderation and adjacent practices from each PDF. ^prompt-3
 
 Categories, especially the “how”, “why” and “who”, are intentionally topic-agnostic (**[[#^tax-how|The “how” taxonomy]]**; **[[#^topic-taxonomy|The “what” taxonomy]]**; **[[#^tax-why|The “why” taxonomy]]**; **[[#^tax-who|The “who” taxonomy]]**). This allows cross-cutting comparisons across topics and disciplines; situations in which one finds descriptions of both content moderation and censorship using “filtering” or “blocking” techniques. This also means generalizing categories beyond field-specific terminologies. In **[[#^tax-how|the “how” taxonomy]]**, “balancing” is an information management technique used as much in journalism (e.g., the idea of two-sided journalistic coverage and balance) as in the moderation of public debate, where the moderator prompts counter-arguments and controls speaking time; or as in platform design, when the ranking systems balance the visibility of posts across user divides [@ovadyaBridgingSystemsOpen2023]. “Enframing” is another example from any form of information management: platform content moderation sets the norms of public debate, as do moderators when prompting a debate. 
 
@@ -471,63 +433,137 @@ Each category was given an operational definition, often with a clause distingui
 
 ## Classifying the corpus
 
-The taxonomy is then applied to the retained corpus by the production coder selected through the calibration procedure described below (**[[#Consensus-building as validation|Consensus-building as validation]]**) — GPT-5.4 on 1,825 documents (93%) and Claude Opus 4.7, the validated calibration co-pair, on the remaining 133 (7%) where an OpenAI rate constraint interrupted the GPT pass — using **[[#^prompt-4|Prompt 4]]**. Four choices keep the procedure tethered to the close reading. First, the closed-set decision rules — each category’s definition together with its disambiguation clause — are injected into the prompt verbatim from the taxonomy file, so that the model matches passages against the same boundary distinctions the analyst drew. Second, the model is asked to code the publication’s *stated, predominant* framings, not every passing mention. Third, every finding must be anchored by a verbatim quote, its page number, and a short noun phrase naming what the passage describes. Fourth, the model is forbidden from inventing categories or coding inferentially; where nothing fits, an explicit “Other” fallback with a three-word description is required instead. 
+The taxonomy is applied to the corpus in two steps. A retrieval system first selects, in each publication, the passages most likely to bear on each entry of the taxonomy; a language model, OpenAI’s GPT-6.1-sol, then codes those passages, and only those, against the closed set. Separating the two steps makes the selection auditable — every passage the model saw is recorded with its page — and gives every entry of the taxonomy the same chance of being looked for in every publication, whatever its length.
 
-Publications without a PDF were not coded in this pass; two are represented by findings carried over from the first pass, which had coded them from title and snippet. Each finding also carries two item-level geographic fields: *country* (the jurisdictions or regions the item empirically discusses — blank if purely theoretical) and *medium* (the specific platforms or technologies discussed — Facebook, YouTube, television, radio, print press, LLMs — blank if medium-agnostic). Media and geographic locations were normalized manually. Of the 60,758 finding rows in the final dataset, 95% carry a jurisdiction or region and 5% have no geographic information at all; within the coded 95%, less than 1% carried geographic text that could not be matched to the controlled vocabulary and was retained in raw form.
+### Building the retrieval index
+
+Every publication was converted into one paginated PDF, so that every finding can be cited as a document and a page. Of the 2,305 publications in the corpus, 2,006 had a PDF: 1,998 on disk and 8 downloaded from the URL in their bibliographic record. For 190 others, the record’s web page was printed to an A4 PDF by a headless browser, from the live page or, failing that, from its Internet Archive capture; most of these are publisher or repository landing pages that carry metadata and an abstract rather than the full text, and their page numbers are print pages rather than the publication’s own. The remaining 109 could not be retrieved, mostly because publishers refused automated access or the record had no working link. Text was extracted page by page with PyMuPDF and normalized (Unicode NFKC, rejoined hyphenation, collapsed whitespace), and each document’s language was identified from its text. Pages were cut into passages of 160 words overlapping by 40, never across a page boundary: 295,598 passages over 84,415 pages.
+
+Two indexes were built over these passages. A lexical index (BM25) stems each document in its own language — English, Portuguese, French, Spanish or Italian — and removes the stopwords of all five, so that a query matches inflected forms of its words. A semantic index embeds every passage with the multilingual model bge-m3, which places passages and queries written in different languages in the same space, so that a definition written in English can retrieve its equivalent in Portuguese. The two rankings are merged by reciprocal rank fusion: a passage ranks high when either the words or the meaning of a query match it.
+
+### Selecting passages
+
+Each of the 107 entries of the taxonomy, other than the residual “Other”, became a pair of queries: its label with the first sentence of its definition, for the semantic index, and its label with its keywords, for the lexical index. The keywords were themselves chosen through retrieval. For each entry, candidate terms were drawn from the passages that its definition alone retrieved, and kept only if they pointed to that definition rather than to the field in general: a term occurring on more than 1.5% of the corpus’s pages was dropped, except for named laws and the central terms of a category. Where the literature uses them, keywords include their Portuguese, French, Spanish and Italian forms (**[[#^tax-how|Tables 4–7]]**, column Keywords).
+
+Within each publication, the two passages that rank highest for each entry were selected. Because the *what* dimension asks for definitions, a second search looked for definitional phrasing — “is defined as”, “refers to”, “by censorship we mean”, “entendemos por”, “on entend par”, “si intende per” and their equivalents — within about 150 characters of a word for censorship or moderation in any of the five languages. Up to eight such passages per publication were added and flagged to the model as definition candidates; 907 publications contained at least one. Passages from bibliographies were excluded. The union was capped at forty passages per publication, definition candidates first, then the passages selected by the most entries: 70,623 passages in all, forty for the median publication, or about 8,700 tokens. Short publications are thus read almost entirely; a long book is read in the forty passages most pertinent to the taxonomy.
+
+### Coding
+
+Each publication was then sent to GPT-6.1-sol through OpenAI’s Batch API, at medium reasoning effort, with the instructions in **[[#^prompt-3|Prompt 3]]** and a message carrying its bibliographic record (title, author, year, language, abstract) and its selected passages in page order, each with an identifier and a page number. The instructions contain the whole taxonomy: every category and sub-category with its definition, the clause distinguishing it from its neighbors where there is one, and its keywords, presented as cues that are “neither required nor sufficient”. Four choices keep the procedure tethered to the close reading. First, the model sees only the retrieved passages and is told to code only what they say: retrieval proposes, the model decides. Second, the categories are a closed set: the answer is constrained by a schema to the taxonomy’s labels, with “Other” and a three-word description as the only way out. Third, every finding must carry a verbatim quote from one passage, the passage’s identifier and its page. A finding whose quote is not found, character for character, in the passage it names is discarded, and the page is always taken from the passage, never from the model. Fourth, each *what* finding records whether its quote is an explicit definition or a framing, and definitions are coded first.
 
 ````
-You are coding a scholarly publication (the attached PDF) for a literature review on censorship and content moderation. Extract findings: passages where the publication addresses one of four dimensions of speech governance.
+You are coding passages from ONE scholarly publication for a literature review on speech governance: censorship, content moderation, debate management and related practices of managing what can be said, seen or circulated.
 
-DIMENSIONS:
-  WHO  — the agent that performs moderation/censorship
-  WHAT — how the publication CONCEPTUALISES moderation/censorship (its framing)
-  HOW  — the concrete technique by which speech is governed
-  WHY  — the rationale or function invoked for governing speech
+The passages below the instructions were RETRIEVED from the publication by a search system, one search per category of the taxonomy. Each passage carries an id and the PDF page it comes from. You see only these passages, not the whole publication, so code only what they say. A passage may have been retrieved for one category and belong to another, or to none — retrieval proposes, you decide.
 
-For every finding emit ONE object:
-  "type"        — "WHO" | "WHAT" | "HOW" | "WHY"
-  "category"    — EXACTLY one label from the closed set below (verbatim, case-sensitive)
-  "subcategory" — only for WHAT, when sub-categories are listed under the chosen
-                  category; otherwise omit
-  "page"        — page number of the quote (string)
-  "quote"       — the exact verbatim passage, from a sentence up to at most one
-                  paragraph; never paraphrase, truncate misleadingly, or fabricate
+DIMENSIONS
+  WHAT — how the publication DEFINES the practice it discusses: which practice it is
+         (category) and how it defines it (subcategory). Explicit definitions come
+         first: passages that state what censorship, content moderation or debate
+         management IS ("X is…", "X refers to…", "we define X as…", "by X we mean…",
+         and the same in other languages). Only when the passages contain NO explicit
+         definition of a practice may you code the FRAMING the publication gives it.
+  WHO  — an actor the publication mentions as performing, or associated with, the
+         practice (censorship, content moderation, debate management) — not any
+         actor named in passing
+  HOW  — a practice, technique, mechanism or way of doing by which that practice
+         governs speech
+  WHY  — a reason the publication states for why a given moderation or censorship
+         practice is used (its stated rationale or function)
 
-Each category below is given as: Label — decision rule. Match the passage against the
-decision rule, not just the label name. When two categories are close, the decision
-rule states the distinction — apply it.
+OUTPUT — one object per finding:
+  "type"        — "WHAT" | "WHO" | "HOW" | "WHY"
+  "category"    — EXACTLY one category from the closed set (verbatim, case-sensitive)
+  "subcategory" — EXACTLY one subcategory listed under that category, when the
+                  category lists subcategories (see rule 3); otherwise null
+  "what_kind"   — WHAT findings: "definition" (the passage explicitly defines the
+                  practice) or "framing" (no explicit definition; the passage frames it);
+                  null for WHO, HOW and WHY
+  "passage_id"  — the id of the passage the quote comes from (e.g. "P7")
+  "page"        — that passage's page, copied as given
+  "quote"       — an exact, contiguous excerpt of that passage, from one sentence up
+                  to one paragraph, in the passage's own language. Copy characters as
+                  they appear; never translate, paraphrase, join separate passages or
+                  fill gaps. Quotes are checked automatically against the passage text
+                  and a finding whose quote is not found there is discarded.
 
-CLOSED SET:
+In addition, give the publication's TOPIC once, at the top level of your answer:
+  "topic" — {"category": "Censorship" | "Content moderation" | "Debate management" | "Other",
+             "subcategory": three-word description when category is "Other", else null,
+             "basis": one sentence (≤ 25 words) saying why}
+  The topic is the practice the publication is PREDOMINANTLY about, judged from its
+  title, abstract and the passages — not the practice it mentions most in passing.
+  A publication that studies censorship, content moderation or debate management in a
+  particular setting (gaming, hate speech, surveillance, trust and safety, a country,
+  a platform) takes that practice as its topic: the setting is not the practice.
+  Use "Other" only when none of the three practices is central — e.g. publications
+  predominantly about media moderation, media regulation or AI alignment, or about
+  something else entirely — with a three-word subcategory naming what it is about.
 
-{taxonomy — the closed-set categories of the four taxonomies (what, how, who, why), each rendered as "Label — decision rule"}
+CLOSED SET
+Each entry gives: label — definition. "Cues" are examples of wording the literature
+uses for the entry; they are neither required nor sufficient, and passages may express
+them in Portuguese, French, Spanish, Italian or other languages. Match the passage
+against the definition, not the label or the cues alone. Where a definition says how
+an entry differs from a neighbour, apply that distinction.
 
-Coding rules:
-1. Categories are a CLOSED SET — copy labels exactly. Use "Other" only when nothing
-   genuinely fits; then emit the category as "Other: <three words>" (the word
-   "Other:" followed by a concise three-word description).
-2. One quote = one finding, under its PRIMARY dimension. Emit the same passage under
-   two types only when it explicitly addresses both (e.g. names an actor AND their
-   technique).
-3. Code what the PUBLICATION says, not what you know about the topic.
-4. Prefer the most specific applicable category over a generic one.
-5. If a dimension has no findings, omit it — no empty placeholders.
+{closed set — every category and sub-category of the four taxonomies (Tables 4–7), each rendered as "label — definition", with its keywords as "Cues"}
 
-Return a single JSON object:
+CODING RULES
+1. The categories and subcategories are a CLOSED SET: copy labels exactly as listed.
+2. If nothing in the closed set fits a passage that clearly addresses a dimension, emit
+   category "Other" with "subcategory" set to a three-word description
+   (e.g. "subcategory": "algorithmic audit regimes"). Do not use "Other" when an
+   entry fits.
+3. Subcategories:
+   • When a category lists subcategories, give the one that fits.
+   • A category that ALSO lists "(no subcategory) — …" may be coded without a
+     subcategory when no listed subcategory fits; "subcategory" is null then (never
+     the text "(no subcategory)" or "general").
+   • "General" is itself a subcategory where it is listed (e.g. Censorship › General):
+     use it for passages about the practice that take none of the specific framings.
+4. One quote = one finding, under its PRIMARY dimension. Emit the same quote under a
+   second type only when it explicitly addresses both (e.g. names an actor AND that
+   actor's technique).
+5. Code what the PUBLICATION says (including its account of others' views), not what
+   you know about the topic. Do not code bibliography entries, running headers, tables
+   of contents or figure labels.
+6. Prefer the most specific applicable entry over a generic one.
+7. Passages can overlap. Do not emit the same quote twice under the same type and
+   category.
+8. If no passage addresses a dimension, emit nothing for it. An empty list is a valid
+   answer.
+9. WHAT: code every explicit definition of censorship, content moderation or debate
+   management in the passages ("what_kind": "definition"). Passages flagged
+   "definition candidate" were found by searching for definitional phrasing; check them
+   first, but code only those that really define the practice. Code framings
+   ("what_kind": "framing") only for a practice the passages never explicitly define.
+
+Return a single JSON object and nothing else:
 
 ```json
-{"findings": [
-  {"type": "HOW", "category": "Filtering", "page": "12", "quote": "..."},
+{"topic": {"category": "Content moderation", "subcategory": null, "basis": "The article studies how platforms govern user speech through their own rules and enforcement."},
+ "findings": [
+  {"type": "HOW", "category": "Removal", "subcategory": "Deplatforming", "what_kind": null,
+   "passage_id": "P4", "page": "12", "quote": "..."},
   {"type": "WHAT", "category": "Content moderation", "subcategory": "Platform governance",
-   "page": "3", "quote": "..."}
+   "what_kind": "definition", "passage_id": "P1", "page": "3", "quote": "..."},
+  {"type": "WHO", "category": "Platforms", "subcategory": null, "what_kind": null,
+   "passage_id": "P4", "page": "12", "quote": "..."}
 ]}
 ```
 ````
-**Prompt 4.** The classification prompt issued identically to all six validation raters (Gemini 3.5 Flash, GPT-5.4, GPT-5.4-mini, GPT-5.1, Claude Opus 4.7, Claude Haiku 4.5) and, subsequently, to the calibrated production coder. The closed-set categories are injected verbatim from the taxonomy file, each as a one-line decision rule with its disambiguation clause. ^prompt-4
+**Prompt 3.** Instructions given to GPT-6.1-sol for each publication. The closed set is injected from the taxonomy file: each category and sub-category with its definition, and its keywords as cues. ^prompt-3
 
+The model also gives each publication its *topic*: the practice — censorship, content moderation or debate management — that the publication is predominantly about, judged from its title, abstract and passages, or “Other” with a three-word description when none of the three is central (see **[[#Topical and sub-topical categories|Topical and sub-topical categories]]**). This first reading assigned “Other” to 466 publications, many of which studied one of the three practices in a particular setting: platform regulation read as media regulation, televised debates read as political science. All 466 were read a second time in a request that concerned only the topic. It gave the model the publication’s record and up to twelve of its own *what* findings, under a rule stating the boundaries of each practice explicitly; the earlier label was not shown. Of the 466, 270 moved to one of the three practices and 196 remained “Other” — mostly studies of political moderation and legal theory, and publications retrieved for the word “censor” that concern the Roman censorship or the census.
 
-After classification, the dataset was cleaned. PDF-extraction artifacts were normalized across all fields without altering the wording of any quote; rows coded `Other` had residual sub-categories cleared; and titles and authors were harmonized so that encoding and citation-style variants no longer split one work into several. Because the v2 taxonomy folded the v1 topic *AI alignment* into broader categories, the 269 findings coded under it were restored as WHAT / AI alignment rows and flagged `legacy-old-results` for auditability. Papers making distinct what, how, who or why claims were kept as separate findings. The final dataset comprises 60,758 findings across 1,960 items: 23,401 HOW (38.5%), 16,303 WHY (26.8%), 12,046 WHO (19.8%) and 9,008 WHAT (14.8%).
+### The dataset
 
-Finally, to summarize what the categories share and where they diverge lexically (**[[#^figure-14|Figure 14]]**), the coded keyword vocabulary of the v1 pass (the `Mentioned items` column, short curated phrases attached to each finding) was recovered and re-grouped by each publication’s current WHAT category. Treating each category as a keyword set yields true set-regions: keywords exclusive to one category, keywords occurring in exactly one pair of categories, and keywords spanning at least five of the six sets — the field’s shared vocabulary.
+The analysed dataset comprises 39,877 findings across 2,003 publications: 16,927 HOW (42.4%), 10,973 WHO (27.5%), 7,647 WHY (19.2%) and 4,330 WHAT (10.9%). Of the *what* findings, 2,363 are explicit definitions and 1,967 framings. By topic, 1,096 publications are about content moderation, 666 about censorship, 99 about debate management, and 142 about something else.
+
+Each finding also carries two fields that describe the publication rather than the passage: *country* (the jurisdictions or regions it empirically discusses — blank if purely theoretical) and *medium* (the platforms or technologies it discusses — Facebook, YouTube, television, radio, print press, LLMs — blank if medium-agnostic). They were coded per publication from its full text in an earlier pass, then normalized manually, and are not part of the retrieval-based coding; 1,877 of the 2,003 publications have them, and 92% of findings carry a country.
+
+Finally, to summarize what the categories share and where they diverge lexically (**[[#^figure-14|Figure 14]]**), keyword phrases attached to each publication in an earlier extraction pass were grouped by the publication’s topic. Treating each topic as a keyword set yields true set-regions: keywords exclusive to one topic, keywords occurring in exactly one pair of topics, and keywords shared by all.
 
 ## What is distant reading with LLMs?
 
@@ -535,59 +571,26 @@ This chapter reconstructs how moderation and censorship have been theorized acro
 
 With LLMs, we are invited to reflect anew on how much reading we delegate to computational methods. As machine learning techniques, LLMs are often described as “black-boxing” a great deal of interpretive capacities — at least in comparison to statistically simpler methods like topic modeling, bibliometrics, tf-idf, n-grams, and so on. One can harness critical usage of these tools by combining a good grasp of one’s dataset and an at least rudimentary understanding of how each technique understands and represents textual features. Critical use would then consist in making informed decisions about the parameters one chooses for processing, be that the very choice of a technique (tf-idf for predominant terms per set of documents; n-grams for overall statistical representations; word2vec for semantic analyses), as well as the twistable nuts and bolts that constitute each: choosing the length of a context window, a curated list of stopwords, a tokenizer, and so on. 
 
-With LLMs — and with a corpus of this size — there are two problems of opaqueness: that of the *model* — which, with a context window approaching a million tokens, acts within a large and thus more autonomous margin of choice — and that of the *publications*, which are so large that the model is susceptible to arbitrary reading choices. LLMs also add another layer of interpretability. Though Gemini 3 Flash is asked to do *information extraction*, there were several instances in which it engages with paraphrasing, which in turn echoed common-sense biases about a given topic or category. 
+With LLMs — and with a corpus of this size — there are two problems of opaqueness: that of the *model*, which acts within a large margin of choice, and that of the *publications*, which are often too long to be read whole without the model making arbitrary choices of its own about what to read. Retrieval answers the second problem at the cost of a new delegation: the model no longer chooses which parts of a publication to read, but neither does the analyst — a retrieval system does, by the closeness of passages to the taxonomy’s definitions and keywords. LLMs also add another layer of interpretability: asked to extract, a model will sometimes paraphrase, and paraphrase echoes common-sense assumptions about a topic. This is why every quote is checked against its passage.
 
-One way to approach this — beside confronting yet another instance of epistemic destabilization — is to be explicit on how much reading is delegated. Delegation, here, means deciding what portion of a reading task is given to the LLM and what portion is retained by the analyst — and how, together, this forms a co-reading in its own right. Concretely, four delegations were made in this chapter. First, the LLM is used to annotate material that I have already read in smaller quantities during sampling. Second, the taxonomy was co-produced: the LLM proposed candidate clusters, but the categories, their definitions and their disambiguation clauses were authored by hand and expertise in the topic. Third, page references and verbatim quotes are required for every finding so that I can read the passage and validate the selection. Still — and this is the fourth delegation point — the model retained considerable epistemic authority in the *selection* of which passages count as the predominant framing. 
+One way to approach this — beside confronting yet another instance of epistemic destabilization — is to be explicit on how much reading is delegated. Delegation, here, means deciding what portion of a reading task is given to the LLM and what portion is retained by the analyst — and how, together, this forms a co-reading in its own right. Concretely, five delegations were made in this chapter. First, the LLM is used to annotate material that I have already read in smaller quantities during sampling. Second, the taxonomy was co-produced: an LLM proposed candidate clusters, but the categories, their definitions, their disambiguation clauses and their keywords were authored by hand, and keywords were checked against what the retrieval system returns for each definition. Third, the selection of passages is delegated to retrieval: what is not retrieved is not coded, but every passage the model saw is recorded, so the selection can be audited and rerun. Fourth, verbatim quotes, checked automatically against the passages, and page references are required for every finding, so that I can read the passage and validate the selection. Still — and this is the fifth delegation — the model retains considerable epistemic authority in deciding which retrieved passages address a dimension, and under which category.
 
-Dealing with the last step invites a form of consensus-building: i.e., the process by which we prioritize the readings that converge across different reading instances from the same model or across models. We will revisit this in the following section. 
+The checks applied to that last delegation are described in the following section.
 
-## Consensus-building as validation
+## Validation
 
-The validation borrows the design of intercoder comparison from content analysis, but not its claim to reliability. No human-coded ground truth exists against which a model could be scored, so the comparison cannot establish which model reads correctly. What it can show is where readers — here, six models given the same prompt and taxonomy — part ways, and what that says about the taxonomy. A random sample of 300 publications, stratified by topic and discipline, was annotated by each model. Documents exceeding the providers' 100-page input cap (35 of the 300) were split into chunks and their findings re-merged with corrected page references.
+No human-coded ground truth exists against which the coding could be scored, so validation here consists of checks on each step rather than a reliability coefficient.
 
-Disagreement between the models is read in two ways. Categorical disagreement — where models assign the same passage to different cells of the taxonomy — is treated as a signal that the passage is genuinely contested, or that the taxonomy is under-specified at that point. *Phrasal disagreement* — where models converge on the same category but render the verbatim attribution in different surface forms — is treated as paraphrase rather than as disagreement, because what the analysis turns on is the category a model assigns, not the wording in which it quotes the passage.
+*Quotes.* Every quote was matched against the passage it cites, after normalizing Unicode, quotation marks, dashes and whitespace. Of 40,149 findings returned, 272 (0.7%) failed and were discarded. Every retained finding is therefore verbatim and can be located by document and page.
 
-The models are compared with a *match score*, computed pairwise. For every finding emitted by model A, the best-matching finding from model B is identified by one-to-one matching on a composite similarity. The composite is 55% the category cell (1.0 for an identical Type × Category match, 0.7 if only the WHAT sub-category differs, 0.3 if only the Type matches, 0 otherwise), 30% the verbatim quote (the maximum of token-Jaccard and containment over 4+-character tokens, so that one model quoting a sentence the other quoted inside a paragraph still scores high), and 15% the page reference (1.0 same page, 0.5 within ±2 pages, neutral when missing). A document's score is the sum of matched similarities divided by the larger of the two finding sets, and the corpus-level score is the mean over the 300 documents. The score is not corrected for chance agreement. It is not a kappa, and it should not be read against the Landis–Koch bands, Krippendorff's α or any other reliability convention.
+*Labels.* The answer schema admits only the taxonomy’s labels, and each sub-category was checked against its category.
 
-Because it divides by the larger finding set, the match score folds two things into one number: how much of another reader's selection a model reproduces, and whether it places what it does select in the same cell. **[[#^table-agreement-verdict|Table 9]]** reports them separately. *Extraction recall* is the share of a reference model's findings that the candidate matches; *conditional agreement* is the share of matched findings placed in the same Type × Category (and, for WHAT, the same sub-category).
+*Reasoning effort.* Before the full run, twenty publications were coded twice from the same passages and instructions, at low and at medium reasoning effort. 87% of the low-effort findings had a counterpart among the medium-effort ones (one-to-one matching on the quote), and 80% of the matched pairs carried the same type, category and sub-category; both runs gave all twenty publications the same topic. Medium effort returned about a third more findings (26.7 against 20.2 per publication), mostly *who*, *how* and *why* passages that a sample reading found largely relevant, and was used for the full run.
 
-### Calibration
+*Topics.* Each publication’s topic was cross-tabulated with the practice that dominates its own *what* findings. In the first four of five batches, 205 publications labeled “Other” had at least 60% of their definitions and framings pointing to one practice — 135 to content moderation, 39 to censorship, 11 to debate management. This disagreement led to the second topic reading described above.
 
-Six models were tested against the same prompt and taxonomy. Two of them — GPT-5.4 and Claude Opus 4.7 — were expected in advance to be the strongest available readers, and their agreement with each other was taken as the calibration target: the convergence that two frontier readers reach on this task, this taxonomy and this corpus. Before any model was run, a rule for promoting a cheaper model was set: its agreement with the two frontier readers had to come within 0.05 of theirs with each other. The first comparison, with Gemini 3.5 Flash as the only candidate, measured agreement on shared category labels. (Gemini 3.5 Flash is a later release than the Gemini 3 Flash used in the extraction steps described earlier in this method; neither coded the corpus, which was coded by GPT-5.4 and Claude Opus 4.7.) A label-set measure cannot tell whether two readers who assign the same category are citing the same passage, so it was replaced by the match score described above, computed from the same annotations without running any model again. The 0.05 margin was carried over and applied to each pairing: against a target of 0.446, a candidate needed ≥ 0.396 against both GPT-5.4 and Opus 4.7. An absolute threshold that the original rule also set, α ≥ 0.667, was dropped, since the frontier pair itself fell well below it. Three further candidates — GPT-5.4-mini, GPT-5.1 and Claude Haiku 4.5 — were added after Flash had failed. The outcome does not depend on the change of measure: on shared labels, too, no candidate comes within 0.05 of the frontier pair. **[[#^table-agreement|Table 8]]** reports every pairing.
+*Metadata.* Disciplines were cleaned by hand against the master bibliography, correcting mislabeled items — a literary studies article tagged as communication studies on the strength of platform vocabulary in its abstract, for example.
 
-| | Flash | GPT-5.4 | GPT-mini | GPT-5.1 | Opus 4.7 | Haiku 4.5 |
-|---|---:|---:|---:|---:|---:|---:|
-| **Flash** | — | 0.224 | 0.184 | 0.164 | 0.284 | 0.228 |
-| **GPT-5.4** | 0.224 | — | 0.371 | 0.400 | **0.446** | 0.329 |
-| **GPT-mini** | 0.184 | 0.371 | — | 0.330 | 0.341 | 0.289 |
-| **GPT-5.1** | 0.164 | 0.400 | 0.330 | — | 0.364 | 0.263 |
-| **Opus 4.7** | 0.284 | **0.446** | 0.341 | 0.364 | — | 0.358 |
-| **Haiku 4.5** | 0.228 | 0.329 | 0.289 | 0.263 | 0.358 | — |
-
-**Table 8.** *Pairwise match score across the 300-document sample, under identical prompt and taxonomy. The score is not chance-corrected. Bold cells mark the calibration target (Opus 4.7 ⟷ GPT-5.4).* ^table-agreement
-
-| Reader | Findings per document | Recall | Precision | Same cell, given a match | Match score |
-|---|---:|---:|---:|---:|---:|
-| GPT-5.4 | 39.1 | — / 0.91 | — / 0.66 | — / 0.73 | — / 0.446 |
-| Opus 4.7 | 28.5 | 0.66 / — | 0.91 / — | 0.73 / — | 0.446 / — |
-| GPT-5.1 | 40.5 | 0.75 / 0.88 | 0.72 / 0.62 | 0.73 / 0.70 | 0.400 / 0.364 |
-| GPT-mini | 35.0 | 0.66 / 0.77 | 0.74 / 0.63 | 0.67 / 0.62 | 0.371 / 0.341 |
-| Haiku 4.5 | 16.3 | 0.35 / 0.45 | 0.83 / 0.78 | 0.65 / 0.65 | 0.329 / 0.358 |
-| Flash | 8.2 | 0.21 / 0.28 | 0.99 / 0.99 | 0.81 / 0.83 | 0.224 / 0.284 |
-
-**Table 9.** *Each reader against the calibration pair, with the match score separated into extraction recall, precision and conditional agreement. Recall is the share of the reference model's findings that the reader matches one-to-one; precision is the share of the reader's own findings that are matched; conditional agreement is the share of matched findings placed in the same cell. Each cell gives the value against GPT-5.4, then against Opus 4.7. No candidate reaches 0.396 against both.* ^table-agreement-verdict
-
-With the two components separated, the table describes the candidates rather than ranking them. Gemini 3.5 Flash emits eight findings per document where the calibration pair emits 28.5 and 39.1. It reproduces a fifth to a quarter of their selection, but 99% of its own findings have a counterpart in theirs (its precision in Table 9), and it places 81–83% of those in the same cell — more often than GPT-5.4 and Opus 4.7 agree with each other (73%). It reads precisely, and little. Haiku 4.5 also reads little, at sixteen findings per document, and agrees less when it does (65%). GPT-5.4-mini reads nearly as much as the pair but places a third of its matched findings in a different cell. GPT-5.1 is the instructive case. Its conditional agreement with GPT-5.4 equals the calibration pair's own, and it reproduces 88% of Opus 4.7's selection; it misses the bar against Opus because it emits 42% more findings than Opus does, and the score counts every unmatched finding against the pair. What separates these readers, then, is less how they classify a passage than how much of a document they choose to code.
-
-Under that rule the production coder is therefore a member of the calibration pair itself. GPT-5.4 was chosen over Opus 4.7 on cost, and because its mid-stream truncations are recoverable from the response body, so that no document is lost to a refusal it never made. It coded 1,825 of the 1,984 documents submitted (92%). The remaining 159 returned no findings from GPT-5.4, most because a mid-batch account constraint rejected the requests, and were passed to Opus 4.7, which returned findings for 133 of them; per-finding provenance is recorded in the `Coder` column. The 26 documents that yielded nothing from either model are the unreadable files described above. Two further checks were applied to the corpus itself. Every retrieved PDF passed a relevance test on its first three pages: the title had to appear as a contiguous phrase in the metadata or on page 1, and the author surname within the first ~600 characters, where signatures sit rather than later citations. Items whose title appeared only in the body, or which carried a title but no author signature, were rejected, and the undecided cases went to a single lightweight LLM call. Disciplines and topics were then cleaned by hand against the master bibliography, correcting mislabeled items — a literary studies article tagged as communication studies on the strength of platform vocabulary in its abstract, for example — and where categories proved too coarse or too fine, the taxonomy was edited and the affected items reclassified.
-
-### Where readers diverge
-
-The comparison is more informative about the taxonomy than about the models. Pooling the matched findings of all fifteen pairings, the boundaries at which readers place the same passage in different cells are not scattered: they fall where this chapter locates the instability of the concept. On WHAT, the most frequent split by a wide margin is between *Censorship* and *Content moderation* — 536 matched findings, in 139 of the 300 documents. It is followed by boundaries inside each: within content moderation, between *platform governance* and *platform regulation*, and between moderation *as censorship* and *as platform governance*; within censorship, between *constitutive* and *regulative* conceptions. Readers asked to decide, passage by passage, whether a text describes censorship or moderation reproduce the oscillation that the rest of this chapter traces across the literature. The category that carries moderation's other meaning is the least stable of all. Readers agree on *Debate management* for fewer than half of its matched appearances, against four in five for *Censorship* and *Content moderation*, and when they disagree they most often move it into *Content moderation*.
-
-The other dimensions split along comparable seams. On WHY, readers divide between *Ideological consolidation* and *Political control*, between *Harm principles and hate speech regulation* and *Social cohesion*, and between *Political control* and *State security* — boundaries at which the same passage can be read as stating either the purpose of an intervention or its pretext. On WHO, they divide between *Platforms* and the apparatus through which platforms act (*Algorithmic moderation systems*, *Content moderators / BPO workforces*), and between *Government agencies* and the bodies that act in their name (*Censorship boards or agencies*, *Police / intelligence services*, *Legislators*). On HOW, *Review* is split against *Filtering*, *Removal* and *Monitoring*: the point at which a reader must decide whether a passage describes an assessment or its consequence.
-
-Conditional on a match, agreement is similar across the four dimensions. The calibration pair agrees most on WHO (77%) and least on WHAT (69%), where the sub-category adds a finer cut. The size of a closed set, in other words, does not by itself predict disagreement — WHO has the largest, with 41 categories — while the proximity of the concepts it separates does. Where some models score lower on WHO in the composite, it is because they extract fewer WHO findings (GPT-5.4-mini recovers half of the pair's, Haiku 4.5 a third), not because they classify them differently. Analyses below that turn on the difference between neighboring categories — above all between censorship and content moderation at the level of a single passage — should be read with this in mind.
 
 ## Limitations
 
@@ -597,7 +600,7 @@ A second constraint is the set of queries, which may well have included *media c
 
 A third concerns the structure of platform critiques. The chapter codes content moderation as approaching censorship only where an author themselves makes the linkage. This is appropriate for a *reception* study of how moderation has been theorized, but it leaves out work where moderation is described as a censorial practice without using the word. The taxonomy compensates partly by coding “*how*” findings independently of “*what*” findings, so that a paper describing platform deletion without naming it as censorship is still legible as describing a censorial technique.
 
-A fourth concerns the LLM-assisted classification itself. Even with verbatim-quote anchoring and a fixed vocabulary, the model exercises judgment in selecting which passages count as the *predominant* framing of a paper, and that judgment is not stable. Where the analyses below turn on small differences between categories, this should be borne in mind; where they turn on large patterns (a discipline favoring one cluster of categories over another, a topic gaining or losing share over a decade), it should not. 
+A fourth concerns the LLM-assisted classification itself. Even with verbatim-quote anchoring and a closed vocabulary, the model exercises judgment in deciding which retrieved passages address a dimension and under which category, and that judgment is not stable: two readings of the same passages at different reasoning efforts agreed on four in five matched findings. Retrieval adds a limit of its own. The model reads at most forty passages per publication, so long books are read selectively, and a passage that expresses a category in words far from its definition and keywords may not be retrieved at all. Web pages printed from publisher sites often carry only an abstract. Where the analyses below turn on small differences between categories, this should be borne in mind; where they turn on large patterns (a discipline favoring one cluster of categories over another, a topic gaining or losing share over a decade), it should not.
 
 Finally, the taxonomy itself reflects a particular reading. Categories are grounded in verbatim phrases, but their clustering is interpretive, and an alternative reader might draw the lines on different terms — particularly at the boundary between *content moderation* and *platform governance*, which I have placed at the level of analytical scope (the practice itself vs. the institutional, legal and infrastructural arrangement around it).
 
@@ -717,7 +720,7 @@ This leads some scholars to associate platforms with, indeed, a censor in their 
 
 # Conclusions
 
-This chapter asked what kind of speech governance technique moderation is, how it came to be treated as a synonym for censorship, and whether that equivalence obscures other functions that moderation has historically performed. To answer these questions, I used distant reading [@morettiDistantReading2013] to compare 1,960 publications on moderation, censorship and neighboring practices across five languages. The comparison followed four components: what each publication understands the practice to be, who performs it, why it is performed, and through which techniques.
+This chapter asked what kind of speech governance technique moderation is, how it came to be treated as a synonym for censorship, and whether that equivalence obscures other functions that moderation has historically performed. To answer these questions, I used distant reading [@morettiDistantReading2013] to compare 2,003 publications on moderation, censorship and neighboring practices across five languages. The comparison followed four components: what each publication understands the practice to be, who performs it, why it is performed, and through which techniques.
 
 One observation is that the literature tends to answer the question through the notion of censorship. Censorship is most often theorized as a regulative power: the suppression of information by actors able to define normative criteria without consultation and to enforce them through legal, economic, technical or doctrinal means. A later body of work complicates this definition by treating censorship as constitutive of expression itself, rather than only as the intentional act of an identifiable censor [@bourdieuLangagePouvoirSymbolique2001; @postCensorshipSilencingPractices1998]. As platforms assumed greater control over the availability, visibility and circulation of public expression, scholarship increasingly placed content moderation within this tradition. 
 
@@ -733,6 +736,6 @@ The same point applies to platforms. Trust and safety has developed a detailed r
 
 This recovery depends on *metamoderation*: spaces and procedures through which the norms of moderation can themselves become objects of moderation. Appeals, public consultations, collective rule-making and procedures for reviewing how a community is governed all allow participants to ask not only whether a rule was applied correctly, but what the rule means, why it exists and whether it should change [@geigerBotbasedCollectiveBlocklists2016b, p. 20; @seeringModeratorEngagementCommunity2019]. Metamoderation does not require disagreement to disappear, nor does it promise a final consensus over speech norms, but it provides somewhere for that disagreement to be articulated, contextualized and revised. Without such spaces, the censorial function runs ahead of the dialogical one and conflict is displaced rather than worked through. The need for metamoderation is therefore not an addition to moderation but follows from the meaning of moderation developed in this chapter: the attempt to sustain exchange among actors who do not already agree on the terms of their debate.
 
-[^1]: The distant reading presented here is unpublished material developed for this thesis, and its extraction pipeline reflects the state of available tooling at the time of writing. Passage selection is performed over whole documents — or, for documents over 100 pages, over 100-page segments — which leaves used models considerable latitude in deciding which passages constitute a publication’s predominant framing. Retrieval-augmented approaches, which constrain selection to passages retrieved against the taxonomy’s own category definitions, would narrow that latitude and make the selection step independently auditable. Whether they would also improve agreement is an open question: the comparison of models reported in the chapter finds that they differ less in how they classify a passage than in how much of a document they select, and that where they do classify differently, they divide along the conceptual boundaries the chapter examines.
+[^1]: The distant reading presented here is unpublished material developed for this thesis, and its pipeline reflects the state of available tooling at the time of writing. Passage selection is performed by retrieval against the taxonomy’s own definitions and keywords rather than by the model over whole documents. This narrows the model’s latitude in deciding which passages constitute a publication’s predominant framing and makes the selection step independently auditable: every passage the model read is recorded with its page.
 
 [^2]: Of the 1,984 PDFs on which the distant reading rests, 201 (10%) were retrieved through Sci-Hub and 16 (1%) through Anna’s Archive, the latter all key works by theorists added to the corpus by hand; LibGen, Sci-DB and Garbage World were also queried but supplied nothing that passed the relevance check. The rest came from URLs recorded in the bibliographic entries (34%), Google Search (25%), OpenAlex’s content API and open-access locations (15%), publisher and repository pages (6%), the Royal Danish Library (2%) and my existing Zotero library (2%); 5% cannot be attributed from the retrieval logs. Shadow libraries were used for works that open and institutional channels did not reach, and because a query by DOI, or by title and author, returned the edition cited more reliably than open web search.
