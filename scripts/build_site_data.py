@@ -51,6 +51,7 @@ if _os.environ.get("PYTHONHASHSEED") != "0":
                {**_os.environ, "PYTHONHASHSEED": "0"})
 
 import csv
+import io
 import os
 import re
 import sys
@@ -72,8 +73,9 @@ ROOT   = Path(__file__).resolve().parent.parent.parent
 DATA_DIRS = [ROOT]
 if os.environ.get("PHD_DATA_DIR"):
     DATA_DIRS.insert(0, Path(os.environ["PHD_DATA_DIR"]).expanduser())
-DATA_DIRS.append(Path.home() / "Projects" / "PhDs" / "PhD 2020-2025"
-                 / "Publications 📇" / "Censorship and moderation")
+for _d in ("PhD - Censorship and moderation", "Censorship and moderation"):
+    DATA_DIRS.append(Path.home() / "Projects" / "PhDs" / "PhD 2020-2025"
+                     / "Publications 📇" / _d)
 
 
 def data_path(name: str) -> Path:
@@ -84,7 +86,12 @@ def data_path(name: str) -> Path:
     return ROOT / name
 
 
-SRC    = data_path("Chapter 1 - Final results - New results.csv")
+# v3 (RAG re-coding, October 2026) when present; v2 otherwise. v3 carries an
+# item-level Topic column (Censorship / Content moderation / Debate
+# management / Other) decided by the coder for the whole publication.
+SRC    = data_path("Chapter 1 - Final results - v3.csv")
+if not SRC.exists():
+    SRC = data_path("Chapter 1 - Final results - New results.csv")
 MASTER = data_path("master_bibliography.csv")   # only for: (a) Fig 1 counts,
                                             # (b) URL-by-Key (Fig 7 hover-link)
 OUT    = Path(__file__).resolve().parent.parent / "data"
@@ -203,9 +210,15 @@ def _is_other(v: str) -> bool:
 
 def derive_topics(rows: list[dict]) -> list[str]:
     """Every Topic value present in the data, minus the catch-all 'Other'.
-    Under the v2 schema 'Topic' is the WHAT-typed finding's Category."""
+    v3: the item-level Topic column. v2: the WHAT-typed finding's Category."""
     seen = set()
     out = []
+    if rows and "Topic" in rows[0]:
+        for r in rows:
+            t = (r.get("Topic") or "").strip()
+            if t and not _is_other(t) and t not in seen:
+                seen.add(t); out.append(t)
+        return out
     for r in rows:
         if (r.get("Type") or "").strip().upper() != "WHAT":
             continue
@@ -295,10 +308,17 @@ CATEGORY_FIX = {
 }
 
 
+def _load_taxonomy() -> list[dict]:
+    """The taxonomy CSV is semicolon-delimited from v3 on; v2 used commas."""
+    text = TAXONOMY_CSV.read_text(encoding="utf-8-sig")
+    delim = ";" if text.split("\n", 1)[0].count(";") > text.split("\n", 1)[0].count(",") else ","
+    return list(csv.DictReader(io.StringIO(text), delimiter=delim))
+
+
 def canon_categories(rows: list[dict]) -> list[dict]:
     valid = set()
     if TAXONOMY_CSV.exists():
-        for t in load_csv(TAXONOMY_CSV):
+        for t in _load_taxonomy():
             valid.add(((t.get("Type") or "").strip(), (t.get("Category") or "").strip()))
     for r in rows:
         k = ((r.get("Type") or "").strip(), (r.get("Category") or "").strip())
@@ -777,6 +797,7 @@ def main() -> None:
     item_media_cat:   dict[str, set] = defaultdict(set)  # 'Media category' (v2_final)
     item_how:         dict[str, set] = defaultdict(set)  # HOW categories per item
     item_subtopic_scoped: dict[tuple[str, str], Counter] = {}   # (Key, WHAT-Category) → Counter of Sub-categories
+    item_topic_v3 = {}                       # v3: coder's item-level Topic
     for r in F:
         t = item_id(r)
         if not t:
@@ -789,6 +810,8 @@ def main() -> None:
         lg = (r.get("Language") or "").strip().lower()
         if lg and t not in item_lang:
             item_lang[t] = lg
+        if (r.get("Topic") or "").strip():
+            item_topic_v3.setdefault(t, r["Topic"].strip())
         # New v2 schema: Topic/Sub-topic don't exist as their own columns —
         # they are the Category + Sub-category of the row when Type == WHAT.
         # Each finding's WHAT category contributes one vote toward the item's
@@ -827,8 +850,18 @@ def main() -> None:
                 item_how[t].add(cat)
 
     items = list(item_title.keys())
-    topic_of    = lambda t: item_topic[t].most_common(1)[0][0]    if item_topic[t]    else ""
-    subtopic_of = lambda t: item_subtopic[t].most_common(1)[0][0] if item_subtopic[t] else ""
+    def topic_of(t):
+        if t in item_topic_v3:
+            return item_topic_v3[t]
+        return item_topic[t].most_common(1)[0][0] if item_topic[t] else ""
+
+    def subtopic_of(t):
+        # v3: the item's most common WHAT sub-category *within its Topic*
+        # (a Content-moderation item's sub-topic is a CM sub-category).
+        if t in item_topic_v3:
+            c = item_subtopic_scoped.get((t, item_topic_v3[t]))
+            return c.most_common(1)[0][0] if c else ""
+        return item_subtopic[t].most_common(1)[0][0] if item_subtopic[t] else ""
     disc_of     = lambda t: item_disc[t].most_common(1)[0][0]     if item_disc[t]     else DISC_BLANK
     year_of     = lambda t: item_year[t].most_common(1)[0][0]     if item_year[t]     else ""
 
@@ -899,6 +932,11 @@ def main() -> None:
     # really a HOW finding mis-placed) is dropped from the chart's Topic axis
     # to keep the lanes legible.
     CENSORSHIP_SUBS = {"Constitutive", "Infrastructural", "Regulative"}
+    if TAXONOMY_CSV.exists():
+        _subs = {(t.get("Subcategory") or "").strip() for t in _load_taxonomy()
+                 if (t.get("Type") or "").strip() == "WHAT"
+                 and (t.get("Category") or "").strip() == CENSORSHIP_TOPIC}
+        CENSORSHIP_SUBS = {x for x in _subs if x} or CENSORSHIP_SUBS
     rows4c = []
     for t in items:
         if topic_of(t) != CENSORSHIP_TOPIC:
@@ -1105,7 +1143,7 @@ def main() -> None:
         # multi-valued columns.
         media     = " | ".join(sorted(item_media_cat[t]))
         countries = " | ".join(sorted(item_countries[t]))
-        quote = (r.get("Mentioned item") or "").strip()
+        quote = (r.get("Mentioned item") or r.get("Quote") or "").strip()
         if len(quote) > QUOTE_PREVIEW_MAX:
             quote = quote[:QUOTE_PREVIEW_MAX - 1].rstrip() + "…"
         # Per-finding Sub-category: only WHAT findings carry one in the taxonomy.
@@ -1229,7 +1267,7 @@ def main() -> None:
         top = topic_of(t)
         if top not in TOPICS:
             continue
-        for w in terms_of(r.get("Mentioned item") or ""):
+        for w in terms_of(r.get("Mentioned item") or r.get("Quote") or ""):
             cat_terms[top][w] += 1
 
     cats = [c for c in TOPICS if cat_terms.get(c)]

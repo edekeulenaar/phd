@@ -1,123 +1,61 @@
 Kind,Topic,Term,Count,Score
-distinctive,Media moderation,usagers,42,16.17
-distinctive,Media moderation,gatekeeper,30,14.04
-distinctive,Media moderation,lms,35,13.17
-distinctive,Media moderation,commentaires,31,12.65
-distinctive,Media moderation,journalists,53,11.89
-distinctive,Media moderation,éviter,25,11.48
-distinctive,Media moderation,canada,26,11.2
-distinctive,Media moderation,gates,16,10.35
-distinctive,Media moderation,comments,70,9.94
-distinctive,Media moderation,sfera pubblica,15,9.9
-distinctive,Media regulation,censura,127,20.09
-distinctive,Media regulation,diversões,23,16.54
-distinctive,Media regulation,públicas,28,14.18
-distinctive,Media regulation,costumes,17,12.54
-distinctive,Media regulation,ministro justiça,12,11.97
-distinctive,Media regulation,labels,23,11.67
-distinctive,Media regulation,teatral,11,11.04
-distinctive,Media regulation,política,32,10.69
-distinctive,Media regulation,teatrais,10,10.59
-distinctive,Media regulation,directives,12,10.1
-distinctive,Censorship,censorship,4300,58.47
-distinctive,Censorship,censura,1960,35.61
-distinctive,Censorship,censor,882,26.37
-distinctive,Censorship,censure,805,25.83
-distinctive,Censorship,government,1243,23.96
-distinctive,Censorship,book,523,20.34
-distinctive,Censorship,film,480,19.96
-distinctive,Censorship,censors,506,19.69
-distinctive,Censorship,books,636,19.28
-distinctive,Censorship,moral,515,19.18
-distinctive,Debate management,debate,334,34.13
-distinctive,Debate management,dialogue,209,30.97
-distinctive,Debate management,moderador,167,27.69
-distinctive,Debate management,discussion,220,27.57
-distinctive,Debate management,radio,122,22.83
-distinctive,Debate management,questions,137,21.84
-distinctive,Debate management,debates,121,21.79
-distinctive,Debate management,débat,90,20.46
-distinctive,Debate management,participantes,94,20.13
-distinctive,Debate management,argument,101,19.99
-distinctive,Content moderation,content,10796,56.64
-distinctive,Content moderation,moderation,5029,42.34
-distinctive,Content moderation,platforms,4502,41.87
-distinctive,Content moderation,conteúdo,3397,36.35
-distinctive,Content moderation,users,3683,33.03
-distinctive,Content moderation,facebook,2522,30.42
-distinctive,Content moderation,plataformas,2347,30.27
-distinctive,Content moderation,platform,2196,28.86
-distinctive,Content moderation,online,3300,28.31
-distinctive,Content moderation,moderação,1875,26.44
-distinctive,AI alignment,models,130,31.39
-distinctive,AI alignment,model,146,30.37
-distinctive,AI alignment,moderation,371,26.5
-distinctive,AI alignment,llms,168,23.15
-distinctive,AI alignment,content,551,22.51
-distinctive,AI alignment,safety,105,21.59
-distinctive,AI alignment,prompt,54,21.1
-distinctive,AI alignment,outputs,63,20.95
-distinctive,AI alignment,llm,110,20.25
-distinctive,AI alignment,human,130,18.93
-shared,(all categories),social,5053,7
-shared,(all categories),media,3972,7
-shared,(all categories),power,978,7
-shared,(all categories),article,676,7
-shared,(all categories),cultural,554,7
-shared,(all categories),learning,481,7
-shared,(all categories),critical,391,7
-shared,(all categories),main,298,7
-shared,(all categories),authority,422,7
-shared,(all categories),agency,208,7
-pair,Content moderation + Media moderation,middleware,47,66.2
-pair,Content moderation + Media moderation,sinalização,38,46.0
-pair,Content moderation + Media moderation,prestatore,24,40.5
-pair,Content moderation + Media moderation,prestadores,76,39.3
-pair,Content moderation + Media moderation,soluzioni,23,37.9
-pair,Content moderation + Media moderation,usager,21,36.5
-pair,Content moderation + Media moderation,nyt,23,36.1
-pair,Content moderation + Media moderation,mods,71,35.4
-pair,Content moderation + Media moderation,ordinamenti,22,33.0
-pair,Content moderation + Media moderation,sospensione,55,30.7
-pair,Content moderation + Media regulation,rap,14,46.5
-pair,Content moderation + Media regulation,aplicações,121,26.9
-pair,Content moderation + Media regulation,prática crimes,18,19.6
-pair,Content moderation + Media regulation,mentiras,13,14.5
-pair,Content moderation + Media regulation,saúde,150,13.3
-pair,Content moderation + Media regulation,provedores,344,11.9
-pair,Content moderation + Media regulation,acabar,17,10.4
-pair,Content moderation + Media regulation,itens,19,10.3
-pair,Content moderation + Media regulation,filtragem,101,9.8
-pair,Content moderation + Media regulation,elecciones,14,9.3
-pair,Content moderation + Censorship,isps,194,17.4
-pair,Content moderation + Censorship,operators,148,15.3
-pair,Content moderation + Censorship,corte,144,14.0
-pair,Content moderation + Censorship,violação,199,12.3
-pair,Content moderation + Censorship,amendment,243,12.2
-pair,Content moderation + Censorship,takedown,213,12.1
-pair,Content moderation + Censorship,pena,113,11.8
-pair,Content moderation + Censorship,ugc,155,11.5
-pair,Content moderation + Censorship,unlawful,142,11.5
-pair,Content moderation + Censorship,deleted,230,11.5
-pair,Content moderation + Debate management,discusión,119,71.8
-pair,Content moderation + Debate management,tutor,109,68.8
-pair,Content moderation + Debate management,aprendizaje,51,60.7
-pair,Content moderation + Debate management,aprendizagem,32,39.7
-pair,Content moderation + Debate management,newcomers,39,35.5
-pair,Content moderation + Debate management,moderação comentários,25,30.3
-pair,Content moderation + Debate management,clarifying,20,25.1
-pair,Content moderation + Debate management,conversação,46,24.8
-pair,Content moderation + Debate management,genai,22,24.7
-pair,Content moderation + Debate management,disponível,24,24.6
-pair,Content moderation + Algorithmic sorting,algoritmi,139,39.4
-pair,Content moderation + Algorithmic sorting,potere,138,14.7
-pair,Content moderation + AI alignment,toxicity,105,137.8
-pair,Content moderation + AI alignment,rsn,61,117.5
-pair,Content moderation + AI alignment,human reviewers,50,98.1
-pair,Content moderation + AI alignment,violating content,43,83.9
-pair,Content moderation + AI alignment,toxic,235,69.9
-pair,Content moderation + AI alignment,perspective api,48,65.6
-pair,Content moderation + AI alignment,based moderation,35,62.6
-pair,Content moderation + AI alignment,algorithmes,130,61.0
-pair,Content moderation + AI alignment,user experience,36,60.0
-pair,Content moderation + AI alignment,annotators,30,53.7
+distinctive,Content moderation,content,8513,47.48
+distinctive,Content moderation,moderation,4053,34.47
+distinctive,Content moderation,platforms,2904,30.34
+distinctive,Content moderation,users,2933,28.73
+distinctive,Content moderation,conteúdo,2308,26.45
+distinctive,Content moderation,facebook,1629,22.78
+distinctive,Content moderation,moderators,1600,22.56
+distinctive,Content moderation,community,1629,22.18
+distinctive,Content moderation,platform,1548,22.06
+distinctive,Content moderation,user,1474,21.26
+distinctive,Censorship,censorship,3374,51.94
+distinctive,Censorship,censura,1417,30.5
+distinctive,Censorship,censure,827,24.96
+distinctive,Censorship,censor,765,24.64
+distinctive,Censorship,government,906,21.4
+distinctive,Censorship,moral,370,16.7
+distinctive,Censorship,censors,397,16.66
+distinctive,Censorship,books,410,15.85
+distinctive,Censorship,political,699,15.81
+distinctive,Censorship,control,570,15.53
+distinctive,Debate management,debate,198,33.24
+distinctive,Debate management,moderador,146,30.7
+distinctive,Debate management,debates,132,29.17
+distinctive,Debate management,participantes,70,20.77
+distinctive,Debate management,débat,58,19.23
+distinctive,Debate management,discussion,90,17.66
+distinctive,Debate management,questions,59,17.03
+distinctive,Debate management,discussão,47,16.35
+distinctive,Debate management,participants,77,16.09
+distinctive,Debate management,candidatos,46,16.05
+shared,(all categories),public,2009,3
+shared,(all categories),social,2887,3
+shared,(all categories),media,2465,3
+shared,(all categories),online,2344,3
+shared,(all categories),internet,1765,3
+shared,(all categories),rules,1171,3
+shared,(all categories),speech,2167,3
+shared,(all categories),news,881,3
+shared,(all categories),people,826,3
+shared,(all categories),time,655,3
+pair,Content moderation + Censorship,companies,885,20.7
+pair,Content moderation + Censorship,law,747,19.7
+pair,Content moderation + Censorship,hate,1015,19.0
+pair,Content moderation + Censorship,twitter,876,15.9
+pair,Content moderation + Censorship,publication,543,14.9
+pair,Content moderation + Censorship,review,587,13.3
+pair,Content moderation + Censorship,removal,629,12.7
+pair,Content moderation + Censorship,block,437,12.2
+pair,Content moderation + Censorship,laws,401,11.2
+pair,Content moderation + Censorship,network,404,11.1
+pair,Content moderation + Debate management,tutor,64,84.6
+pair,Content moderation + Debate management,modérateur,124,76.6
+pair,Content moderation + Debate management,fórum,47,66.3
+pair,Content moderation + Debate management,moderar,94,47.7
+pair,Content moderation + Debate management,discusión,66,47.0
+pair,Content moderation + Debate management,interação,34,45.4
+pair,Content moderation + Debate management,modérateurs,140,44.6
+pair,Content moderation + Debate management,perguntas,38,44.2
+pair,Content moderation + Debate management,contribuição,31,43.6
+pair,Content moderation + Debate management,moderates,40,43.4
