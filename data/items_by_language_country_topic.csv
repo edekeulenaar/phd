@@ -1,7 +1,7 @@
 Language,LanguageName,Country,Topic,Items
 en,English,United States,Content moderation,362
 pt,Portuguese,Brazil,Content moderation,195
-en,English,United States,Censorship,155
+en,English,United States,Censorship,153
 en,English,European Union,Content moderation,148
 en,English,China,Censorship,113
 en,English,(unspecified),Content moderation,106
@@ -25,8 +25,8 @@ en,English,Germany,Censorship,43
 en,English,France,Content moderation,42
 pt,Portuguese,Germany,Content moderation,35
 en,English,(unspecified),Censorship,34
-en,English,United States,Other,34
 en,English,Canada,Content moderation,33
+en,English,United States,Other,33
 en,English,France,Censorship,32
 es,Spanish,Spain,Censorship,32
 en,English,Russia,Content moderation,29
@@ -121,7 +121,6 @@ en,English,Nigeria,Censorship,8
 en,English,Uganda,Censorship,8
 en,English,Uzbekistan,Censorship,8
 fr,French,Germany,Censorship,8
-it,Italian,(unspecified),Content moderation,8
 pt,Portuguese,United States,Other,8
 en,English,Azerbaijan,Censorship,7
 en,English,Egypt,Content moderation,7
@@ -132,6 +131,7 @@ es,Spanish,Argentina,Censorship,7
 es,Spanish,Argentina,Content moderation,7
 es,Spanish,Colombia,Content moderation,7
 fr,French,United Kingdom,Censorship,7
+it,Italian,(unspecified),Content moderation,7
 it,Italian,European Union,Other,7
 it,Italian,United States,Other,7
 pt,Portuguese,France,Content moderation,7
@@ -596,7 +596,6 @@ fr,French,Ecuador,Content moderation,1
 fr,French,Egypt,Content moderation,1
 fr,French,Espagne,Debate management,1
 fr,French,Ethiopia,Censorship,1
-fr,French,Europe,Censorship,1
 fr,French,Finland,Censorship,1
 fr,French,Finland,Content moderation,1
 fr,French,Fédération de Russie,Debate management,1

@@ -1,5 +1,5 @@
 Language,LanguageName,Country,Items
-en,English,United States,562
+en,English,United States,559
 pt,Portuguese,Brazil,258
 en,English,European Union,170
 en,English,China,167
@@ -49,10 +49,10 @@ en,English,Mexico,20
 fr,French,Germany,20
 en,English,Nigeria,19
 en,English,Ukraine,19
-it,Italian,(unspecified),19
 it,Italian,Germany,19
 en,English,Singapore,18
 es,Spanish,Argentina,18
+it,Italian,(unspecified),18
 en,English,Soviet Union,17
 en,English,Malaysia,16
 en,English,Vietnam,16
@@ -349,7 +349,6 @@ fr,French,Cuba,1
 fr,French,East Germany,1
 fr,French,Ecuador,1
 fr,French,Espagne,1
-fr,French,Europe,1
 fr,French,Fédération de Russie,1
 fr,French,Holy See,1
 fr,French,Italie,1

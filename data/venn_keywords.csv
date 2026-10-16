@@ -1,43 +1,43 @@
 Type,Kind,Topic,Keyword,Count
-ALL,exclusive,Content moderation,moderation decisions,97
-ALL,exclusive,Content moderation,moderation practices,61
-ALL,exclusive,Content moderation,moderation systems,56
+ALL,exclusive,Content moderation,moderation decisions,96
+ALL,exclusive,Content moderation,moderate content,60
+ALL,exclusive,Content moderation,moderation practices,59
 ALL,exclusive,Content moderation,oversight board,56
-ALL,exclusive,Content moderation,online communities,47
+ALL,exclusive,Content moderation,moderation systems,55
+ALL,exclusive,Content moderation,online communities,46
 ALL,exclusive,Content moderation,automated moderation,40
-ALL,exclusive,Content moderation,automated content,39
-ALL,exclusive,Content moderation,moderation process,39
-ALL,exclusive,Content moderation,moderation content,38
-ALL,exclusive,Content moderation,commercial content,38
+ALL,exclusive,Content moderation,moderation process,38
+ALL,exclusive,Content moderation,child sexual,37
+ALL,exclusive,Content moderation,governance mechanisms,37
 ALL,exclusive,Censorship,public morality,15
 ALL,exclusive,Censorship,communist party,15
-ALL,exclusive,Censorship,political censorship,15
 ALL,exclusive,Censorship,censorship process,15
 ALL,exclusive,Censorship,practice censorship,15
 ALL,exclusive,Censorship,censorship laws,15
-ALL,exclusive,Censorship,post publication,13
+ALL,exclusive,Censorship,political censorship,13
 ALL,exclusive,Censorship,film censorship,13
 ALL,exclusive,Censorship,public censorship,12
 ALL,exclusive,Censorship,publishing houses,12
-ALL,exclusive,Debate management,presidential debates,6
+ALL,exclusive,Censorship,post publication,12
+ALL,exclusive,Debate management,presidential debates,5
 ALL,exclusive,Debate management,agenda setting,5
 ALL,exclusive,Debate management,news norms,3
 ALL,exclusive,Debate management,commission presidential,3
 ALL,exclusive,Debate management,town hall,3
-ALL,pair,Content moderation + Censorship,content moderation,398
-ALL,pair,Content moderation + Censorship,social media,382
-ALL,pair,Content moderation + Censorship,hate speech,253
-ALL,pair,Content moderation + Censorship,media platforms,196
+ALL,pair,Content moderation + Censorship,content moderation,389
+ALL,pair,Content moderation + Censorship,social media,371
+ALL,pair,Content moderation + Censorship,hate speech,247
+ALL,pair,Content moderation + Censorship,media platforms,186
 ALL,pair,Content moderation + Censorship,community guidelines,118
-ALL,pair,Content moderation + Censorship,user generated,113
-ALL,pair,Content moderation + Censorship,human moderators,111
-ALL,pair,Content moderation + Censorship,generated content,101
-ALL,pair,Content moderation + Censorship,harmful content,100
+ALL,pair,Content moderation + Censorship,human moderators,110
+ALL,pair,Content moderation + Censorship,user generated,109
+ALL,pair,Content moderation + Censorship,harmful content,98
 ALL,pair,Content moderation + Censorship,community standards,98
-ALL,triple,Content moderation + Censorship + Debate management,public sphere,36
-ALL,center,(≥3 categories),public sphere,36
-WHAT,exclusive,Content moderation,user generated,70
-WHAT,exclusive,Content moderation,generated content,67
+ALL,pair,Content moderation + Censorship,generated content,97
+ALL,triple,Content moderation + Censorship + Debate management,public sphere,34
+ALL,center,(≥3 categories),public sphere,34
+WHAT,exclusive,Content moderation,user generated,59
+WHAT,exclusive,Content moderation,generated content,58
 WHAT,exclusive,Content moderation,facilitate cooperation,34
 WHAT,exclusive,Content moderation,governance mechanisms,34
 WHAT,exclusive,Content moderation,prevent abuse,34
@@ -46,26 +46,26 @@ WHAT,exclusive,Content moderation,structure participation,32
 WHAT,exclusive,Content moderation,community facilitate,30
 WHAT,exclusive,Content moderation,participation community,29
 WHAT,exclusive,Content moderation,mechanisms structure,26
-WHAT,exclusive,Censorship,internet censorship,11
-WHAT,exclusive,Censorship,censorship social,9
-WHAT,exclusive,Censorship,overt covert,9
-WHAT,exclusive,Censorship,censorship involves,9
-WHAT,exclusive,Censorship,censorship process,9
-WHAT,exclusive,Censorship,political censorship,9
 WHAT,exclusive,Censorship,public censorship,9
-WHAT,exclusive,Censorship,post publication,8
-WHAT,exclusive,Censorship,censorship suppression,8
-WHAT,exclusive,Censorship,censorship commonly,7
-WHAT,pair,Content moderation + Censorship,content moderation,289
-WHAT,pair,Content moderation + Censorship,social media,159
-WHAT,pair,Content moderation + Censorship,media platforms,66
-WHAT,pair,Content moderation + Censorship,hate speech,44
-WHAT,pair,Content moderation + Censorship,online content,31
-WHAT,pair,Content moderation + Censorship,online platforms,31
-WHAT,pair,Content moderation + Censorship,freedom expression,27
-WHAT,pair,Content moderation + Censorship,community standards,25
-WHAT,pair,Content moderation + Censorship,media companies,22
+WHAT,exclusive,Censorship,censorship process,8
+WHAT,exclusive,Censorship,overt covert,8
+WHAT,exclusive,Censorship,censorship involves,8
+WHAT,exclusive,Censorship,formal informal,7
+WHAT,exclusive,Censorship,political censorship,7
+WHAT,exclusive,Censorship,judith butler,6
+WHAT,exclusive,Censorship,cultural legitimation,6
+WHAT,exclusive,Censorship,censorship implies,6
+WHAT,exclusive,Censorship,message author,6
+WHAT,pair,Content moderation + Censorship,content moderation,209
+WHAT,pair,Content moderation + Censorship,social media,88
+WHAT,pair,Content moderation + Censorship,media platforms,35
 WHAT,pair,Content moderation + Censorship,censorship occurs,17
+WHAT,pair,Content moderation + Censorship,freedom expression,15
+WHAT,pair,Content moderation + Censorship,collateral censorship,14
+WHAT,pair,Content moderation + Censorship,public sphere,13
+WHAT,pair,Content moderation + Censorship,private censorship,10
+WHAT,pair,Content moderation + Censorship,private companies,8
+WHAT,pair,Content moderation + Censorship,prior restraint,8
 WHO,exclusive,Content moderation,oversight board,52
 WHO,exclusive,Content moderation,moderation decisions,46
 WHO,exclusive,Content moderation,user generated,45

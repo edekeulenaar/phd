@@ -1,6 +1,6 @@
 Type,Category,n_items
-GROUP,Content moderation,1096
-GROUP,Censorship,666
+GROUP,Content moderation,1095
+GROUP,Censorship,663
 GROUP,Debate management,99
 HOW,Removal,1325
 HOW,Review,1216
@@ -23,10 +23,10 @@ HOW,Disclosure,198
 HOW,Verification,196
 HOW,Maintenance,37
 HOW,Intermediating,28
-WHAT,Content moderation,1124
-WHAT,Censorship,869
-WHAT,Other,67
-WHAT,Debate management,65
+WHAT,Content moderation,865
+WHAT,Censorship,566
+WHAT,Debate management,39
+WHAT,Other,37
 WHO,Platforms,1027
 WHO,Government agencies,1013
 WHO,Algorithmic systems,819

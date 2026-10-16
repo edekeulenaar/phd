@@ -1,61 +1,61 @@
 Kind,Topic,Term,Count,Score
-distinctive,Content moderation,content,8513,47.48
-distinctive,Content moderation,moderation,4053,34.47
-distinctive,Content moderation,platforms,2904,30.34
-distinctive,Content moderation,users,2933,28.73
-distinctive,Content moderation,conteúdo,2308,26.45
-distinctive,Content moderation,facebook,1629,22.78
-distinctive,Content moderation,moderators,1600,22.56
-distinctive,Content moderation,community,1629,22.18
-distinctive,Content moderation,platform,1548,22.06
-distinctive,Content moderation,user,1474,21.26
-distinctive,Censorship,censorship,3374,51.94
-distinctive,Censorship,censura,1417,30.5
-distinctive,Censorship,censure,827,24.96
-distinctive,Censorship,censor,765,24.64
-distinctive,Censorship,government,906,21.4
-distinctive,Censorship,moral,370,16.7
-distinctive,Censorship,censors,397,16.66
-distinctive,Censorship,books,410,15.85
-distinctive,Censorship,political,699,15.81
-distinctive,Censorship,control,570,15.53
-distinctive,Debate management,debate,198,33.24
-distinctive,Debate management,moderador,146,30.7
-distinctive,Debate management,debates,132,29.17
-distinctive,Debate management,participantes,70,20.77
-distinctive,Debate management,débat,58,19.23
-distinctive,Debate management,discussion,90,17.66
-distinctive,Debate management,questions,59,17.03
-distinctive,Debate management,discussão,47,16.35
-distinctive,Debate management,participants,77,16.09
-distinctive,Debate management,candidatos,46,16.05
-shared,(all categories),public,2009,3
-shared,(all categories),social,2887,3
-shared,(all categories),media,2465,3
-shared,(all categories),online,2344,3
-shared,(all categories),internet,1765,3
-shared,(all categories),rules,1171,3
-shared,(all categories),speech,2167,3
-shared,(all categories),news,881,3
-shared,(all categories),people,826,3
-shared,(all categories),time,655,3
-pair,Content moderation + Censorship,companies,885,20.7
-pair,Content moderation + Censorship,law,747,19.7
-pair,Content moderation + Censorship,hate,1015,19.0
-pair,Content moderation + Censorship,twitter,876,15.9
-pair,Content moderation + Censorship,publication,543,14.9
-pair,Content moderation + Censorship,review,587,13.3
-pair,Content moderation + Censorship,removal,629,12.7
-pair,Content moderation + Censorship,block,437,12.2
-pair,Content moderation + Censorship,laws,401,11.2
-pair,Content moderation + Censorship,network,404,11.1
-pair,Content moderation + Debate management,tutor,64,84.6
-pair,Content moderation + Debate management,modérateur,124,76.6
-pair,Content moderation + Debate management,fórum,47,66.3
-pair,Content moderation + Debate management,moderar,94,47.7
-pair,Content moderation + Debate management,discusión,66,47.0
-pair,Content moderation + Debate management,interação,34,45.4
-pair,Content moderation + Debate management,modérateurs,140,44.6
-pair,Content moderation + Debate management,perguntas,38,44.2
-pair,Content moderation + Debate management,contribuição,31,43.6
-pair,Content moderation + Debate management,moderates,40,43.4
+distinctive,Content moderation,content,8107,46.51
+distinctive,Content moderation,moderation,3786,33.32
+distinctive,Content moderation,platforms,2709,29.43
+distinctive,Content moderation,users,2848,28.41
+distinctive,Content moderation,conteúdo,2199,25.75
+distinctive,Content moderation,facebook,1557,22.33
+distinctive,Content moderation,moderators,1552,22.3
+distinctive,Content moderation,community,1567,21.84
+distinctive,Content moderation,platform,1471,21.58
+distinctive,Content moderation,user,1427,21.09
+distinctive,Censorship,censorship,3131,49.89
+distinctive,Censorship,censura,1320,29.67
+distinctive,Censorship,censor,732,24.05
+distinctive,Censorship,censure,760,23.95
+distinctive,Censorship,government,871,21.26
+distinctive,Censorship,moral,358,16.31
+distinctive,Censorship,censors,381,16.3
+distinctive,Censorship,political,673,15.52
+distinctive,Censorship,books,396,15.5
+distinctive,Censorship,control,537,14.78
+distinctive,Debate management,debate,188,32.41
+distinctive,Debate management,moderador,134,29.32
+distinctive,Debate management,debates,122,28.1
+distinctive,Debate management,participantes,69,20.63
+distinctive,Debate management,débat,55,18.72
+distinctive,Debate management,discussion,86,17.29
+distinctive,Debate management,questions,57,16.86
+distinctive,Debate management,candidatos,44,15.81
+distinctive,Debate management,discussão,44,15.76
+distinctive,Debate management,participants,73,15.61
+shared,(all categories),public,1939,3
+shared,(all categories),social,2703,3
+shared,(all categories),media,2305,3
+shared,(all categories),online,2172,3
+shared,(all categories),internet,1623,3
+shared,(all categories),rules,1127,3
+shared,(all categories),speech,2036,3
+shared,(all categories),news,844,3
+shared,(all categories),time,627,3
+shared,(all categories),policy,729,3
+pair,Content moderation + Censorship,companies,819,19.2
+pair,Content moderation + Censorship,law,707,18.7
+pair,Content moderation + Censorship,hate,967,17.9
+pair,Content moderation + Censorship,twitter,826,14.9
+pair,Content moderation + Censorship,publication,521,14.3
+pair,Content moderation + Censorship,review,574,12.9
+pair,Content moderation + Censorship,removal,602,12.1
+pair,Content moderation + Censorship,block,415,11.6
+pair,Content moderation + Censorship,laws,377,10.5
+pair,Content moderation + Censorship,blocking,374,10.4
+pair,Content moderation + Debate management,tutor,59,78.0
+pair,Content moderation + Debate management,modérateur,120,74.6
+pair,Content moderation + Debate management,fórum,46,65.0
+pair,Content moderation + Debate management,plataforma,491,47.2
+pair,Content moderation + Debate management,discusión,62,44.4
+pair,Content moderation + Debate management,contribuição,31,43.9
+pair,Content moderation + Debate management,moderates,40,43.6
+pair,Content moderation + Debate management,moderar,86,42.8
+pair,Content moderation + Debate management,interação,31,42.6
+pair,Content moderation + Debate management,participante,29,41.4

@@ -1,91 +1,90 @@
 Sub-topic,Country,Quantity
-Censorship,United States,32
-Censorship,European Union,21
-Censorship,Italy,12
-Censorship,Germany,8
-Censorship,France,6
+Censorship,United States,28
+Censorship,European Union,23
+Censorship,Italy,13
+Censorship,Brazil,8
+Censorship,Germany,7
+Censorship,France,5
 Censorship,United Kingdom,4
-Censorship,Spain,4
-Censorship,Brazil,4
-Censorship,India,3
-Censorship,Russia,3
-Community norms and identity,United States,39
-Community norms and identity,United Kingdom,10
-Community norms and identity,France,8
+Censorship,Spain,3
+Censorship,Philippines,3
+Censorship,Austria,2
+Community norms and identity,United States,30
+Community norms and identity,France,9
+Community norms and identity,United Kingdom,8
 Community norms and identity,Germany,6
-Community norms and identity,Canada,6
-Community norms and identity,Australia,5
-Community norms and identity,Brazil,5
-Community norms and identity,Mexico,4
-Community norms and identity,India,4
+Community norms and identity,Brazil,6
+Community norms and identity,Australia,4
+Community norms and identity,Canada,4
+Community norms and identity,Italy,4
 Community norms and identity,Sweden,3
-Debate management,Brazil,13
-Debate management,United States,13
-Debate management,Spain,13
-Debate management,France,11
-Debate management,Germany,6
-Debate management,Italy,6
-Debate management,United Kingdom,5
-Debate management,Portugal,5
-Debate management,Canada,3
-Debate management,Argentina,3
-Industrial labour,United States,20
-Industrial labour,Philippines,10
-Industrial labour,India,8
-Industrial labour,Germany,6
-Industrial labour,Brazil,5
-Industrial labour,Portugal,3
-Industrial labour,Canada,3
+Community norms and identity,Mexico,3
+Debate management,Brazil,9
+Debate management,Spain,9
+Debate management,United States,8
+Debate management,France,8
+Debate management,Italy,5
+Debate management,Canada,4
+Debate management,United Kingdom,4
+Debate management,Germany,3
+Debate management,Sweden,2
+Debate management,Portugal,1
+Industrial labour,United States,14
+Industrial labour,Philippines,7
+Industrial labour,India,6
+Industrial labour,Brazil,4
+Industrial labour,Canada,4
+Industrial labour,Germany,3
 Industrial labour,Ireland,2
-Industrial labour,Australia,2
+Industrial labour,Portugal,2
 Industrial labour,China,2
-Moderating extremism,United States,5
-Moderating extremism,Germany,5
-Moderating extremism,United Kingdom,4
-Moderating extremism,European Union,3
-Moderating extremism,France,2
-Moderating extremism,New Zealand,1
+Industrial labour,France,1
+Moderating extremism,United States,3
+Moderating extremism,Germany,1
+Moderating extremism,United Kingdom,1
 Moderating extremism,Canada,1
-Moderating extremism,Europe,1
-Moderating extremism,Americas,1
+Moderating extremism,China,1
 Moderating extremism,India,1
-Platform brand safety,Brazil,4
-Platform brand safety,United States,2
-Platform brand safety,European Union,2
+Moderating extremism,Russia,1
+Moderating extremism,Brazil,1
+Moderating extremism,European Union,1
+Platform brand safety,United States,6
+Platform brand safety,Brazil,6
+Platform brand safety,European Union,3
+Platform brand safety,Myanmar,2
 Platform brand safety,Ethiopia,1
 Platform brand safety,Africa,1
 Platform brand safety,Uganda,1
-Platform brand safety,Myanmar,1
 Platform brand safety,Nigeria,1
-Platform brand safety,Qatar,1
-Platform brand safety,United Kingdom,1
-Platform compliance,European Union,4
-Platform compliance,United States,3
+Platform brand safety,Turkey,1
+Platform brand safety,South Korea,1
+Platform compliance,European Union,6
+Platform compliance,United States,5
+Platform compliance,Brazil,3
 Platform compliance,Germany,3
-Platform compliance,China,2
-Platform compliance,Israel,2
-Platform compliance,Brazil,2
-Platform compliance,Myanmar,2
-Platform compliance,Russia,2
-Platform compliance,Pakistan,1
-Platform compliance,Iran,1
-Platform governance,United States,306
-Platform governance,European Union,167
+Platform compliance,Italy,2
+Platform compliance,China,1
+Platform compliance,Israel,1
+Platform compliance,Turkey,1
+Platform compliance,Myanmar,1
+Platform compliance,Russia,1
+Platform governance,United States,302
+Platform governance,European Union,183
 Platform governance,Brazil,146
-Platform governance,Germany,89
-Platform governance,United Kingdom,61
+Platform governance,Germany,103
+Platform governance,United Kingdom,66
 Platform governance,France,53
-Platform governance,India,41
-Platform governance,China,39
-Platform governance,Australia,38
-Platform governance,Italy,32
-Platform regulation,European Union,102
-Platform regulation,United States,70
-Platform regulation,Brazil,67
-Platform regulation,Germany,42
-Platform regulation,France,26
-Platform regulation,Italy,25
-Platform regulation,United Kingdom,25
-Platform regulation,China,10
-Platform regulation,India,9
-Platform regulation,Russia,8
+Platform governance,China,40
+Platform governance,India,40
+Platform governance,Australia,37
+Platform governance,Italy,34
+Platform regulation,European Union,26
+Platform regulation,United States,19
+Platform regulation,Brazil,14
+Platform regulation,United Kingdom,11
+Platform regulation,Germany,11
+Platform regulation,France,8
+Platform regulation,India,4
+Platform regulation,Indonesia,3
+Platform regulation,China,3
+Platform regulation,Pakistan,2

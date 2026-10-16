@@ -1,15 +1,17 @@
 Type,Kind,Topic,Keyword,Count
-ALL,exclusive,Content moderation,Industrial labour,70
+ALL,exclusive,Content moderation,Platform regulation,96
+ALL,exclusive,Content moderation,Industrial labour,48
 ALL,exclusive,Content moderation,App stores,36
-ALL,exclusive,Content moderation,Platform brand safety,33
-ALL,exclusive,Content moderation,Moderating extremism,23
+ALL,exclusive,Content moderation,Platform brand safety,32
+ALL,exclusive,Content moderation,Platform compliance,20
 ALL,exclusive,Content moderation,Public-health bodies (NGOs / WHO),12
-ALL,exclusive,Content moderation,Automated content classification,5
 ALL,exclusive,Content moderation,LLM response moderation,5
+ALL,exclusive,Content moderation,Moderating extremism,4
 ALL,exclusive,Censorship,Translators,39
-ALL,exclusive,Censorship,Moderação discursiva ampla,3
-ALL,pair,Content moderation + Censorship,Platform governance,1027
-ALL,pair,Content moderation + Censorship,Regulative,778
+ALL,exclusive,Censorship,Infrastructural,20
+ALL,exclusive,Debate management,Online learning facilitation,4
+ALL,pair,Content moderation + Censorship,Platform governance,928
+ALL,pair,Content moderation + Censorship,Regulative,694
 ALL,pair,Content moderation + Censorship,Intimidation,642
 ALL,pair,Content moderation + Censorship,Political control,629
 ALL,pair,Content moderation + Censorship,Marginalisation,607
@@ -17,7 +19,7 @@ ALL,pair,Content moderation + Censorship,Courts and prosecutors,596
 ALL,pair,Content moderation + Censorship,Public decency norms,550
 ALL,pair,Content moderation + Censorship,Brand safety,546
 ALL,pair,Content moderation + Censorship,Misinformation or disinformation prevention,537
-ALL,pair,Content moderation + Censorship,Profiling,476
+ALL,pair,Content moderation + Censorship,Constitutive,515
 ALL,pair,Content moderation + Debate management,Maintenance,47
 ALL,pair,Content moderation + Debate management,Intermediating,33
 ALL,pair,Content moderation + Debate management,Mediators,28
@@ -28,9 +30,9 @@ ALL,triple,Content moderation + Censorship + Debate management,Government agenci
 ALL,triple,Content moderation + Censorship + Debate management,Platforms,1223
 ALL,triple,Content moderation + Censorship + Debate management,Filtering,1094
 ALL,triple,Content moderation + Censorship + Debate management,Metamoderation,964
-ALL,triple,Content moderation + Censorship + Debate management,General,927
 ALL,triple,Content moderation + Censorship + Debate management,Algorithmic systems,908
-ALL,triple,Content moderation + Censorship + Debate management,Debate management,883
+ALL,triple,Content moderation + Censorship + Debate management,Internalisation,868
+ALL,triple,Content moderation + Censorship + Debate management,Users,857
 ALL,center,(≥3 categories),Removal,2968
 ALL,center,(≥3 categories),Review,2647
 ALL,center,(≥3 categories),Enframing,1899
@@ -38,27 +40,25 @@ ALL,center,(≥3 categories),Government agencies,1373
 ALL,center,(≥3 categories),Platforms,1223
 ALL,center,(≥3 categories),Filtering,1094
 ALL,center,(≥3 categories),Metamoderation,964
-ALL,center,(≥3 categories),General,927
 ALL,center,(≥3 categories),Algorithmic systems,908
-ALL,center,(≥3 categories),Debate management,883
-WHAT,exclusive,Content moderation,Industrial labour,70
-WHAT,exclusive,Content moderation,Platform brand safety,33
-WHAT,exclusive,Content moderation,Moderating extremism,23
-WHAT,exclusive,Content moderation,Automated content classification,5
+ALL,center,(≥3 categories),Internalisation,868
+ALL,center,(≥3 categories),Users,857
+WHAT,exclusive,Content moderation,Platform regulation,96
+WHAT,exclusive,Content moderation,Industrial labour,48
+WHAT,exclusive,Content moderation,Platform brand safety,32
+WHAT,exclusive,Content moderation,Platform compliance,20
 WHAT,exclusive,Content moderation,LLM response moderation,5
-WHAT,exclusive,Censorship,Moderação discursiva ampla,3
-WHAT,pair,Content moderation + Censorship,Platform governance,1027
-WHAT,pair,Content moderation + Censorship,Regulative,778
-WHAT,pair,Content moderation + Censorship,Platform regulation,371
-WHAT,pair,Content moderation + Censorship,Censorship,160
-WHAT,pair,Content moderation + Censorship,Constitutive,135
-WHAT,pair,Content moderation + Censorship,Platform compliance,94
-WHAT,pair,Content moderation + Censorship,Infrastructural,87
-WHAT,pair,Content moderation + Debate management,Debate management,162
-WHAT,triple,Content moderation + Censorship + Debate management,General,927
-WHAT,triple,Content moderation + Censorship + Debate management,Community norms and identity,189
-WHAT,center,(≥3 categories),General,927
-WHAT,center,(≥3 categories),Community norms and identity,189
+WHAT,exclusive,Content moderation,Moderating extremism,4
+WHAT,exclusive,Censorship,Infrastructural,20
+WHAT,exclusive,Debate management,Online learning facilitation,4
+WHAT,pair,Content moderation + Censorship,Platform governance,928
+WHAT,pair,Content moderation + Censorship,Regulative,694
+WHAT,pair,Content moderation + Censorship,Constitutive,515
+WHAT,pair,Content moderation + Censorship,Community norms and identity,151
+WHAT,pair,Content moderation + Censorship,Censorship,137
+WHAT,pair,Content moderation + Debate management,Debate management,129
+WHAT,triple,Content moderation + Censorship + Debate management,General,307
+WHAT,center,(≥3 categories),General,307
 WHO,exclusive,Content moderation,App stores,36
 WHO,exclusive,Content moderation,Public-health bodies (NGOs / WHO),12
 WHO,exclusive,Censorship,Translators,39
