@@ -1,83 +1,82 @@
 Type,Category,n_items
 GROUP,Content moderation,960
 GROUP,Censorship,518
-GROUP,Debate management,85
-HOW,Removal,1122
-HOW,Review,1034
-HOW,Enframing,1027
-HOW,Filtering,695
-HOW,Internalisation,487
-HOW,Metamoderation,475
-HOW,Marginalisation,435
-HOW,Monitoring,427
-HOW,Limiting access,417
-HOW,Intimidation,364
+HOW,Removal,1109
+HOW,Review,1018
+HOW,Enframing,958
+HOW,Filtering,667
+HOW,Internalisation,482
+HOW,Metamoderation,463
+HOW,Marginalisation,434
+HOW,Monitoring,421
+HOW,Limiting access,414
+HOW,Intimidation,363
 HOW,Profiling,339
-HOW,Labeling,275
-HOW,Debate management,267
-HOW,Other,210
-HOW,Rating,200
+HOW,Labeling,274
+HOW,Other,203
+HOW,Rating,198
+HOW,Debate management,194
 HOW,Replacement,179
-HOW,Licensing,177
-HOW,Disclosure,170
-HOW,Verification,168
-HOW,Maintenance,36
-HOW,Intermediating,25
-WHAT,Content moderation,774
-WHAT,Censorship,461
-WHAT,Debate management,36
-WHAT,Other,34
-WHO,Platforms,893
-WHO,Government agencies,844
-WHO,Algorithmic systems,722
-WHO,Content moderators or BPO workforces,605
-WHO,Users,588
-WHO,Courts and prosecutors,417
-WHO,Civic advocacy and moral pressure groups,288
-WHO,Media owners,265
-WHO,Other,245
-WHO,Legislators,244
-WHO,Regulators,219
+HOW,Licensing,174
+HOW,Disclosure,168
+HOW,Verification,164
+HOW,Maintenance,29
+HOW,Intermediating,15
+WHAT,Content moderation,755
+WHAT,Censorship,459
+WHAT,Other,27
+WHAT,Debate management,5
+WHO,Platforms,889
+WHO,Government agencies,827
+WHO,Algorithmic systems,717
+WHO,Content moderators or BPO workforces,584
+WHO,Users,572
+WHO,Courts and prosecutors,416
+WHO,Civic advocacy and moral pressure groups,286
+WHO,Media owners,257
+WHO,Legislators,242
+WHO,Other,235
+WHO,Regulators,218
 WHO,Self-censorship (individuals),213
 WHO,Censorship boards or agencies,213
 WHO,Police and intelligence services,196
-WHO,"Schools, curricula, librarians, academia",188
-WHO,Editors,140
+WHO,"Schools, curricula, librarians, academia",168
+WHO,Editors,139
 WHO,Cloud and infrastructure providers,127
 WHO,Platform oversight bodies,124
-WHO,Journalists,112
 WHO,Religious authorities,109
-WHO,Political groups,108
-WHO,Forum moderators (mods),107
-WHO,Fact-checkers and verification units,104
+WHO,Journalists,106
+WHO,Political groups,105
+WHO,Fact-checkers and verification units,103
+WHO,Forum moderators (mods),100
 WHO,Advertisers,70
 WHO,Military censors,62
-WHO,Debate moderators,52
-WHO,Broadcasting regulators,33
 WHO,Distributors and booksellers,33
+WHO,Broadcasting regulators,32
 WHO,Online mobs / pile-ons,32
 WHO,Translators,31
 WHO,App stores,30
-WHO,Mediators,24
 WHO,AI companies,17
 WHO,Press councils and ombudsmen,16
+WHO,Mediators,16
 WHO,News agencies / wire services,14
 WHO,Public-health bodies (NGOs / WHO),12
-WHY,Other,662
-WHY,Social cohesion,548
-WHY,Compliance,409
-WHY,Misinformation or disinformation prevention,382
-WHY,Brand safety,377
-WHY,Political control,354
-WHY,Public decency norms,344
+WHO,Debate moderators,11
+WHY,Other,616
+WHY,Social cohesion,510
+WHY,Compliance,407
+WHY,Misinformation or disinformation prevention,380
+WHY,Brand safety,376
+WHY,Political control,352
+WHY,Public decency norms,342
 WHY,Harm principles and hate speech regulation,303
-WHY,"Privacy, reputation & dignity",282
+WHY,"Privacy, reputation & dignity",281
 WHY,Protection of children,272
 WHY,State security,216
 WHY,Ideological consolidation,195
-WHY,Coherence,139
 WHY,Religious norms,135
-WHY,News values or editorial judgment,59
+WHY,Coherence,119
+WHY,News values or editorial judgment,56
 WHY,Democratic self-defence,38
 WHY,Wartime necessity,36
 WHY,Consumer protection or fair competition,33

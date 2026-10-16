@@ -98,7 +98,6 @@ Content moderation,Search engine,Labeling,47
 Censorship,Film,Filtering,45
 Censorship,ISP,Monitoring,45
 Content moderation,AI,Filtering,45
-Other,Social media platform,Removal,45
 Content moderation,Search engine,Verification,44
 Censorship,Film,Monitoring,43
 Content moderation,AI,Metamoderation,43
@@ -125,7 +124,6 @@ Censorship,Print media,Other,35
 Censorship,Search engine,Limiting access,35
 Content moderation,Print media,Enframing,35
 Content moderation,Print media,Review,35
-Other,Social media platform,Enframing,35
 Censorship,Radio,Monitoring,34
 Censorship,Social media platform,Profiling,34
 Content moderation,AI,Marginalisation,34
@@ -179,7 +177,6 @@ Content moderation,Online fora,Review,25
 Content moderation,Platforms,Filtering,25
 Content moderation,Platforms,Marginalisation,25
 Content moderation,Platforms,Metamoderation,25
-Other,Social media platform,Review,25
 Censorship,Internet (general),Removal,24
 Censorship,Search engine,Enframing,24
 Censorship,Search engine,Internalisation,24
@@ -194,7 +191,6 @@ Censorship,Television,Limiting access,23
 Content moderation,AI,Internalisation,23
 Content moderation,Online fora,Filtering,23
 Content moderation,Search engine,Debate management,23
-Other,Social media platform,Filtering,23
 Censorship,Social media platform,Licensing,22
 Censorship,Television,Rating,22
 Content moderation,Alt-tech,Review,22
@@ -210,7 +206,6 @@ Censorship,Social media platform,Other,21
 Censorship,Television,Profiling,21
 Censorship,Video sharing platform,Enframing,21
 Content moderation,AI,Verification,21
-Other,Video sharing platform,Removal,21
 Censorship,ISP,Enframing,20
 Censorship,ISP,Internalisation,20
 Censorship,Messaging platform,Limiting access,20
@@ -259,9 +254,6 @@ Content moderation,Video sharing platform,Replacement,16
 Content moderation,Wikis,Limiting access,16
 Content moderation,Wikis,Marginalisation,16
 Content moderation,Wikis,Rating,16
-Other,AI,Review,16
-Other,Search engine,Removal,16
-Other,Video sharing platform,Enframing,16
 Censorship,Internet (general),Monitoring,15
 Censorship,Social media platform,Metamoderation,15
 Content moderation,E-commerce,Marginalisation,15
@@ -275,7 +267,6 @@ Content moderation,News media,Removal,14
 Content moderation,Search engine,Licensing,14
 Content moderation,Social media platform,Maintenance,14
 Content moderation,Wikis,Internalisation,14
-Other,Social media platform,Monitoring,14
 Censorship,Film,Labeling,13
 Censorship,Messaging platform,Replacement,13
 Censorship,Search engine,Marginalisation,13
@@ -287,7 +278,6 @@ Content moderation,Platforms,Labeling,13
 Content moderation,Platforms,Other,13
 Content moderation,Print media,Metamoderation,13
 Content moderation,Wikis,Debate management,13
-Other,Social media platform,Internalisation,13
 Censorship,ISP,Licensing,12
 Censorship,Performing arts,Filtering,12
 Censorship,Social media platform,Labeling,12
@@ -307,10 +297,6 @@ Content moderation,Print media,Limiting access,12
 Content moderation,Short video platform,Removal,12
 Content moderation,Wikis,Disclosure,12
 Content moderation,Wikis,Monitoring,12
-Debate management,Social media platform,Debate management,12
-Debate management,Social media platform,Enframing,12
-Other,Search engine,Enframing,12
-Other,Social media platform,Verification,12
 Censorship,Blog,Limiting access,11
 Censorship,Blog,Removal,11
 Censorship,Browser,Limiting access,11
@@ -326,10 +312,6 @@ Content moderation,Decentralized social media,Profiling,11
 Content moderation,ISP,Marginalisation,11
 Content moderation,Print media,Debate management,11
 Content moderation,Short video platform,Review,11
-Other,Social media platform,Intimidation,11
-Other,Social media platform,Limiting access,11
-Other,Social media platform,Rating,11
-Other,Video sharing platform,Filtering,11
 Censorship,Blog,Intimidation,10
 Censorship,Browser,Monitoring,10
 Censorship,Film,Metamoderation,10
@@ -361,10 +343,6 @@ Content moderation,Print media,Disclosure,10
 Content moderation,Television,Enframing,10
 Content moderation,Video game,Enframing,10
 Content moderation,Wikis,Other,10
-Debate management,Online fora,Debate management,10
-Debate management,Online fora,Enframing,10
-Other,Messaging platform,Removal,10
-Other,Social media platform,Marginalisation,10
 Censorship,Film,Debate management,9
 Censorship,Film,Other,9
 Censorship,ISP,Disclosure,9
@@ -386,11 +364,6 @@ Content moderation,Online fora,Monitoring,9
 Content moderation,Print media,Marginalisation,9
 Content moderation,Print media,Verification,9
 Content moderation,Short video platform,Enframing,9
-Debate management,Online learning platform,Debate management,9
-Other,AI,Filtering,9
-Other,Print media,Filtering,9
-Other,Print media,Review,9
-Other,Video sharing platform,Review,9
 Censorship,AI,Replacement,8
 Censorship,Blog,Filtering,8
 Censorship,Blog,Monitoring,8
@@ -420,16 +393,6 @@ Content moderation,Radio,Enframing,8
 Content moderation,Short video platform,Filtering,8
 Content moderation,Television,Filtering,8
 Content moderation,Television,Review,8
-Debate management,Online fora,Filtering,8
-Debate management,Online fora,Review,8
-Debate management,Online learning platform,Enframing,8
-Other,Messaging platform,Enframing,8
-Other,Platforms,Removal,8
-Other,Print media,Internalisation,8
-Other,Search engine,Filtering,8
-Other,Search engine,Review,8
-Other,Social media platform,Metamoderation,8
-Other,Social media platform,Other,8
 Censorship,AI,Internalisation,7
 Censorship,Film,Disclosure,7
 Censorship,ISP,Metamoderation,7
@@ -477,14 +440,6 @@ Content moderation,Television,Metamoderation,7
 Content moderation,Television,Removal,7
 Content moderation,Video game,Removal,7
 Content moderation,Video game,Review,7
-Other,Platforms,Review,7
-Other,Print media,Enframing,7
-Other,Search engine,Monitoring,7
-Other,Social media platform,Debate management,7
-Other,Social media platform,Labeling,7
-Other,Video sharing platform,Marginalisation,7
-Other,Video sharing platform,Rating,7
-Other,Video sharing platform,Verification,7
 Censorship,AI,Enframing,6
 Censorship,AI,Filtering,6
 Censorship,AI,Limiting access,6
@@ -553,19 +508,6 @@ Content moderation,Videoconferencing,Enframing,6
 Content moderation,Videoconferencing,Filtering,6
 Content moderation,Videoconferencing,Review,6
 Content moderation,Wikis,Verification,6
-Debate management,Social media platform,Review,6
-Other,AI,Enframing,6
-Other,Messaging platform,Review,6
-Other,Platforms,Enframing,6
-Other,Platforms,Filtering,6
-Other,Print media,Verification,6
-Other,Search engine,Limiting access,6
-Other,Social media platform,Profiling,6
-Other,Video sharing platform,Internalisation,6
-Other,Video sharing platform,Intimidation,6
-Other,Video sharing platform,Monitoring,6
-Other,Wikis,Enframing,6
-Other,Wikis,Review,6
 Censorship,Academic publications,Filtering,5
 Censorship,Academic publications,Internalisation,5
 Censorship,Blog,Internalisation,5
@@ -624,26 +566,6 @@ Content moderation,Video game,Metamoderation,5
 Content moderation,Video streaming platform,Enframing,5
 Content moderation,Web,Enframing,5
 Content moderation,Wikis,Intimidation,5
-Debate management,Blog,Enframing,5
-Debate management,Online fora,Maintenance,5
-Debate management,Online fora,Removal,5
-Debate management,Social media platform,Removal,5
-Other,AI,Internalisation,5
-Other,AI,Limiting access,5
-Other,AI,Removal,5
-Other,ISP,Removal,5
-Other,Internet (general),Filtering,5
-Other,Messaging platform,Labeling,5
-Other,Messaging platform,Monitoring,5
-Other,Messaging platform,Verification,5
-Other,Print media,Licensing,5
-Other,Print media,Removal,5
-Other,Search engine,Intimidation,5
-Other,Search engine,Verification,5
-Other,Social media platform,Licensing,5
-Other,Social media platform,Maintenance,5
-Other,Television,Filtering,5
-Other,Video sharing platform,Limiting access,5
 Censorship,Academic publications,Limiting access,4
 Censorship,Blog,Disclosure,4
 Censorship,Browser,Intimidation,4
@@ -751,27 +673,6 @@ Content moderation,Videoconferencing,Limiting access,4
 Content moderation,Web,Filtering,4
 Content moderation,Web,Removal,4
 Content moderation,Wikis,Licensing,4
-Debate management,Blog,Debate management,4
-Other,AI,Monitoring,4
-Other,AI,Verification,4
-Other,E-commerce,Removal,4
-Other,Messaging platform,Internalisation,4
-Other,Messaging platform,Intimidation,4
-Other,Messaging platform,Limiting access,4
-Other,News media,Filtering,4
-Other,Print media,Rating,4
-Other,Search engine,Debate management,4
-Other,Search engine,Marginalisation,4
-Other,Search engine,Metamoderation,4
-Other,Search engine,Replacement,4
-Other,Social media platform,Replacement,4
-Other,Television,Enframing,4
-Other,Television,Review,4
-Other,Video sharing platform,Labeling,4
-Other,Video sharing platform,Other,4
-Other,Wikis,Filtering,4
-Other,Wikis,Rating,4
-Other,Wikis,Removal,4
 Censorship,AI,Marginalisation,3
 Censorship,Academic publications,Disclosure,3
 Censorship,Academic publications,Labeling,3
@@ -939,44 +840,6 @@ Content moderation,Virtual reality,Review,3
 Content moderation,Web,Debate management,3
 Content moderation,Web,Review,3
 Content moderation,Wikis,Maintenance,3
-Debate management,Deliberation platform,Review,3
-Debate management,Messaging platform,Debate management,3
-Debate management,Messaging platform,Enframing,3
-Debate management,Online fora,Monitoring,3
-Other,AI,Labeling,3
-Other,AI,Profiling,3
-Other,AI,Replacement,3
-Other,App store,Removal,3
-Other,Blog,Enframing,3
-Other,Blog,Removal,3
-Other,E-commerce,Enframing,3
-Other,E-commerce,Review,3
-Other,ISP,Filtering,3
-Other,ISP,Intimidation,3
-Other,ISP,Rating,3
-Other,ISP,Review,3
-Other,Messaging platform,Filtering,3
-Other,Messaging platform,Other,3
-Other,News media,Enframing,3
-Other,News media,Review,3
-Other,Online fora,Rating,3
-Other,Platforms,Monitoring,3
-Other,Print media,Intimidation,3
-Other,Print media,Replacement,3
-Other,Search engine,Profiling,3
-Other,Search engine,Rating,3
-Other,Social media platform,Disclosure,3
-Other,Television,Internalisation,3
-Other,Television,Rating,3
-Other,Television,Removal,3
-Other,Television,Verification,3
-Other,Video sharing platform,Debate management,3
-Other,Video sharing platform,Licensing,3
-Other,Video sharing platform,Metamoderation,3
-Other,Video sharing platform,Profiling,3
-Other,Video sharing platform,Replacement,3
-Other,Video streaming platform,Removal,3
-Other,Wikis,Debate management,3
 Censorship,AI,Disclosure,2
 Censorship,AI,Intimidation,2
 Censorship,AI,Other,2
@@ -1267,92 +1130,6 @@ Content moderation,Web,Marginalisation,2
 Content moderation,Web,Monitoring,2
 Content moderation,Web,Other,2
 Content moderation,Web,Profiling,2
-Debate management,Blog,Removal,2
-Debate management,Blog,Review,2
-Debate management,Deliberation platform,Enframing,2
-Debate management,Deliberation platform,Filtering,2
-Debate management,Deliberation platform,Removal,2
-Debate management,News media,Filtering,2
-Debate management,Online community,Debate management,2
-Debate management,Online community,Enframing,2
-Debate management,Online fora,Intermediating,2
-Debate management,Online learning platform,Filtering,2
-Debate management,Online learning platform,Intermediating,2
-Debate management,Online learning platform,Maintenance,2
-Debate management,Portal,Debate management,2
-Debate management,Portal,Enframing,2
-Debate management,Search engine,Debate management,2
-Debate management,Search engine,Enframing,2
-Debate management,Social media platform,Filtering,2
-Debate management,Social media platform,Internalisation,2
-Debate management,Social media platform,Maintenance,2
-Debate management,Social media platform,Monitoring,2
-Debate management,Video sharing platform,Debate management,2
-Debate management,Videoconferencing,Debate management,2
-Other,AI,Debate management,2
-Other,AI,Rating,2
-Other,Alt-tech,Enframing,2
-Other,Alt-tech,Removal,2
-Other,Alt-tech,Verification,2
-Other,App store,Filtering,2
-Other,App store,Review,2
-Other,Blog,Verification,2
-Other,E-commerce,Filtering,2
-Other,E-commerce,Profiling,2
-Other,ISP,Enframing,2
-Other,ISP,Limiting access,2
-Other,ISP,Metamoderation,2
-Other,ISP,Monitoring,2
-Other,ISP,Profiling,2
-Other,Imageboard,Enframing,2
-Other,Imageboard,Verification,2
-Other,Internet (general),Removal,2
-Other,Internet (general),Review,2
-Other,Internet (general),Verification,2
-Other,Messaging platform,Marginalisation,2
-Other,Messaging platform,Metamoderation,2
-Other,Messaging platform,Rating,2
-Other,Music streaming,Enframing,2
-Other,Music streaming,Filtering,2
-Other,Music streaming,Marginalisation,2
-Other,Music streaming,Rating,2
-Other,Music streaming,Removal,2
-Other,Music streaming,Review,2
-Other,News media,Rating,2
-Other,News media,Removal,2
-Other,Online fora,Debate management,2
-Other,Online fora,Enframing,2
-Other,Online fora,Filtering,2
-Other,Online fora,Internalisation,2
-Other,Online fora,Metamoderation,2
-Other,Online fora,Removal,2
-Other,Online fora,Review,2
-Other,Platforms,Intimidation,2
-Other,Platforms,Limiting access,2
-Other,Platforms,Profiling,2
-Other,Print media,Labeling,2
-Other,Print media,Limiting access,2
-Other,Print media,Marginalisation,2
-Other,Print media,Monitoring,2
-Other,Radio,Monitoring,2
-Other,Radio,Replacement,2
-Other,Radio,Verification,2
-Other,Ride-sharing platform,Removal,2
-Other,Russian social media platform,Removal,2
-Other,Russian social media platform,Verification,2
-Other,Search engine,Licensing,2
-Other,Television,Intimidation,2
-Other,Television,Limiting access,2
-Other,Television,Monitoring,2
-Other,Video sharing platform,Maintenance,2
-Other,Video streaming platform,Filtering,2
-Other,Video streaming platform,Profiling,2
-Other,Wikis,Limiting access,2
-Other,Wikis,Marginalisation,2
-Other,Wikis,Metamoderation,2
-Other,Wikis,Other,2
-Other,Wikis,Profiling,2
-Other,Wikis,Verification,2
 Censorship,AI,Metamoderation,1
 Censorship,AI,Monitoring,1
 Censorship,AI,Rating,1
@@ -2070,329 +1847,3 @@ Content moderation,Web,Replacement,1
 Content moderation,Web3,Metamoderation,1
 Content moderation,Web3,Profiling,1
 Content moderation,Wikis,Intermediating,1
-Debate management,Blog,Filtering,1
-Debate management,Blog,Internalisation,1
-Debate management,Blog,Limiting access,1
-Debate management,Blog,Maintenance,1
-Debate management,Blog,Marginalisation,1
-Debate management,Blog,Monitoring,1
-Debate management,Computer-mediated communication,Debate management,1
-Debate management,Computer-mediated communication,Enframing,1
-Debate management,Computer-mediated communication,Filtering,1
-Debate management,Computer-mediated communication,Maintenance,1
-Debate management,Computer-mediated communication,Removal,1
-Debate management,Deliberation platform,Disclosure,1
-Debate management,Deliberation platform,Rating,1
-Debate management,Email,Debate management,1
-Debate management,Email,Enframing,1
-Debate management,Internet (general),Enframing,1
-Debate management,Internet (general),Maintenance,1
-Debate management,Internet (general),Monitoring,1
-Debate management,Internet (general),Removal,1
-Debate management,Internet (general),Review,1
-Debate management,Mailing list,Debate management,1
-Debate management,Mailing list,Enframing,1
-Debate management,Mailing list,Filtering,1
-Debate management,Mailing list,Review,1
-Debate management,Messaging platform,Filtering,1
-Debate management,Messaging platform,Maintenance,1
-Debate management,Messaging platform,Metamoderation,1
-Debate management,Messaging platform,Monitoring,1
-Debate management,Messaging platform,Review,1
-Debate management,News media,Debate management,1
-Debate management,News media,Enframing,1
-Debate management,News media,Removal,1
-Debate management,News media,Review,1
-Debate management,Online community,Filtering,1
-Debate management,Online fora,Limiting access,1
-Debate management,Online fora,Metamoderation,1
-Debate management,Online learning platform,Limiting access,1
-Debate management,Online learning platform,Metamoderation,1
-Debate management,Online learning platform,Monitoring,1
-Debate management,Online learning platform,Rating,1
-Debate management,Online learning platform,Removal,1
-Debate management,Online learning platform,Review,1
-Debate management,Political website,Debate management,1
-Debate management,Political website,Enframing,1
-Debate management,Political website,Filtering,1
-Debate management,Political website,Intermediating,1
-Debate management,Political website,Metamoderation,1
-Debate management,Political website,Removal,1
-Debate management,Political website,Review,1
-Debate management,Portal,Filtering,1
-Debate management,Print media,Debate management,1
-Debate management,Print media,Enframing,1
-Debate management,Q&A platform,Enframing,1
-Debate management,Q&A platform,Maintenance,1
-Debate management,Q&A platform,Monitoring,1
-Debate management,Q&A platform,Removal,1
-Debate management,Q&A platform,Review,1
-Debate management,Search engine,Filtering,1
-Debate management,Social media platform,Disclosure,1
-Debate management,Social media platform,Licensing,1
-Debate management,Social media platform,Limiting access,1
-Debate management,Social media platform,Marginalisation,1
-Debate management,Social media platform,Metamoderation,1
-Debate management,Software,Debate management,1
-Debate management,Video sharing platform,Enframing,1
-Debate management,Video sharing platform,Internalisation,1
-Debate management,Video sharing platform,Limiting access,1
-Debate management,Video sharing platform,Marginalisation,1
-Debate management,Video sharing platform,Removal,1
-Debate management,Video sharing platform,Review,1
-Debate management,Videoconferencing,Enframing,1
-Debate management,Wikis,Enframing,1
-Debate management,Wikis,Maintenance,1
-Debate management,Wikis,Monitoring,1
-Debate management,Wikis,Removal,1
-Debate management,Wikis,Review,1
-Other,AI,Disclosure,1
-Other,AI,Intimidation,1
-Other,AI,Marginalisation,1
-Other,AI,Metamoderation,1
-Other,AI,Other,1
-Other,Algorithms,Disclosure,1
-Other,Algorithms,Intimidation,1
-Other,Algorithms,Monitoring,1
-Other,Algorithms,Replacement,1
-Other,Algorithms,Verification,1
-Other,Alt-tech,Limiting access,1
-Other,Alt-tech,Marginalisation,1
-Other,Alt-tech,Profiling,1
-Other,Alt-tech,Rating,1
-Other,Alt-tech,Review,1
-Other,App store,Enframing,1
-Other,App store,Internalisation,1
-Other,App store,Monitoring,1
-Other,App store,Profiling,1
-Other,App store,Rating,1
-Other,App store,Replacement,1
-Other,Blog,Debate management,1
-Other,Blog,Filtering,1
-Other,Blog,Internalisation,1
-Other,Blog,Intimidation,1
-Other,Blog,Monitoring,1
-Other,Blog,Rating,1
-Other,Blog,Replacement,1
-Other,Blog,Review,1
-Other,Browser,Enframing,1
-Other,Browser,Removal,1
-Other,Correspondence,Marginalisation,1
-Other,Correspondence,Review,1
-Other,Crowdfunding,Enframing,1
-Other,Crowdfunding,Limiting access,1
-Other,Crowdfunding,Profiling,1
-Other,Crowdfunding,Rating,1
-Other,Crowdfunding,Removal,1
-Other,Crowdfunding,Review,1
-Other,Crowdsourcing platform,Removal,1
-Other,Dating app,Filtering,1
-Other,Dating app,Internalisation,1
-Other,Dating app,Limiting access,1
-Other,Dating app,Marginalisation,1
-Other,Dating app,Removal,1
-Other,Dating app,Review,1
-Other,Deliberation platform,Debate management,1
-Other,Deliberation platform,Review,1
-Other,E-commerce,Licensing,1
-Other,E-commerce,Marginalisation,1
-Other,E-commerce,Rating,1
-Other,E-commerce,Replacement,1
-Other,Film,Internalisation,1
-Other,Film,Other,1
-Other,Film,Removal,1
-Other,Government website,Marginalisation,1
-Other,Government website,Removal,1
-Other,ISP,Debate management,1
-Other,ISP,Internalisation,1
-Other,ISP,Licensing,1
-Other,ISP,Marginalisation,1
-Other,ISP,Verification,1
-Other,Image sharing platform,Enframing,1
-Other,Image sharing platform,Filtering,1
-Other,Image sharing platform,Marginalisation,1
-Other,Image sharing platform,Rating,1
-Other,Image sharing platform,Review,1
-Other,Imageboard,Internalisation,1
-Other,Imageboard,Labeling,1
-Other,Imageboard,Marginalisation,1
-Other,Imageboard,Metamoderation,1
-Other,Imageboard,Monitoring,1
-Other,Imageboard,Rating,1
-Other,Imageboard,Removal,1
-Other,Imageboard,Review,1
-Other,Internet (general),Enframing,1
-Other,Internet (general),Labeling,1
-Other,Internet (general),Limiting access,1
-Other,Internet (general),Metamoderation,1
-Other,Internet (general),Rating,1
-Other,Map app,Filtering,1
-Other,Map app,Internalisation,1
-Other,Map app,Profiling,1
-Other,Map app,Removal,1
-Other,Map app,Review,1
-Other,Marketplace,Debate management,1
-Other,Marketplace,Enframing,1
-Other,Marketplace,Filtering,1
-Other,Marketplace,Internalisation,1
-Other,Marketplace,Labeling,1
-Other,Marketplace,Licensing,1
-Other,Marketplace,Limiting access,1
-Other,Marketplace,Maintenance,1
-Other,Marketplace,Marginalisation,1
-Other,Marketplace,Metamoderation,1
-Other,Marketplace,Other,1
-Other,Marketplace,Profiling,1
-Other,Marketplace,Rating,1
-Other,Marketplace,Removal,1
-Other,Marketplace,Review,1
-Other,Messaging platform,Debate management,1
-Other,Messaging platform,Disclosure,1
-Other,Messaging platform,Licensing,1
-Other,Messaging platform,Replacement,1
-Other,Mobile device,Debate management,1
-Other,Mobile device,Enframing,1
-Other,Mobile device,Filtering,1
-Other,Mobile device,Intimidation,1
-Other,Mobile device,Limiting access,1
-Other,Mobile device,Metamoderation,1
-Other,Mobile device,Monitoring,1
-Other,Mobile device,Profiling,1
-Other,Mobile device,Rating,1
-Other,Mobile device,Removal,1
-Other,Mobile device,Review,1
-Other,Music streaming,Internalisation,1
-Other,Music streaming,Profiling,1
-Other,News aggregator,Enframing,1
-Other,News aggregator,Filtering,1
-Other,News aggregator,Marginalisation,1
-Other,News aggregator,Rating,1
-Other,News aggregator,Review,1
-Other,News media,Disclosure,1
-Other,News media,Internalisation,1
-Other,News media,Intimidation,1
-Other,News media,Licensing,1
-Other,News media,Limiting access,1
-Other,News media,Marginalisation,1
-Other,News media,Monitoring,1
-Other,News media,Replacement,1
-Other,News media,Verification,1
-Other,Online fora,Intimidation,1
-Other,Online fora,Labeling,1
-Other,Online fora,Licensing,1
-Other,Online fora,Limiting access,1
-Other,Online fora,Maintenance,1
-Other,Online fora,Marginalisation,1
-Other,Online fora,Other,1
-Other,Online fora,Profiling,1
-Other,Online fora,Verification,1
-Other,Online learning platform,Enframing,1
-Other,Online learning platform,Filtering,1
-Other,Online learning platform,Removal,1
-Other,Online learning platform,Review,1
-Other,Payment platform,Enframing,1
-Other,Payment platform,Limiting access,1
-Other,Payment platform,Profiling,1
-Other,Payment platform,Rating,1
-Other,Payment platform,Removal,1
-Other,Payment platform,Review,1
-Other,Performing arts,Filtering,1
-Other,Performing arts,Internalisation,1
-Other,Performing arts,Licensing,1
-Other,Performing arts,Review,1
-Other,Platforms,Disclosure,1
-Other,Platforms,Internalisation,1
-Other,Platforms,Licensing,1
-Other,Platforms,Marginalisation,1
-Other,Platforms,Metamoderation,1
-Other,Platforms,Other,1
-Other,Platforms,Replacement,1
-Other,Platforms,Verification,1
-Other,Pornography,Enframing,1
-Other,Pornography,Labeling,1
-Other,Pornography,Limiting access,1
-Other,Pornography,Removal,1
-Other,Portal,Filtering,1
-Other,Portal,Removal,1
-Other,Print media,Debate management,1
-Other,Print media,Disclosure,1
-Other,Print media,Maintenance,1
-Other,Print media,Metamoderation,1
-Other,Print media,Other,1
-Other,Q&A platform,Enframing,1
-Other,Q&A platform,Internalisation,1
-Other,Q&A platform,Labeling,1
-Other,Q&A platform,Metamoderation,1
-Other,Q&A platform,Monitoring,1
-Other,Q&A platform,Rating,1
-Other,Q&A platform,Review,1
-Other,Radio,Debate management,1
-Other,Radio,Disclosure,1
-Other,Radio,Enframing,1
-Other,Radio,Filtering,1
-Other,Radio,Intimidation,1
-Other,Radio,Removal,1
-Other,Review platform,Enframing,1
-Other,Review platform,Filtering,1
-Other,Review platform,Internalisation,1
-Other,Review platform,Intimidation,1
-Other,Review platform,Metamoderation,1
-Other,Review platform,Other,1
-Other,Review platform,Removal,1
-Other,Ride-sharing platform,Enframing,1
-Other,Ride-sharing platform,Filtering,1
-Other,Ride-sharing platform,Licensing,1
-Other,Ride-sharing platform,Marginalisation,1
-Other,Ride-sharing platform,Profiling,1
-Other,Ride-sharing platform,Rating,1
-Other,Russian social media platform,Debate management,1
-Other,Russian social media platform,Enframing,1
-Other,Russian social media platform,Marginalisation,1
-Other,Russian social media platform,Other,1
-Other,Russian social media platform,Rating,1
-Other,Russian social media platform,Replacement,1
-Other,Russian social media platform,Review,1
-Other,Search engine,Disclosure,1
-Other,Search engine,Internalisation,1
-Other,Search engine,Other,1
-Other,Short video platform,Monitoring,1
-Other,Smart device,Filtering,1
-Other,Smart device,Internalisation,1
-Other,Smart device,Profiling,1
-Other,Smart device,Removal,1
-Other,Smart device,Review,1
-Other,Surveillance,Enframing,1
-Other,Surveillance,Filtering,1
-Other,Surveillance,Removal,1
-Other,Surveillance,Review,1
-Other,Television,Debate management,1
-Other,Television,Labeling,1
-Other,Television,Marginalisation,1
-Other,Television,Metamoderation,1
-Other,Television,Other,1
-Other,Television,Profiling,1
-Other,Video game,Enframing,1
-Other,Video game,Filtering,1
-Other,Video game,Internalisation,1
-Other,Video game,Removal,1
-Other,Video game,Review,1
-Other,Video sharing platform,Disclosure,1
-Other,Video streaming platform,Enframing,1
-Other,Video streaming platform,Internalisation,1
-Other,Video streaming platform,Licensing,1
-Other,Video streaming platform,Marginalisation,1
-Other,Video streaming platform,Rating,1
-Other,Video streaming platform,Review,1
-Other,Videoconferencing,Enframing,1
-Other,Videoconferencing,Filtering,1
-Other,Videoconferencing,Removal,1
-Other,Videoconferencing,Review,1
-Other,Web,Filtering,1
-Other,Web,Rating,1
-Other,Wikis,Internalisation,1
-Other,Wikis,Intimidation,1
-Other,Wikis,Labeling,1
-Other,Wikis,Licensing,1
-Other,Wikis,Maintenance,1
-Other,Wikis,Monitoring,1
-Other,Wikis,Replacement,1

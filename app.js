@@ -2088,15 +2088,20 @@ async function renderTermsVenn() {
   // v3: three topics (media moderation and regulation are "Other"
   // sub-categories). With three circles every pair is adjacent and the
   // triple region is the core.
-  const CATS = ["Content moderation", "Censorship", "Debate management"];
+  // Circles = the topics present in the data (two since debate management was
+  // set aside): read from the rows themselves.
+  const CATS = ["Content moderation", "Censorship", "Debate management"]
+    .filter(c => srcRows.keywords.some(r => r.Topic === c || (r.Topic || "").split(" + ").includes(c)));
   const color = makeSubtopicScale(CATS.slice().sort());
   const fmtN = d3.format(",");
 
   const N = CATS.length;
-  const W = 1500, H = 1500, cx = W / 2, cy = H / 2;
-  const R = 335, D = 240;     // circle radius / centre distance — D<R ⇒ common core
+  // Two circles sit side by side (wider canvas, lens in the middle); three or
+  // more form a flower.
+  const W = N === 2 ? 1700 : 1500, H = N === 2 ? 1100 : 1500, cx = W / 2, cy = H / 2;
+  const R = N === 2 ? 470 : 335, D = N === 2 ? 300 : 240;   // radius / centre distance
   const centres = CATS.map((c, i) => {
-    const a = -Math.PI / 2 + (2 * Math.PI * i) / N;
+    const a = N === 2 ? Math.PI * (1 + i) : -Math.PI / 2 + (2 * Math.PI * i) / N;
     return [cx + D * Math.cos(a), cy + D * Math.sin(a), a];
   });
   const inside = (x, y, i) =>
@@ -2182,8 +2187,10 @@ async function renderTermsVenn() {
             excl.get(c) || [], 22, "term vn-excl", max);
     });
 
-    // Adjacent pair lenses — along the mid-angle between neighbours.
+    // Adjacent pair lenses — along the mid-angle between neighbours. With two
+    // circles there is a single lens (drawn once).
     CATS.forEach((c, i) => {
+      if (N === 2 && i === 1) return;
       const j = (i + 1) % N;
       const terms = pairOf(c, CATS[j]);
       if (!terms.length) return;

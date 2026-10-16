@@ -5,10 +5,8 @@ Quantity,Discipline,Topic,Sub-topic
 108,public_policy_governance,Content moderation,Platform governance
 96,communication_media_studies,Censorship,(none)
 74,arts_literary_cultural_studies,Censorship,(none)
-74,communication_media_studies,Other,(none)
 61,computer_science_ai,Censorship,(none)
 58,communication_media_studies,Content moderation,Community norms and identity
-57,communication_media_studies,Debate management,(none)
 46,communication_media_studies,Content moderation,Debate management
 43,censorship_studies,Censorship,(none)
 38,political_science_ir,Censorship,(none)
@@ -25,48 +23,31 @@ Quantity,Discipline,Topic,Sub-topic
 13,law_legal_studies,Content moderation,(none)
 12,communication_media_studies,Content moderation,Platform regulation
 10,political_philosophy,Censorship,(none)
-9,computer_science_ai,Other,(none)
 8,economics_business_management,Content moderation,Platform governance
 8,political_science_ir,Content moderation,(none)
 8,public_policy_governance,Content moderation,Censorship
-7,arts_literary_cultural_studies,Other,(none)
-7,education_pedagogy,Debate management,(none)
 7,law_legal_studies,Censorship,(none)
 6,political_science_ir,Content moderation,Platform governance
-6,public_policy_governance,Other,(none)
 6,religious_studies_theology,Censorship,(none)
-6,sociology_anthropology,Debate management,(none)
 5,communication_media_studies,Content moderation,Platform brand safety
 5,economics_business_management,Censorship,(none)
 5,law_legal_studies,Content moderation,Censorship
 5,political_philosophy,Content moderation,Platform governance
-5,public_policy_governance,Debate management,(none)
-4,philosophy_ethics,Other,(none)
-4,psychology_behavioral_science,Other,(none)
 4,science_technology_studies,Censorship,(none)
-4,sociology_anthropology,Other,(none)
 3,communication_media_studies,Content moderation,Moderating extremism
 3,computer_science_ai,Content moderation,Community norms and identity
 3,computer_science_ai,Content moderation,Debate management
-3,computer_science_ai,Debate management,(none)
 3,economics_business_management,Content moderation,(none)
-3,economics_business_management,Other,(none)
-3,history_book_history,Other,(none)
-3,law_legal_studies,Other,(none)
-3,political_philosophy,Other,(none)
 3,political_science_ir,Content moderation,Platform regulation
-3,political_science_ir,Other,(none)
 3,psychology_behavioral_science,Censorship,(none)
 3,psychology_behavioral_science,Content moderation,(none)
 3,public_policy_governance,Content moderation,Platform compliance
-3,science_technology_studies,Other,(none)
 2,censorship_studies,Content moderation,(none)
 2,censorship_studies,Content moderation,Censorship
 2,computer_science_ai,Content moderation,Platform regulation
 2,law_legal_studies,Content moderation,Platform compliance
 2,law_legal_studies,Content moderation,Platform regulation
 2,political_philosophy,Content moderation,Platform regulation
-2,political_science_ir,Debate management,(none)
 2,psychology_behavioral_science,Content moderation,Platform governance
 2,public_policy_governance,Content moderation,Platform brand safety
 2,science_technology_studies,Content moderation,Platform governance
@@ -75,20 +56,14 @@ Quantity,Discipline,Topic,Sub-topic
 1,arts_literary_cultural_studies,Content moderation,Platform brand safety
 1,censorship_studies,Content moderation,Platform governance
 1,censorship_studies,Content moderation,Platform regulation
-1,censorship_studies,Debate management,(none)
 1,communication_media_studies,Content moderation,Platform compliance
 1,computer_science_ai,Content moderation,Platform compliance
 1,economics_business_management,Content moderation,Debate management
-1,economics_business_management,Debate management,(none)
 1,education_pedagogy,Content moderation,(none)
 1,education_pedagogy,Content moderation,Debate management
 1,law_legal_studies,Content moderation,Community norms and identity
-1,linguistics,Debate management,(none)
-1,other_unclear,Other,(none)
 1,philosophy_ethics,Content moderation,Platform governance
-1,philosophy_ethics,Debate management,(none)
 1,political_philosophy,Content moderation,Censorship
-1,political_philosophy,Debate management,(none)
 1,psychology_behavioral_science,Content moderation,Debate management
 1,psychology_behavioral_science,Content moderation,Platform regulation
 1,public_policy_governance,Content moderation,Community norms and identity

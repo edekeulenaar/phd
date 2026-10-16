@@ -1391,7 +1391,9 @@ def main() -> None:
     # "Other" sub-categories and no longer circles.
     V3_QUOTES = bool(F) and "Quote" in F[0]
     if V3_QUOTES:
-        VENN_CATS = ["Content moderation", "Censorship", "Debate management"]
+        # the topics present in the dataset (censorship and content moderation
+        # since the scope decision of 16 October 2026)
+        VENN_CATS = [t for t in ["Content moderation", "Censorship", "Debate management"] if t in TOPICS]
     VENN_TYPES = ["WHAT", "WHO", "HOW", "WHY"]
 
     # ── Keyword denylist (Figure 14) ────────────────────────────────────
@@ -1494,7 +1496,7 @@ def main() -> None:
             important main major key large small high low long short recent current
             further following less least more most around rather mean means
             defined define defines definition refers refer referred operates operate
-            set understood seen regarded considered""".split())
+            set understood seen regarded considered involves involve implies imply occurs occur""".split())
         if V3_QUOTES:
             # v3: the vocabulary of the findings themselves — bigrams
             # of each finding's verbatim quote (terms_of, stopwords removed),

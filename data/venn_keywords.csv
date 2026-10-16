@@ -19,11 +19,6 @@ ALL,exclusive,Censorship,public censorship,10
 ALL,exclusive,Censorship,subject censorship,10
 ALL,exclusive,Censorship,radio television,10
 ALL,exclusive,Censorship,saudi arabia,9
-ALL,exclusive,Debate management,presidential debates,4
-ALL,exclusive,Debate management,agenda setting,4
-ALL,exclusive,Debate management,news norms,3
-ALL,exclusive,Debate management,commission presidential,3
-ALL,exclusive,Debate management,town hall,3
 ALL,pair,Content moderation + Censorship,content moderation,348
 ALL,pair,Content moderation + Censorship,social media,327
 ALL,pair,Content moderation + Censorship,hate speech,223
@@ -34,8 +29,6 @@ ALL,pair,Content moderation + Censorship,user generated,104
 ALL,pair,Content moderation + Censorship,generated content,91
 ALL,pair,Content moderation + Censorship,harmful content,88
 ALL,pair,Content moderation + Censorship,machine learning,87
-ALL,triple,Content moderation + Censorship + Debate management,public sphere,27
-ALL,center,(≥3 categories),public sphere,27
 WHAT,exclusive,Content moderation,user generated,55
 WHAT,exclusive,Content moderation,generated content,53
 WHAT,exclusive,Content moderation,facilitate cooperation,34
@@ -48,24 +41,24 @@ WHAT,exclusive,Content moderation,participation community,29
 WHAT,exclusive,Content moderation,mechanisms structure,26
 WHAT,exclusive,Censorship,public censorship,8
 WHAT,exclusive,Censorship,political censorship,7
-WHAT,exclusive,Censorship,censorship involves,7
 WHAT,exclusive,Censorship,internet censorship,6
-WHAT,exclusive,Censorship,censorship implies,5
 WHAT,exclusive,Censorship,censorship process,5
 WHAT,exclusive,Censorship,censorship mechanism,5
 WHAT,exclusive,Censorship,formal informal,5
 WHAT,exclusive,Censorship,censorship social,5
 WHAT,exclusive,Censorship,censorship regime,5
+WHAT,exclusive,Censorship,public access,4
+WHAT,exclusive,Censorship,aspects public,4
 WHAT,pair,Content moderation + Censorship,content moderation,190
 WHAT,pair,Content moderation + Censorship,social media,79
 WHAT,pair,Content moderation + Censorship,media platforms,33
-WHAT,pair,Content moderation + Censorship,censorship occurs,15
 WHAT,pair,Content moderation + Censorship,collateral censorship,13
 WHAT,pair,Content moderation + Censorship,freedom expression,12
 WHAT,pair,Content moderation + Censorship,public sphere,10
 WHAT,pair,Content moderation + Censorship,private censorship,8
 WHAT,pair,Content moderation + Censorship,private companies,8
 WHAT,pair,Content moderation + Censorship,prior restraint,8
+WHAT,pair,Content moderation + Censorship,media content,6
 WHO,exclusive,Content moderation,machine learning,61
 WHO,exclusive,Content moderation,moderation decisions,45
 WHO,exclusive,Content moderation,oversight board,45
@@ -86,8 +79,6 @@ WHO,exclusive,Censorship,access internet,7
 WHO,exclusive,Censorship,ministry culture,7
 WHO,exclusive,Censorship,motion picture,7
 WHO,exclusive,Censorship,government censorship,6
-WHO,exclusive,Debate management,presidential debates,4
-WHO,exclusive,Debate management,commission presidential,3
 WHO,pair,Content moderation + Censorship,content moderation,246
 WHO,pair,Content moderation + Censorship,social media,213
 WHO,pair,Content moderation + Censorship,hate speech,104
@@ -98,7 +89,6 @@ WHO,pair,Content moderation + Censorship,civil society,45
 WHO,pair,Content moderation + Censorship,law enforcement,44
 WHO,pair,Content moderation + Censorship,artificial intelligence,43
 WHO,pair,Content moderation + Censorship,service providers,42
-WHO,pair,Content moderation + Debate management,public sphere,6
 HOW,exclusive,Content moderation,moderation decisions,55
 HOW,exclusive,Content moderation,human moderators,52
 HOW,exclusive,Content moderation,generated content,38
@@ -119,7 +109,6 @@ HOW,exclusive,Censorship,saudi arabia,6
 HOW,exclusive,Censorship,error message,6
 HOW,exclusive,Censorship,network traffic,6
 HOW,exclusive,Censorship,legal action,6
-HOW,exclusive,Debate management,town hall,3
 HOW,pair,Content moderation + Censorship,content moderation,200
 HOW,pair,Content moderation + Censorship,social media,195
 HOW,pair,Content moderation + Censorship,hate speech,145
