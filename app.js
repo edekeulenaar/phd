@@ -1910,19 +1910,28 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
 
     const W = Math.max(720, host.node().clientWidth || 880);
     const H = 460;
-    const m = { top: 24, right: 330, bottom: 36, left: 56 };
+    const svg = host.append("svg").attr("class", "chart bump")
+      .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
+      .attr("width", "100%");
+    // Room for the end labels: the longest label as rendered, not a guess.
+    const short = g => g.length > 34 ? g.slice(0, 32) + "…" : g;
+    const probe = svg.append("g").attr("class", "lines");
+    let labW = 0;
+    groups.forEach(g => {
+      const t = probe.append("g").attr("class", "series").append("text").attr("class", "label").text(short(g));
+      labW = Math.max(labW, t.node().getComputedTextLength());
+    });
+    probe.remove();
+    const m = { top: 24, right: Math.ceil(labW) + 24, bottom: 36, left: 56 };
     const x = d3.scaleLinear().domain([years[0], years[years.length - 1]]).range([m.left, W - m.right]);
     const nTicks = Math.max(3, Math.min(10, Math.floor((W - m.left - m.right) / 70)));
     const yMax = d3.max(series, s => d3.max(s.values, p => p.v)) || 0.01;
     const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - m.bottom, m.top]);
-    const svg = host.append("svg").attr("class", "chart bump")
-      .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
-      .attr("width", "100%");
     svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`)
       .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(nTicks));
     svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left},0)`)
       .call(d3.axisLeft(y).ticks(6).tickFormat(d3.format(".0%")));
-    const line = d3.line().x(p => x(p.year)).y(p => y(p.v)).curve(d3.curveCatmullRom.alpha(0.5));
+    const line = d3.line().x(p => x(p.year)).y(p => y(p.v)).curve(d3.curveMonotoneX);
     const gSel = svg.append("g").attr("class", "lines")
       .selectAll("g").data(series).join("g")
         .attr("class", "series").attr("data-group", d => d.group);
@@ -1955,8 +1964,9 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       .attr("x", d => x(d.values[d.values.length - 1].year) + 6)
       .attr("y", d => endY.get(d.group)).attr("dy", "0.32em")
       .attr("fill", d => colorFn(d.group))
-      .text(d => d.group.length > 34 ? d.group.slice(0, 32) + "…" : d.group)
+      .text(d => short(d.group))
       .append("title").text(d => d.group);
+    centreChart(svg, W);
     figKey.register(figId, {
       title: "Share of publications mentioning",
       legend: groups.map(g => ({ label: g, color: colorFn(g) })),
@@ -2678,6 +2688,19 @@ function inRange(r, lo, hi) {
    14. Bump renderer (Figs 3 & 4 — unique items per Topic/Sub-topic per year)
    ─────────────────────────────────────────────────────────────────────── */
 
+/** Centre a drawn line chart (plot + end labels) horizontally in its
+ *  viewBox: wrap the content, measure it, and shift it so the left and right
+ *  margins are equal. */
+function centreChart(svg, W) {
+  const node = svg.node();
+  const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  g.setAttribute("class", "centred");
+  while (node.firstChild) g.appendChild(node.firstChild);
+  node.appendChild(g);
+  const bb = g.getBBox();
+  if (bb.width > 0 && bb.width < W) g.setAttribute("transform", `translate(${(W - bb.width) / 2 - bb.x},0)`);
+}
+
 async function renderBump({ csv, yField, hostSel, figId, yearInputs,
                             filterField, filterValue, topGroups,
                             relative = true, minYearN = 10 }) {
@@ -2806,10 +2829,12 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
     // Centripetal Catmull–Rom (α = 0.5) — gentle smoothing that passes
     // through every data point without the overshoot / Kandinsky humps
     // that curveMonotoneX produces on sparse year-by-year counts.
+    // Monotone in x: smooth, but never overshoots between two data points,
+    // so no line dips below 0 % or above the axis frame.
     const line = d3.line()
       .x(([yr]) => x(yr))
       .y(([, n]) => y(n))
-      .curve(d3.curveCatmullRom.alpha(0.5));
+      .curve(d3.curveMonotoneX);
 
     const series = groups.map(g => ({
       group: g,
@@ -2865,6 +2890,7 @@ async function renderBump({ csv, yField, hostSel, figId, yearInputs,
       .attr("dy", "0.32em")
       .attr("fill", d => colorFn(d.group))
       .text(d => d.group);
+    centreChart(svg, W);
 
     figKey.register(figId, {
       title: yField,
