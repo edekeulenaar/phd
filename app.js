@@ -1675,7 +1675,14 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   const primaryValues = () => (sel1 && sel1.value ? sel1.value.split("|") : null);
   const curType    = () => (selT ? selT.value : "ALL");
   const whatView   = () => isTopicFig && curType() === "WHAT";
-  const gfield     = () => (whatView() ? "Sub-category" : groupField);
+  // A WHAT view that combines topics (e.g. Content moderation | Debate
+  // management) labels its lanes "Category › Sub-category", so Debate
+  // management's own "General" cannot be read as a sub-category of content
+  // moderation.
+  all.forEach(r => { r.__whatLane = (r.Category || "").trim() + " › " + (r["Sub-category"] || "").trim(); });
+  const gfield     = () => (whatView()
+    ? ((primaryValues() || []).length > 1 ? "__whatLane" : "Sub-category")
+    : groupField);
 
   // Re-populate the Sub-category dropdown with the EXACT 'Sub-category'
   // values from the data, scoped to the current Topic's publications.
@@ -1762,7 +1769,15 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const H = Math.max(340, groups.length * ROW_H + 110);
     const yScale = d3.scalePoint().domain(groups).range([30, H - 50]).padding(0.5);
     const [y0, y1] = d3.extent(data, r => +r["Publication Year"]);
-    const x = d3.scaleLinear().domain([y0 - 1, y1 + 1]).range([320, W - 24]);
+    // Label column as wide as the longest lane label (at least 320).
+    const laneLabel = g => g.length > 60 ? g.slice(0, 58) + "…" : g;
+    const probe = host.append("svg").attr("class", "chart").style("position", "absolute").style("visibility", "hidden");
+    const pg = probe.append("g").attr("class", "y-labels");
+    let labW = 0;
+    groups.forEach(g => { labW = Math.max(labW, pg.append("text").text(laneLabel(g)).node().getComputedTextLength()); });
+    probe.remove();
+    const x0 = Math.max(320, Math.ceil(labW) + 40);
+    const x = d3.scaleLinear().domain([y0 - 1, y1 + 1]).range([x0, W - 24]);
     const rScale = d3.scaleSqrt().domain([0, d3.max(data, d => +d.Citations) || 1]).range([2, 12]);
     const jit = seededJitter(31, 11);
 
@@ -1775,7 +1790,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const labelSel = svg.append("g").attr("class", "y-labels")
       .selectAll("text").data(groups).join("text")
         .attr("x", 12).attr("y", g => yScale(g)).attr("dy", "0.32em")
-        .text(g => g.length > 44 ? g.slice(0, 42) + "…" : g);
+        .text(laneLabel);
     labelSel.append("title").text(g => g);
     // Measure each label and start its row guide AFTER the label's right edge
     // so the dashed line never crosses through label text.

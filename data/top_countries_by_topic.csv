@@ -1,27 +1,27 @@
 Topic,Country,Quantity
-Censorship,United States,188
-Censorship,China,127
-Censorship,France,105
-Censorship,United Kingdom,72
-Censorship,Spain,70
-Censorship,Germany,62
-Censorship,Russia,58
+Censorship,United States,180
+Censorship,China,125
+Censorship,France,98
+Censorship,United Kingdom,67
+Censorship,Spain,67
+Censorship,Russia,56
+Censorship,Germany,54
 Censorship,Iran,47
-Censorship,Italy,46
+Censorship,Italy,44
 Censorship,Brazil,44
-Content moderation,United States,511
-Content moderation,European Union,308
-Content moderation,Brazil,256
-Content moderation,Germany,171
-Content moderation,United Kingdom,119
-Content moderation,France,110
-Content moderation,Italy,82
-Content moderation,India,69
-Content moderation,China,62
-Content moderation,Australia,57
+Content moderation,United States,489
+Content moderation,European Union,295
+Content moderation,Brazil,237
+Content moderation,Germany,162
+Content moderation,United Kingdom,113
+Content moderation,France,104
+Content moderation,Italy,76
+Content moderation,India,64
+Content moderation,China,60
+Content moderation,Australia,55
 Debate management,Brazil,20
-Debate management,France,17
 Debate management,United States,16
+Debate management,France,16
 Debate management,Spain,12
 Debate management,United Kingdom,7
 Debate management,European Union,5

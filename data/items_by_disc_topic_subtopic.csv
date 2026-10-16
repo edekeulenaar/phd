@@ -1,42 +1,42 @@
 Quantity,Discipline,Topic,Sub-topic
-328,communication_media_studies,Content moderation,Platform governance
-182,communication_media_studies,Content moderation,(none)
-172,history_book_history,Censorship,(none)
-122,public_policy_governance,Content moderation,Platform governance
-108,arts_literary_cultural_studies,Censorship,(none)
-107,communication_media_studies,Censorship,(none)
+323,communication_media_studies,Content moderation,Platform governance
+178,communication_media_studies,Content moderation,(none)
+161,history_book_history,Censorship,(none)
+115,public_policy_governance,Content moderation,Platform governance
+106,communication_media_studies,Censorship,(none)
+103,arts_literary_cultural_studies,Censorship,(none)
 80,communication_media_studies,Other,(none)
-65,communication_media_studies,Debate management,(none)
-64,computer_science_ai,Censorship,(none)
+64,communication_media_studies,Debate management,(none)
+62,computer_science_ai,Censorship,(none)
 59,communication_media_studies,Content moderation,Community norms and identity
-57,censorship_studies,Censorship,(none)
-51,communication_media_studies,Content moderation,Debate management
-42,political_science_ir,Censorship,(none)
-41,public_policy_governance,Content moderation,(none)
-34,sociology_anthropology,Censorship,(none)
-29,communication_media_studies,Content moderation,Censorship
-26,computer_science_ai,Content moderation,Platform governance
-24,law_legal_studies,Content moderation,Platform governance
+54,censorship_studies,Censorship,(none)
+47,communication_media_studies,Content moderation,Debate management
+41,political_science_ir,Censorship,(none)
+38,public_policy_governance,Content moderation,(none)
+33,sociology_anthropology,Censorship,(none)
+27,communication_media_studies,Content moderation,Censorship
+25,computer_science_ai,Content moderation,Platform governance
 23,computer_science_ai,Content moderation,(none)
-22,law_legal_studies,Content moderation,(none)
 21,communication_media_studies,Content moderation,Industrial labour
 21,education_pedagogy,Censorship,(none)
-20,public_policy_governance,Content moderation,Platform regulation
+21,law_legal_studies,Content moderation,(none)
+21,law_legal_studies,Content moderation,Platform governance
+19,public_policy_governance,Content moderation,Platform regulation
 17,public_policy_governance,Censorship,(none)
 13,communication_media_studies,Content moderation,Platform regulation
 12,political_philosophy,Censorship,(none)
 10,computer_science_ai,Other,(none)
-10,economics_business_management,Content moderation,Platform governance
-10,law_legal_studies,Content moderation,Censorship
 10,political_science_ir,Content moderation,(none)
-10,public_policy_governance,Content moderation,Censorship
 9,arts_literary_cultural_studies,Other,(none)
-9,communication_media_studies,Content moderation,Platform brand safety
 9,law_legal_studies,Censorship,(none)
+8,communication_media_studies,Content moderation,Platform brand safety
+8,economics_business_management,Content moderation,Platform governance
 8,education_pedagogy,Debate management,(none)
-8,political_science_ir,Content moderation,Platform governance
+8,public_policy_governance,Content moderation,Censorship
 8,public_policy_governance,Other,(none)
 8,religious_studies_theology,Censorship,(none)
+7,law_legal_studies,Content moderation,Censorship
+7,political_science_ir,Content moderation,Platform governance
 7,sociology_anthropology,Debate management,(none)
 6,public_policy_governance,Debate management,(none)
 5,computer_science_ai,Debate management,(none)
@@ -65,7 +65,6 @@ Quantity,Discipline,Topic,Sub-topic
 3,public_policy_governance,Content moderation,Platform compliance
 2,arts_literary_cultural_studies,Content moderation,Industrial labour
 2,censorship_studies,Content moderation,Censorship
-2,communication_media_studies,Content moderation,Platform compliance
 2,economics_business_management,Debate management,(none)
 2,law_legal_studies,Content moderation,Platform compliance
 2,law_legal_studies,Content moderation,Platform regulation
@@ -79,6 +78,7 @@ Quantity,Discipline,Topic,Sub-topic
 1,arts_literary_cultural_studies,Content moderation,Platform brand safety
 1,censorship_studies,Content moderation,Platform regulation
 1,censorship_studies,Debate management,(none)
+1,communication_media_studies,Content moderation,Platform compliance
 1,computer_science_ai,Content moderation,Platform compliance
 1,economics_business_management,Content moderation,Debate management
 1,education_pedagogy,Content moderation,(none)

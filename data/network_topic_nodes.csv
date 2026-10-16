@@ -1,85 +1,85 @@
 Type,Category,n_items
-GROUP,Content moderation,1095
-GROUP,Censorship,663
-GROUP,Debate management,99
-HOW,Removal,1325
-HOW,Review,1216
-HOW,Enframing,1164
-HOW,Filtering,785
-HOW,Internalisation,581
-HOW,Metamoderation,542
-HOW,Monitoring,496
-HOW,Marginalisation,495
-HOW,Limiting access,471
-HOW,Intimidation,435
-HOW,Profiling,389
-HOW,Labeling,319
-HOW,Debate management,301
-HOW,Other,238
-HOW,Rating,231
-HOW,Licensing,219
-HOW,Replacement,204
-HOW,Disclosure,198
-HOW,Verification,196
-HOW,Maintenance,37
-HOW,Intermediating,28
-WHAT,Content moderation,865
-WHAT,Censorship,566
+GROUP,Content moderation,1054
+GROUP,Censorship,639
+GROUP,Debate management,98
+HOW,Removal,1269
+HOW,Review,1163
+HOW,Enframing,1121
+HOW,Filtering,755
+HOW,Internalisation,551
+HOW,Metamoderation,518
+HOW,Marginalisation,474
+HOW,Monitoring,472
+HOW,Limiting access,451
+HOW,Intimidation,418
+HOW,Profiling,373
+HOW,Labeling,301
+HOW,Debate management,290
+HOW,Other,228
+HOW,Rating,224
+HOW,Licensing,209
+HOW,Replacement,198
+HOW,Disclosure,188
+HOW,Verification,185
+HOW,Maintenance,36
+HOW,Intermediating,25
+WHAT,Content moderation,830
+WHAT,Censorship,540
 WHAT,Debate management,39
 WHAT,Other,37
-WHO,Platforms,1027
-WHO,Government agencies,1013
-WHO,Algorithmic systems,819
-WHO,Content moderators or BPO workforces,682
-WHO,Users,669
-WHO,Courts and prosecutors,509
-WHO,Civic advocacy and moral pressure groups,349
-WHO,Media owners,312
-WHO,Other,289
-WHO,Legislators,287
-WHO,Censorship boards or agencies,274
-WHO,Regulators,268
-WHO,Self-censorship (individuals),249
-WHO,"Schools, curricula, librarians, academia",240
-WHO,Police and intelligence services,233
-WHO,Editors,164
-WHO,Platform oversight bodies,148
-WHO,Cloud and infrastructure providers,147
-WHO,Religious authorities,139
-WHO,Political groups,134
-WHO,Journalists,128
-WHO,Fact-checkers and verification units,121
-WHO,Forum moderators (mods),113
-WHO,Advertisers,78
-WHO,Military censors,77
+WHO,Platforms,986
+WHO,Government agencies,963
+WHO,Algorithmic systems,785
+WHO,Content moderators or BPO workforces,651
+WHO,Users,638
+WHO,Courts and prosecutors,483
+WHO,Civic advocacy and moral pressure groups,337
+WHO,Media owners,302
+WHO,Other,277
+WHO,Legislators,272
+WHO,Censorship boards or agencies,261
+WHO,Regulators,250
+WHO,Self-censorship (individuals),243
+WHO,"Schools, curricula, librarians, academia",224
+WHO,Police and intelligence services,220
+WHO,Editors,158
+WHO,Cloud and infrastructure providers,140
+WHO,Platform oversight bodies,139
+WHO,Religious authorities,129
+WHO,Political groups,126
+WHO,Journalists,123
+WHO,Fact-checkers and verification units,117
+WHO,Forum moderators (mods),108
+WHO,Military censors,76
+WHO,Advertisers,75
 WHO,Debate moderators,61
-WHO,Broadcasting regulators,45
+WHO,Broadcasting regulators,44
 WHO,Distributors and booksellers,44
-WHO,App stores,37
-WHO,Translators,37
-WHO,Online mobs / pile-ons,37
+WHO,Online mobs / pile-ons,36
+WHO,Translators,35
+WHO,App stores,34
 WHO,Mediators,25
 WHO,AI companies,18
 WHO,Press councils and ombudsmen,16
-WHO,News agencies / wire services,15
+WHO,News agencies / wire services,14
 WHO,Public-health bodies (NGOs / WHO),13
-WHY,Other,773
-WHY,Social cohesion,619
-WHY,Compliance,465
-WHY,Misinformation or disinformation prevention,449
-WHY,Brand safety,419
-WHY,Public decency norms,416
-WHY,Political control,415
-WHY,Harm principles and hate speech regulation,343
-WHY,"Privacy, reputation & dignity",329
-WHY,Protection of children,315
-WHY,State security,260
-WHY,Ideological consolidation,246
-WHY,Religious norms,170
-WHY,Coherence,158
-WHY,News values or editorial judgment,66
-WHY,Wartime necessity,43
-WHY,Democratic self-defence,41
-WHY,Harm reduction for public health,37
-WHY,State secrets,37
+WHY,Other,737
+WHY,Social cohesion,592
+WHY,Compliance,448
+WHY,Misinformation or disinformation prevention,428
+WHY,Public decency norms,401
+WHY,Brand safety,400
+WHY,Political control,399
+WHY,Harm principles and hate speech regulation,331
+WHY,"Privacy, reputation & dignity",310
+WHY,Protection of children,301
+WHY,State security,245
+WHY,Ideological consolidation,234
+WHY,Religious norms,161
+WHY,Coherence,148
+WHY,News values or editorial judgment,63
+WHY,Wartime necessity,41
+WHY,Democratic self-defence,40
 WHY,Consumer protection or fair competition,37
+WHY,State secrets,36
+WHY,Harm reduction for public health,34

@@ -1,14 +1,14 @@
 Sub-topic,Country,Quantity
-Censorship,United States,28
-Censorship,European Union,23
-Censorship,Italy,13
+Censorship,United States,21
+Censorship,European Union,20
+Censorship,Italy,10
 Censorship,Brazil,8
-Censorship,Germany,7
+Censorship,Germany,6
 Censorship,France,5
 Censorship,United Kingdom,4
 Censorship,Spain,3
-Censorship,Philippines,3
 Censorship,Austria,2
+Censorship,Mexico,2
 Community norms and identity,United States,30
 Community norms and identity,France,9
 Community norms and identity,United Kingdom,8
@@ -19,15 +19,15 @@ Community norms and identity,Canada,4
 Community norms and identity,Italy,4
 Community norms and identity,Sweden,3
 Community norms and identity,Mexico,3
-Debate management,Brazil,9
 Debate management,Spain,9
 Debate management,United States,8
 Debate management,France,8
-Debate management,Italy,5
-Debate management,Canada,4
+Debate management,Brazil,7
 Debate management,United Kingdom,4
+Debate management,Italy,4
+Debate management,Canada,3
 Debate management,Germany,3
-Debate management,Sweden,2
+Debate management,Sweden,1
 Debate management,Portugal,1
 Industrial labour,United States,14
 Industrial labour,Philippines,7
@@ -49,7 +49,7 @@ Moderating extremism,Russia,1
 Moderating extremism,Brazil,1
 Moderating extremism,European Union,1
 Platform brand safety,United States,6
-Platform brand safety,Brazil,6
+Platform brand safety,Brazil,5
 Platform brand safety,European Union,3
 Platform brand safety,Myanmar,2
 Platform brand safety,Ethiopia,1
@@ -60,29 +60,29 @@ Platform brand safety,Turkey,1
 Platform brand safety,South Korea,1
 Platform compliance,European Union,6
 Platform compliance,United States,5
-Platform compliance,Brazil,3
 Platform compliance,Germany,3
+Platform compliance,Brazil,2
 Platform compliance,Italy,2
 Platform compliance,China,1
 Platform compliance,Israel,1
 Platform compliance,Turkey,1
 Platform compliance,Myanmar,1
 Platform compliance,Russia,1
-Platform governance,United States,302
-Platform governance,European Union,183
-Platform governance,Brazil,146
-Platform governance,Germany,103
-Platform governance,United Kingdom,66
-Platform governance,France,53
-Platform governance,China,40
-Platform governance,India,40
-Platform governance,Australia,37
-Platform governance,Italy,34
-Platform regulation,European Union,26
+Platform governance,United States,290
+Platform governance,European Union,175
+Platform governance,Brazil,136
+Platform governance,Germany,96
+Platform governance,United Kingdom,61
+Platform governance,France,48
+Platform governance,China,39
+Platform governance,India,36
+Platform governance,Australia,35
+Platform governance,Italy,33
+Platform regulation,European Union,25
 Platform regulation,United States,19
-Platform regulation,Brazil,14
-Platform regulation,United Kingdom,11
-Platform regulation,Germany,11
+Platform regulation,Brazil,13
+Platform regulation,United Kingdom,10
+Platform regulation,Germany,10
 Platform regulation,France,8
 Platform regulation,India,4
 Platform regulation,Indonesia,3

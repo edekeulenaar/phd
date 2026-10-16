@@ -1,64 +1,64 @@
 Type,Category,n_items
-GROUP,Platform governance,532
+GROUP,Platform governance,513
 GROUP,Community norms and identity,65
-GROUP,Debate management,57
-GROUP,Censorship,54
-GROUP,Platform regulation,45
+GROUP,Debate management,53
+GROUP,Censorship,47
+GROUP,Platform regulation,44
 GROUP,Industrial labour,26
-GROUP,Platform brand safety,12
-GROUP,Platform compliance,10
+GROUP,Platform brand safety,11
+GROUP,Platform compliance,9
 GROUP,Moderating extremism,3
-HOW,Removal,683
-HOW,Enframing,651
-HOW,Review,646
-HOW,Metamoderation,429
-HOW,Filtering,401
-HOW,Marginalisation,314
-HOW,Monitoring,219
-HOW,Profiling,208
-HOW,Limiting access,203
-HOW,Labeling,201
-HOW,Internalisation,184
-HOW,Debate management,142
-HOW,Verification,132
-HOW,Other,129
-HOW,Rating,120
-HOW,Disclosure,110
-HOW,Intimidation,101
-HOW,Licensing,42
-HOW,Maintenance,27
-HOW,Replacement,24
-HOW,Intermediating,15
-WHAT,Content moderation,804
-WHAT,Censorship,102
+HOW,Removal,651
+HOW,Enframing,621
+HOW,Review,617
+HOW,Metamoderation,407
+HOW,Filtering,381
+HOW,Marginalisation,302
+HOW,Monitoring,208
+HOW,Profiling,197
+HOW,Limiting access,193
+HOW,Labeling,190
+HOW,Internalisation,172
+HOW,Debate management,132
+HOW,Verification,126
+HOW,Other,122
+HOW,Rating,114
+HOW,Disclosure,103
+HOW,Intimidation,96
+HOW,Licensing,40
+HOW,Maintenance,26
+HOW,Replacement,23
+HOW,Intermediating,13
+WHAT,Content moderation,771
+WHAT,Censorship,94
 WHAT,Other,6
 WHAT,Debate management,3
-WHO,Platforms,695
-WHO,Algorithmic systems,594
-WHO,Content moderators or BPO workforces,517
-WHO,Users,506
-WHO,Government agencies,376
-WHO,Courts and prosecutors,269
-WHO,Regulators,190
-WHO,Legislators,168
-WHO,Civic advocacy and moral pressure groups,159
-WHO,Platform oversight bodies,127
-WHO,Fact-checkers and verification units,80
-WHO,Media owners,78
-WHO,Forum moderators (mods),76
-WHO,Other,76
-WHO,Cloud and infrastructure providers,63
-WHO,Police and intelligence services,58
-WHO,Advertisers,57
-WHO,"Schools, curricula, librarians, academia",54
-WHO,Journalists,52
+WHO,Platforms,667
+WHO,Algorithmic systems,567
+WHO,Content moderators or BPO workforces,490
+WHO,Users,478
+WHO,Government agencies,351
+WHO,Courts and prosecutors,252
+WHO,Regulators,173
+WHO,Legislators,156
+WHO,Civic advocacy and moral pressure groups,155
+WHO,Platform oversight bodies,119
+WHO,Fact-checkers and verification units,78
+WHO,Media owners,76
+WHO,Other,73
+WHO,Forum moderators (mods),71
+WHO,Cloud and infrastructure providers,58
+WHO,Police and intelligence services,56
+WHO,Advertisers,55
 WHO,Self-censorship (individuals),51
-WHO,Editors,43
-WHO,App stores,30
-WHO,Political groups,24
-WHO,Online mobs / pile-ons,23
+WHO,"Schools, curricula, librarians, academia",50
+WHO,Journalists,49
+WHO,Editors,42
+WHO,App stores,28
+WHO,Political groups,22
+WHO,Online mobs / pile-ons,22
 WHO,Mediators,15
-WHO,Broadcasting regulators,15
+WHO,Broadcasting regulators,14
 WHO,Censorship boards or agencies,12
 WHO,AI companies,9
 WHO,Public-health bodies (NGOs / WHO),9
@@ -69,19 +69,19 @@ WHO,Religious authorities,4
 WHO,Military censors,2
 WHO,News agencies / wire services,1
 WHO,Translators,1
-WHY,Other,380
-WHY,Social cohesion,320
-WHY,Compliance,311
-WHY,Brand safety,305
-WHY,Misinformation or disinformation prevention,295
-WHY,Harm principles and hate speech regulation,216
-WHY,"Privacy, reputation & dignity",185
-WHY,Protection of children,169
-WHY,Public decency norms,122
-WHY,State security,115
-WHY,Coherence,113
-WHY,Political control,77
-WHY,News values or editorial judgment,40
+WHY,Other,360
+WHY,Social cohesion,303
+WHY,Compliance,299
+WHY,Brand safety,288
+WHY,Misinformation or disinformation prevention,282
+WHY,Harm principles and hate speech regulation,210
+WHY,"Privacy, reputation & dignity",174
+WHY,Protection of children,161
+WHY,Public decency norms,119
+WHY,State security,106
+WHY,Coherence,103
+WHY,Political control,74
+WHY,News values or editorial judgment,37
 WHY,Democratic self-defence,24
 WHY,Harm reduction for public health,23
 WHY,Consumer protection or fair competition,22

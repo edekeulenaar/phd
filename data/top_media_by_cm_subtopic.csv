@@ -1,11 +1,11 @@
 Sub-topic,Media category,Quantity
-Censorship,Social media platform,49
-Censorship,Search engine,20
-Censorship,Video sharing platform,19
+Censorship,Social media platform,42
+Censorship,Video sharing platform,14
+Censorship,Search engine,14
 Censorship,Messaging platform,8
 Censorship,AI,6
-Censorship,ISP,5
 Censorship,Platforms,5
+Censorship,ISP,4
 Censorship,Alt-tech,3
 Censorship,Adult content platform,2
 Censorship,Decentralized social media,2
@@ -19,16 +19,16 @@ Community norms and identity,Video sharing platform,4
 Community norms and identity,Video game,3
 Community norms and identity,Mailing list,3
 Community norms and identity,ISP,2
-Debate management,Social media platform,22
-Debate management,Online fora,13
-Debate management,Deliberation platform,8
+Debate management,Social media platform,20
+Debate management,Online fora,12
 Debate management,Print media,7
+Debate management,Deliberation platform,6
 Debate management,News media,6
 Debate management,Messaging platform,4
 Debate management,Online learning platform,4
 Debate management,Government website,2
-Debate management,Computer conferencing,2
 Debate management,AI,2
+Debate management,Wikis,2
 Industrial labour,Social media platform,23
 Industrial labour,Video sharing platform,13
 Industrial labour,Search engine,6
@@ -46,15 +46,15 @@ Moderating extremism,Video sharing platform,2
 Moderating extremism,Imageboard,1
 Moderating extremism,Platforms,1
 Moderating extremism,AI,1
-Platform brand safety,Social media platform,10
-Platform brand safety,Video sharing platform,5
+Platform brand safety,Social media platform,9
+Platform brand safety,Video sharing platform,4
 Platform brand safety,Search engine,3
 Platform brand safety,Messaging platform,2
 Platform brand safety,AI,2
 Platform brand safety,Platforms,1
 Platform brand safety,Music streaming,1
 Platform brand safety,Video streaming platform,1
-Platform compliance,Social media platform,10
+Platform compliance,Social media platform,9
 Platform compliance,Search engine,4
 Platform compliance,Video sharing platform,3
 Platform compliance,Messaging platform,2
@@ -63,19 +63,19 @@ Platform compliance,Short video platform,1
 Platform compliance,Platforms,1
 Platform compliance,E-commerce,1
 Platform compliance,ISP,1
-Platform governance,Social media platform,474
-Platform governance,Video sharing platform,269
-Platform governance,Search engine,112
-Platform governance,Messaging platform,90
-Platform governance,AI,52
-Platform governance,Platforms,42
-Platform governance,Wikis,37
-Platform governance,E-commerce,26
-Platform governance,Alt-tech,19
-Platform governance,ISP,19
-Platform regulation,Social media platform,39
-Platform regulation,Search engine,21
-Platform regulation,Video sharing platform,15
+Platform governance,Social media platform,456
+Platform governance,Video sharing platform,256
+Platform governance,Search engine,107
+Platform governance,Messaging platform,86
+Platform governance,AI,50
+Platform governance,Platforms,39
+Platform governance,Wikis,33
+Platform governance,E-commerce,25
+Platform governance,Alt-tech,18
+Platform governance,ISP,18
+Platform regulation,Social media platform,38
+Platform regulation,Search engine,20
+Platform regulation,Video sharing platform,14
 Platform regulation,Platforms,8
 Platform regulation,AI,6
 Platform regulation,Messaging platform,4

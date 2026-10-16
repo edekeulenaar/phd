@@ -1,112 +1,108 @@
 Language,LanguageName,Country,Topic,Items
-en,English,United States,Content moderation,362
-pt,Portuguese,Brazil,Content moderation,195
-en,English,United States,Censorship,153
-en,English,European Union,Content moderation,148
-en,English,China,Censorship,113
-en,English,(unspecified),Content moderation,106
-en,English,Germany,Content moderation,102
+en,English,United States,Content moderation,351
+pt,Portuguese,Brazil,Content moderation,181
+en,English,United States,Censorship,145
+en,English,European Union,Content moderation,144
+en,English,China,Censorship,111
+en,English,(unspecified),Content moderation,104
+en,English,Germany,Content moderation,99
 en,English,United Kingdom,Content moderation,86
-it,Italian,European Union,Content moderation,71
-it,Italian,Italy,Content moderation,60
-en,English,United Kingdom,Censorship,58
-fr,French,France,Censorship,56
-pt,Portuguese,United States,Content moderation,56
-en,English,India,Content moderation,52
-it,Italian,United States,Content moderation,52
-pt,Portuguese,European Union,Content moderation,51
-en,English,Russia,Censorship,49
-en,English,Australia,Content moderation,47
+it,Italian,European Union,Content moderation,66
+en,English,United Kingdom,Censorship,54
+it,Italian,Italy,Content moderation,54
+fr,French,France,Censorship,52
+pt,Portuguese,United States,Content moderation,51
+en,English,India,Content moderation,49
+en,English,Russia,Censorship,48
 en,English,China,Content moderation,47
-fr,French,France,Content moderation,47
+it,Italian,United States,Content moderation,47
+pt,Portuguese,European Union,Content moderation,47
+en,English,Australia,Content moderation,46
+fr,French,France,Content moderation,46
 en,English,Iran,Censorship,44
-en,English,Brazil,Content moderation,43
-en,English,Germany,Censorship,43
-en,English,France,Content moderation,42
-pt,Portuguese,Germany,Content moderation,35
+en,English,Brazil,Content moderation,40
+en,English,France,Content moderation,40
+en,English,Germany,Censorship,36
 en,English,(unspecified),Censorship,34
-en,English,Canada,Content moderation,33
 en,English,United States,Other,33
-en,English,France,Censorship,32
-es,Spanish,Spain,Censorship,32
-en,English,Russia,Content moderation,29
+en,English,Canada,Content moderation,32
+en,English,France,Censorship,30
+es,Spanish,Spain,Censorship,30
+pt,Portuguese,Germany,Content moderation,30
 pt,Portuguese,Brazil,Censorship,29
+en,English,Russia,Content moderation,28
 en,English,Canada,Censorship,27
 en,English,India,Censorship,26
-en,English,Pakistan,Censorship,26
-en,English,Turkey,Censorship,26
-en,English,Egypt,Censorship,25
-en,English,Philippines,Content moderation,25
-en,English,Italy,Censorship,23
-en,English,Myanmar,Content moderation,23
-fr,French,United States,Content moderation,23
+en,English,Pakistan,Censorship,25
+en,English,Turkey,Censorship,25
+en,English,Egypt,Censorship,24
+en,English,Myanmar,Content moderation,22
 en,English,Saudi Arabia,Censorship,22
 fr,French,European Union,Content moderation,22
+fr,French,United States,Content moderation,22
+en,English,Italy,Censorship,21
+en,English,Philippines,Content moderation,21
 en,English,Australia,Censorship,20
-en,English,South Africa,Censorship,20
 es,Spanish,Spain,Content moderation,20
 fr,French,(unspecified),Content moderation,20
-en,English,Turkey,Content moderation,19
-pt,Portuguese,United Kingdom,Content moderation,19
 en,English,Spain,Censorship,18
-it,Italian,Germany,Content moderation,18
 en,English,Italy,Content moderation,17
+en,English,Turkey,Content moderation,17
+it,Italian,Germany,Content moderation,17
 pt,Portuguese,Brazil,Debate management,17
 pt,Portuguese,Brazil,Other,17
-pt,Portuguese,Portugal,Content moderation,17
 en,English,South Korea,Censorship,16
-en,English,Soviet Union,Censorship,16
-en,English,Netherlands,Content moderation,15
-fr,French,France,Debate management,15
-en,English,European Union,Censorship,14
+en,English,South Africa,Censorship,15
+pt,Portuguese,Portugal,Content moderation,15
 en,English,Indonesia,Censorship,14
-en,English,Ireland,Content moderation,14
+en,English,Netherlands,Content moderation,14
+en,English,Soviet Union,Censorship,14
 en,English,Syria,Censorship,14
 es,Spanish,European Union,Content moderation,14
 es,Spanish,United States,Content moderation,14
+fr,French,France,Debate management,14
 fr,French,France,Other,14
 en,English,Brazil,Censorship,13
 en,English,United Arab Emirates,Censorship,13
 fr,French,United States,Censorship,13
 pt,Portuguese,Portugal,Censorship,13
+pt,Portuguese,United Kingdom,Content moderation,13
+en,English,European Union,Censorship,12
+en,English,Ireland,Content moderation,12
 en,English,Pakistan,Content moderation,12
 en,English,Singapore,Censorship,12
 en,English,Spain,Content moderation,12
-en,English,Sweden,Content moderation,12
 en,English,Thailand,Censorship,12
 en,English,United Kingdom,Other,12
 fr,French,(unspecified),Censorship,12
 fr,French,Canada,Censorship,12
-fr,French,Canada,Content moderation,12
 it,Italian,Italy,Other,12
 en,English,(unspecified),Other,11
 en,English,Indonesia,Content moderation,11
 en,English,Malaysia,Censorship,11
 en,English,New Zealand,Content moderation,11
+en,English,Sweden,Content moderation,11
 en,English,United States,Debate management,11
 en,English,Vietnam,Censorship,11
-es,Spanish,Brazil,Content moderation,11
 es,Spanish,Spain,Debate management,11
+fr,French,Canada,Content moderation,11
 fr,French,Germany,Content moderation,11
 en,English,Ethiopia,Censorship,10
-en,English,Israel,Censorship,10
-en,English,Israel,Content moderation,10
-en,English,Japan,Censorship,10
 en,English,Kazakhstan,Censorship,10
-en,English,Mexico,Content moderation,10
 en,English,Tunisia,Censorship,10
+es,Spanish,Brazil,Content moderation,10
 es,Spanish,United States,Censorship,10
 it,Italian,France,Content moderation,10
 en,English,Bahrain,Censorship,9
 en,English,Belarus,Censorship,9
-en,English,Cuba,Censorship,9
 en,English,Germany,Other,9
+en,English,Israel,Censorship,9
+en,English,Israel,Content moderation,9
+en,English,Japan,Censorship,9
 en,English,Libya,Censorship,9
 en,English,Mexico,Censorship,9
+en,English,Mexico,Content moderation,9
 en,English,Myanmar,Censorship,9
-en,English,Nigeria,Content moderation,9
-en,English,Poland,Censorship,9
-en,English,Thailand,Content moderation,9
 en,English,Ukraine,Censorship,9
 en,English,Ukraine,Content moderation,9
 en,English,Zimbabwe,Censorship,9
@@ -114,73 +110,72 @@ es,Spanish,Mexico,Content moderation,9
 fr,French,Italy,Censorship,9
 it,Italian,Italy,Censorship,9
 en,English,Austria,Content moderation,8
+en,English,Cuba,Censorship,8
 en,English,Hungary,Censorship,8
 en,English,Iran,Content moderation,8
-en,English,Kenya,Content moderation,8
 en,English,Nigeria,Censorship,8
+en,English,Nigeria,Content moderation,8
+en,English,Thailand,Content moderation,8
 en,English,Uganda,Censorship,8
 en,English,Uzbekistan,Censorship,8
-fr,French,Germany,Censorship,8
 pt,Portuguese,United States,Other,8
 en,English,Azerbaijan,Censorship,7
-en,English,Egypt,Content moderation,7
-en,English,Hong Kong,Censorship,7
+en,English,Kenya,Content moderation,7
 en,English,Palestine,Content moderation,7
 en,English,Yemen,Censorship,7
 es,Spanish,Argentina,Censorship,7
 es,Spanish,Argentina,Content moderation,7
 es,Spanish,Colombia,Content moderation,7
-fr,French,United Kingdom,Censorship,7
+fr,French,Germany,Censorship,7
 it,Italian,(unspecified),Content moderation,7
 it,Italian,European Union,Other,7
 it,Italian,United States,Other,7
-pt,Portuguese,France,Content moderation,7
 en,English,(unspecified),Debate management,6
 en,English,Bangladesh,Censorship,6
 en,English,Canada,Other,6
 en,English,China,Other,6
-en,English,Czechoslovakia,Censorship,6
+en,English,Egypt,Content moderation,6
 en,English,Europe,Content moderation,6
 en,English,European Union,Other,6
+en,English,Hong Kong,Censorship,6
 en,English,Italy,Other,6
 en,English,Jordan,Censorship,6
 en,English,Lebanon,Censorship,6
 en,English,North Korea,Censorship,6
+en,English,Poland,Censorship,6
 en,English,Portugal,Content moderation,6
 en,English,Saudi Arabia,Content moderation,6
-en,English,Singapore,Content moderation,6
 en,English,South Korea,Content moderation,6
 en,English,Sudan,Censorship,6
 en,English,Syria,Content moderation,6
 en,English,USSR,Censorship,6
 es,Spanish,(unspecified),Censorship,6
 es,Spanish,Mexico,Censorship,6
-fr,French,Spain,Censorship,6
-it,Italian,China,Content moderation,6
+fr,French,United Kingdom,Censorship,6
 it,Italian,United Kingdom,Content moderation,6
 pt,Portuguese,(unspecified),Content moderation,6
-pt,Portuguese,Australia,Content moderation,6
-pt,Portuguese,India,Content moderation,6
 und,undetermined,France,Censorship,6
 en,English,Argentina,Censorship,5
+en,English,Czechoslovakia,Censorship,5
 en,English,Denmark,Content moderation,5
 en,English,Estonia,Censorship,5
 en,English,France,Other,5
 en,English,Hungary,Content moderation,5
 en,English,Kyrgyzstan,Censorship,5
-en,English,Malawi,Censorship,5
 en,English,Norway,Content moderation,5
 en,English,Portugal,Censorship,5
+en,English,Singapore,Content moderation,5
 en,English,South Africa,Content moderation,5
 en,English,South Korea,Other,5
 en,English,Sri Lanka,Censorship,5
-en,English,Taiwan,Content moderation,5
 en,English,Vietnam,Content moderation,5
 fr,French,China,Censorship,5
-fr,French,Russia,Censorship,5
+fr,French,Spain,Censorship,5
 fr,French,United Kingdom,Content moderation,5
 it,Italian,(unspecified),Censorship,5
-pt,Portuguese,China,Content moderation,5
+it,Italian,China,Content moderation,5
+pt,Portuguese,Australia,Content moderation,5
+pt,Portuguese,India,Content moderation,5
 pt,Portuguese,United States,Censorship,5
 und,undetermined,United States,Censorship,5
 en,English,Africa,Content moderation,4
@@ -193,23 +188,22 @@ en,English,Denmark,Censorship,4
 en,English,England,Censorship,4
 en,English,Estonia,Content moderation,4
 en,English,Georgia,Censorship,4
-en,English,Iraq,Censorship,4
 en,English,Ireland,Censorship,4
 en,English,Japan,Content moderation,4
 en,English,Kenya,Censorship,4
 en,English,Libya,Content moderation,4
+en,English,Malawi,Censorship,4
 en,English,Malaysia,Content moderation,4
 en,English,Morocco,Censorship,4
 en,English,Netherlands,Censorship,4
 en,English,Oman,Censorship,4
 en,English,Philippines,Censorship,4
 en,English,Poland,Content moderation,4
-en,English,Romania,Censorship,4
 en,English,Russia,Other,4
 en,English,Rwanda,Censorship,4
+en,English,Taiwan,Content moderation,4
 en,English,Tunisia,Content moderation,4
 en,English,United Kingdom,Debate management,4
-en,English,Uruguay,Censorship,4
 en,English,Venezuela,Censorship,4
 es,Spanish,(unspecified),Content moderation,4
 es,Spanish,(unspecified),Debate management,4
@@ -222,14 +216,14 @@ es,Spanish,Spain,Other,4
 fr,French,(unspecified),Debate management,4
 fr,French,Belgium,Content moderation,4
 fr,French,Egypt,Censorship,4
-fr,French,Philippines,Content moderation,4
-fr,French,Portugal,Censorship,4
+fr,French,Russia,Censorship,4
 fr,French,United States,Other,4
 it,Italian,(unspecified),Other,4
-it,Italian,France,Censorship,4
 it,Italian,Italy,Debate management,4
 it,Italian,Russia,Content moderation,4
 pt,Portuguese,Canada,Content moderation,4
+pt,Portuguese,China,Content moderation,4
+pt,Portuguese,France,Content moderation,4
 pt,Portuguese,Spain,Censorship,4
 pt,Portuguese,Spain,Content moderation,4
 und,undetermined,Spain,Censorship,4
@@ -247,18 +241,18 @@ en,English,Finland,Censorship,3
 en,English,Finland,Content moderation,3
 en,English,Finland,Other,3
 en,English,Ghana,Censorship,3
+en,English,Iraq,Censorship,3
 en,English,Jordan,Content moderation,3
 en,English,Kuwait,Censorship,3
 en,English,Lebanon,Content moderation,3
 en,English,Palestine,Censorship,3
 en,English,Qatar,Censorship,3
+en,English,Romania,Censorship,3
 en,English,Romania,Content moderation,3
 en,English,Slovakia,Content moderation,3
-en,English,Taiwan,Censorship,3
 en,English,Turkmenistan,Censorship,3
 en,English,Uganda,Content moderation,3
 en,English,Venezuela,Content moderation,3
-en,English,Zaire,Censorship,3
 en,English,Zambia,Censorship,3
 es,Spanish,Canada,Censorship,3
 es,Spanish,Chile,Content moderation,3
@@ -272,22 +266,19 @@ es,Spanish,Soviet Union,Censorship,3
 es,Spanish,United Kingdom,Censorship,3
 fr,French,(unspecified),Other,3
 fr,French,India,Censorship,3
-fr,French,India,Content moderation,3
-fr,French,Poland,Censorship,3
-fr,French,Romania,Censorship,3
+fr,French,Philippines,Content moderation,3
+fr,French,Portugal,Censorship,3
 fr,French,Switzerland,Content moderation,3
-fr,French,USSR,Censorship,3
 fr,French,Vatican City,Censorship,3
 it,Italian,Australia,Content moderation,3
 it,Italian,Brazil,Content moderation,3
+it,Italian,France,Censorship,3
 it,Italian,India,Content moderation,3
 it,Italian,Spain,Censorship,3
 pt,Portuguese,France,Censorship,3
 pt,Portuguese,Germany,Censorship,3
-pt,Portuguese,Indonesia,Content moderation,3
 pt,Portuguese,Italy,Censorship,3
 pt,Portuguese,Myanmar,Content moderation,3
-pt,Portuguese,Russia,Content moderation,3
 und,undetermined,China,Censorship,3
 und,undetermined,France,Other,3
 und,undetermined,United States,Content moderation,3
@@ -311,7 +302,6 @@ en,English,European Union,Debate management,2
 en,English,German Democratic Republic,Censorship,2
 en,English,Germany,Debate management,2
 en,English,Great Britain,Censorship,2
-en,English,Greece,Censorship,2
 en,English,Honduras,Content moderation,2
 en,English,India,Other,2
 en,English,Ireland,Other,2
@@ -319,7 +309,6 @@ en,English,Latvia,Censorship,2
 en,English,Lebanon,Debate management,2
 en,English,Moldova,Censorship,2
 en,English,Myanmar,Other,2
-en,English,Nepal,Content moderation,2
 en,English,Netherlands,Other,2
 en,English,New Zealand,Censorship,2
 en,English,Norway,Censorship,2
@@ -329,15 +318,16 @@ en,English,Slovenia,Content moderation,2
 en,English,South Africa,Debate management,2
 en,English,Soviet Russia,Censorship,2
 en,English,Spain,Other,2
-en,English,Sri Lanka,Content moderation,2
 en,English,Sudan,Content moderation,2
 en,English,Sweden,Other,2
 en,English,Switzerland,Censorship,2
+en,English,Taiwan,Censorship,2
 en,English,Tanzania,Censorship,2
 en,English,The Gambia,Censorship,2
 en,English,UK,Content moderation,2
 en,English,United Arab Emirates,Content moderation,2
 en,English,Yugoslavia,Debate management,2
+en,English,Zaire,Censorship,2
 es,Spanish,Argentina,Debate management,2
 es,Spanish,Argentina,Other,2
 es,Spanish,Chile,Censorship,2
@@ -353,35 +343,28 @@ es,Spanish,United States,Other,2
 es,Spanish,Uruguay,Censorship,2
 es,Spanish,Venezuela,Content moderation,2
 es,Spanish,Venezuela,Debate management,2
-fr,French,Bangladesh,Content moderation,2
 fr,French,Belarus,Censorship,2
 fr,French,Belgium,Censorship,2
-fr,French,Cameroon,Content moderation,2
 fr,French,Canada,Debate management,2
-fr,French,Chad,Content moderation,2
 fr,French,China,Content moderation,2
 fr,French,China,Other,2
-fr,French,Ethiopia,Content moderation,2
 fr,French,European Union,Censorship,2
 fr,French,European Union,Debate management,2
-fr,French,Gambia,Content moderation,2
 fr,French,Hong Kong,Censorship,2
-fr,French,Hungary,Content moderation,2
-fr,French,Iraq,Content moderation,2
-fr,French,Myanmar,Content moderation,2
+fr,French,India,Content moderation,2
 fr,French,Pakistan,Censorship,2
+fr,French,Poland,Censorship,2
+fr,French,Romania,Censorship,2
 fr,French,Russia,Content moderation,2
 fr,French,Switzerland,Debate management,2
-fr,French,Thailand,Content moderation,2
-fr,French,Togo,Content moderation,2
 fr,French,Turkey,Censorship,2
+fr,French,USSR,Censorship,2
 fr,French,United Kingdom,Debate management,2
 it,Italian,(unspecified),Debate management,2
 it,Italian,Argentina,Censorship,2
 it,Italian,Brazil,Other,2
 it,Italian,European Union,Censorship,2
 it,Italian,France,Debate management,2
-it,Italian,Japan,Content moderation,2
 it,Italian,Myanmar,Content moderation,2
 it,Italian,New Zealand,Content moderation,2
 it,Italian,Romania,Content moderation,2
@@ -393,16 +376,16 @@ pt,Portuguese,Argentina,Censorship,2
 pt,Portuguese,Australia,Censorship,2
 pt,Portuguese,Belgium,Content moderation,2
 pt,Portuguese,Brasil,Content moderation,2
-pt,Portuguese,Chile,Content moderation,2
 pt,Portuguese,China,Censorship,2
 pt,Portuguese,Estados Unidos,Content moderation,2
 pt,Portuguese,European Union,Censorship,2
 pt,Portuguese,European Union,Other,2
+pt,Portuguese,Indonesia,Content moderation,2
 pt,Portuguese,Philippines,Other,2
 pt,Portuguese,Poland,Content moderation,2
 pt,Portuguese,Portugal,Debate management,2
 pt,Portuguese,Russia,Censorship,2
-pt,Portuguese,Turkey,Content moderation,2
+pt,Portuguese,Russia,Content moderation,2
 pt,Portuguese,United Kingdom,Censorship,2
 pt,Portuguese,United States,Debate management,2
 und,undetermined,Brazil,Content moderation,2
@@ -455,6 +438,7 @@ en,English,Europe,Censorship,1
 en,English,Fiji,Debate management,1
 en,English,Gambia,Censorship,1
 en,English,Global South,Content moderation,1
+en,English,Greece,Censorship,1
 en,English,Greece,Other,1
 en,English,Guatemala,Censorship,1
 en,English,Guatemala,Content moderation,1
@@ -477,6 +461,7 @@ en,English,Morocco,Content moderation,1
 en,English,Mozambique,Censorship,1
 en,English,Namibia,Other,1
 en,English,Nepal,Censorship,1
+en,English,Nepal,Content moderation,1
 en,English,Netherlands,Debate management,1
 en,English,New Zealand,Debate management,1
 en,English,Nicaragua,Censorship,1
@@ -501,6 +486,7 @@ en,English,Somalia,Other,1
 en,English,South Asia,Content moderation,1
 en,English,South Sudan,Content moderation,1
 en,English,Soviet Union,Debate management,1
+en,English,Sri Lanka,Content moderation,1
 en,English,Sri Lanka,Debate management,1
 en,English,Sudan,Other,1
 en,English,Sudan (North),Censorship,1
@@ -524,6 +510,7 @@ en,English,USA,Censorship,1
 en,English,USA,Content moderation,1
 en,English,Ukraine,Debate management,1
 en,English,United American Emirates,Censorship,1
+en,English,Uruguay,Censorship,1
 en,English,Uruguay,Content moderation,1
 en,English,Uzbekistan,Content moderation,1
 en,English,West Germany,Other,1
@@ -582,12 +569,14 @@ fr,French,Allemagne,Debate management,1
 fr,French,Australia,Content moderation,1
 fr,French,Austria,Censorship,1
 fr,French,Austria-Hungary,Censorship,1
+fr,French,Bangladesh,Content moderation,1
 fr,French,Belgium,Debate management,1
 fr,French,Belgium,Other,1
 fr,French,Bosnia and Herzegovina,Debate management,1
-fr,French,Brazil,Content moderation,1
 fr,French,Burkina Faso,Other,1
 fr,French,Cambodia,Content moderation,1
+fr,French,Cameroon,Content moderation,1
+fr,French,Chad,Content moderation,1
 fr,French,Cuba,Censorship,1
 fr,French,Denmark,Censorship,1
 fr,French,Denmark,Content moderation,1
@@ -596,16 +585,20 @@ fr,French,Ecuador,Content moderation,1
 fr,French,Egypt,Content moderation,1
 fr,French,Espagne,Debate management,1
 fr,French,Ethiopia,Censorship,1
+fr,French,Ethiopia,Content moderation,1
 fr,French,Finland,Censorship,1
 fr,French,Finland,Content moderation,1
 fr,French,Fédération de Russie,Debate management,1
+fr,French,Gambia,Content moderation,1
 fr,French,Germany,Debate management,1
 fr,French,Greece,Censorship,1
 fr,French,Greece,Debate management,1
 fr,French,Holy See,Censorship,1
+fr,French,Hungary,Content moderation,1
 fr,French,India,Other,1
 fr,French,Iran,Censorship,1
 fr,French,Iran,Content moderation,1
+fr,French,Iraq,Content moderation,1
 fr,French,Ireland,Censorship,1
 fr,French,Ireland,Content moderation,1
 fr,French,Israel,Censorship,1
@@ -621,13 +614,13 @@ fr,French,Mali,Other,1
 fr,French,Malta,Debate management,1
 fr,French,Morocco,Other,1
 fr,French,Myanmar,Censorship,1
+fr,French,Myanmar,Content moderation,1
 fr,French,Netherlands,Content moderation,1
 fr,French,New Zealand,Content moderation,1
 fr,French,Niger,Censorship,1
 fr,French,Palestine,Content moderation,1
 fr,French,Palestine,Other,1
 fr,French,Philippines,Other,1
-fr,French,Republic of Korea,Content moderation,1
 fr,French,Royaume-Uni,Debate management,1
 fr,French,Saudi Arabia,Content moderation,1
 fr,French,Senegal,Content moderation,1
@@ -638,6 +631,8 @@ fr,French,South Korea,Content moderation,1
 fr,French,Soviet Union,Censorship,1
 fr,French,Spain,Content moderation,1
 fr,French,Switzerland,Other,1
+fr,French,Thailand,Content moderation,1
+fr,French,Togo,Content moderation,1
 fr,French,Ukraine,Content moderation,1
 fr,French,United Kingdom,Other,1
 fr,French,Uzbekistan,Debate management,1
@@ -659,6 +654,7 @@ it,Italian,India,Other,1
 it,Italian,Iran,Censorship,1
 it,Italian,Israel,Content moderation,1
 it,Italian,Japan,Censorship,1
+it,Italian,Japan,Content moderation,1
 it,Italian,Japan,Other,1
 it,Italian,Kenya,Other,1
 it,Italian,Morocco,Censorship,1
@@ -684,8 +680,8 @@ pt,Portuguese,Alemanha,Content moderation,1
 pt,Portuguese,Ancient Rome,Censorship,1
 pt,Portuguese,Austria,Censorship,1
 pt,Portuguese,Cambodia,Content moderation,1
+pt,Portuguese,Chile,Content moderation,1
 pt,Portuguese,China,Other,1
-pt,Portuguese,Colombia,Content moderation,1
 pt,Portuguese,Colombia,Debate management,1
 pt,Portuguese,Cuba,Content moderation,1
 pt,Portuguese,Czech Republic,Content moderation,1
@@ -712,7 +708,6 @@ pt,Portuguese,New Zealand,Content moderation,1
 pt,Portuguese,North Korea,Censorship,1
 pt,Portuguese,Norway,Content moderation,1
 pt,Portuguese,Pakistan,Content moderation,1
-pt,Portuguese,Philippines,Content moderation,1
 pt,Portuguese,Portugal,Other,1
 pt,Portuguese,Quênia,Content moderation,1
 pt,Portuguese,Serbia,Censorship,1
@@ -722,6 +717,7 @@ pt,Portuguese,South Africa,Censorship,1
 pt,Portuguese,Spain,Debate management,1
 pt,Portuguese,Sweden,Content moderation,1
 pt,Portuguese,Switzerland,Content moderation,1
+pt,Portuguese,Turkey,Content moderation,1
 pt,Portuguese,United Kingdom,Other,1
 pt,Portuguese,Venezuela,Censorship,1
 pt,Portuguese,Índia,Content moderation,1

@@ -1917,5 +1917,18 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 }
 
 /* "⬇ PNG" in each figure's control bar */
-.fig-controls .dl-png-top { margin-left: auto; font-family: var(--sans); font-size: 12.5px; }
-.fig-controls-dl { justify-content: flex-end; }
+.fig-controls .dl-png-top { font-family: var(--sans); font-size: 12.5px; }
+
+/* Dropdowns: custom chevron with room on the right */
+.fig-controls select, .fig select {
+  appearance: none; -webkit-appearance: none;
+  padding-right: 2.1em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%231c1a18' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75em center;
+  background-size: 10px 6px;
+}
+/* "⬇ PNG": top right of the control bar, on the first row */
+.fig-controls { position: relative; padding-right: 4.8rem; }
+.fig-controls .dl-png-top { position: absolute; top: 0.35em; right: 0; margin: 0; }
+.fig-controls-dl { min-height: 1.6em; }
