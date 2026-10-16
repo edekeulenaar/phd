@@ -1774,7 +1774,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
     const labelSel = svg.append("g").attr("class", "y-labels")
       .selectAll("text").data(groups).join("text")
-        .attr("x", 12).attr("y", g => yScale(g) - 10)
+        .attr("x", 12).attr("y", g => yScale(g)).attr("dy", "0.32em")
         .text(g => g.length > 44 ? g.slice(0, 42) + "…" : g);
     labelSel.append("title").text(g => g);
     // Measure each label and start its row guide AFTER the label's right edge
@@ -1884,84 +1884,87 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     return by;
   }
 
-  /** Trend view: one area per lane — the share of the selection's
-   *  publications that mention the category, by year (centred three-year
-   *  window; years whose window holds fewer than TREND_MIN publications are
-   *  left out). Lanes follow the same order as the beeswarm. */
+  /** Trend view, drawn like Figure 3's bump chart: one line per lane — the
+   *  share of the selection's publications (before the Type filter) that
+   *  mention the category in each year. Years with fewer than TREND_MIN
+   *  publications are left out, as in Figure 3. */
   const TREND_MIN = 10;
   function trend(data) {
     const groups = sortGroups([...new Set(data.map(r => r[gfield()] || "(uncategorized)"))], data);
     const base = baseKeysByYear();
-    const yearsAll = [...base.keys()].sort((a, b) => a - b);
-    if (!yearsAll.length) return;
-    const [y0, y1] = d3.extent(yearsAll);
-    const years = d3.range(y0, y1 + 1);
-    const win = y => [y - 1, y, y + 1];
-    const denom = new Map(years.map(y => {
-      const ks = new Set();
-      win(y).forEach(w => (base.get(w) || []).forEach(k => ks.add(k)));
-      return [y, ks.size];
-    }));
+    const years = [...base.keys()].filter(y => base.get(y).size >= TREND_MIN).sort((a, b) => a - b);
+    if (years.length < 2) {
+      host.append("div").attr("class", "placeholder").text("Too few publications per year for a trend.");
+      return;
+    }
     const keysBy = d3.rollup(data, v => new Set(v.map(r => r.Key)),
       r => r[gfield()] || "(uncategorized)", r => +r["Publication Year"]);
     const series = groups.map(g => {
       const m = keysBy.get(g) || new Map();
-      const pts = years.filter(y => denom.get(y) >= TREND_MIN).map(y => {
-        const ks = new Set();
-        win(y).forEach(w => (m.get(w) || []).forEach(k => ks.add(k)));
-        return { y, n: ks.size, N: denom.get(y), v: ks.size / denom.get(y) };
-      });
-      return { g, pts };
+      return { group: g, values: years.map(y => {
+        const n = (m.get(y) || new Set()).size, N = base.get(y).size;
+        return { year: y, n, N, v: n / N };
+      }) };
     });
-    const maxV = d3.max(series, s => d3.max(s.pts, p => p.v)) || 0.01;
+    const colorFn = makeSubtopicScale(groups);
 
     const W = Math.max(720, host.node().clientWidth || 880);
-    const ROW_H = 60;
-    const H = groups.length * ROW_H + 80;
-    const x = d3.scaleLinear().domain([y0, y1]).range([320, W - 24]);
-    const yb = d3.scaleBand().domain(groups).range([24, H - 50]).paddingInner(0.18);
-    const yv = d3.scaleLinear().domain([0, maxV]).range([yb.bandwidth(), 0]).nice();
-
-    const svg = host.append("svg").attr("class", "chart trend")
+    const H = 460;
+    const m = { top: 24, right: 330, bottom: 36, left: 56 };
+    const x = d3.scaleLinear().domain([years[0], years[years.length - 1]]).range([m.left, W - m.right]);
+    const nTicks = Math.max(3, Math.min(10, Math.floor((W - m.left - m.right) / 70)));
+    const yMax = d3.max(series, s => d3.max(s.values, p => p.v)) || 0.01;
+    const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - m.bottom, m.top]);
+    const svg = host.append("svg").attr("class", "chart bump")
       .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
       .attr("width", "100%");
-    svg.append("g").attr("class", "axis")
-      .attr("transform", `translate(0,${H - 30})`)
-      .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
-    svg.append("text").attr("class", "trend-note").attr("x", 320).attr("y", 14)
-      .text(`% of publications mentioning each category · 3-year window · ` +
-            `common scale 0–${d3.format(".0%")(yv.domain()[1])}`);
-    const area = d3.area().x(p => x(p.y)).y0(yb.bandwidth()).y1(p => yv(p.v)).curve(d3.curveMonotoneX);
-    const line = d3.line().x(p => x(p.y)).y(p => yv(p.v)).curve(d3.curveMonotoneX);
-    const lanes = svg.append("g").selectAll("g").data(series).join("g")
-      .attr("transform", s => `translate(0,${yb(s.g)})`);
-    lanes.append("line").attr("class", "trend-base")
-      .attr("x1", 320).attr("x2", W - 24).attr("y1", yb.bandwidth()).attr("y2", yb.bandwidth());
-    lanes.append("text").attr("class", "trend-label").attr("x", 12).attr("y", yb.bandwidth() - 4)
-      .text(s => s.g.length > 44 ? s.g.slice(0, 42) + "…" : s.g)
-      .append("title").text(s => s.g);
-    lanes.append("path").attr("class", "trend-area").attr("d", s => area(s.pts));
-    lanes.append("path").attr("class", "trend-line").attr("d", s => line(s.pts));
-    const bisect = d3.bisector(p => p.y).center;
-    const focus = svg.append("line").attr("class", "trend-focus")
-      .attr("y1", 24).attr("y2", H - 50).style("display", "none");
-    svg.append("rect").attr("x", 320).attr("y", 24).attr("width", W - 344).attr("height", H - 74)
-      .attr("fill", "transparent")
-      .on("mousemove", function (e) {
-        const [mx, my] = d3.pointer(e, this);
-        const yr = Math.round(x.invert(mx));
-        const lane = groups.find(g => my >= yb(g) && my <= yb(g) + yb.bandwidth() + yb.step() * 0.18);
-        focus.style("display", null).attr("x1", x(yr)).attr("x2", x(yr));
-        const s = series.find(z => z.g === lane);
-        if (!s || !s.pts.length) { dataCard.hide(); return; }
-        const p = s.pts[bisect(s.pts, yr)];
-        dataCard.show(`
-          <div class="dc-t">${escapeHtml(s.g)} · ${p.y - 1}–${p.y + 1}</div>
-          <div class="dc-row"><span>Share</span>${d3.format(".1%")(p.v)}</div>
-          <div class="dc-row"><span>Publications</span>${p.n} of ${p.N}</div>`, e);
+    svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`)
+      .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(nTicks));
+    svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left},0)`)
+      .call(d3.axisLeft(y).ticks(6).tickFormat(d3.format(".0%")));
+    const line = d3.line().x(p => x(p.year)).y(p => y(p.v)).curve(d3.curveCatmullRom.alpha(0.5));
+    const gSel = svg.append("g").attr("class", "lines")
+      .selectAll("g").data(series).join("g")
+        .attr("class", "series").attr("data-group", d => d.group);
+    gSel.append("path").attr("stroke", d => colorFn(d.group)).attr("d", d => line(d.values));
+    gSel.append("path").attr("class", "hit").attr("stroke", "transparent")
+      .attr("stroke-width", 14).attr("fill", "none").attr("d", d => line(d.values));
+    gSel.on("mouseenter", function () {
+        const me = this;
+        gSel.classed("dim", function () { return this !== me; })
+            .classed("hi",  function () { return this === me; });
       })
-      .on("mouseleave", () => { focus.style("display", "none"); dataCard.hide(); });
-    figKey.register(figId, { title: "Trend", legend: [] });
+      .on("mouseleave", () => gSel.classed("dim", false).classed("hi", false));
+    gSel.selectAll("circle")
+      .data(d => d.values.map(p => ({ group: d.group, ...p })))
+      .join("circle")
+        .attr("cx", d => x(d.year)).attr("cy", d => y(d.v))
+        .attr("fill", d => colorFn(d.group))
+        .on("mouseenter", (e, d) => dataCard.show(
+          `<div class="dc-t">${escapeHtml(d.group)} · ${d.year}</div>
+           <div class="dc-row"><span>Share of publications</span>${d3.format(".1%")(d.v)}</div>
+           <div class="dc-row"><span>Publications</span>${d.n} of ${d.N}</div>`, e))
+        .on("mousemove", e => dataCard.move(e))
+        .on("mouseleave", () => dataCard.hide());
+    // End-of-line labels, as in Figure 3; nudged apart when they collide.
+    const ends = series.map(s => ({ s, y: y(s.values[s.values.length - 1].v) }))
+      .sort((a, b) => a.y - b.y);
+    for (let i = 1; i < ends.length; i++) ends[i].y = Math.max(ends[i].y, ends[i - 1].y + 13);
+    const endY = new Map(ends.map(e => [e.s.group, e.y]));
+    gSel.append("text").attr("class", "label")
+      .attr("x", d => x(d.values[d.values.length - 1].year) + 6)
+      .attr("y", d => endY.get(d.group)).attr("dy", "0.32em")
+      .attr("fill", d => colorFn(d.group))
+      .text(d => d.group.length > 34 ? d.group.slice(0, 32) + "…" : d.group)
+      .append("title").text(d => d.group);
+    figKey.register(figId, {
+      title: "Share of publications mentioning",
+      legend: groups.map(g => ({ label: g, color: colorFn(g) })),
+      onHighlight(name) {
+        gSel.classed("dim", d => name && d.group !== name)
+            .classed("hi",  d => name && d.group === name);
+      },
+    });
   }
 
   const figEl = figId ? document.getElementById(figId) : null;
