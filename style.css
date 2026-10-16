@@ -1915,3 +1915,7 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
   transition: background 1.2s ease;
   border-radius: 3px;
 }
+
+/* "⬇ PNG" in each figure's control bar */
+.fig-controls .dl-png-top { margin-left: auto; font-family: var(--sans); font-size: 12.5px; }
+.fig-controls-dl { justify-content: flex-end; }

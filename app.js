@@ -5045,6 +5045,80 @@ function setupFigureDownloads() {
     tryAttach();
     new MutationObserver(tryAttach).observe(fig, { childList: true, subtree: true });
   });
+
+  // The footers are hidden on the chapter page, and inline copies of a
+  // figure are spawned after this runs — so every figure (now or later) also
+  // gets a "⬇ PNG" button at the end of its control bar. One delegated
+  // listener serves them all and always exports the figure's live chart.
+  const addTop = () => document.querySelectorAll(".fig").forEach(fig => {
+    if (fig.querySelector(":scope .dl-png-top")) return;
+    const bar = fig.querySelector(".fig-controls");
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "dl dl-png-top";
+    b.textContent = "⬇ PNG"; b.title = "Download this figure as a high-resolution PNG";
+    if (bar) bar.appendChild(b);
+    else {
+      const body = fig.querySelector(".fig-body");
+      if (!body) return;
+      const wrap = document.createElement("div");
+      wrap.className = "fig-controls fig-controls-dl";
+      wrap.appendChild(b);
+      body.parentNode.insertBefore(wrap, body);
+    }
+  });
+  addTop();
+  new MutationObserver(() => addTop()).observe(document.body, { childList: true, subtree: true });
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".dl-png-top");
+    if (!b) return;
+    const fig = b.closest(".fig");
+    const svg = fig && liveSvg(fig);
+    if (!svg) return;
+    b.disabled = true; b.textContent = "⬇ PNG …";
+    exportSVGtoPNG(svg, fig.id || "figure").finally(() => {
+      b.disabled = false; b.textContent = "⬇ PNG";
+    });
+  });
+}
+
+/* Exports render the SVG as an image, where the page's web fonts are not
+   available: embed every @font-face the chart's text uses, as data URLs,
+   so the PNG keeps the site's typefaces. Cached after the first export. */
+const _fontData = new Map();
+async function embedFontsForExport(cloneSvg) {
+  const used = new Set();
+  cloneSvg.querySelectorAll("[style]").forEach(el => {
+    const m = /font-family:([^;]+)/.exec(el.getAttribute("style") || "");
+    if (m) m[1].split(",").forEach(f => used.add(f.trim().replace(/^["']|["']$/g, "")));
+  });
+  const rules = [];
+  for (const sheet of document.styleSheets) {
+    let list;
+    try { list = sheet.cssRules; } catch (_) { continue; }   // cross-origin sheet
+    for (const r of list || []) {
+      if (!(r instanceof CSSFontFaceRule)) continue;
+      const fam = r.style.getPropertyValue("font-family").trim().replace(/^["']|["']$/g, "");
+      if (!used.has(fam)) continue;
+      const m = /url\(["']?([^"')]+)["']?\)/.exec(r.style.getPropertyValue("src"));
+      if (!m) continue;
+      const href = new URL(m[1], sheet.href || location.href).href;
+      if (!_fontData.has(href)) {
+        _fontData.set(href, fetch(href).then(res => res.blob()).then(b => new Promise(ok => {
+          const fr = new FileReader(); fr.onload = () => ok(fr.result); fr.readAsDataURL(b);
+        })).catch(() => null));
+      }
+      const data = await _fontData.get(href);
+      if (!data) continue;
+      rules.push(`@font-face{font-family:"${fam}";src:url(${data}) format("opentype");` +
+                 `font-weight:${r.style.getPropertyValue("font-weight") || 400};` +
+                 `font-style:${r.style.getPropertyValue("font-style") || "normal"};}`);
+    }
+  }
+  if (!rules.length) return;
+  const ns = "http://www.w3.org/2000/svg";
+  const style = document.createElementNS(ns, "style");
+  style.textContent = rules.join("\n");
+  cloneSvg.insertBefore(style, cloneSvg.firstChild);
 }
 
 /* For exports only: append a vertical legend strip to the right of the
@@ -5213,6 +5287,7 @@ async function exportSVGtoPNG(srcSvg, slug) {
   let { svg, width, height } = cloneWithInlineStyles(srcSvg);
   annotateEdgesForExport(srcSvg, svg);
   ({ width, height } = addLegendForExport(svg, slug, width, height));
+  await embedFontsForExport(svg);
   const xml = svgString(svg);
   // Load the inline SVG into an Image via a Blob URL — works around the
   // cross-origin tainting that data: URLs sometimes incur.
@@ -5223,6 +5298,7 @@ async function exportSVGtoPNG(srcSvg, slug) {
     img.crossOrigin = "anonymous";
     img.src = url;
     await img.decode();
+    await new Promise(r => setTimeout(r, 120));     // let embedded fonts settle
     const canvas = document.createElement("canvas");
     canvas.width  = Math.round(width  * PNG_SCALE);
     canvas.height = Math.round(height * PNG_SCALE);
