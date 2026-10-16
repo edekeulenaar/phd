@@ -1,26 +1,26 @@
 Type,Kind,Topic,Keyword,Count
 ALL,exclusive,Content moderation,Platform regulation,85
 ALL,exclusive,Content moderation,Industrial labour,42
-ALL,exclusive,Content moderation,Maintenance,36
 ALL,exclusive,Content moderation,Harm reduction for public health,30
 ALL,exclusive,Content moderation,App stores,29
 ALL,exclusive,Content moderation,Platform brand safety,27
-ALL,exclusive,Content moderation,Intermediating,18
 ALL,exclusive,Content moderation,Mediators,15
 ALL,exclusive,Content moderation,Platform compliance,14
 ALL,exclusive,Content moderation,Public-health bodies (NGOs / WHO),11
+ALL,exclusive,Content moderation,LLM response moderation,5
+ALL,exclusive,Content moderation,Moderating extremism,4
 ALL,exclusive,Censorship,Translators,33
 ALL,exclusive,Censorship,Infrastructural,20
+ALL,pair,Content moderation + Censorship,Review,2805
 ALL,pair,Content moderation + Censorship,Removal,2518
-ALL,pair,Content moderation + Censorship,Review,2236
+ALL,pair,Content moderation + Censorship,Limiting access,1533
 ALL,pair,Content moderation + Censorship,Enframing,1509
 ALL,pair,Content moderation + Censorship,Government agencies,1122
 ALL,pair,Content moderation + Censorship,Platforms,1059
-ALL,pair,Content moderation + Censorship,Filtering,943
+ALL,pair,Content moderation + Censorship,Monitoring,946
 ALL,pair,Content moderation + Censorship,Metamoderation,835
 ALL,pair,Content moderation + Censorship,Platform governance,822
 ALL,pair,Content moderation + Censorship,Algorithmic systems,800
-ALL,pair,Content moderation + Censorship,Users,739
 WHAT,exclusive,Content moderation,Debate management,92
 WHAT,exclusive,Content moderation,Platform regulation,85
 WHAT,exclusive,Content moderation,Industrial labour,42
@@ -49,18 +49,16 @@ WHO,pair,Content moderation + Censorship,Civic advocacy and moral pressure group
 WHO,pair,Content moderation + Censorship,Media owners,318
 WHO,pair,Content moderation + Censorship,Censorship boards or agencies,288
 WHO,pair,Content moderation + Censorship,Regulators,257
-HOW,exclusive,Content moderation,Maintenance,36
-HOW,exclusive,Content moderation,Intermediating,18
+HOW,pair,Content moderation + Censorship,Review,2805
 HOW,pair,Content moderation + Censorship,Removal,2518
-HOW,pair,Content moderation + Censorship,Review,2236
+HOW,pair,Content moderation + Censorship,Limiting access,1533
 HOW,pair,Content moderation + Censorship,Enframing,1509
-HOW,pair,Content moderation + Censorship,Filtering,943
+HOW,pair,Content moderation + Censorship,Monitoring,946
 HOW,pair,Content moderation + Censorship,Metamoderation,835
 HOW,pair,Content moderation + Censorship,Internalisation,733
-HOW,pair,Content moderation + Censorship,Limiting access,590
 HOW,pair,Content moderation + Censorship,Intimidation,548
 HOW,pair,Content moderation + Censorship,Marginalisation,536
-HOW,pair,Content moderation + Censorship,Monitoring,532
+HOW,pair,Content moderation + Censorship,Debate management,450
 WHY,exclusive,Content moderation,Harm reduction for public health,30
 WHY,pair,Content moderation + Censorship,Social cohesion,687
 WHY,pair,Content moderation + Censorship,Political control,536

@@ -1937,3 +1937,6 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 .prose details.table-fold > summary { display: flex; align-items: baseline; gap: .5em; }
 .table-export-cap { font-family: var(--serif); font-size: 17px; margin: 0 0 14px; color: var(--ink); }
 .table-export-cap i { color: var(--ink-soft); }
+/* Beeswarm sub-category rows nested under their lane */
+.chart .y-labels text.sub { font-size: 10px; font-weight: 400; letter-spacing: .03em; fill: var(--ink-soft); }
+.chart .rowguides line.sub { stroke: var(--rule); stroke-dasharray: 1 4; opacity: .7; }

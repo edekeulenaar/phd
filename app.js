@@ -1764,22 +1764,62 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   function bee(data) {
     const color = topDisciplines(data);
     const groups = sortGroups([...new Set(data.map(r => r[gfield()] || "(uncategorized)"))], data);
+    // Rows: each lane (category), then — nested underneath — one row per
+    // sub-category its findings carry (e.g. Removal › Destruction,
+    // Deplatforming…). The lane holds all of the category's findings; each
+    // sub-row the subset coded with that sub-category. WHAT views already lay
+    // out sub-categories as lanes, so they are not nested.
+    const nest = !whatView();
+    const SEP = "\u0001";
+    const sortMode = selS ? selS.value : "alpha-asc";
+    const subsOf = g => {
+      if (!nest) return [];
+      const v = data.filter(r => (r[gfield()] || "(uncategorized)") === g && (r["Sub-category"] || "").trim());
+      const subs = [...new Set(v.map(r => r["Sub-category"].trim()))];
+      const first = d3.rollup(v, w => d3.min(w, r => +r["Publication Year"]), r => r["Sub-category"].trim());
+      const cnt = d3.rollup(v, w => w.length, r => r["Sub-category"].trim());
+      if (sortMode === "earliest") return subs.sort((a, b) => first.get(a) - first.get(b));
+      if (sortMode === "latest") return subs.sort((a, b) => first.get(b) - first.get(a));
+      if (sortMode.startsWith("qty")) return subs.sort((a, b) => (cnt.get(b) - cnt.get(a)) * (sortMode === "qty-desc" ? 1 : -1));
+      return subs.sort();
+    };
+    const rows = [];
+    groups.forEach(g => {
+      rows.push({ id: g, label: g, level: 0 });
+      subsOf(g).forEach(sub => rows.push({ id: g + SEP + sub, label: sub, level: 1 }));
+    });
     const W = Math.max(720, host.node().clientWidth || 880);
-    const ROW_H = 60;
-    const H = Math.max(340, groups.length * ROW_H + 110);
-    const yScale = d3.scalePoint().domain(groups).range([30, H - 50]).padding(0.5);
+    const ROW_H = 60, SUB_H = 36;
+    const rowY = new Map();
+    let yy = 30;
+    rows.forEach(r => {
+      const h = r.level ? SUB_H : ROW_H;
+      rowY.set(r.id, yy + h / 2);
+      yy += h;
+    });
+    const H = Math.max(340, yy + 60);
+    const yScale = id => rowY.get(id);
     const [y0, y1] = d3.extent(data, r => +r["Publication Year"]);
     // Label column as wide as the longest lane label (at least 320).
     const laneLabel = g => g.length > 60 ? g.slice(0, 58) + "…" : g;
     const probe = host.append("svg").attr("class", "chart").style("position", "absolute").style("visibility", "hidden");
     const pg = probe.append("g").attr("class", "y-labels");
     let labW = 0;
-    groups.forEach(g => { labW = Math.max(labW, pg.append("text").text(laneLabel(g)).node().getComputedTextLength()); });
+    rows.forEach(r => { labW = Math.max(labW, pg.append("text").text(laneLabel(r.label)).node().getComputedTextLength() + (r.level ? 22 : 0)); });
     probe.remove();
     const x0 = Math.max(320, Math.ceil(labW) + 40);
     const x = d3.scaleLinear().domain([y0 - 1, y1 + 1]).range([x0, W - 24]);
     const rScale = d3.scaleSqrt().domain([0, d3.max(data, d => +d.Citations) || 1]).range([2, 12]);
     const jit = seededJitter(31, 11);
+    const jitSub = seededJitter(37, 7);
+    // Every finding on its lane, and again on its sub-category row.
+    const plotted = [];
+    data.forEach(d => {
+      const g = d[gfield()] || "(uncategorized)";
+      plotted.push(Object.assign(Object.create(d), { __row: g, __lvl: 0 }));
+      const sub = nest ? (d["Sub-category"] || "").trim() : "";
+      if (sub) plotted.push(Object.assign(Object.create(d), { __row: g + SEP + sub, __lvl: 1 }));
+    });
 
     const svg = host.append("svg").attr("class", "chart")
       .attr("viewBox", [0, 0, W, H]).attr("preserveAspectRatio", "xMidYMid meet")
@@ -1788,24 +1828,26 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       .attr("transform", `translate(0,${H - 30})`)
       .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
     const labelSel = svg.append("g").attr("class", "y-labels")
-      .selectAll("text").data(groups).join("text")
-        .attr("x", 12).attr("y", g => yScale(g)).attr("dy", "0.32em")
-        .text(laneLabel);
-    labelSel.append("title").text(g => g);
+      .selectAll("text").data(rows).join("text")
+        .attr("class", r => r.level ? "sub" : null)
+        .attr("x", r => r.level ? 34 : 12).attr("y", r => yScale(r.id)).attr("dy", "0.32em")
+        .text(r => (r.level ? "› " : "") + laneLabel(r.label));
+    labelSel.append("title").text(r => r.level ? r.id.replace(SEP, " › ") : r.label);
     // Measure each label and start its row guide AFTER the label's right edge
     // so the dashed line never crosses through label text.
     const labelEnd = new Map();
-    labelSel.each(function(g) {
-      labelEnd.set(g, this.getBBox().x + this.getBBox().width + 10);
+    labelSel.each(function(r) {
+      labelEnd.set(r.id, this.getBBox().x + this.getBBox().width + 10);
     });
     svg.append("g").attr("class", "rowguides")
-      .selectAll("line").data(groups).join("line")
-        .attr("x1", g => labelEnd.get(g) || 12).attr("x2", W - 24)
-        .attr("y1", g => yScale(g)).attr("y2", g => yScale(g));
-    const dots = svg.append("g").selectAll("circle").data(data).join("circle")
+      .selectAll("line").data(rows).join("line")
+        .attr("class", r => r.level ? "sub" : null)
+        .attr("x1", r => labelEnd.get(r.id) || 12).attr("x2", W - 24)
+        .attr("y1", r => yScale(r.id)).attr("y2", r => yScale(r.id));
+    const dots = svg.append("g").selectAll("circle").data(plotted).join("circle")
         .attr("cx", d => x(+d["Publication Year"]))
-        .attr("cy", d => yScale(d[gfield()] || "(uncategorized)") + jit())
-        .attr("r",  d => rScale(+d.Citations || 0))
+        .attr("cy", d => yScale(d.__row) + (d.__lvl ? jitSub() : jit()))
+        .attr("r",  d => rScale(+d.Citations || 0) * (d.__lvl ? 0.8 : 1))
         .attr("fill", d => color(d.Discipline))
         .attr("opacity", 0.68)
         .on("mouseenter", async function (e, d) {

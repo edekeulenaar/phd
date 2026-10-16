@@ -1149,7 +1149,9 @@ def main() -> None:
         # Per-finding Sub-category: only WHAT findings carry one in the taxonomy.
         # Other Types' Sub-category cells should be empty regardless of what
         # the LLM emitted there.
-        sub_cat = (r.get("Sub-category") or "").strip() if ty == "WHAT" else ""
+        # Sub-category of the finding, for every type: WHAT lanes are its
+        # sub-categories; HOW/WHO/WHY lanes nest their sub-categories underneath.
+        sub_cat = (r.get("Sub-category") or "").strip()
         # Publication-level WHAT Sub-categories, scoped to the item's Topic.
         # WHO/HOW/WHY findings carry no Sub-category of their own; the client
         # filters them via this pipe-joined list so a "WHY within Censorship"

@@ -8,27 +8,21 @@ GROUP,Industrial labour,24
 GROUP,Platform brand safety,8
 GROUP,Platform compliance,7
 GROUP,Moderating extremism,3
+HOW,Review,615
 HOW,Removal,607
 HOW,Enframing,584
-HOW,Review,575
+HOW,Limiting access,426
 HOW,Metamoderation,380
-HOW,Filtering,364
+HOW,Monitoring,310
 HOW,Marginalisation,283
-HOW,Monitoring,195
-HOW,Limiting access,187
-HOW,Profiling,182
-HOW,Labeling,175
 HOW,Internalisation,164
-HOW,Debate management,127
+HOW,Debate management,138
 HOW,Verification,118
 HOW,Other,116
-HOW,Rating,110
-HOW,Disclosure,95
+HOW,Disclosing,95
 HOW,Intimidation,90
-HOW,Licensing,37
-HOW,Maintenance,26
-HOW,Replacement,22
-HOW,Intermediating,13
+HOW,Authorising,37
+HOW,Editing,22
 WHAT,Content moderation,720
 WHAT,Censorship,89
 WHAT,Other,6

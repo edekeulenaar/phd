@@ -2,26 +2,20 @@ Type,Category,n_items
 GROUP,Content moderation,960
 GROUP,Censorship,518
 HOW,Removal,1109
-HOW,Review,1018
+HOW,Review,1104
 HOW,Enframing,958
-HOW,Filtering,667
+HOW,Limiting access,815
+HOW,Monitoring,618
 HOW,Internalisation,482
 HOW,Metamoderation,463
 HOW,Marginalisation,434
-HOW,Monitoring,421
-HOW,Limiting access,414
 HOW,Intimidation,363
-HOW,Profiling,339
-HOW,Labeling,274
+HOW,Debate management,210
 HOW,Other,203
-HOW,Rating,198
-HOW,Debate management,194
-HOW,Replacement,179
-HOW,Licensing,174
-HOW,Disclosure,168
+HOW,Editing,179
+HOW,Authorising,174
+HOW,Disclosing,168
 HOW,Verification,164
-HOW,Maintenance,29
-HOW,Intermediating,15
 WHAT,Content moderation,755
 WHAT,Censorship,459
 WHAT,Other,27
