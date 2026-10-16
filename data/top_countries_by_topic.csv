@@ -1,41 +1,41 @@
 Topic,Country,Quantity
-Censorship,United States,180
-Censorship,China,125
-Censorship,France,98
-Censorship,United Kingdom,67
-Censorship,Spain,67
-Censorship,Russia,56
-Censorship,Germany,54
-Censorship,Iran,47
-Censorship,Italy,44
-Censorship,Brazil,44
-Content moderation,United States,489
-Content moderation,European Union,295
-Content moderation,Brazil,237
-Content moderation,Germany,162
-Content moderation,United Kingdom,113
-Content moderation,France,104
-Content moderation,Italy,76
-Content moderation,India,64
-Content moderation,China,60
-Content moderation,Australia,55
-Debate management,Brazil,20
-Debate management,United States,16
-Debate management,France,16
-Debate management,Spain,12
-Debate management,United Kingdom,7
+Censorship,United States,145
+Censorship,China,115
+Censorship,France,69
+Censorship,Spain,54
+Censorship,United Kingdom,53
+Censorship,Russia,50
+Censorship,Germany,45
+Censorship,Iran,43
+Censorship,Brazil,36
+Censorship,Italy,35
+Content moderation,United States,449
+Content moderation,European Union,260
+Content moderation,Brazil,222
+Content moderation,Germany,147
+Content moderation,United Kingdom,106
+Content moderation,France,94
+Content moderation,Italy,64
+Content moderation,India,62
+Content moderation,China,58
+Content moderation,Australia,52
+Debate management,Brazil,16
+Debate management,United States,15
+Debate management,France,13
+Debate management,Spain,10
+Debate management,United Kingdom,6
 Debate management,European Union,5
 Debate management,Mexico,5
 Debate management,Italy,5
 Debate management,Germany,3
-Debate management,Switzerland,3
-Other,United States,56
-Other,France,23
-Other,Brazil,20
-Other,Italy,18
-Other,European Union,17
+Debate management,Portugal,3
+Other,United States,51
+Other,France,21
+Other,Brazil,19
+Other,Italy,17
 Other,United Kingdom,15
+Other,European Union,15
 Other,China,11
-Other,Germany,10
+Other,Germany,9
 Other,Spain,7
-Other,Canada,7
+Other,India,6

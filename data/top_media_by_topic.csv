@@ -1,27 +1,27 @@
 Topic,Media category,Quantity
-Censorship,Print media,356
-Censorship,Social media platform,157
-Censorship,Film,151
-Censorship,Television,115
-Censorship,Radio,93
-Censorship,ISP,76
-Censorship,Performing arts,63
-Censorship,Search engine,55
-Censorship,Internet (general),46
-Censorship,Video sharing platform,45
-Content moderation,Social media platform,866
-Content moderation,Video sharing platform,398
-Content moderation,Search engine,202
-Content moderation,Messaging platform,162
-Content moderation,AI,102
-Content moderation,Platforms,75
-Content moderation,Wikis,52
-Content moderation,Print media,46
-Content moderation,Online fora,42
-Content moderation,E-commerce,41
-Debate management,Social media platform,20
+Censorship,Print media,273
+Censorship,Social media platform,141
+Censorship,Film,121
+Censorship,Television,99
+Censorship,Radio,79
+Censorship,ISP,72
+Censorship,Search engine,48
+Censorship,Performing arts,48
+Censorship,Video sharing platform,41
+Censorship,Internet (general),37
+Content moderation,Social media platform,789
+Content moderation,Video sharing platform,363
+Content moderation,Search engine,180
+Content moderation,Messaging platform,151
+Content moderation,AI,95
+Content moderation,Platforms,67
+Content moderation,Wikis,48
+Content moderation,Print media,42
+Content moderation,Online fora,41
+Content moderation,E-commerce,35
+Debate management,Social media platform,17
 Debate management,Online fora,13
-Debate management,Online learning platform,10
+Debate management,Online learning platform,9
 Debate management,Blog,5
 Debate management,Messaging platform,4
 Debate management,Deliberation platform,3
@@ -29,13 +29,13 @@ Debate management,Video sharing platform,3
 Debate management,News media,2
 Debate management,Videoconferencing,2
 Debate management,Search engine,2
-Other,Social media platform,82
-Other,Video sharing platform,33
-Other,Search engine,25
-Other,Print media,22
-Other,AI,21
-Other,Messaging platform,17
-Other,Television,11
+Other,Social media platform,74
+Other,Video sharing platform,32
+Other,Search engine,22
+Other,Print media,20
+Other,AI,19
+Other,Messaging platform,14
 Other,Platforms,10
-Other,Wikis,10
-Other,Internet (general),7
+Other,Television,9
+Other,Wikis,9
+Other,ISP,7

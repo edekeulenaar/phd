@@ -1,91 +1,91 @@
 Type,Category,n_items
-GROUP,Platform governance,513
-GROUP,Community norms and identity,65
-GROUP,Debate management,53
-GROUP,Censorship,47
-GROUP,Platform regulation,44
-GROUP,Industrial labour,26
-GROUP,Platform brand safety,11
-GROUP,Platform compliance,9
+GROUP,Platform governance,479
+GROUP,Community norms and identity,64
+GROUP,Debate management,52
+GROUP,Censorship,42
+GROUP,Platform regulation,41
+GROUP,Industrial labour,24
+GROUP,Platform brand safety,8
+GROUP,Platform compliance,7
 GROUP,Moderating extremism,3
-HOW,Removal,651
-HOW,Enframing,621
-HOW,Review,617
-HOW,Metamoderation,407
-HOW,Filtering,381
-HOW,Marginalisation,302
-HOW,Monitoring,208
-HOW,Profiling,197
-HOW,Limiting access,193
-HOW,Labeling,190
-HOW,Internalisation,172
-HOW,Debate management,132
-HOW,Verification,126
-HOW,Other,122
-HOW,Rating,114
-HOW,Disclosure,103
-HOW,Intimidation,96
-HOW,Licensing,40
+HOW,Removal,607
+HOW,Enframing,584
+HOW,Review,575
+HOW,Metamoderation,380
+HOW,Filtering,364
+HOW,Marginalisation,283
+HOW,Monitoring,195
+HOW,Limiting access,187
+HOW,Profiling,182
+HOW,Labeling,175
+HOW,Internalisation,164
+HOW,Debate management,127
+HOW,Verification,118
+HOW,Other,116
+HOW,Rating,110
+HOW,Disclosure,95
+HOW,Intimidation,90
+HOW,Licensing,37
 HOW,Maintenance,26
-HOW,Replacement,23
+HOW,Replacement,22
 HOW,Intermediating,13
-WHAT,Content moderation,771
-WHAT,Censorship,94
+WHAT,Content moderation,720
+WHAT,Censorship,89
 WHAT,Other,6
 WHAT,Debate management,3
-WHO,Platforms,667
-WHO,Algorithmic systems,567
-WHO,Content moderators or BPO workforces,490
-WHO,Users,478
-WHO,Government agencies,351
-WHO,Courts and prosecutors,252
-WHO,Regulators,173
-WHO,Legislators,156
-WHO,Civic advocacy and moral pressure groups,155
-WHO,Platform oversight bodies,119
-WHO,Fact-checkers and verification units,78
-WHO,Media owners,76
-WHO,Other,73
+WHO,Platforms,620
+WHO,Algorithmic systems,529
+WHO,Content moderators or BPO workforces,461
+WHO,Users,449
+WHO,Government agencies,328
+WHO,Courts and prosecutors,235
+WHO,Regulators,157
+WHO,Legislators,148
+WHO,Civic advocacy and moral pressure groups,145
+WHO,Platform oversight bodies,105
+WHO,Media owners,74
+WHO,Fact-checkers and verification units,71
 WHO,Forum moderators (mods),71
-WHO,Cloud and infrastructure providers,58
-WHO,Police and intelligence services,56
-WHO,Advertisers,55
-WHO,Self-censorship (individuals),51
-WHO,"Schools, curricula, librarians, academia",50
-WHO,Journalists,49
+WHO,Other,68
+WHO,Cloud and infrastructure providers,56
+WHO,Police and intelligence services,52
+WHO,Advertisers,52
+WHO,Self-censorship (individuals),49
+WHO,Journalists,48
+WHO,"Schools, curricula, librarians, academia",47
 WHO,Editors,42
-WHO,App stores,28
-WHO,Political groups,22
-WHO,Online mobs / pile-ons,22
+WHO,App stores,25
+WHO,Online mobs / pile-ons,21
+WHO,Political groups,20
 WHO,Mediators,15
-WHO,Broadcasting regulators,14
 WHO,Censorship boards or agencies,12
+WHO,Broadcasting regulators,11
 WHO,AI companies,9
 WHO,Public-health bodies (NGOs / WHO),9
 WHO,Press councils and ombudsmen,8
-WHO,Distributors and booksellers,7
 WHO,Debate moderators,6
+WHO,Distributors and booksellers,6
 WHO,Religious authorities,4
 WHO,Military censors,2
 WHO,News agencies / wire services,1
 WHO,Translators,1
-WHY,Other,360
-WHY,Social cohesion,303
-WHY,Compliance,299
-WHY,Brand safety,288
-WHY,Misinformation or disinformation prevention,282
-WHY,Harm principles and hate speech regulation,210
-WHY,"Privacy, reputation & dignity",174
-WHY,Protection of children,161
-WHY,Public decency norms,119
-WHY,State security,106
-WHY,Coherence,103
-WHY,Political control,74
-WHY,News values or editorial judgment,37
+WHY,Other,334
+WHY,Social cohesion,289
+WHY,Compliance,280
+WHY,Brand safety,274
+WHY,Misinformation or disinformation prevention,258
+WHY,Harm principles and hate speech regulation,200
+WHY,"Privacy, reputation & dignity",164
+WHY,Protection of children,150
+WHY,Public decency norms,113
+WHY,Coherence,100
+WHY,State security,96
+WHY,Political control,68
+WHY,News values or editorial judgment,35
 WHY,Democratic self-defence,24
-WHY,Harm reduction for public health,23
-WHY,Consumer protection or fair competition,22
-WHY,Ideological consolidation,20
+WHY,Harm reduction for public health,21
+WHY,Consumer protection or fair competition,21
+WHY,Ideological consolidation,19
 WHY,Religious norms,8
 WHY,State secrets,3
 WHY,Wartime necessity,2
