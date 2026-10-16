@@ -1574,8 +1574,18 @@ function bindSankeyTabs({ figSel, topicCsv, cmCsv, dlSel, hostSel, leftField, fi
    8. Figures 7 / 8 — Beeswarm (groups by Category | Sub-topic) + Gantt toggle
    ─────────────────────────────────────────────────────────────────────── */
 
+/* Line icons per taxonomy entry ("TYPE|Category|Sub" → SVG inner markup,
+   Lucide, ISC licence), drawn beside beeswarm lane titles. */
+let _laneIcons = null;
+function loadLaneIcons() {
+  if (!_laneIcons) _laneIcons = fetch(`data/icons.json?t=${CSV_BUST}`, { cache: "no-store" })
+    .then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+  return _laneIcons;
+}
+
 async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   const all = await loadCSV(csv);
+  const laneIcons = await loadLaneIcons();
   const host = d3.select(hostSel);
   const sel1  = controls.primarySel ? document.getElementById(controls.primarySel) : null;
   const selT  = controls.typeSel    ? document.getElementById(controls.typeSel)    : null;
@@ -1784,9 +1794,17 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       return subs.sort();
     };
     const rows = [];
+    const sample = new Map();
+    data.forEach(r => { const g = r[gfield()] || "(uncategorized)"; if (!sample.has(g)) sample.set(g, r); });
+    const iconKey = (g, sub) => {
+      const d = sample.get(g);
+      if (!d) return "";
+      if (!nest) return `WHAT|${(d.Category || "").trim()}|${(d["Sub-category"] || "").trim()}`;
+      return `${(d.Type || "").trim()}|${(d.Category || "").trim()}|${sub || ""}`;
+    };
     groups.forEach(g => {
-      rows.push({ id: g, label: g, level: 0 });
-      subsOf(g).forEach(sub => rows.push({ id: g + SEP + sub, label: sub, level: 1 }));
+      rows.push({ id: g, label: g, level: 0, icon: laneIcons[iconKey(g)] });
+      subsOf(g).forEach(sub => rows.push({ id: g + SEP + sub, label: sub, level: 1, icon: laneIcons[iconKey(g, sub)] }));
     });
     const W = Math.max(720, host.node().clientWidth || 880);
     const ROW_H = 60, SUB_H = 46, GAP = 10;
@@ -1813,7 +1831,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const probe = host.append("svg").attr("class", "chart").style("position", "absolute").style("visibility", "hidden");
     const pg = probe.append("g").attr("class", "y-labels");
     let labW = 0;
-    rows.forEach(r => { labW = Math.max(labW, pg.append("text").text(laneLabel(r.label)).node().getComputedTextLength() + (r.level ? 22 : 0)); });
+    rows.forEach(r => { labW = Math.max(labW, pg.append("text").text(laneLabel(r.label)).node().getComputedTextLength() + (r.level ? 22 : 0) + 22); });
     probe.remove();
     const x0 = Math.max(320, Math.ceil(labW) + 40);
     const x = d3.scaleLinear().domain([y0 - 1, y1 + 1]).range([x0, W - 24]);
@@ -1852,8 +1870,17 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const labelSel = svg.append("g").attr("class", "y-labels")
       .selectAll("text").data(rows).join("text")
         .attr("class", r => r.level ? "sub" : null)
-        .attr("x", r => r.level ? 30 : 12).attr("y", r => yScale(r.id)).attr("dy", "0.32em")
-        .text(r => (r.level ? "› " : "") + laneLabel(r.label));
+        .attr("x", r => r.level ? 52 : 34).attr("y", r => yScale(r.id)).attr("dy", "0.32em")
+        .text(r => laneLabel(r.label));
+    // Icon beside each lane and sub-category title (16 px; Lucide 24-unit grid)
+    svg.append("g").attr("class", "lane-icons")
+      .selectAll("g").data(rows.filter(r => r.icon)).join("g")
+        .attr("class", r => r.level ? "sub" : null)
+        .attr("transform", r => {
+          const sz = r.level ? 14 : 17;
+          return `translate(${r.level ? 32 : 12},${yScale(r.id) - sz / 2}) scale(${sz / 24})`;
+        })
+        .html(r => r.icon);
     svg.select(".lane-brackets").selectAll("path.tick")
       .data(rows.filter(r => r.level)).join("path").attr("class", "tick")
         .attr("d", r => `M18,${yScale(r.id)} H26`);

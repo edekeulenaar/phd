@@ -1942,3 +1942,6 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 .chart .lane-blocks rect { fill: #efeae1; opacity: .55; }
 .chart .lane-brackets path { fill: none; stroke: var(--muted); stroke-width: 1.2; }
 .chart .rowguides line.sub { stroke: var(--rule); stroke-dasharray: 1 4; opacity: .7; }
+/* Beeswarm lane icons */
+.chart .lane-icons g { fill: none; stroke: var(--ink); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.chart .lane-icons g.sub { stroke: var(--ink-soft); }

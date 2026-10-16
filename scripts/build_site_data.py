@@ -1203,6 +1203,25 @@ def main() -> None:
                "Language", "Media categories", "Countries"],
               bee_s)
 
+    # ── 10-ter. icons.json — one line icon per taxonomy entry ─────────────
+    # rag/figures/icon_map.json (TYPE|Category|Sub → Lucide icon name) with the
+    # SVG files in rag/figures/icons/; the beeswarm draws them beside lane titles.
+    import json as _json
+    icon_map_p = data_path("rag/figures/icon_map.json")
+    if icon_map_p.exists():
+        idir = icon_map_p.parent / "icons"
+        out_icons = {}
+        for k, name in _json.loads(icon_map_p.read_text(encoding="utf-8")).items():
+            f = idir / f"{name}.svg"
+            if k.startswith("_") or not f.exists():
+                continue
+            svg = f.read_text(encoding="utf-8")
+            m = re.search(r"<svg[^>]*>(.*)</svg>", svg, re.S)
+            if m:
+                out_icons[k] = re.sub(r"\s+", " ", m.group(1)).strip()
+        (OUT / "icons.json").write_text(_json.dumps(out_icons, ensure_ascii=False), encoding="utf-8")
+        print(f"  ✓ data/icons.json  {len(out_icons)} icons (Lucide, ISC)")
+
     # ── 10-bis. terms_by_category.csv — distinctive & shared vocabularies ──
     # For the Conclusions figure: per WHAT category (item Topic), the 10
     # uni/bi-gram terms most TYPICAL of that category's "Mentioned item"
