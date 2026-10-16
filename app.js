@@ -3299,6 +3299,7 @@ async function mountChapter1Analysis() {
   // setupCaptionEdits() disabled — manuscript editing happens in the source
   //                      manuscript.md file, not in the page.
   setupFigureDownloads();   // ⬇ PNG / ⬇ SVG buttons on every chart
+  setupTableDownloads();    // ⬇ PNG on every table
   promoteInlineFigures();   // swap manuscript placeholders for live figures
   observeActiveFigure();    // NOW the figures are in #manuscript — watch them
   setTimeout(applyHashFiltersAndScroll, 60); // honour any `?key=val` in #hash
@@ -5120,6 +5121,82 @@ function setupFigureDownloads() {
       b.disabled = false; b.textContent = "⬇ PNG";
     });
   });
+}
+
+/* Tables (Tables 1–7 …): a "⬇ PNG" button in each table's fold header.
+   The export lays the table out with its caption at a fixed print width
+   inside the same .prose context (so the site's table styles apply),
+   renders it with html-to-image at 3× and downloads it. */
+const TABLE_PNG_WIDTH = 1400;
+let _h2i = null;
+function loadHtmlToImage() {
+  if (window.htmlToImage) return Promise.resolve(window.htmlToImage);
+  if (!_h2i) _h2i = new Promise((ok, fail) => {
+    const sc = document.createElement("script");
+    sc.src = "https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js";
+    sc.onload = () => ok(window.htmlToImage);
+    sc.onerror = () => { _h2i = null; fail(new Error("html-to-image failed to load")); };
+    document.head.appendChild(sc);
+  });
+  return _h2i;
+}
+function setupTableDownloads() {
+  const add = () => document.querySelectorAll("details.table-fold").forEach(det => {
+    const sum = det.querySelector(":scope > summary");
+    const tbl = det.querySelector("table");
+    if (!sum || !tbl || sum.querySelector(".dl-tbl")) return;
+    if (tbl.querySelectorAll("th, td").length <= 1) return;     // prompt boxes
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "dl dl-tbl"; b.textContent = "⬇ PNG";
+    b.title = "Download this table as a high-resolution PNG";
+    sum.appendChild(b);
+  });
+  add();
+  new MutationObserver(add).observe(document.body, { childList: true, subtree: true });
+  document.addEventListener("click", async e => {
+    const b = e.target.closest(".dl-tbl");
+    if (!b) return;
+    e.preventDefault(); e.stopPropagation();                   // don't fold/unfold
+    const det = b.closest("details.table-fold");
+    const tbl = det.querySelector("table");
+    const lbl = det.querySelector("summary .lbl")?.textContent.trim() || "Table";
+    const meta = (det.querySelector("summary .meta")?.textContent || "")
+      .replace(/^\s*·\s*/, "").replace(/\s*·\s*\d+ rows\s*$/, "").trim();
+    const prose = det.closest(".prose") || document.body;
+    const box = document.createElement("div");
+    box.className = "table-export";
+    box.style.cssText = `position:absolute;left:-100000px;top:0;width:${TABLE_PNG_WIDTH}px;` +
+      `padding:28px 32px 32px;background:${PAPER_BG};`;
+    const cap = document.createElement("p");
+    cap.className = "table-export-cap";
+    cap.innerHTML = `<b>${escapeHtml(lbl)}.</b> <i>${escapeHtml(meta)}</i>`;
+    box.appendChild(cap);
+    const clone = tbl.cloneNode(true);
+    clone.style.width = "100%"; clone.style.margin = "0";
+    box.appendChild(clone);
+    prose.appendChild(box);
+    b.disabled = true; b.textContent = "⬇ PNG …";
+    try {
+      const h2i = await loadHtmlToImage();
+      await document.fonts.ready;
+      // the off-screen position must not be carried into the rendered copy
+      const url = await h2i.toPng(box, {
+        pixelRatio: 3, backgroundColor: PAPER_BG, cacheBust: true,
+        width: box.offsetWidth, height: box.offsetHeight,
+        style: { position: "static", left: "0", top: "0", margin: "0" },
+      });
+      const blob = await (await fetch(url)).blob();
+      const slug = (lbl + " " + meta).toLowerCase().normalize("NFKD")
+        .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "table";
+      triggerDownload(blob, `${slug}@3x.png`);
+    } catch (err) {
+      console.error("table export", err);
+      alert("Could not export this table as PNG.");
+    } finally {
+      box.remove();
+      b.disabled = false; b.textContent = "⬇ PNG";
+    }
+  }, true);
 }
 
 /* Exports render the SVG as an image, where the page's web fonts are not

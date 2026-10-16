@@ -1932,3 +1932,8 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 .fig-controls { position: relative; padding-right: 4.8rem; }
 .fig-controls .dl-png-top { position: absolute; top: 0.35em; right: 0; margin: 0; }
 .fig-controls-dl { min-height: 1.6em; }
+/* "⬇ PNG" in a table's fold header; the off-screen export layout */
+.prose details.table-fold > summary .dl-tbl { margin-left: auto; font-family: var(--sans); font-size: 12px; }
+.prose details.table-fold > summary { display: flex; align-items: baseline; gap: .5em; }
+.table-export-cap { font-family: var(--serif); font-size: 17px; margin: 0 0 14px; color: var(--ink); }
+.table-export-cap i { color: var(--ink-soft); }
