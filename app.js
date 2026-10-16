@@ -1749,6 +1749,10 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
   }
 
   let mode = "beeswarm";   // Beeswarm first; Trend is the second tab.
+  // Lanes whose nested sub-category rows the reader has folded away. Kept
+  // across re-renders (filters, sorting) so the figure — and its PNG export,
+  // which captures the chart as drawn — stays as the reader left it.
+  const folded = new Set();
 
   /** Sort the Category (or Sub-topic) labels per the dropdown. */
   function sortGroups(groups, data) {
@@ -1803,9 +1807,12 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       return `${(d.Type || "").trim()}|${(d.Category || "").trim()}|${sub || ""}`;
     };
     groups.forEach(g => {
-      rows.push({ id: g, label: g, level: 0, icon: laneIcons[iconKey(g)] });
-      subsOf(g).forEach(sub => rows.push({ id: g + SEP + sub, label: sub, level: 1, icon: laneIcons[iconKey(g, sub)] }));
+      const subs = subsOf(g);
+      rows.push({ id: g, label: g, level: 0, icon: laneIcons[iconKey(g)], hasSubs: subs.length > 0, folded: folded.has(g) });
+      if (!folded.has(g))
+        subs.forEach(sub => rows.push({ id: g + SEP + sub, label: sub, level: 1, icon: laneIcons[iconKey(g, sub)] }));
     });
+    const caret = r => (r.hasSubs ? (r.folded ? "  ▸" : "  ▾") : "");
     const W = Math.max(720, host.node().clientWidth || 880);
     const ROW_H = 60, SUB_H = 46, GAP = 10;
     const rowY = new Map();
@@ -1831,7 +1838,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const probe = host.append("svg").attr("class", "chart").style("position", "absolute").style("visibility", "hidden");
     const pg = probe.append("g").attr("class", "y-labels");
     let labW = 0;
-    rows.forEach(r => { labW = Math.max(labW, pg.append("text").text(laneLabel(r.label)).node().getComputedTextLength() + (r.level ? 22 : 0) + 22); });
+    rows.forEach(r => { labW = Math.max(labW, pg.append("text").text(laneLabel(r.label) + caret(r)).node().getComputedTextLength() + (r.level ? 22 : 0) + 22); });
     probe.remove();
     const x0 = Math.max(320, Math.ceil(labW) + 40);
     const x = d3.scaleLinear().domain([y0 - 1, y1 + 1]).range([x0, W - 24]);
@@ -1843,7 +1850,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     data.forEach(d => {
       const g = d[gfield()] || "(uncategorized)";
       plotted.push(Object.assign(Object.create(d), { __row: g, __lvl: 0 }));
-      const sub = nest ? (d["Sub-category"] || "").trim() : "";
+      const sub = nest && !folded.has(g) ? (d["Sub-category"] || "").trim() : "";
       if (sub) plotted.push(Object.assign(Object.create(d), { __row: g + SEP + sub, __lvl: 1 }));
     });
 
@@ -1871,7 +1878,15 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       .selectAll("text").data(rows).join("text")
         .attr("class", r => r.level ? "sub" : null)
         .attr("x", r => r.level ? 52 : 34).attr("y", r => yScale(r.id)).attr("dy", "0.32em")
-        .text(r => laneLabel(r.label));
+        .text(r => laneLabel(r.label) + caret(r));
+    // Click a lane title (▾ / ▸) to fold or unfold its sub-category rows.
+    labelSel.filter(r => r.hasSubs)
+      .classed("foldable-lane", true)
+      .on("click", (e, r) => {
+        if (folded.has(r.id)) folded.delete(r.id); else folded.add(r.id);
+        render();
+      })
+      .append("title").text(r => (r.folded ? "Show" : "Hide") + " the sub-categories of " + r.label);
     // Icon beside each lane and sub-category title (16 px; Lucide 24-unit grid)
     svg.append("g").attr("class", "lane-icons")
       .selectAll("g").data(rows.filter(r => r.icon)).join("g")
@@ -2135,6 +2150,22 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
           figEl.dataset.extremesOff = limited ? "1" : "0";
           render();
         });
+    }
+    // Fold / unfold every lane's sub-categories at once (beeswarm, non-WHAT views).
+    if (mode !== "trend" && !whatView()) {
+      const withSubs = [...new Set(data.filter(r => (r["Sub-category"] || "").trim())
+        .map(r => r[gfield()] || "(uncategorized)"))];
+      if (withSubs.length) {
+        const allFolded = withSubs.every(g => folded.has(g));
+        const fb = host.append("div").attr("class", "bee-fold-ctl");
+        fb.append("button").attr("type", "button")
+          .text(allFolded ? "Unfold all sub-categories" : "Fold all sub-categories")
+          .on("click", () => {
+            if (allFolded) withSubs.forEach(g => folded.delete(g)); else withSubs.forEach(g => folded.add(g));
+            render();
+          });
+        fb.append("span").text("· click a lane title (▾ / ▸) to fold it alone");
+      }
     }
     (mode === "trend" ? trend : bee)(data);
   }

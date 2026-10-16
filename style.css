@@ -1945,3 +1945,10 @@ sup.fn-ref a          { text-decoration: none; padding: 0 .1em; }
 /* Beeswarm lane icons */
 .chart .lane-icons g { fill: none; stroke: var(--ink); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 .chart .lane-icons g.sub { stroke: var(--ink-soft); }
+/* Foldable beeswarm lanes */
+.chart .y-labels text.foldable-lane { cursor: pointer; }
+.chart .y-labels text.foldable-lane:hover { fill: var(--accent); }
+.bee-fold-ctl { font-family: var(--sans); font-size: 12px; color: var(--muted); margin: 0 0 6px; display: flex; gap: .6em; align-items: baseline; }
+.bee-fold-ctl button { font: inherit; color: var(--ink); background: none; border: none; border-bottom: 1px solid rgba(28,26,24,.25); padding: 0; cursor: pointer; }
+.bee-fold-ctl button:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.chart .lane-icons circle, .chart .lane-icons ellipse, .chart .lane-icons rect { stroke: inherit; stroke-width: inherit; fill: none; opacity: 1; }
