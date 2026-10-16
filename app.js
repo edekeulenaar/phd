@@ -1789,13 +1789,21 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
       subsOf(g).forEach(sub => rows.push({ id: g + SEP + sub, label: sub, level: 1 }));
     });
     const W = Math.max(720, host.node().clientWidth || 880);
-    const ROW_H = 60, SUB_H = 36;
+    const ROW_H = 60, SUB_H = 46, GAP = 10;
     const rowY = new Map();
+    const blocks = [];                 // one block per lane: its row + nested sub-rows
     let yy = 30;
     rows.forEach(r => {
+      if (!r.level) {
+        if (blocks.length) yy += GAP;
+        blocks.push({ id: r.id, top: yy, bottom: yy, subs: 0 });
+      }
       const h = r.level ? SUB_H : ROW_H;
       rowY.set(r.id, yy + h / 2);
       yy += h;
+      const b = blocks[blocks.length - 1];
+      b.bottom = yy;
+      if (r.level) b.subs += 1;
     });
     const H = Math.max(340, yy + 60);
     const yScale = id => rowY.get(id);
@@ -1827,11 +1835,28 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     svg.append("g").attr("class", "axis")
       .attr("transform", `translate(0,${H - 30})`)
       .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(10));
+    // Lanes with sub-categories are drawn as a block: a shaded band around
+    // the lane and its nested rows, and a bracket joining them on the left.
+    const nested = blocks.filter(b => b.subs);
+    svg.append("g").attr("class", "lane-blocks")
+      .selectAll("rect").data(nested).join("rect")
+        .attr("x", 4).attr("width", W - 12)
+        .attr("y", b => b.top + 2).attr("height", b => b.bottom - b.top - 4)
+        .attr("rx", 6);
+    svg.append("g").attr("class", "lane-brackets")
+      .selectAll("path").data(nested).join("path")
+        .attr("d", b => {
+          const y1 = rowY.get(b.id) + 9, y2 = b.bottom - SUB_H / 2;
+          return `M18,${y1} V${y2}`;
+        });
     const labelSel = svg.append("g").attr("class", "y-labels")
       .selectAll("text").data(rows).join("text")
         .attr("class", r => r.level ? "sub" : null)
-        .attr("x", r => r.level ? 34 : 12).attr("y", r => yScale(r.id)).attr("dy", "0.32em")
+        .attr("x", r => r.level ? 30 : 12).attr("y", r => yScale(r.id)).attr("dy", "0.32em")
         .text(r => (r.level ? "› " : "") + laneLabel(r.label));
+    svg.select(".lane-brackets").selectAll("path.tick")
+      .data(rows.filter(r => r.level)).join("path").attr("class", "tick")
+        .attr("d", r => `M18,${yScale(r.id)} H26`);
     labelSel.append("title").text(r => r.level ? r.id.replace(SEP, " › ") : r.label);
     // Measure each label and start its row guide AFTER the label's right edge
     // so the dashed line never crosses through label text.
@@ -1847,7 +1872,7 @@ async function renderBeeswarm({ csv, groupField, hostSel, controls, figId }) {
     const dots = svg.append("g").selectAll("circle").data(plotted).join("circle")
         .attr("cx", d => x(+d["Publication Year"]))
         .attr("cy", d => yScale(d.__row) + (d.__lvl ? jitSub() : jit()))
-        .attr("r",  d => rScale(+d.Citations || 0) * (d.__lvl ? 0.8 : 1))
+        .attr("r",  d => rScale(+d.Citations || 0) * (d.__lvl ? 0.7 : 1))
         .attr("fill", d => color(d.Discipline))
         .attr("opacity", 0.68)
         .on("mouseenter", async function (e, d) {
